@@ -1,0 +1,32 @@
+{
+  "id": "N5",
+  "titulo": "Nunca empieces un correo con «espero que estés bien»",
+  "idea": "N5 de docs/IDEAS-2026-11-04b.md (aprobada por Jaime el 04-11-2026). Sigue pulso a pulso la referencia R5 (FORD).",
+  "coverT": 1.4,
+  "revision_castellano": { "fecha": "2026-11-04", "lector": "comercial de Madrid sin contexto", "corrector": "corrector de Madrid sin contexto",
+    "cambios": "2: «el tuyo se pierde»; 5: dice quién contesta; 7: «de su empresa»; 8: tú en vez de vosotros; 10: «por él»; 11: frase completa; 13: réplica que desmonta la objeción; 17: se dice el orden del correo; 21: «correos en frío»" },
+  "lines": [
+    { "show": "«Espero que estés bien.»", "hide": true, "pause": 0.6 },
+    { "show": "Nadie contesta a ese correo.", "neg": "Nadie" },
+    { "show": "Todo el mundo lo escribe. El tuyo se pierde.", "neg": "se pierde" },
+    { "show": "Usa tres letras.", "hi": "tres letras" },
+    { "show": "D, A, P.", "hi": "D, A, P" },
+    { "show": "La P es la que hace que te contesten.", "hi": "P" },
+    { "show": "D es dato.", "hi": "dato" },
+    { "show": "Algo de su empresa que hayas visto tú.", "hi": "visto" },
+    { "show": "«Vi que abres una tienda en Valencia.»", "hide": true, "pause": 0.7 },
+    { "show": "A es ayuda.", "hi": "ayuda" },
+    { "show": "Una cosa concreta que puedes hacer por él.", "hi": "concreta" },
+    { "show": "Una. No tu catálogo entero.", "neg": "catálogo" },
+    { "show": "«Parece un guion.»", "voice": "Estás pensando:", "neg": "guion" },
+    { "show": "Sí, un guion de tres líneas. Y contestan.", "hi": "contestan" },
+    { "show": "P es pregunta.", "hi": "pregunta" },
+    { "show": "Una sola, de sí o no.", "hi": "sí o no" },
+    { "show": "«¿Tienes un hueco el jueves?»", "hide": true, "pause": 0.7 },
+    { "show": "Dato, ayuda, pregunta. Tres líneas.", "hi": "Tres líneas" },
+    { "show": "Al que pregunta, le contestan.", "hi": "contestan" },
+    { "show": "No escribas para gustar.", "neg": "gustar" },
+    { "show": "Escribe para que contesten.", "hi": "contesten" },
+    { "show": "Mándaselo a quien escriba correos en frío.", "hi": "en frío" }
+  ]
+}

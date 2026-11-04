@@ -35,12 +35,31 @@ function resolveCam(spec, prev) {
   const base = spec.preset ? CAM_PRESETS[spec.preset] : prev;
   return { dist: spec.dist ?? base.dist, el: spec.el ?? base.el, az: spec.az ?? base.az, target: spec.target ?? base.target, fov: spec.fov ?? (prev.fov ?? 30) };
 }
+// Encuadre automático (regla 9): cada keyframe se ajusta para que los personajes principales visibles al final del movimiento
+// quepan enteros (márgenes 40 px, bajo el titular y sobre y = 1780): se recentra x/z en ellos y se aleja la cámara si hace falta.
+// Se desactiva con fit: false en el keyframe; fit: ['yo'] limita a esos personajes.
+const _fitCache = new Map();
+function placeCamera(cs) { const el = cs.el * Math.PI / 180, az = cs.az * Math.PI / 180; camera.position.set(cs.target[0] + cs.dist * Math.cos(el) * Math.sin(az), cs.target[1] + cs.dist * Math.sin(el), cs.target[2] + cs.dist * Math.cos(el) * Math.cos(az)); camera.lookAt(...cs.target); camera.fov = cs.fov; camera.updateProjectionMatrix(); camera.updateMatrixWorld(); }
+function fitCam(k, cs, tEnd) {
+  if (k.fit === false || !actors || !Object.keys(actors).length) return cs;
+  const key = SHOTS.cam.indexOf(k); if (_fitCache.has(key)) return _fitCache.get(key);
+  const ids = Array.isArray(k.fit) ? k.fit : Object.keys(actors).filter(id => actors[id].userData.head);
+  const states = ids.map(id => ({ id, st: actorState(id, tEnd) })).filter(x => x.st.show);
+  if (!states.length) { _fitCache.set(key, cs); return cs; }
+  const cx = states.reduce((a, x) => a + x.st.at[0], 0) / states.length, cz = states.reduce((a, x) => a + x.st.at[1], 0) / states.length;
+  let out = { ...cs, target: [k.target ? cs.target[0] : cx, cs.target[1], k.target ? cs.target[2] : cz] };
+  const saved = { p: camera.position.clone(), q: camera.quaternion.clone(), f: camera.fov };
+  const fits = (st) => { placeCamera(st); for (const x of states) { const h = actors[x.id].userData.h; for (const [dx, dy, dz] of [[-0.42, 0, 0.42], [0.42, 0, 0.42], [-0.42, 0, -0.42], [0.42, 0, -0.42], [-0.3, h * 1.06, 0], [0.3, h * 1.06, 0]]) { const [sx, sy] = toScreen(new THREE.Vector3(x.st.at[0] + dx, dy, x.st.at[1] + dz)); if (sx < 40 || sx > W - 40 || sy < 470 || sy > 1780) return false; } } return true; };
+  for (let i = 0; i < 14 && !fits(out); i++) out = { ...out, dist: out.dist * 1.08, target: [out.target[0], out.target[1] + 0.02, out.target[2]] };
+  camera.position.copy(saved.p); camera.quaternion.copy(saved.q); camera.fov = saved.f; camera.updateProjectionMatrix();
+  _fitCache.set(key, out); return out;
+}
 function camState(t) {
   const kfs = SHOTS.cam; let s = { ...CAM_PRESETS.medium, fov: 30 }, prevS = s;
   for (const k of kfs) {
-    const target = resolveCam(k, s);
+    const target = fitCam(k, resolveCam(k, s), k.t + (k.dur ?? (k.whip ? 0.28 : 1.5)) + 0.05);
     if (t < k.t) break;
-    const p = tw(t, k.t, k.dur ?? (k.whip ? 0.28 : 1.5), k.ease ?? 'inout');
+    const p = k.t <= 0 ? 1 : tw(t, k.t, k.dur ?? (k.whip ? 0.28 : 1.5), k.ease ?? 'inout'); // un keyframe en t=0 se aplica desde el primer fotograma
     prevS = s;
     s = { dist: lerp(prevS.dist, target.dist, p), el: lerp(prevS.el, target.el, p), az: lerp(prevS.az, target.az, p), target: lerpV(prevS.target, target.target, p), fov: lerp(prevS.fov, target.fov, p) };
     if (p >= 1) s = target;
@@ -259,7 +278,7 @@ function init() {
 function actorState(id, t) { // keyframes por actor: SHOTS.moves[id] = [{t, dur, at, rot, head:[yaw,tilt], show}]
   const kfs = (SHOTS.moves || {})[id] || []; const spec = SHOTS.actors[id]; let s = { at: spec.at ?? [0, 0], rot: spec.rot ?? 0, head: [0, 0], show: spec.show !== false };
   let jump = false;
-  for (const k of kfs) { if (k.at && (k.dur ?? 1) <= 0.05 && t >= k.t - 0.04 && t < k.t + 0.3) jump = true; if (t < k.t) break; const p = tw(t, k.t, k.dur ?? 1, k.ease ?? 'inout'); const prev = s; const target = { at: k.at ?? prev.at, rot: k.rot ?? prev.rot, head: k.head ?? prev.head, show: k.show ?? prev.show }; s = { at: lerpV(prev.at, target.at, p), rot: lerp(prev.rot, target.rot, p), head: lerpV(prev.head, target.head, p), show: target.show }; }
+  for (const k of kfs) { if (k.at && k.t > 0 && (k.dur ?? 1) <= 0.05 && t >= k.t - 0.04 && t < k.t + 0.3) jump = true; if (t < k.t) break; const p = k.t <= 0 ? 1 : tw(t, k.t, k.dur ?? 1, k.ease ?? 'inout'); const prev = s; const target = { at: k.at ?? prev.at, rot: k.rot ?? prev.rot, head: k.head ?? prev.head, show: k.show ?? prev.show }; s = { at: lerpV(prev.at, target.at, p), rot: lerp(prev.rot, target.rot, p), head: lerpV(prev.head, target.head, p), show: target.show }; }
   if (jump) s.show = false; // salto de posición: oculto durante el latigazo, reaparece ya colocado
   return s;
 }
@@ -329,8 +348,7 @@ function buildPath(m) {
 window.seek = function (t) {
   const inv = invertAmount(t);
   scene.background = hexLerp(PAL.bg, PAL.bgDark, inv); floorDark.material.opacity = inv; ambient.intensity = lerp(1.5, 0.9, inv);
-  const cs = camState(t); const el = cs.el * Math.PI / 180, az = cs.az * Math.PI / 180;
-  camera.position.set(cs.target[0] + cs.dist * Math.cos(el) * Math.sin(az), cs.target[1] + cs.dist * Math.sin(el), cs.target[2] + cs.dist * Math.cos(el) * Math.cos(az)); camera.lookAt(...cs.target); camera.fov = cs.fov; camera.updateProjectionMatrix(); camera.updateMatrixWorld();
+  const cs = camState(t); placeCamera(cs);
   for (const [id, a] of Object.entries(actors)) { const s = actorState(id, t); a.visible = s.show; if (a.userData.head) { a.position.set(s.at[0], 0, s.at[1]); a.rotation.y = s.rot * Math.PI / 180; a.userData.head.rotation.set(s.head[1] * Math.PI / 180, s.head[0] * Math.PI / 180, 0); } a.updateMatrixWorld(true); }
   const capRect = captionRect(ctx, t);
   for (const m of props) {
@@ -341,11 +359,11 @@ window.seek = function (t) {
       const pr = p.draw != null ? tw(t, p.draw, 0.9, 'inout') : 1; const key = pr.toFixed(3); if (m.userData.key !== key) { m.userData.key = key; m.geometry.dispose(); m.geometry = new THREE.TorusGeometry(p.r ?? 0.55, p.tube ?? 0.07, 12, 60, Math.max(0.01, pr) * Math.PI * 2); }
       if (p.around) { const a = actors[p.around]; const base = a.position.clone().add(new THREE.Vector3(0, p.y ?? 0.95, 0)); const toCam = camera.position.clone().sub(base).normalize(); m.position.copy(base.add(toCam.multiplyScalar(p.front ?? 0.75))); }
       m.quaternion.copy(camera.quaternion); m.rotateZ(Math.PI * 0.6); }
-    if (m.userData.letters) { const lp = m.userData.letters; const lit = (lp.litAt || []).filter(tt => t >= tt).length - 1; m.children.forEach(ch => { if (ch.userData.letter != null) ch.material.color.set(ch.userData.letter === lit ? PAL.yellow : '#ffffff'); }); }
+    if (m.userData.letters) { const lp = m.userData.letters; let lit = new Set(); (lp.litAt || []).forEach((e, i) => { if (Array.isArray(e)) { if (t >= e[0]) { if (e[2] === 'add') lit.add(e[1]); else lit = new Set([e[1]]); } } else if (t >= e) lit = new Set([i]); }); m.children.forEach(ch => { if (ch.userData.letter != null) ch.material.color.set(lit.has(ch.userData.letter) ? PAL.yellow : '#ffffff'); }); }
     if (m.userData.timer) { const tm = m.userData.timer; const pr = clamp((t - (tm.p.fillFrom ?? t0)) / (tm.p.dur ?? 3), 0, 1); tm.arc.geometry.dispose(); tm.arc.geometry = new THREE.TorusGeometry(tm.r, 0.075, 10, 60, Math.max(0.01, pr) * Math.PI * 2); }
     if (m.userData.coins) { const cp = m.userData.coins; const k = Math.floor(clamp((t - t0) / (cp.each ?? 0.25), 0, cp.n ?? 8)); m.children.forEach((c, i) => { c.visible = Math.floor(i / 2) < k; }); }
     if (m.userData.bracketOf && m.visible) { const h = headWorld(m.userData.bracketOf); const a = actors[m.userData.bracketOf]; m.position.copy(a.position).add(new THREE.Vector3(0, a.userData.h * 0.55, 0.3)); m.quaternion.copy(camera.quaternion); }
-    if (m.userData.bars) { const b = m.userData.bars; const filled = Math.floor(clamp((t - (b.fillFrom ?? t0)) / (b.each ?? 1.2), 0, b.n ?? 5)); m.children.forEach((c, i) => { if (i % 2 === 1) c.visible = (i - 1) / 2 < filled; }); }
+    if (m.userData.bars) { const b = m.userData.bars; if (b.pattern) { m.children.forEach((c, i) => { if (i % 2 === 1) { const v = b.pattern[(i - 1) / 2] ?? 0; c.visible = v > 0; c.material.color.set(v === 2 ? PAL.red : PAL.yellow); } }); } else { const filled = Math.floor(clamp((t - (b.fillFrom ?? t0)) / (b.each ?? 1.2), 0, b.n ?? 5)); m.children.forEach((c, i) => { if (i % 2 === 1) c.visible = (i - 1) / 2 < filled; }); } }
     if (m.userData.retex) { // bocadillos: tachado y texto que se revela palabra a palabra
       const s = m.userData.src; let strikeW, nWords;
       if (s.strike != null) strikeW = tw(t, s.strike, 0.35, 'out');
@@ -359,42 +377,42 @@ window.seek = function (t) {
   for (const m of props) if (m.visible && m.userData.path) { m.userData.draw = tw(t, m.userData.spec.t0, m.userData.spec.drawDur ?? 0.6, 'out'); m.userData.dotP = ((t - m.userData.spec.t0) * 0.6) % 1; m.scale.setScalar(1); buildPath(m); }
   renderer.render(scene, camera);
   ctx.drawImage(glCanvas, 0, 0); drawCaptions(ctx, t, inv > 0.5);
-  lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect, ring: !!q.ring })), heads: lay.heads, bodies: lay.bodies, camDist: cs.dist };
+  const whipping = SHOTS.cam.some(k => k.whip && t >= k.t && t < k.t + 0.3);
+  lastFrame = { t, whip: whipping, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect, ring: !!q.ring })), heads: lay.heads, bodies: lay.bodies, camDist: cs.dist };
 };
-// Inspector de píxeles (regla 10): dibuja cada objeto solo, en plano, a 270x480, y mide cuántos píxeles comparte con los demás.
-// Detecta lo que los rectángulos no ven: una mesa que cruza un cuerpo, una flecha sobre una cara, la multitud sobre una cabeza, un objeto cortado por el borde.
-const MW = 270, MH = 480; let maskRT = null, maskCanvas = null;
-function silhouette(objs, id) {
-  if (!maskRT) { maskRT = new THREE.WebGLRenderTarget(MW, MH); }
+// Inspector de píxeles (regla 10): dibuja cada objeto solo (silueta) y todos juntos con un color por objeto (quién queda delante),
+// a 270x480. Detecta lo que los rectángulos no ven: una mesa que cruza un cuerpo, una flecha sobre una cara, la multitud
+// delante de un protagonista, un objeto cortado por el borde. Un objeto detrás de otro (la multitud detrás del héroe) no es solape.
+const MW = 270, MH = 480; let maskRT = null;
+function withFlat(objs, colorOf, fn) {
+  if (!maskRT) maskRT = new THREE.WebGLRenderTarget(MW, MH);
   const saved = []; scene.traverse(o => { if (o.isMesh) saved.push([o, o.visible, o.material]); });
-  const flat = new THREE.MeshBasicMaterial({ color: '#ffffff' });
   scene.traverse(o => { if (o.isMesh) o.visible = false; });
-  for (const root of objs) root.traverse(o => { if (o.isMesh && o.userData.notMask !== true) { o.visible = true; o.material = flat; } });
+  objs.forEach((root, i) => { const col = colorOf(i); root.traverse(o => { if (o.isMesh && o.userData.notMask !== true) { o.visible = true; o.material = new THREE.MeshBasicMaterial({ color: col, depthTest: o.material.depthTest !== false, transparent: false }); } }); });
   const bg = scene.background; scene.background = new THREE.Color('#000000');
   renderer.setRenderTarget(maskRT); renderer.render(scene, camera); const buf = new Uint8Array(MW * MH * 4); renderer.readRenderTargetPixels(maskRT, 0, 0, MW, MH, buf); renderer.setRenderTarget(null); scene.background = bg;
   for (const [o, v, m] of saved) { o.visible = v; o.material = m; }
-  const mask = new Uint8Array(MW * MH); let n = 0, touch = { l: 0, r: 0, t: 0, b: 0 };
-  for (let i = 0; i < MW * MH; i++) if (buf[i * 4] > 128) { mask[i] = 1; n++; const x = i % MW, y = MH - 1 - Math.floor(i / MW); if (x === 0) touch.l++; if (x === MW - 1) touch.r++; if (y === 0) touch.t++; if (y === MH - 1) touch.b++; }
-  return { id, mask, n, touch };
+  return fn(buf);
 }
 window.inspectPixels = function (t) {
   window.seek(t); const items = [];
   for (const [id, a] of Object.entries(actors)) if (a.visible) items.push({ obj: a, id: 'actor:' + id, kind: a.userData.head ? 'actor' : 'crowd' });
-  for (const m of props) if (m.visible) { const p = m.userData.spec; items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind: m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid')) }); }
-  const sil = items.map(it => ({ ...it, ...silhouette([it.obj], it.id) }));
-  // el titular como máscara (rectángulo en píxeles → escala de la máscara)
-  const cap = lastFrame.caption; const capMask = new Uint8Array(MW * MH); if (cap) { for (let y = Math.max(0, Math.floor(cap.y / 4)); y < Math.min(MH, (cap.y + cap.h) / 4); y++) for (let x = Math.max(0, Math.floor(cap.x / 4)); x < Math.min(MW, (cap.x + cap.w) / 4); x++) capMask[y * MW + x] = 1; }
-  const inter = (A, B) => { let c = 0; for (let i = 0; i < MW * MH; i++) if (A[i] && B[i]) c++; return c; };
+  for (const m of props) if (m.visible) { const p = m.userData.spec; const kind = p.type === 'cross' ? 'mark' : (m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid'))); items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind, age: t - (p.t0 ?? 0), left: (p.t1 ?? 1e9) - t }); }
+  // siluetas individuales
+  const masks = items.map(it => withFlat([it.obj], () => '#ffffff', buf => { const mask = new Uint8Array(MW * MH); let n = 0; const touch = { l: 0, r: 0, t: 0, b: 0 }; for (let i = 0; i < MW * MH; i++) if (buf[i * 4] > 128) { mask[i] = 1; n++; const x = i % MW, y = MH - 1 - Math.floor(i / MW); if (x === 0) touch.l++; if (x === MW - 1) touch.r++; if (y === 0) touch.t++; if (y === MH - 1) touch.b++; } return { mask, n, touch }; }));
+  // quién queda delante: todos a la vez, cada uno con su color (índice en el canal rojo)
+  const front = withFlat(items.map(i => i.obj), i => new THREE.Color().setRGB((i + 1) / 255, 0, 0), buf => { const f = new Int16Array(MW * MH); for (let i = 0; i < MW * MH; i++) f[i] = Math.round(buf[i * 4]) - 1; return f; });
+  const cap = lastFrame.caption; const capMask = new Uint8Array(MW * MH); if (cap) for (let y = Math.max(0, Math.floor(cap.y / 4)); y < Math.min(MH, (cap.y + cap.h) / 4); y++) for (let x = Math.max(0, Math.floor(cap.x / 4)); x < Math.min(MW, (cap.x + cap.w) / 4); x++) capMask[(MH - 1 - y) * MW + x] = 1; // el buffer del render va de abajo arriba
   const pairs = [];
-  for (let i = 0; i < sil.length; i++) {
-    const A = sil[i]; if (cap) { const c = inter(A.mask, capMask); if (c) pairs.push([A.id, 'titular', c]); }
-    for (let j = i + 1; j < sil.length; j++) { const B = sil[j]; const c = inter(A.mask, B.mask); if (c) pairs.push([A.id, B.id, c]); }
+  for (let i = 0; i < items.length; i++) {
+    const A = masks[i]; if (cap) { let c = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && capMask[k]) c++; if (c) pairs.push([items[i].id, 'titular', c, c]); }
+    for (let j = i + 1; j < items.length; j++) { const B = masks[j]; let c = 0, aFront = 0, bFront = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && B.mask[k]) { c++; if (front[k] === i) aFront++; else if (front[k] === j) bFront++; } if (c) pairs.push([items[i].id, items[j].id, c, aFront, bFront]); }
   }
-  return { t, items: sil.map(x => ({ id: x.id, kind: x.kind, px: x.n, touch: x.touch, age: x.obj.userData.spec ? t - (x.obj.userData.spec.t0 ?? 0) : 9 })), pairs, caption: !!cap, billboards: sil.filter(x => x.kind === 'billboard').length };
+  return { t, whip: lastFrame.whip, items: items.map((it, i) => ({ id: it.id, kind: it.kind, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
-window.__dbg = () => ({ props, camera, actors }); // solo para depurar desde las herramientas
+window.__dbg = () => ({ props, camera, actors, scene, renderer, withFlat, MW, MH }); // solo para depurar desde las herramientas
 // Eventos de sonido (los sintetiza herramientas/sonido.py): latigazos, entradas de objetos, marcadores de palabra, cortes a oscuro, anillos
 window.soundEvents = function () {
   const ev = [];
