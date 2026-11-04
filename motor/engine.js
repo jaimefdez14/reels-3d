@@ -161,14 +161,16 @@ const PROPS = {
 // ---------- rotulación 2D ----------
 // Devuelve el rectángulo que ocupa el titular (para que los objetos no lo pisen y para el inspector).
 const CAPTION_TOP = 160;
-function captionLayout(x, L, fs, maxW, marginX) { const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; } return { tokens, layout, rows: row + 1 }; }
+function captionLayout(x, L, fs0, maxW, marginX) { // reduce el cuerpo hasta que el titular quepa en 2 líneas
+  for (const fs of [fs0, 104, 92, 82]) { x.font = `900 ${fs}px NotoCond`; const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
+    if (row + 1 <= 2 || fs === 82) return { tokens, layout, rows: row + 1, fs, lh: Math.round(fs * 1.24) }; } }
 function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
-function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const fs = 118, lh = 146, marginX = 60; x.save(); x.font = `900 ${fs}px NotoCond`; const { rows, layout } = captionLayout(x, a.L, fs, W - 2 * marginX - 40, marginX); x.restore(); const top = a.L.voice ? 215 : CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: (a.L.voice ? 70 : top - fs), w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (a.L.voice ? 70 : top - fs) }; }
+function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 118, W - 2 * marginX - 40, marginX); x.restore(); const top = a.L.voice ? 215 : CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: (a.L.voice ? 70 : top - fs), w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (a.L.voice ? 70 : top - fs) }; }
 function drawCaptions(x, t, inv) {
-  const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60, fs = 118, lh = 146;
-  x.save(); x.font = `900 ${fs}px NotoCond`; x.textBaseline = 'alphabetic';
+  const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60;
+  x.save(); x.textBaseline = 'alphabetic';
   const top = L.voice ? 215 : CAPTION_TOP; const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
-  const { tokens, layout } = captionLayout(x, L, fs, W - 2 * marginX - 40, marginX);
+  const { tokens, layout, fs, lh } = captionLayout(x, L, 118, W - 2 * marginX - 40, marginX); x.font = `900 ${fs}px NotoCond`;
   if (L.voice) { x.save(); x.font = '400 30px Montserrat'; x.fillStyle = inv ? '#c9c9cf' : '#6b6b70'; x.globalAlpha = 1 - outP; x.fillText(L.voice, marginX, 96); x.restore(); x.font = `900 ${fs}px NotoCond`; }
   const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
   for (let i = 0; i < tokens.length; i++) {
@@ -286,7 +288,10 @@ window.seek = function (t) {
     const p = m.userData.spec; const t0 = p.t0 ?? 0, t1 = p.t1 ?? 1e9;
     const inP = tw(t, t0, p.inDur ?? 0.32, p.inEase ?? 'back'), outP = tw(t, t1, 0.25, 'in'); const sc = Math.max(0.0001, inP * (1 - outP)) * (p.scale ?? 1);
     m.visible = t >= t0 && outP < 1; m.scale.setScalar(sc);
-    if (m.userData.ring && p.draw != null) { const pr = tw(t, p.draw, 0.9, 'inout'); m.geometry.dispose(); m.geometry = new THREE.TorusGeometry(p.r ?? 0.55, p.tube ?? 0.07, 12, 60, Math.max(0.01, pr) * Math.PI * 2); m.rotation.z = Math.PI * 0.6; m.quaternion.copy(camera.quaternion); }
+    if (m.userData.ring) { // anillo que se dibuja; con around: 'id' rodea al personaje de cara a la cámara
+      const pr = p.draw != null ? tw(t, p.draw, 0.9, 'inout') : 1; const key = pr.toFixed(3); if (m.userData.key !== key) { m.userData.key = key; m.geometry.dispose(); m.geometry = new THREE.TorusGeometry(p.r ?? 0.55, p.tube ?? 0.07, 12, 60, Math.max(0.01, pr) * Math.PI * 2); }
+      if (p.around) { const a = actors[p.around]; const base = a.position.clone().add(new THREE.Vector3(0, p.y ?? 0.95, 0)); const toCam = camera.position.clone().sub(base).normalize(); m.position.copy(base.add(toCam.multiplyScalar(p.front ?? 0.75))); }
+      m.quaternion.copy(camera.quaternion); m.rotateZ(Math.PI * 0.6); }
     if (m.userData.bars) { const b = m.userData.bars; const filled = Math.floor(clamp((t - (b.fillFrom ?? t0)) / (b.each ?? 1.2), 0, b.n ?? 5)); m.children.forEach((c, i) => { if (i % 2 === 1) c.visible = (i - 1) / 2 < filled; }); }
     if (m.userData.retex) { // bocadillos: tachado y texto que se revela palabra a palabra
       const s = m.userData.src; let strikeW, nWords;

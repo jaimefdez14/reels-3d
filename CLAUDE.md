@@ -57,8 +57,10 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    movimiento: cámara que no se queda quieta más de 3 s, un objeto que entra o cambia cada 1-2 s, anillos que se
    dibujan, contadores, tachados, cambios de cara, inversión de fondo en la objeción (ver `docs/ANALISIS-REFERENCIA.md` §3.6).
 
+7. **Ideas aprobadas (04-11-2026):** Jaime: «ok la 3 y la 1, empieza por la 3. voz kokoro». I3 (el giro del cero) e I1
+   (las dos preguntas) de `docs/IDEAS-2026-11-04.md` tienen su sí; el resto sigue en propuesta. Las previas van con Kokoro.
+
 ## Pendiente de Jaime
-- Elegir entre las cinco ideas de `docs/IDEAS-2026-11-04.md` (cada idea necesita su sí explícito).
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
   ViralClips, decidir cómo se reparte el tope mensual).
