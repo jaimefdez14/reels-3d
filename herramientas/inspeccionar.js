@@ -4,8 +4,8 @@ const { chromium } = require('playwright'); const path = require('path');
 (async () => {
   const dir = path.resolve(process.argv[2]); const step = +(process.argv[3] || 0.25);
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 540, height: 960 } });
-  p.on('pageerror', e => console.log('pageerror:', e.message));
-  await p.goto('file://' + path.join(dir, 'composition', 'index.html')); await p.evaluate(() => window.ready);
+  let pageErr = null; p.on('pageerror', e => { pageErr = e.message; console.log('pageerror:', e.message); });
+  await p.goto('file://' + path.join(dir, 'composition', 'index.html')); await p.evaluate(() => window.ready); if (pageErr) { console.log('ERROR: la composición falla al cargar, nada que inspeccionar:', pageErr); process.exit(2); }
   const D = await p.evaluate(() => window.DURATION); const issues = []; const seen = new Set();
   const ov = (a, c, pad = 0) => !(a.x + a.w + pad < c.x || c.x + c.w + pad < a.x || a.y + a.h + pad < c.y || c.y + c.h + pad < a.y);
   for (let t = 0; t < D; t += step) {

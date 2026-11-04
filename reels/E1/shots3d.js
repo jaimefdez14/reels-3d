@@ -1,59 +1,36 @@
 // E1 · hoja de escenas: seis escenarios distintos, un latigazo entre cada uno.
+const L = (i, w = 0) => wt(i, w);
+const E = i => L(i) - 0.3; // cada escena empieza un poco antes de su frase
 SHOTS.actors = {
-  yo: { kind: 'hero', at: [-0.4, 0.6], rot: 60 },
+  yo: { kind: 'hero', at: [-1.8, 0.6], rot: 90 },
   ponente: { kind: 'other', at: [0, -3.0], rot: 0, face: true, show: false },
   publico: { kind: 'crowd', n: 24, area: [5, 2.5], at: [0, 1.2], gap: 1.2, show: false },
   cliente: { kind: 'other', at: [1.1, 0.2], rot: -90, face: true, show: false },
 };
-const L = (i, w = 0) => wt(i, w);
-const E = i => L(i) - 0.3; // cada escena empieza un poco antes de su frase
 SHOTS.cam = [
-  { t: 0, dist: 13, el: 9, az: -58, target: [-1.5, 1.5, 0], dur: 0.01 },
+  { t: 0, dist: 13, el: 9, az: -50, target: [-0.8, 1.5, 0], dur: 0.01 },
   { t: L(0), dist: 12, el: 9, az: -38, target: [3.5, 1.5, 0], dur: 4.5, ease: 'inout' },        // travelling lateral por el pasillo
-  { t: E(1), whip: true, dist: 12.5, el: 14, az: 0, target: [-0.7, 1.6, -1.0] },                     // atril y público
-  { t: L(1) + 1.2, az: 9, dist: 12, dur: 2.5 },                // dolly al ponente
-  { t: E(2), whip: true, dist: 9.5, el: 6, az: -12, target: [0.3, 1.3, 0] },                       // letras gigantes
-  { t: L(2) + 1.0, az: 14, dist: 8, target: [0.8, 1.3, 0], dur: 3.0 },                        // orbit por las letras
+  { t: E(1), whip: true, dist: 12.5, el: 14, az: 0, target: [-0.7, 1.6, -1.0] },                // atril y público
+  { t: L(1) + 1.2, az: 9, dist: 12, dur: 2.5 },                                                 // orbit suave
+  { t: E(2), whip: true, dist: 9.5, el: 6, az: -12, target: [0.3, 1.3, 0] },                    // letras gigantes
+  { t: L(2) + 1.0, az: 14, dist: 8, target: [0.8, 1.3, 0], dur: 3.0 },                          // orbit por las letras
   { t: E(3), whip: true, dist: 9.5, el: 10, az: 20, target: [0, 1.3, 0] },                      // escritorio
   { t: L(3) + 1.0, dist: 7.5, az: 6, target: [0, 1.4, 0], dur: 3.0 },                           // dolly al monitor
   { t: E(4), whip: true, dist: 9.5, el: 8, az: -16, target: [0.2, 1.4, 0] },                    // temporizador
-  { t: E(5), whip: true, dist: 10.5, el: 10, az: 20, target: [0.3, 1.3, 0] },                    // monedas
+  { t: E(5), whip: true, dist: 10.5, el: 10, az: 20, target: [0.3, 1.3, 0] },                   // monedas
   { t: L(5) + 1.0, dist: 9.0, az: 10, dur: 3.0 },
 ];
 SHOTS.moves = {
-  yo: [{ t: 0, at: [-3.2, 0.6], rot: 90, dur: 0.01 }, { t: L(0), at: [2.5, 0.6], rot: 90, dur: 4.5, ease: 'inout' },      // «yo» recorre el pasillo
-       // en cada latigazo «yo» desaparece 0,3 s y reaparece ya en la escena nueva (así nunca se le ve cortado a medio camino)
+  // «yo» recorre el pasillo; en cada latigazo desaparece 0,3 s y reaparece ya en la escena nueva (nunca se le ve cortado a medio camino)
+  yo: [{ t: L(0), at: [2.5, 0.6], rot: 90, dur: 4.5, ease: 'inout' },
        { t: E(1) - 0.02, show: false, dur: 0.01 }, { t: E(1) + 0.3, at: [-0.9, 1.4], rot: 20, show: true, dur: 0.01 },
        { t: E(2) - 0.02, show: false, dur: 0.01 }, { t: E(2) + 0.3, at: [-1.5, 0.7], rot: 70, show: true, dur: 0.01 },
        { t: E(3) - 0.02, show: false, dur: 0.01 }, { t: E(3) + 0.3, at: [-0.5, 0.9], rot: 10, show: true, dur: 0.01 },
        { t: E(4) - 0.02, show: false, dur: 0.01 }, { t: E(4) + 0.3, at: [-0.9, 0.3], rot: 70, show: true, dur: 0.01 },
        { t: E(5) - 0.02, show: false, dur: 0.01 }, { t: E(5) + 0.3, at: [-0.9, 0.2], rot: 70, show: true, dur: 0.01 }],
-  ponente: { kind: 'other', at: [0, -3.0], rot: 0, face: true, show: false },
-  publico: { kind: 'crowd', n: 24, area: [5, 2.5], at: [0, 1.2], gap: 1.2, show: false },
-  cliente: { kind: 'other', at: [1.1, 0.2], rot: -90, face: true, show: false },
-};
-const L = (i, w = 0) => wt(i, w);
-const E = i => L(i) - 0.3; // cada escena empieza un poco antes de su frase
-SHOTS.cam = [
-  { t: 0, dist: 13, el: 9, az: -58, target: [-1.5, 1.5, 0], dur: 0.01 },
-  { t: L(0), dist: 12, el: 9, az: -38, target: [3.5, 1.5, 0], dur: 4.5, ease: 'inout' },        // travelling lateral por el pasillo
-  { t: E(1), whip: true, dist: 12.5, el: 14, az: 0, target: [-0.7, 1.6, -1.0] },                     // atril y público
-  { t: L(1) + 1.2, az: 9, dist: 12, dur: 2.5 },                // dolly al ponente
-  { t: E(2), whip: true, dist: 9.5, el: 6, az: -12, target: [0.3, 1.3, 0] },                       // letras gigantes
-  { t: L(2) + 1.0, az: 14, dist: 8, target: [0.8, 1.3, 0], dur: 3.0 },                        // orbit por las letras
-  { t: E(3), whip: true, dist: 9.5, el: 10, az: 20, target: [0, 1.3, 0] },                      // escritorio
-  { t: L(3) + 1.0, dist: 7.5, az: 6, target: [0, 1.4, 0], dur: 3.0 },                           // dolly al monitor
-  { t: E(4), whip: true, dist: 9.5, el: 8, az: -16, target: [0.2, 1.4, 0] },                    // temporizador
-  { t: E(5), whip: true, dist: 10.5, el: 10, az: 20, target: [0.3, 1.3, 0] },                    // monedas
-  { t: L(5) + 1.0, dist: 9.0, az: 10, dur: 3.0 },
-];
-SHOTS.moves = {
-  yo: [{ t: 0, at: [-3.2, 0.6], rot: 90, dur: 0.01 }, { t: L(0), at: [2.5, 0.6], rot: 90, dur: 4.5, ease: 'inout' },      // «yo» recorre el pasillo
-       { t: E(1) + 0.02, at: [-0.9, 1.4], rot: 20, dur: 0.01 }, { t: E(2), at: [-1.5, 0.7], rot: 70, dur: 0.01 }, { t: E(3), at: [-0.5, 0.9], rot: 10, dur: 0.01 },
-       { t: E(4), at: [-0.9, 0.3], rot: 70, dur: 0.01 }, { t: E(5), at: [-0.9, 0.2], rot: 70, dur: 0.01 }],
   ponente: [{ t: E(1) + 0.3, show: true, dur: 0.01 }, { t: E(2), show: false, dur: 0.01 }],
-  publico: [{ t: E(1), show: true, dur: 0.01 }, { t: E(2), show: false, dur: 0.01 }],
-  cliente: [{ t: E(5), show: true, dur: 0.01 }],
+  publico: [{ t: E(1) + 0.3, show: true, dur: 0.01 }, { t: E(2), show: false, dur: 0.01 }],
+  cliente: [{ t: E(5) + 0.3, show: true, dur: 0.01 }],
 };
 SHOTS.props = [
   // 1 · pasillo de puertas: cinco conversaciones cortas, contador que se rellena
