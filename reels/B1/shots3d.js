@@ -31,7 +31,7 @@ SHOTS.moves = {
 
 SHOTS.props = [
   // bloque 1: la frase prohibida en un bocadillo que se tacha cuando llega «Todo el mundo lo dice»
-  { id: 'b1', type: 'bubble', text: 'Encantado de conocerte.', w: 560, over: 'yo', dx: 0.4, t0: wt(0, 1), t1: wt(2, 0) - 0.2, strike: wt(1, 0) },
+  { id: 'b1', type: 'bubble', text: 'Encantado de conocerte.', w: 560, over: 'yo', dx: 0.4, t0: wt(0, 1), t1: wt(1, 0) + 1.1, strike: wt(1, 0) },
   // bloque 2: tarjetas de perfil en el suelo = «una cara más»
   { id: 'cards1', type: 'cards', n: 48, cols: 8, at: [0, 0, 2.2], t0: wt(2, 2), t1: wt(3, 0) + 0.6, inEase: 'out', inDur: 0.6 },
   // bloque 3: «dos frases» = dos tarjetas numeradas junto a «yo»
@@ -42,9 +42,9 @@ SHOTS.props = [
   // objeción: nube de pensamiento sobre «yo»
   { id: 'duda', type: 'thought', text: '¿Eso no suena a chulería?', w: 560, over: 'yo', t0: wt(6, 0), t1: wt(7, 0) },
   // la frase literal: bocadillo grande en serif que se revela palabra a palabra con la voz
-  { id: 'frase', type: 'bubble', text: 'Me vas a recordar como el de la agencia que odia estos eventos.', w: 760, serif: true, over: 'yo', dx: 0.6, t0: wt(8, 0) - 0.2, t1: wt(9, 0) + 0.3, h: 1.15, reveal: 8 },
+  { id: 'frase', type: 'bubble', text: 'Me vas a recordar como el de la agencia que odia estos eventos.', w: 760, serif: true, over: 'yo', dx: 0.6, t0: wt(8, 0) - 0.2, t1: wt(9, 0) - 0.1, h: 1.15, reveal: 8 },
   // «dónde archivarte»: tarjetas otra vez, una amarilla de pie y la flecha de «el» hacia ella
   { id: 'cards2', type: 'cards', n: 32, cols: 8, at: [0, 0, 2.4], t0: wt(9, 1), inEase: 'out', inDur: 0.6 },
-  { id: 'ficha', type: 'card', label: 'AGENCIA', yellow: true, standing: true, at: [1.5, 0.32, 1.6], rot: 25, t0: wt(9, 3) },
-  { id: 'flecha', type: 'arrow', from: 'el', to: [1.5, 0.7, 1.6], lift: 0.9, t0: wt(9, 3) + 0.2, drawDur: 0.8 },
+  { id: 'ficha', type: 'card', label: 'AGENCIA', yellow: true, standing: true, at: [1.6, 0.32, 0.9], rot: 25, t0: wt(9, 3) },
+  { id: 'flecha', type: 'arrow', from: 'el', to: [1.6, 0.7, 0.9], lift: 0.9, t0: wt(9, 3) + 0.2, drawDur: 0.8 },
 ];
