@@ -24,6 +24,17 @@ const { chromium } = require('playwright'); const path = require('path');
     for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1800) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
     if (f.caption && f.caption.y + f.caption.h > 520) add('capH', `titular demasiado alto: baja hasta ${Math.round(f.caption.y + f.caption.h)} px`);
   }
+  // regla 14 (Jaime, 04-11): variedad como la referencia. Solo se exige a los reels hechos desde la regla (storyboard.md).
+  if (require('fs').existsSync(path.join(dir, 'storyboard.md'))) {
+    const v = await p.evaluate(() => window.variety()); const occ = [];
+    for (let t = 0.6; t < D - 0.5; t += 1) occ.push([t, await p.evaluate((t) => window.occupancy(t), +t.toFixed(2))]);
+    const low = occ.filter(([, o]) => o < 0.07); const med = occ.map(o => o[1]).sort((a, c) => a - c)[Math.floor(occ.length / 2)];
+    console.log(`variedad: ${v.sets} decorados, hueco máximo sin cambio ${v.maxGap} s (en ${v.gapAt} s), encuadre ocupado mediana ${(med * 100).toFixed(0)} %`);
+    if (v.sets < 5) issues.push(`regla 14: solo ${v.sets} decorados (mínimo 5)`);
+    if (v.maxGap > 2) issues.push(`regla 14: ${v.maxGap} s sin nada nuevo desde ${v.gapAt} s (máximo 2)`);
+    if (med < 0.15) issues.push(`regla 14: encuadre ocupado, mediana ${(med * 100).toFixed(0)} % (la referencia, 16-36 %)`);
+    for (const [t, o] of low) issues.push(`${t.toFixed(1)}s  regla 14: encuadre casi vacío (${(o * 100).toFixed(1)} % ocupado)`);
+  }
   await b.close();
   if (issues.length) { console.log('AVISOS:'); issues.forEach(i => console.log(' ', i)); process.exitCode = 1; } else console.log('ok: sin solapes en', D.toFixed(1), 's');
 })();

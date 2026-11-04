@@ -1,0 +1,103 @@
+{
+ "id": "N1",
+ "titulo": "La regla de los cinco minutos",
+ "idea": "N1 de docs/IDEAS-2026-11-04b.md (aprobada por Jaime el 04-11-2026: «ok, n1»). Pulso a pulso sobre R4 («Stop waiting to feel confident»). Primer reel con la regla 14: guion gráfico, 8 decorados, personajes que actúan.",
+ "coverT": 1.6,
+ "lines": [
+  {
+   "show": "Deja de esperar a tener ganas.",
+   "neg": "esperar"
+  },
+  {
+   "show": "Crees que primero vienen las ganas.",
+   "hi": "ganas"
+  },
+  {
+   "show": "Y luego, el trabajo.",
+   "hi": "trabajo"
+  },
+  {
+   "show": "Es al revés.",
+   "hi": "revés"
+  },
+  {
+   "show": "Las ganas vienen cuando ya has empezado.",
+   "hi": "empezado"
+  },
+  {
+   "show": "Si las esperas, no empiezas nunca.",
+   "neg": "nunca"
+  },
+  {
+   "show": "Prueba la regla de los cinco minutos.",
+   "hi": "cinco minutos"
+  },
+  {
+   "show": "Pon un temporizador de cinco minutos.",
+   "hi": "temporizador"
+  },
+  {
+   "show": "«Solo cinco minutos. Luego paro.»",
+   "voice": "Te dices:",
+   "hi": "paro"
+  },
+  {
+   "show": "Empieza por lo que más pereza te da.",
+   "hi": "pereza"
+  },
+  {
+   "show": "La llamada que llevas días evitando.",
+   "hi": "llamada"
+  },
+  {
+   "show": "A los cinco minutos, puedes parar.",
+   "hi": "parar"
+  },
+  {
+   "show": "Y casi nadie para.",
+   "hi": "nadie"
+  },
+  {
+   "show": "«Cinco minutos no sirven para nada.»",
+   "voice": "Estás pensando:",
+   "neg": "nada"
+  },
+  {
+   "show": "Sirven para arrancar.",
+   "hi": "arrancar"
+  },
+  {
+   "show": "Y una vez arrancas, sigues.",
+   "hi": "sigues"
+  },
+  {
+   "show": "El viernes repasas tu semana.",
+   "hi": "viernes"
+  },
+  {
+   "show": "Cinco tareas hechas.",
+   "hi": "hechas"
+  },
+  {
+   "show": "Ninguna empezó con ganas.",
+   "neg": "ganas"
+  },
+  {
+   "show": "No necesitas motivación.",
+   "neg": "motivación"
+  },
+  {
+   "show": "Necesitas un temporizador.",
+   "hi": "temporizador"
+  },
+  {
+   "show": "Mándaselo a quien diga «mañana lo hago».",
+   "hi": "mañana"
+  }
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-04",
+  "lector": "espectador de Madrid sin contexto (lectura en frío + corrector)",
+  "cambios": "1, 2, 4: «vienen», «luego»; 5: «si las esperas, no empiezas nunca» (antes, relleno); 6: «la regla de los cinco minutos» («minutos feos» sonaba a traducción); 9: «lo que más pereza te da» («la parte más fea», calco de ugly); 10: oración completa; 12: «Y casi nadie para»; 14-15: respuesta a la objeción concreta («arrancar»); 16: «repasas»"
+ }
+}

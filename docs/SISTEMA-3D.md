@@ -63,6 +63,7 @@ Reglas de escritura (añaden a las 17, 34, 37, 38, 39, 43 y 48):
 - **Escenario:** suelo infinito blanco con rejilla, picado 15-20°, luz suave + sombras de contacto, render toon
   (sin especular, contorno por `BackSide` escalado). Variantes: fila de puertas, mostrador, mesa de evento,
   escenario con atril (el «speaker»).
+- **Decorados y cámara (regla 14, 04-11):** 5-8 decorados por reel en un mismo mundo (en fila a lo largo de x, ~12 unidades entre sí); la cámara viaja de uno a otro con travellings de 0,5-1 s y hay como mucho 2-3 latigazos. El personaje que cambia de decorado se oculta durante el viaje y aparece cuando la cámara llega. Cada reel empieza por `reels/ID/storyboard.md` (frase → decorado, acción, objeto grande, plano de la referencia). Lo de abajo es la medición anterior, corregida en este punto.
 - **Cámara (medido el 04-11, regla 8):** personajes pequeños de cuerpo entero (un tercio de la altura), un latigazo (`whip`, 0,28 s) a otro ángulo o escala cada 4-6 s, corte seco a oscuro en la objeción, y entre latigazos un dolly u orbit lento. Antes se creía «una sola toma»: los latigazos son tan rápidos que el detector de cortes no los veía. Vocabulario: `dolly`, `orbit`, `travel`, `pullback`, `push` (fuerte, al giro), `hold`.
   Cada movimiento 1-3 s con ease-in-out; nunca dos movimientos simultáneos salvo `orbit+dolly` en el cierre.
   Un movimiento por bloque del guion; dentro del bloque, la cámara se queda quieta y cambian los objetos.
