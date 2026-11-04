@@ -184,7 +184,7 @@ const PROPS = {
   letters(p) { // letras gigantes (FORD): cada letra un sólido; la actual (p.lit) en amarillo; lo gestiona seek con p.litAt
     const font = new Font(FONT_JSON); const g = new THREE.Group(); const size = p.size ?? 1.4; let xoff = 0;
     [...p.text].forEach((ch, i) => { const geo = new TextGeometry(ch, { font, size, depth: 0.3, curveSegments: 8, bevelEnabled: true, bevelThickness: 0.02, bevelSize: 0.02, bevelSegments: 2 }); geo.computeBoundingBox(); const w = geo.boundingBox.max.x - geo.boundingBox.min.x; const m = new THREE.Mesh(geo, toonMat('#ffffff')); m.position.x = xoff; m.userData.letter = i; g.add(m); const o = outlineMesh(geo, 1.015); o.position.x = xoff; g.add(o); xoff += w + size * 0.18; });
-    g.position.x -= xoff / 2; g.userData.letters = p; return g; },
+    g.children.forEach(c => { c.position.x -= xoff / 2; }); g.userData.letters = p; return g; }, // centradas en «at»
   stage(p) { const g = new THREE.Group(); const mat = toonMat('#ffffff'); const base = new THREE.Mesh(new THREE.BoxGeometry(5, 0.35, 2.4), mat); base.position.y = 0.175; g.add(base, outlineMesh(new THREE.BoxGeometry(5, 0.35, 2.4), 1.01).translateY(0.175)); const lec = new THREE.Mesh(new THREE.BoxGeometry(0.6, 1.1, 0.4), toonMat(PAL.other)); lec.position.set(0, 0.35 + 0.55, 0.6); g.add(lec); return g; },
   desk(p) { const g = new THREE.Group(); const mat = toonMat('#ffffff'); const top = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.08, 1.0), mat); top.position.y = 0.95; g.add(top, outlineMesh(new THREE.BoxGeometry(2.2, 0.08, 1.0), 1.01).translateY(0.95)); [[-1, -0.4], [1, -0.4], [-1, 0.4], [1, 0.4]].forEach(([x, z]) => { const l = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.95, 0.07), toonMat(PAL.other)); l.position.set(x, 0.47, z); g.add(l); });
     const mon = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.7, 0.06), toonMat(PAL.other)); mon.position.set(0, 1.45, -0.2); g.add(mon); const c = document.createElement('canvas'); c.width = 440; c.height = 280; const x = c.getContext('2d'); x.fillStyle = '#ffffff'; x.fillRect(0, 0, 440, 280); x.fillStyle = PAL.yellow; [90, 150, 210].forEach((h, i) => x.fillRect(60 + i * 120, 250 - h, 80, h)); x.fillStyle = PAL.text; x.font = '600 28px Montserrat'; x.fillText(p.text || '', 30, 50);
@@ -360,6 +360,7 @@ window.seek = function (t) {
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
+window.__dbg = () => ({ props, camera, actors }); // solo para depurar desde las herramientas
 window.DURATION = TIMING.duration;
 window.ready = (async () => { await Promise.all([document.fonts.load('900 100px NotoCond'), document.fonts.load('400 30px Montserrat'), document.fonts.load('600 30px Montserrat')]); init(); window.seek(0); return true; })();
 })();
