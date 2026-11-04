@@ -46,5 +46,5 @@ SHOTS.props = [
   // «dónde archivarte»: tarjetas otra vez, una amarilla de pie y la flecha de «el» hacia ella
   { id: 'cards2', type: 'cards', n: 32, cols: 8, at: [0, 0, 2.4], t0: wt(9, 1), inEase: 'out', inDur: 0.6 },
   { id: 'ficha', type: 'card', label: 'AGENCIA', yellow: true, standing: true, at: [1.05, 0.32, 1.1], rot: 25, t0: wt(9, 3) },
-  { id: 'flecha', type: 'arrow', from: 'el', to: [1.05, 0.7, 1.1], lift: 0.9, t0: wt(9, 3) + 0.2, drawDur: 0.8 },
+  { id: 'flecha', type: 'arrow', from: [1.0, 1.3, 0.3], to: [1.05, 0.7, 1.1], lift: 0.7, t0: wt(9, 3) + 0.2, drawDur: 0.8 },
 ];
