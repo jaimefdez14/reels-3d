@@ -1,0 +1,18 @@
+{
+  "id": "B1",
+  "titulo": "Boceto: nunca digas «encantado de conocerte»",
+  "proposito": "Boceto del estilo 3D (sin voz, tiempos simulados). Adaptación del reel de referencia R1 para que Jaime vea el lenguaje visual.",
+  "coverT": 1.6,
+  "lines": [
+    { "show": "Nunca digas «encantado de conocerte».", "neg": "Nunca" },
+    { "show": "Todo el mundo lo dice." },
+    { "show": "Mañana eres una cara más.", "neg": "una cara más" },
+    { "show": "Lo último que dices es lo que se llevan.", "hi": "último" },
+    { "show": "Cámbialo por dos frases.", "hi": "dos frases" },
+    { "show": "La primera es la etiqueta.", "hi": "etiqueta" },
+    { "show": "«Suena a chulería.»", "voice": "Estás pensando:", "neg": "chulería" },
+    { "show": "No si lo dices en broma." },
+    { "show": "«Me vas a recordar como el de la agencia que odia estos eventos.»", "pause": 1.0, "hide": true },
+    { "show": "Ahora saben dónde archivarte.", "hi": "archivarte" }
+  ]
+}

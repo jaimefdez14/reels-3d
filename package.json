@@ -1,0 +1,26 @@
+{
+  "name": "reels-3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaimefdez14/reels-3d.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaimefdez14/reels-3d/issues"
+  },
+  "homepage": "https://github.com/jaimefdez14/reels-3d#readme",
+  "dependencies": {
+    "three": "^0.170.0"
+  }
+}
