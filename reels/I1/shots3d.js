@@ -16,13 +16,13 @@ SHOTS.cam = [
   { t: L(4), whip: true, preset: 'medium', az: 4 },                                 // lo primero que preguntas
   { t: L(5), whip: true, dist: 10, az: -18, target: [-0.3, 2.0, 0] },                // dos preguntas
   { t: L(6), az: -26, dist: 9.5, dur: 1.2 },                                        // la primera
-  { t: L(7), dist: 9, el: 12, az: -20, target: [-0.3, 2.0, 0], dur: 3.0 },          // pregunta 1: dolly lento
-  { t: L(8), whip: true, preset: 'close', az: -34, target: [-0.75, 1.9, 0.1] },     // oscuro: objeción
+  { t: L(7), dist: 10.5, el: 13, az: -20, target: [-0.3, 1.9, 0], dur: 3.0 },          // pregunta 1: dolly lento
+  { t: L(8), whip: true, preset: 'close', az: -30, dist: 10, target: [-0.25, 1.45, 0.1] },     // oscuro: objeción
   { t: L(9), whip: true, preset: 'medium', az: 8 },                                 // te callas
   { t: L(10), whip: true, dist: 10.5, az: 26, target: [0.2, 2.0, 0] },               // ahora sabes por qué: sobre «el»
   { t: L(11), whip: true, dist: 11, az: -10, el: 20 },                              // no basta
   { t: L(12), az: -22, dist: 10, target: [-0.3, 2.0, 0], dur: 1.2 },                // la segunda
-  { t: L(13), dist: 9, el: 12, az: -16, dur: 3.0 },                                 // pregunta 2
+  { t: L(13), dist: 10.5, el: 13, az: -16, dur: 3.0 },                                 // pregunta 2
   { t: L(14), whip: true, dist: 10.5, az: 24, target: [0.2, 2.0, 0] },               // lo que te va a comprar
   { t: L(15), whip: true, dist: 14.5, az: 40, target: [1.9, 2.0, -0.8] },             // el cliente va con su socio
   { t: L(16), dist: 11.5, az: 46, target: [2.1, 2.1, -0.9], dur: 2.8 },

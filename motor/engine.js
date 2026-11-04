@@ -29,7 +29,7 @@ window.lineEnd = function (line) { const L = TIMING.words[line]; return L[L.leng
 const CAM_PRESETS = {
   wide: { dist: 20, el: 24, az: 0, target: [0, 2.4, -1] },
   medium: { dist: 12, el: 16, az: 0, target: [0, 2.1, 0] },
-  close: { dist: 6.5, el: 10, az: 0, target: [0, 1.9, 0] },
+  close: { dist: 8.5, el: 12, az: 0, target: [0, 1.75, 0] },
 };
 function resolveCam(spec, prev) {
   const base = spec.preset ? CAM_PRESETS[spec.preset] : prev;
@@ -265,6 +265,7 @@ function placeBillboards(t, capRect) {
     clampX();
     placed.push({ m, rect: r, id: p.id });
   }
+  for (const m of props) { const p = m.userData.spec; if (!m.visible || !m.userData.ring) continue; const R = (p.r ?? 0.55) + (p.tube ?? 0.07); const wpp = worldPerPixel(m.position); const [cx, cy] = toScreen(m.position); const d = 2 * R * m.scale.x / wpp; placed.push({ m, rect: { x: cx - d / 2, y: cy - d / 2, w: d, h: d }, id: p.id, ring: true }); }
   return { placed, heads, bodies };
 }
 function buildPath(m) {
@@ -308,7 +309,7 @@ window.seek = function (t) {
   for (const m of props) if (m.visible && m.userData.path) { m.userData.draw = tw(t, m.userData.spec.t0, m.userData.spec.drawDur ?? 0.6, 'out'); m.userData.dotP = ((t - m.userData.spec.t0) * 0.6) % 1; m.scale.setScalar(1); buildPath(m); }
   renderer.render(scene, camera);
   ctx.drawImage(glCanvas, 0, 0); drawCaptions(ctx, t, inv > 0.5);
-  lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect })), heads: lay.heads, bodies: lay.bodies, camDist: cs.dist };
+  lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect, ring: !!q.ring })), heads: lay.heads, bodies: lay.bodies, camDist: cs.dist };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };

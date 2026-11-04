@@ -9,9 +9,9 @@ const L = (i, w = 0) => wt(i, w);
 SHOTS.cam = [
   { t: 0, preset: 'medium', az: -14, dist: 13, dur: 0.01 },
   { t: L(0), dist: 11.5, az: -6, dur: 2.8 },                                       // dolly in lento: la mesa y los dos
-  { t: L(1), whip: true, dist: 9.5, az: 8, target: [0, 1.8, 0] },                  // latigazo: «cero clientes», el anillo
+  { t: L(1), whip: true, dist: 11.5, az: 8, target: [-0.45, 1.9, 0] },                  // latigazo: «cero clientes», el anillo
   { t: L(2), whip: true, az: -18, dist: 10.5 },                                     // «no va del número»
-  { t: L(3), whip: true, preset: 'close', az: 36, target: [0.7, 1.9, 0] },          // oscuro: «¿merece la pena?»
+  { t: L(3), whip: true, preset: 'close', az: 30, dist: 10, target: [0, 1.65, 0] },          // oscuro: «¿merece la pena?»
   { t: L(4), whip: true, preset: 'medium', az: -8 },                                // «dilo tal cual»
   { t: L(5), dist: 10, el: 13, az: -16, target: [-0.3, 2.0, 0], dur: 3.2 },         // la frase: dolly lento
   { t: L(6), whip: true, preset: 'wide', az: 12, el: 24 },                          // la sala
@@ -22,11 +22,11 @@ SHOTS.cam = [
   { t: L(11), dist: 10, az: 14, el: 12, dur: 2.2 },                                 // la pregunta
   { t: L(12), whip: true, preset: 'wide', az: -20, el: 26 },                        // los demás esperan
   { t: L(13), whip: true, dist: 10.5, az: -18, target: [-0.3, 1.9, 0] },             // adivina a quién recordarán
-  { t: L(14), whip: true, preset: 'close', az: -34, target: [-0.7, 1.9, 0.1] },     // oscuro: objeción
-  { t: L(15), dist: 7.5, az: -20, dur: 1.2 },                                       // bien, eres nuevo
+  { t: L(14), whip: true, preset: 'close', az: -30, target: [-0.2, 1.75, 0.1] },     // oscuro: objeción
+  { t: L(15), dist: 9.2, az: -22, dur: 1.2 },                                       // bien, eres nuevo
   { t: L(16), whip: true, preset: 'medium', az: 6 },                                // ayudan / examinan
   { t: L(17), whip: true, az: 26, dist: 10.5 },                                     // no estás vendiendo
-  { t: L(18), whip: true, dist: 12.5, az: -10, el: 22, target: [0, 2.1, 0] },       // remate: se abre
+  { t: L(18), whip: true, dist: 14, az: -10, el: 22, target: [0.2, 1.9, 0] },       // remate: se abre
   { t: L(19), dist: 11, az: -2, dur: 1.6 },                                         // esconderlo, sí
 ];
 SHOTS.invert = [{ t: L(3) - 0.05, end: L(4) - 0.08 }, { t: L(14) - 0.05, end: L(16) - 0.08 }];
@@ -38,12 +38,12 @@ SHOTS.moves = {
 SHOTS.props = [
   { id: 'mesa', type: 'table', at: [0, 0, -0.9], t0: 0, inDur: 0.01, inEase: 'linear' },
   // «cero clientes»: el cero, un anillo enorme entre los dos
-  { id: 'cero', type: 'ring', r: 1.1, tube: 0.12, around: 'yo', y: 1.0, front: 1.6, t0: L(1, 0) - 0.05, draw: L(1, 0), t1: L(3) - 0.05 },
+  { id: 'cero', type: 'ring', r: 0.8, tube: 0.1, around: 'yo', y: 1.0, front: 0.9, t0: L(1, 0) - 0.05, draw: L(1, 0), t1: L(3) - 0.05 },
   { id: 'x1', type: 'cross', over: 'el', dx: -0.7, t0: L(2, 2), t1: L(3) - 0.05, scale: 0.6 },
   // oscuro: ellos deciden
   { id: 'deciden', type: 'thought', text: '¿Merece la pena hablar con este?', w: 600, over: 'el', dx: -0.2, t0: L(3), t1: L(4) - 0.08 },
   // dilo tal cual: el anillo vuelve, amarillo, y la frase
-  { id: 'cero2', type: 'ring', r: 0.9, tube: 0.1, around: 'yo', y: 1.0, front: 1.4, t0: L(4, 1) - 0.05, draw: L(4, 1), t1: L(6) - 0.05 },
+  { id: 'cero2', type: 'ring', r: 0.75, tube: 0.09, around: 'yo', y: 1.0, front: 1.4, t0: L(4, 1) - 0.05, draw: L(4, 1), t1: L(6) - 0.05 },
   { id: 'frase', type: 'bubble', text: 'Cero. Busco el primero. Por eso estoy aquí.', w: 760, serif: true, over: 'yo', dx: 0.6, t0: L(5) - 0.05, t1: L(6) - 0.05, h: 1.1, reveal: 5 },
   // ahora piensan a quién conocen: líneas de «el» a la sala
   { id: 'pres1', type: 'line', from: 'el', to: [3.0, 1.3, -3.4], lift: 0.7, t0: L(6, 2), t1: L(7) - 0.05 },
@@ -55,7 +55,7 @@ SHOTS.props = [
   { id: 'primero', type: 'bubble', text: 'El primero', w: 340, tail: 'none', over: 'yo', dx: 0.2, accent: true, t0: L(8, 0), t1: L(9) - 0.05, h: 0.4 },
   { id: 'ayuda', type: 'line', from: 'el', to: 'yo', lift: 0.5, t0: L(8, 2), t1: L(9) - 0.05 },
   // lo que digas después: tarjeta de «yo» y nube en «el»
-  { id: 'ficha', type: 'card', label: 'EL DEL CERO', over: 'yo', dx: -0.9, t0: L(9, 3), t1: L(10) - 0.05 },
+  { id: 'ficha', type: 'card', label: 'EL DEL CERO', over: 'yo', dx: -0.9, t0: L(9, 3), t1: L(10) - 0.4 },
   { id: 'piensa', type: 'thought', text: '…', w: 180, over: 'el', dx: -0.2, t0: L(9, 5), t1: L(10) - 0.05, h: 0.4 },
   // no vendas (tachado) / pregunta
   { id: 'venta', type: 'bubble', text: 'Te cuento lo que hago…', w: 520, over: 'yo', dx: 0.3, t0: L(10, 0), t1: L(10, 2) + 0.6, strike: L(10, 1) },
@@ -75,5 +75,5 @@ SHOTS.props = [
   { id: 'venta2', type: 'bubble', text: 'Te cuento lo que hago…', w: 520, over: 'yo', dx: 0.3, t0: L(17, 0), t1: L(17, 2) + 0.4, strike: L(17, 1) },
   { id: 'preg2', type: 'bubble', text: '¿Cómo conseguiste el primero?', w: 600, over: 'yo', dx: 0.4, accent: true, t0: L(17, 3), t1: L(18) - 0.05 },
   // remate: el cero, grande, alrededor de los dos
-  { id: 'cero4', type: 'ring', r: 1.5, tube: 0.12, around: 'el', y: 1.0, front: 2.0, t0: L(18, 1) - 0.05, draw: L(18, 1) },
+  { id: 'cero4', type: 'ring', r: 0.92, tube: 0.1, around: 'el', y: 1.0, front: 1.1, t0: L(18, 1) - 0.05, draw: L(18, 1) },
 ];

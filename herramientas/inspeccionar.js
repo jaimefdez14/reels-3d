@@ -15,12 +15,13 @@ const { chromium } = require('playwright'); const path = require('path');
       const r = q.rect;
       if (r.x < 0 || r.y < 0 || r.x + r.w > 1080 || r.y + r.h > 1920) add('off' + q.id, `${q.id}: se sale de la pantalla (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`);
       if (f.caption && ov(r, f.caption)) add('cap' + q.id, `${q.id}: pisa el titular`);
-      for (const o of f.props) if (o !== q && o.id < q.id && ov(r, o.rect)) add('pp' + q.id + o.id, `${q.id} pisa a ${o.id}`);
+      if (q.ring) continue; // el anillo rodea a propósito al personaje; solo se comprueba que quepa y no pise el titular
+      for (const o of f.props) if (o !== q && !o.ring && o.id < q.id && ov(r, o.rect)) add('pp' + q.id + o.id, `${q.id} pisa a ${o.id}`);
       for (const h of f.heads) if (ov(r, h)) add('hd' + q.id + h.id, `${q.id}: pisa la cabeza de ${h.id}`);
     }
     for (const h of f.heads) if (f.caption && ov(h, f.caption)) add('hc' + h.id, `la cabeza de ${h.id} entra en el titular`);
-    // en plano cercano (dist < 9,5) el cuerpo se corta a propósito
-    if (f.camDist >= 9.5) for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1800) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
+    // regla 9 (Jaime, 04-11): ningún personaje principal se corta, en ningún plano ni durante un latigazo
+    for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1800) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
     if (f.caption && f.caption.y + f.caption.h > 520) add('capH', `titular demasiado alto: baja hasta ${Math.round(f.caption.y + f.caption.h)} px`);
   }
   await b.close();
