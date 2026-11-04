@@ -13,10 +13,10 @@ SHOTS.cam = [
   { t: E(1), whip: true, dist: 12.5, el: 14, az: 0, target: [-0.7, 1.6, -1.0] },                // atril y público
   { t: L(1) + 1.2, az: 9, dist: 12, dur: 2.5 },                                                 // orbit suave
   { t: E(2), whip: true, dist: 9.5, el: 6, az: -12, target: [0.3, 1.3, 0] },                    // letras gigantes
-  { t: L(2) + 1.0, az: 8, dist: 9, target: [0.5, 1.3, 0], dur: 3.0 },                          // orbit por las letras
+  { t: L(2) + 1.0, az: -2, dist: 9, target: [0.4, 1.3, 0], dur: 3.0 },                          // orbit por las letras
   { t: E(3), whip: true, dist: 9.5, el: 10, az: 20, target: [0, 1.3, 0] },                      // escritorio
-  { t: L(3) + 1.0, dist: 7.5, az: 6, target: [0, 1.4, 0], dur: 3.0 },                           // dolly al monitor
-  { t: E(4), whip: true, dist: 9.5, el: 8, az: -16, target: [0.2, 1.4, 0] },                    // temporizador
+  { t: L(3) + 1.0, dist: 8.8, az: 6, target: [0.1, 1.25, 0], dur: 3.0 },                           // dolly al monitor
+  { t: E(4), whip: true, dist: 10, el: 8, az: -12, target: [0, 1.4, 0] },                    // temporizador
   { t: E(5), whip: true, dist: 10.5, el: 10, az: 20, target: [0.3, 1.3, 0] },                   // monedas
   { t: L(5) + 1.0, dist: 9.0, az: 10, dur: 3.0 },
 ];
@@ -26,8 +26,8 @@ SHOTS.moves = {
        { t: E(1) - 0.02, show: false, dur: 0.01 }, { t: E(1) + 0.35, at: [-0.9, 1.4], rot: 20, show: true, dur: 0.01 },
        { t: E(2) - 0.02, show: false, dur: 0.01 }, { t: E(2) + 0.35, at: [-0.35, 0.9], rot: 70, show: true, dur: 0.01 },
        { t: E(3) - 0.02, show: false, dur: 0.01 }, { t: E(3) + 0.35, at: [-0.5, 0.9], rot: 10, show: true, dur: 0.01 },
-       { t: E(4) - 0.02, show: false, dur: 0.01 }, { t: E(4) + 0.35, at: [-0.9, 0.3], rot: 70, show: true, dur: 0.01 },
-       { t: E(5) - 0.02, show: false, dur: 0.01 }, { t: E(5) + 0.35, at: [-0.9, 0.2], rot: 70, show: true, dur: 0.01 }],
+       { t: E(4) - 0.02, show: false, dur: 0.01 }, { t: E(4) + 0.35, at: [-0.55, 0.3], rot: 70, show: true, dur: 0.01 },
+       { t: E(5) - 0.02, show: false, dur: 0.01 }, { t: E(5) + 0.35, at: [-0.45, 0.3], rot: 70, show: true, dur: 0.01 }],
   ponente: [{ t: E(1) + 0.3, show: true, dur: 0.01 }, { t: E(2), show: false, dur: 0.01 }],
   publico: [{ t: E(1) + 0.3, show: true, dur: 0.01 }, { t: E(2), show: false, dur: 0.01 }],
   cliente: [{ t: E(5) + 0.3, show: true, dur: 0.01 }],
