@@ -32,7 +32,7 @@ SHOTS.invert = [{ t: L(8) - 0.05, end: L(9) - 0.08 }];
 SHOTS.moves = {
   el: [{ t: L(1), head: [-10, 0], dur: 0.5 }, { t: L(7, 4), head: [-10, -8], dur: 0.5 }, { t: L(10), head: [-14, 6], dur: 0.5 }, { t: L(13, 5), head: [-6, 8], dur: 0.5 },
        { t: L(15), at: [2.1, -1.0], rot: -60, head: [20, 0], dur: 1.8 }, { t: L(17), at: [0.75, 0], rot: -90, head: [0, 0], dur: 1.0 }],
-  yo: [{ t: L(8), head: [-15, 10], dur: 0.4 }, { t: L(9), head: [6, -4], dur: 0.6 }],
+  yo: [{ t: L(8), head: [-15, 10], dur: 0.4 }, { t: L(9), head: [6, -4], dur: 0.6 }, { t: L(15) + 0.3, show: false, dur: 0.01 }, { t: L(17), show: true, dur: 0.01 }],
   socio: [{ t: L(15) + 0.35, show: true, dur: 0.01 }, { t: L(17), show: false, dur: 0.01 }],
   gente: [{ t: 0, show: false, dur: 0.01 }, { t: L(2), show: true, dur: 0.01 }, { t: L(3), show: false, dur: 0.01 }, { t: L(17), show: true, dur: 0.01 }],
 };
