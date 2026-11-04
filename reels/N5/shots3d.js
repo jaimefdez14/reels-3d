@@ -53,7 +53,7 @@ SHOTS.props = [
   { id: 'cat', type: 'tag', text: 'Catálogo', red: true, over: 'yo', dx: 0.3, px: 150, t0: L(11, 2), t1: L(12) - 0.05 },
   { id: 'xcat', type: 'cross', over: 'yo', dx: 0.3, t0: L(11, 3), t1: L(12) - 0.05, scale: 0.7 },
   // objeción
-  { id: 'duda', type: 'thought', text: '¿Esto no parece un guion?', w: 560, over: 'yo', t0: L(12), t1: L(13) - 0.08 },
+  { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(12), t1: L(13) - 0.08 },
   { id: 'tres', type: 'bubble', text: '1  ————————\n2  ————————\n3  ————————', w: 420, tail: 'none', over: 'yo', dx: 0.4, accent: true, h: 0.7, t0: L(13, 2), t1: L(14) - 0.05, rowsAt: [L(13, 2), L(13, 3), L(13, 4)] },
   // P: la pregunta
   { id: 'sino', type: 'tag', text: '¿Sí o no?', yellow: true, over: 'yo', dx: 0.3, px: 150, t0: L(15, 2), t1: L(16) - 0.05 },

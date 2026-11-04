@@ -408,7 +408,8 @@ window.inspectPixels = function (t) {
     const A = masks[i]; if (cap) { let c = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && capMask[k]) c++; if (c) pairs.push([items[i].id, 'titular', c, c]); }
     for (let j = i + 1; j < items.length; j++) { const B = masks[j]; let c = 0, aFront = 0, bFront = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && B.mask[k]) { c++; if (front[k] === i) aFront++; else if (front[k] === j) bFront++; } if (c) pairs.push([items[i].id, items[j].id, c, aFront, bFront]); }
   }
-  return { t, whip: lastFrame.whip, items: items.map((it, i) => ({ id: it.id, kind: it.kind, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
+  const act = activeLine(t); const objecion = !!(act && act.L.voice);
+  return { t, whip: lastFrame.whip, objecion, textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };

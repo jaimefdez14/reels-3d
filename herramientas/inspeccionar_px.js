@@ -20,6 +20,7 @@ const { chromium } = require('playwright'); const path = require('path');
       if (!f.whip && (main(it.id) || (it.kind === 'billboard' || it.kind === 'ring') && steady(it)) && cut > 2) add('cut' + it.id, `${it.id}: cortado por el borde (${cut} px de contorno fuera)`);
       if (it.kind === 'billboard' && steady(it) && it.px < 0.004 * PX) add('small' + it.id, `${it.id}: demasiado pequeño para leerse (${it.px} px)`);
     }
+    if (f.objecion && f.textos.length) add('obj' + f.textos[0], `${f.textos[0]}: texto en un bocadillo durante la objeción; la frase va solo en el titular (regla 13)`);
     if (f.billboards > 2) add('many' + f.billboards, `${f.billboards} bocadillos/tarjetas a la vez: máximo 2 (claridad)`);
     for (const [A, B, c, aFront, bFront0] of f.pairs) {
       if (B === 'titular') { if (c / PX > 0.0005 && !(f.whip && main(A))) add('cap' + A, `${A} pisa el titular (${c} px)`); continue; }

@@ -48,7 +48,7 @@ SHOTS.props = [
   { id: 'ej2', type: 'tag', text: '2 pág.', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(7, 2), t1: L(7, 4) - 0.3 },
   { id: 'ej3', type: 'tag', text: '1 correo', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(7, 4), t1: L(8) - 0.35 },
   // objeción
-  { id: 'duda', type: 'thought', text: 'Cinco minutos no cuentan…', w: 540, over: 'yo', t0: L(8), t1: L(9) - 0.08 },
+  { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(8), t1: L(9) - 0.08 },
   { id: 'chk', type: 'sticker', icon: 'check', yellow: true, over: 'yo', dx: 0.5, t0: L(9, 3), t1: L(10) - 0.05 },
   // la cadena de días: contador grande; un hueco vale, dos no
   { id: 'cad1', type: 'bars', n: 7, over: 'yo', dx: 0.6, t0: L(10, 3), t1: L(11, 3), pattern: [1, 1, 1, 0, 1, 1, 1] },
