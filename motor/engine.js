@@ -243,7 +243,7 @@ const PROPS = {
   door(p) { const g = new THREE.Group(); const mat = toonMat('#ffffff'); const dark = toonMat(PAL.other); const fr = new THREE.Mesh(new THREE.BoxGeometry(1.1, 2.1, 0.12), dark); fr.position.y = 1.05; const hole = new THREE.Mesh(new THREE.BoxGeometry(0.9, 1.95, 0.14), mat); hole.position.y = 0.975; const wall = new THREE.Mesh(new THREE.BoxGeometry(3.2, 2.4, 0.08), mat); wall.position.set(0, 1.2, -0.03); g.add(wall, fr, hole); g.add(outlineMesh(new THREE.BoxGeometry(3.2, 2.4, 0.08), 1.01).translateY(1.2).translateZ(-0.03)); return g; },
   // --- objetos de la regla 14 (N1): decorados y cosas que cambian con el tiempo ---
   sofa(p) { const g = new THREE.Group(); const w = p.w ?? 2.4; const add = (sx, sy, sz, x, y, z, col = '#ffffff') => { const geo = roundedBox(sx, sy, sz, 0.08); const m = new THREE.Mesh(geo, toonMat(col)); m.position.set(x, y, z); g.add(m); const o = outlineMesh(geo, 1.02); o.position.copy(m.position); g.add(o); };
-    add(w, 0.42, 0.95, 0, 0.25, 0); add(w, 0.75, 0.24, 0, 0.62, -0.38); add(0.26, 0.6, 0.95, -w / 2, 0.36, 0); add(0.26, 0.6, 0.95, w / 2, 0.36, 0); add(w * 0.42, 0.14, 0.7, -w * 0.24, 0.52, 0.06, p.yellow ? PAL.yellow : '#ececee'); return g; },
+    add(w - 0.2, 0.42, 0.95, 0, 0.25, 0); add(w - 0.2, 0.75, 0.24, 0, 0.62, -0.38); add(0.26, 0.6, 0.95, -w / 2, 0.36, 0); add(0.26, 0.6, 0.95, w / 2, 0.36, 0); add(w * 0.42, 0.14, 0.7, -w * 0.24, 0.52, 0.06, p.yellow ? PAL.yellow : '#ececee'); return g; },
   wall(p) { const g = new THREE.Group(); const w = p.w ?? 4, h = p.h ?? 2.6; const geo = new THREE.BoxGeometry(w, h, 0.1); const m = new THREE.Mesh(geo, toonMat(p.gray ? '#e4e4e8' : '#ffffff')); m.position.y = h / 2; g.add(m, outlineMesh(geo, 1.006).translateY(h / 2)); return g; },
   wallclock(p) { // reloj de pared; las agujas giran a p.spin = [[t, vueltas por segundo], ...]
     const g = new THREE.Group(); const r = p.r ?? 0.45; const face = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.06, 48), toonMat('#ffffff')); face.rotation.x = Math.PI / 2; g.add(face); const o = outlineMesh(new THREE.CylinderGeometry(r, r, 0.06, 48), 1.06); o.rotation.x = Math.PI / 2; g.add(o);
@@ -516,12 +516,14 @@ function classify(mesh) { // 'world' (va a Blender), 'overlay' (capa fg), 'skip'
 }
 let _worldMeshes = null;
 function worldMeshes() { if (_worldMeshes) return _worldMeshes; _worldMeshes = []; scene.traverse(o => { if (o.isMesh && classify(o) === 'world') _worldMeshes.push(o); }); return _worldMeshes; }
+function actorKindOf(o) { while (o) { for (const a of Object.values(actors)) if (a === o) return a.userData.spec ? a.userData.spec.kind : 'crowd'; if (o.userData && o.userData.spec && o.userData.spec.kind) return o.userData.spec.kind; o = o.parent; } return null; }
 function heroOf(o) { while (o) { for (const [id, a] of Object.entries(actors)) if (a === o && a.userData.spec && a.userData.spec.kind === 'hero') return true; o = o.parent; } return false; }
-window.exportScene = function () {
-  const out = []; for (const m of worldMeshes()) { const g = m.geometry.index ? m.geometry : m.geometry; const pos = Array.from(g.attributes.position.array); const nor = g.attributes.normal ? Array.from(g.attributes.normal.array) : null; const idx = g.index ? Array.from(g.index.array) : null; const uv = g.attributes.uv ? Array.from(g.attributes.uv.array) : null;
+window.exportScene = function () { // geometrías sin repetir + una entrada por malla del mundo
+  const geos = {}, meshes = [];
+  for (const m of worldMeshes()) { const g = m.geometry; if (!geos[g.uuid]) geos[g.uuid] = { pos: Array.from(g.attributes.position.array), nor: g.attributes.normal ? Array.from(g.attributes.normal.array) : null, idx: g.index ? Array.from(g.index.array) : null, uv: g.attributes.uv ? Array.from(g.attributes.uv.array) : null };
     const mat = m.material; let map = null; if (mat.map && mat.map.image && mat.map.image.toDataURL) map = mat.map.image.toDataURL('image/png');
-    out.push({ name: m.uuid, pos, nor, idx, uv, color: '#' + mat.color.getHexString(), basic: mat.type === 'MeshBasicMaterial', map, opacity: mat.opacity ?? 1, transparent: !!mat.transparent, hero: heroOf(m) }); }
-  return out;
+    const k = actorKindOf(m); meshes.push({ geo: g.uuid, color: '#' + mat.color.getHexString(), basic: mat.type === 'MeshBasicMaterial', map, opacity: mat.opacity ?? 1, hero: heroOf(m), lines: k === 'hero' || (!k && mat.type !== 'MeshBasicMaterial') }); }
+  return { geos, meshes };
 };
 // por fotograma: cámara (posición, cuaternión, fov), inversión de fondo y, por malla del mundo, visible + matriz 4x4
 window.frameState = function (t) { window.seek(t); scene.updateMatrixWorld(true); const cam = [...camera.position.toArray(), ...camera.quaternion.toArray(), camera.fov]; const ms = worldMeshes().map(m => { let v = m.visible; let o = m.parent; while (v && o) { v = o.visible; o = o.parent; } if (v && m.material && m.material.opacity === 0) v = false; return [v ? 1 : 0, ...m.matrixWorld.elements]; }); return { cam, inv: invertAmount(t), ms }; };
