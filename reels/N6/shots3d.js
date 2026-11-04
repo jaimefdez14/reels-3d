@@ -43,10 +43,10 @@ SHOTS.props = [
   { id: 'sem2', type: 'bars', n: 7, over: 'yo', dx: 0.5, t0: L(4, 5), t1: L(5) - 0.05, pattern: [1, 1, 1, 2, 2, 0, 0] },
   { id: 'regla', type: 'tag', text: 'Nunca dos seguidos', yellow: true, over: 'yo', dx: 0.3, px: 150, t0: L(5, 2), t1: L(6) - 0.05 },
   // cinco minutos: temporizador y ejemplos
-  { id: 'timer', type: 'timer', text: '5', r: 0.36, at: [1.7, 2.1, 0.2], t0: L(6, 2), t1: L(8) - 0.05, fillFrom: L(6, 3), dur: 3.0 },
-  { id: 'ej1', type: 'tag', text: '10 flex.', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(7, 0), t1: L(7, 2) - 0.3 },
-  { id: 'ej2', type: 'tag', text: '2 pág.', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(7, 2), t1: L(7, 4) - 0.3 },
-  { id: 'ej3', type: 'tag', text: '1 correo', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(7, 4), t1: L(8) - 0.35 },
+  { id: 'timer', type: 'timer', text: '5', r: 0.36, at: [1.2, 2.1, 0.2], t0: L(6, 2), t1: L(8) - 0.05, fillFrom: L(6, 3), dur: 3.0 },
+  { id: 'ej1', type: 'tag', text: '10 flex.', yellow: true, over: 'yo', dx: -0.7, px: 125, t0: L(7, 0), t1: L(7, 2) - 0.3 },
+  { id: 'ej2', type: 'tag', text: '2 pág.', yellow: true, over: 'yo', dx: -0.7, px: 125, t0: L(7, 2), t1: L(7, 4) - 0.3 },
+  { id: 'ej3', type: 'tag', text: '1 correo', yellow: true, over: 'yo', dx: -0.7, px: 125, t0: L(7, 4), t1: L(8) - 0.35 },
   // objeción
   { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(8), t1: L(9) - 0.08 },
   { id: 'chk', type: 'sticker', icon: 'check', yellow: true, over: 'yo', dx: 0.5, t0: L(9, 3), t1: L(10) - 0.05 },
