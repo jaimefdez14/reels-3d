@@ -20,8 +20,16 @@ const { chromium } = require('playwright'); const { spawn, execFileSync } = requ
   const cover = await p.evaluate((t) => { window.seek(t); return document.getElementById('cv').toDataURL('image/jpeg', 0.95).split(',')[1]; }, reel.coverT || 1.5);
   fs.writeFileSync(path.join(out, 'portada.jpg'), Buffer.from(cover, 'base64'));
   await b.close();
+  // efectos y cama (herramientas/sonido.py) a partir de los eventos de la escena
+  const sfx = path.join(out, 'sfx.wav');
+  try { const ev = await (async () => { const b2 = await chromium.launch(); const p2 = await b2.newPage(); await p2.goto('file://' + path.join(dir, 'composition', 'index.html')); await p2.evaluate(() => window.ready); const e = await p2.evaluate(() => window.soundEvents()); await b2.close(); return e; })();
+    fs.writeFileSync(path.join(out, 'eventos.json'), JSON.stringify(ev)); execFileSync('python3', [path.join(__dirname, '..', 'herramientas', 'sonido.py'), path.join(out, 'eventos.json'), String(D), sfx], { stdio: 'inherit' }); } catch (e) { console.log('sin sonido:', e.message); }
   const voz = path.join(dir, 'voice', 'voz.wav');
-  if (fs.existsSync(voz)) execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', silent, '-i', voz, '-filter_complex', '[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,highpass=f=70,acompressor=threshold=0.1:ratio=3:attack=5:release=120:makeup=2,alimiter=limit=0.9,loudnorm=I=-14:TP=-1.5:LRA=11[a]', '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', path.join(out, id + '.mp4')]);
+  const hasSfx = fs.existsSync(sfx);
+  if (fs.existsSync(voz) && hasSfx) // voz delante (compresor), efectos y cama bajo la voz (sidechain), limitador y -14 LUFS
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', silent, '-i', voz, '-i', sfx, '-filter_complex', '[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,highpass=f=70,acompressor=threshold=0.1:ratio=3:attack=5:release=120:makeup=2,asplit=2[v][sc];[2:a]aresample=48000,pan=stereo|c0=c0|c1=c0,volume=0.9[s0];[s0][sc]sidechaincompress=threshold=0.03:ratio=5:attack=15:release=300[s];[v][s]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.9,loudnorm=I=-14:TP=-1.5:LRA=11[a]', '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', path.join(out, id + '.mp4')]);
+  else if (fs.existsSync(voz)) execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', silent, '-i', voz, '-filter_complex', '[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,highpass=f=70,acompressor=threshold=0.1:ratio=3:attack=5:release=120:makeup=2,alimiter=limit=0.9,loudnorm=I=-14:TP=-1.5:LRA=11[a]', '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', path.join(out, id + '.mp4')]);
+  else if (hasSfx) execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', silent, '-i', sfx, '-filter_complex', '[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,alimiter=limit=0.9[a]', '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', path.join(out, id + '.mp4')]);
   else execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', silent, '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-shortest', '-movflags', '+faststart', path.join(out, id + '.mp4')]);
   fs.unlinkSync(silent); console.log('done', id, D.toFixed(1) + 's', fs.existsSync(voz) ? 'con voz' : 'sin voz');
 })();

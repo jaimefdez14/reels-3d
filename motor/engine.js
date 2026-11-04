@@ -49,7 +49,7 @@ function camState(t) {
 }
 
 // ---------- geometrías de los personajes ----------
-function pillGeometry(h = 1.6, w = 0.42) {
+function pillGeometry(h = 1.6, w = 0.5) {
   // cuerpo «pastilla»: más ancho abajo, cúpula arriba (LatheGeometry)
   const pts = []; const bodyH = h * 0.72, rTop = w * 0.38, rBot = w * 0.5;
   for (let i = 0; i <= 10; i++) { const a = (i / 10) * Math.PI / 2; pts.push(new THREE.Vector2(rBot * Math.cos(a) * 0.35 + rBot * (1 - 0.35), 0.02 + (1 - Math.cos(a)) * 0.06 * (i / 10))); }
@@ -66,7 +66,7 @@ function toonMat(color) {
 }
 function roundedBox(w, h, d, r) { const sh = new THREE.Shape(); const x = -w / 2, y = -h / 2; sh.moveTo(x + r, y); sh.lineTo(x + w - r, y); sh.quadraticCurveTo(x + w, y, x + w, y + r); sh.lineTo(x + w, y + h - r); sh.quadraticCurveTo(x + w, y + h, x + w - r, y + h); sh.lineTo(x + r, y + h); sh.quadraticCurveTo(x, y + h, x, y + h - r); sh.lineTo(x, y + r); sh.quadraticCurveTo(x, y, x + r, y); const g = new THREE.ExtrudeGeometry(sh, { depth: d - r, bevelEnabled: true, bevelThickness: r / 2, bevelSize: r / 2, bevelSegments: 4 }); g.translate(0, 0, -(d - r) / 2); return g; }
 function outlineMesh(geom, scale = 1.035) { const m = new THREE.Mesh(geom, new THREE.MeshBasicMaterial({ color: PAL.outline, side: THREE.BackSide })); m.scale.setScalar(scale); return m; }
-function shadowMesh(r = 0.42) { const m = new THREE.Mesh(new THREE.CircleGeometry(r, 40), new THREE.MeshBasicMaterial({ color: PAL.shadow, transparent: true, opacity: 0.9 })); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; m.scale.set(1.25, 0.8, 1); return m; }
+function shadowMesh(r = 0.42) { const m = new THREE.Mesh(new THREE.CircleGeometry(r, 40), new THREE.MeshBasicMaterial({ color: PAL.shadow, transparent: true, opacity: 0.9 })); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; m.scale.set(1.25, 0.8, 1); m.userData.notMask = true; return m; }
 
 function makeActor(spec) {
   const g = new THREE.Group(); const h = spec.h ?? 1.6; const kind = spec.kind;
@@ -81,9 +81,9 @@ function makeActor(spec) {
       const smile = new THREE.Mesh(new THREE.TorusGeometry(h * 0.035, h * 0.006, 6, 20, Math.PI), eyeM); smile.position.set(0, -0.02 * h, h * 0.09); smile.scale.setScalar(0.8); smile.rotation.z = Math.PI; head.add(smile);
     }
   } else {
-    const hs = new THREE.Mesh(new THREE.SphereGeometry(h * 0.13, 32, 24), toonMat(color)); head.add(hs);
+    const hs = new THREE.Mesh(new THREE.SphereGeometry(h * 0.145, 32, 24), toonMat(color)); head.add(hs);
     if (kind === 'hero') {
-      head.add(outlineMesh(new THREE.SphereGeometry(h * 0.13, 32, 24), 1.05)); g.add(outlineMesh(bodyG, 1.03));
+      head.add(outlineMesh(new THREE.SphereGeometry(h * 0.145, 32, 24), 1.05)); g.add(outlineMesh(bodyG, 1.03));
       const eyeM = new THREE.MeshBasicMaterial({ color: PAL.text });
       const e = new THREE.Mesh(new THREE.SphereGeometry(h * 0.012, 8, 8), eyeM); e.position.set(h * 0.06, 0.02 * h, h * 0.115); head.add(e);
       // brazo: línea con codo sobre el cuerpo
@@ -92,7 +92,7 @@ function makeActor(spec) {
       const armIn = new THREE.Mesh(new THREE.TubeGeometry(path, 12, 0.008, 8), new THREE.MeshBasicMaterial({ color: PAL.hero })); armIn.position.z = 0.012; g.add(armIn);
     }
   }
-  g.add(shadowMesh(h * 0.26)); g.userData = { spec, head, h }; return g;
+  g.add(shadowMesh(h * 0.3)); g.userData = { spec, head, h }; return g;
 }
 
 // ---------- escenario ----------
@@ -111,7 +111,7 @@ function roundRect(x, X, y, w, h, r) { x.beginPath(); x.moveTo(X + r, y); x.arcT
 function wrapText(x, text, maxW) { const lines = []; for (const para of text.split('\n')) { const words = para.split(' '); let cur = ''; for (const w of words) { const test = cur ? cur + ' ' + w : w; if (x.measureText(test).width > maxW && cur) { lines.push(cur); cur = w; } else cur = test; } if (cur) lines.push(cur); } return lines; }
 function bubbleTexture(o) {
   // o: {text, w (px), serif, accent, tail:'left'|'right'|'none', thought}
-  const pad = 44, fs = o.serif ? 64 : 46; const c = document.createElement('canvas'); const x = c.getContext('2d');
+  const pad = o.serif ? 56 : 44, fs = o.serif ? 66 : 46; const c = document.createElement('canvas'); const x = c.getContext('2d');
   x.font = o.serif ? `900 ${fs}px NotoCond` : `500 ${fs}px Montserrat`;
   const lines = wrapText(x, o.serif ? o.text.toUpperCase() : o.text, o.w - pad * 2);
   const lh = fs * (o.serif ? 1.15 : 1.35); const bh = pad * 2 + lines.length * lh; const tail = o.tail === 'none' ? (o.thought ? 60 : 0) : 60;
@@ -138,12 +138,12 @@ function cardTexture(o = {}) {
 // ---------- objetos (props) ----------
 // Cada objeto tiene {type, t0, t1, ...}. Los «billboard» (bocadillo, nube, tarjeta, cruz, barras) pueden anclarse a un
 // personaje con over: 'id' (sobre su cabeza) y el motor los coloca en pantalla sin pisar el titular, los bordes ni otros objetos.
-function billboard(texInfo, worldH) { const ratio = texInfo.w / texInfo.h; const m = new THREE.Mesh(new THREE.PlaneGeometry(worldH * ratio, worldH), new THREE.MeshBasicMaterial({ map: texInfo.tx, transparent: true, depthWrite: false })); m.userData.billboard = true; m.userData.size = [worldH * ratio, worldH]; return m; }
+function billboard(texInfo, worldH) { const ratio = texInfo.w / texInfo.h; const m = new THREE.Mesh(new THREE.PlaneGeometry(worldH * ratio, worldH), new THREE.MeshBasicMaterial({ map: texInfo.tx, transparent: true, depthWrite: false, depthTest: false })); m.renderOrder = 20; m.userData.billboard = true; m.userData.size = [worldH * ratio, worldH]; return m; }
 function bubbleOpts(p, extra = {}) { return { text: p.text, w: p.w ?? 640, serif: p.serif, accent: p.accent, tail: p.tail ?? 'left', ...extra }; }
 const PROPS = {
   bubble(p) { const m = billboard(bubbleTexture(bubbleOpts(p, { strikeW: p.strike != null ? 0 : undefined, nWords: p.reveal != null ? 0 : undefined, nLines: p.rowsAt ? 0 : undefined })), p.h ?? (p.serif ? 1.3 : 0.55)); m.userData.src = p; m.userData.retex = true; return m; },
   thought(p) { const m = billboard(bubbleTexture({ text: p.text, w: p.w ?? 520, thought: true, tail: 'none' }), p.h ?? 0.6); return m; },
-  card(p) { const m = new THREE.Mesh(new THREE.PlaneGeometry(0.44, 0.6), new THREE.MeshBasicMaterial({ map: cardTexture(p), transparent: true, side: THREE.DoubleSide })); m.userData.billboard = !p.standing; m.userData.size = [0.44, 0.6]; return m; },
+  card(p) { const m = new THREE.Mesh(new THREE.PlaneGeometry(0.44, 0.6), new THREE.MeshBasicMaterial({ map: cardTexture(p), transparent: true, side: THREE.DoubleSide, depthTest: !!p.standing })); m.renderOrder = p.standing ? 0 : 20; m.userData.billboard = !p.standing; m.userData.size = [0.44, 0.6]; return m; },
   cards(p) { // campo de tarjetas en el suelo
     const g = new THREE.Group(); const n = p.n ?? 40, cols = p.cols ?? 8; const tx = cardTexture({});
     for (let i = 0; i < n; i++) { const m = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 0.68), new THREE.MeshBasicMaterial({ map: tx, transparent: true })); m.rotation.x = -Math.PI / 2; m.position.set((i % cols - (cols - 1) / 2) * 0.72, 0.01, Math.floor(i / cols) * 0.95 - 1); g.add(m); }
@@ -166,11 +166,11 @@ const PROPS = {
     else if (ic === 'check') { x.beginPath(); x.moveTo(64, 134); x.lineTo(112, 180); x.lineTo(196, 80); x.stroke(); }
     else if (ic === 'x') { x.strokeStyle = PAL.red; x.beginPath(); x.moveTo(72, 72); x.lineTo(184, 184); x.moveTo(184, 72); x.lineTo(72, 184); x.stroke(); }
     else { x.font = '900 150px NotoCond'; x.fillText(ic, 128, 136); }
-    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const m = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 0.5), new THREE.MeshBasicMaterial({ map: tx, transparent: true })); m.userData.billboard = true; m.userData.size = [0.5, 0.5]; return m; },
+    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const m = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 0.5), new THREE.MeshBasicMaterial({ map: tx, transparent: true, depthTest: false })); m.renderOrder = 20; m.userData.billboard = true; m.userData.size = [0.5, 0.5]; return m; },
   tag(p) { // etiqueta con borde (A FEW / MI PRIMERO), roja o amarilla
     const c = document.createElement('canvas'); const x = c.getContext('2d'); x.font = '900 72px NotoCond'; const w = x.measureText(p.text.toUpperCase()).width + 90; c.width = w; c.height = 120; x.font = '900 72px NotoCond';
     x.fillStyle = '#ffffff'; roundRect(x, 6, 6, w - 12, 108, 12); x.fill(); x.strokeStyle = p.red ? PAL.red : (p.yellow ? PAL.yellow : PAL.text); x.lineWidth = 6; x.stroke(); x.fillStyle = PAL.text; x.textBaseline = 'middle'; x.fillText(p.text.toUpperCase(), 45, 62);
-    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const m = new THREE.Mesh(new THREE.PlaneGeometry(0.4 * w / 120, 0.4), new THREE.MeshBasicMaterial({ map: tx, transparent: true })); m.userData.billboard = true; m.userData.size = [0.4 * w / 120, 0.4]; return m; },
+    const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const m = new THREE.Mesh(new THREE.PlaneGeometry(0.4 * w / 120, 0.4), new THREE.MeshBasicMaterial({ map: tx, transparent: true, depthTest: false })); m.renderOrder = 20; m.userData.billboard = true; m.userData.size = [0.4 * w / 120, 0.4]; return m; },
   bracket(p) { // esquinas de encuadre (rojas) alrededor de un personaje
     const g = new THREE.Group(); const mat = new THREE.MeshBasicMaterial({ color: p.red ? PAL.red : PAL.text }); const s = p.s ?? 1.0, L = 0.25, w = 0.05;
     [[-1, 1], [1, 1], [-1, -1], [1, -1]].forEach(([sx, sy]) => { const h = new THREE.Mesh(new THREE.BoxGeometry(L, w, 0.02), mat); h.position.set(sx * (s / 2 - L / 2), sy * s * 0.75, 0); const v = new THREE.Mesh(new THREE.BoxGeometry(w, L, 0.02), mat); v.position.set(sx * s / 2, sy * (s * 0.75 - L / 2), 0); g.add(h, v); });
@@ -223,6 +223,7 @@ function drawCaptions(x, t, inv) {
     const isHi = hiW && hiW.split(' ').includes(clean), isNeg = negW && negW.split(' ').includes(clean);
     x.save(); x.globalAlpha = Math.min(1, pop * 1.4) * (1 - outP); x.translate(X + lay.w / 2, Y - outP * 60); x.scale(1 * (0.85 + 0.15 * pop), 1.18 * (0.85 + 0.15 * pop)); x.translate(-(X + lay.w / 2), -Y);
     if (isHi) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillStyle = PAL.yellow; x.fillRect(X - 10, Y - fs * 0.82, (lay.w + 20) * mp, fs * 0.98); }
+    if (!inv) { x.save(); x.shadowColor = 'rgba(245,245,245,0.95)'; x.shadowBlur = 22; x.fillStyle = PAL.bg; x.fillText(tokens[i].toUpperCase(), X, Y); x.fillText(tokens[i].toUpperCase(), X, Y); x.restore(); }
     x.fillStyle = isNeg ? PAL.red : (inv ? '#ffffff' : PAL.text); x.fillText(tokens[i].toUpperCase(), X, Y);
     if (isNeg) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillRect(X, Y + 14, lay.w * mp, 7); }
     x.restore();
@@ -257,7 +258,9 @@ function init() {
 
 function actorState(id, t) { // keyframes por actor: SHOTS.moves[id] = [{t, dur, at, rot, head:[yaw,tilt], show}]
   const kfs = (SHOTS.moves || {})[id] || []; const spec = SHOTS.actors[id]; let s = { at: spec.at ?? [0, 0], rot: spec.rot ?? 0, head: [0, 0], show: spec.show !== false };
-  for (const k of kfs) { if (t < k.t) break; const p = tw(t, k.t, k.dur ?? 1, k.ease ?? 'inout'); const prev = s; const target = { at: k.at ?? prev.at, rot: k.rot ?? prev.rot, head: k.head ?? prev.head, show: k.show ?? prev.show }; s = { at: lerpV(prev.at, target.at, p), rot: lerp(prev.rot, target.rot, p), head: lerpV(prev.head, target.head, p), show: target.show }; }
+  let jump = false;
+  for (const k of kfs) { if (k.at && (k.dur ?? 1) <= 0.05 && t >= k.t - 0.04 && t < k.t + 0.3) jump = true; if (t < k.t) break; const p = tw(t, k.t, k.dur ?? 1, k.ease ?? 'inout'); const prev = s; const target = { at: k.at ?? prev.at, rot: k.rot ?? prev.rot, head: k.head ?? prev.head, show: k.show ?? prev.show }; s = { at: lerpV(prev.at, target.at, p), rot: lerp(prev.rot, target.rot, p), head: lerpV(prev.head, target.head, p), show: target.show }; }
+  if (jump) s.show = false; // salto de posición: oculto durante el latigazo, reaparece ya colocado
   return s;
 }
 function invertAmount(t) { let v = 0; for (const iv of (SHOTS.invert || [])) { v = Math.max(v, tw(t, iv.t, 0.06, 'linear') - tw(t, iv.end, 0.06, 'linear')); } return clamp(v, 0, 1); }
@@ -358,9 +361,49 @@ window.seek = function (t) {
   ctx.drawImage(glCanvas, 0, 0); drawCaptions(ctx, t, inv > 0.5);
   lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect, ring: !!q.ring })), heads: lay.heads, bodies: lay.bodies, camDist: cs.dist };
 };
+// Inspector de píxeles (regla 10): dibuja cada objeto solo, en plano, a 270x480, y mide cuántos píxeles comparte con los demás.
+// Detecta lo que los rectángulos no ven: una mesa que cruza un cuerpo, una flecha sobre una cara, la multitud sobre una cabeza, un objeto cortado por el borde.
+const MW = 270, MH = 480; let maskRT = null, maskCanvas = null;
+function silhouette(objs, id) {
+  if (!maskRT) { maskRT = new THREE.WebGLRenderTarget(MW, MH); }
+  const saved = []; scene.traverse(o => { if (o.isMesh) saved.push([o, o.visible, o.material]); });
+  const flat = new THREE.MeshBasicMaterial({ color: '#ffffff' });
+  scene.traverse(o => { if (o.isMesh) o.visible = false; });
+  for (const root of objs) root.traverse(o => { if (o.isMesh && o.userData.notMask !== true) { o.visible = true; o.material = flat; } });
+  const bg = scene.background; scene.background = new THREE.Color('#000000');
+  renderer.setRenderTarget(maskRT); renderer.render(scene, camera); const buf = new Uint8Array(MW * MH * 4); renderer.readRenderTargetPixels(maskRT, 0, 0, MW, MH, buf); renderer.setRenderTarget(null); scene.background = bg;
+  for (const [o, v, m] of saved) { o.visible = v; o.material = m; }
+  const mask = new Uint8Array(MW * MH); let n = 0, touch = { l: 0, r: 0, t: 0, b: 0 };
+  for (let i = 0; i < MW * MH; i++) if (buf[i * 4] > 128) { mask[i] = 1; n++; const x = i % MW, y = MH - 1 - Math.floor(i / MW); if (x === 0) touch.l++; if (x === MW - 1) touch.r++; if (y === 0) touch.t++; if (y === MH - 1) touch.b++; }
+  return { id, mask, n, touch };
+}
+window.inspectPixels = function (t) {
+  window.seek(t); const items = [];
+  for (const [id, a] of Object.entries(actors)) if (a.visible) items.push({ obj: a, id: 'actor:' + id, kind: a.userData.head ? 'actor' : 'crowd' });
+  for (const m of props) if (m.visible) { const p = m.userData.spec; items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind: m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid')) }); }
+  const sil = items.map(it => ({ ...it, ...silhouette([it.obj], it.id) }));
+  // el titular como máscara (rectángulo en píxeles → escala de la máscara)
+  const cap = lastFrame.caption; const capMask = new Uint8Array(MW * MH); if (cap) { for (let y = Math.max(0, Math.floor(cap.y / 4)); y < Math.min(MH, (cap.y + cap.h) / 4); y++) for (let x = Math.max(0, Math.floor(cap.x / 4)); x < Math.min(MW, (cap.x + cap.w) / 4); x++) capMask[y * MW + x] = 1; }
+  const inter = (A, B) => { let c = 0; for (let i = 0; i < MW * MH; i++) if (A[i] && B[i]) c++; return c; };
+  const pairs = [];
+  for (let i = 0; i < sil.length; i++) {
+    const A = sil[i]; if (cap) { const c = inter(A.mask, capMask); if (c) pairs.push([A.id, 'titular', c]); }
+    for (let j = i + 1; j < sil.length; j++) { const B = sil[j]; const c = inter(A.mask, B.mask); if (c) pairs.push([A.id, B.id, c]); }
+  }
+  return { t, items: sil.map(x => ({ id: x.id, kind: x.kind, px: x.n, touch: x.touch, age: x.obj.userData.spec ? t - (x.obj.userData.spec.t0 ?? 0) : 9 })), pairs, caption: !!cap, billboards: sil.filter(x => x.kind === 'billboard').length };
+};
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
 window.__dbg = () => ({ props, camera, actors }); // solo para depurar desde las herramientas
+// Eventos de sonido (los sintetiza herramientas/sonido.py): latigazos, entradas de objetos, marcadores de palabra, cortes a oscuro, anillos
+window.soundEvents = function () {
+  const ev = [];
+  for (const k of SHOTS.cam) if (k.whip) ev.push({ t: k.t, kind: 'whip' });
+  for (const iv of (SHOTS.invert || [])) { ev.push({ t: iv.t, kind: 'thud' }); ev.push({ t: iv.end, kind: 'cut' }); }
+  for (const p of SHOTS.props) { if (p.type === 'ring') ev.push({ t: p.draw ?? p.t0 ?? 0, kind: 'swoosh' }); else if (['bubble', 'thought', 'card', 'sticker', 'tag', 'cross', 'bars', 'timer', 'number', 'coins'].includes(p.type)) ev.push({ t: p.t0 ?? 0, kind: 'pop' }); }
+  REEL.lines.forEach((L, i) => { const words = TIMING.words[i]; if (!words) return; const toks = L.show.split(' '); const key = (L.hi || L.neg || '').toLowerCase().split(' ')[0]; if (!key) return; const idx = toks.findIndex(w => w.toLowerCase().replace(/[^a-záéíóúüñ0-9]/g, '') === key.replace(/[^a-záéíóúüñ0-9]/g, '')); if (idx >= 0 && words[idx]) ev.push({ t: words[idx][0] + 0.22, kind: 'tick' }); });
+  return ev.filter(e => e.t >= 0 && e.t < TIMING.duration).sort((a, b) => a.t - b.t);
+};
 window.DURATION = TIMING.duration;
 window.ready = (async () => { await Promise.all([document.fonts.load('900 100px NotoCond'), document.fonts.load('400 30px Montserrat'), document.fonts.load('600 30px Montserrat')]); init(); window.seek(0); return true; })();
 })();
