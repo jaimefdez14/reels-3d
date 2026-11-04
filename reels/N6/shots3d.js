@@ -1,7 +1,7 @@
 // N6 · «Nunca falles dos días seguidos», como R4: pasillo de puertas (los días) con travelling y contador de barras.
 const L = (i, w = 0) => wt(i, w);
 SHOTS.actors = {
-  yo: { kind: 'hero', at: [-1.0, 1.4], rot: 90 },
+  yo: { kind: 'hero', at: [-1.7, 1.6], rot: 90 },
   gente: { kind: 'crowd', n: 10, area: [3, 2], at: [-7, 1.5], gap: 1.5, show: false },
 };
 SHOTS.cam = [
