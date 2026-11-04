@@ -25,7 +25,18 @@ python3 motor/build.py reels/ID [--sim]        # composición; --sim simula los 
 node herramientas/frames.js $PWD/reels/ID/composition/index.html <dir> t1 t2 …   # fotogramas
 python3 herramientas/sheet.py <dir> hoja.jpg 6   # hoja de contactos
 node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si existe reels/ID/voice/voz.wav)
+node herramientas/inspeccionar.js reels/ID 0.25  # solapes: titular, objetos, cabezas, bordes (debe decir ok)
 ```
+
+## Revisión obligatoria antes de enseñar nada (04-11-2026)
+
+Jaime, sobre el primer boceto: «revísalo tú en detalle. hay muchos fallos: textos que se colocan encima de los diseños,
+diseños encima de otros diseños». Desde entonces, **nada se le envía sin pasar esto**:
+1. `node herramientas/inspeccionar.js reels/ID 0.25` tiene que decir `ok` (ningún objeto pisa el titular, otro objeto,
+   una cabeza ni se sale de la pantalla). Los bocadillos se anclan a un personaje (`over`) y el motor los coloca; no se
+   colocan a mano con coordenadas salvo los objetos que viven en el suelo.
+2. Tira a 1 fps del MP4 y mirarla fotograma a fotograma antes de enviarla; si algo se pisa y el inspector no lo ve, se
+   añade la comprobación al inspector, no se arregla solo ese reel.
 
 ## Reglas que ha fijado Jaime
 

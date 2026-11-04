@@ -27,9 +27,9 @@ window.lineEnd = function (line) { const L = TIMING.words[line]; return L[L.leng
 
 // ---------- estado de cámara (esférico) ----------
 const CAM_PRESETS = {
-  wide: { dist: 14, el: 26, az: 0, target: [0, 1.2, -1] },
-  medium: { dist: 7.4, el: 17, az: 0, target: [0, 1.0, 0] },
-  close: { dist: 4.2, el: 10, az: 0, target: [0, 1.35, 0] },
+  wide: { dist: 14, el: 26, az: 0, target: [0, 1.7, -1] },
+  medium: { dist: 7.4, el: 17, az: 0, target: [0, 1.45, 0] },
+  close: { dist: 4.4, el: 10, az: 0, target: [0, 1.65, 0] },
 };
 function resolveCam(spec, prev) {
   const base = spec.preset ? CAM_PRESETS[spec.preset] : prev;
@@ -108,21 +108,22 @@ function gridTexture(dark) {
 
 // ---------- texturas de texto para bocadillos y tarjetas ----------
 function roundRect(x, X, y, w, h, r) { x.beginPath(); x.moveTo(X + r, y); x.arcTo(X + w, y, X + w, y + h, r); x.arcTo(X + w, y + h, X, y + h, r); x.arcTo(X, y + h, X, y, r); x.arcTo(X, y, X + w, y, r); x.closePath(); }
-function wrapText(x, text, maxW) { const words = text.split(' '); const lines = []; let cur = ''; for (const w of words) { const test = cur ? cur + ' ' + w : w; if (x.measureText(test).width > maxW && cur) { lines.push(cur); cur = w; } else cur = test; } if (cur) lines.push(cur); return lines; }
+function wrapText(x, text, maxW) { const lines = []; for (const para of text.split('\n')) { const words = para.split(' '); let cur = ''; for (const w of words) { const test = cur ? cur + ' ' + w : w; if (x.measureText(test).width > maxW && cur) { lines.push(cur); cur = w; } else cur = test; } if (cur) lines.push(cur); } return lines; }
 function bubbleTexture(o) {
   // o: {text, w (px), serif, accent, tail:'left'|'right'|'none', thought}
   const pad = 36, fs = o.serif ? 64 : 34; const c = document.createElement('canvas'); const x = c.getContext('2d');
   x.font = o.serif ? `900 ${fs}px NotoCond` : `400 ${fs}px Montserrat`;
   const lines = wrapText(x, o.serif ? o.text.toUpperCase() : o.text, o.w - pad * 2);
-  const lh = fs * (o.serif ? 1.15 : 1.35); const bh = pad * 2 + lines.length * lh; const tail = o.tail === 'none' ? 0 : 60;
+  const lh = fs * (o.serif ? 1.15 : 1.35); const bh = pad * 2 + lines.length * lh; const tail = o.tail === 'none' ? (o.thought ? 60 : 0) : 60;
   c.width = o.w + 24; c.height = bh + tail + 24; x.font = o.serif ? `900 ${fs}px NotoCond` : `400 ${fs}px Montserrat`;
   x.shadowColor = 'rgba(0,0,0,0.18)'; x.shadowBlur = 18; x.shadowOffsetY = 8; x.fillStyle = '#ffffff';
-  if (o.thought) { x.setLineDash([10, 8]); x.strokeStyle = PAL.text; x.lineWidth = 3; roundRect(x, 12, 12, o.w, bh, 40); x.fill(); x.shadowColor = 'transparent'; x.stroke(); x.setLineDash([]); }
+  if (o.thought) { x.setLineDash([10, 8]); x.strokeStyle = PAL.text; x.lineWidth = 3; roundRect(x, 12, 12, o.w, bh, 40); x.fill(); x.shadowColor = 'transparent'; x.stroke(); x.setLineDash([]); [[70, bh + 24, 14], [48, bh + 52, 8]].forEach(([cx, cy, r]) => { x.beginPath(); x.arc(cx, cy, r, 0, 7); x.fillStyle = '#ffffff'; x.fill(); x.stroke(); }); }
   else { roundRect(x, 12, 12, o.w, bh, 22); x.fill(); x.shadowColor = 'transparent'; }
   if (o.tail === 'left' || o.tail === 'right') { const tx = o.tail === 'left' ? 90 : o.w - 90; x.beginPath(); x.moveTo(tx - 28, bh + 10); x.lineTo(tx + 22, bh + 10); x.lineTo(tx - 10, bh + 12 + tail - 8); x.closePath(); x.fillStyle = '#ffffff'; x.fill(); }
   if (o.accent) { x.fillStyle = PAL.yellow; roundRect(x, 12, 12, 14, bh, 7); x.fill(); x.fillRect(19, 12, 7, bh); }
   x.fillStyle = PAL.text; x.textBaseline = 'top';
-  lines.forEach((l, i) => { x.fillText(l, 12 + pad + (o.accent ? 10 : 0), 12 + pad + i * lh + (o.serif ? 0 : 4)); });
+  let left = o.nWords == null ? 1e9 : o.nWords; // texto parcial: solo las primeras nWords palabras
+  lines.forEach((l, i) => { if (o.nLines != null && i >= o.nLines) return; const ws = l.split(' '); const shown = ws.slice(0, Math.max(0, left)).join(' '); left -= ws.length; if (shown) x.fillText(shown, 12 + pad + (o.accent ? 10 : 0), 12 + pad + i * lh + (o.serif ? 0 : 4)); });
   if (o.strikeW) { x.strokeStyle = PAL.red; x.lineWidth = 6; x.lineCap = 'round'; const y = 12 + pad + lh * 0.5; x.beginPath(); x.moveTo(12 + pad - 6, y + 4); x.lineTo(12 + pad + Math.min(o.strikeW, 1) * x.measureText(lines[0]).width + 6, y - 4); x.stroke(); }
   const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; return { tx, w: c.width, h: c.height };
 }
@@ -135,66 +136,57 @@ function cardTexture(o = {}) {
 }
 
 // ---------- objetos (props) ----------
-function billboard(texInfo, worldH) { const ratio = texInfo.w / texInfo.h; const m = new THREE.Mesh(new THREE.PlaneGeometry(worldH * ratio, worldH), new THREE.MeshBasicMaterial({ map: texInfo.tx, transparent: true, depthWrite: false })); m.userData.billboard = true; return m; }
+// Cada objeto tiene {type, t0, t1, ...}. Los «billboard» (bocadillo, nube, tarjeta, cruz, barras) pueden anclarse a un
+// personaje con over: 'id' (sobre su cabeza) y el motor los coloca en pantalla sin pisar el titular, los bordes ni otros objetos.
+function billboard(texInfo, worldH) { const ratio = texInfo.w / texInfo.h; const m = new THREE.Mesh(new THREE.PlaneGeometry(worldH * ratio, worldH), new THREE.MeshBasicMaterial({ map: texInfo.tx, transparent: true, depthWrite: false })); m.userData.billboard = true; m.userData.size = [worldH * ratio, worldH]; return m; }
+function bubbleOpts(p, extra = {}) { return { text: p.text, w: p.w ?? 640, serif: p.serif, accent: p.accent, tail: p.tail ?? 'left', ...extra }; }
 const PROPS = {
-  bubble(p) { const ti = bubbleTexture({ text: p.text, w: p.w ?? 640, serif: p.serif, accent: p.accent, tail: p.tail ?? 'left', strikeW: p.strike != null ? 0 : undefined }); const m = billboard(ti, p.h ?? (p.serif ? 1.3 : 0.55)); m.userData.strike = p.strike; m.userData.src = p; return m; },
-  thought(p) { const ti = bubbleTexture({ text: p.text, w: p.w ?? 520, thought: true, tail: 'none' }); return billboard(ti, p.h ?? 0.55); },
-  card(p) { const m = new THREE.Mesh(new THREE.PlaneGeometry(0.44, 0.6), new THREE.MeshBasicMaterial({ map: cardTexture(p), transparent: true, side: THREE.DoubleSide })); m.userData.billboard = true; return m; },
+  bubble(p) { const m = billboard(bubbleTexture(bubbleOpts(p, { strikeW: p.strike != null ? 0 : undefined, nWords: p.reveal != null ? 0 : undefined, nLines: p.rowsAt ? 0 : undefined })), p.h ?? (p.serif ? 1.3 : 0.55)); m.userData.src = p; m.userData.retex = true; return m; },
+  thought(p) { const m = billboard(bubbleTexture({ text: p.text, w: p.w ?? 520, thought: true, tail: 'none' }), p.h ?? 0.6); return m; },
+  card(p) { const m = new THREE.Mesh(new THREE.PlaneGeometry(0.44, 0.6), new THREE.MeshBasicMaterial({ map: cardTexture(p), transparent: true, side: THREE.DoubleSide })); m.userData.billboard = !p.standing; m.userData.size = [0.44, 0.6]; return m; },
   cards(p) { // campo de tarjetas en el suelo
     const g = new THREE.Group(); const n = p.n ?? 40, cols = p.cols ?? 8; const tx = cardTexture({});
     for (let i = 0; i < n; i++) { const m = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 0.68), new THREE.MeshBasicMaterial({ map: tx, transparent: true })); m.rotation.x = -Math.PI / 2; m.position.set((i % cols - (cols - 1) / 2) * 0.72, 0.01, Math.floor(i / cols) * 0.95 - 1); g.add(m); }
     return g;
   },
   ring(p) { const m = new THREE.Mesh(new THREE.TorusGeometry(p.r ?? 0.55, p.tube ?? 0.07, 12, 60, Math.PI * 2), new THREE.MeshBasicMaterial({ color: PAL.yellow })); m.userData.ring = p; return m; },
-  cross(p) { const g = new THREE.Group(); const mat = new THREE.MeshBasicMaterial({ color: PAL.red }); [45, -45].forEach(a => { const b = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.07, 0.02), mat); b.rotation.z = a * Math.PI / 180; g.add(b); }); g.userData.billboard = true; return g; },
-  arrow(p) { // flecha curva amarilla de from a to
-    const a = new THREE.Vector3(...p.from), b = new THREE.Vector3(...p.to); const mid = a.clone().lerp(b, 0.5); mid.y += p.lift ?? 0.6;
-    const curve = new THREE.QuadraticBezierCurve3(a, mid, b); const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 24, 0.035, 8), new THREE.MeshBasicMaterial({ color: PAL.yellow }));
-    const cone = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.26, 16), new THREE.MeshBasicMaterial({ color: PAL.yellow })); cone.position.copy(b); const dir = b.clone().sub(curve.getPoint(0.92)).normalize(); cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir);
-    const g = new THREE.Group(); g.add(tube, cone); g.userData.noPos = true; return g;
-  },
-  line(p) { // línea de atención: trazo fino de from a to con un punto que viaja
-    const a = new THREE.Vector3(...p.from), b = new THREE.Vector3(...p.to); const mid = a.clone().lerp(b, 0.5); mid.y += p.lift ?? 0.3;
-    const curve = new THREE.QuadraticBezierCurve3(a, mid, b); const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 24, 0.012, 6), new THREE.MeshBasicMaterial({ color: p.red ? PAL.red : PAL.yellow }));
-    const dot = new THREE.Mesh(new THREE.SphereGeometry(0.045, 12, 12), new THREE.MeshBasicMaterial({ color: p.red ? PAL.red : PAL.yellow })); const g = new THREE.Group(); g.add(tube, dot); g.userData = { noPos: true, curve, dot }; return g;
-  },
-  bars(p) { const g = new THREE.Group(); const n = p.n ?? 5; for (let i = 0; i < n; i++) { const b = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.42, 0.06), new THREE.MeshBasicMaterial({ color: '#d2d2d6' })); b.position.x = (i - (n - 1) / 2) * 0.2; const f = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.42, 0.065), new THREE.MeshBasicMaterial({ color: PAL.yellow })); f.position.x = b.position.x; f.visible = false; g.add(b, f); } g.userData = { billboard: true, bars: p }; return g; },
+  cross(p) { const g = new THREE.Group(); const mat = new THREE.MeshBasicMaterial({ color: PAL.red }); [45, -45].forEach(a => { const b = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.07, 0.02), mat); b.rotation.z = a * Math.PI / 180; g.add(b); }); g.userData.billboard = true; g.userData.size = [0.5, 0.5]; return g; },
+  arrow(p) { const g = new THREE.Group(); g.userData = { noPos: true, path: { kind: 'arrow', from: p.from, to: p.to, lift: p.lift ?? 0.6, red: p.red } }; return g; },
+  line(p) { const g = new THREE.Group(); g.userData = { noPos: true, path: { kind: 'line', from: p.from, to: p.to, lift: p.lift ?? 0.3, red: p.red } }; return g; },
+  bars(p) { const g = new THREE.Group(); const n = p.n ?? 5; for (let i = 0; i < n; i++) { const b = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.42, 0.06), new THREE.MeshBasicMaterial({ color: '#d2d2d6' })); b.position.x = (i - (n - 1) / 2) * 0.2; const f = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.42, 0.065), new THREE.MeshBasicMaterial({ color: PAL.yellow })); f.position.x = b.position.x; f.visible = false; g.add(b, f); } g.userData = { billboard: true, bars: p, size: [n * 0.2, 0.42] }; return g; },
   door(p) { const g = new THREE.Group(); const mat = toonMat('#ffffff'); const dark = toonMat(PAL.other); const fr = new THREE.Mesh(new THREE.BoxGeometry(1.1, 2.1, 0.12), dark); fr.position.y = 1.05; const hole = new THREE.Mesh(new THREE.BoxGeometry(0.9, 1.95, 0.14), mat); hole.position.y = 0.975; const wall = new THREE.Mesh(new THREE.BoxGeometry(3.2, 2.4, 0.08), mat); wall.position.set(0, 1.2, -0.03); g.add(wall, fr, hole); g.add(outlineMesh(new THREE.BoxGeometry(3.2, 2.4, 0.08), 1.01).translateY(1.2).translateZ(-0.03)); return g; },
   table(p) { const g = new THREE.Group(); const mat = toonMat('#ffffff'); const top = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.05, 32), mat); top.position.y = 1.05; const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.05, 12), mat); leg.position.y = 0.52; const base = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.28, 0.04, 32), mat); base.position.y = 0.02; g.add(top, leg, base, outlineMesh(new THREE.CylinderGeometry(0.42, 0.42, 0.05, 32), 1.02).translateY(1.05)); return g; },
 };
 
 // ---------- rotulación 2D ----------
+// Devuelve el rectángulo que ocupa el titular (para que los objetos no lo pisen y para el inspector).
+const CAPTION_TOP = 160;
+function captionLayout(x, L, fs, maxW, marginX) { const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; } return { tokens, layout, rows: row + 1 }; }
+function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
+function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const fs = 118, lh = 146, marginX = 60; x.save(); x.font = `900 ${fs}px NotoCond`; const { rows, layout } = captionLayout(x, a.L, fs, W - 2 * marginX - 40, marginX); x.restore(); const top = a.L.voice ? 215 : CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: (a.L.voice ? 70 : top - fs), w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (a.L.voice ? 70 : top - fs) }; }
 function drawCaptions(x, t, inv) {
-  const lines = REEL.lines; const marginX = 60, fs = 118, lh = 146, maxW = W - 2 * marginX - 40;
+  const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60, fs = 118, lh = 146;
   x.save(); x.font = `900 ${fs}px NotoCond`; x.textBaseline = 'alphabetic';
-  for (let li = 0; li < lines.length; li++) {
-    const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue;
-    const t0 = words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5;
-    if (t < t0 - 0.02 || t > hold) continue;
-    const top = L.voice ? 215 : 160;
-    // salida: barrido hacia arriba con desvanecido en los últimos 0,25 s
-    const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
-    const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0;
-    for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
-    if (L.voice) { x.save(); x.font = '400 30px Montserrat'; x.fillStyle = inv ? '#c9c9cf' : '#6b6b70'; x.globalAlpha = 1 - outP; x.fillText(L.voice, marginX, 96); x.restore(); x.font = `900 ${fs}px NotoCond`; }
-    const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
-    for (let i = 0; i < tokens.length; i++) {
-      const wtime = words[Math.min(i, words.length - 1)][0]; if (t < wtime) break;
-      const pop = tw(t, wtime, 0.14, 'back'); const lay = layout[i]; const X = marginX + lay.xoff, Y = top + lay.row * lh;
-      const clean = tokens[i].toLowerCase().replace(/[^a-záéíóúüñ0-9]/g, '');
-      const isHi = hiW && hiW.split(' ').includes(clean), isNeg = negW && negW.split(' ').includes(clean);
-      x.save(); x.globalAlpha = Math.min(1, pop * 1.4) * (1 - outP); x.translate(X + lay.w / 2, Y - outP * 60); x.scale(1 * (0.85 + 0.15 * pop), 1.18 * (0.85 + 0.15 * pop)); x.translate(-(X + lay.w / 2), -Y);
-      if (isHi) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillStyle = PAL.yellow; x.fillRect(X - 10, Y - fs * 0.82, (lay.w + 20) * mp, fs * 0.98); }
-      x.fillStyle = isNeg ? PAL.red : (inv ? '#ffffff' : PAL.text); x.fillText(tokens[i].toUpperCase(), X, Y);
-      if (isNeg) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillRect(X, Y + 14, lay.w * mp, 7); }
-      x.restore();
-    }
+  const top = L.voice ? 215 : CAPTION_TOP; const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
+  const { tokens, layout } = captionLayout(x, L, fs, W - 2 * marginX - 40, marginX);
+  if (L.voice) { x.save(); x.font = '400 30px Montserrat'; x.fillStyle = inv ? '#c9c9cf' : '#6b6b70'; x.globalAlpha = 1 - outP; x.fillText(L.voice, marginX, 96); x.restore(); x.font = `900 ${fs}px NotoCond`; }
+  const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
+  for (let i = 0; i < tokens.length; i++) {
+    const wtime = words[Math.min(i, words.length - 1)][0]; if (t < wtime) break;
+    const pop = tw(t, wtime, 0.14, 'back'); const lay = layout[i]; const X = marginX + lay.xoff, Y = top + lay.row * lh;
+    const clean = tokens[i].toLowerCase().replace(/[^a-záéíóúüñ0-9]/g, '');
+    const isHi = hiW && hiW.split(' ').includes(clean), isNeg = negW && negW.split(' ').includes(clean);
+    x.save(); x.globalAlpha = Math.min(1, pop * 1.4) * (1 - outP); x.translate(X + lay.w / 2, Y - outP * 60); x.scale(1 * (0.85 + 0.15 * pop), 1.18 * (0.85 + 0.15 * pop)); x.translate(-(X + lay.w / 2), -Y);
+    if (isHi) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillStyle = PAL.yellow; x.fillRect(X - 10, Y - fs * 0.82, (lay.w + 20) * mp, fs * 0.98); }
+    x.fillStyle = isNeg ? PAL.red : (inv ? '#ffffff' : PAL.text); x.fillText(tokens[i].toUpperCase(), X, Y);
+    if (isNeg) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillRect(X, Y + 14, lay.w * mp, 7); }
+    x.restore();
   }
   x.restore();
 }
 
 // ---------- montaje ----------
-let renderer, scene, camera, glCanvas, cv, ctx, actors = {}, props = [], floorLight, floorDark, ambient, sun;
+let renderer, scene, camera, glCanvas, cv, ctx, actors = {}, props = [], floorLight, floorDark, ambient, sun, lastFrame = null;
 function init() {
   glCanvas = document.createElement('canvas'); glCanvas.width = W; glCanvas.height = H;
   renderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: true, preserveDrawingBuffer: true, alpha: false }); renderer.setSize(W, H, false); renderer.setPixelRatio(1); renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -204,9 +196,13 @@ function init() {
   sun = new THREE.DirectionalLight('#ffffff', 1.5); sun.position.set(-3, 8, 6); scene.add(sun);
   floorLight = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshBasicMaterial({ map: gridTexture(false) })); floorLight.rotation.x = -Math.PI / 2; scene.add(floorLight);
   floorDark = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshBasicMaterial({ map: gridTexture(true), transparent: true, opacity: 0 })); floorDark.rotation.x = -Math.PI / 2; floorDark.position.y = 0.001; scene.add(floorDark);
+  const mains = Object.values(SHOTS.actors).filter(a => a.kind !== 'crowd').map(a => a.at ?? [0, 0]);
   for (const [id, spec] of Object.entries(SHOTS.actors)) {
     if (spec.kind === 'crowd') { const g = new THREE.Group(); const n = spec.n ?? 30, area = spec.area ?? [6, 4]; let seed = 7; const rnd = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
-      for (let i = 0; i < n; i++) { const a = makeActor({ kind: 'crowd', h: 1.45 + rnd() * 0.25 }); a.position.set((rnd() - 0.5) * area[0] + (spec.at?.[0] ?? 0), 0, (rnd() - 0.5) * area[1] + (spec.at?.[1] ?? -3)); a.rotation.y = rnd() * 6.28; g.add(a); }
+      let placed = 0, tries = 0;
+      while (placed < n && tries < n * 20) { tries++; const px = (rnd() - 0.5) * area[0] + (spec.at?.[0] ?? 0), pz = (rnd() - 0.5) * area[1] + (spec.at?.[1] ?? -3);
+        if (mains.some(m => Math.hypot(m[0] - px, m[1] - pz) < (spec.gap ?? 1.6))) continue; // nunca encima de los protagonistas
+        const a = makeActor({ kind: 'crowd', h: 1.4 + rnd() * 0.25 }); a.position.set(px, 0, pz); a.rotation.y = rnd() * 6.28; g.add(a); placed++; }
       g.userData = { spec }; actors[id] = g; scene.add(g); }
     else { const a = makeActor(spec); a.position.set(spec.at?.[0] ?? 0, 0, spec.at?.[1] ?? 0); a.rotation.y = (spec.rot ?? 0) * Math.PI / 180; actors[id] = a; scene.add(a); }
   }
@@ -221,26 +217,94 @@ function actorState(id, t) { // keyframes por actor: SHOTS.moves[id] = [{t, dur,
 }
 function invertAmount(t) { let v = 0; for (const iv of (SHOTS.invert || [])) { v = Math.max(v, tw(t, iv.t, 0.2, 'inout') - tw(t, iv.end, 0.2, 'inout')); } return clamp(v, 0, 1); }
 
+// --- geometría de pantalla ---
+const _v = new THREE.Vector3();
+function toScreen(v3) { _v.copy(v3).project(camera); return [(_v.x + 1) / 2 * W, (1 - _v.y) / 2 * H, _v.z]; }
+function headWorld(id) { const a = actors[id]; const v = new THREE.Vector3(); a.userData.head.getWorldPosition(v); return v; }
+function headRadiusPx(id) { const a = actors[id]; const r = a.userData.h * 0.14; const c = headWorld(id); const [sx, sy] = toScreen(c); const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion).multiplyScalar(r); const [sx2, sy2] = toScreen(c.clone().add(up)); return Math.hypot(sx2 - sx, sy2 - sy); }
+function worldPerPixel(pos) { const d = camera.position.distanceTo(pos); return 2 * d * Math.tan(camera.fov * Math.PI / 360) / H; }
+// punto 3D al que se refiere un extremo: [x,y,z], 'id' (cabeza del personaje) o '#prop' (centro de un objeto)
+function resolvePoint(ref, side = 0) { if (Array.isArray(ref)) return new THREE.Vector3(...ref); if (typeof ref === 'string' && ref[0] === '#') { const m = props.find(q => q.userData.spec.id === ref.slice(1)); return m ? m.position.clone() : new THREE.Vector3(); } const v = headWorld(ref); const right = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion); return v.add(right.multiplyScalar(side * 0.16)); }
+function rectsOverlap(a, b, pad = 0) { return !(a.x + a.w + pad < b.x || b.x + b.w + pad < a.x || a.y + a.h + pad < b.y || b.y + b.h + pad < a.y); }
+
+function placeBillboards(t, capRect) {
+  // coloca cada billboard visible: sobre la cabeza de su personaje (over), dentro de la pantalla, fuera del titular y sin pisar otro objeto
+  const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion), right = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion);
+  const placed = []; const heads = Object.keys(actors).filter(id => actors[id].userData.head && actors[id].visible).map(id => { const [sx, sy] = toScreen(headWorld(id)); const r = headRadiusPx(id) * 1.15; return { id, x: sx - r, y: sy - r, w: 2 * r, h: 2 * r }; });
+  const zoneTop = (capRect ? capRect.y + capRect.h : CAPTION_TOP - 60) + 24, margin = 40;
+  for (const m of props) {
+    if (!m.visible || !m.userData.billboard) continue; const p = m.userData.spec;
+    let pos; if (p.over) { const h = headWorld(p.over); const [sx, sy] = toScreen(h); const wpp = worldPerPixel(h); const rpx = headRadiusPx(p.over); pos = h.clone().add(up.clone().multiplyScalar((rpx + 50) * wpp + m.userData.size[1] * (p.scale ?? 1) / 2)).add(right.clone().multiplyScalar((p.dx ?? 0))); }
+    else pos = new THREE.Vector3(...(p.at ?? [0, 1.8, 0]));
+    m.position.copy(pos); m.quaternion.copy(camera.quaternion);
+    const rect = () => { const wpp = worldPerPixel(m.position); const [cx, cy] = toScreen(m.position); const w = m.userData.size[0] * m.scale.x / wpp, h = m.userData.size[1] * m.scale.y / wpp; return { x: cx - w / 2, y: cy - h / 2, w, h }; };
+    const shift = (dx, dy) => { const wpp = worldPerPixel(m.position); m.position.add(right.clone().multiplyScalar(dx * wpp)).add(up.clone().multiplyScalar(-dy * wpp)); };
+    let r = rect();
+    // 1) que quepa en pantalla: si es más ancho que el área útil, se reduce
+    if (r.w > W - 2 * margin) { m.scale.multiplyScalar((W - 2 * margin) / r.w); r = rect(); }
+    const clampX = () => { r = rect(); if (r.x < margin) shift(margin - r.x, 0); r = rect(); if (r.x + r.w > W - margin) shift(W - margin - (r.x + r.w), 0); r = rect(); };
+    clampX(); if (r.y < zoneTop) shift(0, zoneTop - r.y); clampX();
+    // 2) otros objetos ya colocados: a la derecha, a la izquierda, encima o debajo, lo primero que quepa
+    const fitsX = (x) => x >= margin && x + r.w <= W - margin;
+    for (const o of placed) { if (!rectsOverlap(r, o.rect, 12)) continue;
+      const xr = o.rect.x + o.rect.w + 16, xl = o.rect.x - 16 - r.w, yu = o.rect.y - 16 - r.h;
+      if (fitsX(xr)) shift(xr - r.x, 0); else if (fitsX(xl)) shift(xl - r.x, 0); else if (yu >= zoneTop) shift(0, yu - r.y); else shift(0, o.rect.y + o.rect.h + 16 - r.y); r = rect(); }
+    // 3) cabezas (también la propia): primero a un lado, luego más pequeño y encima
+    for (const hd of heads) { if (!rectsOverlap(r, hd, 6)) continue;
+      const xr = hd.x + hd.w + 20, xl = hd.x - 20 - r.w;
+      const prefRight = (p.dx ?? 0) >= 0;
+      const tryR = () => fitsX(xr) && !placed.some(o => rectsOverlap({ ...r, x: xr }, o.rect, 12)) && !heads.some(h2 => rectsOverlap({ ...r, x: xr }, h2, 6));
+      const tryL = () => fitsX(xl) && !placed.some(o => rectsOverlap({ ...r, x: xl }, o.rect, 12)) && !heads.some(h2 => rectsOverlap({ ...r, x: xl }, h2, 6));
+      if (prefRight && tryR()) shift(xr - r.x, 0); else if (tryL()) shift(xl - r.x, 0); else if (tryR()) shift(xr - r.x, 0);
+      else { const k = clamp((hd.y - 10 - zoneTop) / r.h, 0.55, 1); m.scale.multiplyScalar(k); r = rect(); shift(0, hd.y - 10 - (r.y + r.h)); r = rect(); if (r.y < zoneTop) shift(0, zoneTop - r.y); }
+      r = rect(); }
+    clampX();
+    placed.push({ m, rect: r, id: p.id });
+  }
+  return { placed, heads };
+}
+function buildPath(m) {
+  const pd = m.userData.path; const a = resolvePoint(pd.from, 1), b = resolvePoint(pd.to, -1);
+  if (typeof pd.from === 'string' && pd.from[0] !== '#') a.add(new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion).multiplyScalar(0.12));
+  const mid = a.clone().lerp(b, 0.5).add(new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion).multiplyScalar(pd.lift)); const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+  while (m.children.length) { const c = m.children.pop(); c.geometry?.dispose(); }
+  const col = new THREE.MeshBasicMaterial({ color: pd.red ? PAL.red : PAL.yellow });
+  const draw = clamp(m.userData.draw ?? 1, 0.02, 1); const part = new THREE.CurvePath(); const pts = curve.getPoints(40).slice(0, Math.max(2, Math.round(40 * draw) + 1)); const c2 = new THREE.CatmullRomCurve3(pts);
+  m.add(new THREE.Mesh(new THREE.TubeGeometry(c2, 24, pd.kind === 'arrow' ? 0.035 : 0.012, 8), col));
+  if (pd.kind === 'arrow' && draw >= 1) { const cone = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.26, 16), col); cone.position.copy(b); const dir = b.clone().sub(curve.getPoint(0.9)).normalize(); cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir); m.add(cone); }
+  if (pd.kind === 'line') { const dot = new THREE.Mesh(new THREE.SphereGeometry(0.045, 12, 12), col); dot.position.copy(curve.getPoint(clamp(m.userData.dotP ?? 0, 0, 1))); m.add(dot); }
+}
+
 window.seek = function (t) {
   const inv = invertAmount(t);
   scene.background = hexLerp(PAL.bg, PAL.bgDark, inv); floorDark.material.opacity = inv; ambient.intensity = lerp(1.5, 0.9, inv);
   const cs = camState(t); const el = cs.el * Math.PI / 180, az = cs.az * Math.PI / 180;
-  camera.position.set(cs.target[0] + cs.dist * Math.cos(el) * Math.sin(az), cs.target[1] + cs.dist * Math.sin(el), cs.target[2] + cs.dist * Math.cos(el) * Math.cos(az)); camera.lookAt(...cs.target); camera.fov = cs.fov; camera.updateProjectionMatrix();
-  for (const [id, a] of Object.entries(actors)) { const s = actorState(id, t); a.visible = s.show; if (a.userData.head) { a.position.set(s.at[0], 0, s.at[1]); a.rotation.y = s.rot * Math.PI / 180; a.userData.head.rotation.set(s.head[1] * Math.PI / 180, s.head[0] * Math.PI / 180, 0); } else a.position.set(0, 0, 0); }
+  camera.position.set(cs.target[0] + cs.dist * Math.cos(el) * Math.sin(az), cs.target[1] + cs.dist * Math.sin(el), cs.target[2] + cs.dist * Math.cos(el) * Math.cos(az)); camera.lookAt(...cs.target); camera.fov = cs.fov; camera.updateProjectionMatrix(); camera.updateMatrixWorld();
+  for (const [id, a] of Object.entries(actors)) { const s = actorState(id, t); a.visible = s.show; if (a.userData.head) { a.position.set(s.at[0], 0, s.at[1]); a.rotation.y = s.rot * Math.PI / 180; a.userData.head.rotation.set(s.head[1] * Math.PI / 180, s.head[0] * Math.PI / 180, 0); } a.updateMatrixWorld(true); }
+  const capRect = captionRect(ctx, t);
   for (const m of props) {
     const p = m.userData.spec; const t0 = p.t0 ?? 0, t1 = p.t1 ?? 1e9;
     const inP = tw(t, t0, p.inDur ?? 0.32, p.inEase ?? 'back'), outP = tw(t, t1, 0.25, 'in'); const sc = Math.max(0.0001, inP * (1 - outP)) * (p.scale ?? 1);
     m.visible = t >= t0 && outP < 1; m.scale.setScalar(sc);
-    if (m.userData.billboard) m.quaternion.copy(camera.quaternion);
     if (m.userData.ring && p.draw != null) { const pr = tw(t, p.draw, 0.9, 'inout'); m.geometry.dispose(); m.geometry = new THREE.TorusGeometry(p.r ?? 0.55, p.tube ?? 0.07, 12, 60, Math.max(0.01, pr) * Math.PI * 2); m.rotation.z = Math.PI * 0.6; m.quaternion.copy(camera.quaternion); }
-    if (m.userData.curve) { const pr = (t - t0) * 0.7 % 1; m.userData.dot.position.copy(m.userData.curve.getPoint(clamp(pr, 0, 1))); }
     if (m.userData.bars) { const b = m.userData.bars; const filled = Math.floor(clamp((t - (b.fillFrom ?? t0)) / (b.each ?? 1.2), 0, b.n ?? 5)); m.children.forEach((c, i) => { if (i % 2 === 1) c.visible = (i - 1) / 2 < filled; }); }
-    if (m.userData.strike != null && m.userData.src) { const pr = tw(t, m.userData.strike, 0.35, 'out'); if (Math.abs((m.userData.lastStrike ?? -1) - pr) > 0.02) { m.userData.lastStrike = pr; const s = m.userData.src; const ti = bubbleTexture({ text: s.text, w: s.w ?? 640, serif: s.serif, accent: s.accent, tail: s.tail ?? 'left', strikeW: pr }); m.material.map.dispose(); m.material.map = ti.tx; m.material.needsUpdate = true; } }
-    if (p.float) m.position.y = p.at[1] + Math.sin(t * 2.1 + (p.at[0] || 0)) * 0.03;
+    if (m.userData.retex) { // bocadillos: tachado y texto que se revela palabra a palabra
+      const s = m.userData.src; let strikeW, nWords;
+      if (s.strike != null) strikeW = tw(t, s.strike, 0.35, 'out');
+      if (s.reveal != null) { const ws = TIMING.words[s.reveal] || []; nWords = ws.filter(w => t >= w[0]).length; }
+      let nLines; if (s.rowsAt) nLines = s.rowsAt.filter(r => t >= r).length;
+      const key = `${strikeW?.toFixed(2)}|${nWords}|${nLines}`; if (m.userData.key !== key) { m.userData.key = key; const ti = bubbleTexture(bubbleOpts(s, { strikeW, nWords, nLines })); m.material.map.dispose(); m.material.map = ti.tx; m.material.needsUpdate = true; }
+    }
+    if (p.float && p.at) m.position.y = p.at[1] + Math.sin(t * 2.1 + (p.at[0] || 0)) * 0.03;
   }
+  const lay = placeBillboards(t, capRect);
+  for (const m of props) if (m.visible && m.userData.path) { m.userData.draw = tw(t, m.userData.spec.t0, m.userData.spec.drawDur ?? 0.6, 'out'); m.userData.dotP = ((t - m.userData.spec.t0) * 0.6) % 1; m.scale.setScalar(1); buildPath(m); }
   renderer.render(scene, camera);
   ctx.drawImage(glCanvas, 0, 0); drawCaptions(ctx, t, inv > 0.5);
+  lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect })), heads: lay.heads };
 };
+// Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
+window.inspect = function (t) { window.seek(t); return lastFrame; };
 window.DURATION = TIMING.duration;
 window.ready = (async () => { await Promise.all([document.fonts.load('900 100px NotoCond'), document.fonts.load('400 30px Montserrat'), document.fonts.load('600 30px Montserrat')]); init(); window.seek(0); return true; })();
 })();
