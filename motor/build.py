@@ -39,6 +39,7 @@ rel = os.path.relpath(os.path.join(root, 'motor'), os.path.join(reel_dir, 'compo
 html = f"""<!doctype html><html><head><meta charset="utf-8"><title>{reel['id']}</title>
 <style>
 @font-face{{font-family:NotoCond;src:url({rel}/fonts/NotoSerifDisplay-ExtraCondensedBlack.woff2) format('woff2');font-weight:900}}
+@font-face{{font-family:NotoCondT;src:url({rel}/fonts/NotoSerifDisplay-ExtraCondensed-500.woff2) format('woff2');font-weight:500}}
 @font-face{{font-family:Montserrat;src:url({rel}/fonts/Montserrat-Regular.woff2) format('woff2');font-weight:400}}
 @font-face{{font-family:Montserrat;src:url({rel}/fonts/Montserrat-SemiBold.woff2) format('woff2');font-weight:600}}
 html,body{{margin:0;background:#222}} #cv{{width:540px;height:960px;display:block}}

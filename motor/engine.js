@@ -69,64 +69,65 @@ function camState(t) {
 
 // ---------- geometrías de los personajes ----------
 function pillGeometry(h = 1.6, w = 0.5) {
-  // cuerpo «pastilla»: más ancho abajo, cúpula arriba (LatheGeometry)
-  const pts = []; const bodyH = h * 0.72, rTop = w * 0.38, rBot = w * 0.5;
-  for (let i = 0; i <= 10; i++) { const a = (i / 10) * Math.PI / 2; pts.push(new THREE.Vector2(rBot * Math.cos(a) * 0.35 + rBot * (1 - 0.35), 0.02 + (1 - Math.cos(a)) * 0.06 * (i / 10))); }
-  pts.length = 0;
-  pts.push(new THREE.Vector2(0, 0)); pts.push(new THREE.Vector2(rBot * 0.85, 0)); pts.push(new THREE.Vector2(rBot, 0.08));
-  pts.push(new THREE.Vector2(rBot, bodyH * 0.35)); pts.push(new THREE.Vector2(rTop * 1.08, bodyH - rTop));
-  for (let i = 1; i <= 8; i++) { const a = (i / 8) * Math.PI / 2; pts.push(new THREE.Vector2(rTop * 1.08 * Math.cos(a), bodyH - rTop + rTop * Math.sin(a))); }
-  return new THREE.LatheGeometry(pts, 40);
+  // cuerpo «bala» de la referencia: base estrecha y plana, se ensancha hacia los hombros y cierra en cúpula (LatheGeometry)
+  const H = h * 0.74, rTop = w * 0.4, rBot = w * 0.3; const pts = [new THREE.Vector2(0, 0), new THREE.Vector2(rBot - 0.025, 0), new THREE.Vector2(rBot, 0.025)];
+  for (let i = 1; i <= 6; i++) { const f = i / 6; pts.push(new THREE.Vector2(rBot + (rTop - rBot) * Math.pow(f, 0.8), 0.025 + (H - rTop - 0.025) * f)); }
+  for (let i = 1; i <= 12; i++) { const a = (i / 12) * Math.PI / 2; pts.push(new THREE.Vector2(rTop * Math.cos(a), H - rTop + rTop * Math.sin(a))); }
+  const g = new THREE.LatheGeometry(pts, 48); g.computeVertexNormals(); g.userData = { H, rTop, rBot }; return g;
 }
+// contorno de grosor constante: la misma malla inflada a lo largo de las normales, solo caras traseras
+function shellGeometry(geo, d) { const g = geo.clone(); g.computeVertexNormals(); const p = g.attributes.position, n = g.attributes.normal; for (let i = 0; i < p.count; i++) p.setXYZ(i, p.getX(i) + n.getX(i) * d, p.getY(i) + n.getY(i) * d, p.getZ(i) + n.getZ(i) * d); return g; }
 let toonGradient;
-function toonMat(color) {
+function toonMat(color) { if (color === PAL.hero || color === '#ffffff') return new THREE.MeshLambertMaterial({ color, emissive: '#5c5c60' }); // el blanco se ve blanco, con un sombreado leve
+
   if (!toonGradient) { const c = document.createElement('canvas'); c.width = 4; c.height = 1; const x = c.getContext('2d'); ['#9a9a9a', '#d4d4d4', '#f4f4f4', '#ffffff'].forEach((col, i) => { x.fillStyle = col; x.fillRect(i, 0, 1, 1); }); toonGradient = new THREE.CanvasTexture(c); toonGradient.minFilter = toonGradient.magFilter = THREE.NearestFilter; toonGradient.colorSpace = THREE.NoColorSpace; }
-  return new THREE.MeshToonMaterial({ color, gradientMap: toonGradient });
+  return new THREE.MeshLambertMaterial({ color }); // sombreado suave como la referencia (antes MeshToonMaterial a franjas)
 }
 function roundedBox(w, h, d, r) { const sh = new THREE.Shape(); const x = -w / 2, y = -h / 2; sh.moveTo(x + r, y); sh.lineTo(x + w - r, y); sh.quadraticCurveTo(x + w, y, x + w, y + r); sh.lineTo(x + w, y + h - r); sh.quadraticCurveTo(x + w, y + h, x + w - r, y + h); sh.lineTo(x + r, y + h); sh.quadraticCurveTo(x, y + h, x, y + h - r); sh.lineTo(x, y + r); sh.quadraticCurveTo(x, y, x + r, y); const g = new THREE.ExtrudeGeometry(sh, { depth: d - r, bevelEnabled: true, bevelThickness: r / 2, bevelSize: r / 2, bevelSegments: 4 }); g.translate(0, 0, -(d - r) / 2); return g; }
 function outlineMesh(geom, scale = 1.035) { const m = new THREE.Mesh(geom, new THREE.MeshBasicMaterial({ color: PAL.outline, side: THREE.BackSide })); m.scale.setScalar(scale); return m; }
-function shadowMesh(r = 0.42) { const m = new THREE.Mesh(new THREE.CircleGeometry(r, 40), new THREE.MeshBasicMaterial({ color: PAL.shadow, transparent: true, opacity: 0.9 })); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; m.scale.set(1.25, 0.8, 1); m.userData.notMask = true; return m; }
+let _shadowTx; function shadowMesh(r = 0.42) { if (!_shadowTx) { const c = document.createElement('canvas'); c.width = c.height = 128; const x = c.getContext('2d'); const gr = x.createRadialGradient(64, 64, 4, 64, 64, 64); gr.addColorStop(0, 'rgba(60,60,70,0.42)'); gr.addColorStop(0.55, 'rgba(60,60,70,0.22)'); gr.addColorStop(1, 'rgba(60,60,70,0)'); x.fillStyle = gr; x.fillRect(0, 0, 128, 128); _shadowTx = new THREE.CanvasTexture(c); } const m = new THREE.Mesh(new THREE.PlaneGeometry(r * 2.6, r * 2.6), new THREE.MeshBasicMaterial({ map: _shadowTx, transparent: true, depthWrite: false })); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; m.scale.set(1.2, 0.85, 1); m.userData.notMask = true; return m; }
 
 function makeActor(spec) {
   const g = new THREE.Group(); const h = spec.h ?? 1.6; const kind = spec.kind;
   const color = kind === 'hero' ? PAL.hero : kind === 'other' ? PAL.other : PAL.crowd;
-  const bodyG = pillGeometry(h); const body = new THREE.Mesh(bodyG, toonMat(color)); g.add(body);
-  const head = new THREE.Group(); head.position.y = h * 0.72 + 0.1 + h * 0.13; g.add(head);
-  if (kind === 'other') {
-    const hb = new THREE.Mesh(roundedBox(h * 0.22, h * 0.2, h * 0.17, h * 0.05), toonMat(PAL.otherFace)); head.add(hb);
+  const bodyG = pillGeometry(h); const { H, rTop } = bodyG.userData; const body = new THREE.Mesh(bodyG, toonMat(color)); g.add(body);
+  const hr = rTop * 0.88; const head = new THREE.Group(); head.position.y = H + 0.055 + hr; g.add(head);
+  if (kind === 'other') { // cabeza cuadrada redondeada oscura con cara (la referencia)
+    const hb = new THREE.Mesh(roundedBox(hr * 2.05, hr * 1.9, hr * 1.7, hr * 0.5), toonMat(PAL.otherFace)); head.add(hb);
     if (spec.face !== false) {
       const eyeM = new THREE.MeshBasicMaterial({ color: '#ffffff' });
-      [[-0.05, 0.03], [0.05, 0.03]].forEach(([x, y]) => { const e = new THREE.Mesh(new THREE.SphereGeometry(h * 0.012, 10, 10), eyeM); e.position.set(x * h * 0.8, y * h * 0.8, h * 0.09); head.add(e); });
-      const smile = new THREE.Mesh(new THREE.TorusGeometry(h * 0.035, h * 0.006, 6, 20, Math.PI), eyeM); smile.position.set(0, -0.02 * h, h * 0.09); smile.scale.setScalar(0.8); smile.rotation.z = Math.PI; head.add(smile);
-      const flat = new THREE.Mesh(new THREE.BoxGeometry(h * 0.05, h * 0.009, 0.005), eyeM); flat.position.set(0, -0.035 * h, h * 0.09); flat.visible = false; head.add(flat);
-      const sad = new THREE.Mesh(new THREE.TorusGeometry(h * 0.03, h * 0.006, 6, 20, Math.PI), eyeM); sad.position.set(0, -0.055 * h, h * 0.09); sad.scale.setScalar(0.8); sad.visible = false; head.add(sad);
+      [-1, 1].forEach(sx => { const e = new THREE.Mesh(new THREE.SphereGeometry(hr * 0.09, 10, 10), eyeM); e.position.set(sx * hr * 0.32, hr * 0.12, hr * 0.86); head.add(e); });
+      const smile = new THREE.Mesh(new THREE.TorusGeometry(hr * 0.26, hr * 0.045, 6, 20, Math.PI), eyeM); smile.position.set(0, -hr * 0.12, hr * 0.86); smile.rotation.z = Math.PI; head.add(smile);
+      const flat = new THREE.Mesh(new THREE.BoxGeometry(hr * 0.42, hr * 0.08, 0.005), eyeM); flat.position.set(0, -hr * 0.28, hr * 0.86); flat.visible = false; head.add(flat);
+      const sad = new THREE.Mesh(new THREE.TorusGeometry(hr * 0.22, hr * 0.045, 6, 20, Math.PI), eyeM); sad.position.set(0, -hr * 0.42, hr * 0.86); sad.visible = false; head.add(sad);
       head.userData.faces = { smile, flat, sad };
     }
   } else {
-    const hs = new THREE.Mesh(new THREE.SphereGeometry(h * 0.145, 32, 24), toonMat(color)); head.add(hs);
+    const hsG = new THREE.SphereGeometry(hr, 32, 24); head.add(new THREE.Mesh(hsG, toonMat(color)));
     if (kind === 'hero') {
-      head.add(outlineMesh(new THREE.SphereGeometry(h * 0.145, 32, 24), 1.05)); g.add(outlineMesh(bodyG, 1.03));
+      const OL = new THREE.MeshBasicMaterial({ color: PAL.outline, side: THREE.BackSide });
+      head.add(new THREE.Mesh(shellGeometry(hsG, 0.016), OL)); g.add(new THREE.Mesh(shellGeometry(bodyG, 0.016), OL));
       const eyeM = new THREE.MeshBasicMaterial({ color: PAL.text });
-      const e = new THREE.Mesh(new THREE.SphereGeometry(h * 0.012, 8, 8), eyeM); e.position.set(h * 0.06, 0.02 * h, h * 0.115); head.add(e);
-      // brazo: línea con codo, en un pivote en el hombro (arm: grados; 0 = caído, 120 = levantado, 70 = señala)
-      const arm = new THREE.Group(); arm.position.set(0.02, h * 0.62, 0.2); g.add(arm);
-      const path = new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0, 0), new THREE.Vector3(-0.13, -h * 0.17, 0), new THREE.Vector3(0.03, -h * 0.29, 0)]);
-      arm.add(new THREE.Mesh(new THREE.TubeGeometry(path, 12, 0.016, 8), new THREE.MeshBasicMaterial({ color: PAL.outline })));
-      const armIn = new THREE.Mesh(new THREE.TubeGeometry(path, 12, 0.008, 8), new THREE.MeshBasicMaterial({ color: PAL.hero })); armIn.position.z = 0.012; arm.add(armIn);
-      const phone = new THREE.Group(); const pb = new THREE.Mesh(roundedBox(0.13, 0.22, 0.03, 0.02), toonMat(PAL.other)); phone.add(pb); const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.1, 0.17), new THREE.MeshBasicMaterial({ color: PAL.yellow })); scr.position.z = 0.017; phone.add(scr); phone.position.set(0.05, -h * 0.29, 0.06); phone.visible = false; arm.add(phone);
+      const e = new THREE.Mesh(new THREE.SphereGeometry(hr * 0.09, 8, 8), eyeM); e.position.set(hr * 0.55, hr * 0.15, hr * 0.8); head.add(e);
+      const sm = new THREE.Mesh(new THREE.TorusGeometry(hr * 0.16, hr * 0.03, 6, 16, Math.PI * 0.7), eyeM); sm.position.set(hr * 0.62, -hr * 0.22, hr * 0.72); sm.rotation.set(0, 0.6, Math.PI * 1.05); head.add(sm);
+      // brazo en jarra (tubo blanco con contorno), con pivote en el hombro: arm en grados (0 = en jarra, 120 = levantado)
+      const arm = new THREE.Group(); arm.position.set(rTop * 0.62, H - rTop * 0.7, rTop * 0.78); g.add(arm);
+      const path = new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0, 0), new THREE.Vector3(rTop * 0.75, -H * 0.19, 0.03), new THREE.Vector3(rTop * 0.2, -H * 0.37, 0.05)]);
+      const tubeG = new THREE.TubeGeometry(path, 20, 0.03, 12); arm.add(new THREE.Mesh(tubeG, toonMat(PAL.hero))); arm.add(new THREE.Mesh(shellGeometry(tubeG, 0.014), OL));
+      const phone = new THREE.Group(); const pb = new THREE.Mesh(roundedBox(0.13, 0.22, 0.03, 0.02), toonMat(PAL.other)); phone.add(pb); const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.1, 0.17), new THREE.MeshBasicMaterial({ color: PAL.yellow })); scr.position.z = 0.017; phone.add(scr); phone.position.set(rTop * 0.05, -H * 0.36, 0.08); phone.visible = false; arm.add(phone);
       g.userData.arm = arm; g.userData.phone = phone;
     }
   }
-  g.add(shadowMesh(h * 0.3)); g.userData = { spec, head, h }; return g;
+  g.add(shadowMesh(rTop * 1.1)); g.userData = { ...g.userData, spec, head, h }; return g;
 }
 
 // ---------- escenario ----------
 function gridTexture(dark) {
   const c = document.createElement('canvas'); c.width = c.height = 512; const x = c.getContext('2d');
   x.fillStyle = dark ? PAL.bgDark : PAL.bg; x.fillRect(0, 0, 512, 512);
-  x.strokeStyle = dark ? '#45464c' : PAL.grid; x.lineWidth = 2;
+  x.strokeStyle = dark ? '#43444a' : '#e8e8eb'; x.lineWidth = 1.5;
   for (let i = 0; i <= 512; i += 128) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, 512); x.moveTo(0, i); x.lineTo(512, i); x.stroke(); }
-  x.strokeStyle = dark ? '#6a6b72' : PAL.cross; x.lineWidth = 4;
+  x.strokeStyle = dark ? '#6a6b72' : '#bdbdc2'; x.lineWidth = 2.5;
   for (let i = 0; i <= 512; i += 256) for (let j = 0; j <= 512; j += 256) { x.beginPath(); x.moveTo(i - 10, j); x.lineTo(i + 10, j); x.moveTo(i, j - 10); x.lineTo(i, j + 10); x.stroke(); }
   const tx = new THREE.CanvasTexture(c); tx.wrapS = tx.wrapT = THREE.RepeatWrapping; tx.repeat.set(40, 40); tx.anisotropy = 4; return tx;
 }
@@ -168,8 +169,8 @@ function batteryTexture(level, p = {}) {
 function receiptTexture(p, nChecked) {
   const rows = p.rows ?? ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']; const c = document.createElement('canvas'); c.width = 520; c.height = 170 + rows.length * 110; const x = c.getContext('2d');
   x.shadowColor = 'rgba(0,0,0,0.16)'; x.shadowBlur = 16; x.shadowOffsetY = 8; x.fillStyle = '#ffffff'; x.beginPath(); x.moveTo(14, 14); x.lineTo(506, 14); x.lineTo(506, c.height - 30); for (let i = 0; i <= 12; i++) x.lineTo(506 - i * 41, c.height - (i % 2 ? 14 : 30)); x.closePath(); x.fill(); x.shadowColor = 'transparent';
-  x.fillStyle = PAL.text; x.font = '900 72px NotoCond'; x.fillText((p.title ?? 'Semana').toUpperCase(), 48, 104);
-  rows.forEach((r, i) => { const y = 150 + i * 110; x.strokeStyle = PAL.text; x.lineWidth = 5; roundRect(x, 48, y, 64, 64, 12); x.stroke(); x.fillStyle = '#6b6b70'; x.font = '500 40px Montserrat'; x.fillText(r, 140, y + 46);
+  if (p.labels) { x.fillStyle = PAL.text; x.font = '900 72px NotoCond'; x.fillText((p.title ?? 'Semana').toUpperCase(), 48, 104); } else { x.fillStyle = '#d6d6da'; roundRect(x, 48, 64, 220, 34, 10); x.fill(); }
+  rows.forEach((r, i) => { const y = 150 + i * 110; x.strokeStyle = PAL.text; x.lineWidth = 5; roundRect(x, 48, y, 64, 64, 12); x.stroke(); if (p.labels) { x.fillStyle = '#6b6b70'; x.font = '500 40px Montserrat'; x.fillText(r, 140, y + 46); } else { x.fillStyle = '#dcdce0'; roundRect(x, 140, y + 18, 300 - (i % 3) * 40, 28, 10); x.fill(); }
     if (i < nChecked) { x.fillStyle = PAL.yellow; roundRect(x, 48, y, 64, 64, 12); x.fill(); x.strokeStyle = PAL.text; x.lineWidth = 9; x.lineCap = 'round'; x.beginPath(); x.moveTo(62, y + 34); x.lineTo(78, y + 50); x.lineTo(100, y + 16); x.stroke(); } });
   const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; return { tx, w: c.width, h: c.height }; }
 // ---------- objetos (props) ----------
@@ -240,7 +241,7 @@ const PROPS = {
   // --- objetos de la regla 14 (N1): decorados y cosas que cambian con el tiempo ---
   sofa(p) { const g = new THREE.Group(); const w = p.w ?? 2.4; const add = (sx, sy, sz, x, y, z, col = '#ffffff') => { const geo = roundedBox(sx, sy, sz, 0.08); const m = new THREE.Mesh(geo, toonMat(col)); m.position.set(x, y, z); g.add(m); const o = outlineMesh(geo, 1.02); o.position.copy(m.position); g.add(o); };
     add(w, 0.42, 0.95, 0, 0.25, 0); add(w, 0.75, 0.24, 0, 0.62, -0.38); add(0.26, 0.6, 0.95, -w / 2, 0.36, 0); add(0.26, 0.6, 0.95, w / 2, 0.36, 0); add(w * 0.42, 0.14, 0.7, -w * 0.24, 0.52, 0.06, p.yellow ? PAL.yellow : '#ececee'); return g; },
-  wall(p) { const g = new THREE.Group(); const w = p.w ?? 4, h = p.h ?? 2.6; const geo = new THREE.BoxGeometry(w, h, 0.1); const m = new THREE.Mesh(geo, toonMat(p.white ? '#ffffff' : '#e4e4e8')); m.position.y = h / 2; g.add(m, outlineMesh(geo, 1.006).translateY(h / 2)); return g; },
+  wall(p) { const g = new THREE.Group(); const w = p.w ?? 4, h = p.h ?? 2.6; const geo = new THREE.BoxGeometry(w, h, 0.1); const m = new THREE.Mesh(geo, toonMat(p.white ? '#ffffff' : '#ececef')); m.position.y = h / 2; g.add(m, outlineMesh(geo, 1.006).translateY(h / 2)); return g; },
   wallclock(p) { // reloj de pared; las agujas giran a p.spin = [[t, vueltas por segundo], ...]
     const g = new THREE.Group(); const r = p.r ?? 0.45; const face = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.06, 48), toonMat('#ffffff')); face.rotation.x = Math.PI / 2; g.add(face); const o = outlineMesh(new THREE.CylinderGeometry(r, r, 0.06, 48), 1.06); o.rotation.x = Math.PI / 2; g.add(o);
     for (let i = 0; i < 12; i++) { const tk = new THREE.Mesh(new THREE.BoxGeometry(0.025, i % 3 ? 0.05 : 0.09, 0.01), new THREE.MeshBasicMaterial({ color: PAL.text })); const a = i / 12 * Math.PI * 2; tk.position.set(Math.sin(a) * r * 0.82, Math.cos(a) * r * 0.82, 0.035); tk.rotation.z = -a; g.add(tk); }
@@ -260,7 +261,7 @@ const PROPS = {
 // Devuelve el rectángulo que ocupa el titular (para que los objetos no lo pisen y para el inspector).
 const CAPTION_TOP = 175;
 function captionLayout(x, L, fs0, maxW, marginX) { // el cuerpo más grande que quepa: 2 líneas a 142-128 px o 3 líneas a 116-100 px
-  for (const [fs, maxRows] of [[fs0, 2], [128, 2], [116, 3], [104, 3], [92, 3]]) { x.font = `900 ${fs}px NotoCond`; const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
+  for (const [fs, maxRows] of [[fs0, 2], [128, 2], [116, 3], [104, 3], [92, 3]]) { x.font = `500 ${fs}px NotoCondT`; const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
     if (row + 1 <= maxRows || fs === 92) return { tokens, layout, rows: row + 1, fs, lh: Math.round(fs * 1.2) }; } }
 function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
 function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 142, W - 2 * marginX - 40, marginX); x.restore(); const top = a.L.voice ? 205 : CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: (a.L.voice ? 70 : top - fs), w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (a.L.voice ? 70 : top - fs) }; }
@@ -268,8 +269,8 @@ function drawCaptions(x, t, inv) {
   const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60;
   x.save(); x.textBaseline = 'alphabetic';
   const top = L.voice ? 205 : CAPTION_TOP; const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
-  const { tokens, layout, fs, lh } = captionLayout(x, L, 142, W - 2 * marginX - 40, marginX); x.font = `900 ${fs}px NotoCond`;
-  if (L.voice) { x.save(); x.font = '400 30px Montserrat'; x.fillStyle = inv ? '#c9c9cf' : '#6b6b70'; x.globalAlpha = 1 - outP; x.fillText(L.voice, marginX, 96); x.restore(); x.font = `900 ${fs}px NotoCond`; }
+  const { tokens, layout, fs, lh } = captionLayout(x, L, 142, W - 2 * marginX - 40, marginX); x.font = `500 ${fs}px NotoCondT`;
+  if (L.voice) { x.save(); x.font = '400 30px Montserrat'; x.fillStyle = inv ? '#c9c9cf' : '#6b6b70'; x.globalAlpha = 1 - outP; x.fillText(L.voice, marginX, 96); x.restore(); x.font = `500 ${fs}px NotoCondT`; }
   const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
   for (let i = 0; i < tokens.length; i++) {
     const wtime = words[Math.min(i, words.length - 1)][0]; if (t < wtime) break;
@@ -293,8 +294,8 @@ function init() {
   renderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: true, preserveDrawingBuffer: true, alpha: false }); renderer.setSize(W, H, false); renderer.setPixelRatio(1); renderer.outputColorSpace = THREE.SRGBColorSpace;
   scene = new THREE.Scene(); scene.background = new THREE.Color(PAL.bg); scene.fog = new THREE.Fog(PAL.bg, 34, 70); // sin horizonte visible, como la referencia
   camera = new THREE.PerspectiveCamera(30, W / H, 0.1, 200);
-  ambient = new THREE.HemisphereLight('#ffffff', '#e2e2e6', 1.5); scene.add(ambient);
-  sun = new THREE.DirectionalLight('#ffffff', 1.5); sun.position.set(-3, 8, 6); scene.add(sun);
+  ambient = new THREE.HemisphereLight('#ffffff', '#c9c9cf', 1.9); scene.add(ambient);
+  sun = new THREE.DirectionalLight('#ffffff', 1.25); sun.position.set(-4, 7, 6); scene.add(sun);
   floorLight = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshBasicMaterial({ map: gridTexture(false) })); floorLight.rotation.x = -Math.PI / 2; scene.add(floorLight);
   floorDark = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshBasicMaterial({ map: gridTexture(true), transparent: true, opacity: 0 })); floorDark.rotation.x = -Math.PI / 2; floorDark.position.y = 0.001; scene.add(floorDark);
   const mains = Object.values(SHOTS.actors).filter(a => a.kind !== 'crowd').map(a => a.at ?? [0, 0]);
@@ -395,7 +396,7 @@ function buildPath(m) {
 
 window.seek = function (t) {
   const inv = invertAmount(t);
-  scene.background = hexLerp(PAL.bg, PAL.bgDark, inv); scene.fog.color.copy(scene.background); floorDark.material.opacity = inv; ambient.intensity = lerp(1.5, 0.9, inv);
+  scene.background = hexLerp(PAL.bg, PAL.bgDark, inv); scene.fog.color.copy(scene.background); floorDark.material.opacity = inv; ambient.intensity = lerp(1.9, 1.1, inv);
   const cs = camState(t); placeCamera(cs);
   for (const [id, a] of Object.entries(actors)) { const s = actorState(id, t); a.visible = s.show; if (a.userData.head) { const bob = s.walk ? Math.abs(Math.sin(s.walk)) * 0.07 : 0; a.position.set(s.at[0], s.y + bob + s.hop, s.at[1]); a.rotation.order = 'YXZ'; a.rotation.y = s.rot * Math.PI / 180; a.rotation.x = s.lean * Math.PI / 180; a.rotation.z = (s.tilt + (s.walk ? Math.sin(s.walk) * 4 : 0)) * Math.PI / 180; a.userData.head.rotation.set(s.head[1] * Math.PI / 180, s.head[0] * Math.PI / 180, 0);
       a.children.forEach(c => { if (c.userData.notMask) c.visible = Math.abs(s.tilt) < 30; });
@@ -465,7 +466,10 @@ window.inspectPixels = function (t) {
     for (let j = i + 1; j < items.length; j++) { const B = masks[j]; let c = 0, aFront = 0, bFront = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && B.mask[k]) { c++; if (front[k] === i) aFront++; else if (front[k] === j) bFront++; } if (c) pairs.push([items[i].id, items[j].id, c, aFront, bFront]); }
   }
   const act = activeLine(t); const objecion = !!(act && act.L.voice);
-  return { t, whip: lastFrame.whip, objecion, textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, key: !!it.key, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
+  // regla 15: textos en escena frente a la voz. Cada texto visible con letras, la frase que suena y si el titular está a la vista.
+  const sonando = (() => { let cur = null; REEL.lines.forEach((L, i) => { const w = TIMING.words[i]; if (w && t >= w[0][0] - 0.05 && t <= w[w.length - 1][1] + 0.6) cur = L.say || L.show; }); return cur; })();
+  const escena = items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).map(x => { const p = x.obj.userData.spec; let tx = p.text || ''; if (p.type === 'receipt' && p.labels) tx += ' ' + (p.title ?? 'Semana') + ' ' + (p.rows ?? ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']).join(' '); if (p.type === 'card' && p.label) tx += ' ' + p.label; return { id: x.id, text: tx.trim() }; }).filter(x => /[a-záéíóúñ]/i.test(x.text));
+  return { t, whip: lastFrame.whip, objecion, sonando, escena, titular: !!(act && t >= act.t0), textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, key: !!it.key, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
@@ -493,5 +497,5 @@ window.variety = function () {
 };
 window.occupancy = function (t) { window.seek(t); const c = document.createElement('canvas'); c.width = 180; c.height = 320; const x = c.getContext('2d'); x.drawImage(cv, 0, 0, 180, 320); const d = x.getImageData(0, 78, 180, 218).data; const bg = invertAmount(t) > 0.5 ? [0x34, 0x35, 0x3a] : [0xf5, 0xf5, 0xf5]; let n = 0; for (let i = 0; i < d.length; i += 4) if (Math.max(Math.abs(d[i] - bg[0]), Math.abs(d[i + 1] - bg[1]), Math.abs(d[i + 2] - bg[2])) > 14) n++; return n / (d.length / 4); }; // medido a 180x320, como las tiras de la referencia (mediana 16-36 %)
 window.DURATION = TIMING.duration;
-window.ready = (async () => { await Promise.all([document.fonts.load('900 100px NotoCond'), document.fonts.load('400 30px Montserrat'), document.fonts.load('600 30px Montserrat')]); init(); window.seek(0); return true; })();
+window.ready = (async () => { await Promise.all([document.fonts.load('900 100px NotoCond'), document.fonts.load('500 100px NotoCondT'), document.fonts.load('400 30px Montserrat'), document.fonts.load('600 30px Montserrat')]); init(); window.seek(0); return true; })();
 })();

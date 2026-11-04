@@ -21,6 +21,14 @@ const { chromium } = require('playwright'); const path = require('path');
       if (it.kind === 'billboard' && steady(it) && it.px < 0.004 * PX) add('small' + it.id, `${it.id}: demasiado pequeño para leerse (${it.px} px)`);
     }
     if (f.objecion && f.textos.length) add('obj' + f.textos[0], `${f.textos[0]}: texto en un bocadillo durante la objeción; la frase va solo en el titular (regla 13)`);
+    // regla 15 (Jaime, 04-11): un solo hilo de texto. En escena solo puede haber texto si es la frase que la voz dice en ese
+    // momento (una cita) y entonces el titular se oculta; o iconos sin palabras. Nada que la voz no diga, ni repetido a la vez.
+    const norm = w => w.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9ñ]/g, '');
+    const said = new Set((f.sonando || '').split(/\s+/).map(norm).filter(Boolean));
+    for (const e of f.escena || []) { const ws = e.text.split(/\s+/).map(norm).filter(w => /[a-zñ]/.test(w));
+      if (!ws.length) continue;
+      if (!ws.every(w => said.has(w))) add('txt' + e.id + e.text, `${e.id}: «${e.text}» no es lo que dice la voz ahora («${f.sonando || '—'}»); fuera, o sin palabras (regla 15)`);
+      else if (f.titular && ws.length >= 2) add('dup' + e.id, `${e.id}: «${e.text}» repite el titular a la vez; oculta el titular de esa frase (hide) y revela el bocadillo con la voz (reveal) (regla 15)`); }
     if (f.billboards > 2) add('many' + f.billboards, `${f.billboards} bocadillos/tarjetas a la vez: máximo 2 (claridad)`);
     for (const [A, B, c, aFront, bFront0] of f.pairs) {
       if (B === 'titular') { if (c / PX > 0.0005 && !(f.whip && main(A))) add('cap' + A, `${A} pisa el titular (${c} px)`); continue; }
