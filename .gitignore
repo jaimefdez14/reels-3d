@@ -4,3 +4,4 @@ reels/*/out/
 reels/*/previas/
 *.wav
 __pycache__/
+reels/*/blender/
