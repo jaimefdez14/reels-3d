@@ -74,6 +74,13 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
 
+14. **Escenas con acción y variedad, no etiquetas sobre un decorado (04-11-2026).** Jaime, comparando N6 con la referencia: «hay una enorme diferencia… los ejemplos tienen mucha más variedad, más assets, más dinámicos, más tomas, y la historia mejor contada, además de mejores subtítulos, efectos». Medido: R1 pasa por ~8 decorados en 55 s y R4 por 7; N6 estaba 33 s en el mismo pasillo con las figuras quietas y etiquetas encima. Desde N1 (Jaime: «ok, n1»):
+    (a) **guion gráfico antes del código** (`reels/ID/storyboard.md`): por frase, decorado + acción (quién hace qué a quién) + un objeto grande, comparado con el plano equivalente de la referencia;
+    (b) **5-8 decorados por reel** colocados en el mismo mundo, y la cámara **viaja** entre ellos (travelling, dolly, orbit), con 2-3 latigazos como mucho (la regla 8b queda corregida: lo que leí como latigazos eran travellings rápidos entre decorados);
+    (c) **personajes que actúan**: andan, gesticulan, giran la cabeza, cambian de cara;
+    (d) **objetos grandes** que llenan el plano y **titular más grande**, condensado, a todo el ancho;
+    (e) el inspector mide decorados distintos, algo nuevo cada ≤ 2 s y el encuadre ocupado.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
