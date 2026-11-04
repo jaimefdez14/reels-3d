@@ -118,6 +118,9 @@ function makeActor(spec) {
       g.userData.arm = arm; g.userData.phone = phone;
     }
   }
+  if (kind !== 'crowd') { // contorno amarillo para señalar (moves: glow: true), como «find the connector» en la referencia
+    const GL = new THREE.MeshBasicMaterial({ color: PAL.yellow, side: THREE.BackSide }); const gb = new THREE.Mesh(shellGeometry(bodyG, 0.05), GL); gb.visible = false; g.add(gb);
+    const gh = new THREE.Mesh(new THREE.SphereGeometry(hr + 0.05, 24, 16), GL); gh.visible = false; head.add(gh); g.userData.glow = [gb, gh]; }
   g.add(shadowMesh(rTop * 1.1)); g.userData = { ...g.userData, spec, head, h }; return g;
 }
 
@@ -230,9 +233,9 @@ const PROPS = {
     const mon = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.7, 0.06), toonMat(PAL.other)); mon.position.set(0, 1.45, -0.2); g.add(mon); const c = document.createElement('canvas'); c.width = 440; c.height = 280; const x = c.getContext('2d'); x.fillStyle = '#ffffff'; x.fillRect(0, 0, 440, 280); x.fillStyle = PAL.yellow; [90, 150, 210].forEach((h, i) => x.fillRect(60 + i * 120, 250 - h, 80, h)); x.fillStyle = PAL.text; x.font = '600 28px Montserrat'; x.fillText(p.text || '', 30, 50);
     const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const scr = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 0.62), new THREE.MeshBasicMaterial({ map: tx })); scr.position.set(0, 1.45, -0.165); g.add(scr); const stand = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.15, 0.1), toonMat(PAL.other)); stand.position.set(0, 1.05, -0.2); g.add(stand); return g; },
   timer(p) { // temporizador: anillo gris con arco amarillo que se rellena (p.fillFrom, p.dur) y la cifra en medio
-    const g = new THREE.Group(); const r = p.r ?? 0.6; g.add(new THREE.Mesh(new THREE.TorusGeometry(r, 0.06, 10, 60), new THREE.MeshBasicMaterial({ color: '#d2d2d6' }))); const arc = new THREE.Mesh(new THREE.TorusGeometry(r, 0.075, 10, 60, 0.01), new THREE.MeshBasicMaterial({ color: PAL.yellow })); arc.rotation.z = Math.PI / 2; g.add(arc);
-    const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d'); x.fillStyle = PAL.text; x.font = '900 150px NotoCond'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(p.text ?? '5', 128, 136); const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const num = new THREE.Mesh(new THREE.PlaneGeometry(r * 1.1, r * 1.1), new THREE.MeshBasicMaterial({ map: tx, transparent: true })); g.add(num);
-    g.userData = { billboard: true, size: [2 * r + 0.15, 2 * r + 0.15], timer: { arc, r, p } }; return g; },
+    const g = new THREE.Group(); const r = p.r ?? 0.6; const tube = r * 0.13; const disc = new THREE.Mesh(new THREE.CircleGeometry(r * 1.17, 64), new THREE.MeshBasicMaterial({ color: '#ffffff' })); disc.position.z = -0.02; g.add(disc); const rim = new THREE.Mesh(new THREE.RingGeometry(r * 1.17, r * 1.2, 64), new THREE.MeshBasicMaterial({ color: PAL.outline })); rim.position.z = -0.015; g.add(rim); g.add(new THREE.Mesh(new THREE.TorusGeometry(r, tube * 0.8, 10, 60), new THREE.MeshBasicMaterial({ color: '#e1e1e5' }))); const arc = new THREE.Mesh(new THREE.TorusGeometry(r, tube, 10, 60, 0.01), new THREE.MeshBasicMaterial({ color: PAL.yellow })); arc.rotation.z = Math.PI / 2; g.add(arc);
+    const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d'); x.fillStyle = PAL.text; x.font = '900 150px NotoCond'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(p.text ?? '5', 128, 136); const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; const num = new THREE.Mesh(new THREE.PlaneGeometry(r * 1.45, r * 1.45), new THREE.MeshBasicMaterial({ map: tx, transparent: true })); num.position.z = 0.01; g.add(num);
+    g.userData = { billboard: true, size: [2.4 * r, 2.4 * r], timer: { arc, r, tube, p } }; return g; },
   coins(p) { // pila de monedas que crece (p.n, p.each segundos por moneda desde t0)
     const g = new THREE.Group(); const n = p.n ?? 8; for (let i = 0; i < n; i++) { const c = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.09, 32), toonMat(PAL.yellow)); c.position.y = 0.045 + i * 0.1; c.visible = false; g.add(c); g.add(outlineMesh(new THREE.CylinderGeometry(0.32, 0.32, 0.09, 32), 1.03).translateY(c.position.y)); } g.userData.coins = p; return g; },
   doors(p) { // fila de puertas con un personaje gris en cada una (el pasillo de la referencia R4)
@@ -241,7 +244,7 @@ const PROPS = {
   // --- objetos de la regla 14 (N1): decorados y cosas que cambian con el tiempo ---
   sofa(p) { const g = new THREE.Group(); const w = p.w ?? 2.4; const add = (sx, sy, sz, x, y, z, col = '#ffffff') => { const geo = roundedBox(sx, sy, sz, 0.08); const m = new THREE.Mesh(geo, toonMat(col)); m.position.set(x, y, z); g.add(m); const o = outlineMesh(geo, 1.02); o.position.copy(m.position); g.add(o); };
     add(w, 0.42, 0.95, 0, 0.25, 0); add(w, 0.75, 0.24, 0, 0.62, -0.38); add(0.26, 0.6, 0.95, -w / 2, 0.36, 0); add(0.26, 0.6, 0.95, w / 2, 0.36, 0); add(w * 0.42, 0.14, 0.7, -w * 0.24, 0.52, 0.06, p.yellow ? PAL.yellow : '#ececee'); return g; },
-  wall(p) { const g = new THREE.Group(); const w = p.w ?? 4, h = p.h ?? 2.6; const geo = new THREE.BoxGeometry(w, h, 0.1); const m = new THREE.Mesh(geo, toonMat(p.white ? '#ffffff' : '#ececef')); m.position.y = h / 2; g.add(m, outlineMesh(geo, 1.006).translateY(h / 2)); return g; },
+  wall(p) { const g = new THREE.Group(); const w = p.w ?? 4, h = p.h ?? 2.6; const geo = new THREE.BoxGeometry(w, h, 0.1); const m = new THREE.Mesh(geo, toonMat(p.gray ? '#e4e4e8' : '#ffffff')); m.position.y = h / 2; g.add(m, outlineMesh(geo, 1.006).translateY(h / 2)); return g; },
   wallclock(p) { // reloj de pared; las agujas giran a p.spin = [[t, vueltas por segundo], ...]
     const g = new THREE.Group(); const r = p.r ?? 0.45; const face = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.06, 48), toonMat('#ffffff')); face.rotation.x = Math.PI / 2; g.add(face); const o = outlineMesh(new THREE.CylinderGeometry(r, r, 0.06, 48), 1.06); o.rotation.x = Math.PI / 2; g.add(o);
     for (let i = 0; i < 12; i++) { const tk = new THREE.Mesh(new THREE.BoxGeometry(0.025, i % 3 ? 0.05 : 0.09, 0.01), new THREE.MeshBasicMaterial({ color: PAL.text })); const a = i / 12 * Math.PI * 2; tk.position.set(Math.sin(a) * r * 0.82, Math.cos(a) * r * 0.82, 0.035); tk.rotation.z = -a; g.add(tk); }
@@ -314,7 +317,7 @@ function init() {
 
 function actorState(id, t) { // keyframes por actor: SHOTS.moves[id] = [{t, dur, at, rot, head:[yaw,tilt], show, arm, tilt, lean, y, phone, face, hop}]
   const kfs = (SHOTS.moves || {})[id] || []; const spec = SHOTS.actors[id];
-  let s = { at: spec.at ?? [0, 0], rot: spec.rot ?? 0, head: [0, 0], show: spec.show !== false, arm: spec.arm ?? 0, tilt: spec.tilt ?? 0, lean: 0, y: spec.y ?? 0, phone: !!spec.phone, face: spec.face ?? 'smile', walk: 0, hop: 0 };
+  let s = { at: spec.at ?? [0, 0], rot: spec.rot ?? 0, head: [0, 0], show: spec.show !== false, arm: spec.arm ?? 0, tilt: spec.tilt ?? 0, lean: 0, y: spec.y ?? 0, phone: !!spec.phone, face: spec.face ?? 'smile', glow: !!spec.glow, walk: 0, hop: 0 };
   let jump = false;
   for (const k of kfs) {
     if (k.at && k.t > 0 && (k.dur ?? 1) <= 0.05 && t >= k.t - 0.04 && t < k.t + 0.3) jump = true;
@@ -323,7 +326,7 @@ function actorState(id, t) { // keyframes por actor: SHOTS.moves[id] = [{t, dur,
     const dur = k.dur ?? 1, p = k.t <= 0 ? 1 : tw(t, k.t, dur, k.ease ?? 'inout'); const prev = s;
     s = { ...prev, at: k.at ? lerpV(prev.at, k.at, p) : prev.at, rot: k.rot != null ? lerp(prev.rot, k.rot, p) : prev.rot, head: k.head ? lerpV(prev.head, k.head, p) : prev.head, show: k.show ?? prev.show,
       arm: k.arm != null ? lerp(prev.arm, k.arm, p) : prev.arm, tilt: k.tilt != null ? lerp(prev.tilt, k.tilt, p) : prev.tilt, lean: k.lean != null ? lerp(prev.lean, k.lean, p) : prev.lean, y: k.y != null ? lerp(prev.y, k.y, p) : prev.y,
-      phone: k.phone ?? prev.phone, face: k.face ?? prev.face, walk: 0, hop: prev.hop };
+      phone: k.phone ?? prev.phone, face: k.face ?? prev.face, glow: k.glow ?? prev.glow, walk: 0, hop: prev.hop };
     // andar: si el keyframe mueve al personaje y está a medio camino, rebota y se balancea
     if (k.at && dur > 0.05 && p > 0 && p < 1 && k.walk !== false) { const d = Math.hypot(k.at[0] - prev.at[0], k.at[1] - prev.at[1]); s.walk = (t - k.t) / dur * d / 0.32 * Math.PI; }
     if (k.at && p >= 1) s.at = k.at;
@@ -401,7 +404,9 @@ window.seek = function (t) {
   for (const [id, a] of Object.entries(actors)) { const s = actorState(id, t); a.visible = s.show; if (a.userData.head) { const bob = s.walk ? Math.abs(Math.sin(s.walk)) * 0.07 : 0; a.position.set(s.at[0], s.y + bob + s.hop, s.at[1]); a.rotation.order = 'YXZ'; a.rotation.y = s.rot * Math.PI / 180; a.rotation.x = s.lean * Math.PI / 180; a.rotation.z = (s.tilt + (s.walk ? Math.sin(s.walk) * 4 : 0)) * Math.PI / 180; a.userData.head.rotation.set(s.head[1] * Math.PI / 180, s.head[0] * Math.PI / 180, 0);
       a.children.forEach(c => { if (c.userData.notMask) c.visible = Math.abs(s.tilt) < 30; });
       if (a.userData.arm) { a.userData.arm.rotation.z = s.arm * Math.PI / 180; a.userData.phone.visible = s.phone; }
-      const fc = a.userData.head.userData.faces; if (fc) for (const [n, m] of Object.entries(fc)) m.visible = n === s.face; } a.updateMatrixWorld(true); }
+      if (a.userData.glow) a.userData.glow.forEach(m => { m.visible = s.glow; });
+      { const ph = id.length * 1.7; const idle = s.walk ? 0 : 1; a.userData.head.rotation.y += idle * Math.sin(t * 1.1 + ph) * 0.06; a.userData.head.rotation.x += idle * Math.sin(t * 0.8 + ph * 2) * 0.03; a.scale.y = 1 + idle * Math.sin(t * 2.2 + ph) * 0.006; }
+      const fc = a.userData.head.userData.faces; if (fc) for (const [n, m] of Object.entries(fc)) m.visible = n === s.face; } if (!a.userData.head && a.visible) a.children.forEach((c, k) => { if (c.userData.baseRot == null) c.userData.baseRot = c.rotation.y; c.rotation.y = c.userData.baseRot + Math.sin(t * 0.7 + k * 1.9) * 0.25; c.position.y = Math.max(0, Math.sin(t * 2.4 + k * 2.3)) * 0.015; }); a.updateMatrixWorld(true); }
   const capRect = captionRect(ctx, t);
   for (const m of props) {
     const p = m.userData.spec; const t0 = p.t0 ?? 0, t1 = p.t1 ?? 1e9;
@@ -412,7 +417,7 @@ window.seek = function (t) {
       if (p.around) { const a = actors[p.around]; const base = a.position.clone().add(new THREE.Vector3(0, p.y ?? 0.95, 0)); const toCam = camera.position.clone().sub(base).normalize(); m.position.copy(base.add(toCam.multiplyScalar(p.front ?? 0.75))); }
       m.quaternion.copy(camera.quaternion); m.rotateZ(Math.PI * 0.6); }
     if (m.userData.letters) { const lp = m.userData.letters; let lit = new Set(); (lp.litAt || []).forEach((e, i) => { if (Array.isArray(e)) { if (t >= e[0]) { if (e[2] === 'add') lit.add(e[1]); else lit = new Set([e[1]]); } } else if (t >= e) lit = new Set([i]); }); m.children.forEach(ch => { if (ch.userData.letter != null) ch.material.color.set(lit.has(ch.userData.letter) ? PAL.yellow : '#ffffff'); }); }
-    if (m.userData.timer) { const tm = m.userData.timer; const pr = clamp((t - (tm.p.fillFrom ?? t0)) / (tm.p.dur ?? 3), 0, 1); tm.arc.geometry.dispose(); tm.arc.geometry = new THREE.TorusGeometry(tm.r, 0.075, 10, 60, Math.max(0.01, pr) * Math.PI * 2); }
+    if (m.userData.timer) { const tm = m.userData.timer; const pr = clamp((t - (tm.p.fillFrom ?? t0)) / (tm.p.dur ?? 3), 0, 1); tm.arc.geometry.dispose(); tm.arc.geometry = new THREE.TorusGeometry(tm.r, tm.tube, 10, 60, Math.max(0.01, pr) * Math.PI * 2); }
     if (m.userData.coins) { const cp = m.userData.coins; const k = Math.floor(clamp((t - t0) / (cp.each ?? 0.25), 0, cp.n ?? 8)); m.children.forEach((c, i) => { c.visible = Math.floor(i / 2) < k; }); }
     if (m.userData.bracketOf && m.visible) { const h = headWorld(m.userData.bracketOf); const a = actors[m.userData.bracketOf]; m.position.copy(a.position).add(new THREE.Vector3(0, a.userData.h * 0.55, 0.3)); m.quaternion.copy(camera.quaternion); }
     if (m.userData.bars) { const b = m.userData.bars; if (b.pattern) { m.children.forEach((c, i) => { if (i % 2 === 1) { const v = b.pattern[(i - 1) / 2] ?? 0; c.visible = v > 0; c.material.color.set(v === 2 ? PAL.red : PAL.yellow); } }); } else { const filled = Math.floor(clamp((t - (b.fillFrom ?? t0)) / (b.each ?? 1.2), 0, b.n ?? 5)); m.children.forEach((c, i) => { if (i % 2 === 1) c.visible = (i - 1) / 2 < filled; }); } }
