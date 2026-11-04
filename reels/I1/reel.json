@@ -1,0 +1,26 @@
+{
+  "id": "I1",
+  "titulo": "Las dos preguntas",
+  "idea": "I1 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026)",
+  "coverT": 1.4,
+  "revision_castellano": { "fecha": "2026-11-04", "lector": "espectador de Madrid sin contexto", "corrector": "corrector de Madrid sin contexto",
+    "cambios": "2: sin «lo» sin referente; 3: «se apaga» → «está muerta»; 6 y 8: sin «ahí» que dependa de la anterior; 7: «en tres meses» sin ambigüedad; 10: «No, si luego…»; 11: frase completa; 13-14: fuera «compras su problema» (calco) y remate que vuelve al gancho; 15: ≤ 45 caracteres" },
+  "lines": [
+    { "show": "Nunca abras una reunión con esta frase.", "neg": "Nunca" },
+    { "show": "«¿En qué puedo ayudarte?»", "hide": true, "pause": 0.7 },
+    { "show": "Ni el cliente sabe qué necesita, ni tú.", "neg": "ni tú" },
+    { "show": "A los dos minutos, la reunión está muerta.", "neg": "muerta" },
+    { "show": "Haz dos preguntas, en este orden.", "hi": "dos preguntas" },
+    { "show": "«¿Qué ha pasado para que me llames ahora?»", "hide": true, "pause": 0.8 },
+    { "show": "En su respuesta está el motivo real.", "hi": "motivo real" },
+    { "show": "«¿Qué debe haber cambiado en tres meses?»", "hide": true, "pause": 0.8 },
+    { "show": "Ahí está por lo que va a pagar.", "hi": "pagar" },
+    { "show": "«Suena a interrogatorio.»", "voice": "Estás pensando:", "neg": "interrogatorio" },
+    { "show": "No, si luego te callas y escuchas.", "hi": "escuchas" },
+    { "show": "Al salir de la reunión, el cliente dice:" },
+    { "show": "«Es el primero que me pregunta qué quiero.»", "hide": true, "pause": 0.9 },
+    { "show": "No preguntes en qué puedes ayudar.", "neg": "ayudar" },
+    { "show": "Pregunta qué ha pasado.", "hi": "pasado" },
+    { "show": "Mándaselo a quien se reúna esta semana.", "hi": "semana" }
+  ]
+}
