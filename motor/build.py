@@ -46,6 +46,8 @@ html,body{{margin:0;background:#222}} #cv{{width:540px;height:960px;display:bloc
 <script>var module={{exports:{{}}}},exports=module.exports;</script>
 <script src="{rel}/vendor/three.cjs"></script>
 <script>window.THREE=module.exports;</script>
+<script src="{rel}/vendor/text.js"></script>
+<script>window.FONT_JSON={open(os.path.join(root,"motor","fonts","helvetiker_bold.typeface.json")).read()};</script>
 <script>window.REEL={json.dumps(reel, ensure_ascii=False)};window.TIMING={json.dumps(timing)};</script>
 <script>
 const SHOTS={{actors:{{}},props:[],cam:[],moves:{{}},invert:[]}};

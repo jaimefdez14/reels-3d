@@ -1,0 +1,14 @@
+{
+  "id": "E1",
+  "titulo": "Hoja de escenas (demo del motor)",
+  "proposito": "Demostración de escenarios distintos del motor, sin voz. No es un reel.",
+  "coverT": 1.0,
+  "lines": [
+    { "show": "Pasillo de puertas: el calentamiento.", "hi": "puertas", "pause": 2.2 },
+    { "show": "Atril y público: salta al ponente.", "neg": "ponente", "pause": 2.2 },
+    { "show": "Letras gigantes: las cuatro letras.", "hi": "cuatro letras", "pause": 2.2 },
+    { "show": "Escritorio: el informe de tres líneas.", "hi": "tres líneas", "pause": 2.2 },
+    { "show": "Temporizador: los cinco minutos feos.", "hi": "cinco minutos", "pause": 2.2 },
+    { "show": "Monedas: el precio que no dices.", "neg": "no dices", "pause": 2.2 }
+  ]
+}

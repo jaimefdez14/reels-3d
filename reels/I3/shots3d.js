@@ -12,7 +12,7 @@ SHOTS.cam = [
   { t: L(1), whip: true, dist: 11.5, az: 8, target: [-0.45, 1.9, 0] },                  // latigazo: «cero clientes», el anillo
   { t: L(2), whip: true, az: -18, dist: 10.5 },                                     // «no va del número»
   { t: L(3), whip: true, preset: 'close', az: 30, dist: 10, target: [0, 1.65, 0] },          // oscuro: «¿merece la pena?»
-  { t: L(4), whip: true, preset: 'medium', az: -8 },                                // «dilo tal cual»
+  { t: L(4), whip: true, preset: 'medium', az: -8, target: [-0.35, 1.45, 0] },                                // «dilo tal cual»
   { t: L(5), dist: 10, el: 13, az: -16, target: [-0.3, 2.0, 0], dur: 3.2 },         // la frase: dolly lento
   { t: L(6), whip: true, preset: 'wide', az: 12, el: 24 },                          // la sala
   { t: L(7), whip: true, dist: 11, az: -30, el: 18, target: [0, 2.0, 0] },          // «algunos» → prueba
@@ -22,7 +22,7 @@ SHOTS.cam = [
   { t: L(11), dist: 10, az: 14, el: 12, dur: 2.2 },                                 // la pregunta
   { t: L(12), whip: true, preset: 'wide', az: -20, el: 26 },                        // los demás esperan
   { t: L(13), whip: true, dist: 10.5, az: -18, target: [-0.3, 1.9, 0] },             // adivina a quién recordarán
-  { t: L(14), whip: true, preset: 'close', az: -30, target: [-0.2, 1.75, 0.1] },     // oscuro: objeción
+  { t: L(14), whip: true, preset: 'close', az: -30, dist: 9.5, target: [-0.2, 1.4, 0.1] },     // oscuro: objeción
   { t: L(15), dist: 9.2, az: -22, dur: 1.2 },                                       // bien, eres nuevo
   { t: L(16), whip: true, preset: 'medium', az: 6 },                                // ayudan / examinan
   { t: L(17), whip: true, az: 26, dist: 10.5 },                                     // no estás vendiendo
@@ -43,7 +43,7 @@ SHOTS.props = [
   // oscuro: ellos deciden
   { id: 'deciden', type: 'thought', text: '¿Merece la pena hablar con este?', w: 600, over: 'el', dx: -0.2, t0: L(3), t1: L(4) - 0.08 },
   // dilo tal cual: el anillo vuelve, amarillo, y la frase
-  { id: 'cero2', type: 'ring', r: 0.75, tube: 0.09, around: 'yo', y: 1.0, front: 1.4, t0: L(4, 1) - 0.05, draw: L(4, 1), t1: L(6) - 0.05 },
+  { id: 'cero2', type: 'ring', r: 0.62, tube: 0.08, around: 'yo', y: 1.0, front: 0.6, t0: L(4, 1) - 0.05, draw: L(4, 1), t1: L(6) - 0.05 },
   { id: 'frase', type: 'bubble', text: 'Cero. Busco el primero. Por eso estoy aquí.', w: 760, serif: true, over: 'yo', dx: 0.6, t0: L(5) - 0.05, t1: L(6) - 0.05, h: 1.1, reveal: 5 },
   // ahora piensan a quién conocen: líneas de «el» a la sala
   { id: 'pres1', type: 'line', from: 'el', to: [3.0, 1.3, -3.4], lift: 0.7, t0: L(6, 2), t1: L(7) - 0.05 },
