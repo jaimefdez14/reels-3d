@@ -24,25 +24,26 @@ SHOTS.moves = {
     { t: L(9) - 0.03, show: false, dur: 0.01 }, { t: L(9) + 0.12, show: true, at: [X.C - 2.0, 0.8], dur: 0.01 },                                    // la tarea
     { t: L(9, 3), at: [X.C - 0.9, 0.8], dur: 1.0 },
     { t: L(10, 1), arm: 70, phone: true, dur: 0.35 }, { t: L(10, 4), head: [20, 8], dur: 0.4 }, { t: L(11) - 0.3, head: [0, 0], dur: 0.2 },
-    { t: L(11) - 0.03, show: false, dur: 0.01 }, { t: L(11) + 0.6, show: true, at: [X.D - 1.6, 0.9], arm: 0, phone: false, dur: 0.01 },            // la puerta
+    { t: L(11) - 0.03, show: false, dur: 0.01 }, { t: L(11) + 0.3, show: true, at: [X.D - 1.6, 0.9], arm: 0, phone: false, dur: 0.01 },            // la puerta
     { t: L(11, 5), head: [25, 0], dur: 0.4 }, { t: L(12), head: [0, 0], dur: 0.3 },
     { t: L(12, 1), at: [X.E - 0.5, 0.9], dur: 1.5, ease: 'linear' },                         // casi nadie para: sigue andando
     { t: L(12, 2), glow: true, dur: 0.01 }, { t: L(13) - 0.05, glow: false, dur: 0.01 },
     { t: L(13, 2), head: [0, 14], dur: 0.4 }, { t: L(14), head: [0, 0], dur: 0.3 },
     { t: L(14, 2), hop: 0.4, arm: 120, dur: 0.3 }, { t: L(14, 2) + 0.5, arm: 0, dur: 0.4 },
-    { t: L(15, 1), at: [X.E + 3.5, 0.9], dur: 1.6, ease: 'linear' },
-    { t: L(16) + 0.1, at: [X.F - 0.75, 0.8], dur: 0.01 },                                    // la semana
-    { t: L(16, 3), head: [-25, 0], dur: 0.4 }, { t: L(17), head: [0, 0], dur: 0.3 }, { t: L(17, 2), hop: 0.4 }, { t: L(18, 3), head: [0, 16], dur: 0.4 }, { t: L(19), head: [0, 0], dur: 0.3 },
-    { t: L(19) - 0.03, show: false, dur: 0.01 }, { t: L(19) + 0.6, show: true, at: [X.G - 1.2, 0.8], dur: 0.01 },                                    // final
-    { t: L(20, 1), arm: 125, glow: true, dur: 0.35 }, { t: L(21), glow: false, dur: 0.01 }, { t: L(20, 1) + 0.7, arm: 0, dur: 0.4 },
-    { t: L(21, 0), at: [X.G + 0.5, 0.9], rot: 70, dur: 1.0 }, { t: L(21, 0) + 1.0, rot: 25, dur: 0.4 },
+    { t: L(16, 1), at: [X.E + 3.5, 0.9], dur: 1.6, ease: 'linear' },
+    { t: L(17) + 0.1, at: [X.F - 0.75, 0.8], dur: 0.01 },                                    // la semana
+    { t: L(16, 4), head: [15, 0], dur: 0.4 }, { t: L(16, 6), head: [0, 0], dur: 0.4 },
+    { t: L(17, 3), head: [-25, 0], dur: 0.4 }, { t: L(18), head: [0, 0], dur: 0.3 }, { t: L(18, 2), hop: 0.4 }, { t: L(18, 5), head: [12, 6], dur: 0.4 }, { t: L(19, 3), head: [0, 16], dur: 0.4 }, { t: L(20), head: [0, 0], dur: 0.3 },
+    { t: L(20) - 0.03, show: false, dur: 0.01 }, { t: L(20) + 0.3, show: true, at: [X.G - 1.2, 0.8], dur: 0.01 },                                    // final
+    { t: L(21, 1), arm: 125, glow: true, dur: 0.35 }, { t: L(22), glow: false, dur: 0.01 }, { t: L(21, 1) + 0.7, arm: 0, dur: 0.4 },
+    { t: L(22, 0), at: [X.G + 0.5, 0.9], rot: 70, dur: 1.0 }, { t: L(22, 0) + 1.0, rot: 25, dur: 0.4 },
   ],
-  gente: [{ t: L(13) - 0.05, show: true, dur: 0.01 }, { t: L(16) - 0.05, show: false, dur: 0.01 }],
+  gente: [{ t: L(13) - 0.05, show: true, dur: 0.01 }, { t: L(17) - 0.05, show: false, dur: 0.01 }],
   genteB: [{ t: L(6) + 0.1, show: true, dur: 0.01 }, { t: L(9) + 0.3, show: false, dur: 0.01 }],
-  genteG: [{ t: L(19) + 0.1, show: true, dur: 0.01 }],
+  genteG: [{ t: L(20) + 0.1, show: true, dur: 0.01 }],
   genteC: [{ t: L(9) + 0.3, show: true, dur: 0.01 }, { t: L(11) + 0.3, show: false, dur: 0.01 }],
-  genteF: [{ t: L(16) + 0.1, show: true, dur: 0.01 }, { t: L(19) + 0.1, show: false, dur: 0.01 }],
-  amigo: [{ t: L(21) + 1.55, show: true, dur: 0.01 }, { t: L(21, 4), glow: true, dur: 0.01 }],
+  genteF: [{ t: L(17) + 0.1, show: true, dur: 0.01 }, { t: L(20) + 0.1, show: false, dur: 0.01 }],
+  amigo: [{ t: L(22) + 1.55, show: true, dur: 0.01 }, { t: L(22, 4), glow: true, dur: 0.01 }],
 };
 SHOTS.cam = [
   { t: 0, dist: 8.8, el: 12, az: -12, target: [0.3, 0.9, 0], dur: 0.01, fit: false },
@@ -59,18 +60,18 @@ SHOTS.cam = [
   { t: L(9), dist: 8.8, el: 10, az: -16, target: [X.C - 1.5, 1.3, 0.2], dur: 0.4, fit: false }, // travelling a la tarea
   { t: L(9, 3), dist: 7.9, az: 8, target: [X.C - 0.6, 1.3, 0.2], dur: 1.2, fit: false },
   { t: L(10, 1), dist: 7.4, az: 24, target: [X.C - 0.6, 1.35, 0.4], dur: 1.6, fit: false },
-  { t: L(11), dist: 8.8, el: 9, az: -20, target: [X.D - 0.8, 1.4, 0.2], dur: 0.9, fit: false }, // travelling a la puerta
+  { t: L(11), dist: 8.8, el: 9, az: -20, target: [X.D - 0.8, 1.4, 0.2], dur: 0.5, fit: false }, // travelling a la puerta
   { t: L(12, 1), dist: 8.8, el: 8, az: 30, target: [X.E - 0.6, 1.4, 0.6], dur: 1.5, ease: 'linear', fit: false }, // sigue andando
   { t: L(13) - 0.05, dist: 8.8, el: 14, az: -20, target: [X.E - 0.5, 1.2, 0.9], dur: 0.01, fit: false }, // oscuro: cerca
   { t: L(13) + 0.05, dist: 6.9, az: -14, dur: 2.2, fit: false },
   { t: L(14), dist: 8.4, el: 10, az: 6, target: [X.E - 0.3, 1.5, 0.9], dur: 0.7, fit: false },
-  { t: L(15, 1), dist: 8.4, el: 9, az: -26, target: [X.E + 3.4, 1.4, 0.9], dur: 1.6, ease: 'linear', fit: false },
-  { t: L(16), whip: true, dist: 8.0, el: 10, az: 18, target: [X.F - 0.35, 1.5, 0.2], fit: false }, // latigazo al viernes
-  { t: L(16) + 0.4, dist: 7.7, az: 4, dur: 2.4, fit: false },
-  { t: L(17, 2), dist: 8.6, az: -10, dur: 2.0, fit: false },
-  { t: L(19), dist: 8.8, el: 9, az: -14, target: [X.G - 0.6, 1.45, 0.3], dur: 0.9, fit: false }, // travelling al final
-  { t: L(20), dist: 8.2, az: 12, dur: 1.8, fit: false },
-  { t: L(21), dist: 13.8, el: 12, az: 6, target: [X.G + 1.85, 1.0, 0.3], dur: 1.6, fit: false }, // pull-back: el amigo
+  { t: L(16, 1), dist: 8.4, el: 9, az: -26, target: [X.E + 3.4, 1.4, 0.9], dur: 1.6, ease: 'linear', fit: false },
+  { t: L(17), whip: true, dist: 8.0, el: 10, az: 18, target: [X.F - 0.35, 1.5, 0.2], fit: false }, // latigazo al viernes
+  { t: L(17) + 0.4, dist: 7.7, az: 4, dur: 2.4, fit: false },
+  { t: L(18, 2), dist: 8.6, az: -10, dur: 2.0, fit: false },
+  { t: L(20), dist: 8.8, el: 9, az: -14, target: [X.G - 0.6, 1.45, 0.3], dur: 0.5, fit: false }, // travelling al final
+  { t: L(21), dist: 8.2, az: 12, dur: 1.8, fit: false },
+  { t: L(22), dist: 13.8, el: 12, az: 6, target: [X.G + 1.85, 1.0, 0.3], dur: 1.6, fit: false }, // pull-back: el amigo
 ];
 SHOTS.invert = [{ t: L(5) - 0.05, end: L(6) - 0.05 }, { t: L(13) - 0.05, end: L(14) - 0.05 }];
 SHOTS.props = [
@@ -98,14 +99,18 @@ SHOTS.props = [
   { id: 'puertas', type: 'doors', n: 4, at: [X.D + 3.4 * 1.5 - 1.0, 0, -1.2], t0: L(9), inDur: 0.01, inEase: 'linear', t1: L(13) - 0.3 },
   // E · objeción
   { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(13, 1), t1: L(14) - 0.08 },
-  { id: 'pila2', type: 'battery', over: 'yo', px: 120, t0: L(14, 1), t1: L(16) - 0.06, levels: [[L(14, 2), 1, 0.6]] },
+  { id: 'pila2', type: 'battery', over: 'yo', px: 120, t0: L(14, 1), t1: L(15) - 0.06, levels: [[L(14, 2), 1, 0.6]] },
+  // giro: casi todos lo usan un día y lo olvidan (calendario que se tacha) / el truco: cada mañana (contador de cinco días)
+  { id: 'cal', type: 'sticker', icon: 'cal', over: 'yo', dx: -0.4, px: 150, t0: L(15, 2), t1: L(16) - 0.06 },
+  { id: 'olvido', type: 'cross', over: 'yo', dx: 0.45, px: 130, t0: L(15, 7), t1: L(16) - 0.06 },
+  { id: 'dias', type: 'bars', n: 5, over: 'yo', px: 130, t0: L(16, 1), fillFrom: L(16, 3), each: 0.3, t1: L(17) - 0.06 },
   // F · la semana
-  { id: 'recibo', type: 'receipt', at: [X.F + 0.75, 1.7, -0.2], px: 620, t0: L(16, 1), t1: L(19) - 0.06, checkAt: [0, 1, 2, 3, 4].map(i => L(17, 0) + 0.05 + i * 0.26) },
-  { id: 'pila3', type: 'battery', over: 'yo', dx: -0.5, px: 110, t0: L(18, 3), t1: L(19) - 0.06, levels: [[0, 0.05, 0.01]] },
+  { id: 'recibo', type: 'receipt', at: [X.F + 0.75, 1.7, -0.2], px: 620, t0: L(17, 1), t1: L(20) - 0.06, checkAt: [0, 1, 2, 3, 4].map(i => L(18, 0) + 0.05 + i * 0.26) },
+  { id: 'pila3', type: 'battery', over: 'yo', dx: -0.5, px: 110, t0: L(19, 3), t1: L(20) - 0.06, levels: [[0, 0.05, 0.01]] },
   // G · final
-  { id: 'pila4', type: 'battery', over: 'yo', px: 120, t0: L(19, 1), t1: L(20) - 0.06, levels: [[0, 0.05, 0.01]] },
-  { id: 'cruz', type: 'cross', over: 'yo', dx: 0.0, px: 140, t0: L(19, 2), t1: L(20) - 0.06 },
-  { id: 'reloj5c', type: 'timer', text: '5', r: 0.9, px: 420, at: [X.G + 0.6, 1.7, -0.2], t0: L(20, 2), fillFrom: L(20, 2), dur: 0.9, t1: L(21) - 0.06 },
-  { id: 'sofa2', type: 'sofa', at: [X.G + 2.6, 0, 0], t0: L(19), inDur: 0.01, inEase: 'linear' },
-  { id: 'envio', type: 'arrow', from: 'yo', to: 'amigo', lift: 0.9, t0: L(21, 2), drawDur: 0.8 },
+  { id: 'pila4', type: 'battery', over: 'yo', px: 120, t0: L(20, 1), t1: L(21) - 0.06, levels: [[0, 0.05, 0.01]] },
+  { id: 'cruz', type: 'cross', over: 'yo', dx: 0.0, px: 140, t0: L(20, 2), t1: L(21) - 0.06 },
+  { id: 'reloj5c', type: 'timer', text: '5', r: 0.9, px: 420, at: [X.G + 0.6, 1.7, -0.2], t0: L(21, 2), fillFrom: L(21, 2), dur: 0.9, t1: L(22) - 0.06 },
+  { id: 'sofa2', type: 'sofa', at: [X.G + 2.6, 0, 0], t0: L(20), inDur: 0.01, inEase: 'linear' },
+  { id: 'envio', type: 'arrow', from: 'yo', to: 'amigo', lift: 0.9, t0: L(22, 2), drawDur: 0.8 },
 ];

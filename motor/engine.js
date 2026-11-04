@@ -294,7 +294,7 @@ function drawCaptions(x, t, inv) {
 let renderer, scene, camera, glCanvas, cv, ctx, actors = {}, props = [], floorLight, floorDark, ambient, sun, lastFrame = null;
 function init() {
   glCanvas = document.createElement('canvas'); glCanvas.width = W; glCanvas.height = H;
-  renderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: true, preserveDrawingBuffer: true, alpha: false }); renderer.setSize(W, H, false); renderer.setPixelRatio(1); renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: true, preserveDrawingBuffer: true, alpha: true }); renderer.setSize(W, H, false); renderer.setPixelRatio(1); renderer.outputColorSpace = THREE.SRGBColorSpace;
   scene = new THREE.Scene(); scene.background = new THREE.Color(PAL.bg); scene.fog = new THREE.Fog(PAL.bg, 34, 70); // sin horizonte visible, como la referencia
   camera = new THREE.PerspectiveCamera(30, W / H, 0.1, 200);
   ambient = new THREE.HemisphereLight('#ffffff', '#c9c9cf', 1.9); scene.add(ambient);
@@ -501,6 +501,48 @@ window.variety = function () {
   return { sets: sets.length, maxGap: +gap.toFixed(2), gapAt: +at.toFixed(2) };
 };
 window.occupancy = function (t) { window.seek(t); const c = document.createElement('canvas'); c.width = 180; c.height = 320; const x = c.getContext('2d'); x.drawImage(cv, 0, 0, 180, 320); const d = x.getImageData(0, 78, 180, 218).data; const bg = invertAmount(t) > 0.5 ? [0x34, 0x35, 0x3a] : [0xf5, 0xf5, 0xf5]; let n = 0; for (let i = 0; i < d.length; i += 4) if (Math.max(Math.abs(d[i] - bg[0]), Math.abs(d[i + 1] - bg[1]), Math.abs(d[i + 2] - bg[2])) > 14) n++; return n / (d.length / 4); }; // medido a 180x320, como las tiras de la referencia (mediana 16-36 %)
+
+// ---------- puente a Blender ----------
+// El motor decide la escena; Blender pinta los objetos sólidos con luz real. Tres capas por fotograma:
+// «bg» (fondo y suelo con rejilla, de aquí), «blender» (personajes y objetos, de Blender, con sombras sobre fondo
+// transparente) y «fg» (titulares, bocadillos, iconos, flechas, aros y contornos amarillos, de aquí, tapados por los
+// objetos sólidos donde toca).
+function isOverlayRoot(o) { const u = o.userData || {}; return !!(u.billboard || u.path || u.ring || u.floorring || u.timer || u.bars); }
+function classify(mesh) { // 'world' (va a Blender), 'overlay' (capa fg), 'skip'
+  let o = mesh; while (o) { if (isOverlayRoot(o)) return 'overlay'; if (o === floorLight || o === floorDark) return 'skip'; o = o.parent; }
+  if (mesh.userData.notMask) return 'skip'; // sombras falsas: Blender hace las suyas
+  const m = mesh.material; if (m && m.side === THREE.BackSide) return m.color && m.color.getHexString() === PAL.yellow.slice(1).toLowerCase() ? 'overlay' : 'skip'; // glow amarillo / contorno negro (en Blender, Freestyle)
+  return 'world';
+}
+let _worldMeshes = null;
+function worldMeshes() { if (_worldMeshes) return _worldMeshes; _worldMeshes = []; scene.traverse(o => { if (o.isMesh && classify(o) === 'world') _worldMeshes.push(o); }); return _worldMeshes; }
+function heroOf(o) { while (o) { for (const [id, a] of Object.entries(actors)) if (a === o && a.userData.spec && a.userData.spec.kind === 'hero') return true; o = o.parent; } return false; }
+window.exportScene = function () {
+  const out = []; for (const m of worldMeshes()) { const g = m.geometry.index ? m.geometry : m.geometry; const pos = Array.from(g.attributes.position.array); const nor = g.attributes.normal ? Array.from(g.attributes.normal.array) : null; const idx = g.index ? Array.from(g.index.array) : null; const uv = g.attributes.uv ? Array.from(g.attributes.uv.array) : null;
+    const mat = m.material; let map = null; if (mat.map && mat.map.image && mat.map.image.toDataURL) map = mat.map.image.toDataURL('image/png');
+    out.push({ name: m.uuid, pos, nor, idx, uv, color: '#' + mat.color.getHexString(), basic: mat.type === 'MeshBasicMaterial', map, opacity: mat.opacity ?? 1, transparent: !!mat.transparent, hero: heroOf(m) }); }
+  return out;
+};
+// por fotograma: cámara (posición, cuaternión, fov), inversión de fondo y, por malla del mundo, visible + matriz 4x4
+window.frameState = function (t) { window.seek(t); scene.updateMatrixWorld(true); const cam = [...camera.position.toArray(), ...camera.quaternion.toArray(), camera.fov]; const ms = worldMeshes().map(m => { let v = m.visible; let o = m.parent; while (v && o) { v = o.visible; o = o.parent; } if (v && m.material && m.material.opacity === 0) v = false; return [v ? 1 : 0, ...m.matrixWorld.elements]; }); return { cam, inv: invertAmount(t), ms }; };
+// capas «bg» y «fg» (PNG con transparencia para fg)
+window.seekLayer = function (t, layer) {
+  window.seek(t); const inv = invertAmount(t); const all = []; scene.traverse(o => { if (o.isMesh || o.isLine || o.isPoints) all.push(o); });
+  const saved = all.map(o => [o, o.visible]); const bgSaved = scene.background;
+  if (layer === 'bg') { all.forEach(o => { if (o !== floorLight && o !== floorDark) o.visible = false; }); renderer.render(scene, camera); ctx.clearRect(0, 0, W, H); ctx.drawImage(glCanvas, 0, 0); }
+  else {
+    floorLight.visible = floorDark.visible = false; scene.background = null; renderer.setClearColor(0x000000, 0); renderer.autoClear = false; renderer.clear(true, true, true);
+    const kind = new Map(all.map(o => [o, classify(o)]));
+    // 1) los sólidos solo escriben profundidad (tapan lo que va detrás); 2) lo de la capa fg, en color
+    const depthMat = new THREE.MeshBasicMaterial({ colorWrite: false });
+    all.forEach(o => { if (kind.get(o) !== 'world') o.visible = false; }); scene.overrideMaterial = depthMat; renderer.render(scene, camera); scene.overrideMaterial = null;
+    saved.forEach(([o, v]) => { o.visible = v && kind.get(o) === 'overlay'; }); floorLight.visible = floorDark.visible = false; renderer.render(scene, camera);
+    renderer.autoClear = true; renderer.setClearColor(0x000000, 1);
+    ctx.clearRect(0, 0, W, H); ctx.drawImage(glCanvas, 0, 0); drawCaptions(ctx, t, inv > 0.5);
+  }
+  saved.forEach(([o, v]) => { o.visible = v; }); scene.background = bgSaved;
+  return cv.toDataURL('image/png');
+};
 window.DURATION = TIMING.duration;
 window.ready = (async () => { await Promise.all([document.fonts.load('900 100px NotoCond'), document.fonts.load('500 100px NotoCondT'), document.fonts.load('400 30px Montserrat'), document.fonts.load('600 30px Montserrat')]); init(); window.seek(0); return true; })();
 })();

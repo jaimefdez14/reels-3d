@@ -25,15 +25,15 @@
    "hi": "empezado"
   },
   {
-   "show": "Si las esperas, no empiezas nunca.",
-   "neg": "nunca"
+   "show": "Si las esperas, lo pendiente crece cada día.",
+   "neg": "crece"
   },
   {
    "show": "Prueba la regla de los cinco minutos.",
    "hi": "cinco minutos"
   },
   {
-   "show": "Pon un temporizador de cinco minutos.",
+   "show": "Pon un temporizador.",
    "hi": "temporizador"
   },
   {
@@ -46,7 +46,7 @@
    "hi": "pereza"
   },
   {
-   "show": "La llamada que llevas días evitando.",
+   "show": "Por ejemplo, esa llamada que evitas.",
    "hi": "llamada"
   },
   {
@@ -54,8 +54,8 @@
    "hi": "parar"
   },
   {
-   "show": "Y casi nadie para.",
-   "hi": "nadie"
+   "show": "Y lo normal es que sigas.",
+   "hi": "sigas"
   },
   {
    "show": "«Cinco minutos no sirven para nada.»",
@@ -67,19 +67,23 @@
    "hi": "arrancar"
   },
   {
-   "show": "Y una vez arrancas, sigues.",
-   "hi": "sigues"
+   "show": "Casi todos la usan un día y la olvidan.",
+   "neg": "olvidan"
   },
   {
-   "show": "El viernes repasas tu semana.",
+   "show": "El truco es repetirla cada mañana.",
+   "hi": "cada mañana"
+  },
+  {
+   "show": "Llega el viernes y repasas tu semana.",
    "hi": "viernes"
   },
   {
-   "show": "Cinco tareas hechas.",
-   "hi": "hechas"
+   "show": "Has hecho cinco tareas que evitabas.",
+   "hi": "hecho"
   },
   {
-   "show": "Ninguna empezó con ganas.",
+   "show": "Y ninguna empezó con ganas.",
    "neg": "ganas"
   },
   {
@@ -98,6 +102,8 @@
  "revision_castellano": {
   "fecha": "2026-11-04",
   "lector": "espectador de Madrid sin contexto (lectura en frío + corrector)",
-  "cambios": "1, 2, 4: «vienen», «luego»; 5: «si las esperas, no empiezas nunca» (antes, relleno); 6: «la regla de los cinco minutos» («minutos feos» sonaba a traducción); 9: «lo que más pereza te da» («la parte más fea», calco de ugly); 10: oración completa; 12: «Y casi nadie para»; 14-15: respuesta a la objeción concreta («arrancar»); 16: «repasas»"
+  "cambios": "1, 2, 4: «vienen», «luego»; 5: «si las esperas, no empiezas nunca» (antes, relleno); 6: «la regla de los cinco minutos» («minutos feos» sonaba a traducción); 9: «lo que más pereza te da» («la parte más fea», calco de ugly); 10: oración completa; 12: «Y casi nadie para»; 14-15: respuesta a la objeción concreta («arrancar»); 16: «repasas»",
+  "cambios_2": "04-11 noche, revisión final (lector en frío + guionista + prueba de comprensión): 5 coste concreto; 7 «Pon un temporizador.» (Jaime); 10 oración completa; 12 segunda persona; 15-16 giro nuevo; 17-19 recompensa con puente y emoción",
+  "cambios_3": "segunda pasada: 5 «lo pendiente» (antecedente); 12 sin exagerar; 15-16 concordancia con «la regla»; 18 oración completa"
  }
 }
