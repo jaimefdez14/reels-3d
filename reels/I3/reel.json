@@ -1,88 +1,28 @@
 {
   "id": "I3",
-  "titulo": "Decir «cero» lo cambia todo",
-  "idea": "I3 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026)",
+  "titulo": "Cero clientes",
+  "idea": "I3 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026). Versión 3 (04-11): sigue pulso a pulso el reel de referencia R3 («Zero clients»), como pidió Jaime.",
   "coverT": 1.4,
-  "revision_castellano": {
-    "fecha": "2026-11-04",
-    "lector": "espectador de Madrid sin contexto",
-    "corrector": "corrector de Madrid sin contexto",
-    "cambios": "1: nombrar «clientes»; 2 y 18: «examinar» → «mirar con lupa»; 5: pregunta con rótulo; 8: «a quién te pueden presentar»; 9: fuera «el giro del cero» (calco); 11: fuera «les da un papel» (calco); 14: «tu primer cliente»; 19: frase completa; 20: «lo tuyo» en vez de «eso»; 22: frase que se entiende sola"
-  },
   "lines": [
-    {
-      "show": "Si aún no tienes clientes, dilo.",
-      "hi": "dilo"
-    },
-    {
-      "show": "En un evento: «¿Cuántos clientes tienes?»"
-    },
-    {
-      "show": "Si dices «algunos», te miran con lupa.",
-      "neg": "lupa"
-    },
-    {
-      "show": "Si dices «cero», te ayudan.",
-      "hi": "ayudan"
-    },
-    {
-      "show": "Dilo sin rodeos.",
-      "hi": "sin rodeos"
-    },
-    {
-      "show": "«Cero. Busco el primero. Por eso estoy aquí.»",
-      "hide": true,
-      "pause": 0.9
-    },
-    {
-      "show": "Ahora piensan a quién te pueden presentar.",
-      "hi": "presentar"
-    },
-    {
-      "show": "No vendas. Pregunta.",
-      "hi": "Pregunta"
-    },
-    {
-      "show": "«¿Cómo conseguiste tu primer cliente?»",
-      "hide": true,
-      "pause": 0.8
-    },
-    {
-      "show": "«Parezco un novato.»",
-      "voice": "Estás pensando:",
-      "neg": "novato"
-    },
-    {
-      "show": "Lo eres."
-    },
-    {
-      "show": "A los novatos se les ayuda.",
-      "hi": "ayuda"
-    },
-    {
-      "show": "A los que fingen se les mira con lupa.",
-      "neg": "lupa"
-    },
-    {
-      "show": "Al día siguiente te llega un correo."
-    },
-    {
-      "show": "«Te presento a alguien que necesita lo tuyo.»",
-      "hide": true,
-      "pause": 0.9
-    },
-    {
-      "show": "El cero nunca fue el problema.",
-      "neg": "problema"
-    },
-    {
-      "show": "El problema era esconderlo.",
-      "hi": "esconderlo"
-    },
-    {
-      "show": "Envíaselo a quien esté empezando.",
-      "hi": "empezando"
-    }
-  ],
-  "recorte": "04-11-2026, Jaime: «es demasiado larga». Fuera: «lo importante no es el número», «ellos se preguntan», «decir cero lo cambia todo», «algunos te pone a prueba / el primero les invita» y «lo que digas después decide si te recuerdan»: repetían lo dicho en 2-3 o eran explicación sin escena. De 24 frases y 62 s a 18 frases."
+    { "show": "Esta frase hace que se inclinen hacia ti.", "hi": "inclinen" },
+    { "show": "«Cero clientes.»", "voice": "Cuando dices:", "neg": "Cero" },
+    { "show": "No va del número.", "neg": "número" },
+    { "show": "«¿Merece la pena hablar con este?»", "voice": "Están decidiendo:" },
+    { "show": "Dilo tal cual.", "hi": "tal cual" },
+    { "show": "«Cero. Busco el primero. Por eso estoy aquí.»", "hide": true, "pause": 0.9 },
+    { "show": "Ahora piensan a quién conocen.", "hi": "quién conocen" },
+    { "show": "«Algunos» → te ponen a prueba.", "neg": "prueba" },
+    { "show": "«El primero» → pueden ayudarte.", "hi": "ayudarte" },
+    { "show": "Lo que digas después decide si te recuerdan.", "hi": "recuerdan" },
+    { "show": "No vendas. Pregunta.", "hi": "Pregunta" },
+    { "show": "«¿Cómo conseguiste el primero?»", "hide": true, "pause": 0.8 },
+    { "show": "Los demás esperan su turno para hablar.", "neg": "esperan" },
+    { "show": "Adivina a quién recordarán.", "hi": "recordarán" },
+    { "show": "«Cero me hace parecer nuevo.»", "voice": "Estás pensando:", "neg": "nuevo" },
+    { "show": "Bien. Eres nuevo." },
+    { "show": "Al nuevo lo ayudan. Al que finge lo examinan.", "neg": "finge" },
+    { "show": "No estás vendiendo. Estás preguntando.", "hi": "preguntando" },
+    { "show": "El cero nunca fue el problema.", "neg": "problema" },
+    { "show": "Esconderlo, sí.", "hi": "Esconderlo" }
+  ]
 }

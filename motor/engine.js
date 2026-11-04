@@ -27,9 +27,9 @@ window.lineEnd = function (line) { const L = TIMING.words[line]; return L[L.leng
 
 // ---------- estado de cámara (esférico) ----------
 const CAM_PRESETS = {
-  wide: { dist: 14, el: 26, az: 0, target: [0, 1.7, -1] },
-  medium: { dist: 7.4, el: 17, az: 0, target: [0, 1.45, 0] },
-  close: { dist: 4.4, el: 10, az: 0, target: [0, 1.65, 0] },
+  wide: { dist: 20, el: 24, az: 0, target: [0, 2.4, -1] },
+  medium: { dist: 12, el: 16, az: 0, target: [0, 2.1, 0] },
+  close: { dist: 6.5, el: 10, az: 0, target: [0, 1.9, 0] },
 };
 function resolveCam(spec, prev) {
   const base = spec.preset ? CAM_PRESETS[spec.preset] : prev;
@@ -40,7 +40,7 @@ function camState(t) {
   for (const k of kfs) {
     const target = resolveCam(k, s);
     if (t < k.t) break;
-    const p = tw(t, k.t, k.dur ?? 1.5, k.ease ?? 'inout');
+    const p = tw(t, k.t, k.dur ?? (k.whip ? 0.28 : 1.5), k.ease ?? 'inout');
     prevS = s;
     s = { dist: lerp(prevS.dist, target.dist, p), el: lerp(prevS.el, target.el, p), az: lerp(prevS.az, target.az, p), target: lerpV(prevS.target, target.target, p), fov: lerp(prevS.fov, target.fov, p) };
     if (p >= 1) s = target;
@@ -217,7 +217,7 @@ function actorState(id, t) { // keyframes por actor: SHOTS.moves[id] = [{t, dur,
   for (const k of kfs) { if (t < k.t) break; const p = tw(t, k.t, k.dur ?? 1, k.ease ?? 'inout'); const prev = s; const target = { at: k.at ?? prev.at, rot: k.rot ?? prev.rot, head: k.head ?? prev.head, show: k.show ?? prev.show }; s = { at: lerpV(prev.at, target.at, p), rot: lerp(prev.rot, target.rot, p), head: lerpV(prev.head, target.head, p), show: target.show }; }
   return s;
 }
-function invertAmount(t) { let v = 0; for (const iv of (SHOTS.invert || [])) { v = Math.max(v, tw(t, iv.t, 0.2, 'inout') - tw(t, iv.end, 0.2, 'inout')); } return clamp(v, 0, 1); }
+function invertAmount(t) { let v = 0; for (const iv of (SHOTS.invert || [])) { v = Math.max(v, tw(t, iv.t, 0.06, 'linear') - tw(t, iv.end, 0.06, 'linear')); } return clamp(v, 0, 1); }
 
 // --- geometría de pantalla ---
 const _v = new THREE.Vector3();
@@ -233,12 +233,14 @@ function placeBillboards(t, capRect) {
   // coloca cada billboard visible: sobre la cabeza de su personaje (over), dentro de la pantalla, fuera del titular y sin pisar otro objeto
   const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion), right = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion);
   const placed = []; const heads = Object.keys(actors).filter(id => actors[id].userData.head && actors[id].visible).map(id => { const [sx, sy] = toScreen(headWorld(id)); const r = headRadiusPx(id) * 1.15; return { id, x: sx - r, y: sy - r, w: 2 * r, h: 2 * r }; });
+  const bodies = Object.keys(actors).filter(id => actors[id].userData.head && actors[id].visible).map(id => { const a = actors[id]; const pts = [[-0.3, 0, 0.3], [0.3, 0, 0.3], [-0.3, 0, -0.3], [0.3, 0, -0.3], [0, a.userData.h * 1.02, 0]].map(([x, y, z]) => toScreen(new THREE.Vector3(x, y, z).add(a.position))); const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]); const hr = headRadiusPx(id); return { id, x: Math.min(...xs) - hr * 0.2, y: Math.min(...ys) - hr * 0.3, w: Math.max(...xs) - Math.min(...xs) + hr * 0.4, h: Math.max(...ys) - Math.min(...ys) + hr * 0.3 }; });
   const zoneTop = (capRect ? capRect.y + capRect.h : CAPTION_TOP - 60) + 24, margin = 40;
   for (const m of props) {
     if (!m.visible || !m.userData.billboard) continue; const p = m.userData.spec;
     let pos; if (p.over) { const h = headWorld(p.over); const [sx, sy] = toScreen(h); const wpp = worldPerPixel(h); const rpx = headRadiusPx(p.over); pos = h.clone().add(up.clone().multiplyScalar((rpx + 50) * wpp + m.userData.size[1] * (p.scale ?? 1) / 2)).add(right.clone().multiplyScalar((p.dx ?? 0))); }
     else pos = new THREE.Vector3(...(p.at ?? [0, 1.8, 0]));
     m.position.copy(pos); m.quaternion.copy(camera.quaternion);
+    { const wpp0 = worldPerPixel(m.position); const k = ((p.px ?? m.userData.size[1] * 480) * wpp0 / m.userData.size[1]); m.scale.multiplyScalar(k); }
     const rect = () => { const wpp = worldPerPixel(m.position); const [cx, cy] = toScreen(m.position); const w = m.userData.size[0] * m.scale.x / wpp, h = m.userData.size[1] * m.scale.y / wpp; return { x: cx - w / 2, y: cy - h / 2, w, h }; };
     const shift = (dx, dy) => { const wpp = worldPerPixel(m.position); m.position.add(right.clone().multiplyScalar(dx * wpp)).add(up.clone().multiplyScalar(-dy * wpp)); };
     let r = rect();
@@ -263,7 +265,7 @@ function placeBillboards(t, capRect) {
     clampX();
     placed.push({ m, rect: r, id: p.id });
   }
-  return { placed, heads };
+  return { placed, heads, bodies };
 }
 function buildPath(m) {
   const pd = m.userData.path; const a = resolvePoint(pd.from, 1), b = resolvePoint(pd.to, -1);
@@ -306,7 +308,7 @@ window.seek = function (t) {
   for (const m of props) if (m.visible && m.userData.path) { m.userData.draw = tw(t, m.userData.spec.t0, m.userData.spec.drawDur ?? 0.6, 'out'); m.userData.dotP = ((t - m.userData.spec.t0) * 0.6) % 1; m.scale.setScalar(1); buildPath(m); }
   renderer.render(scene, camera);
   ctx.drawImage(glCanvas, 0, 0); drawCaptions(ctx, t, inv > 0.5);
-  lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect })), heads: lay.heads };
+  lastFrame = { t, caption: capRect, props: lay.placed.map(q => ({ id: q.id || q.m.userData.spec.type, rect: q.rect })), heads: lay.heads, bodies: lay.bodies, camDist: cs.dist };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
