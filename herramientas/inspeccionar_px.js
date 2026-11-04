@@ -1,6 +1,6 @@
 // Inspector de píxeles (regla 10): node herramientas/inspeccionar_px.js reels/ID [paso=0.5]
 // Silueta de cada objeto por separado + render conjunto con un color por objeto (quién queda delante). Avisa de:
-// personaje principal, bocadillo o anillo cortado por el borde; algo DELANTE de un personaje principal (bocadillo, mesa,
+// personaje principal, bocadillo, anillo u objeto clave (cifra, letras, recibo, temporizador o `key: true`) cortado por el borde; algo DELANTE de un personaje principal (bocadillo, mesa,
 // multitud, flecha sobre la cara); bocadillo tapado por algo; más de 2 bocadillos a la vez; titular tapado; bocadillo ilegible.
 const { chromium } = require('playwright'); const path = require('path');
 (async () => {
@@ -17,7 +17,7 @@ const { chromium } = require('playwright'); const path = require('path');
     const info = Object.fromEntries(f.items.map(i => [i.id, i])); const steady = it => it.age > 0.3 && it.left > 0.3;
     for (const it of f.items) {
       const cut = it.touch.l + it.touch.r + it.touch.b + it.touch.t;
-      if (!f.whip && (main(it.id) || (it.kind === 'billboard' || it.kind === 'ring') && steady(it)) && cut > 2) add('cut' + it.id, `${it.id}: cortado por el borde (${cut} px de contorno fuera)`);
+      if (!f.whip && (main(it.id) || (it.kind === 'billboard' || it.kind === 'ring' || it.key) && steady(it)) && cut > 2) add('cut' + it.id, `${it.id}: cortado por el borde (${cut} px de contorno fuera)`);
       if (it.kind === 'billboard' && steady(it) && it.px < 0.004 * PX) add('small' + it.id, `${it.id}: demasiado pequeño para leerse (${it.px} px)`);
     }
     if (f.objecion && f.textos.length) add('obj' + f.textos[0], `${f.textos[0]}: texto en un bocadillo durante la objeción; la frase va solo en el titular (regla 13)`);

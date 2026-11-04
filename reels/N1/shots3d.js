@@ -80,11 +80,11 @@ SHOTS.props = [
   { id: 'paredF', type: 'wall', w: 7, h: 1.85, at: [X.F, 0, -1.6], t0: L(15), inDur: 0.01, inEase: 'linear', t1: L(19) + 0.6 },
   { id: 'paredG', type: 'wall', w: 9, h: 1.85, at: [X.G + 1.5, 0, -1.6], t0: L(18), inDur: 0.01, inEase: 'linear' },
   // B · el cinco y el temporizador
-  { id: 'cinco', type: 'number', text: '5', size: 2.3, depth: 0.5, yellow: true, at: [X.B + 0.8, 0, -0.6], t0: L(6, 1), inDur: 0.5, t1: L(7, 3) - 0.1 },
+  { id: 'cinco', type: 'number', text: '5', size: 2.0, depth: 0.5, yellow: true, at: [X.B + 0.45, 0, -0.7], t0: L(6, 1), inDur: 0.5, t1: L(7, 3) - 0.1 },
   { id: 'reloj5', type: 'timer', text: '5', r: 0.9, px: 470, at: [X.B + 1.0, 1.6, -0.2], t0: L(7, 3), fillFrom: L(8, 0), dur: L(11, 5) - L(8, 0), t1: L(9) - 0.06 },
   // C · la tarea
-  { id: 'mesa2', type: 'desk', at: [X.C + 0.6, 0, -0.45], t0: L(9) - 0.5, inDur: 0.01, inEase: 'linear', t1: L(11) + 1.2 },
-  { id: 'papeles2', type: 'papers', n: 10, redTop: true, scale: 1.5, at: [X.C + 0.1, 0.99, 0.0], t0: L(9) - 0.5, inDur: 0.01, inEase: 'linear', t1: L(11) + 1.2, left: [[L(10, 4), 9]] },
+  { id: 'mesa2', type: 'desk', at: [X.C + 0.25, 0, -0.45], t0: L(9) - 0.5, inDur: 0.01, inEase: 'linear', t1: L(11) + 1.2 },
+  { id: 'papeles2', type: 'papers', key: true, n: 10, redTop: true, scale: 1.5, at: [X.C - 0.25, 0.99, 0.0], t0: L(9, 5), inDur: 0.4, t1: L(11) + 1.2, left: [[L(10, 4), 9]] },
   { id: 'reloj5b', type: 'timer', text: '5', r: 0.36, over: 'yo', dx: 0.6, px: 150, t0: L(9, 1), fillFrom: L(8, 0), dur: L(11, 5) - L(8, 0), t1: L(12, 1) },
   { id: 'tel', type: 'sticker', icon: 'phone', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(10, 1), t1: L(11) - 0.3 },
   { id: 'ok', type: 'sticker', icon: 'check', yellow: true, over: 'yo', dx: -0.6, px: 130, t0: L(11, 5), t1: L(12, 1) },

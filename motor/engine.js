@@ -453,7 +453,7 @@ function withFlat(objs, colorOf, fn) {
 window.inspectPixels = function (t) {
   window.seek(t); const items = [];
   for (const [id, a] of Object.entries(actors)) if (a.visible) items.push({ obj: a, id: 'actor:' + id, kind: a.userData.head ? 'actor' : 'crowd' });
-  for (const m of props) if (m.visible) { const p = m.userData.spec; const kind = p.type === 'cross' ? 'mark' : (m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid'))); items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind, age: t - (p.t0 ?? 0), left: (p.t1 ?? 1e9) - t }); }
+  for (const m of props) if (m.visible) { const p = m.userData.spec; const kind = p.type === 'cross' ? 'mark' : (m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid'))); items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind, key: !!p.key || ['number', 'letters', 'receipt', 'timer', 'coins'].includes(p.type), age: t - (p.t0 ?? 0), left: (p.t1 ?? 1e9) - t }); }
   // siluetas individuales
   const masks = items.map(it => withFlat([it.obj], () => '#ffffff', buf => { const mask = new Uint8Array(MW * MH); let n = 0; const touch = { l: 0, r: 0, t: 0, b: 0 }; for (let i = 0; i < MW * MH; i++) if (buf[i * 4] > 128) { mask[i] = 1; n++; const x = i % MW, y = MH - 1 - Math.floor(i / MW); if (x === 0) touch.l++; if (x === MW - 1) touch.r++; if (y === 0) touch.t++; if (y === MH - 1) touch.b++; } return { mask, n, touch }; }));
   // quién queda delante: todos a la vez, cada uno con su color (índice en el canal rojo)
@@ -465,7 +465,7 @@ window.inspectPixels = function (t) {
     for (let j = i + 1; j < items.length; j++) { const B = masks[j]; let c = 0, aFront = 0, bFront = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && B.mask[k]) { c++; if (front[k] === i) aFront++; else if (front[k] === j) bFront++; } if (c) pairs.push([items[i].id, items[j].id, c, aFront, bFront]); }
   }
   const act = activeLine(t); const objecion = !!(act && act.L.voice);
-  return { t, whip: lastFrame.whip, objecion, textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
+  return { t, whip: lastFrame.whip, objecion, textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, key: !!it.key, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
