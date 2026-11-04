@@ -11,7 +11,7 @@ SHOTS.cam = [
   { t: 0, dist: 13, el: 9, az: -58, target: [-1.5, 1.5, 0], dur: 0.01 },
   { t: L(0), dist: 12, el: 9, az: -38, target: [3.5, 1.5, 0], dur: 4.5, ease: 'inout' },        // travelling lateral por el pasillo
   { t: E(1), whip: true, dist: 12.5, el: 14, az: 0, target: [-0.7, 1.6, -1.0] },                     // atril y público
-  { t: L(1) + 1.2, dist: 12, el: 11, az: 14, target: [-0.3, 1.5, -1.6], dur: 2.5 },                // dolly al ponente
+  { t: L(1) + 1.2, az: 9, dist: 12, dur: 2.5 },                // dolly al ponente
   { t: E(2), whip: true, dist: 9, el: 6, az: -12, target: [0.2, 1.3, 0] },                       // letras gigantes
   { t: L(2) + 1.0, az: 14, dist: 8, target: [0.8, 1.3, 0], dur: 3.0 },                        // orbit por las letras
   { t: E(3), whip: true, dist: 9.5, el: 10, az: 20, target: [0, 1.3, 0] },                      // escritorio
