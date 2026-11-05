@@ -3,11 +3,11 @@ const L = (i, w = 0) => wt(i, w);
 const X = { A: 0, B: 12, C: 24, D: 36, E: 44, F: 56, G: 68 };
 SHOTS.actors = {
   yo: { kind: 'hero', at: [0.9, 0.05], y: 0.84, tilt: 90, phone: true },
-  genteB: { kind: 'crowd', n: 12, area: [9, 2.2], at: [X.B + 0.3, -2.6], gap: 1.8, show: false },
-  genteG: { kind: 'crowd', n: 14, area: [10, 2.2], at: [X.G + 1.5, -2.5], gap: 1.8, show: false },
+  genteB: { kind: 'crowd', drop: [8, 10, 11], n: 12, area: [9, 2.2], at: [X.B + 0.3, -2.6], gap: 1.8, show: false },
+  genteG: { kind: 'crowd', drop: [8, 11], n: 14, area: [10, 2.2], at: [X.G + 1.5, -2.5], gap: 1.8, show: false },
   genteC: { kind: 'crowd', n: 5, area: [3, 1.0], at: [X.C + 3.2, -0.9], gap: 1.6, show: false },
-  genteF: { kind: 'crowd', n: 12, area: [9, 2.2], at: [X.F + 0.3, -2.6], gap: 1.8, show: false },
-  gente: { kind: 'crowd', n: 16, area: [9, 1.4], at: [X.E + 0.5, -1.6], gap: 1.8, show: false },
+  genteF: { kind: 'crowd', drop: [10], n: 12, area: [9, 2.2], at: [X.F + 0.3, -2.6], gap: 1.8, show: false },
+  gente: { kind: 'crowd', drop: [0, 1, 2, 3, 7, 9, 10], n: 16, area: [9, 1.4], at: [X.E + 0.5, -1.6], gap: 1.8, show: false },
   amigo: { kind: 'other', at: [X.G + 3.5, 0.05], y: 0.84, tilt: 90, show: false, face: 'flat' },
 };
 SHOTS.moves = {
@@ -30,7 +30,7 @@ SHOTS.moves = {
     { t: L(12, 2), glow: true, dur: 0.01 }, { t: L(13) - 0.05, glow: false, dur: 0.01 },
     { t: L(13, 2), head: [0, 14], dur: 0.4 }, { t: L(14), head: [0, 0], dur: 0.3 },
     { t: L(14, 2), hop: 0.4, arm: 120, dur: 0.3 }, { t: L(14, 2) + 0.5, arm: 0, dur: 0.4 },
-    { t: L(16, 1), at: [X.E + 3.5, 0.9], dur: 1.6, ease: 'linear' },
+    { t: L(16, 1), at: [X.E + 4.0, 0.9], dur: 1.6, ease: 'linear' },
     { t: L(17) + 0.1, at: [X.F - 0.75, 0.8], dur: 0.01 },                                    // la semana
     { t: L(16, 4), head: [15, 0], dur: 0.4 }, { t: L(16, 6), head: [0, 0], dur: 0.4 },
     { t: L(17, 3), head: [-25, 0], dur: 0.4 }, { t: L(18), head: [0, 0], dur: 0.3 }, { t: L(18, 2), hop: 0.4 }, { t: L(18, 5), head: [12, 6], dur: 0.4 }, { t: L(19, 3), head: [0, 16], dur: 0.4 }, { t: L(20), head: [0, 0], dur: 0.3 },
@@ -65,7 +65,7 @@ SHOTS.cam = [
   { t: L(13) - 0.05, dist: 8.8, el: 14, az: -20, target: [X.E - 0.5, 1.2, 0.9], dur: 0.01, fit: false }, // oscuro: cerca
   { t: L(13) + 0.05, dist: 6.9, az: -14, dur: 2.2, fit: false },
   { t: L(14), dist: 8.4, el: 10, az: 6, target: [X.E - 0.3, 1.5, 0.9], dur: 0.7, fit: false },
-  { t: L(16, 1), dist: 8.4, el: 9, az: -26, target: [X.E + 3.4, 1.4, 0.9], dur: 1.6, ease: 'linear', fit: false },
+  { t: L(16, 1), dist: 8.4, el: 9, az: -26, target: [X.E + 3.9, 1.4, 0.9], dur: 1.6, ease: 'linear', fit: false },
   { t: L(17), whip: true, dist: 8.0, el: 10, az: 18, target: [X.F - 0.35, 1.5, 0.2], fit: false }, // latigazo al viernes
   { t: L(17) + 0.4, dist: 7.7, az: 4, dur: 2.4, fit: false },
   { t: L(18, 2), dist: 8.6, az: -10, dur: 2.0, fit: false },

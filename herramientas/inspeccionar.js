@@ -6,7 +6,7 @@ const { chromium } = require('playwright'); const path = require('path');
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 540, height: 960 } });
   let pageErr = null; p.on('pageerror', e => { pageErr = e.message; console.log('pageerror:', e.message); });
   await p.goto('file://' + path.join(dir, 'composition', 'index.html')); await p.evaluate(() => window.ready); if (pageErr) { console.log('ERROR: la composición falla al cargar, nada que inspeccionar:', pageErr); process.exit(2); }
-  const D = await p.evaluate(() => window.DURATION); const issues = []; const seen = new Set();
+  const D = await p.evaluate(() => window.DURATION); const issues = []; const seen = new Set(); const stack = {};
   const ov = (a, c, pad = 0) => !(a.x + a.w + pad < c.x || c.x + c.w + pad < a.x || a.y + a.h + pad < c.y || c.y + c.h + pad < a.y);
   for (let t = 0; t < D; t += step) {
     const f = await p.evaluate((t) => window.inspect(t), +t.toFixed(2));
@@ -22,6 +22,10 @@ const { chromium } = require('playwright'); const path = require('path');
     for (const h of f.heads) if (f.caption && ov(h, f.caption)) add('hc' + h.id, `la cabeza de ${h.id} entra en el titular`);
     // regla 9 (Jaime, 04-11): ningún personaje principal se corta, en ningún plano ni durante un latigazo
     for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1800) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
+    // cabezas apiladas (05-11): alguna cabeza de la multitud casi concéntrica detrás de la del protagonista durante ≥ 0,3 s seguidos (aunque sea de varios miembros al cruzar)
+    { const hs = (await p.evaluate((t) => window.headStack ? window.headStack(t) : [], +t.toFixed(2))).filter(s => s.d <= s.r * 0.9);
+      for (const s of hs) { const st = stack[s.actor]; if (st && t - st.last <= step + 0.01) { st.last = t; st.who.add(s.crowd + '#' + s.i); } else stack[s.actor] = { first: t, last: t, who: new Set([s.crowd + '#' + s.i]) };
+        const q = stack[s.actor]; if (t - q.first >= 0.3 - 1e-6) add('stk' + s.actor + q.first, `cabezas apiladas detrás de ${s.actor} desde ${q.first.toFixed(2)} s (${[...q.who].join(', ')})`); } }
     if (f.caption && f.caption.y + f.caption.h > 520) add('capH', `titular demasiado alto: baja hasta ${Math.round(f.caption.y + f.caption.h)} px`);
   }
   // regla 14 (Jaime, 04-11): variedad como la referencia. Solo se exige a los reels hechos desde la regla (storyboard.md).

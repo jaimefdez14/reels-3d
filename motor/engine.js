@@ -308,6 +308,7 @@ function init() {
       while (placed < n && tries < n * 20) { tries++; const px = (rnd() - 0.5) * area[0] + (spec.at?.[0] ?? 0), pz = (rnd() - 0.5) * area[1] + (spec.at?.[1] ?? -3);
         if (mains.some(m => Math.hypot(m[0] - px, m[1] - pz) < (spec.gap ?? 1.6))) continue; // nunca encima de los protagonistas
         const a = makeActor({ kind: 'crowd', h: 1.4 + rnd() * 0.25 }); a.position.set(px, 0, pz); a.rotation.y = rnd() * 6.28; g.add(a); placed++; }
+      (spec.drop || []).forEach(i => { if (g.children[i]) { g.children[i].visible = false; g.children[i].userData.dropped = true; } }); // miembros quitados (cabezas apiladas); se ocultan para no mover a los demás
       g.userData = { spec }; actors[id] = g; scene.add(g); }
     else { const a = makeActor(spec); a.position.set(spec.at?.[0] ?? 0, 0, spec.at?.[1] ?? 0); a.rotation.y = (spec.rot ?? 0) * Math.PI / 180; actors[id] = a; scene.add(a); }
   }
@@ -478,6 +479,20 @@ window.inspectPixels = function (t) {
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };
+window.__crowdInView = function (gid, list) { const g = actors[gid]; if (!g || !g.visible) return false; const fr = new THREE.Frustum().setFromProjectionMatrix(new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
+  return list.some(i => { const m = g.children[i]; if (!m) return false; return fr.intersectsBox(new THREE.Box3().setFromObject(m)); }); };
+// Cabezas apiladas (05-11, N1 en Blender): una cabeza de la multitud justo detrás de la de un protagonista parece un tótem de dos cabezas.
+// Devuelve, para el instante t, cada miembro de multitud cuya cabeza toca en pantalla la de un protagonista y está detrás de él.
+window.headStack = function (t) {
+  window.seek(t); const out = []; const camPos = camera.position;
+  const mains = Object.keys(actors).filter(id => actors[id].userData.head && actors[id].visible && actors[id].userData.spec.kind !== 'crowd');
+  for (const [gid, g] of Object.entries(actors)) { if (actors[gid].userData.head || !g.visible) continue;
+    g.children.forEach((m, i) => { if (!m.userData.head || !m.visible) return; const c = new THREE.Vector3(); m.userData.head.getWorldPosition(c);
+      const [cx, cy] = toScreen(c); const rr = m.userData.h * 0.14; const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion).multiplyScalar(rr); const [, cy2] = toScreen(c.clone().add(up)); const cr = Math.abs(cy - cy2);
+      for (const id of mains) { const h = headWorld(id); const [hx, hy] = toScreen(h); const hrp = headRadiusPx(id);
+        const d = Math.hypot(hx - cx, hy - cy); if (d < (hrp + cr) * 0.95 && c.distanceTo(camPos) > h.distanceTo(camPos)) out.push({ crowd: gid, i, actor: id, d: Math.round(d), r: Math.round(hrp + cr) }); } }); }
+  return out;
+};
 window.__dbg = () => ({ props, camera, actors, scene, renderer, withFlat, MW, MH }); // solo para depurar desde las herramientas
 // Eventos de sonido (los sintetiza herramientas/sonido.py): latigazos, entradas de objetos, marcadores de palabra, cortes a oscuro, anillos
 window.soundEvents = function () {
