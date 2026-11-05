@@ -11,7 +11,7 @@ const { chromium } = require('playwright'); const fs = require('fs'); const path
   const D = await p.evaluate(() => window.DURATION); const f0 = Math.round(opt('--desde', 0) * FPS), f1 = Math.min(Math.round(D * FPS), Math.round(opt('--hasta', 1e9) * FPS));
   const esc = await p.evaluate(() => window.exportScene()); esc.fps = FPS; esc.frames = Math.round(D * FPS); esc.duration = D;
   fs.writeFileSync(path.join(out, 'escena.json'), JSON.stringify(esc)); const N = esc.meshes.length; console.log('mallas', N, 'geometrías', Object.keys(esc.geos).length, 'fotogramas', esc.frames);
-  const fd = fs.openSync(path.join(out, 'estado.bin'), f0 === 0 ? 'w' : 'r+'); const per = 1 + 8 + 17 * N; const t0 = Date.now();
+  const fd = fs.openSync(path.join(out, 'estado.bin'), fs.existsSync(path.join(out, 'estado.bin')) ? 'r+' : 'w'); const per = 1 + 8 + 17 * N; const t0 = Date.now();
   for (let f = f0; f < f1; f++) { const t = f / FPS;
     const st = await p.evaluate((t) => window.frameState(t), t); const buf = new Float32Array(per); buf[0] = st.inv; buf.set(st.cam, 1); st.ms.forEach((m, i) => buf.set(m, 9 + i * 17));
     fs.writeSync(fd, Buffer.from(buf.buffer), 0, buf.byteLength, f * per * 4);

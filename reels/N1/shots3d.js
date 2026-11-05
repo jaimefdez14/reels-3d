@@ -76,11 +76,11 @@ SHOTS.cam = [
 SHOTS.invert = [{ t: L(5) - 0.05, end: L(6) - 0.05 }, { t: L(13) - 0.05, end: L(14) - 0.05 }];
 SHOTS.props = [
   // A · sofá
-  { id: 'sofa', type: 'sofa', at: [0, 0, 0], t0: 0, inDur: 0.01, inEase: 'linear' },
-  { id: 'pared', type: 'wall', w: 6.5, h: 1.6, at: [1.2, 0, -1.5], t0: 0, inDur: 0.01, inEase: 'linear', t1: L(5) - 0.3 },
-  { id: 'reloj', type: 'wallclock', at: [-0.2, 1.22, -1.42], r: 0.36, t0: 0, inDur: 0.01, inEase: 'linear', t1: L(5) - 0.3, spin: [[0, 0.35], [L(5), 3.2], [L(6), 0.35]] },
-  { id: 'mesa', type: 'desk', at: [3.2, 0, -0.35], t0: 0, inDur: 0.01, inEase: 'linear', t1: L(6) + 1.5 },
-  { id: 'papeles', type: 'papers', n: 12, at: [3.8, 0.99, -0.15], t0: 0, inDur: 0.01, inEase: 'linear', t1: L(6) + 1.5, left: [[L(4, 3), 10], [L(4, 4), 8], [L(4, 5), 6], [L(4, 6), 4]] },
+  { id: 'sofa', type: 'sofa', at: [0, 0, 0], t0: -1, inDur: 0.01, inEase: 'linear' },
+  { id: 'pared', type: 'wall', w: 6.5, h: 1.6, at: [1.2, 0, -1.5], t0: -1, inDur: 0.01, inEase: 'linear', t1: L(5) - 0.3 },
+  { id: 'reloj', type: 'wallclock', at: [-0.2, 1.22, -1.42], r: 0.36, t0: -1, inDur: 0.01, inEase: 'linear', t1: L(5) - 0.3, spin: [[0, 0.35], [L(5), 3.2], [L(6), 0.35]] },
+  { id: 'mesa', type: 'desk', at: [3.2, 0, -0.35], t0: -1, inDur: 0.01, inEase: 'linear', t1: L(6) + 1.5 },
+  { id: 'papeles', type: 'papers', n: 12, at: [3.8, 0.99, -0.15], t0: -1, inDur: 0.01, inEase: 'linear', t1: L(6) + 1.5, left: [[L(4, 3), 10], [L(4, 4), 8], [L(4, 5), 6], [L(4, 6), 4]] },
   { id: 'pila', type: 'battery', over: 'yo', px: 120, t0: L(1, 1), t1: L(5) - 0.08, levels: [[L(1, 5), 1, 0.7], [L(3, 1), 0, 0.5], [L(4, 6), 1, 0.7]] },
   { id: 'flecha', type: 'arrow', from: 'yo', to: [3.8, 1.4, -0.15], lift: 0.8, t0: L(2, 1), t1: L(3) - 0.05, drawDur: 0.7 },
   { id: 'aro', type: 'floorring', r: 1.75, at: [0, 0, 0.1], t0: L(5), draw: L(5, 1), t1: L(6) - 0.06 },
