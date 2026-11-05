@@ -37,8 +37,7 @@
    "hi": "temporizador"
   },
   {
-   "show": "«Solo cinco minutos. Luego paro.»",
-   "voice": "Te dices:",
+   "show": "Te dices: «Solo cinco minutos. Luego paro.»",
    "hi": "paro"
   },
   {
@@ -58,9 +57,9 @@
    "hi": "sigas"
   },
   {
-   "show": "«Cinco minutos no sirven para nada.»",
-   "voice": "Estás pensando:",
-   "neg": "nada"
+   "show": "Piensas: «Cinco minutos no sirven para nada.»",
+   "neg": "nada",
+   "objecion": true
   },
   {
    "show": "Sirven para arrancar.",

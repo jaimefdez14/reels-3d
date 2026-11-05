@@ -20,15 +20,15 @@ SHOTS.moves = {
     { t: L(6) - 0.03, show: false, dur: 0.01 }, { t: L(6) + 0.38, show: true, at: [X.B - 1.1, 0.7], y: 0, tilt: 0, phone: false, dur: 0.01, head: [0, 0] },       // el cinco
     { t: L(6, 5), head: [0, -18], dur: 0.5 },
     { t: L(7, 2), head: [0, 0], arm: 125, dur: 0.35 }, { t: L(7, 4), arm: 0, dur: 0.4 },
-    { t: L(8, 1), head: [0, 12], dur: 0.25 }, { t: L(8, 3), head: [0, 0], dur: 0.25 }, { t: L(8, 4), head: [0, 12], dur: 0.25 }, { t: L(8, 5), head: [0, 0], dur: 0.25 },
-    { t: L(9) - 0.03, show: false, dur: 0.01 }, { t: L(9) + 0.12, show: true, at: [X.C - 2.0, 0.8], dur: 0.01 },                                    // la tarea
+    { t: L(8, 3), head: [0, 12], dur: 0.25 }, { t: L(8, 5), head: [0, 0], dur: 0.25 }, { t: L(8, 6), head: [0, 12], dur: 0.25 }, { t: L(8, 7), head: [0, 0], dur: 0.25 },
+    { t: L(9) - 0.42, show: false, dur: 0.01 }, { t: L(9) - 0.3, show: true, at: [X.C - 2.0, 0.8], dur: 0.01 },                                    // la tarea
     { t: L(9, 3), at: [X.C - 0.9, 0.8], dur: 1.0 },
     { t: L(10, 1), arm: 70, phone: true, dur: 0.35 }, { t: L(10, 4), head: [20, 8], dur: 0.4 }, { t: L(11) - 0.3, head: [0, 0], dur: 0.2 },
     { t: L(11) - 0.03, show: false, dur: 0.01 }, { t: L(11) + 0.3, show: true, at: [X.D - 1.6, 0.9], arm: 0, phone: false, dur: 0.01 },            // la puerta
     { t: L(11, 5), head: [25, 0], dur: 0.4 }, { t: L(12), head: [0, 0], dur: 0.3 },
     { t: L(12, 1), at: [X.E - 0.5, 0.9], dur: 1.5, ease: 'linear' },                         // casi nadie para: sigue andando
     { t: L(12, 2), glow: true, dur: 0.01 }, { t: L(13) - 0.05, glow: false, dur: 0.01 },
-    { t: L(13, 2), head: [0, 14], dur: 0.4 }, { t: L(14), head: [0, 0], dur: 0.3 },
+    { t: L(13, 3), head: [0, 14], dur: 0.4 }, { t: L(14), head: [0, 0], dur: 0.3 },
     { t: L(14, 2), hop: 0.4, arm: 120, dur: 0.3 }, { t: L(14, 2) + 0.5, arm: 0, dur: 0.4 },
     { t: L(16, 1), at: [X.E + 4.0, 0.9], dur: 1.6, ease: 'linear' },
     { t: L(17) + 0.1, at: [X.F - 0.75, 0.8], dur: 0.01 },                                    // la semana
@@ -57,7 +57,7 @@ SHOTS.cam = [
   { t: L(6, 4), dist: 8.8, el: 5, az: -8, target: [X.B - 0.3, 1.5, 0], dur: 1.6, fit: false },
   { t: L(7, 2), dist: 8.4, el: 9, az: 14, target: [X.B - 0.6, 1.5, 0.2], dur: 1.4, fit: false },
   { t: L(8), dist: 7.7, az: 30, dur: 2.2, fit: false },                                     // orbit
-  { t: L(9), dist: 8.8, el: 10, az: -16, target: [X.C - 1.5, 1.3, 0.2], dur: 0.4, fit: false }, // travelling a la tarea
+  { t: L(9) - 0.4, dist: 8.8, el: 10, az: -16, target: [X.C - 1.5, 1.3, 0.2], dur: 0.4, fit: false }, // travelling a la tarea
   { t: L(9, 3), dist: 7.9, az: 8, target: [X.C - 0.6, 1.3, 0.2], dur: 1.2, fit: false },
   { t: L(10, 1), dist: 7.4, az: 24, target: [X.C - 0.6, 1.35, 0.4], dur: 1.6, fit: false },
   { t: L(11), dist: 8.8, el: 9, az: -20, target: [X.D - 0.8, 1.4, 0.2], dur: 0.5, fit: false }, // travelling a la puerta
@@ -88,17 +88,17 @@ SHOTS.props = [
   { id: 'paredC', type: 'wall', w: 7, h: 1.85, at: [X.C, 0, -1.6], t0: L(8), inDur: 0.01, inEase: 'linear', t1: L(11) + 0.6 },
   // B · el cinco y el temporizador
   { id: 'cinco', type: 'number', text: '5', size: 2.0, depth: 0.5, yellow: true, at: [X.B + 0.45, 0, -0.7], t0: L(6, 1), inDur: 0.5, t1: L(7, 3) - 0.1 },
-  { id: 'reloj5', type: 'timer', text: '5', r: 0.9, px: 470, at: [X.B + 1.0, 1.6, -0.2], t0: L(7, 3), fillFrom: L(8, 0), dur: L(11, 5) - L(8, 0), t1: L(9) - 0.06 },
+  { id: 'reloj5', type: 'timer', text: '5', r: 0.9, px: 470, at: [X.B + 1.0, 1.6, -0.2], t0: L(7, 3), fillFrom: L(8, 2), dur: L(11, 5) - L(8, 2), t1: L(9) - 0.44 },
   // C · la tarea
   { id: 'mesa2', type: 'desk', at: [X.C + 0.25, 0, -0.45], t0: L(9) - 0.5, inDur: 0.01, inEase: 'linear', t1: L(11) + 1.2 },
   { id: 'papeles2', type: 'papers', key: true, n: 10, redTop: true, scale: 1.5, at: [X.C - 0.25, 0.99, 0.0], t0: L(9, 5), inDur: 0.4, t1: L(11) + 1.2, left: [[L(10, 4), 9]] },
-  { id: 'reloj5b', type: 'timer', text: '5', r: 0.36, over: 'yo', dx: 0.6, px: 150, t0: L(9, 1), fillFrom: L(8, 0), dur: L(11, 5) - L(8, 0), t1: L(12, 1) },
+  { id: 'reloj5b', type: 'timer', text: '5', r: 0.36, over: 'yo', dx: 0.6, px: 150, t0: L(9, 1), fillFrom: L(8, 2), dur: L(11, 5) - L(8, 2), t1: L(12, 1) },
   { id: 'tel', type: 'sticker', icon: 'phone', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(10, 1), t1: L(11) - 0.3 },
   { id: 'ok', type: 'sticker', icon: 'check', yellow: true, over: 'yo', dx: -0.6, px: 130, t0: L(11, 5), t1: L(12, 1) },
   // D · puertas
   { id: 'puertas', type: 'doors', n: 4, at: [X.D + 3.4 * 1.5 - 1.0, 0, -1.2], t0: L(9), inDur: 0.01, inEase: 'linear', t1: L(13) - 0.3 },
   // E · objeción
-  { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(13, 1), t1: L(14) - 0.08 },
+  { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(13, 2), t1: L(14) - 0.08 },
   { id: 'pila2', type: 'battery', over: 'yo', px: 120, t0: L(14, 1), t1: L(15) - 0.06, levels: [[L(14, 2), 1, 0.6]] },
   // giro: casi todos lo usan un día y lo olvidan (calendario que se tacha) / el truco: cada mañana (contador de cinco días)
   { id: 'cal', type: 'sticker', icon: 'cal', over: 'yo', dx: -0.4, px: 150, t0: L(15, 2), t1: L(16) - 0.06 },

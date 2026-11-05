@@ -72,7 +72,7 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 12. **Ideas aprobadas, segunda tanda (04-11-2026):** Jaime: «n5 y n6». N5 (la primera frase del correo, letras D-A-P) y N6 (nunca falles dos veces) de `docs/IDEAS-2026-11-04b.md`. N1-N4 siguen en propuesta.
 
-13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
+13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro; desde la regla 18, sin rótulo pequeño: la voz lo dice y va en el titular) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
 
 14. **Escenas con acción y variedad, no etiquetas sobre un decorado (04-11-2026).** Jaime, comparando N6 con la referencia: «hay una enorme diferencia… los ejemplos tienen mucha más variedad, más assets, más dinámicos, más tomas, y la historia mejor contada, además de mejores subtítulos, efectos». Medido: R1 pasa por ~8 decorados en 55 s y R4 por 7; N6 estaba 33 s en el mismo pasillo con las figuras quietas y etiquetas encima. Desde N1 (Jaime: «ok, n1»):
     (a) **guion gráfico antes del código** (`reels/ID/storyboard.md`): por frase, decorado + acción (quién hace qué a quién) + un objeto grande, comparado con el plano equivalente de la referencia;
@@ -90,6 +90,9 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
     (c) ~14 s por fotograma a 720x1280 en esta máquina: ≈ 7 h un reel de 60 s, en tandas de ≤ 2 h; las capas generadas (`reels/*/blender/`) no van a git;
     (d) **guion cerrado antes del render**: lector en frío, guionista contra el molde y prueba de comprensión, y se aplica todo lo que marquen (N1, 04-11: coste concreto, giro «casi todos la usan un día y la olvidan», recompensa con puente, concordancias).
     Instalación en una sesión nueva: `python3 -m venv /root/blender-venv && /root/blender-venv/bin/pip install bpy==5.2.3`.
+
+18. **Sin rótulos pequeños: lo que introduce una cita lo dice la voz y va en el titular (05-11-2026).** Jaime, sobre N1: «hay subtítulos arriba a la izquierda muchas veces que deberían ser también parte de la voz, ¿no?, ejemplo "Te dices", "Estás pensando"… y no deberían salir arriba a la izquierda con ese formato tan raro». Corrige la regla 13: ya no hay rótulo «Estás pensando:» en letra pequeña. La frase entera va en `show` («Te dices: «Solo cinco minutos. Luego paro.»», «Piensas: «…»») y la voz la dice; la objeción se marca con `objecion: true` (fondo oscuro, nube con «?»). El motor ya no dibuja el campo `voice`.
+    Además (N1, 05-11): el inspector avisa de **cabezas apiladas** (una cabeza de la multitud justo detrás de la del protagonista ≥ 0,3 s); se arregla quitando esa figura con `drop` o apartando al protagonista.
 
 ## Pendiente de Jaime
 

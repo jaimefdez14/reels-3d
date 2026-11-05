@@ -267,13 +267,13 @@ function captionLayout(x, L, fs0, maxW, marginX) { // el cuerpo más grande que 
   for (const [fs, maxRows] of [[fs0, 2], [128, 2], [116, 3], [104, 3], [92, 3]]) { x.font = `500 ${fs}px NotoCondT`; const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
     if (row + 1 <= maxRows || fs === 92) return { tokens, layout, rows: row + 1, fs, lh: Math.round(fs * 1.2) }; } }
 function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
-function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 142, W - 2 * marginX - 40, marginX); x.restore(); const top = a.L.voice ? 205 : CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: (a.L.voice ? 70 : top - fs), w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (a.L.voice ? 70 : top - fs) }; }
+function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 142, W - 2 * marginX - 40, marginX); x.restore(); const top = CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: top - fs, w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (top - fs) }; }
 function drawCaptions(x, t, inv) {
   const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60;
   x.save(); x.textBaseline = 'alphabetic';
-  const top = L.voice ? 205 : CAPTION_TOP; const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
+  const top = CAPTION_TOP; const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
   const { tokens, layout, fs, lh } = captionLayout(x, L, 142, W - 2 * marginX - 40, marginX); x.font = `500 ${fs}px NotoCondT`;
-  if (L.voice) { x.save(); x.font = '400 30px Montserrat'; x.fillStyle = inv ? '#c9c9cf' : '#6b6b70'; x.globalAlpha = 1 - outP; x.fillText(L.voice, marginX, 96); x.restore(); x.font = `500 ${fs}px NotoCondT`; }
+  // 05-11 (Jaime): sin rótulo pequeño arriba a la izquierda; «Te dices:» / «Estás pensando:» van en el titular y los dice la voz.
   const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
   for (let i = 0; i < tokens.length; i++) {
     const wtime = words[Math.min(i, words.length - 1)][0]; if (t < wtime) break;
@@ -471,7 +471,7 @@ window.inspectPixels = function (t) {
     const A = masks[i]; if (cap) { let c = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && capMask[k]) c++; if (c) pairs.push([items[i].id, 'titular', c, c]); }
     for (let j = i + 1; j < items.length; j++) { const B = masks[j]; let c = 0, aFront = 0, bFront = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && B.mask[k]) { c++; if (front[k] === i) aFront++; else if (front[k] === j) bFront++; } if (c) pairs.push([items[i].id, items[j].id, c, aFront, bFront]); }
   }
-  const act = activeLine(t); const objecion = !!(act && act.L.voice);
+  const act = activeLine(t); const objecion = !!(act && (act.L.objecion || act.L.voice));
   // regla 15: textos en escena frente a la voz. Cada texto visible con letras, la frase que suena y si el titular está a la vista.
   const sonando = (() => { let cur = null; REEL.lines.forEach((L, i) => { const w = TIMING.words[i]; if (w && t >= w[0][0] - 0.05 && t <= w[w.length - 1][1] + 0.6) cur = L.say || L.show; }); return cur; })();
   const escena = items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).map(x => { const p = x.obj.userData.spec; let tx = p.text || ''; if (p.type === 'receipt' && p.labels) tx += ' ' + (p.title ?? 'Semana') + ' ' + (p.rows ?? ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']).join(' '); if (p.type === 'card' && p.label) tx += ' ' + p.label; return { id: x.id, text: tx.trim() }; }).filter(x => /[a-záéíóúñ]/i.test(x.text));
