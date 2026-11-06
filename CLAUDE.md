@@ -27,6 +27,7 @@ python3 herramientas/sheet.py <dir> hoja.jpg 6   # hoja de contactos
 node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si existe reels/ID/voice/voz.wav)
 node herramientas/inspeccionar.js reels/ID 0.2   # solapes por rectángulos (debe decir ok)
 node herramientas/inspeccionar_px.js reels/ID 0.5  # solapes por píxeles, legibilidad, máximo 2 bocadillos (debe decir ok)
+python3 herramientas/publicar.py reels/ID --dry-run  # comprueba que META_PAGE_TOKEN_3D apunta a @fase.zer0; no publica
 ```
 
 ## Revisión obligatoria antes de enseñar nada (04-11-2026)
@@ -79,7 +80,8 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 - **Cuenta fijada (06-11-2026):** marca «Fase Zero», Instagram **@fase.zer0**, ya vinculada a la página de Facebook
   «Fase Zero» (cuenta reutilizada, inactiva 2 años; Jaime la ha limpiado y renombrado). Secreto previsto del token de
   página: `META_PAGE_TOKEN_3D` (no sobrescribir `META_PAGE_TOKEN`, que es el de @crecimiento.ai).
-- Token de Meta (pendiente: generarlo con los 6 permisos y guardarlo) y voz de ElevenLabs para esta marca (si es la
+- Token de Meta: `META_PAGE_TOKEN_3D` ya guardado y verificado (06-11-2026): página «Fase Zero» → @fase.zer0. Los 6 permisos
+  no se han podido comprobar desde aquí (`debug_token` falla: el token es de otra app). Voz de ElevenLabs para esta marca (si es la
   misma clave que ViralClips, decidir cómo se reparte el tope mensual).
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
@@ -87,11 +89,15 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
   con densidad alta, efectos de sonido por transición, libro opcional y cierre «Envíaselo a…» son la norma de esta
   repo salvo que Jaime diga lo contrario.
 
+- **Publicador (06-11-2026):** `herramientas/publicar.py` solo usa `META_PAGE_TOKEN_3D`, resuelve la cuenta desde el token y aborta si
+  no es @fase.zer0 (nunca lee `META_PAGE_TOKEN`, `IG_USER_ID` ni `META_PAGE_ID`). Por defecto es dry-run; publicar exige
+  `--publicar --ok-jaime --video-url`. Publicar de verdad no está probado.
+
 ## Estado (04-11-2026)
 
 - Motor con suelo, dos personajes (héroe con contorno y brazo, interlocutor con cara), multitud, bocadillo (con
   tachado), nube de pensamiento, tarjeta de perfil y campo de tarjetas, anillo, flecha, línea de atención, contador
   de barras, puerta y mesa; cámara esférica con presets `wide/medium/close` y keyframes; inversión de fondo;
   titulares palabra a palabra con marcador amarillo y palabra en rojo. Render a ~4 fps de captura (≈ 4 min por reel de 30 s).
-- Falta: voz (Kokoro y ElevenLabs con tiempos por palabra → `timing.json`), sonido (cama y SFX), publicador,
+- Falta: voz (Kokoro y ElevenLabs con tiempos por palabra → `timing.json`), sonido (cama y SFX),
   revisiones automáticas (`docs/SISTEMA-3D.md` §5), letras gigantes extruidas y más objetos.
