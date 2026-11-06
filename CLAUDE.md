@@ -12,7 +12,8 @@ temas (crecimiento personal, dinero, trabajo, negocio), en castellano de España
 de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entre las dos repos (Jaime, 04-11-2026).
 
 - `docs/ANALISIS-REFERENCIA.md`: los cinco reels analizados (guiones, estructura, lenguaje, diseño, cámara, sonido).
-- `docs/SISTEMA-3D.md`: el molde de guion de 8 bloques, el lenguaje visual y las comprobaciones. **Es la norma creativa.**
+- `docs/METODO-30S.md`: **el método de guion (30 s, bucles abiertos, ganchos)**. Manda sobre el molde de `SISTEMA-3D.md` §1.
+- `docs/SISTEMA-3D.md`: el lenguaje visual y las comprobaciones (su molde de 8 bloques y 45-60 s queda sustituido por la regla 20).
 - `motor/`: el motor (Three.js, determinista: `window.seek(t)`), `build.py`, `render.js`, fuentes y vendor.
 - `herramientas/`: `frames.js` (fotogramas), `sheet.py` (hoja de contactos), `kokoro_tts.py` (voz gratuita de previas).
 - `reels/<ID>/`: `reel.json` (guion: `lines[{show, say, hi, neg, voice, pause, hide}]`), `shots3d.js` (escena),
@@ -95,6 +96,8 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
     Además (N1, 05-11): el inspector avisa de **cabezas apiladas** (una cabeza de la multitud justo detrás de la del protagonista ≥ 0,3 s); se arregla quitando esa figura con `drop` o apartando al protagonista.
 
 19. **Cara nueva del protagonista (06-11-2026).** Jaime: «¿se puede mejorar los detalles? ejemplo, la cara de las figuras, ahora solo tienen un punto y media boca»; vista la prueba en Blender: «cara nueva sí». Dos ojos ovalados en tres cuartos y sonrisa ancha con puntas redondas (`"cara": "v2"` en `reel.json`; todo reel nuevo la lleva). El azul de la otra marca se probó y se descartó («olvidamos lo del azul»): el amarillo sigue.
+
+20. **Reels de 30 segundos con bucles abiertos (06-11-2026).** Jaime: «de cara al futuro, vamos a trabajar con reels más cortitos… objetivo: 30 segundos… tener clarísima la metodología de generar vídeos de open loop para generar adicción y asegurar que todos son adictivos, que tenemos buenos hooks». Norma: `docs/METODO-30S.md` (28-32 s, máx. 35; 11-13 frases; 60-75 palabras; molde de 6 tiempos; mapa de bucles sin huecos; gancho cerrado después del 70 %; laboratorio de 8 ganchos con 3 evaluadores y 3 al elegir). Sustituye la duración y el molde de 8 bloques de `SISTEMA-3D.md` §1. Motivo añadido: un render de Blender de 30 s es la mitad que uno de 60 s, y se hace una sola vez, con todo cerrado.
 
 ## Pendiente de Jaime
 

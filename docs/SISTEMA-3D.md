@@ -7,6 +7,8 @@ Jaime, previa con Kokoro, revisiones); donde este sistema choca con una regla, s
 
 ## 1. Molde de guion (en castellano)
 
+> **Sustituido el 06-11-2026 (regla 20):** los reels nuevos son de 30 s y siguen `docs/METODO-30S.md`. Lo de abajo queda como referencia de los bloques y fórmulas.
+
 Plantilla de 8 bloques, 20-24 frases de 2-7 palabras (≤ 45 caracteres por subtítulo), 100-125 palabras, 45-60 s
 con pausas. Cada bloque tiene su función y su escena. Se escribe **con el espectador dentro** (tú, presente) y
 con **una frase literal entrecomillada** que pueda copiar.
