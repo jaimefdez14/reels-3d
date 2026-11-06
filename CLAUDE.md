@@ -76,8 +76,11 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 ## Pendiente de Jaime
 
-- Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
-  ViralClips, decidir cómo se reparte el tope mensual).
+- **Cuenta fijada (06-11-2026):** marca «Fase Zero», Instagram **@fase.zer0**, ya vinculada a la página de Facebook
+  «Fase Zero» (cuenta reutilizada, inactiva 2 años; Jaime la ha limpiado y renombrado). Secreto previsto del token de
+  página: `META_PAGE_TOKEN_3D` (no sobrescribir `META_PAGE_TOKEN`, que es el de @crecimiento.ai).
+- Token de Meta (pendiente: generarlo con los 6 permisos y guardarlo) y voz de ElevenLabs para esta marca (si es la
+  misma clave que ViralClips, decidir cómo se reparte el tope mensual).
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
