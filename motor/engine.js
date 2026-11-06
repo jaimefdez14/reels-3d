@@ -5,6 +5,10 @@
 'use strict';
 const W = 1080, H = 1920;
 const PAL = { bg: '#f5f5f5', bgDark: '#34353a', text: '#2a292c', hero: '#fafafa', other: '#4f5057', otherFace: '#2b2b2f', crowd: '#b4b5ba', yellow: '#f5d63f', red: '#de2f45', shadow: '#d9d9dc', outline: '#2a292c', grid: '#e3e3e6', cross: '#c6c6ca' };
+PAL.marker = PAL.yellow; // marcador del titular (puede ser distinto del color de los objetos)
+// Paletas alternativas por reel (reel.json → "paleta"): prueba del 06-11 con el azul de la otra marca.
+const PALETAS = { azul: { yellow: '#2f6db5', marker: '#a9cbf2' } };
+if (window.REEL && PALETAS[window.REEL.paleta]) Object.assign(PAL, PALETAS[window.REEL.paleta]);
 
 // ---------- utilidades de tiempo ----------
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -108,8 +112,16 @@ function makeActor(spec) {
       const OL = new THREE.MeshBasicMaterial({ color: PAL.outline, side: THREE.BackSide });
       head.add(new THREE.Mesh(shellGeometry(hsG, 0.016), OL)); g.add(new THREE.Mesh(shellGeometry(bodyG, 0.016), OL));
       const eyeM = new THREE.MeshBasicMaterial({ color: PAL.text });
+      if (window.REEL && window.REEL.cara === 'v2') { // cara v2 (06-11): dos ojos ovalados en tres cuartos y sonrisa con puntas redondas
+        const onHead = (ang, y, r) => { const c = Math.sqrt(1 - y * y); return [Math.sin(ang) * c * hr * r, y * hr * r, Math.cos(ang) * c * hr * r]; };
+        [[0.62, 0.13], [0.0, 0.12]].forEach(([ang, sz], k) => { const e = new THREE.Mesh(new THREE.SphereGeometry(hr * sz * (k ? 0.92 : 1), 14, 12), eyeM); e.scale.set(0.8, 1.3, 0.45); e.position.set(...onHead(ang, 0.2, 0.97)); e.lookAt(new THREE.Vector3(...onHead(ang, 0.2, 3))); head.add(e); });
+        const R = hr * 0.2, tube = hr * 0.04, arc = Math.PI * 0.75; const sm = new THREE.Mesh(new THREE.TorusGeometry(R, tube, 8, 24, arc), eyeM);
+        [0, arc].forEach(a => { const cap = new THREE.Mesh(new THREE.SphereGeometry(tube, 8, 8), eyeM); cap.position.set(R * Math.cos(a), R * Math.sin(a), 0); sm.add(cap); });
+        const ang = 0.33; sm.position.set(...onHead(ang, -0.12, 0.93)); sm.rotation.set(0, ang, Math.PI + (Math.PI - arc) / 2 + Math.PI * 0.0); head.add(sm);
+      } else {
       const e = new THREE.Mesh(new THREE.SphereGeometry(hr * 0.09, 8, 8), eyeM); e.position.set(hr * 0.55, hr * 0.15, hr * 0.8); head.add(e);
       const sm = new THREE.Mesh(new THREE.TorusGeometry(hr * 0.16, hr * 0.03, 6, 16, Math.PI * 0.7), eyeM); sm.position.set(hr * 0.62, -hr * 0.22, hr * 0.72); sm.rotation.set(0, 0.6, Math.PI * 1.05); head.add(sm);
+      }
       // brazo en jarra (tubo blanco con contorno), con pivote en el hombro: arm en grados (0 = en jarra, 120 = levantado)
       const arm = new THREE.Group(); arm.position.set(rTop * 0.62, H - rTop * 0.7, rTop * 0.78); g.add(arm);
       const path = new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0, 0), new THREE.Vector3(rTop * 0.75, -H * 0.19, 0.03), new THREE.Vector3(rTop * 0.2, -H * 0.37, 0.05)]);
@@ -281,7 +293,7 @@ function drawCaptions(x, t, inv) {
     const clean = tokens[i].toLowerCase().replace(/[^a-záéíóúüñ0-9]/g, '');
     const isHi = hiW && hiW.split(' ').includes(clean), isNeg = negW && negW.split(' ').includes(clean);
     x.save(); x.globalAlpha = Math.min(1, pop * 1.4) * (1 - outP); x.translate(X + lay.w / 2, Y - outP * 60); x.scale(1 * (0.85 + 0.15 * pop), 1.26 * (0.85 + 0.15 * pop)); x.translate(-(X + lay.w / 2), -Y);
-    if (isHi) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillStyle = PAL.yellow; x.fillRect(X - 10, Y - fs * 0.82, (lay.w + 20) * mp, fs * 0.98); }
+    if (isHi) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillStyle = PAL.marker; x.fillRect(X - 10, Y - fs * 0.82, (lay.w + 20) * mp, fs * 0.98); }
     if (!inv) { x.save(); x.shadowColor = 'rgba(245,245,245,0.95)'; x.shadowBlur = 22; x.fillStyle = PAL.bg; x.fillText(tokens[i].toUpperCase(), X, Y); x.fillText(tokens[i].toUpperCase(), X, Y); x.restore(); }
     x.fillStyle = isNeg ? PAL.red : (inv ? '#ffffff' : PAL.text); x.fillText(tokens[i].toUpperCase(), X, Y);
     if (isNeg) { const mp = tw(t, wtime + 0.22, 0.28, 'out'); x.fillRect(X, Y + 14, lay.w * mp, 7); }
