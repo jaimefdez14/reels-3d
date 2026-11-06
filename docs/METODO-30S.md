@@ -41,7 +41,7 @@ Si alguna de las tres no está, la idea no pasa a guion.
 | 5. Objeción | 19-23 | 2 | «Piensas: "…"» en oscuro + respuesta en ≤ 5 palabras | **Abre C** y lo cierra en la misma frase |
 | 6. Remate + envío | 23-30 | 2-3 | Dos frases espejo que **cierran A** + «Mándaselo a quien…» | Bucle de vuelta al gancho |
 
-Ejemplo (N1 llevado a 30 s, 12 frases y 64 palabras; no es un guion aprobado):
+Ejemplo (N1 llevado a 30 s, 12 frases y 72 palabras; no es un guion aprobado):
 
 | # | Frase | Bucle |
 |---|---|---|
