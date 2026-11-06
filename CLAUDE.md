@@ -94,6 +94,8 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 18. **Sin rótulos pequeños: lo que introduce una cita lo dice la voz y va en el titular (05-11-2026).** Jaime, sobre N1: «hay subtítulos arriba a la izquierda muchas veces que deberían ser también parte de la voz, ¿no?, ejemplo "Te dices", "Estás pensando"… y no deberían salir arriba a la izquierda con ese formato tan raro». Corrige la regla 13: ya no hay rótulo «Estás pensando:» en letra pequeña. La frase entera va en `show` («Te dices: «Solo cinco minutos. Luego paro.»», «Piensas: «…»») y la voz la dice; la objeción se marca con `objecion: true` (fondo oscuro, nube con «?»). El motor ya no dibuja el campo `voice`.
     Además (N1, 05-11): el inspector avisa de **cabezas apiladas** (una cabeza de la multitud justo detrás de la del protagonista ≥ 0,3 s); se arregla quitando esa figura con `drop` o apartando al protagonista.
 
+19. **Cara nueva del protagonista (06-11-2026).** Jaime: «¿se puede mejorar los detalles? ejemplo, la cara de las figuras, ahora solo tienen un punto y media boca»; vista la prueba en Blender: «cara nueva sí». Dos ojos ovalados en tres cuartos y sonrisa ancha con puntas redondas (`"cara": "v2"` en `reel.json`; todo reel nuevo la lleva). El azul de la otra marca se probó y se descartó («olvidamos lo del azul»): el amarillo sigue.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que

@@ -17,14 +17,14 @@ SHOTS.moves = {
     { t: L(4, 1), at: [2.4, 0.75], dur: 1.1 }, { t: L(4, 5), arm: 60, dur: 0.3 }, { t: L(4, 6), arm: 0, dur: 0.3 },
     { t: L(5) - 0.02, at: [0.9, 0.05], y: 0.84, tilt: 90, phone: true, dur: 0.01 },                      // oscuro: otra vez en el sofá
     { t: L(5, 3), arm: 30, dur: 0.3 }, { t: L(5, 5), arm: 0, dur: 0.3 },
-    { t: L(6) - 0.03, show: false, dur: 0.01 }, { t: L(6) + 0.38, show: true, at: [X.B - 1.1, 0.7], y: 0, tilt: 0, phone: false, dur: 0.01, head: [0, 0] },       // el cinco
+    { t: L(6) - 0.2, show: false, dur: 0.01 }, { t: L(6) - 0.02, show: true, at: [X.B - 1.1, 0.7], y: 0, tilt: 0, phone: false, dur: 0.01, head: [0, 0] },       // el cinco
     { t: L(6, 5), head: [0, -18], dur: 0.5 },
     { t: L(7, 2), head: [0, 0], arm: 125, dur: 0.35 }, { t: L(7, 4), arm: 0, dur: 0.4 },
     { t: L(8, 3), head: [0, 12], dur: 0.25 }, { t: L(8, 5), head: [0, 0], dur: 0.25 }, { t: L(8, 6), head: [0, 12], dur: 0.25 }, { t: L(8, 7), head: [0, 0], dur: 0.25 },
     { t: L(9) - 0.42, show: false, dur: 0.01 }, { t: L(9) - 0.3, show: true, at: [X.C - 2.0, 0.8], dur: 0.01 },                                    // la tarea
     { t: L(9, 3), at: [X.C - 0.9, 0.8], dur: 1.0 },
-    { t: L(10, 1), arm: 70, phone: true, dur: 0.35 }, { t: L(10, 4), head: [20, 8], dur: 0.4 }, { t: L(11) - 0.3, head: [0, 0], dur: 0.2 },
-    { t: L(11) - 0.03, show: false, dur: 0.01 }, { t: L(11) + 0.3, show: true, at: [X.D - 1.6, 0.9], arm: 0, phone: false, dur: 0.01 },            // la puerta
+    { t: L(10, 1), arm: 70, phone: true, dur: 0.35 }, { t: L(10, 4), head: [20, 8], dur: 0.4 }, { t: L(11) - 0.7, head: [0, 0], dur: 0.2 },
+    { t: L(11) - 0.37, show: false, dur: 0.01 }, { t: L(11) - 0.12, show: true, at: [X.D - 1.6, 0.9], arm: 0, phone: false, dur: 0.01 },            // la puerta
     { t: L(11, 5), head: [25, 0], dur: 0.4 }, { t: L(12), head: [0, 0], dur: 0.3 },
     { t: L(12, 1), at: [X.E - 0.5, 0.9], dur: 1.5, ease: 'linear' },                         // casi nadie para: sigue andando
     { t: L(12, 2), glow: true, dur: 0.01 }, { t: L(13) - 0.05, glow: false, dur: 0.01 },
@@ -39,7 +39,7 @@ SHOTS.moves = {
     { t: L(22, 0), at: [X.G + 0.5, 0.9], rot: 70, dur: 1.0 }, { t: L(22, 0) + 1.0, rot: 25, dur: 0.4 },
   ],
   gente: [{ t: L(13) - 0.05, show: true, dur: 0.01 }, { t: L(17) - 0.05, show: false, dur: 0.01 }],
-  genteB: [{ t: L(6) + 0.1, show: true, dur: 0.01 }, { t: L(9) + 0.3, show: false, dur: 0.01 }],
+  genteB: [{ t: L(6) - 0.3, show: true, dur: 0.01 }, { t: L(9) + 0.3, show: false, dur: 0.01 }],
   genteG: [{ t: L(20) + 0.1, show: true, dur: 0.01 }],
   genteC: [{ t: L(9) + 0.3, show: true, dur: 0.01 }, { t: L(11) + 0.3, show: false, dur: 0.01 }],
   genteF: [{ t: L(17) + 0.1, show: true, dur: 0.01 }, { t: L(20) + 0.1, show: false, dur: 0.01 }],
@@ -53,14 +53,14 @@ SHOTS.cam = [
   { t: L(4, 1), dist: 9.2, az: 28, target: [2.8, 1.25, 0.3], dur: 1.1, fit: false },
   { t: L(5) - 0.05, dist: 12.6, el: 40, az: -6, target: [0.1, 0.4, 0.4], dur: 0.01, fit: false }, // oscuro: picado sobre el sofá
   { t: L(5) + 0.05, dist: 11.3, el: 44, az: 6, dur: 2.0, fit: false },
-  { t: L(6), dist: 8.8, el: 9, az: -18, target: [X.B - 0.1, 1.5, 0], dur: 0.7, fit: false }, // travelling al cinco
+  { t: L(6) - 0.4, dist: 8.8, el: 9, az: -18, target: [X.B - 0.1, 1.5, 0], dur: 0.7, fit: false }, // travelling al cinco
   { t: L(6, 4), dist: 8.8, el: 5, az: -8, target: [X.B - 0.3, 1.5, 0], dur: 1.6, fit: false },
   { t: L(7, 2), dist: 8.4, el: 9, az: 14, target: [X.B - 0.6, 1.5, 0.2], dur: 1.4, fit: false },
   { t: L(8), dist: 7.7, az: 30, dur: 2.2, fit: false },                                     // orbit
   { t: L(9) - 0.4, dist: 8.8, el: 10, az: -16, target: [X.C - 1.5, 1.3, 0.2], dur: 0.4, fit: false }, // travelling a la tarea
   { t: L(9, 3), dist: 7.9, az: 8, target: [X.C - 0.6, 1.3, 0.2], dur: 1.2, fit: false },
   { t: L(10, 1), dist: 7.4, az: 24, target: [X.C - 0.6, 1.35, 0.4], dur: 1.6, fit: false },
-  { t: L(11), dist: 8.8, el: 9, az: -20, target: [X.D - 0.8, 1.4, 0.2], dur: 0.5, fit: false }, // travelling a la puerta
+  { t: L(11) - 0.45, dist: 8.8, el: 9, az: -20, target: [X.D - 0.8, 1.4, 0.2], dur: 0.5, fit: false }, // travelling a la puerta
   { t: L(12, 1), dist: 8.8, el: 8, az: 30, target: [X.E - 0.6, 1.4, 0.6], dur: 1.5, ease: 'linear', fit: false }, // sigue andando
   { t: L(13) - 0.05, dist: 8.8, el: 14, az: -20, target: [X.E - 0.5, 1.2, 0.9], dur: 0.01, fit: false }, // oscuro: cerca
   { t: L(13) + 0.05, dist: 6.9, az: -14, dur: 2.2, fit: false },
@@ -73,7 +73,7 @@ SHOTS.cam = [
   { t: L(21), dist: 8.2, az: 12, dur: 1.8, fit: false },
   { t: L(22), dist: 13.8, el: 12, az: 6, target: [X.G + 1.85, 1.0, 0.3], dur: 1.6, fit: false }, // pull-back: el amigo
 ];
-SHOTS.invert = [{ t: L(5) - 0.05, end: L(6) - 0.05 }, { t: L(13) - 0.05, end: L(14) - 0.05 }];
+SHOTS.invert = [{ t: L(5) - 0.05, end: L(6) - 0.4 }, { t: L(13) - 0.05, end: L(14) - 0.05 }];
 SHOTS.props = [
   // A · sofá
   { id: 'sofa', type: 'sofa', at: [0, 0, 0], t0: -1, inDur: 0.01, inEase: 'linear' },
@@ -83,7 +83,7 @@ SHOTS.props = [
   { id: 'papeles', type: 'papers', n: 12, at: [3.8, 0.99, -0.15], t0: -1, inDur: 0.01, inEase: 'linear', t1: L(6) + 1.5, left: [[L(4, 3), 10], [L(4, 4), 8], [L(4, 5), 6], [L(4, 6), 4]] },
   { id: 'pila', type: 'battery', over: 'yo', px: 120, t0: L(1, 1), t1: L(5) - 0.08, levels: [[L(1, 5), 1, 0.7], [L(3, 1), 0, 0.5], [L(4, 6), 1, 0.7]] },
   { id: 'flecha', type: 'arrow', from: 'yo', to: [3.8, 1.4, -0.15], lift: 0.8, t0: L(2, 1), t1: L(3) - 0.05, drawDur: 0.7 },
-  { id: 'aro', type: 'floorring', r: 1.75, at: [0, 0, 0.1], t0: L(5), draw: L(5, 1), t1: L(6) - 0.06 },
+  { id: 'aro', type: 'floorring', r: 1.75, at: [0, 0, 0.1], t0: L(5), draw: L(5, 1), t1: L(6) - 0.45 },
   // fondos (regla 14: encuadre ocupado como la referencia)
   { id: 'paredC', type: 'wall', w: 7, h: 1.85, at: [X.C, 0, -1.6], t0: L(8), inDur: 0.01, inEase: 'linear', t1: L(11) + 0.6 },
   // B · el cinco y el temporizador
@@ -91,9 +91,9 @@ SHOTS.props = [
   { id: 'reloj5', type: 'timer', text: '5', r: 0.9, px: 470, at: [X.B + 1.0, 1.6, -0.2], t0: L(7, 3), fillFrom: L(8, 2), dur: L(11, 5) - L(8, 2), t1: L(9) - 0.44 },
   // C · la tarea
   { id: 'mesa2', type: 'desk', at: [X.C + 0.25, 0, -0.45], t0: L(9) - 0.5, inDur: 0.01, inEase: 'linear', t1: L(11) + 1.2 },
-  { id: 'papeles2', type: 'papers', key: true, n: 10, redTop: true, scale: 1.5, at: [X.C - 0.25, 0.99, 0.0], t0: L(9, 5), inDur: 0.4, t1: L(11) + 1.2, left: [[L(10, 4), 9]] },
+  { id: 'papeles2', type: 'papers', key: true, n: 10, redTop: true, scale: 1.5, at: [X.C - 0.25, 0.99, 0.0], t0: L(9, 5), inDur: 0.4, t1: L(11) - 0.3, left: [[L(10, 4), 9]] },
   { id: 'reloj5b', type: 'timer', text: '5', r: 0.36, over: 'yo', dx: 0.6, px: 150, t0: L(9, 1), fillFrom: L(8, 2), dur: L(11, 5) - L(8, 2), t1: L(12, 1) },
-  { id: 'tel', type: 'sticker', icon: 'phone', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(10, 1), t1: L(11) - 0.3 },
+  { id: 'tel', type: 'sticker', icon: 'phone', yellow: true, over: 'yo', dx: -0.6, px: 150, t0: L(10, 1), t1: L(11) - 0.5 },
   { id: 'ok', type: 'sticker', icon: 'check', yellow: true, over: 'yo', dx: -0.6, px: 130, t0: L(11, 5), t1: L(12, 1) },
   // D · puertas
   { id: 'puertas', type: 'doors', n: 4, at: [X.D + 3.4 * 1.5 - 1.0, 0, -1.2], t0: L(9), inDur: 0.01, inEase: 'linear', t1: L(13) - 0.3 },
@@ -101,8 +101,8 @@ SHOTS.props = [
   { id: 'duda', type: 'thought', text: '?', w: 220, over: 'yo', h: 0.5, t0: L(13, 2), t1: L(14) - 0.08 },
   { id: 'pila2', type: 'battery', over: 'yo', px: 120, t0: L(14, 1), t1: L(15) - 0.06, levels: [[L(14, 2), 1, 0.6]] },
   // giro: casi todos lo usan un día y lo olvidan (calendario que se tacha) / el truco: cada mañana (contador de cinco días)
-  { id: 'cal', type: 'sticker', icon: 'cal', over: 'yo', dx: -0.4, px: 150, t0: L(15, 2), t1: L(16) - 0.06 },
-  { id: 'olvido', type: 'cross', over: 'yo', dx: 0.45, px: 130, t0: L(15, 7), t1: L(16) - 0.06 },
+  { id: 'cal', type: 'sticker', icon: 'cal', over: 'yo', dx: -0.4, px: 150, t0: L(15, 5), t1: L(16) - 0.06 },
+  { id: 'olvido', type: 'cross', over: 'yo', dx: 0.45, px: 130, t0: L(15, 8), t1: L(16) - 0.06 },
   { id: 'dias', type: 'bars', n: 5, over: 'yo', px: 130, t0: L(16, 1), fillFrom: L(16, 3), each: 0.3, t1: L(17) - 0.06 },
   // F · la semana
   { id: 'recibo', type: 'receipt', at: [X.F + 0.75, 1.7, -0.2], px: 620, t0: L(17, 1), t1: L(20) - 0.06, checkAt: [0, 1, 2, 3, 4].map(i => L(18, 0) + 0.05 + i * 0.26) },

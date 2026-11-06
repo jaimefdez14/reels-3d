@@ -25,8 +25,8 @@
    "hi": "empezado"
   },
   {
-   "show": "Si las esperas, lo pendiente crece cada día.",
-   "neg": "crece"
+   "show": "Si las esperas, lo pendiente se acumula.",
+   "neg": "acumula"
   },
   {
    "show": "Prueba la regla de los cinco minutos.",
@@ -66,7 +66,7 @@
    "hi": "arrancar"
   },
   {
-   "show": "Casi todos la usan un día y la olvidan.",
+   "show": "Casi todos usan la regla un día y la olvidan.",
    "neg": "olvidan"
   },
   {
@@ -78,8 +78,8 @@
    "hi": "viernes"
   },
   {
-   "show": "Has hecho cinco tareas que evitabas.",
-   "hi": "hecho"
+   "show": "Has terminado cinco tareas que evitabas.",
+   "hi": "terminado"
   },
   {
    "show": "Y ninguna empezó con ganas.",
@@ -104,5 +104,6 @@
   "cambios": "1, 2, 4: «vienen», «luego»; 5: «si las esperas, no empiezas nunca» (antes, relleno); 6: «la regla de los cinco minutos» («minutos feos» sonaba a traducción); 9: «lo que más pereza te da» («la parte más fea», calco de ugly); 10: oración completa; 12: «Y casi nadie para»; 14-15: respuesta a la objeción concreta («arrancar»); 16: «repasas»",
   "cambios_2": "04-11 noche, revisión final (lector en frío + guionista + prueba de comprensión): 5 coste concreto; 7 «Pon un temporizador.» (Jaime); 10 oración completa; 12 segunda persona; 15-16 giro nuevo; 17-19 recompensa con puente y emoción",
   "cambios_3": "segunda pasada: 5 «lo pendiente» (antecedente); 12 sin exagerar; 15-16 concordancia con «la regla»; 18 oración completa"
- }
+ },
+ "cara": "v2"
 }
