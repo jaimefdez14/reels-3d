@@ -5,8 +5,9 @@
  "coverT": 1.6,
  "lines": [
   {
-   "show": "Deja de esperar a tener ganas.",
-   "neg": "esperar"
+   "show": "Tu falta de ganas no es el problema.",
+   "neg": "problema",
+   "pause": 0.413
   },
   {
    "show": "Crees que primero vienen las ganas.",

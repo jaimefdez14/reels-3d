@@ -121,6 +121,11 @@ Ejemplo (N1 llevado a 30 s, 13 frases y 73 palabras; no es un guion aprobado):
 4. A Jaime se le enseñan **los 3 mejores (A, B, C)** con su nota y el fotograma 0 de cada uno; elige él o acepta
    el primero.
 
+**Aprendido (N1, 07-11):** 8 ganchos, 3 evaluadores sin contexto. Ganó por unanimidad la **contradicción**
+(«Tu falta de ganas no es el problema», 41/45) y quedó la última la prohibición original («Deja de esperar a tener
+ganas», 25/45): «suena a taza motivacional y da la respuesta de golpe». Un gancho que ya dice la solución no abre
+bucle; uno que niega lo que el espectador cree, sí. Jaime lo eligió.
+
 ## 5. Comprobaciones antes de la previa (en este orden)
 
 1. **Cifras** de §0 (duración simulada, frases, palabras, caracteres).
