@@ -5,3 +5,4 @@ reels/*/previas/
 *.wav
 __pycache__/
 reels/*/blender/
+reels/*/voice/eleven_raw.json

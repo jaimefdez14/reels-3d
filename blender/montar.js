@@ -14,5 +14,11 @@ const { chromium } = require('playwright'); const { execFileSync } = require('ch
   const evf = path.join(out, 'eventos.json'), sfx = path.join(out, 'sfx.wav'); fs.writeFileSync(evf, JSON.stringify(ev)); execFileSync('python3', [path.join(__dirname, '..', 'herramientas', 'sonido.py'), evf, String(D), sfx], { stdio: 'inherit' });
   const voz = path.join(dir, 'voice', 'voz.wav'); const dest = path.join(out, reel.id + '-blender' + (opt('--nombre', '') ? '-' + opt('--nombre', '') : '') + '.mp4');
   execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', silent, '-i', voz, '-i', sfx, '-filter_complex', '[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,highpass=f=70,acompressor=threshold=0.1:ratio=3:attack=5:release=120:makeup=2,asplit=2[v][sc];[2:a]aresample=48000,pan=stereo|c0=c0|c1=c0,volume=0.9[s0];[s0][sc]sidechaincompress=threshold=0.03:ratio=5:attack=15:release=300[s];[v][s]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.9,loudnorm=I=-14:TP=-1.5:LRA=11[a]', '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', dest]);
-  fs.unlinkSync(silent); console.log('hecho', dest, D.toFixed(1) + ' s');
+  fs.unlinkSync(silent);
+  if (reel.recorte) { // [desde, hasta] en segundos: quita el silencio del principio y del final (gancho en el fotograma 0 y final en bucle)
+    const [r0, r1] = reel.recorte; const tmp = dest.replace(/\.mp4$/, '-tmp.mp4'); fs.renameSync(dest, tmp);
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-ss', String(r0), '-to', String(r1), '-i', tmp, '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-c:a', 'aac', '-b:a', '192k', dest]); fs.unlinkSync(tmp);
+    console.log('recorte', r0, '→', r1);
+  }
+  console.log('hecho', dest, D.toFixed(1) + ' s');
 })();

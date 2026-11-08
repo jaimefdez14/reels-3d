@@ -278,7 +278,7 @@ const CAPTION_TOP = 175;
 function captionLayout(x, L, fs0, maxW, marginX) { // el cuerpo más grande que quepa: 2 líneas a 142-128 px o 3 líneas a 116-100 px
   for (const [fs, maxRows] of [[fs0, 2], [128, 2], [116, 3], [104, 3], [92, 3]]) { x.font = `500 ${fs}px NotoCondT`; const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
     if (row + 1 <= maxRows || fs === 92) return { tokens, layout, rows: row + 1, fs, lh: Math.round(fs * 1.2) }; } }
-function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
+function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = (li === 0 && REEL.ganchoFijo) ? -1 : words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
 function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 142, W - 2 * marginX - 40, marginX); x.restore(); const top = CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: top - fs, w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (top - fs) }; }
 function drawCaptions(x, t, inv) {
   const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60;
@@ -288,7 +288,7 @@ function drawCaptions(x, t, inv) {
   // 05-11 (Jaime): sin rótulo pequeño arriba a la izquierda; «Te dices:» / «Estás pensando:» van en el titular y los dice la voz.
   const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
   for (let i = 0; i < tokens.length; i++) {
-    const wtime = words[Math.min(i, words.length - 1)][0]; if (t < wtime) break;
+    const wtime = (a.li === 0 && REEL.ganchoFijo) ? -1 : words[Math.min(i, words.length - 1)][0]; if (t < wtime) break; // ganchoFijo: el gancho entero ya en el fotograma 0
     const pop = tw(t, wtime, 0.14, 'back'); const lay = layout[i]; const X = marginX + lay.xoff, Y = top + lay.row * lh;
     const clean = tokens[i].toLowerCase().replace(/[^a-záéíóúüñ0-9]/g, '');
     const isHi = hiW && hiW.split(' ').includes(clean), isNeg = negW && negW.split(' ').includes(clean);
