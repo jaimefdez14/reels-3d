@@ -33,7 +33,7 @@ SHOTS.moves = {
     { t: L(16, 1), at: [X.E + 4.0, 0.9], dur: 1.6, ease: 'linear' },
     { t: L(17) + 0.1, at: [X.F - 0.75, 0.8], dur: 0.01 },                                    // la semana
     { t: L(16, 4), head: [15, 0], dur: 0.4 }, { t: L(16, 6), head: [0, 0], dur: 0.4 },
-    { t: L(17, 3), head: [-25, 0], dur: 0.4 }, { t: L(18), head: [0, 0], dur: 0.3 }, { t: L(18, 2), hop: 0.4 }, { t: L(18, 5), head: [12, 6], dur: 0.4 }, { t: L(19, 3), head: [0, 16], dur: 0.4 }, { t: L(20), head: [0, 0], dur: 0.3 },
+    { t: L(17, 3), head: [-25, 0], dur: 0.4 }, { t: L(18), head: [0, 0], dur: 0.3 }, { t: L(18, 2), hop: 0.4 }, { t: L(18, 5), head: [12, 6], dur: 0.4 }, { t: L(19, 4), head: [0, 16], dur: 0.4 }, { t: L(20), head: [0, 0], dur: 0.3 },
     { t: L(20) - 0.03, show: false, dur: 0.01 }, { t: L(20) + 0.3, show: true, at: [X.G - 1.2, 0.8], dur: 0.01 },                                    // final
     { t: L(21, 1), arm: 125, glow: true, dur: 0.35 }, { t: L(22), glow: false, dur: 0.01 }, { t: L(21, 1) + 0.7, arm: 0, dur: 0.4 },
     { t: L(22, 0), at: [X.G + 0.5, 0.9], rot: 70, dur: 1.0 }, { t: L(22, 0) + 1.0, rot: 25, dur: 0.4 },
@@ -106,7 +106,7 @@ SHOTS.props = [
   { id: 'dias', type: 'bars', n: 5, over: 'yo', px: 130, t0: L(16, 1), fillFrom: L(16, 3), each: 0.3, t1: L(17) - 0.06 },
   // F · la semana
   { id: 'recibo', type: 'receipt', at: [X.F + 0.75, 1.7, -0.2], px: 620, t0: L(17, 1), t1: L(20) - 0.06, checkAt: [0, 1, 2, 3, 4].map(i => L(18, 0) + 0.05 + i * 0.26) },
-  { id: 'pila3', type: 'battery', over: 'yo', dx: -0.5, px: 110, t0: L(19, 3), t1: L(20) - 0.06, levels: [[0, 0.05, 0.01]] },
+  { id: 'pila3', type: 'battery', over: 'yo', dx: -0.5, px: 110, t0: L(19, 4), t1: L(20) - 0.06, levels: [[0, 0.05, 0.01]] },
   // G · final
   { id: 'pila4', type: 'battery', over: 'yo', px: 120, t0: L(20, 1), t1: L(21) - 0.06, levels: [[0, 0.05, 0.01]] },
   { id: 'cruz', type: 'cross', over: 'yo', dx: 0.0, px: 140, t0: L(20, 2), t1: L(21) - 0.06 },

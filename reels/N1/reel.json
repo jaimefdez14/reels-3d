@@ -38,7 +38,7 @@
    "hi": "temporizador"
   },
   {
-   "show": "Te dices: «Solo cinco minutos. Luego paro.»",
+   "show": "Te dices: «Solo cinco minutos. Luego paro».",
    "hi": "paro"
   },
   {
@@ -58,7 +58,7 @@
    "hi": "sigas"
   },
   {
-   "show": "Piensas: «Cinco minutos no sirven para nada.»",
+   "show": "Piensas: «Cinco minutos no sirven para nada».",
    "neg": "nada",
    "objecion": true
   },
@@ -71,28 +71,34 @@
    "neg": "olvidan"
   },
   {
-   "show": "El truco es repetirla cada mañana.",
-   "hi": "cada mañana"
+   "show": "El truco: cinco minutos cada mañana.",
+   "hi": "cada mañana",
+   "pause": 0.478
   },
   {
    "show": "Llega el viernes y repasas tu semana.",
-   "hi": "viernes"
+   "hi": "viernes",
+   "pause": 0.55
   },
   {
    "show": "Has terminado cinco tareas que evitabas.",
-   "hi": "terminado"
+   "hi": "terminado",
+   "pause": 0.55
   },
   {
-   "show": "Y ninguna empezó con ganas.",
-   "neg": "ganas"
+   "show": "Y no empezaste ninguna con ganas.",
+   "neg": "ganas",
+   "pause": 0.352
   },
   {
-   "show": "No necesitas motivación.",
-   "neg": "motivación"
+   "show": "No necesitas ganas.",
+   "neg": "ganas",
+   "pause": 0.865
   },
   {
-   "show": "Necesitas un temporizador.",
-   "hi": "temporizador"
+   "show": "Necesitas cinco minutos.",
+   "hi": "cinco minutos",
+   "pause": 0.651
   },
   {
    "show": "Mándaselo a quien diga «mañana lo hago».",
