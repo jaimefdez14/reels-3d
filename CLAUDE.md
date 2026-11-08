@@ -99,10 +99,12 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 20. **Reels de 30 segundos con bucles abiertos (06-11-2026).** Jaime: «de cara al futuro, vamos a trabajar con reels más cortitos… objetivo: 30 segundos… tener clarísima la metodología de generar vídeos de open loop para generar adicción y asegurar que todos son adictivos, que tenemos buenos hooks». Norma: `docs/METODO-30S.md` (28-32 s, máx. 35; 11-13 frases; 60-75 palabras; bucles anidados y al menos 3 reenganches de tipos distintos, uno cada 5-7 s; mapa de bucles sin huecos; gancho cerrado después del 70 %; laboratorio de 8 ganchos con 3 evaluadores y 3 al elegir). Sustituye la duración y el molde de 8 bloques de `SISTEMA-3D.md` §1. Motivo añadido: un render de Blender de 30 s es la mitad que uno de 60 s, y se hace una sola vez, con todo cerrado. Jaime: «no vamos a rehacer el vídeo que ya tenemos»: N1 se queda en 61 s; el método vale para los guiones nuevos.
 
+21. **Publicar (08-11-2026).** La cuenta es **@fase.zer0** (página de Facebook «Fase Zero»), token `META_PAGE_TOKEN_3D`. Jaime: «publica en fasezero». Se publica con `python3 herramientas/publicar.py reels/ID --texto "…" [--url URL] --publicar` (sin `--publicar`, simulacro). La subida directa (rupload) dio `ProcessingFailedError` con N1; salió por URL pública: el MP4 re-codificado se sube a `publicados/ID.mp4` de esta rama (la repo es pública) y se pasa con `--url` (raw.githubusercontent.com). Queda en `publicados.jsonl`.
+    Voz de la marca: ElevenLabs `eleven_v3`, voz `qUPtETgSYRhCRb2pfOla`, una toma por reel (`herramientas/voz_eleven.py`, corta cada frase por el silencio real). **N1 publicado el 08-11:** https://www.instagram.com/reel/DffX79ejzGJ/
+
 ## Pendiente de Jaime
 
-- Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
-  ViralClips, decidir cómo se reparte el tope mensual).
+- Cómo se reparte el tope mensual de ElevenLabs con ViralClips si es la misma clave.
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
