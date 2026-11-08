@@ -53,19 +53,46 @@ def atempo(x, f):
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', a, '-filter:a', f'atempo={f:.4f}', b], check=True); y, _ = sf.read(b, dtype='float32'); return y
 
 
-segs = []; off = 0
+def silencio(desde, hasta, paso=0.01, ventana=0.03):
+    # punto de menos energía entre dos frases: la alineación de ElevenLabs puede marcar el final hasta 0,3 s antes
+    # de lo que suena (N1, «más pereza te da»), así que no se corta por la marca sino por el silencio real
+    mejor, tm = 1e9, desde
+    t = desde
+    while t <= hasta:
+        x = full[int(t * SR):int((t + ventana) * SR)]
+        e = float(np.sqrt(np.mean(x ** 2))) if len(x) else 1e9
+        if e < mejor: mejor, tm = e, t + ventana / 2
+        t += paso
+    return tm
+
+
+lims = []; off = 0
 for L in lineas:
-    a, b = off, off + len(L); off = b + 1
-    t0, t1 = cs[a], ce[b - 1]; s0, s1 = max(0, t0 - 0.03), t1 + 0.08
-    seg = level(full[int(s0 * SR):int(s1 * SR)])
+    a, b = off, off + len(L); off = b + 1; lims.append((a, b))
+cortes = [max(0, cs[0] - 0.03)]
+for k in range(len(lims) - 1):
+    fin, ini = ce[lims[k][1] - 1], cs[lims[k + 1][0]]
+    cortes.append(silencio(fin - 0.05, max(ini, fin) + 0.45))
+cortes.append(min(len(full) / SR, ce[lims[-1][1] - 1] + 0.4))
+segs = []
+for k, L in enumerate(lineas):
+    a, b = lims[k]
+    s0, s1 = cortes[k], cortes[k + 1]
+    seg = full[int(s0 * SR):int(s1 * SR)]
+    env = np.array([np.sqrt(np.mean(seg[i:i + 240] ** 2)) for i in range(0, len(seg), 240)])
+    voz = np.where(env > 10 ** (-40 / 20))[0]
+    if len(voz):
+        c0 = max(0, voz[0] * 240 - 480); c1 = min(len(seg), (voz[-1] + 1) * 240 + 1200)
+        seg = seg[c0:c1]; s0 += c0 / SR
+    seg = level(seg)
     words = []; pos = a
     for tok in L.split():
         i = texto.index(tok, pos); j = i + len(tok); pos = j
-        words.append([cs[i] - s0, ce[j - 1] - s0])
+        words.append([max(0, cs[i] - s0), ce[j - 1] - s0])
     segs.append((seg, words))
 
 viejo = json.load(open(os.path.join(d, 'timing.json'))) if '--mantener-tiempos' in args else None
-out = []; tl = []; t = 0.5; avisos = []
+out = [np.zeros(int(0.5 * SR), np.float32)]; tl = []; t = 0.5; avisos = []  # el silencio inicial va en el audio, no solo en el reloj
 for i, (seg, words) in enumerate(segs):
     dur = len(seg) / SR
     if viejo:
