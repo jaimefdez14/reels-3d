@@ -274,17 +274,20 @@ const PROPS = {
 
 // ---------- rotulación 2D ----------
 // Devuelve el rectángulo que ocupa el titular (para que los objetos no lo pisen y para el inspector).
-const CAPTION_TOP = 175;
+// Zonas seguras de Instagram (08-11, Jaime: «no se respetan los márgenes o zonas de seguridad superiores para subtítulos»):
+// arriba tapan la cabecera de Reels y la cámara (y < 250); abajo, el texto del post y el usuario (y > 1550).
+const SAFE_TOP = 250, SAFE_BOTTOM = 1550;
+const CAPTION_TOP = SAFE_TOP + 142; // línea base de la primera fila con el cuerpo mayor; con otro cuerpo se recalcula (SAFE_TOP + fs)
 function captionLayout(x, L, fs0, maxW, marginX) { // el cuerpo más grande que quepa: 2 líneas a 142-128 px o 3 líneas a 116-100 px
   for (const [fs, maxRows] of [[fs0, 2], [128, 2], [116, 3], [104, 3], [92, 3]]) { x.font = `500 ${fs}px NotoCondT`; const tokens = L.show.split(' '); const layout = []; let cx = 0, row = 0; for (let i = 0; i < tokens.length; i++) { const w = x.measureText(tokens[i].toUpperCase()).width; if (cx + w > maxW && cx > 0) { row++; cx = 0; } layout.push({ w, row, xoff: cx }); cx += w + fs * 0.26; }
     if (row + 1 <= maxRows || fs === 92) return { tokens, layout, rows: row + 1, fs, lh: Math.round(fs * 1.2) }; } }
 function activeLine(t) { const lines = REEL.lines; for (let li = 0; li < lines.length; li++) { const L = lines[li], words = TIMING.words[li]; if (!words || L.hide) continue; const t0 = (li === 0 && REEL.ganchoFijo) ? -1 : words[0][0], tEnd = words[words.length - 1][1]; const next = TIMING.words[li + 1]; const hold = next ? Math.min(next[0][0] - 0.05, tEnd + 2.2) : tEnd + 2.5; if (t >= t0 - 0.02 && t <= hold) return { li, L, words, t0, hold }; } return null; }
-function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 142, W - 2 * marginX - 40, marginX); x.restore(); const top = CAPTION_TOP; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: top - fs, w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (top - fs) }; }
+function captionRect(x, t) { const a = activeLine(t); if (!a) return null; const marginX = 60; x.save(); const { rows, layout, fs, lh } = captionLayout(x, a.L, 142, W - 2 * marginX - 40, marginX); x.restore(); const top = SAFE_TOP + fs; const wmax = Math.max(...layout.map(l => l.xoff + l.w)); return { x: marginX - 10, y: top - fs, w: wmax + 20, h: (top + (rows - 1) * lh + 30) - (top - fs) }; }
 function drawCaptions(x, t, inv) {
   const a = activeLine(t); if (!a) return; const { L, words, hold } = a; const marginX = 60;
   x.save(); x.textBaseline = 'alphabetic';
-  const top = CAPTION_TOP; const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
-  const { tokens, layout, fs, lh } = captionLayout(x, L, 142, W - 2 * marginX - 40, marginX); x.font = `500 ${fs}px NotoCondT`;
+  const outP = clamp((t - (hold - 0.25)) / 0.25, 0, 1);
+  const { tokens, layout, fs, lh } = captionLayout(x, L, 142, W - 2 * marginX - 40, marginX); x.font = `500 ${fs}px NotoCondT`; const top = SAFE_TOP + fs;
   // 05-11 (Jaime): sin rótulo pequeño arriba a la izquierda; «Te dices:» / «Estás pensando:» van en el titular y los dice la voz.
   const hiW = (L.hi || '').toLowerCase(), negW = (L.neg || '').toLowerCase();
   for (let i = 0; i < tokens.length; i++) {
@@ -364,7 +367,7 @@ function placeBillboards(t, capRect) {
   const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion), right = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion);
   const placed = []; const heads = Object.keys(actors).filter(id => actors[id].userData.head && actors[id].visible).map(id => { const [sx, sy] = toScreen(headWorld(id)); const r = headRadiusPx(id) * 1.15; return { id, x: sx - r, y: sy - r, w: 2 * r, h: 2 * r }; });
   const bodies = Object.keys(actors).filter(id => actors[id].userData.head && actors[id].visible).map(id => { const a = actors[id]; const pts = [[-0.3, 0, 0.3], [0.3, 0, 0.3], [-0.3, 0, -0.3], [0.3, 0, -0.3], [-0.25, a.userData.h * 1.02, 0], [0.25, a.userData.h * 1.02, 0]].map(([x, y, z]) => toScreen(new THREE.Vector3(x, y, z).applyMatrix4(a.matrixWorld))); const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]); const hr = headRadiusPx(id); return { id, x: Math.min(...xs) - hr * 0.2, y: Math.min(...ys) - hr * 0.3, w: Math.max(...xs) - Math.min(...xs) + hr * 0.4, h: Math.max(...ys) - Math.min(...ys) + hr * 0.3 }; });
-  const zoneTop = (capRect ? capRect.y + capRect.h : CAPTION_TOP - 60) + 24, margin = 40;
+  const zoneTop = (capRect ? capRect.y + capRect.h : SAFE_TOP) + 24, margin = 40;
   for (const m of props) {
     if (!m.visible || !m.userData.billboard || m.userData.bracketOf) continue; const p = m.userData.spec; if (p.over && actors[p.over] && !actors[p.over].visible) { m.visible = false; continue; }
     let pos; if (p.over) { const h = headWorld(p.over); const [sx, sy] = toScreen(h); const wpp = worldPerPixel(h); const rpx = headRadiusPx(p.over); pos = h.clone().add(up.clone().multiplyScalar((rpx + 50) * wpp + m.userData.size[1] * (p.scale ?? 1) / 2)).add(right.clone().multiplyScalar((p.dx ?? 0))); }

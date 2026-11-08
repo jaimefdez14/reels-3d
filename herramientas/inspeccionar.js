@@ -21,12 +21,15 @@ const { chromium } = require('playwright'); const path = require('path');
     }
     for (const h of f.heads) if (f.caption && ov(h, f.caption)) add('hc' + h.id, `la cabeza de ${h.id} entra en el titular`);
     // regla 9 (Jaime, 04-11): ningún personaje principal se corta, en ningún plano ni durante un latigazo
-    for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1800) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
+    for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1550) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
     // cabezas apiladas (05-11): alguna cabeza de la multitud casi concéntrica detrás de la del protagonista durante ≥ 0,3 s seguidos (aunque sea de varios miembros al cruzar)
     { const hs = (await p.evaluate((t) => window.headStack ? window.headStack(t) : [], +t.toFixed(2))).filter(s => s.d <= s.r * 0.9);
       for (const s of hs) { const st = stack[s.actor]; if (st && t - st.last <= step + 0.01) { st.last = t; st.who.add(s.crowd + '#' + s.i); } else stack[s.actor] = { first: t, last: t, who: new Set([s.crowd + '#' + s.i]) };
         const q = stack[s.actor]; if (t - q.first >= 0.3 - 1e-6) add('stk' + s.actor + q.first, `cabezas apiladas detrás de ${s.actor} desde ${q.first.toFixed(2)} s (${[...q.who].join(', ')})`); } }
-    if (f.caption && f.caption.y + f.caption.h > 520) add('capH', `titular demasiado alto: baja hasta ${Math.round(f.caption.y + f.caption.h)} px`);
+    if (f.caption && f.caption.y + f.caption.h > 680) add('capH', `titular demasiado alto: baja hasta ${Math.round(f.caption.y + f.caption.h)} px`);
+    // zonas seguras de Instagram (08-11, Jaime): nada de texto por encima de y 250 ni personajes por debajo de y 1550
+    if (f.caption && f.caption.y < 250) add('safeT', `el titular entra en la zona tapada de arriba (empieza en y ${Math.round(f.caption.y)}; mínimo 250)`);
+    for (const q of f.props) if (q.rect.y < 250 && q.rect.y + q.rect.h > 0) add('safeP' + q.id, `${q.id}: entra en la zona tapada de arriba (y ${Math.round(q.rect.y)})`);
   }
   // regla 14 (Jaime, 04-11): variedad como la referencia. Solo se exige a los reels hechos desde la regla (storyboard.md).
   if (require('fs').existsSync(path.join(dir, 'storyboard.md'))) {
