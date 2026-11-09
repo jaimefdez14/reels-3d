@@ -19,11 +19,16 @@ E.camara([
   [S4 - 0.05, [0, -380, 1], 'lin'], [TC, [0, -395, 1.05]],
 ]);
 
-// ---------- gancho ----------
+// ---------- gancho: el contador llega al día 20 y la pila se vacía; con «cuatro reglas» el anillo se dibuja y la pila se rellena ----------
 E.figura('yo', { t0: 0, t1: T1 + 0.45, x: -170, cara: true, toca: ['pila'],
-  poses: [[0, 'de_pie'], [w(0, 4), 'senalar'], [w(1, 0), 'ofrecer'], [wf(1, -1) - 0.2, 'de_pie']] });
-E.obj('pila', 'pila', { t0: 0, t1: T1 + 0.45, x: 140, n: 9, w: 190, hh: 30, k: [[0, 9]], caja: [-95, -250, 190, 250], refl: true });
-E.obj('anilloH', 'anillo', { t0: w(0, 6) - 0.1, t1: T1 + 0.45, x: -10, y: -250, rx: 340, ry: 285, p: [[w(0, 6) - 0.1, 0], [wf(0, -1) + 0.3, 1, 'out']], rodea: true });
+  poses: [[0, 'de_pie'], [w(0, 5), 'triste'], [w(0, 10), 'senalar'], [w(1, 0), 'ofrecer'], [wf(1, -1) - 0.2, 'de_pie']],
+  sonrisa: [[w(0, 5), -0.6], [w(0, 10), -0.6], [w(0, 12), 1.2]] });
+E.obj('diaH', 'contador', { t0: 0.15, t1: w(0, 9), x: 140, y: -330, v: [[0.3, 1], [w(0, 3) + 0.1, 20, 'inout']], pre: 'día', size: 70, col: 'txt', miles: false,
+  luz: [[w(0, 7), 1], [w(0, 9), 0.2]], caja: [-130, -40, 260, 80] });
+E.obj('pila', 'pila', { t0: 0, t1: T1 + 0.45, x: 140, n: 9, w: 190, hh: 30, k: [[0, 9], [w(0, 4), 9], [w(0, 7) + 0.1, 0, 'in'], [w(0, 11), 0], [wf(0, -1) + 0.4, 9, 'out']], caja: [-95, -250, 190, 250], refl: true });
+E.obj('anilloH', 'anillo', { t0: w(0, 10) - 0.1, t1: T1 + 0.45, x: -10, y: -250, rx: 340, ry: 285, p: [[w(0, 10) - 0.1, 0], [wf(0, -1) + 0.3, 1, 'out']], rodea: true });
+E.obj('chH', 'chispas', { t0: wf(0, -1) + 0.4, t1: wf(0, -1) + 1.2, x: 140, y: -150, r0: 120, r1: 220, inspeccion: false });
+E.golpe(wf(0, -1) + 0.4, 0.04);
 
 // ---------- 1 · págate primero ----------
 E.numero(1, T1, S1, { hacia: 'pila1' });
