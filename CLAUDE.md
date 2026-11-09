@@ -15,8 +15,10 @@ de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entr
 - `docs/SISTEMA-3D.md`: el molde de guion de 8 bloques, el lenguaje visual y las comprobaciones. **Es la norma creativa.**
 - `docs/REDACCION.md`: cómo se escribe cada frase del molde para que se narre bien (regla 14).
 - `motor/`: el motor (Three.js, determinista: `window.seek(t)`), `build.py`, `render.js`, fuentes y vendor.
-- `herramientas/`: `frames.js` (fotogramas), `sheet.py` (hoja de contactos), `kokoro_tts.py` (voz gratuita de previas).
-- `reels/<ID>/`: `reel.json` (guion: `lines[{show, say, hi, neg, voice, pause, hide}]`), `shots3d.js` (escena),
+- `herramientas/`: `frames.js` (fotogramas), `sheet.py` (hoja de contactos), `voz.py` (voz Kokoro de previas + `timing.json`;
+  instalación: venv en `/root/kokoro-venv` con `requirements-kokoro.txt` y los modelos de las *releases* de kokoro-onnx
+  `model-files-v1.0` en `~/.cache/hyperframes/tts/{models,voices}`), `redaccion.py` (guion).
+- `reels/<ID>/`: `reel.json` (guion: `lines[{show, say, hi, neg, voice, pause, hide, join}]`), `shots3d.js` (escena),
   `timing.json` (tiempos por palabra de la voz), `voice/voz.wav`, `out/`.
 
 ## Comandos
@@ -48,8 +50,8 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 2. **Inspiración literal de los cinco reels de referencia** (03-11-2026): «el objetivo no es copiar estos, sino tener la
    capacidad de replicarlo exactamente para aplicarlo a los temas de los que yo quiero hablar». Se sigue el molde de
    `docs/SISTEMA-3D.md` §1 y el lenguaje visual de §2 sin reinterpretarlos.
-3. **Castellano de España**, natural, frases completas, ≤ 45 caracteres por subtítulo; segunda persona; sin cifras
-   ni fuentes de plantilla; una frase literal entrecomillada que el espectador pueda decir.
+3. **Castellano de España**, natural, frases completas, ≤ 45 caracteres por subtítulo; segunda persona; cifras sí
+   (regla 14), fuentes de plantilla no; una frase literal entrecomillada que el espectador pueda decir.
 4. **Dinero y OK:** no se gasta voz de pago sin decir antes la cifra de caracteres y sin su OK; primero previa con
    Kokoro (gratis) y OK de Jaime; nada se publica sin su OK explícito. Las claves solo como secretos del entorno.
 5. **Trato:** directo y corto; comprobar antes de afirmar; decir lo que no se ha podido comprobar (la voz no se oye
@@ -82,7 +84,9 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    leído en voz alta antes de cortar titulares, lo nuevo al final, cada frase retoma la anterior, nada de «Pero / Además /
    En cambio» al empezar, sin calcos ni muletillas, un «por eso» reconocible, giro hacia la mitad, remate ≤ 10 palabras
    que vuelve al gancho, envío a alguien reconocible, registro de Madrid). `herramientas/redaccion.py` tiene que decir
-   `ok` antes de hacer escenas. Las cifras siguen prohibidas (regla 3) salvo que Jaime diga otra cosa.
+   `ok` antes de hacer escenas. Jaime: «con cifras sin problema y ok a lo de la voz»: cifras permitidas (5 como mucho,
+   comparadas, con su unidad y de dónde salen dentro de la frase), y la voz lee la frase entera: `"join": true` en una
+   línea la une a la siguiente en una sola toma (`herramientas/voz.py`), y los titulares se parten después.
 
 ## Pendiente de Jaime
 

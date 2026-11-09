@@ -5,7 +5,7 @@ Uso: python3 herramientas/redaccion.py reels/ID   → imprime «ok» o la lista 
 
 Comprueba lo que se puede contar: conectores de pegamento al empezar, calcos y muletillas, jerga y
 latinoamericanismos, comillas inglesas, paréntesis y rayas, longitud de titulares, puntos suspensivos,
-amarillo y rojo en la misma línea, objeción con «Estás pensando:» hacia la mitad, cierres prohibidos y envío final.
+amarillo y rojo en la misma línea, más de 5 cifras, líneas sin cerrar sin "join", objeción con «Estás pensando:» hacia la mitad, cierres prohibidos y envío final.
 No ve el hilo ni el orden de las palabras: eso se revisa leyendo en voz alta.
 """
 import json, re, sys
@@ -76,8 +76,14 @@ def avisos(reel):
                 out.append(f'{q}: espacio antes de € y %')
             if campo == 'show':
                 susp += s.count('…') + s.count('...')
+        s = L.get('show') or ''
+        if not L.get('join') and i < n - 1 and not re.search(r'[.:;?!»]$', s.strip()):
+            out.append(f'{i} «{s}»: no termina en punto, dos puntos o interrogación y no lleva "join" (toma suelta)')
         if L.get('hi') and L.get('neg'):
             out.append(f'{i}: amarillo y rojo en la misma línea')
+    cifras = [m for L in lines for m in re.findall(r'\d[\d.,]*\d|\d', L.get('show') or '')]
+    if len(cifras) > 5:
+        out.append(f'{len(cifras)} cifras ({", ".join(cifras)}); 5 como mucho, comparadas y con su unidad')
     if susp > 1:
         out.append(f'{susp} puntos suspensivos (máx. 1 por vídeo)')
     obj = [i for i, L in enumerate(lines) if (L.get('voice') or '').lower().startswith('estás pensando')]

@@ -29,8 +29,9 @@ en la frase (orden de las palabras, hilo, calcos, puntuación para la voz, regis
 Reglas de escritura (añaden a las 17, 34, 37, 38, 39, 43 y 48):
 - Cada subtítulo es una oración completa, ≤ 45 caracteres, 2 líneas como mucho en el titular.
 - Una palabra marcada por frase (amarillo = hazlo, rojo = no lo hagas). Nunca las dos en la misma frase.
-- Ninguna cifra, ningún «según un estudio». Si entra el libro, entra en una frase que avanza («Lo mejor de esta
-  técnica lo cuenta Keith Ferrazzi: nunca comas solo»), nunca como fuente de plantilla (regla 48).
+- Cifras sí (Jaime, 09-11-2026): 5 como mucho, comparadas y con su unidad; de dónde sale el dato va dentro de la
+  frase («En un experimento de 1994, unos estudiantes…»), nunca «según un estudio» de plantilla. Si entra el libro,
+  entra en una frase que avanza («Lo mejor de esta técnica lo cuenta Keith Ferrazzi: nunca comas solo»).
 - Nombre inventado y detalle doméstico: «Digamos que se llama Daniel.» «Tu chaqueta es increíble.»
 - La objeción se escribe literal, en la voz del espectador, y se contesta en ≤ 5 palabras.
 - Remate: dos frases paralelas; la segunda invierte la primera. Sin resumen, sin «recuerda que».

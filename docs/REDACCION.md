@@ -60,6 +60,9 @@ Ganchos válidos en este formato, por orden de preferencia: **prohibición** («
   y cortas: tres largas seguidas cansan, tres cortas seguidas suenan a telegrama.
 - **Frases de ≤ 4 palabras**, solo como remate pegado a la anterior: «Pues no.», «Dos, sí.», «Y contestan.» La
   referencia vive de ellas (es su latido), pero siempre detrás de una frase que las prepara.
+- **Cifras** (Jaime: «con cifras sin problema»): 5 como mucho por guion, siempre comparadas y con su unidad
+  («14 céntimos; a mano, hasta 45»). De dónde sale el dato, dentro de la frase: «En un experimento de 1994, unos
+  estudiantes…». Nada de «según un estudio». Que el dato no exagere: 1,65 veces no es «casi el doble».
 - **Algo nuevo cada 3-5 s** en la voz (un dato, una imagen, una consecuencia) y cada 1-2 s en la escena (regla 6).
 
 ## 4. El hilo: cada frase nace de la anterior
@@ -120,9 +123,11 @@ no «salario neto». Sin «esto / lo / el resto / ese dinero» sin referente cla
 - Por grupos de sentido. No se separa el artículo de su nombre, el número de su unidad ni la preposición de lo que
   sigue.
 - Cada línea termina en punto, dos puntos o interrogación, y la siguiente empieza con mayúscula.
-- **Limitación del motor:** `herramientas/voz.py` genera una toma de voz por línea, así que la entonación se corta
-  donde se corta el titular. Mientras no haya una opción para leer una frase entera y partirla después, cada línea
-  tiene que sonar bien sola: una frase hablada larga se parte en dos frases completas, no en dos trozos.
+- **La voz lee la frase entera** (Jaime, 09-11-2026): una línea con `"join": true` sigue en la siguiente, y
+  `herramientas/voz.py` lee el grupo en una sola toma; el corte entre titulares se ajusta al silencio más cercano de
+  la voz. Así una frase de 8-14 palabras se parte en dos titulares sin romper la entonación:
+  `{"show": "Por eso hay propósitos de enero", "join": true}, {"show": "que no llegan a febrero."}`.
+  Una línea sin `join` es una toma suelta y tiene que terminar en punto, dos puntos o interrogación.
 
 ## 7. Ejemplo: N6 antes y después
 
@@ -156,7 +161,8 @@ Después (mismo molde, mismos pulsos de R4):
 | Gancho | Prohibición o sustitución | Cinco tipos | Prohibición o sustitución primero; creencia o «tuyo» si la idea no admite prohibición |
 | Giro | «Pero que te recuerden no basta.» | «Pero» prohibido al empezar | «Que te recuerden no basta.» / «Lo curioso es que…» |
 | Cierre | Remate espejo + «Envíaselo a…» | Resumen ≤ 10 palabras que vuelve al gancho + envío concreto | Las dos cosas: el remate espejo es el resumen; el envío nombra a una persona reconocible |
-| Prueba del dato | Sin cifras ni fuentes (regla 3) | 4-5 cifras comparadas, con de dónde salen dentro de la frase | **Sigue la regla 3**. Si Jaime quiere un formato «por dentro» con datos, lo decide él |
+| Prueba del dato | La referencia no da cifras ni fuentes | 4-5 cifras comparadas, con de dónde salen dentro de la frase | **Cifras sí** (Jaime, 09-11-2026), con las condiciones de la guía (§3) |
+| Titulares cortos | Una toma de voz por titular | La frase se lee entera | `"join": true` une titulares en una toma (§6) |
 | Jerga | «Tienes que conocer a este tío» (traducción de R1) | «tío» no | Sin jerga, también en los bocadillos de terceros |
 
 ## 9. Repaso antes de dar un guion por bueno
@@ -176,10 +182,12 @@ Redacción (guía):
 - [ ] ¿Lo nuevo va al final de cada frase?
 - [ ] ¿Sin calcos, sin muletillas, sin «esto / lo / el resto» sin referente?
 - [ ] ¿Hay un «por eso» que el espectador reconozca y un giro hacia la mitad?
+- [ ] ¿Las cifras son 5 o menos, comparadas, con unidad y con su origen dentro de la frase?
 - [ ] ¿El remate vuelve al gancho en ≤ 10 palabras, y el envío nombra a alguien reconocible?
 - [ ] ¿Lo diría así una persona de Madrid en un bar?
 
 Automático: `python3 herramientas/redaccion.py reels/ID` tiene que decir `ok` (comprueba lo que se puede contar:
-conectores prohibidos, calcos y muletillas, jerga, comillas, paréntesis y rayas, longitud de titulares, suspensivos,
+conectores prohibidos, calcos y muletillas, jerga, comillas, paréntesis y rayas, longitud de titulares, más de 5
+cifras, líneas sin cerrar que no llevan `join`, suspensivos,
 amarillo y rojo juntos, objeción, cierre prohibido y envío). El hilo, el orden de las palabras y la lectura en voz alta
 no los ve: son trabajo de quien escribe.
