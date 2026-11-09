@@ -64,10 +64,10 @@ orb.forEach(([x, y], i) => {
 // ---------- 5 · Pareto: unas pocas tareas ----------
 E.numero(5, N[4].T, N[4].S, { hacia: 'rejilla' });
 E.figura('yo5', { t0: N[4].S - 0.1, t1: TC, x: -380, poses: [[0, 'de_pie'], [w(14, 0), 'senalar'], [w(15, 3), 'de_pie']] });
-E.obj('rejilla', 'cuadricula', { t0: N[4].S - 0.1, t1: TC, x: 120, y: -330, cols: 5, rows: 4, lado: 70, gap: 14, on: [2, 8, 16], r: 60,
+E.obj('rejilla', 'cuadricula', { t0: N[4].S - 0.1, t1: TC, x: 120, y: -330, cols: 5, rows: 4, lado: 70, gap: 14, on: [2, 8, 11, 16], r: 60,   // dos de cada diez
   p: [[w(14, 0), 0], [w(14, 3), 1]], apagar: [[w(14, 4), 0], [wf(14, -1), 1], [w(15, 3), 1], [w(15, 4), 0.4]], caja: [-210, -168, 420, 336] });
 
-// ---------- cierre: las cinco monedas y pregunta a comentarios ----------
+// ---------- cierre: las cinco monedas (los errores ya tienen nombre) y envío ----------
 for (let i = 0; i < 5; i++) {
   const a = TC + 0.15 + i * 0.16;
   E.obj('c' + (i + 1), 'moneda', { t0: a, t1: w(17, 0), capa: 'pantalla', x: 540 + (i - 2) * 130, y: 960, r: 46, n: i + 1, pop: true, sfx: i === 0 });
@@ -75,5 +75,4 @@ for (let i = 0; i < 5; i++) {
 E.figura('yoA', { t0: w(17, 0), t1: D + 1, x: 0, poses: [[0, 'de_pie'], [wf(17, -1) - 0.6, 'senalar']] });
 E.figura('gente1', { t0: w(17, 0), t1: D + 1, x: [[w(17, 0), -460], [w(17, 0) + 1.4, -300]], color: 'gris', fondo: true, poses: [[0, 'andar'], [w(17, 0) + 1.4, 'de_pie']] });
 E.figura('gente2', { t0: w(17, 0), t1: D + 1, x: [[w(17, 0), 460], [w(17, 0) + 1.4, 300]], dir: -1, color: 'gris', fondo: true, poses: [[0, 'andar'], [w(17, 0) + 1.4, 'de_pie']] });
-E.obj('chat', 'bocadillo', { t0: w(17, 0) + 0.2, t1: wf(17, -1) - 0.6, x: 130, y: -560, w: 120, h: 84, pop: true, on: 1, caja: [-70, -45, 140, 116] });
-E.obj('seguir', 'seguir', { t0: wf(17, -1) - 0.5, t1: D + 1, x: 150, y: -560, r: 56, pop: true });
+E.obj('enviar', 'enviar', { t0: w(17, 1), t1: D + 1, x: 150, y: -560, r: 56, pop: true, vuelo: [[wf(17, -1), 0], [wf(17, -1) + 0.5, 1, 'in']] });

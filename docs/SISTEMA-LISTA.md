@@ -16,9 +16,9 @@ Lista numerada de **3, 4 o 5 puntos**, 45-60 s, **130-170 palabras**, voz a ~160
 | · | Instrucción con dosis | «El día que cobras, aparta una parte antes de pagar nada.» Una medida pequeña: cinco minutos, dos días, una parte | El muñeco **hace** la instrucción con un objeto |
 | · | Voz interior o ejemplo | «Hoy tu cabeza dice: *«Me lo merezco».*» | Objeto que aparece (corazón, maraña, bocadillo) |
 | · | Golpe del punto | Frase corta y seca, a veces con humor: «Hasta el mes que viene.» «Dos días después, ya no te lo mereces tanto.» «Dale menos tiempo y acabará antes.» | El objeto cambia de estado (se apaga, se cierra, se alisa, se rellena) |
-| fin | Cierre | Guardar: «Guárdalo para el día que cobres.» · Comentar: «¿Cuál de las cinco te ha pasado esta semana?» · Seguir: «Y sígueme para más.» | Resumen visual (tarjetas 1-n con nombre + marcapáginas, o las n monedas) e icono de seguir |
+| fin | Cierre (regla 17, `REDACCION.md`) | Remate de ≤ 10 palabras que vuelve al gancho + envío: «Primero tú; después, todo lo demás. Mándaselo a quien a día veinte ya está a cero.» (ya no «guárdalo», «sígueme» ni pregunta a comentarios) | Resumen visual (tarjetas 1-n con nombre, o las n monedas) e icono de enviar (`enviar`) |
 
-Reglas de escritura:
+Reglas de escritura (cada frase, además, con `docs/REDACCION.md`, regla 17):
 - Segunda persona, imperativo, presente. Frases de 3-10 palabras; subtítulos de ≤ 32 caracteres por línea.
 - **Cada punto cabe en 7-12 s** y se entiende solo. No hay objeción ni escena de recompensa: la tensión es la lista.
 - **Una dosis concreta por punto** (cinco minutos, dos días, una parte), escrita en letra. No son estadísticas: no se

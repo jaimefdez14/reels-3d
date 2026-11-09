@@ -28,9 +28,9 @@ E.obj('anilloH', 'anillo', { t0: w(0, 6) - 0.1, t1: T1 + 0.45, x: -10, y: -250, 
 // ---------- 1 · págate primero ----------
 E.numero(1, T1, S1, { hacia: 'pila1' });
 E.figura('yo1', { t0: S1 - 0.1, t1: T2 + 0.45, x: -40, cara: true, toca: ['pila1', 'tarro', 'm1', 'm2', 'm3'],
-  poses: [[0, 'de_pie'], [w(3, 3), 'coger'], [w(3, 5), { lean: 10, hf: 6, kf: 6, hb: -8, kb: 6, sf: -40, ef: 10, sb: -20, eb: 10, cab: 2 }, 0.45], [w(3, 8), 'meter'], [w(4, 0), 'de_pie'], [w(4, 4), 'senalar']] });
+  poses: [[0, 'de_pie'], [w(3, 3), 'coger'], [w(3, 5), { lean: 10, hf: 6, kf: 6, hb: -8, kb: 6, sf: -40, ef: 10, sb: -20, eb: 10, cab: 2 }, 0.45], [w(3, 8), 'meter'], [w(4, 1), 'de_pie'], [w(4, 5), 'senalar']] });
 E.obj('pila1', 'pila', { t0: S1 - 0.1, t1: T2 + 0.45, x: 200, n: 9, w: 190, hh: 30, k: [[S1, 0], [S1 + 0.9, 9, 'out'], [w(3, 4), 9], [w(3, 8), 6]], caja: [-95, -250, 190, 250], refl: true, sobrevive: true, r: 70, oy: -110 });
-E.obj('tarro', 'tarro', { t0: w(3, 3) - 0.2, t1: T2 + 0.45, x: -330, pop: true, nivel: [[w(3, 5), 0], [w(3, 9), 0.45]], tapa: [[w(4, 2), 0], [w(4, 3) + 0.2, 1, 'out']], luz: [[w(4, 4), 1], [w(4, 6), 0.35]], w: 200, h: 270, caja: [-100, -270, 200, 270], refl: true });
+E.obj('tarro', 'tarro', { t0: w(3, 3) - 0.2, t1: T2 + 0.45, x: -330, pop: true, nivel: [[w(3, 5), 0], [w(3, 9), 0.45]], tapa: [[w(4, 3), 0], [w(4, 4) + 0.2, 1, 'out']], luz: [[w(4, 5), 1], [w(4, 7), 0.35]], w: 200, h: 270, caja: [-100, -270, 200, 270], refl: true });
 [0, 1, 2].forEach(i => { const a = w(3, 4) + i * 0.28; E.obj('m' + (i + 1), 'moneda', { t0: a, t1: a + 0.95, entra: 0.1, sale: 0.15, r: 22, n: '', libre: true, x: [[a, 200], [a + 0.9, -330, 'inout']], y: [[a, -210 + i * 22], [a + 0.45, -470], [a + 0.9, -170, 'in']], sfx: false }); });
 
 // ---------- 2 · una cuenta para cada cosa ----------
@@ -57,8 +57,8 @@ E.obj('mesa', 'escritorio', { t0: S4 - 0.1, t1: TC, x: 40, silla: true, brillo: 
 E.obj('dias', 'dias', { t0: S4 - 0.1, t1: w(14, 0), x: 0, y: -520, luz: [[w(13, 5), -1], [w(13, 6), 6]], caja: [-322, -32, 644, 64], r: 30 });
 E.obj('reloj5', 'temporizador', { t0: w(14, 0), t1: w(15, 0) + 0.3, x: 0, y: -520, r: 52, texto: '5', sub: 'MIN', pop: true, p: [[w(14, 0) + 0.3, 0], [wf(14, -1), 1]], hecho: [[wf(14, -1), 0], [wf(14, -1) + 0.3, 1]] });
 
-// ---------- cierre: resumen + guardar, y seguir ----------
+// ---------- cierre: resumen (vuelve al gancho) y envío ----------
 E.obj('resumen', 'resumen', { t0: TC, t1: w(16, 6), capa: 'pantalla', x: 540, y: 960, items: ['Págate', 'Separa', 'Espera', 'Repasa'], gap: 200,
-  p: [[TC, 0], [TC + 0.9, 4, 'lin']], guardar: [[TC + 0.8, 0], [TC + 1.1, 1]], lleno: [[w(16, 3), 0], [w(16, 4), 1]], caja: [-400, -60, 800, 300] });
+  p: [[TC, 0], [TC + 0.9, 4, 'lin']], caja: [-400, -60, 800, 300] });
 E.figura('yo5', { t0: w(16, 6), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(16, 7), 'senalar']] });
-E.obj('seguir', 'seguir', { t0: w(16, 7), t1: D + 1, x: 120, y: -360, r: 64, pop: true });
+E.obj('enviar', 'enviar', { t0: w(16, 7), t1: D + 1, x: 120, y: -360, r: 64, pop: true, vuelo: [[wf(16, -1), 0], [wf(16, -1) + 0.5, 1, 'in']] });

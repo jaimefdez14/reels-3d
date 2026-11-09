@@ -1,0 +1,78 @@
+{
+  "id": "L3",
+  "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+  "titulo": "Tres pasos para que tu jefe te tome en serio",
+  "idea": "L3 de docs/IDEAS-2026-11-09.md. Molde de B-R1 (identidad: el muñeco gris se vuelve amarillo, anillo de promesas cumplidas, 3 puntos sueltos, fondo negro, subtítulo en dos líneas). Escrito con docs/REDACCION.md (regla 17).",
+  "coverT": 1.8,
+  "lines": [
+    {
+      "show": "Tres pasos para que tu jefe / *te tome en serio.*",
+      "pause": 0.35
+    },
+    {
+      "show": "Y ninguno es / *echar más horas.*",
+      "pause": 0.5
+    },
+    {
+      "show": "Número uno: // *llega con la solución.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "No le lleves solo el problema. / *Llévale dos salidas.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Y dile cuál / *elegirías tú.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Por eso te llama a ti / *cuando algo se tuerce.*",
+      "pause": 0.55
+    },
+    {
+      "show": "Número dos: // *pon fecha y cúmplela.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "No digas «lo miro». / *Di «lo tienes el jueves».*",
+      "pause": 0.3
+    },
+    {
+      "show": "Y el jueves, *lo tiene.*",
+      "pause": 0.35
+    },
+    {
+      "show": "Tres fechas cumplidas valen más / *que diez horas extra.*",
+      "pause": 0.55
+    },
+    {
+      "show": "Número tres: // *cuenta lo que has hecho.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "Una vez al mes, / *tres líneas en un correo.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Lo que no cuentas, / *para tu jefe no existe.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Y no es presumir: / *es ahorrarle el trabajo de buscarlo.*",
+      "pause": 0.55
+    },
+    {
+      "show": "No son tus horas: / *son las fechas que cumples.* // Mándaselo a quien echa horas / *y nadie se entera.*",
+      "pause": 0.3,
+      "pausa_media": 0.5
+    }
+  ],
+  "redaccion": {
+    "fecha": "2026-11-09",
+    "regla": "17 (docs/REDACCION.md)",
+    "nota": "Escrito como monólogo y cortado después. Anuncio (1) que se cierra en el punto del medio con cifras comparadas (9); «por eso» en el punto 1; golpe seco con humor (8); remate que vuelve al gancho y envío (14)."
+  }
+}

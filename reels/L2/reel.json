@@ -1,102 +1,116 @@
 {
- "id": "L2",
- "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
- "titulo": "Cinco leyes que te ahorran años de errores en el trabajo",
- "idea": "Lista de 5 leyes sobre el molde de B-R5 (cinco leyes: número + nombre de la ley + dos frases; fondo grafito, puntos unidos por línea, subtítulo blanco de una línea) con el cierre de B-R4 (pregunta a comentarios). Propuesta para Jaime, previa con Kokoro.",
- "coverT": 1.8,
- "lines": [
-  {
-   "show": "Cinco leyes que te ahorran / años de errores en el trabajo.",
-   "pause": 0.45
+  "id": "L2",
+  "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+  "titulo": "Cinco leyes que te ahorran años de errores en el trabajo",
+  "idea": "Lista de 5 leyes sobre el molde de B-R5 (cinco leyes: número + nombre de la ley + dos frases; fondo grafito, puntos unidos por línea, subtítulo blanco de una línea) con el cierre de B-R4 (pregunta a comentarios). Propuesta para Jaime, previa con Kokoro.",
+  "coverT": 1.8,
+  "lines": [
+    {
+      "show": "Cinco leyes que te ahorran / años de errores en el trabajo.",
+      "pause": 0.45
+    },
+    {
+      "show": "Primera: // la ley de Parkinson.",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "El trabajo se alarga / hasta ocupar / todo el tiempo que le des.",
+      "pause": 0.3
+    },
+    {
+      "show": "Ponle menos tiempo / y lo terminas antes.",
+      "pause": 0.55
+    },
+    {
+      "show": "Segunda: // la ley de Hofstadter.",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "Todo lleva más de lo que crees. / Aunque ya cuentes con ello.",
+      "pause": 0.3
+    },
+    {
+      "show": "Por eso, a lo que calcules, / súmale la mitad.",
+      "pause": 0.55
+    },
+    {
+      "show": "Tercera: // la navaja de Hanlon.",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "No veas mala fe / donde solo hay un despiste.",
+      "pause": 0.3
+    },
+    {
+      "show": "Ese correo sin respuesta / casi nunca va contra ti.",
+      "pause": 0.55
+    },
+    {
+      "show": "Cuarta: // el efecto Zeigarnik.",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "Lo que dejas a medias / no te deja en paz.",
+      "pause": 0.3
+    },
+    {
+      "show": "Apúntalo / y tu cabeza lo suelta.",
+      "pause": 0.55
+    },
+    {
+      "show": "Quinta: // la ley de Pareto.",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "Dos de cada diez tareas / dan ocho de cada diez resultados.",
+      "pause": 0.3
+    },
+    {
+      "show": "Haz esas dos primero. / Las otras ocho pueden esperar.",
+      "pause": 0.55
+    },
+    {
+      "show": "Los errores son los mismos: / ahora ya tienen nombre.",
+      "pause": 0.35
+    },
+    {
+      "show": "Mándaselo a quien siempre dice / «esto lo saco en una tarde».",
+      "pause": 0.3
+    }
+  ],
+  "revision_castellano": {
+    "fecha": "2026-11-09",
+    "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+    "cambios": [
+      "1: «Una: // la ley de Parkinson.» → «Primera: // la ley de Parkinson.»",
+      "2: «El trabajo se estira / hasta ocupar / todo el tiempo que le das.» → «El trabajo se alarga / hasta ocupar / todo el tiempo que le des.»",
+      "3: «Dale menos tiempo / y acabará antes.» → «Ponle menos tiempo / y lo terminarás antes.»",
+      "4: «Dos: // la ley de Hofstadter.» → «Segunda: // la ley de Hofstadter.»",
+      "5: «Todo tarda más de lo que crees. / Incluso cuando ya lo sabes.» → «Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.»",
+      "7: «Tres: // la navaja de Hanlon.» → «Tercera: // la navaja de Hanlon.»",
+      "9: «Ese correo sin contestar / casi nunca es personal.» → «Ese correo sin respuesta / casi nunca va contra ti.»",
+      "10: «Cuatro: // el efecto Zeigarnik.» → «Cuarta: // el efecto Zeigarnik.»",
+      "13: «Cinco: // la ley de Pareto.» → «Quinta: // la ley de Pareto.»",
+      "17: «Te leo en comentarios. / Y sígueme para más.» → «Te leo en los comentarios. / Y sígueme, que vienen más.»"
+    ]
   },
-  {
-   "show": "Primera: // la ley de Parkinson.",
-   "pause": 0.3,
-   "pausa_media": 0.7
-  },
-  {
-   "show": "El trabajo se alarga / hasta ocupar / todo el tiempo que le des.",
-   "pause": 0.3
-  },
-  {
-   "show": "Ponle menos tiempo / y lo terminarás antes.",
-   "pause": 0.55
-  },
-  {
-   "show": "Segunda: // la ley de Hofstadter.",
-   "pause": 0.3,
-   "pausa_media": 0.7
-  },
-  {
-   "show": "Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.",
-   "pause": 0.3
-  },
-  {
-   "show": "Calcula lo que vas a tardar / y súmale la mitad.",
-   "pause": 0.55
-  },
-  {
-   "show": "Tercera: // la navaja de Hanlon.",
-   "pause": 0.3,
-   "pausa_media": 0.7
-  },
-  {
-   "show": "No veas mala fe / donde solo hay un despiste.",
-   "pause": 0.3
-  },
-  {
-   "show": "Ese correo sin respuesta / casi nunca va contra ti.",
-   "pause": 0.55
-  },
-  {
-   "show": "Cuarta: // el efecto Zeigarnik.",
-   "pause": 0.3,
-   "pausa_media": 0.7
-  },
-  {
-   "show": "Lo que dejas a medias / no te deja en paz.",
-   "pause": 0.3
-  },
-  {
-   "show": "Apúntalo / y tu cabeza lo suelta.",
-   "pause": 0.55
-  },
-  {
-   "show": "Quinta: // la ley de Pareto.",
-   "pause": 0.3,
-   "pausa_media": 0.7
-  },
-  {
-   "show": "Unas pocas tareas / dan casi todo el resultado.",
-   "pause": 0.3
-  },
-  {
-   "show": "Haz esas primero. / El resto puede esperar.",
-   "pause": 0.55
-  },
-  {
-   "show": "¿Cuál de las cinco / te ha pasado esta semana?",
-   "pause": 0.35
-  },
-  {
-   "show": "Te leo en los comentarios. / Y sígueme, que vienen más.",
-   "pause": 0.3
+  "redaccion": {
+    "fecha": "2026-11-09",
+    "regla": "17 (docs/REDACCION.md)",
+    "nota": "Presente para hábitos (3), frase completa en vez de «Incluso…» (5), el «por eso» del ejemplo de la guía (6), cifras comparadas en Pareto (14-15) sin «el resto», remate que vuelve al gancho (16) y envío con frase literal en lugar de comentarios y «sígueme» (17).",
+    "cambios": [
+      "3: «Ponle menos tiempo / y lo terminarás antes.» → «Ponle menos tiempo / y lo terminas antes.»",
+      "5: «Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.» → «Todo lleva más de lo que crees. / Aunque ya cuentes con ello.»",
+      "6: «Calcula lo que vas a tardar / y súmale la mitad.» → «Por eso, a lo que calcules, / súmale la mitad.»",
+      "14: «Unas pocas tareas / dan casi todo el resultado.» → «Dos de cada diez tareas / dan ocho de cada diez resultados.»",
+      "15: «Haz esas primero. / El resto puede esperar.» → «Haz esas dos primero. / Las otras ocho pueden esperar.»",
+      "16: «¿Cuál de las cinco / te ha pasado esta semana?» → «Los errores son los mismos: / ahora ya tienen nombre.»",
+      "17: «Te leo en los comentarios. / Y sígueme, que vienen más.» → «Mándaselo a quien siempre dice / «esto lo saco en una tarde».»"
+    ]
   }
- ],
- "revision_castellano": {
-  "fecha": "2026-11-09",
-  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
-  "cambios": [
-   "1: «Una: // la ley de Parkinson.» → «Primera: // la ley de Parkinson.»",
-   "2: «El trabajo se estira / hasta ocupar / todo el tiempo que le das.» → «El trabajo se alarga / hasta ocupar / todo el tiempo que le des.»",
-   "3: «Dale menos tiempo / y acabará antes.» → «Ponle menos tiempo / y lo terminarás antes.»",
-   "4: «Dos: // la ley de Hofstadter.» → «Segunda: // la ley de Hofstadter.»",
-   "5: «Todo tarda más de lo que crees. / Incluso cuando ya lo sabes.» → «Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.»",
-   "7: «Tres: // la navaja de Hanlon.» → «Tercera: // la navaja de Hanlon.»",
-   "9: «Ese correo sin contestar / casi nunca es personal.» → «Ese correo sin respuesta / casi nunca va contra ti.»",
-   "10: «Cuatro: // el efecto Zeigarnik.» → «Cuarta: // el efecto Zeigarnik.»",
-   "13: «Cinco: // la ley de Pareto.» → «Quinta: // la ley de Pareto.»",
-   "17: «Te leo en comentarios. / Y sígueme para más.» → «Te leo en los comentarios. / Y sígueme, que vienen más.»"
-  ]
- }
 }

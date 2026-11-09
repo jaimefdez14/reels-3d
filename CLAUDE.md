@@ -125,7 +125,8 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
   ViralClips, decidir cómo se reparte el tope mensual).
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
-- Estilo B: resolver los choques de `docs/SISTEMA-LISTA.md` §6 (dosis en número, frase entrecomillada). Ver L4 y L5.
+- Estilo B: ver L1-L5 rehechos con la regla 17 (cierre con envío en vez de «sígueme»; L3 nuevo). Las cifras ya están
+  resueltas (sí); queda el punto 3 de `docs/SISTEMA-LISTA.md` §6 (la voz interior como frase entrecomillada).
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
   con densidad alta, efectos de sonido por transición, libro opcional y cierre «Envíaselo a…» son la norma de esta
   repo salvo que Jaime diga lo contrario.

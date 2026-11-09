@@ -314,6 +314,10 @@ const TIPOS = {
   seguir(c, o, t) { const r = kf(o.r, t, 70); c.fillStyle = '#16231d'; lineaObj(c, 4, C.am); c.beginPath(); c.arc(0, 0, r, 0, 7); c.fill(); c.stroke();
     c.fillStyle = C.am; c.beginPath(); c.arc(-r * 0.08, -r * 0.2, r * 0.22, 0, 7); c.fill(); c.beginPath(); c.ellipse(-r * 0.08, r * 0.38, r * 0.4, r * 0.26, 0, Math.PI, 0); c.fill();
     c.fillStyle = C.am; c.beginPath(); c.arc(r * 0.55, r * 0.45, r * 0.26, 0, 7); c.fill(); lineaObj(c, r * 0.07, C.amOsc); c.beginPath(); c.moveTo(r * 0.43, r * 0.45); c.lineTo(r * 0.67, r * 0.45); c.moveTo(r * 0.55, r * 0.33); c.lineTo(r * 0.55, r * 0.57); c.stroke(); },
+  // icono de enviar (avión de papel en un círculo): el cierre de envío de la regla 17 («Mándaselo a quien…»)
+  enviar(c, o, t) { const r = kf(o.r, t, 70), v = clamp(kf(o.vuelo, t, 0)); c.fillStyle = '#16231d'; lineaObj(c, 4, C.am); c.beginPath(); c.arc(0, 0, r, 0, 7); c.fill(); c.stroke();
+    c.save(); c.translate(v * r * 0.9, -v * r * 0.9); c.globalAlpha *= 1 - v * 0.6; c.fillStyle = C.am; c.beginPath(); c.moveTo(-r * 0.5, r * 0.02); c.lineTo(r * 0.5, -r * 0.4); c.lineTo(r * 0.12, r * 0.48); c.lineTo(-r * 0.04, r * 0.14); c.closePath(); c.fill();
+    c.fillStyle = C.amOsc; c.beginPath(); c.moveTo(-r * 0.04, r * 0.14); c.lineTo(r * 0.5, -r * 0.4); c.lineTo(r * 0.02, r * 0.34); c.closePath(); c.fill(); c.restore(); },
   // rótulo pequeño en mayúsculas espaciadas
   rotulo(c, o, t) { texto(c, kf(o.texto, t, ''), 0, 0, o.size || 26, o.col || C.txtD, o.peso || 600, 'center', false, 'middle', o.track ?? 4); },
   // barra de tiempo con bloque elástico (Parkinson) o progreso con marca (Hofstadter)
@@ -606,7 +610,7 @@ window.inspectPixels = function (t) {
 window.soundEvents = function () {
   const ev = [];
   for (const u of NUMS) { ev.push({ t: u.T, kind: 'whip' }); ev.push({ t: u.T + 0.5, kind: 'pop' }); }
-  for (const it of ITEMS) { if (it.sfx === false || it.t0 <= 0.05) continue; if (it.tipo === 'anillo' || it.tipo === 'arcoAbierto') ev.push({ t: it.t0, kind: 'swoosh' }); else if (it.pop || ['moneda', 'bocadillo', 'corazon', 'seguir', 'resumen', 'compra', 'temporizador'].includes(it.tipo)) ev.push({ t: it.t0, kind: 'pop' }); }
+  for (const it of ITEMS) { if (it.sfx === false || it.t0 <= 0.05) continue; if (it.tipo === 'anillo' || it.tipo === 'arcoAbierto') ev.push({ t: it.t0, kind: 'swoosh' }); else if (it.pop || ['moneda', 'bocadillo', 'corazon', 'seguir', 'enviar', 'resumen', 'compra', 'temporizador'].includes(it.tipo)) ev.push({ t: it.t0, kind: 'pop' }); }
   for (const e of EXTRA_SFX) ev.push(e);
   for (const it of ITEMS) {
     if (it.tipo === 'chispas') ev.push({ t: it.t0, kind: 'ding' });

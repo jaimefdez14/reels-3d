@@ -1,52 +1,58 @@
-# Redacción: el molde de la referencia, escrito para que se narre bien
+# Redacción: la estructura de las listas (estilo B) escrita para que se narre bien
 
-Jaime (09-11-2026): «mantén tu estructura de los 5 ejemplos… pero vamos a aplicar esto para lo que tiene que ver con
-la redacción, guionización y narrativa… mézclalo con la forma de estructura desarrollada en los 5 ejemplos, no solo
-esto. Lo mejor de ambos». «Esto» es su guía de redacción para guiones en castellano que se narran bien.
+Jaime (09-11-2026): «mantén tu estructura de los 5 ejemplos que hemos visto de stickman, pero vamos a aplicar esto para
+lo que tiene que ver con la redacción, guionización y narrativa… mézclalo con la forma de estructura desarrollada en
+los 5 ejemplos, no solo esto. Lo mejor de ambos». Los cinco ejemplos son B-R1…B-R5 (`ANALISIS-REFERENCIA-B.md`);
+«esto» es su guía de redacción para guiones en castellano que se narran bien. Regla 17 de `CLAUDE.md`.
 
 **Cómo se reparten el trabajo:**
-- **La estructura manda la referencia** (`SISTEMA-3D.md` §1, regla 2): los 8 bloques, su orden, su escena, la frase
-  literal entrecomillada, la objeción con «Estás pensando:», la recompensa con un tercero, el remate espejo y el envío.
-- **Cada frase la manda la guía**: orden de las palabras, ritmo, hilo entre frases, calcos, tiempos, puntuación para
-  la voz y registro de Madrid.
-- Donde chocan, se resuelve en §8 y lo que es decisión de Jaime queda marcado.
+- **La estructura la manda la referencia** (`SISTEMA-LISTA.md` §1): gancho con número y promesa, lista de 3-5 puntos,
+  cada punto con nombre → instrucción con dosis → voz interior o ejemplo → golpe seco, transición de número y cierre
+  con el resumen visual. El muñeco hace lo que dice la voz.
+- **Cada frase la manda la guía**: orden de las palabras, ritmo, hilo, calcos, tiempos, puntuación para la voz y
+  registro de Madrid. `CASTELLANO.md` (regla 16) sigue valiendo: es la lista de calcos de este estilo.
+- Donde chocan, §8.
 
 ## 1. Antes de escribir una sola frase
 
-1. **La idea en una frase de 12 palabras como mucho.** «Fallar un día no rompe un hábito; fallar dos, sí.» Si no
+1. **La idea en una frase de 12 palabras como mucho.** «El sueldo llega a fin de mes si te pagas tú primero.» Si no
    sale, aún no se sabe qué se cuenta.
-2. **A quién:** una persona de Madrid de 30 años, lista, que no sabe nada del tema y está a punto de pasar al
-   siguiente vídeo.
-3. **Situación + prohibición + técnica con nombre** (`SISTEMA-3D.md` §1.1). Sin las tres no hay reel de este formato.
-4. **Elegir el reel de referencia más parecido** (regla 8) y marcar sus pulsos: dónde va la frase literal, dónde la
-   objeción, dónde el tercero.
-5. **Escribir el guion entero como un monólogo seguido**, en un párrafo, sin pensar en pantallas ni escenas.
-6. **Leerlo en voz alta, de pie y de corrido.** Donde te trabes, falta una coma o sobra una palabra; donde te aburras,
+2. **A quién:** una persona de Madrid de 30 años, lista, que no sabe nada del tema y está a punto de pasar al siguiente.
+3. **El reel de referencia cuyo pulso se copia** (B-R1 identidad, B-R2 rutina, B-R3 pasos, B-R4 metáforas, B-R5 leyes)
+   y el objeto amarillo que hila un punto con el siguiente.
+4. **Escribir el guion entero como un monólogo seguido**, en un párrafo, sin pensar en subtítulos ni escenas.
+5. **Leerlo en voz alta, de pie y de corrido.** Donde te trabes, falta una coma o sobra una palabra; donde te aburras,
    sobra la frase entera.
-7. Solo entonces se corta en titulares (§6) y se hacen las escenas.
+6. Solo entonces se marca para el motor (` / `, ` // `, `*amarillo*`, §6) y se hace la escena.
 
-## 2. El molde de 8 bloques, escrito con la guía
+## 2. El molde de las listas, escrito con la guía
 
-| # | Bloque | Qué hace la frase (guía) | Ejemplo |
-|---|---|---|---|
-| 1 | **Gancho**: prohibición o sustitución | ≤ 3,5 s, sujeto y verbo (el imperativo vale), se entiende solo, abre una pregunta y no cuenta el final | «Nunca abras una reunión con esta frase.» · «Si ayer fallaste, hoy no compenses.» |
-| 1b | Frase literal prohibida | Entre comillas españolas, tal como la diría el espectador | «¿En qué puedo ayudarte?» |
-| 2 | **Coste** | Retoma la frase prohibida y le pone consecuencia; lo fuerte, al final | «Todo el mundo la dice. A los dos minutos, la reunión está muerta.» |
-| 3 | **Técnica con nombre** | Una frase; el nombre de la técnica, al final y marcado | «Cámbiala por dos preguntas.» |
-| 4 | **Mecanismo, pieza a pieza** | Sujetos que hacen cosas; cada pieza nace de la anterior; aquí va el **«por eso»** que el espectador reconoce | «La primera saca el motivo.» «Por eso te llama ahora y no hace un mes.» |
-| 5 | **Objeción** | Rótulo «Estás pensando:» + la frase literal en la voz del espectador; respuesta en ≤ 5 palabras, pegada | «Suena a interrogatorio.» → «No, si luego te callas.» |
-| 6 | **Giro hacia la mitad** | «Lo curioso es que…», «Lo más raro: …», «Y lo que más pesa no es X: es Y.» **Nunca «Pero…»** | «Saber el motivo no basta: falta la segunda.» |
-| 7 | **Recompensa en escena** | Presente, con un tercero que dice una frase literal; el espectador se ve dentro | «Al salir, el cliente le dice a su socio: «Es el primero que me pregunta qué quiero».» |
-| 8 | **Remate espejo + envío** | Remate ≤ 10 palabras que vuelve al gancho (dos mitades, la segunda invierte la primera: dos puntos o punto y coma); envío a una persona que se reconoce en un segundo | «No hace falta ser perfecto: hace falta volver.» «Mándaselo a quien hoy no ha ido al gimnasio.» |
+| Bloque | Qué hace la frase (guía) | Ejemplo |
+|---|---|---|
+| **Gancho**: número + promesa | ≤ 3,5 s, sujeto y verbo, se entiende solo, abre una pregunta y no cuenta el final; la promesa, al final y en amarillo | «Cuatro reglas para que el sueldo *te llegue a fin de mes.*» |
+| **Anuncio** (opcional) | Un bucle abierto que se cierra hacia la mitad | «Y la tercera es *la que más cuesta.*» |
+| **Número + nombre** | «Número uno: // *nombre.*» El nombre en imperativo, 2-5 palabras, lo nuevo al final | «Número dos: // *pon fecha y cúmplela.*» |
+| **Instrucción con dosis** | Sujeto que hace algo concreto; la dosis al final («cinco minutos», «dos días», «una parte») | «El día que cobras, aparta una parte *antes de pagar nada.*» |
+| **Voz interior o ejemplo** | Frase literal entre comillas, la que el espectador se dice; retoma la instrucción | «Hoy piensas: *«Me lo merezco».*» |
+| **Golpe del punto** | Remate corto pegado a la frase anterior, con humor seco una o dos veces por reel | «Dos días después, *ya no te lo mereces tanto.*» |
+| **«Por eso»** | Una vez por reel, dentro de un punto: la consecuencia que el espectador reconoce («¡anda, es verdad!») | «Por eso, a lo que calcules, *súmale la mitad.*» |
+| **Giro hacia la mitad** | El punto del medio cierra el anuncio o lleva «Lo curioso:» / «Y lo que más pesa no es X: es Y» | «Lo curioso: *a veces es más de lo que ibas a pedir.*» |
+| **Remate** | ≤ 10 palabras que vuelven al gancho; dos mitades con dos puntos o punto y coma | «No es pereza: *la tarea era demasiado grande.*» |
+| **Envío** | Una persona que se reconoce en un segundo. Sustituye a «sígueme» y a la pregunta a comentarios | «Mándaselo a quien dice *«mañana lo hago».*» |
 
-Ganchos válidos en este formato, por orden de preferencia: **prohibición** («Nunca digas…», «Deja de…»),
-**sustitución** («Antes de…, haz esto»), **creencia** («Llegas tarde y te dicen que te organices mejor.»), **tuyo**
-(«Tu correo tiene una línea que nadie lee.»). No valen: historia sin tensión («Zappos empezó vendiendo…»), anuncio
-(«Hoy te voy a contar…»), cautela («Probablemente…»), «¿Sabías que…?».
+**El hilo en una lista.** Entre puntos, el hilo lo pone la imagen (el objeto amarillo se convierte en la moneda del
+número siguiente) y la voz dice «Número dos». **Dentro de cada punto**, cada frase retoma la anterior: la instrucción
+retoma el nombre, la voz interior retoma la instrucción, el golpe retoma la voz interior. La prueba del hilo se hace
+punto a punto: si dos frases de un mismo punto se pueden cambiar de orden sin que se note, no están hiladas.
+
+Ganchos válidos: número + promesa (el de la referencia), y dentro de él los tipos de la guía: **tuyo** («…para que el
+sueldo te llegue»), **creencia** («Cinco leyes que nadie te explica…»), **lección**. No valen: «Hoy te voy a contar…»,
+«¿Sabías que…?», «Probablemente…», ni una historia sin tensión.
 
 ## 3. La frase
 
-**Lo conocido delante, lo nuevo al final.** En castellano el acento de la voz cae al final y es lo que se recuerda.
+**Lo conocido delante, lo nuevo al final.** En castellano el acento de la voz cae al final y es lo que se recuerda; en
+este estilo, además, lo del final es lo que va en amarillo.
 
 | Mal | Bien |
 |---|---|
@@ -56,138 +62,105 @@ Ganchos válidos en este formato, por orden de preferencia: **prohibición** («
 
 - **Sujeto y verbo juntos.** Nada largo entre los dos; los complementos largos, al final o en otra frase.
 - **Una idea por frase.** Si lleva «y… y…» o dos cifras, se parte.
-- **Longitud:** la frase hablada, 8-14 palabras; la referencia la parte en titulares de 3-7 (§6). Se alternan medias
-  y cortas: tres largas seguidas cansan, tres cortas seguidas suenan a telegrama.
-- **Frases de ≤ 4 palabras**, solo como remate pegado a la anterior: «Pues no.», «Dos, sí.», «Y contestan.» La
-  referencia vive de ellas (es su latido), pero siempre detrás de una frase que las prepara.
-- **Cifras** (Jaime: «con cifras sin problema»): 5 como mucho por guion, siempre comparadas y con su unidad
-  («14 céntimos; a mano, hasta 45»). De dónde sale el dato, dentro de la frase: «En un experimento de 1994, unos
-  estudiantes…». Nada de «según un estudio». Que el dato no exagere: 1,65 veces no es «casi el doble».
-- **Algo nuevo cada 3-5 s** en la voz (un dato, una imagen, una consecuencia) y cada 1-2 s en la escena (regla 6).
+- **Longitud:** la referencia va a 155-165 palabras por minuto con frases de 3-10 palabras; la guía pide 8-14. Se
+  escribe en frases de 6-12 y se parten en subtítulos de ≤ 32 caracteres (§6). Tres largas seguidas cansan; tres cortas
+  seguidas suenan a telegrama: alternar.
+- **Frases de ≤ 4 palabras**, solo como golpe pegado a la anterior: «Hasta el mes que viene.», «Y el jueves, lo tiene.»
+- **Cifras** (Jaime: «con cifras sin problema»): 5 como mucho por guion, siempre comparadas y con su unidad («tres
+  fechas cumplidas valen más que diez horas extra»). De dónde sale un dato, dentro de la frase. Nada de «según un
+  estudio» ni porcentajes inventados. Que no exagere: 1,65 veces no es «casi el doble».
+- **Algo nuevo cada 3-5 s** en la voz y la escena nunca quieta más de 1,5 s (regla 15).
 
-## 4. El hilo: cada frase nace de la anterior
+## 4. El hilo dentro de cada punto
 
 Técnica principal: **retomar lo último que se ha dicho** (la última palabra, la cifra o la imagen).
-«…lo dejas. / Por eso tantos propósitos no llegan a febrero.» · «…nunca dos días seguidos. / Hoy te basta con cinco minutos.»
+«…aparta una parte *antes de pagar nada.* / Y lo que no ves, *no lo gastas.*» · «Di «lo tienes el jueves». / Y el
+jueves, lo tiene.»
 
-Conectores que suenan a habla: **por eso** (consecuencia que se reconoce), **así que** (conclusión), **y + dato nuevo**,
-**al final**, **resulta que**, **lo curioso es que** (giro), **ni siquiera** (sube la apuesta).
+Conectores que suenan a habla: **por eso**, **así que**, **y + dato nuevo**, **al final**, **resulta que**, **lo curioso
+es que**, **ni siquiera**.
 
 **Prohibidos al empezar una frase:** «Pero», «Sin embargo», «En cambio», «Además», «Por otro lado», «Cabe destacar que»,
 «Es importante saber que», «¿Y lo de…?», «Ahora bien». Si sin uno de ellos no se unen dos frases, el hilo está roto:
 se reescribe la segunda para que retome la primera. El choque de dos frases ya es el giro: «Calcularon 34 días.
 Tardaron 56.»
 
-**Prueba del hilo:** si se pueden cambiar dos frases de orden sin que se note, no están hiladas.
-
 ## 5. Lo que delata una traducción, el tiempo y la puntuación
 
-**Calcos de construcción:** pasiva con «ser» («Fue descubierto por» → «Lo descubrieron»); gerundio de algo posterior
-(«salió, encontrando» → «salió y se encontró»); posesivo con el cuerpo («abre tus ojos» → «abre los ojos»); pronombre
-sujeto que sobra («Él calculó… Él tardó»); «es por eso que» → «por eso»; «fue ahí que» → «fue ahí donde»; «lo que pasa
-es que» de relleno; «esto es lo que pasa:» / «aquí está la cosa:»; «hace 10 años atrás»; «ser capaz de» → «poder»;
-«tomar ventaja» → «aprovechar»; «hacer una decisión» → «tomar»; «en base a» → «según»; «a nivel de»; «jugar un rol»;
-«enfocarse en» → «centrarse en».
+Primero, la lista de `CASTELLANO.md` (calcos de este estilo: «sígueme para más», «tu número», «tu cabeza dice», «sin
+culpa», «carrito»…). Además:
 
-**Falsos amigos:** eventualmente (→ al final), actualmente por *actually* (→ en realidad), masivo (→ enorme),
-dramático (→ drástico), agresivo (→ ambicioso), asumir por suponer, aplicar a un puesto (→ solicitar), reportar
-(→ informar), librería por biblioteca.
+**Calcos de construcción:** pasiva con «ser» («fue descubierto por» → «lo descubrieron»); gerundio de algo posterior;
+posesivo con el cuerpo («abre tus ojos» → «abre los ojos»); pronombre sujeto que sobra; «es por eso que» → «por eso»;
+«lo que pasa es que» de relleno; «esto es lo que pasa:» / «aquí está la cosa:»; «hace 10 años atrás»; «ser capaz de» →
+«poder»; «tomar ventaja» → «aprovechar»; «hacer una decisión» → «tomar»; «en base a» → «según»; «a nivel de»; «jugar un
+rol»; «enfocarse en» → «centrarse en».
 
-**Muletillas de vídeo, fuera:** literalmente, básicamente, honestamente, spoiler, plot twist, «lo que nadie te
-cuenta», «¿sabías que…?», «déjame explicarte», «quédate hasta el final», «esto te va a volar la cabeza».
+**Falsos amigos:** eventualmente (→ al final), actualmente por *actually* (→ en realidad), masivo (→ enorme), dramático
+(→ drástico), agresivo (→ ambicioso), asumir por suponer, aplicar a un puesto (→ solicitar), reportar (→ informar).
 
-**Tiempos:** la historia en presente (es lo que hace la referencia: «Al salir, el cliente le dice…»), o toda en
-pasado; nunca mezclados. Pretérito perfecto para lo de hoy («hoy has fallado»), indefinido para lo cerrado. Para
-hábitos, presente: «Si calculas dos horas, tardas tres», no «tardarás».
+**Muletillas de vídeo, fuera:** literalmente, básicamente, honestamente, spoiler, plot twist, «lo que nadie te cuenta»,
+«¿sabías que…?», «déjame explicarte», «quédate hasta el final», «esto te va a volar la cabeza».
 
-**Puntuación para la voz** (la voz respira donde hay puntuación):
-- Coma: pausa corta. Dos puntos: suspense y revelación, el recurso más fuerte. Punto y coma: contraste de dos mitades.
-  Punto: pausa entera, antes de un remate.
-- Puntos suspensivos: uno por vídeo como mucho, para un giro de verdad.
-- Prohibidos: paréntesis, rayas y comillas de ironía (no se oyen). Las flechas «→» de la referencia solo en titulares
-  que la voz no lee como signo.
+**Tiempos:** presente e imperativo (es lo que hace la referencia). Para hábitos, presente: «si calculas dos horas,
+tardas tres», no «tardarás». El futuro, solo para predecir.
 
-**Tipografía:** comillas españolas «así», y dentro, si hace falta, “así”; decimales con coma (1,5); miles con punto
-(1.900); espacio antes de € y % (1.900 €, 50 %); signos de abrir ¿ ¡; en títulos, solo la primera mayúscula.
+**Puntuación para la voz:** coma = pausa corta; **dos puntos = suspense y revelación** (el recurso más fuerte; en este
+estilo, el «Número uno:» y la voz interior «Piensas:»); punto y coma = contraste de dos mitades; punto = pausa entera
+antes de un golpe; puntos suspensivos, uno por vídeo como mucho. Prohibidos: paréntesis, rayas y comillas de ironía.
 
-**Registro de Madrid:** sí «te sale por», «de media», «ni de lejos», «a la larga», «resulta que», «al final», «se
-queda con», «se lleva». No jerga (tío, bro, flipar, mola; «brutal» con mucho cuidado). No latinoamericano (platicar,
-checar, ahorita, plata, computadora, celular, agendar). Palabras de casa, no técnicas: «lo que te llega a la cuenta»,
-no «salario neto». Sin «esto / lo / el resto / ese dinero» sin referente claro: sujetos con nombre.
+**Tipografía:** comillas españolas «así»; decimales con coma; miles con punto; espacio antes de € y %; signos de abrir.
 
-## 6. Cortar en titulares (`reel.json` → `lines`)
+**Registro de Madrid:** sí «te sale por», «de media», «ni de lejos», «a la larga», «resulta que», «al final», «llegar a
+fin de mes», «la nómina», «se paga aparte». No jerga (tío, bro, flipar, mola) ni latinoamericano (platicar, checar,
+ahorita, plata, computadora, celular, agendar). Sin «esto / lo / el resto» sin referente claro.
 
-- Se corta **al final**, sobre el monólogo ya leído en voz alta.
-- Cada línea: ≤ 45 caracteres, ≤ 2 líneas de titular, una sola palabra marcada (`hi` amarillo = hazlo, `neg` rojo =
-  no lo hagas; nunca las dos).
-- Por grupos de sentido. No se separa el artículo de su nombre, el número de su unidad ni la preposición de lo que
-  sigue.
-- Cada línea termina en punto, dos puntos o interrogación, y la siguiente empieza con mayúscula.
-- **La voz lee la frase entera** (Jaime, 09-11-2026): una línea con `"join": true` sigue en la siguiente, y
-  `herramientas/voz.py` lee el grupo en una sola toma; el corte entre titulares se ajusta al silencio más cercano de
-  la voz. Así una frase de 8-14 palabras se parte en dos titulares sin romper la entonación:
-  `{"show": "Por eso hay propósitos de enero", "join": true}, {"show": "que no llegan a febrero."}`.
-  Una línea sin `join` es una toma suelta y tiene que terminar en punto, dos puntos o interrogación.
+## 6. Marcar el guion y cortar subtítulos (`reel.json`)
 
-## 7. Ejemplo: N6 antes y después
+- ` / ` separa subtítulos **dentro de la misma toma de voz**; ` // ` los separa y mete una pausa (`pausa_media`);
+  `*texto*` va en amarillo. Una línea es una toma: `herramientas/voz.py` la lee entera y corta los subtítulos en el
+  silencio más cercano. `"join": true` une la línea con la siguiente en la misma toma.
+- Subtítulos de ≤ 32 caracteres por línea, por grupos de sentido: no se separa el artículo de su nombre, el número de su
+  unidad ni la preposición de lo que sigue.
+- Cada línea termina en punto, dos puntos o interrogación (salvo con `join`).
 
-Antes (N6 publicado como previa el 04-11, se queda así por la regla 10):
+## 7. Ejemplo: L1, antes y después
 
-> Si ayer fallaste, hoy no compenses. Compensar es doblar la tarea. Y a los dos días lo dejas. Fallar un día es normal.
-> Lo que rompe el hábito es el segundo fallo. La regla: nunca dos días seguidos. Hoy haz solo cinco minutos. Diez
-> flexiones. Dos páginas. Un correo. *Estás pensando:* «Cinco minutos no cuentan.» Cuentan para lo único que importa.
-> Que no se rompa la cadena de días. Un hueco no rompe la cadena. Dos, sí. El viernes sigues con el hábito. Los que
-> compensan empiezan de cero el lunes. No hace falta ser perfecto. Hace falta volver. Mándaselo a quien haya fallado hoy.
+Antes (previa del 09-11, ya revisada con `CASTELLANO.md`): el cierre era «Guárdalo para el día que cobres. Y sígueme,
+que vienen más.» (llamada de plantilla, no vuelve al gancho), no había ningún «por eso» y el cuarto punto acababa en
+dos frases que se podían cambiar de orden («No es para fustigarte. Es para ver en qué se te va.»).
 
-Qué falla según la guía: falta el «por eso» que el espectador reconoce; «Fallar un día es normal» no retoma «lo dejas»
-(se puede mover sin que se note); «Cuentan para lo único que importa. Que no se rompa la cadena» es una frase partida
-en dos y la segunda no tiene verbo principal; «la cadena» aparece sin haberla presentado; el envío («quien haya fallado
-hoy») no es una persona que uno reconozca en un segundo.
-
-Después (mismo molde, mismos pulsos de R4; es el `reels/N6/reel.json` rehecho el 09-11; «↘» = misma toma de voz):
-
-> Si ayer fallaste, hoy no compenses. Compensar es hacer el doble. Por eso, a los dos días, lo dejas. Lo curioso: un
-> fallo no rompe un hábito. Lo rompe el segundo fallo, seguido. La regla: nunca dos días seguidos. Hoy te basta con
-> cinco minutos. Diez flexiones. Dos páginas. Un correo. *Estás pensando:* «Cinco minutos no cuentan.» Cuentan para lo
-> que importa: la cadena. La cadena aguanta un hueco. Dos huecos seguidos la rompen. El viernes, tú sigues con el
-> hábito ↘ quien compensa vuelve a empezar el lunes. No hace falta ser perfecto: ↘ hace falta volver. Mándaselo a quien
-> hoy no ha ido al gimnasio.
+Después: «…Número cuatro: repasa tus gastos cada domingo. Cinco minutos, sin fustigarte. Por eso a fin de mes ya sabes
+en qué se te va. Primero tú; después, todo lo demás. Mándaselo a quien a día veinte ya está a cero.»
 
 ## 8. Dónde chocan la guía y la referencia, y cómo se resuelve
 
-| Tema | Referencia / reglas de esta repo | Guía | Se hace |
+| Tema | Referencia (B-R1…B-R5) | Guía | Se hace |
 |---|---|---|---|
-| Longitud | Titulares de 2-7 palabras | Frases de 8-14 palabras | Se escribe en frases de 8-14 y se parte en titulares completos de ≤ 45 caracteres; las cortas, solo como remate |
-| Gancho | Prohibición o sustitución | Cinco tipos | Prohibición o sustitución primero; creencia o «tuyo» si la idea no admite prohibición |
-| Giro | «Pero que te recuerden no basta.» | «Pero» prohibido al empezar | «Que te recuerden no basta.» / «Lo curioso es que…» |
-| Cierre | Remate espejo + «Envíaselo a…» | Resumen ≤ 10 palabras que vuelve al gancho + envío concreto | Las dos cosas: el remate espejo es el resumen; el envío nombra a una persona reconocible |
-| Prueba del dato | La referencia no da cifras ni fuentes | 4-5 cifras comparadas, con de dónde salen dentro de la frase | **Cifras sí** (Jaime, 09-11-2026), con las condiciones de la guía (§3) |
-| Titulares cortos | Una toma de voz por titular | La frase se lee entera | `"join": true` une titulares en una toma (§6) |
-| Jerga | «Tienes que conocer a este tío» (traducción de R1) | «tío» no | Sin jerga, también en los bocadillos de terceros |
+| Cierre | «Save this», «follow for more», pregunta a comentarios | Prohibidos «sígueme para más» y «¿qué opinas?»; resumen + envío concreto | Resumen visual de la referencia (tarjetas 1-n) + remate que vuelve al gancho + **envío** con icono de enviar |
+| Longitud de frase | 3-10 palabras, 155-165 ppm | 8-14 palabras | Frases de 6-12, subtítulos de ≤ 32 caracteres |
+| Hilo | Los puntos se pueden cambiar de orden | Cada frase retoma la anterior | Entre puntos, hilo visual (moneda); dentro del punto, hilo de la guía |
+| Cifras | Dosis en número (30 minutos, 20 horas) | ≤ 5 cifras comparadas, con origen | Dosis y comparaciones sí; estadísticas sin origen no |
+| Giro | La referencia no tiene objeción | Giro hacia la mitad | El anuncio abre un bucle que el punto del medio cierra, o «Lo curioso:» en ese punto |
 
 ## 9. Repaso antes de dar un guion por bueno
 
 Estructura (referencia):
-- [ ] ¿Están los 8 bloques en su orden, sobre el reel de referencia más parecido?
-- [ ] ¿Hay una frase literal entrecomillada que el espectador pueda decir tal cual?
-- [ ] ¿La objeción va con «Estás pensando:», entre el 35 % y el 65 %, contestada en ≤ 5 palabras, y solo en el titular
-      (regla 13)?
-- [ ] ¿Hay un tercero que dice una frase en el último cuarto?
+- [ ] ¿Gancho con número y promesa, puntos con nombre → dosis → voz interior → golpe, y cierre con resumen?
+- [ ] ¿Cada punto cabe en 7-12 s y el último objeto amarillo de un punto es el `desde` del siguiente?
+- [ ] ¿Hay una voz interior entre comillas que el espectador se diga?
 
 Redacción (guía):
-- [ ] ¿Se entiende la idea en una frase de ≤ 12 palabras?
-- [ ] ¿Se ha leído el guion en voz alta, seguido y sin trabarse?
-- [ ] ¿El gancho tiene verbo, se entiende solo y no cuenta el final?
-- [ ] ¿Cada frase retoma la anterior, sin «Pero / Además / En cambio» al principio? (prueba del hilo)
-- [ ] ¿Lo nuevo va al final de cada frase?
-- [ ] ¿Sin calcos, sin muletillas, sin «esto / lo / el resto» sin referente?
-- [ ] ¿Hay un «por eso» que el espectador reconozca y un giro hacia la mitad?
-- [ ] ¿Las cifras son 5 o menos, comparadas, con unidad y con su origen dentro de la frase?
-- [ ] ¿El remate vuelve al gancho en ≤ 10 palabras, y el envío nombra a alguien reconocible?
+- [ ] ¿Se entiende la idea en una frase de ≤ 12 palabras? ¿Se ha leído entero en voz alta sin trabarse?
+- [ ] ¿Dentro de cada punto, cada frase retoma la anterior, sin «Pero / Además / En cambio» al principio?
+- [ ] ¿Lo nuevo (y lo amarillo) va al final de cada frase?
+- [ ] ¿Sin calcos, sin muletillas, sin referentes sueltos? ¿Pasa `CASTELLANO.md`?
+- [ ] ¿Hay un «por eso» reconocible y un giro hacia la mitad?
+- [ ] ¿Las cifras son 5 o menos, comparadas y con unidad?
+- [ ] ¿El remate vuelve al gancho en ≤ 10 palabras y el envío nombra a alguien reconocible?
 - [ ] ¿Lo diría así una persona de Madrid en un bar?
 
-Automático: `python3 herramientas/redaccion.py reels/ID` tiene que decir `ok` (comprueba lo que se puede contar:
-conectores prohibidos, calcos y muletillas, jerga, comillas, paréntesis y rayas, longitud de titulares, más de 5
-cifras, líneas sin cerrar que no llevan `join`, suspensivos,
-amarillo y rojo juntos, objeción, cierre prohibido y envío). El hilo, el orden de las palabras y la lectura en voz alta
-no los ve: son trabajo de quien escribe.
+Automático: `python3 herramientas/redaccion.py reels/ID` tiene que decir `ok`. Ve conectores prohibidos al empezar,
+calcos y muletillas, jerga, comillas, paréntesis y rayas, subtítulos largos, más de 5 cifras, líneas sin cerrar,
+suspensivos, si falta la frase entre comillas, el «por eso» o el envío, y (estilo A) la objeción. El hilo, el orden de las
+palabras y la lectura en voz alta no los ve: son trabajo de quien escribe.

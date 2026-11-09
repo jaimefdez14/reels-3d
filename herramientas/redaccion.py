@@ -28,28 +28,35 @@ MULETILLAS = ['literalmente', 'básicamente', 'honestamente', 'spoiler', 'plot t
               '¿sabías que', 'déjame explicarte', 'quédate hasta el final', 'te va a volar la cabeza']
 JERGA = ['tío', 'tía', 'bro', 'flipar', 'flipas', 'flipante', 'mola', 'molan', 'platicar', 'checar', 'ahorita',
          'plata', 'computadora', 'celular', 'agendar']
-CIERRE_MAL = ['tu tarea', 'recuerda que', 'qué opinas', 'sígueme']
+CIERRE_MAL = ['tu tarea', 'recuerda que', 'qué opinas', 'sígueme', 'te leo en los comentarios']
 ENVIO = ('envíaselo', 'mándaselo', 'compártelo', 'guárdalo', 'pásaselo')
 
 
 def avisos(reel):
     out, lines = [], reel['lines']
     n = len(lines)
+    B = str(reel.get('estilo', '')).startswith('B')  # estilo B: listas en negro (docs/SISTEMA-LISTA.md)
     susp = 0
     for i, L in enumerate(lines):
         for campo in ('show', 'say'):
             s = L.get(campo)
             if not s:
                 continue
-            low = s.lower()
+            s = s.replace('*', '')
+            low = re.sub(r'\s+//?\s+', ' ', s.lower())
             q = f'{i} [{campo}] «{s}»' if '«' not in s else f'{i} [{campo}] {s}'
-            if campo == 'show' and len(s) > 45:
+            if campo == 'show' and not B and len(s) > 45:
                 out.append(f'{q}: {len(s)} caracteres (máx. 45)')
+            if campo == 'show' and B:  # cada subtítulo, 2 renglones como mucho: lo blanco y lo amarillo, a ≤ 32 caracteres por renglón
+                for sub in re.split(r'\s+//?\s+', L['show']):
+                    partes = [p.strip() for p in re.split(r'\*', sub) if p.strip()]
+                    reng = sum(-(-len(p) // 32) for p in partes)
+                    if reng > 2: out.append(f'{q}: subtítulo «{sub.replace("*", "")}» ocupa {reng} renglones de 32 caracteres (máx. 2)')
             arr = re.sub(r'^[«“"\s]+', '', low)
             for p in PEGAMENTO:
                 if arr.startswith(p + ' ') or arr.startswith(p + ',') or arr == p:
                     out.append(f'{q}: empieza por «{p}»; reescribe para que retome la frase anterior')
-            for frase in re.split(r'(?<=[.:;?!])\s+', low)[1:]:
+            for frase in re.split(r'(?<=[.:;?!»])\s+', low)[1:]:
                 f = re.sub(r'^[«“"\s]+', '', frase)
                 for p in PEGAMENTO:
                     if f.startswith(p + ' ') or f.startswith(p + ','):
@@ -76,7 +83,7 @@ def avisos(reel):
                 out.append(f'{q}: espacio antes de € y %')
             if campo == 'show':
                 susp += s.count('…') + s.count('...')
-        s = L.get('show') or ''
+        s = (L.get('show') or '').replace('*', '')
         if not L.get('join') and i < n - 1 and not re.search(r'[.:;?!»]$', s.strip()):
             out.append(f'{i} «{s}»: no termina en punto, dos puntos o interrogación y no lleva "join" (toma suelta)')
         if L.get('hi') and L.get('neg'):
@@ -87,15 +94,21 @@ def avisos(reel):
     if susp > 1:
         out.append(f'{susp} puntos suspensivos (máx. 1 por vídeo)')
     obj = [i for i, L in enumerate(lines) if (L.get('voice') or '').lower().startswith('estás pensando')]
-    if not obj:
+    if B:
+        pass  # el estilo B no tiene objeción: la tensión es la lista
+    elif not obj:
         out.append('no hay objeción con «Estás pensando:»')
     elif not any(0.30 <= i / max(n - 1, 1) <= 0.75 for i in obj):
         out.append(f'la objeción está en la línea {obj[0]} de {n}; va hacia la mitad (30-75 %; R3 la pone al 70 %)')
     if not any('«' in (L.get('show') or '') for L in lines):
         out.append('no hay frase literal entrecomillada')
-    ultima = (lines[-1].get('show') or '').lower()
-    if not ultima.startswith(ENVIO):
-        out.append(f'la última línea no es un envío («Envíaselo a…», «Mándaselo a…»): «{lines[-1].get("show")}»')
+    todo = ' '.join(re.sub(r'\s+//?\s+', ' ', (L.get('say') or L.get('show') or '')).replace('*', '').lower() for L in lines)
+    if 'por eso' not in todo:
+        out.append('falta un «por eso» que el espectador reconozca (docs/REDACCION.md §2)')
+    ultima = re.sub(r'\s+//?\s+', ' ', (lines[-1].get('show') or '')).replace('*', '').lower()
+    frases = re.split(r'(?<=[.:;?!»])\s+', ultima)
+    if not any(f.startswith(ENVIO) for f in frases):
+        out.append(f'la última línea no lleva un envío («Envíaselo a…», «Mándaselo a…»): «{lines[-1].get("show")}»')
     return out
 
 
