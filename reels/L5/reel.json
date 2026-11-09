@@ -1,0 +1,77 @@
+{
+ "id": "L5",
+ "estilo": "B (listas en negro; regla 15: satisfying)",
+ "titulo": "Cuatro frases para cobrar más sin pedir perdón",
+ "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
+ "coverT": 1.8,
+ "lines": [
+  {
+   "show": "Cuatro frases para cobrar más *sin pedir perdón.*",
+   "pause": 0.35
+  },
+  {
+   "show": "Y la última *te ahorra discusiones.*",
+   "pause": 0.5
+  },
+  {
+   "show": "Número uno: // *di tu precio y cállate.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Dilo de un tirón. / *Y no añadas nada.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El silencio incómodo / *lo aguanta tu precio, no tú.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número dos: // *pregunta antes de dar tu número.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "«¿Qué presupuesto / *teníais pensado?»*",
+   "pause": 0.3
+  },
+  {
+   "show": "A veces es más / *de lo que ibas a pedir.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número tres: // *«Eso entra en el plan grande».*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Cuando te pidan algo extra, / *no lo regales.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ofrece el siguiente nivel. / *Con su precio.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número cuatro: // *«Si cambia, lo hablamos».*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Lo que no está en el presupuesto / *no está incluido.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Dilo antes de empezar, / *no cuando ya estás quemado.*",
+   "pause": 0.55
+  },
+  {
+   "show": "¿Cuál vas a usar esta semana? / *Te leo en comentarios.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y sígueme *para más.*",
+   "pause": 0.3
+  }
+ ]
+}

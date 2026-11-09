@@ -57,6 +57,21 @@ punto del indicador); la moneda espera; en `S` (el nombre del punto) vuela hasta
 y se funde con él (o se encoge), mientras la escena nueva se aclara. El objeto `desde` lleva `sobrevive: true`.
 Regla: **el último objeto amarillo de un punto es el `desde` del siguiente**: así el ojo nunca pierde el hilo.
 
+## 4b. «Satisfying» y detalle (regla 15, Jaime 09-11-2026)
+
+Cada punto lleva **algo que suma y algo que se rellena**, y la escena nunca está quieta más de 1,5 s:
+- **Contadores que ruedan** (`contador`, `etiqueta`, el globo del `telefono`, el % de `relleno`): cifras tipo
+  cuentakilómetros que giran hacia arriba, con un tic que sube de tono (`tickc`, automático).
+- **Cosas que se rellenan:** arco del `temporizador`, `relleno` con brillo que lo recorre, `bloques` que se tachan en
+  cascada, `tarro`, `cuadricula`, casillas de `lista`, cajas de `planes` que se encienden en orden.
+- **Remate de cada logro:** `chispas` (estrella de rayos + campanita `ding`) y `E.golpe(t)` (golpe de zoom de 0,5 s).
+- **Choques:** `pulso` (onda) + `thud` cuando algo rebota contra un límite.
+- **Detalles del motor:** el muñeco respira y tiene sombra de contacto; la cámara deriva siempre un poco; los objetos
+  entran con rebote; las figuras suben al aparecer; la palabra amarilla da un saltito al entrar.
+- **Transición mejorada:** el objeto que sobrevive se encoge y se funde en la moneda; la moneda llega con
+  aplastar-y-estirar, onda y número que entra rodando desde abajo, y un brillo la cruza; al irse, vuela al objeto
+  nuevo, que da un salto con onda al recibirla; el punto del indicador da un salto y la línea se rellena hasta él.
+
 ## 5. Motor (`motor2d/`)
 
 - `motor2d/engine2d.js`: canvas 2D determinista a 1080×1920. Mismo contrato que el motor 3D (`window.seek`,
@@ -73,7 +88,9 @@ Regla: **el último objeto amarillo de un punto es el `desde` del siguiente**: a
     manos_cabeza, apartarse, andar` (o un objeto con ángulos `lean, hf, kf, hb, kb, sf, ef, sb, eb, cab, sit`).
   - `E.obj(id, tipo, {t0, t1, x, y, s, a, rot, luz, pop, capa, refl, caja, sobrevive, libre, rodea, …})`.
     Tipos: `moneda, bola, anillo, arcoAbierto, temporizador, relojAm, bocadillo, lista, tarro, pila, compra, corazon,
-    dias, resumen, seguir, rotulo, barra, cuadricula, maraña, escritorio, papeles, flecha`.
+    dias, resumen, seguir, rotulo, barra, cuadricula, maraña, escritorio, papeles, flecha` y, para el efecto satisfying,
+    `contador, etiqueta, relleno, chispas, pulso, telefono, puerta, bloques, pestanas, ondas, planes, pieza`.
+  - `E.golpe(t, fuerza)`: golpe de zoom; `E.sfx(t, 'fill'|'thud'|'ding'…)`: efecto suelto.
     Cualquier parámetro admite fotogramas clave `[[t, valor, ease], …]`. **`x, y, s, a, rot, luz` son generales**:
     un parámetro propio de un tipo no puede llamarse así.
   - `E.numero(n, T, S, {desde, hacia})`; `E.w(frase, palabra)` y `E.wf(…)` dan los tiempos de la voz.

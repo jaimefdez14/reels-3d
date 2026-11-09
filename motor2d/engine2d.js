@@ -68,11 +68,19 @@ const E = window.E = {
   // transición de número (docs/ANALISIS-REFERENCIA-B.md §4): en T la escena se oscurece, la moneda n aparece (desde un
   // objeto o desde el indicador), espera, y en S (inicio de la escena nueva) se va a un objeto nuevo o se encoge.
   numero(n, T, S, o = {}) { NUMS.push(Object.assign({ n, T, S }, o)); },
-  sfx(t, kind) { EXTRA_SFX.push({ t, kind }); },
+  sfx(t, kind, f) { EXTRA_SFX.push({ t, kind, f }); },
+  golpe(t, f = 0.04) { GOLPES.push({ t, f }); },
 };
 
 // ---------- cámara ----------
-function cam(t) { const v = kf(CFG.camara, t, [0, -370, 1]); return { x: v[0], y: v[1], z: v[2] }; }
+const GOLPES = [];
+function cam(t) {
+  const v = kf(CFG.camara, t, [0, -370, 1]);
+  // deriva lenta continua (la cámara nunca está del todo quieta) y golpes de zoom en momentos clave
+  const dr = CFG.deriva ?? 1; let z = v[2] * (1 + 0.006 * dr * Math.sin(t * 0.55 + 0.4));
+  for (const g of GOLPES) { const k = t - g.t; if (k >= 0 && k < 0.9) z *= 1 + g.f * Math.sin(Math.min(1, k / 0.12) * Math.PI / 2) * Math.exp(-k * 4.5); }
+  return { x: v[0] + 5 * dr * Math.sin(t * 0.83), y: v[1] + 4 * dr * Math.sin(t * 0.61 + 1.3), z };
+}
 function toScreen(p, cm) { return [W / 2 + (p[0] - cm.x) * cm.z, H / 2 + (p[1] - cm.y) * cm.z]; }
 
 // ---------- figura ----------
@@ -125,14 +133,17 @@ function figGeom(P) {
 }
 function drawFigura(c, it, t, alphaMul) {
   const P = poseAt(it, t); const S = it.talla; const g = figGeom(P);
+  const resp = 1 + 0.012 * Math.sin(t * 2.4 + (it.id.length * 1.7));
   const x = kf(it.x, t, 0), y = kf(it.y, t, 0), dir = kf(it.dir, t, 1);
   const col = kf(it.colorK, t, null); // 0 = gris, 1 = amarillo (transformación)
-  c.save(); c.translate(x, y); c.scale(S * dir, S);
+  c.save(); c.translate(x, y);
+  if (!P.sit && it.sombra !== false) { const sg = c.createRadialGradient(0, 0, 0, 0, 0, S * 0.14); sg.addColorStop(0, 'rgba(0,0,0,0.45)'); sg.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = sg; c.save(); c.scale(1, 0.18); c.beginPath(); c.arc(0, 0, S * 0.14, 0, 7); c.fill(); c.restore(); }
+  c.scale(S * dir, S);
   const hip = g.hip;
   const kneeF = seg(hip, g.th, P.hf), footF = seg(kneeF, g.sh, P.hf - P.kf);
   const kneeB = seg(hip, g.th, P.hb), footB = seg(kneeB, g.sh, P.hb - P.kb);
   // torso, inclinado alrededor de la cadera
-  const tl = 0.40, tw = 0.135, hr = 0.086;
+  const tl = 0.40 * resp, tw = 0.135, hr = 0.086;
   const lean = rad(P.lean);
   const up = [Math.sin(lean), -Math.cos(lean)];
   const top = [hip[0] + up[0] * (tl - 0.03), hip[1] + up[1] * (tl - 0.03)];
@@ -182,6 +193,34 @@ function lineaObj(c, w = 3, col = C.linea) { c.strokeStyle = col; c.lineWidth = 
 function check(c, x, y, s, p, col = C.am, w = 6) { if (p <= 0) return; const pts = [[x - s * 0.5, y], [x - s * 0.12, y + s * 0.38], [x + s * 0.55, y - s * 0.42]]; const L1 = Math.hypot(pts[1][0] - pts[0][0], pts[1][1] - pts[0][1]), L2 = Math.hypot(pts[2][0] - pts[1][0], pts[2][1] - pts[1][1]); const d = p * (L1 + L2); lineaObj(c, w, col); c.beginPath(); c.moveTo(...pts[0]); if (d <= L1) c.lineTo(lerp(pts[0][0], pts[1][0], d / L1), lerp(pts[0][1], pts[1][1], d / L1)); else { c.lineTo(...pts[1]); const k = (d - L1) / L2; c.lineTo(lerp(pts[1][0], pts[2][0], k), lerp(pts[1][1], pts[2][1], k)); } c.stroke(); }
 function arcoP(c, r, p, w, col, a0 = -Math.PI / 2) { if (p <= 0) return; lineaObj(c, w, col); c.beginPath(); c.arc(0, 0, r, a0, a0 + p * 2 * Math.PI); c.stroke(); }
 
+// número tipo cuentakilómetros: cada cifra rueda hacia arriba cuando cambia (las de la izquierda, al pasar de 9 a 0)
+function odometro(c, v, o) {
+  const size = o.size || 110, col = o.col === 'txt' ? C.txt : (o.col || C.am), w8 = o.peso || 700;
+  const val = Math.max(0, v), n = Math.floor(val + 1e-9), fr = val - n;
+  const fu = o.suave ? fr : (fr > 0.55 ? EASE.inout((fr - 0.55) / 0.45) : 0);           // giro de la cifra de las unidades
+  const roll = k => (n % Math.pow(10, k)) === Math.pow(10, k) - 1 ? fu : 0;           // una cifra gira si todas las de su derecha son 9
+  const shown = String(n).length; const newLead = roll(shown);                        // 9 → 10: aparece una cifra nueva a la izquierda
+  c.save(); c.font = `${w8} ${size}px ${FONT}`; const dw = c.measureText('0').width * 1.02, sepw = c.measureText('.').width;
+  const pre = o.pre || '', suf = o.mas ? '+' : (o.suf || ''); c.font = `${w8} ${size * 0.62}px ${FONT}`; const pw = pre ? c.measureText(pre).width + 8 : 0, sw = suf ? c.measureText(suf).width + 6 : 0;
+  const nd = shown + newLead; const sepN = o.miles === false ? 0 : Math.floor((Math.ceil(nd) - 1) / 3) * Math.min(1, nd - 3 * Math.floor((Math.ceil(nd) - 1) / 3));
+  const totW = pw + nd * dw + Math.max(0, sepN) * sepw + sw; let x = -totW / 2; const h = size * 1.08, by = size * 0.05;
+  c.fillStyle = col; c.textBaseline = 'middle';
+  if (pre) { c.textAlign = 'left'; c.fillText(pre, x, by); x += pw; }
+  c.font = `${w8} ${size}px ${FONT}`; c.textAlign = 'center';
+  const digits = shown + (newLead > 0 ? 1 : 0);
+  for (let k = digits - 1; k >= 0; k--) {
+    const isNew = k === shown; const d = isNew ? 0 : Math.floor(n / Math.pow(10, k)) % 10; const fk = isNew ? newLead : roll(k);
+    const wk = isNew ? dw * newLead : dw; const cx = x + wk / 2;
+    c.save(); c.beginPath(); c.rect(x - 2, -h / 2, wk + 4, h); c.clip();
+    if (!isNew) c.fillText(String(d), cx, by - fk * h);
+    if (fk > 0) c.fillText(String(isNew ? 1 : (d + 1) % 10), cx, by + (1 - fk) * h);
+    c.restore(); x += wk;
+    if (o.miles !== false && k > 0 && k % 3 === 0) { const sk = isNew ? newLead : 1; c.textAlign = 'left'; c.globalAlpha *= sk; c.fillText('.', x, by); c.globalAlpha /= Math.max(sk, 1e-3); c.textAlign = 'center'; x += sepw * sk; }
+  }
+  if (suf) { c.font = `${w8} ${size * 0.62}px ${FONT}`; c.textAlign = 'left'; c.fillText(suf, x + 6, by + size * 0.08); }
+  c.restore();
+}
+
 const TIPOS = {
   // moneda con número (o símbolo)
   moneda(c, o, t) { const r = kf(o.r, t, 70); disco(c, r); const n = kf(o.n, t, ''); if (n !== undefined && n !== '') texto(c, String(n), 0, r * 0.04, r * 0.72, C.amOsc, 600); },
@@ -201,7 +240,7 @@ const TIPOS = {
     lineaObj(c, 4, kf(o.hecho, t, 0) > 0.5 ? C.am : C.linea); c.beginPath(); c.arc(0, 0, r, 0, 7); c.stroke();
     arcoP(c, r + 14, p, 8, C.am); if (p > 0 && p < 1) { const a = -Math.PI / 2 + p * 2 * Math.PI; glowDot(c, Math.cos(a) * (r + 14), Math.sin(a) * (r + 14), 6); }
     const hecho = clamp(kf(o.hecho, t, 0));
-    c.globalAlpha *= 1 - hecho; texto(c, o.texto || '30', 0, -r * 0.08, r * 0.42, C.txt, 600); texto(c, o.sub || 'MIN', 0, r * 0.36, r * 0.17, C.txtD, 500, 'center', false, 'middle', 4); c.globalAlpha /= Math.max(1e-3, 1 - hecho);
+    c.globalAlpha *= 1 - hecho; texto(c, o.texto ?? '30', 0, -r * 0.08, r * 0.42, C.txt, 600); texto(c, o.sub ?? 'MIN', 0, r * 0.36, r * 0.17, C.txtD, 500, 'center', false, 'middle', 4); c.globalAlpha /= Math.max(1e-3, 1 - hecho);
     if (hecho > 0) check(c, 0, 0, r * 0.8, hecho, C.am, 10);
   },
   // reloj amarillo macizo con marcas (B-R2 «15:00»)
@@ -276,7 +315,7 @@ const TIPOS = {
     c.fillStyle = C.am; c.beginPath(); c.arc(-r * 0.08, -r * 0.2, r * 0.22, 0, 7); c.fill(); c.beginPath(); c.ellipse(-r * 0.08, r * 0.38, r * 0.4, r * 0.26, 0, Math.PI, 0); c.fill();
     c.fillStyle = C.am; c.beginPath(); c.arc(r * 0.55, r * 0.45, r * 0.26, 0, 7); c.fill(); lineaObj(c, r * 0.07, C.amOsc); c.beginPath(); c.moveTo(r * 0.43, r * 0.45); c.lineTo(r * 0.67, r * 0.45); c.moveTo(r * 0.55, r * 0.33); c.lineTo(r * 0.55, r * 0.57); c.stroke(); },
   // rótulo pequeño en mayúsculas espaciadas
-  rotulo(c, o, t) { texto(c, o.texto, 0, 0, o.size || 26, o.col || C.txtD, o.peso || 600, 'center', false, 'middle', o.track ?? 4); },
+  rotulo(c, o, t) { texto(c, kf(o.texto, t, ''), 0, 0, o.size || 26, o.col || C.txtD, o.peso || 600, 'center', false, 'middle', o.track ?? 4); },
   // barra de tiempo con bloque elástico (Parkinson) o progreso con marca (Hofstadter)
   barra(c, o, t) { const w = kf(o.w, t, 600), h = o.h || 56, f = clamp(kf(o.f, t, 0.3)), m = kf(o.marca, t, -1), f0 = kf(o.f0, t, 0);
     lineaObj(c, 4, C.linea); c.fillStyle = C.relleno; c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, h / 2); c.fill(); c.stroke();
@@ -301,6 +340,61 @@ const TIPOS = {
   flecha(c, o, t) { const p = clamp(kf(o.p, t, 1)); if (p <= 0) return; const [x1, y1] = o.a, [x2, y2] = o.b, bend = o.curva ?? 0.25; const mx = (x1 + x2) / 2 - (y2 - y1) * bend, my = (y1 + y2) / 2 + (x2 - x1) * bend;
     lineaObj(c, o.w || 5, o.col || C.am); c.setLineDash(o.discontinua ? [14, 12] : []); c.beginPath(); c.moveTo(x1, y1); const N = 30; let px = x1, py = y1, qx = x1, qy = y1; for (let i = 1; i <= N * p; i++) { const u = i / N; qx = px; qy = py; px = (1 - u) * (1 - u) * x1 + 2 * (1 - u) * u * mx + u * u * x2; py = (1 - u) * (1 - u) * y1 + 2 * (1 - u) * u * my + u * u * y2; c.lineTo(px, py); } c.stroke(); c.setLineDash([]);
     if (p > 0.95 && o.punta !== false) { const a = Math.atan2(py - qy, px - qx); c.fillStyle = o.col || C.am; c.beginPath(); c.moveTo(px + Math.cos(a) * 14, py + Math.sin(a) * 14); c.lineTo(px + Math.cos(a + 2.5) * 22, py + Math.sin(a + 2.5) * 22); c.lineTo(px + Math.cos(a - 2.5) * 22, py + Math.sin(a - 2.5) * 22); c.fill(); } },
+  // ---------- «satisfying»: contadores, rellenos, chispas ----------
+  // contador tipo cuentakilómetros: v (valor, con fotogramas clave), pre, suf, size, col, miles ('.' por defecto)
+  contador(c, o, t) { odometro(c, kf(o.v, t, 0), o); },
+  // chispas que salen en estrella al completar algo (dura 0,7 s desde t0)
+  chispas(c, o, t) { const k = clamp((t - o.t0) / (o.dur || 0.7)); if (k >= 1) return; const n = o.n || 12, r0 = o.r0 || 40, r1 = o.r1 || 150;
+    for (let i = 0; i < n; i++) { const a = i / n * 2 * Math.PI + (o.giro || 0.2); const e = EASE.out(k); const ra = lerp(r0, r1, e), rb = lerp(r0, r1, Math.max(0, e - 0.25)); lineaObj(c, (o.w || 6) * (1 - k), C.am); c.globalAlpha *= 1; c.beginPath(); c.moveTo(Math.cos(a) * rb, Math.sin(a) * rb); c.lineTo(Math.cos(a) * ra, Math.sin(a) * ra); c.stroke(); } },
+  // onda que se expande
+  pulso(c, o, t) { const k = clamp((t - o.t0) / (o.dur || 0.6)); if (k >= 1) return; lineaObj(c, 5 * (1 - k) + 1, `rgba(230,206,70,${0.75 * (1 - k)})`); c.beginPath(); c.arc(0, 0, lerp(o.r0 || 40, o.r1 || 140, EASE.out(k)), 0, 7); c.stroke(); },
+  // barra de progreso que se rellena con brillo y porcentaje opcional
+  relleno(c, o, t) { const w = o.w || 520, h = o.h || 54, f = clamp(kf(o.f, t, 0));
+    c.fillStyle = C.relleno; lineaObj(c, 4, C.linea); c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, h / 2); c.fill(); c.stroke();
+    if (f > 0) { const fw = Math.max(h - 16, (w - 16) * f); c.save(); c.beginPath(); c.roundRect(-w / 2 + 8, -h / 2 + 8, fw, h - 16, (h - 16) / 2); c.clip(); const g = c.createLinearGradient(0, -h / 2, 0, h / 2); g.addColorStop(0, C.amL); g.addColorStop(1, C.amD); c.fillStyle = g; c.fillRect(-w / 2, -h / 2, w, h);
+      const sx = -w / 2 + ((t * 420) % (w + 200)) - 100; const sg = c.createLinearGradient(sx - 40, 0, sx + 40, 0); sg.addColorStop(0, 'rgba(255,255,255,0)'); sg.addColorStop(0.5, 'rgba(255,250,215,0.45)'); sg.addColorStop(1, 'rgba(255,255,255,0)'); c.fillStyle = sg; c.fillRect(-w / 2, -h / 2, w, h); c.restore(); }
+    if (kf(o.cursor, t, 0) > 0.5 && Math.sin(t * 11) > -0.2) { const cx = -w / 2 + 8 + Math.max(h - 16, (w - 16) * f) + 12; lineaObj(c, 5, C.txt); c.beginPath(); c.moveTo(cx, -h / 2 - 6); c.lineTo(cx, h / 2 + 6); c.stroke(); }
+    if (o.pct) { c.save(); c.translate(w / 2 + 84, 2); odometro(c, f * 100, { size: 40, col: f >= 0.999 ? C.am : C.txt, suf: ' %', miles: false }); c.restore(); }
+    const rt = kf(o.rotulo, t, ''); if (rt) texto(c, rt, -w / 2, -h / 2 - 34, 26, C.txtD, 600, 'left', false, 'middle', 4); },
+  // etiqueta de precio con contador dentro
+  etiqueta(c, o, t) { const w = o.w || 300, h = o.h || 140, on = clamp(kf(o.on, t, 1));
+    const g = c.createLinearGradient(0, -h / 2, 0, h / 2); g.addColorStop(0, mix('#3a3e3c', C.amL, on)); g.addColorStop(1, mix('#2a2d2c', C.amD, on)); c.fillStyle = g;
+    c.beginPath(); c.moveTo(-w / 2 + 50, -h / 2); c.lineTo(w / 2 - 16, -h / 2); c.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + 16); c.lineTo(w / 2, h / 2 - 16); c.quadraticCurveTo(w / 2, h / 2, w / 2 - 16, h / 2); c.lineTo(-w / 2 + 50, h / 2); c.lineTo(-w / 2, 0); c.closePath(); c.fill();
+    c.fillStyle = C.relleno; c.beginPath(); c.arc(-w / 2 + 44, 0, 12, 0, 7); c.fill();
+    c.save(); c.translate(24, 4); odometro(c, kf(o.v, t, 0), Object.assign({ size: h * 0.5, col: mix('#c9ccca', '#2d2711', on), suf: ' €' }, o)); c.restore(); },
+  // móvil de línea con globo de avisos (contador) y vibración
+  telefono(c, o, t) { const w = o.w || 170, h = o.h || 300, vib = clamp(kf(o.vibra, t, 0)), lu = clamp(kf(o.brillo, t, 1));
+    if (vib > 0) c.translate(Math.sin(t * 70) * 6 * vib, 0), c.rotate(Math.sin(t * 55) * 0.04 * vib);
+    c.fillStyle = C.relleno; lineaObj(c, 5, C.linea); c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, 26); c.fill(); c.stroke();
+    c.fillStyle = mix('#0e1311', '#1d2a23', lu); c.beginPath(); c.roundRect(-w / 2 + 14, -h / 2 + 30, w - 28, h - 60, 12); c.fill();
+    lineaObj(c, 6, mix('#26302b', '#4a5a51', lu)); for (let i = 0; i < 4; i++) { c.beginPath(); c.moveTo(-w / 2 + 34, -h / 2 + 70 + i * 50); c.lineTo(w / 2 - 34 - (i % 2) * 30, -h / 2 + 70 + i * 50); c.stroke(); }
+    const n = kf(o.avisos, t, 0); if (n >= 0.5) { c.save(); c.translate(w / 2 - 6, -h / 2 + 6); const rr = n >= 9.5 ? 40 : 32; c.fillStyle = C.am; c.beginPath(); c.arc(0, 0, rr, 0, 7); c.fill(); odometro(c, n, { size: n >= 99.5 ? 26 : 34, col: C.amOsc, max: 99, mas: n >= 99.5 }); c.restore(); } },
+  // puerta: marco y hoja que se abre (p 0..1)
+  puerta(c, o, t) { const w = o.w || 200, h = o.h || 380, p = clamp(kf(o.p, t, 0));
+    c.fillStyle = '#080a09'; c.fillRect(-w / 2, -h, w, h); lineaObj(c, 5, C.linea); c.beginPath(); c.moveTo(-w / 2, 0); c.lineTo(-w / 2, -h); c.lineTo(w / 2, -h); c.lineTo(w / 2, 0); c.stroke();
+    const lw2 = w * (1 - 0.82 * EASE.inout(p)); c.fillStyle = '#1b1f1d'; lineaObj(c, 4, '#4a5550'); c.beginPath(); c.moveTo(-w / 2, -h); c.lineTo(-w / 2 + lw2, -h + 18 * p); c.lineTo(-w / 2 + lw2, -18 * p); c.lineTo(-w / 2, 0); c.closePath(); c.fill(); c.stroke();
+    c.fillStyle = C.am; c.beginPath(); c.arc(-w / 2 + lw2 - 22 * (1 - p * 0.6), -h * 0.48, 7, 0, 7); c.fill(); },
+  // bloque grande (tarea) que se divide en n piezas que se van marcando
+  bloques(c, o, t) { const n = o.n || 6, W0 = o.w || 520, h = o.h || 110, sp = EASE.inout(clamp(kf(o.parte, t, 0))), k = kf(o.hechos, t, 0), gap = 18 * sp;
+    const pw = (W0 - gap * (n - 1)) / n; if (sp < 0.02 && o.texto) { }
+    for (let i = 0; i < n; i++) { const x = -W0 / 2 + i * (pw + gap), y = -h / 2 + Math.sin(i * 1.7) * 10 * sp; const d = clamp(k - i);
+      const g = c.createLinearGradient(0, y, 0, y + h); g.addColorStop(0, mix('#4a4f4d', C.amL, d)); g.addColorStop(1, mix('#33373a', C.amD, d)); c.fillStyle = g;
+      c.beginPath(); c.roundRect(x, y, pw + (1 - sp) * 2, h, lerp(4, 12, sp)); c.fill(); if (d > 0) check(c, x + pw / 2, y + h / 2, Math.min(pw, h) * 0.5, EASE.out(d), C.amOsc, 7); }
+    if (o.texto) { c.globalAlpha *= 1 - sp; texto(c, o.texto, 0, 2, 40, C.txt, 600); } },
+  // monitor con pestañas que se cierran (n = pestañas abiertas, decimal = la que se está cerrando)
+  pestanas(c, o, t) { const w = o.w || 460, h = o.h || 290, n = Math.max(1, kf(o.n, t, 12)), tot = o.max || 14;
+    c.fillStyle = C.relleno; lineaObj(c, 5, C.linea); c.beginPath(); c.roundRect(-w / 2, -h, w, h, 14); c.fill(); c.stroke(); c.beginPath(); c.moveTo(0, 0); c.lineTo(0, 40); c.moveTo(-70, 40); c.lineTo(70, 40); c.stroke();
+    const full = Math.floor(n), part = n - full; const cnt = full + (part > 0 ? 1 : 0); const avail = w - 40; let x = -w / 2 + 20; const tw0 = Math.min(140, avail / Math.max(1, n));
+    for (let i = 0; i < cnt; i++) { const tw = i === cnt - 1 && part > 0 ? tw0 * part : tw0; const last = i === 0; c.fillStyle = last ? C.am : mix('#2b332f', '#3a4540', (i % 3) / 3); c.beginPath(); c.roundRect(x + 2, -h + 18, Math.max(0, tw - 4), 34, 8); c.fill(); x += tw; }
+    lineaObj(c, 8, n <= 1.05 ? 'rgba(230,206,70,0.7)' : '#26302b'); for (let i = 0; i < 4; i++) { c.beginPath(); c.moveTo(-w / 2 + 40, -h + 100 + i * 42); c.lineTo(w / 2 - 60 - (i % 2) * 80, -h + 100 + i * 42); c.stroke(); } },
+  // ondas de voz (barras que suben con amp; amp 0 = silencio)
+  ondas(c, o, t) { const n = o.n || 9, amp = clamp(kf(o.amp, t, 1)), gap = o.gap || 26;
+    for (let i = 0; i < n; i++) { const hh = 14 + amp * (30 + 50 * Math.abs(Math.sin(t * 9 + i * 1.3) * Math.cos(t * 4.3 + i * 0.7))); c.fillStyle = o.col || mix('#56605a', '#e6ce46', amp); c.beginPath(); c.roundRect((i - (n - 1) / 2) * gap - 6, -hh / 2, 12, hh, 6); c.fill(); } },
+  // cajas de planes (S, M, L) con la elegida iluminada
+  planes(c, o, t) { const L = o.items || ['BÁSICO', 'MEDIO', 'GRANDE'], sel = kf(o.sel, t, -1);
+    L.forEach((s, i) => { const sz = 120 + i * 50, x = (i - 1) * 230; const k = clamp(1 - Math.abs(sel - i)); c.fillStyle = mix('#151a17', '#2a2510', k); lineaObj(c, 5, mix('#56605a', '#e6ce46', k)); c.beginPath(); c.roundRect(x - sz / 2, -sz, sz, sz, 14); c.fill(); c.stroke(); c.beginPath(); c.moveTo(x - sz / 2, -sz * 0.72); c.lineTo(x + sz / 2, -sz * 0.72); c.stroke(); texto(c, s, x, 40, 24, mix('#8d9692', '#e6ce46', k), 700, 'center', false, 'middle', 3); }); },
+  // pieza suelta (cuadradito con símbolo) que vuela de un sitio a otro
+  pieza(c, o, t) { const r = kf(o.r, t, 30), on = clamp(kf(o.on, t, 1)); c.fillStyle = mix('#3a4540', C.am, on); c.beginPath(); c.roundRect(-r, -r, 2 * r, 2 * r, 8); c.fill(); if (o.texto) texto(c, o.texto, 0, 2, r, mix('#c9ccca', C.amOsc, on), 700); },
 };
 
 // ---------- subtítulos (de reel.json + timing.json) ----------
@@ -340,7 +434,9 @@ function drawCaps(t) {
     for (const p of L.placed) {
       const k = EASE.out(clamp((t - p.w.t0 + 0.04) / 0.2)); if (k <= 0) continue;
       ctx.save(); ctx.globalAlpha = k * out; if (k < 1) ctx.filter = `blur(${((1 - k) * 8).toFixed(1)}px)`;
-      ctx.font = p.font; ctx.fillStyle = p.col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(p.w.s, p.x, p.y + (1 - k) * 8); ctx.restore();
+      ctx.font = p.font; ctx.fillStyle = p.col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+      if (p.w.y) { const kb = clamp((t - p.w.t0) / 0.32); const sc = 1 + 0.07 * Math.sin(kb * Math.PI); ctx.translate(p.x + p.width / 2, p.y); ctx.scale(sc, sc); ctx.fillText(p.w.s, -p.width / 2, (1 - k) * 8); } else ctx.fillText(p.w.s, p.x, p.y + (1 - k) * 8);
+      ctx.restore();
     }
   }
   return box;
@@ -350,17 +446,24 @@ function drawCaps(t) {
 function drawProgreso(t) {
   const P = CFG.progreso; if (!P) return null; const a = clamp((t - P.aparece) / 0.4); if (a <= 0) return null;
   const n = P.n, gap = P.gap || 92, y = P.y || 360; let cur = -1; NUMS.forEach((u, i) => { if (t >= u.T + 0.3) cur = i; });
+  const x0 = W / 2 - (n - 1) / 2 * gap;
   ctx.save(); ctx.globalAlpha = a;
-  if (P.estilo === 'linea') { ctx.strokeStyle = '#3a3e3c'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(W / 2 - (n - 1) / 2 * gap, y); ctx.lineTo(W / 2 + (n - 1) / 2 * gap, y); ctx.stroke(); }
+  if (P.estilo === 'linea') {
+    ctx.strokeStyle = '#3a3e3c'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x0 + (n - 1) * gap, y); ctx.stroke();
+    let fill = 0; NUMS.forEach((u, i) => { fill = Math.max(fill, (i - 1) + EASE.inout(clamp((t - u.T - 0.1) / 0.5))); });
+    if (fill > 0) { ctx.strokeStyle = '#d9bd3c'; ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x0 + Math.min(n - 1, fill) * gap, y); ctx.stroke(); }
+  }
   for (let i = 0; i < n; i++) {
-    const x = W / 2 + (i - (n - 1) / 2) * gap; const done = i < cur, act = i === cur; const on = act ? clamp((t - NUMS[i].T - 0.3) / 0.3) : (done ? 1 : 0);
-    if (P.estilo === 'barras') { ctx.fillStyle = mix('#4a4f4d', '#e6ce46', on); ctx.beginPath(); ctx.roundRect(x - 6, y - 18, 12, 36, 6); ctx.fill(); continue; }
-    const r = P.estilo === 'linea' ? (act ? 14 : 10) : (act ? 10 : 8);
+    const x = x0 + i * gap; const done = i < cur, act = i === cur; const on = act ? clamp((t - NUMS[i].T - 0.3) / 0.3) : (done ? 1 : 0);
+    const kb = NUMS[i] ? t - NUMS[i].T - 0.3 : -1; const bump = kb > 0 && kb < 0.5 ? 1 + 0.45 * Math.sin(kb / 0.5 * Math.PI) : 1;
+    if (P.estilo === 'barras') { ctx.fillStyle = '#4a4f4d'; ctx.beginPath(); ctx.roundRect(x - 6, y - 18 * bump, 12, 36 * bump, 6); ctx.fill(); if (on > 0) { ctx.save(); ctx.beginPath(); ctx.roundRect(x - 6, y - 18 * bump, 12, 36 * bump, 6); ctx.clip(); ctx.fillStyle = '#e6ce46'; ctx.fillRect(x - 6, y + 18 * bump - 36 * bump * EASE.out(on), 12, 36 * bump); ctx.restore(); } continue; }
+    const r = (P.estilo === 'linea' ? (act ? 14 : 10) : (act ? 10 : 8)) * bump;
     ctx.fillStyle = mix('#4a4f4d', '#d9bd3c', on); ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill();
     if (act && P.estilo !== 'puntos') { ctx.strokeStyle = `rgba(217,189,60,${0.8 * on})`; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(x, y, r + 11, 0, 7); ctx.stroke(); }
+    if (kb > 0 && kb < 0.7) { ctx.strokeStyle = `rgba(230,206,70,${0.6 * (1 - kb / 0.7)})`; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, 12 + kb / 0.7 * 34, 0, 7); ctx.stroke(); }
   }
   ctx.restore();
-  return { x: W / 2 - (n - 1) / 2 * gap - 24, y: y - 30, w: (n - 1) * gap + 48, h: 60 };
+  return { x: x0 - 24, y: y - 30, w: (n - 1) * gap + 48, h: 60 };
 }
 function dotPos(i) { const P = CFG.progreso; const gap = P.gap || 92; return [W / 2 + (i - ((P.n - 1) / 2)) * gap, P.y || 360]; }
 
@@ -370,19 +473,30 @@ function dimAt(t) { // oscurecimiento global del mundo por las transiciones
   let d = 1; for (const u of NUMS) { const a = u.T - 0.1, b = u.S + 0.35; if (t < a || t > b + 0.1) continue; const kin = EASE.inout(clamp((t - a) / 0.45)), kout = EASE.inout(clamp((t - u.S) / 0.45)); d = Math.min(d, t < u.S ? 1 - 0.8 * kin : 0.2 + 0.8 * kout); } return d;
 }
 function itemScreen(id, t) { const it = ITEMS.find(x => x.id === id); if (!it) return null; const cm = cam(t); const [sx, sy] = it.capa === 'pantalla' ? [kf(it.x, t, 0), kf(it.y, t, 0)] : toScreen([kf(it.x, t, 0), kf(it.y, t, 0) + (it.oy || 0)], cm); const r = (it.r !== undefined ? kf(it.r, t, 60) : 60) * kf(it.s, t, 1) * (it.capa === 'pantalla' ? 1 : cm.z); return [sx, sy, r]; }
+function pulse(x, y, r0, k, col = '230,206,70', w = 4) { if (k <= 0 || k >= 1) return; ctx.save(); ctx.strokeStyle = `rgba(${col},${0.7 * (1 - k)})`; ctx.lineWidth = w * (1 - k) + 1; ctx.beginPath(); ctx.arc(x, y, r0 + EASE.out(k) * r0 * 1.6, 0, 7); ctx.stroke(); ctx.restore(); }
 function drawNums(t) {
   const out = [];
   for (const u of NUMS) {
-    if (t < u.T - 0.05 || t > u.S + 0.6) continue;
+    if (t < u.T - 0.05 || t > u.S + 1.0) continue;
     // origen: objeto que sobrevive, o punto del indicador
     let from = u.desde ? itemScreen(u.desde, u.T) : null; if (!from) { const d = dotPos(u.n - 1); from = [d[0], d[1], 9]; }
     const kin = EASE.inout(clamp((t - u.T) / 0.5));
-    let x = lerp(from[0], COIN_C[0], kin), y = lerp(from[1], COIN_C[1], kin), r = lerp(from[2], COIN_R, kin), a = 1;
+    let x = lerp(from[0], COIN_C[0], kin), y = lerp(from[1], COIN_C[1], kin), r = lerp(from[2], COIN_R, kin), a = u.desde ? Math.pow(clamp((t - u.T) / 0.3), 0.6) : 1;
     if (!u.desde) { y = lerp(from[1], COIN_C[1], EASE.back(clamp((t - u.T) / 0.55))); }
-    const ko = EASE.inout(clamp((t - u.S) / 0.5));
-    if (ko > 0) { const to = u.hacia ? itemScreen(u.hacia, u.S + 0.5) : null; if (to) { x = lerp(x, to[0], ko); y = lerp(y, to[1], ko); r = lerp(r, to[2], ko); a = 1 - clamp((ko - 0.6) / 0.4); } else { r = lerp(r, 0, ko); a = 1 - ko; } }
+    // llegada: aplastar y estirar + onda
+    const ka = t - (u.T + 0.5); let sx = 1, sy = 1;
+    if (ka > 0 && ka < 0.6) { const b = Math.sin(ka / 0.6 * Math.PI * 2) * Math.exp(-ka * 5) * 0.14; sx = 1 + b; sy = 1 - b; }
+    if (t < u.S) pulse(x, y, COIN_R, (t - u.T - 0.45) / 0.6);
+    const ko = EASE.inout(clamp((t - u.S) / 0.5)); let to = null;
+    if (ko > 0) { to = u.hacia ? itemScreen(u.hacia, u.S + 0.5) : null; if (to) { x = lerp(x, to[0], ko); y = lerp(y, to[1], ko); r = lerp(r, to[2], ko); a *= 1 - clamp((ko - 0.75) / 0.25); } else { r = lerp(r, 0, ko); a *= 1 - ko; } }
+    if (to) pulse(to[0], to[1], Math.max(30, to[2] * 0.8), (t - u.S - 0.42) / 0.55);
     if (a <= 0 || r <= 0.5) continue;
-    ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); TIPOS.moneda(ctx, { r, n: kin > 0.5 ? u.n : '' }, t); ctx.restore();
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(sx, sy); TIPOS.moneda(ctx, { r }, t);
+    // el número entra rodando desde abajo, dentro de la moneda
+    const kn = EASE.out(clamp((t - u.T - 0.3) / 0.4)); if (kn > 0) { ctx.save(); ctx.beginPath(); ctx.arc(0, 0, r * 0.92, 0, 7); ctx.clip(); texto(ctx, String(u.n), 0, r * 0.04 + (1 - kn) * r * 1.2, r * 0.72, C.amOsc, 600); ctx.restore(); }
+    // brillo que cruza la moneda
+    const kg = clamp((t - u.T - 0.6) / 0.5); if (kg > 0 && kg < 1) { ctx.save(); ctx.beginPath(); ctx.arc(0, 0, r, 0, 7); ctx.clip(); ctx.rotate(-0.6); const gx = lerp(-r * 1.6, r * 1.6, kg); const gg = ctx.createLinearGradient(gx - 20, 0, gx + 20, 0); gg.addColorStop(0, 'rgba(255,255,255,0)'); gg.addColorStop(0.5, 'rgba(255,250,215,0.55)'); gg.addColorStop(1, 'rgba(255,255,255,0)'); ctx.fillStyle = gg; ctx.fillRect(-r * 2, -r * 2, r * 4, r * 4); ctx.restore(); }
+    ctx.restore();
     out.push({ id: 'moneda' + u.n, rect: { x: x - r, y: y - r, w: 2 * r, h: 2 * r } });
   }
   return out;
@@ -402,12 +516,20 @@ function itemAlpha(it, t) { // entrada y salida por defecto: fundido + desde osc
 }
 function drawItem(c, it, t, cm, dim) {
   const a = itemAlpha(it, t); if (a <= 0.001) return null;
-  const pop = it.pop ? EASE.back(clamp((t - it.t0) / 0.38)) : 1;
-  const s = kf(it.s, t, 1) * (it.pop ? lerp(0.2, 1, pop) : 1);
-  const x = kf(it.x, t, 0), y = kf(it.y, t, 0), rot = kf(it.rot, t, 0);
+  const popFrom = it.kind === 'figura' ? 1 : (it.pop === true ? 0.2 : (it.pop === false ? 1 : 0.72));
+  const pk = EASE.back(clamp((t - it.t0) / 0.4));
+  let s = kf(it.s, t, 1) * lerp(popFrom, 1, pk);
+  const x = kf(it.x, t, 0); let y = kf(it.y, t, 0); const rot = kf(it.rot, t, 0);
+  let am = 1;
+  for (const u of NUMS) {
+    if (u.desde === it.id && t >= u.T) { const k = EASE.inout(clamp((t - u.T) / 0.42)); am *= 1 - k; s *= lerp(1, 0.55, k); }
+    if (u.hacia === it.id) { const k = clamp((t - (u.S + 0.42)) / 0.32); if (k > 0 && k < 1) s *= 1 + 0.14 * Math.sin(k * Math.PI); }
+  }
+  if (it.kind === 'figura') y += (1 - EASE.out(clamp((t - it.t0) / 0.5))) * 24;
+  if (am <= 0.001) return null;
   const lum = (it.sobrevive && NUMS.some(u => u.desde === it.id && t >= u.T - 0.2)) ? 1 : dim * kf(it.luz, t, 1) * lerp(0.35, 1, clamp((t - it.t0) / (it.entra ?? 0.35)));
-  c.save(); c.globalAlpha = a; if (lum < 0.995) c.filter = `brightness(${lum.toFixed(3)})`;
-  if (it.kind === 'figura') { c.translate(0, 0); drawFigura(c, it, t, a); c.restore(); const g = it._geo; const S = g.S; return { id: it.id, kind: 'figura', head: [x + g.head[0] * S * g.dir, y + g.head[1] * S], hr: 0.086 * S, body: { x: x - 0.2 * S, y: y + (g.head[1] - 0.09) * S, w: 0.4 * S, h: -(g.head[1] - 0.09) * S } }; }
+  c.save(); c.globalAlpha = a * am; if (lum < 0.995) c.filter = `brightness(${lum.toFixed(3)})`;
+  if (it.kind === 'figura') { c.translate(0, y - kf(it.y, t, 0)); drawFigura(c, it, t, a); c.restore(); const g = it._geo; const S = g.S; return { id: it.id, kind: 'figura', head: [x + g.head[0] * S * g.dir, y + g.head[1] * S], hr: 0.086 * S, body: { x: x - 0.2 * S, y: y + (g.head[1] - 0.09) * S, w: 0.4 * S, h: -(g.head[1] - 0.09) * S } }; }
   c.translate(x, y); if (rot) c.rotate(rot); if (s !== 1) c.scale(s, s);
   const o = {}; for (const k in it) o[k] = it[k]; TIPOS[it.tipo](c, o, t); c.restore();
   const r0 = 0; const r = (it.caja ? it.caja : [-(kf(it.r, t, 60)), -(kf(it.r, t, 60)), 2 * kf(it.r, t, 60), 2 * kf(it.r, t, 60)]);
@@ -486,6 +608,13 @@ window.soundEvents = function () {
   for (const u of NUMS) { ev.push({ t: u.T, kind: 'whip' }); ev.push({ t: u.T + 0.5, kind: 'pop' }); }
   for (const it of ITEMS) { if (it.sfx === false || it.t0 <= 0.05) continue; if (it.tipo === 'anillo' || it.tipo === 'arcoAbierto') ev.push({ t: it.t0, kind: 'swoosh' }); else if (it.pop || ['moneda', 'bocadillo', 'corazon', 'seguir', 'resumen', 'compra', 'temporizador'].includes(it.tipo)) ev.push({ t: it.t0, kind: 'pop' }); }
   for (const e of EXTRA_SFX) ev.push(e);
+  for (const it of ITEMS) {
+    if (it.tipo === 'chispas') ev.push({ t: it.t0, kind: 'ding' });
+    const key = it.tipo === 'contador' || it.tipo === 'etiqueta' ? 'v' : (it.tipo === 'telefono' ? 'avisos' : (it.tipo === 'bloques' ? 'hechos' : (it.tipo === 'pestanas' ? 'n' : null)));
+    if (!key || !Array.isArray(it[key]) || it.sfx === false) continue;
+    const L = it[key]; let prev = null, last = -1; const t0 = L[0][0], t1 = L[L.length - 1][0];
+    for (let tt = t0; tt <= t1 + 0.05; tt += 1 / 60) { const v = Math.floor(kf(L, tt, 0) + 1e-6); if (prev !== null && v !== prev && tt - last > 0.055) { ev.push({ t: tt, kind: 'tickc', f: clamp((tt - t0) / Math.max(0.3, t1 - t0)) }); last = tt; } prev = v; }
+  }
   return ev.filter(e => e.t >= 0 && e.t < DUR).sort((a, b) => a.t - b.t);
 };
 E.__start = function () {
