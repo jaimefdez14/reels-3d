@@ -10,7 +10,7 @@
       "pause": 0.35
     },
     {
-      "show": "Y la última / *te ahorra horas gratis.*",
+      "show": "Y la última / *evita que trabajes gratis.*",
       "pause": 0.5
     },
     {
@@ -171,6 +171,13 @@
         "3: «Y escucha su cifra / *antes de decir la tuya.*» → «Deja que diga una cifra / *antes de decir la tuya.*»",
         "4: «Porque a veces tienen más / *de lo que ibas a pedir.*» → «A veces tiene más / *de lo que ibas a pedir.*»",
         "14: «Cobrar más no es pedir a lo loco: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*»"
+      ]
+    },
+    {
+      "ronda": 6,
+      "nota": "8/10; único bloqueante: «te ahorra horas gratis» se entiende al revés → se vuelve a «evita que trabajes gratis», que los lectores de las rondas 3 y 4 entendieron sin problema. PASA.",
+      "cambios": [
+        "1: «Y la última / *te ahorra horas gratis.*» → «Y la última / *evita que trabajes gratis.*»"
       ]
     }
   ]

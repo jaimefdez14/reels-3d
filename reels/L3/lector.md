@@ -18,3 +18,6 @@ Bloqueante: «eres el primero al que llama para arreglarlo» choca con «sin ech
 
 # Ronda 5 (lector nuevo) · nota 8/10
 Bloqueante: «eres a quien quiere a su lado» (¿quién quiere a quién?). Estilo: «salidas» → «opciones»; «una vez al mes, tres líneas en un correo» sin verbo.
+
+# Ronda 6 (lector nuevo) · nota 8/10 · PASA
+Sin bloqueantes. Estilo: «tu jefe te quiere a su lado» no cierra del todo el gancho; «ve con soluciones» suena a manual; «tres líneas» sin decir de qué.

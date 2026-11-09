@@ -64,7 +64,7 @@ E.obj('ch9', 'chispas', { t0: w(9, 3), t1: w(9, 3) + 0.8, x: 0, y: -450, r0: 110
 E.numero(3, T3, S3, { desde: 'fechas', hacia: 'correo' });
 E.figura('yo3', { t0: S3 - 0.1, t1: TC, x: -300, cara: true, toca: ['mesa'], poses: [[0, 'escribir']] });
 E.obj('mesa', 'escritorio', { t0: S3 - 0.1, t1: TC, x: -10, silla: true, brillo: [[w(11, 4), 0], [wf(11, -1), 1]], refl: true, inspeccion: false, caja: [-330, -400, 500, 400] });
-E.obj('correo', 'lista', { t0: S3 - 0.1, t1: TC, x: 110, y: -470, s: 1.3, n: 3, w: 220, gap: 46, p: [[w(11, 4), 0], [wf(11, -1) + 0.3, 3, 'lin']], caja: [-110, -65, 220, 130] });
+E.obj('correo', 'lista', { t0: S3 - 0.1, t1: TC, x: 110, y: -470, s: 1.4, n: 3, w: 230, gap: 46, p: [[w(11, 4), 0], [wf(11, -1) + 0.3, 3, 'lin']], caja: [-115, -65, 230, 130] });
 E.figura('jefe3', { t0: S3 - 0.1, t1: TC, x: 390, dir: -1, color: 'gris',
   poses: [[0, 'de_pie'], [w(12, 4), 'pensar'], [w(13, 6), 'celebrar']] });
 E.obj('duda', 'bocadillo', { t0: w(12, 4), t1: w(13, 4), x: 280, y: -330, w: 110, h: 86, texto: '?', size: 44, pop: true, caja: [-60, -45, 120, 116] });

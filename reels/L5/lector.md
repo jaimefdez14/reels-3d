@@ -20,3 +20,6 @@ Bloqueantes: las citas sin verbo delante («Número uno: «¿Con qué presupuest
 
 # Ronda 5 (lector nuevo) · nota 7/10
 Bloqueantes: la cita del número uno se mezcla con la narración («contáis» desorienta); «su cifra» y «tienen más» sin referente (el cliente no se nombra). Estilo: el anuncio («la última evita que trabajes gratis») choca con el punto 3; el remate no vuelve a las «cuatro frases».
+
+# Ronda 6 (lector nuevo) · nota 8/10 · PASA (con el anuncio devuelto a «evita que trabajes gratis»)
+Bloqueante: «te ahorra horas gratis» (se entiende al revés). Estilo: «Son mil doscientos euros» aún puede sonar a dato; «mándalo por escrito» ambiguo.

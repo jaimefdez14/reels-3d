@@ -59,7 +59,7 @@ E.obj('alcance', 'anillo', { t0: N[3].S - 0.1, t1: TC, x: 110, y: -330, rx: 230,
 ['A', 'B', 'C'].forEach((k, i) => E.obj('dentro' + k, 'pieza', { t0: N[3].S + 0.3 + i * 0.15, t1: TC, x: 110 + (i - 1) * 90, y: -330, r: 32, pop: true, on: [[0, 0.35], [w(13, 0) + i * 0.2, 0.35], [w(13, 0) + i * 0.2 + 0.2, 1]], sfx: false }));
 const golpes4 = [w(12, 5), w(12, 8), wf(12, -1) + 0.2];
 golpes4.forEach((tg, i) => {
-  const sx = i % 2 ? 470 : -270, sy = -540 + i * 90, ex = 110 + (i % 2 ? 235 : -235) * 0.92, ey = -330 + (i - 1) * 70;
+  const sx = i % 2 ? 400 : -270, sy = -540 + i * 90, ex = 110 + (i % 2 ? 235 : -235) * 0.92, ey = -330 + (i - 1) * 70;
   E.obj('fuera' + i, 'pieza', { t0: tg - 0.6, t1: tg + 0.8, sale: 0.25, r: 26, texto: '+', on: 0.3, libre: true, sfx: false,
     x: [[tg - 0.6, sx], [tg, ex, 'in'], [tg + 0.6, sx * 1.05, 'out']], y: [[tg - 0.6, sy], [tg, ey, 'in'], [tg + 0.6, sy - 40, 'out']] });
   E.obj('choque' + i, 'pulso', { t0: tg, t1: tg + 0.6, x: ex, y: ey, r0: 20, r1: 80, inspeccion: false });
