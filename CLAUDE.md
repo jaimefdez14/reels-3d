@@ -13,6 +13,7 @@ de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entr
 
 - `docs/ANALISIS-REFERENCIA.md`: los cinco reels analizados (guiones, estructura, lenguaje, diseño, cámara, sonido).
 - `docs/SISTEMA-3D.md`: el molde de guion de 8 bloques, el lenguaje visual y las comprobaciones. **Es la norma creativa.**
+- `docs/REDACCION.md`: cómo se escribe cada frase del molde para que se narre bien (regla 14).
 - `motor/`: el motor (Three.js, determinista: `window.seek(t)`), `build.py`, `render.js`, fuentes y vendor.
 - `herramientas/`: `frames.js` (fotogramas), `sheet.py` (hoja de contactos), `kokoro_tts.py` (voz gratuita de previas).
 - `reels/<ID>/`: `reel.json` (guion: `lines[{show, say, hi, neg, voice, pause, hide}]`), `shots3d.js` (escena),
@@ -27,6 +28,7 @@ python3 herramientas/sheet.py <dir> hoja.jpg 6   # hoja de contactos
 node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si existe reels/ID/voice/voz.wav)
 node herramientas/inspeccionar.js reels/ID 0.2   # solapes por rectángulos (debe decir ok)
 node herramientas/inspeccionar_px.js reels/ID 0.5  # solapes por píxeles, legibilidad, máximo 2 bocadillos (debe decir ok)
+python3 herramientas/redaccion.py reels/ID     # redacción del guion (debe decir ok)
 ```
 
 ## Revisión obligatoria antes de enseñar nada (04-11-2026)
@@ -73,6 +75,14 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 12. **Ideas aprobadas, segunda tanda (04-11-2026):** Jaime: «n5 y n6». N5 (la primera frase del correo, letras D-A-P) y N6 (nunca falles dos veces) de `docs/IDEAS-2026-11-04b.md`. N1-N4 siguen en propuesta.
 
 13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
+
+14. **Redacción: la estructura de la referencia + la guía de Jaime (09-11-2026).** Jaime: «mantén tu estructura de los
+   5 ejemplos… pero aplica esto a la redacción, guionización y narrativa… lo mejor de ambos». `docs/REDACCION.md`: los
+   8 bloques y sus escenas siguen la referencia; cada frase sigue la guía (idea en ≤ 12 palabras, monólogo seguido y
+   leído en voz alta antes de cortar titulares, lo nuevo al final, cada frase retoma la anterior, nada de «Pero / Además /
+   En cambio» al empezar, sin calcos ni muletillas, un «por eso» reconocible, giro hacia la mitad, remate ≤ 10 palabras
+   que vuelve al gancho, envío a alguien reconocible, registro de Madrid). `herramientas/redaccion.py` tiene que decir
+   `ok` antes de hacer escenas. Las cifras siguen prohibidas (regla 3) salvo que Jaime diga otra cosa.
 
 ## Pendiente de Jaime
 
