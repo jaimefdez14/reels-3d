@@ -7,3 +7,6 @@ Fallos marcados:
 4. «Si tienes que ir a por él, ya no lo coges.» — falta el porqué (la pereza de levantarte).
 5. «Número cuatro: una sola pestaña.» — da por hecho el ordenador.
 Abandono: segundo 25-30, en el número tres.
+
+# Ronda 2 (lector nuevo) · nota 7/10
+Fallos marcados: «el informe» y «es el que mejor funciona» sin referente; pestaña o ventana; «algo fácil» de qué; el cinco no es para hoy.

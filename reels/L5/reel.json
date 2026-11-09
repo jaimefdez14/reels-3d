@@ -10,7 +10,7 @@
       "pause": 0.35
     },
     {
-      "show": "Y la última / *te ahorra discusiones.*",
+      "show": "Y la última / *evita que trabajes gratis.*",
       "pause": 0.5
     },
     {
@@ -23,7 +23,7 @@
       "pause": 0.3
     },
     {
-      "show": "Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*",
+      "show": "Porque a veces tienen más / *de lo que ibas a pedir.*",
       "pause": 0.55
     },
     {
@@ -37,7 +37,7 @@
       "pause": 0.3
     },
     {
-      "show": "Ese silencio incómodo es normal: / *el primero que habla, rebaja.*",
+      "show": "Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*",
       "pause": 0.55
     },
     {
@@ -54,7 +54,7 @@
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // «Si cambia el encargo, / *lo hablamos».*",
+      "show": "Número cuatro: // «Si cambia el encargo, / *cambia el precio».*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -67,7 +67,7 @@
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*",
+      "show": "Cobrar más no es pedir más: / *es saber qué decir.*",
       "pause": 0.3
     },
     {
@@ -126,6 +126,17 @@
         "12: «Dilo antes de empezar: / lo que no estaba, *se paga aparte.*» → «Dilo antes de empezar, / *por si a mitad te lo cambian.*»",
         "14: «Cobrar más no es pedir perdón: / es preguntar, / *decir tu precio y callarte.*» → «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*»",
         "15: «Mándaselo a quien rebaja / *antes de que se lo pidan.*» → «Mándaselo a quien rebaja su precio / *sin que se lo pidan.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "nota": "ronda 2: 8/10",
+      "cambios": [
+        "1: «Y la última / *te ahorra discusiones.*» → «Y la última / *evita que trabajes gratis.*»",
+        "4: «Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*» → «Porque a veces tienen más / *de lo que ibas a pedir.*»",
+        "7: «Ese silencio incómodo es normal: / *el primero que habla, rebaja.*» → «Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*»",
+        "11: «Número cuatro: // «Si cambia el encargo, / *lo hablamos».*» → «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*»",
+        "14: «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
       ]
     }
   ]

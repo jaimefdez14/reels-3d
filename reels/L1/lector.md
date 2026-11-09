@@ -7,3 +7,6 @@ Fallos marcados:
 4. «Por eso a fin de mes ya sabes en qué se te va» — conector equivocado (repasar es el medio, no la causa).
 5. «El sueldo no se estira: se reparte antes de gastarlo» — recoge 2 de 4 reglas (aceptable).
 Abandono: segundo 8-10, en «págate a ti primero» (la regla más vista).
+
+# Ronda 2 (lector nuevo) · nota 8/10
+Fallos marcados: tres cuentas sin decirlo; «se queda a cero» choca con el gancho; regla 4 promete información, no solución.

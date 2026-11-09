@@ -27,7 +27,7 @@
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *una cuenta para cada cosa.*",
+      "show": "Número dos: // *lo que queda, en dos cuentas.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -36,7 +36,7 @@
       "pause": 0.3
     },
     {
-      "show": "Cuando la de caprichos / se queda a cero, *se acabaron los caprichos.*",
+      "show": "Cuando la de caprichos / *se vacía, se acabaron los caprichos.*",
       "pause": 0.25
     },
     {
@@ -70,7 +70,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así, a fin de mes / ya sabes *en qué se te va el dinero.*",
+      "show": "Así lo pillas el día diez, / *no el día veinte.*",
       "pause": 0.55
     },
     {
@@ -119,6 +119,15 @@
         "2: «Número uno: // *págate a ti primero.*» → «Número uno: // *lo primero que pagas eres tú.*»",
         "3: «El día que cobras, / aparta una parte *antes de pagar nada.*» → «El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*»",
         "15: «Por eso a fin de mes / ya sabes *en qué se te va.*» → «Así, a fin de mes / ya sabes *en qué se te va el dinero.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "nota": "ronda 2: 8/10",
+      "cambios": [
+        "5: «Número dos: // *una cuenta para cada cosa.*» → «Número dos: // *lo que queda, en dos cuentas.*»",
+        "7: «Cuando la de caprichos / se queda a cero, *se acabaron los caprichos.*» → «Cuando la de caprichos / *se vacía, se acabaron los caprichos.*»",
+        "15: «Así, a fin de mes / ya sabes *en qué se te va el dinero.*» → «Así lo pillas el día diez, / *no el día veinte.*»"
       ]
     }
   ]

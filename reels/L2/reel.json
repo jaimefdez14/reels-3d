@@ -32,11 +32,11 @@
       "pause": 0.3
     },
     {
-      "show": "Por eso, calcula / y súmale la mitad.",
+      "show": "Por eso, calcula lo que tardas / y súmale la mitad.",
       "pause": 0.55
     },
     {
-      "show": "Tercera: // no veas mala fe.",
+      "show": "Tercera: // si no te contestan, no es mala fe.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -45,7 +45,7 @@
       "pause": 0.3
     },
     {
-      "show": "Ese correo sin respuesta / casi nunca va contra ti.",
+      "show": "Así que escribe otra vez, / sin enfadarte.",
       "pause": 0.55
     },
     {
@@ -54,7 +54,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "No te deja en paz hasta que lo acabas. / Es el efecto Zeigarnik.",
+      "show": "Hasta en la ducha lo tienes en la cabeza. / Es el efecto Zeigarnik.",
       "pause": 0.3
     },
     {
@@ -62,16 +62,16 @@
       "pause": 0.55
     },
     {
-      "show": "Quinta: // unas pocas tareas lo dan casi todo.",
+      "show": "Quinta: // una tarea de cada cinco lo da casi todo.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Una de cada cinco tareas / da casi todo el resultado.",
+      "show": "Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.",
       "pause": 0.3
     },
     {
-      "show": "Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.",
+      "show": "Hazla primero; / las demás pueden esperar.",
       "pause": 0.55
     },
     {
@@ -135,6 +135,19 @@
         "14: «Dos de cada diez tareas / dan ocho de cada diez resultados.» → «Una de cada cinco tareas / da casi todo el resultado.»",
         "15: «Haz esas dos primero. / Las otras ocho pueden esperar.» → «Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.»",
         "16: «Los errores son los mismos: / ahora ya tienen nombre.» → «Ya las sufrías. / Ahora sabes cómo se llaman.»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "nota": "ronda 2: 7/10",
+      "cambios": [
+        "6: «Por eso, calcula / y súmale la mitad.» → «Por eso, calcula lo que tardas / y súmale la mitad.»",
+        "7: «Tercera: // no veas mala fe.» → «Tercera: // si no te contestan, no es mala fe.»",
+        "9: «Ese correo sin respuesta / casi nunca va contra ti.» → «Así que escribe otra vez, / sin enfadarte.»",
+        "11: «No te deja en paz hasta que lo acabas. / Es el efecto Zeigarnik.» → «Hasta en la ducha lo tienes en la cabeza. / Es el efecto Zeigarnik.»",
+        "13: «Quinta: // unas pocas tareas lo dan casi todo.» → «Quinta: // una tarea de cada cinco lo da casi todo.»",
+        "14: «Una de cada cinco tareas / da casi todo el resultado.» → «Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.»",
+        "15: «Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.» → «Hazla primero; / las demás pueden esperar.»"
       ]
     }
   ]

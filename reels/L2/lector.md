@@ -7,3 +7,6 @@ Fallos marcados:
 4. «Tercera: la navaja de Hanlon.» — «navaja» sin contexto descoloca.
 5. «Por eso, a lo que calcules, súmale la mitad.» — sintaxis de escrito.
 Abandono: segundo 12-15, en el segundo nombre raro seguido («suena a clase de Wikipedia»).
+
+# Ronda 2 (lector nuevo) · nota 7/10
+Fallos marcados: «No veas mala fe» sin referente; la quinta repite; «haz esas» sin decir cuáles; Zeigarnik dice lo mismo dos veces.

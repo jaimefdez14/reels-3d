@@ -8,3 +8,6 @@ Fallos marcados:
 5. «Mándaselo a quien rebaja antes de que se lo pidan» — «rebaja» cojo.
 Menor: «Son mil doscientos euros», solo con voz, puede no sonar a ejemplo.
 Abandono: segundo 25-30, en el número tres.
+
+# Ronda 2 (lector nuevo) · nota 8/10
+Fallos marcados: «el primero que habla, rebaja»: ¿quién?; «pedir perdón» sin referente; «lo hablamos» no dice que se cobra; anuncio flojo.

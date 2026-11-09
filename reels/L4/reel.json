@@ -6,7 +6,7 @@
   "coverT": 1.7,
   "lines": [
     {
-      "show": "Cinco trucos para dejar / *de procrastinar hoy mismo.*",
+      "show": "Cinco trucos para dejar / *de procrastinar desde hoy.*",
       "pause": 0.35
     },
     {
@@ -45,20 +45,20 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*",
+      "show": "Hacer el informe asusta. / *Abrir el documento, no.*",
       "pause": 0.3
     },
     {
-      "show": "Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*",
+      "show": "Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*",
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // *una sola ventana abierta.*",
+      "show": "Número cuatro: // *una sola pestaña.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*",
+      "show": "Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*",
       "pause": 0.3
     },
     {
@@ -71,7 +71,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Al acabar el día, deja sin terminar / *algo fácil.*",
+      "show": "Al acabar el día, deja a medias / *una parte fácil de la tarea.*",
       "pause": 0.3
     },
     {
@@ -134,6 +134,19 @@
         "14: «Número cinco: // *para a mitad de frase.*» → «Número cinco: // *deja algo a medias.*»",
         "15: «Al terminar el día, / *deja una frase a medias.*» → «Al acabar el día, deja sin terminar / *algo fácil.*»",
         "16: «Por eso mañana sabes / *por dónde seguir.*» → «Mañana empiezas por ahí / *y ya estás en marcha.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "nota": "ronda 2: 7/10",
+      "cambios": [
+        "0: «Cinco trucos para dejar / *de procrastinar hoy mismo.*» → «Cinco trucos para dejar / *de procrastinar desde hoy.*»",
+        "9: «Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*»",
+        "10: «Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*» → «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*»",
+        "11: «Número cuatro: // *una sola ventana abierta.*» → «Número cuatro: // *una sola pestaña.*»",
+        "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*»",
+        "15: «Al acabar el día, deja sin terminar / *algo fácil.*» → «Al acabar el día, deja a medias / *una parte fácil de la tarea.*»",
+        "9: «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe asusta. / *Abrir el documento, no.*» (seguía contradiciéndose)"
       ]
     }
   ]

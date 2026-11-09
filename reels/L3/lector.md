@@ -6,3 +6,6 @@ Fallos marcados:
 3. «Y no es presumir: es ahorrarle el trabajo de buscarlo» — el «lo» queda lejos.
 4. «Di "lo tienes el jueves". Y el jueves, lo tiene.» — depende de la entonación (quién habla).
 Abandono: segundo 25-28, al empezar el número tres.
+
+# Ronda 2 (lector nuevo) · nota 8/10
+Fallos marcados: «te llama a ti» suena a más marrones; «ahorrarle buscar» torpe; tres verbos seguidos en el remate.

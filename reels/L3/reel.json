@@ -14,7 +14,7 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *llega con la solución.*",
+      "show": "Número uno: // *llega con soluciones.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -27,7 +27,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así, cuando algo se tuerce, / *te llama a ti.*",
+      "show": "Así, cuando algo se tuerce, / *eres el primero en quien piensa.*",
       "pause": 0.55
     },
     {
@@ -61,11 +61,11 @@
       "pause": 0.3
     },
     {
-      "show": "Y no es presumir: / *es ahorrarle buscar lo que haces.*",
+      "show": "Y no es presumir: / *es ahorrarle tener que preguntártelo.*",
       "pause": 0.55
     },
     {
-      "show": "Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*",
+      "show": "Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -88,6 +88,16 @@
         "7: «No digas «lo miro». / *Di «lo tienes el jueves».*» → «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*»",
         "13: «Y no es presumir: / *es ahorrarle el trabajo de buscarlo.*» → «Y no es presumir: / *es ahorrarle buscar lo que haces.*»",
         "14: «No son tus horas: / *son las fechas que cumples.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "nota": "ronda 2: 8/10",
+      "cambios": [
+        "2: «Número uno: // *llega con la solución.*» → «Número uno: // *llega con soluciones.*»",
+        "5: «Así, cuando algo se tuerce, / *te llama a ti.*» → «Así, cuando algo se tuerce, / *eres el primero en quien piensa.*»",
+        "13: «Y no es presumir: / *es ahorrarle buscar lo que haces.*» → «Y no es presumir: / *es ahorrarle tener que preguntártelo.*»",
+        "14: «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
       ]
     }
   ]
