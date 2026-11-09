@@ -32,20 +32,27 @@ def level(x, target_db=-17.0):
 
 out = [np.zeros(int(0.5 * SR))]; t = 0.5; words = []
 for i, L in enumerate(reel['lines']):
-    text = L.get('say') or L['show']
-    spoken = re.sub(r'[«»]', '', text)
-    samples, sr = model.create(spoken, voice=VOICE, speed=SPEED, lang='es')
-    assert sr == SR
-    x = level(trim(np.asarray(samples, dtype=np.float32)))
-    dur = len(x) / SR
-    toks = text.split(); weights = np.array([len(re.sub(r'[^\wáéíóúüñ]', '', w)) + 1.5 for w in toks], float); weights /= weights.sum()
-    cur = t; row = []
-    for w, frac in zip(toks, weights):
-        d = dur * frac; row.append([round(cur, 3), round(cur + d, 3)]); cur += d
-    words.append(row); out.append(x); t += dur
+    # estilo B: « / » separa subtítulos, «*amarillo*» marca color, « // » separa subtítulos y mete una pausa en la voz
+    raw = (L.get('say') or L['show']).replace('*', '')
+    parts = [re.sub(r'\s+/\s+', ' ', p).strip() for p in re.split(r'\s+//\s+', raw)]
+    row = []; total = 0.0
+    for j, text in enumerate(parts):
+        spoken = re.sub(r'[«»]', '', text)
+        samples, sr = model.create(spoken, voice=VOICE, speed=SPEED, lang='es')
+        assert sr == SR
+        x = level(trim(np.asarray(samples, dtype=np.float32)))
+        dur = len(x) / SR
+        toks = text.split(); weights = np.array([len(re.sub(r'[^\wáéíóúüñ]', '', w)) + 1.5 for w in toks], float); weights /= weights.sum()
+        cur = t
+        for w, frac in zip(toks, weights):
+            d = dur * frac; row.append([round(cur, 3), round(cur + d, 3)]); cur += d
+        out.append(x); t += dur; total += dur
+        if j < len(parts) - 1:
+            gap = L.get('pausa_media', 0.55); out.append(np.zeros(int(gap * SR))); t += gap
+    words.append(row)
     pause = L.get('pause', 0.9 if i == 0 else 0.55)
     out.append(np.zeros(int(pause * SR))); t += pause
-    print(f'{i:2d} {dur:5.2f}s  {text}')
+    print(f'{i:2d} {total:5.2f}s  {" // ".join(parts)}')
 out.append(np.zeros(int(1.2 * SR))); t += 1.2
 audio = np.concatenate(out)
 sf.write(os.path.join(vdir, 'voz.wav'), audio, SR, subtype='PCM_16')

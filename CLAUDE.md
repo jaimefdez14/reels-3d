@@ -20,6 +20,9 @@ de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entr
 
 ## Comandos
 
+Estilo B (listas en negro): `python3 herramientas/voz.py reels/ID --velocidad 1.1` → `python3 motor2d/build.py reels/ID`
+→ los mismos inspectores y `node motor/render.js reels/ID`.
+
 ```
 python3 motor/build.py reels/ID [--sim]        # composición; --sim simula los tiempos (boceto sin voz)
 node herramientas/frames.js $PWD/reels/ID/composition/index.html <dir> t1 t2 …   # fotogramas
@@ -74,12 +77,24 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
 
+14. **Segundo estilo: «listas en negro» (09-11-2026).** Jaime subió cinco reels nuevos (listas numeradas, fondo negro,
+   muñeco amarillo plano, subtítulo Inter) y pidió conocerlos «a la perfección… para poder replicar estos vídeos y además
+   generar nuevos… máxima importancia: diseño y animaciones, transiciones, y guion completo». Es el **estilo B**:
+   análisis en `docs/ANALISIS-REFERENCIA-B.md` (guiones transcritos de la voz con Whisper), molde y motor en
+   `docs/SISTEMA-LISTA.md`, motor 2D en `motor2d/`, hojas en `docs/referencia-b/`. Cada reel declara su estilo (A = 3D de
+   rejilla, B = listas en negro) y no se mezclan. Firma del estilo B que no se toca: oscurecer + el último objeto amarillo se
+   transforma en la moneda del número siguiente; indicador de progreso arriba; muñeco que hace la instrucción literal.
+   Primeras previas con Kokoro: `reels/L1` (sueldo, 4 reglas) y `reels/L2` (cinco leyes del trabajo), sin OK todavía.
+   Ideas: `docs/IDEAS-2026-11-09.md`. Choques con las reglas 2 y 3 (dosis en número, frase entrecomillada) en
+   `docs/SISTEMA-LISTA.md` §6, pendientes de Jaime.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
   ViralClips, decidir cómo se reparte el tope mensual).
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
+- Estilo B: ver L1 y L2, decir si el estilo vale y resolver los choques de `docs/SISTEMA-LISTA.md` §6.
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
   con densidad alta, efectos de sonido por transición, libro opcional y cierre «Envíaselo a…» son la norma de esta
   repo salvo que Jaime diga lo contrario.

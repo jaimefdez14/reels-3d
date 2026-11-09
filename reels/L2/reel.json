@@ -1,0 +1,86 @@
+{
+ "id": "L2",
+ "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+ "titulo": "Cinco leyes que te ahorran años de errores en el trabajo",
+ "idea": "Lista de 5 leyes sobre el molde de B-R5 (cinco leyes: número + nombre de la ley + dos frases; fondo grafito, puntos unidos por línea, subtítulo blanco de una línea) con el cierre de B-R4 (pregunta a comentarios). Propuesta para Jaime, previa con Kokoro.",
+ "coverT": 1.8,
+ "lines": [
+  {
+   "show": "Cinco leyes que te ahorran / años de errores en el trabajo.",
+   "pause": 0.45
+  },
+  {
+   "show": "Una: // la ley de Parkinson.",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "El trabajo se estira / hasta ocupar / todo el tiempo que le das.",
+   "pause": 0.3
+  },
+  {
+   "show": "Dale menos tiempo / y acabará antes.",
+   "pause": 0.55
+  },
+  {
+   "show": "Dos: // la ley de Hofstadter.",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Todo tarda más de lo que crees. / Incluso cuando ya lo sabes.",
+   "pause": 0.3
+  },
+  {
+   "show": "Calcula lo que vas a tardar / y súmale la mitad.",
+   "pause": 0.55
+  },
+  {
+   "show": "Tres: // la navaja de Hanlon.",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "No veas mala fe / donde solo hay un despiste.",
+   "pause": 0.3
+  },
+  {
+   "show": "Ese correo sin contestar / casi nunca es personal.",
+   "pause": 0.55
+  },
+  {
+   "show": "Cuatro: // el efecto Zeigarnik.",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Lo que dejas a medias / no te deja en paz.",
+   "pause": 0.3
+  },
+  {
+   "show": "Apúntalo / y tu cabeza lo suelta.",
+   "pause": 0.55
+  },
+  {
+   "show": "Cinco: // la ley de Pareto.",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Unas pocas tareas / dan casi todo el resultado.",
+   "pause": 0.3
+  },
+  {
+   "show": "Haz esas primero. / El resto puede esperar.",
+   "pause": 0.55
+  },
+  {
+   "show": "¿Cuál de las cinco / te ha pasado esta semana?",
+   "pause": 0.35
+  },
+  {
+   "show": "Te leo en comentarios. / Y sígueme para más.",
+   "pause": 0.3
+  }
+ ]
+}

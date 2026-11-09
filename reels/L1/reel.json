@@ -1,0 +1,81 @@
+{
+ "id": "L1",
+ "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+ "titulo": "Cuatro reglas para que tu sueldo dure todo el mes",
+ "idea": "Lista de 4 sobre el molde de B-R3 (aprender en 20 h: 4 pasos, barritas de progreso, fondo degradado) y el cierre de B-R1/B-R3 (resumen + guardar + seguir). Propuesta para Jaime, previa con Kokoro.",
+ "coverT": 1.6,
+ "lines": [
+  {
+   "show": "Cuatro reglas para que tu sueldo *dure todo el mes.*",
+   "pause": 0.35
+  },
+  {
+   "show": "Y puedes empezar *el día que cobres.*",
+   "pause": 0.5
+  },
+  {
+   "show": "Número uno: // *págate primero.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "El día que cobras, / aparta una parte *antes de pagar nada.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo que no ves, *no lo gastas.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número dos: // *una cuenta para cada cosa.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Los gastos fijos, en una. / *Los caprichos, en otra.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Cuando la de caprichos / llega a cero, *se acabaron los caprichos.*",
+   "pause": 0.25
+  },
+  {
+   "show": "Hasta el mes *que viene.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número tres: // *espera dos días.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "¿Quieres algo que no necesitas? / *Déjalo en el carrito.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Hoy tu cabeza dice: *«Me lo merezco».*",
+   "pause": 0.3
+  },
+  {
+   "show": "Dos días después, *ya no te lo mereces tanto.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número cuatro: // *mira tus gastos el domingo.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Cinco minutos. *Sin culpa.*",
+   "pause": 0.3
+  },
+  {
+   "show": "No es para sentirte mal. / Es para saber *adónde se va.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Guárdalo para el día *que cobres.* / Y sígueme *para más.*",
+   "pause": 0.3
+  }
+ ]
+}
