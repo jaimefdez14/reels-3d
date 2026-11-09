@@ -23,12 +23,13 @@ SHOTS.cam = [
   { t: L(13), whip: true, dist: 13, az: -50, el: 12, target: [-2.5, 1.6, 0.3] },          // los que compensan: al principio del pasillo
   { t: L(14), whip: true, dist: 10.5, az: -14, target: [1.5, 1.5, 0.6] },                 // remate: anillo
   { t: L(15), az: -4, dur: 1.6 },
-  { t: L(16), whip: true, dist: 13, az: -24, el: 11, target: [1.3, 1.6, 0.3] },           // envío
+  { t: L(16), whip: true, dist: 13, az: -24, el: 11, target: [0.4, 1.6, 0.6] },           // envío: «yo» y la flecha hacia la izquierda
 ];
 SHOTS.invert = [{ t: L(8) - 0.05, end: L(9) - 0.08 }];
 SHOTS.moves = {
   yo: [{ t: L(2), rot: 250, dur: 0.6 }, { t: L(3), rot: 90, dur: 0.5 }, { t: L(8), head: [-15, 10], dur: 0.4 }, { t: L(9), head: [0, 0], dur: 0.6 },
-       { t: L(12) + 0.3, at: [1.7, 2.0], rot: 90, dur: 2.6, ease: 'inout' }],             // el viernes: avanza por el pasillo
+       { t: L(12) + 0.3, at: [1.7, 2.0], rot: 90, dur: 2.6, ease: 'inout' },
+       { t: L(13), show: false, dur: 0.01 }, { t: L(14) + 0.3, show: true, dur: 0.01 }],   // fuera de plano en «el lunes»; vuelve tras el latigazo             // el viernes: avanza por el pasillo
   gente: [{ t: L(13), show: true, dur: 0.01 }, { t: L(14), show: false, dur: 0.01 }],
 };
 SHOTS.props = [
@@ -37,7 +38,7 @@ SHOTS.props = [
   { id: 'xayer', type: 'cross', at: [-3.4, 1.6, -0.4], t0: L(0, 2), t1: L(3) - 0.05, scale: 1.1 },
   // compensar: x2 rojo
   { id: 'x2', type: 'tag', text: 'x2', red: true, over: 'yo', dx: 0.3, t0: L(1, 2), t1: L(2) - 0.05 },
-  { id: 'xdejas', type: 'cross', over: 'yo', dx: 0.3, t0: L(2, 4), t1: L(3) - 0.05, scale: 0.8 },
+  { id: 'xdejas', type: 'cross', over: 'yo', dx: 0.3, t0: L(2, 6), t1: L(3) - 0.05, scale: 0.8 },
   // contador de la semana: un hueco (ayer) / dos huecos (el segundo fallo)
   { id: 'sem1', type: 'bars', n: 7, over: 'yo', dx: 0.5, t0: L(3, 1), t1: L(4, 5), pattern: [1, 1, 1, 0, 1, 1, 1] },
   { id: 'sem2', type: 'bars', n: 7, over: 'yo', dx: 0.5, t0: L(4, 5), t1: L(5) - 0.05, pattern: [1, 1, 1, 2, 2, 0, 0] },
@@ -56,8 +57,8 @@ SHOTS.props = [
   // el viernes: el contador completo con su hueco
   { id: 'cad3', type: 'bars', n: 7, over: 'yo', dx: 0.6, t0: L(12, 1), t1: L(13) - 0.05, pattern: [1, 1, 1, 0, 1, 1, 1] },
   // los que compensan: al principio del pasillo, cruz
-  { id: 'xlunes', type: 'cross', at: [-6.6, 1.6, -0.4], t0: L(13, 3), t1: L(14) - 0.05, scale: 1.1 },
+  { id: 'xlunes', type: 'cross', at: [-6.6, 1.6, -0.4], t0: L(13, 5), t1: L(14) - 0.05, scale: 1.1 },
   // remate: anillo sobre «yo»
   { id: 'anillo', type: 'ring', r: 0.62, tube: 0.08, around: 'yo', y: 1.0, front: 0.7, t0: L(15, 0) + 0.1, draw: L(15, 0) + 0.1, t1: L(16) - 0.05 },
-  { id: 'envio', type: 'arrow', from: [1.9, 1.4, 1.9], to: [4.2, 1.2, 0.6], lift: 0.9, t0: L(16, 1) + 0.3, drawDur: 0.9 },
+  { id: 'envio', type: 'arrow', from: [1.3, 1.4, 1.9], to: [-1.2, 1.2, 1.4], lift: 0.9, t0: L(16, 1) + 0.3, drawDur: 0.9 },
 ];

@@ -18,6 +18,10 @@ const { chromium } = require('playwright'); const path = require('path');
     for (const it of f.items) {
       const cut = it.touch.l + it.touch.r + it.touch.b + it.touch.t;
       if (!f.whip && (main(it.id) || (it.kind === 'billboard' || it.kind === 'ring') && steady(it)) && cut > 2) add('cut' + it.id, `${it.id}: cortado por el borde (${cut} px de contorno fuera)`);
+      // objetos sueltos (temporizador, flecha, etiqueta, cruz, contador…): ni cortados por el borde ni casi fuera de plano
+      const SUELTOS = ['timer', 'arrow', 'sticker', 'tag', 'cross', 'bars', 'number', 'coins', 'card'];
+      if (!f.whip && SUELTOS.includes(it.type) && steady(it) && cut > 6) add('cut' + it.id, `${it.id}: cortado por el borde (${cut} px de contorno fuera)`);
+      if (!f.whip && it.type === 'arrow' && it.age > 1.2 && (cut > 2 || it.px < 400)) add('lost' + it.id, `${it.id}: la flecha sale de la pantalla o casi no se ve (${it.px} px, ${cut} px de borde)`);
       if (it.kind === 'billboard' && steady(it) && it.px < 0.004 * PX) add('small' + it.id, `${it.id}: demasiado pequeño para leerse (${it.px} px)`);
     }
     if (f.objecion && f.textos.length) add('obj' + f.textos[0], `${f.textos[0]}: texto en un bocadillo durante la objeción; la frase va solo en el titular (regla 13)`);

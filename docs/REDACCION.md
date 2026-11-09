@@ -144,14 +144,14 @@ Qué falla según la guía: falta el «por eso» que el espectador reconoce; «F
 en dos y la segunda no tiene verbo principal; «la cadena» aparece sin haberla presentado; el envío («quien haya fallado
 hoy») no es una persona que uno reconozca en un segundo.
 
-Después (mismo molde, mismos pulsos de R4):
+Después (mismo molde, mismos pulsos de R4; es el `reels/N6/reel.json` rehecho el 09-11; «↘» = misma toma de voz):
 
-> Si ayer fallaste, hoy no compenses. Compensar es hacer el doble. Y con el doble, a los dos días lo dejas. Por eso
-> tantos propósitos no llegan a febrero. Lo curioso es que un fallo no rompe un hábito. Lo rompe el segundo, seguido.
-> La regla: nunca dos días seguidos. Hoy te basta con cinco minutos. Diez flexiones. Dos páginas. Un correo.
-> *Estás pensando:* «Cinco minutos no cuentan.» Cuentan para la cadena de días. Un hueco, la cadena lo aguanta; dos, no.
-> El viernes, tú sigues con el hábito. Quien compensa vuelve a empezar el lunes. No hace falta ser perfecto: hace falta
-> volver. Mándaselo a quien hoy no ha ido al gimnasio.
+> Si ayer fallaste, hoy no compenses. Compensar es hacer el doble. Por eso, a los dos días, lo dejas. Lo curioso: un
+> fallo no rompe un hábito. Lo rompe el segundo fallo, seguido. La regla: nunca dos días seguidos. Hoy te basta con
+> cinco minutos. Diez flexiones. Dos páginas. Un correo. *Estás pensando:* «Cinco minutos no cuentan.» Cuentan para lo
+> que importa: la cadena. La cadena aguanta un hueco. Dos huecos seguidos la rompen. El viernes, tú sigues con el
+> hábito ↘ quien compensa vuelve a empezar el lunes. No hace falta ser perfecto: ↘ hace falta volver. Mándaselo a quien
+> hoy no ha ido al gimnasio.
 
 ## 8. Dónde chocan la guía y la referencia, y cómo se resuelve
 

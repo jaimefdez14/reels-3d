@@ -3,25 +3,81 @@
   "titulo": "Nunca falles dos días seguidos",
   "idea": "N6 de docs/IDEAS-2026-11-04b.md (aprobada por Jaime el 04-11-2026). Sigue pulso a pulso la referencia R4 (el contador de cinco).",
   "coverT": 1.4,
-  "revision_castellano": { "fecha": "2026-11-04", "lector": "espectador de Madrid sin contexto", "corrector": "corrector de Madrid sin contexto",
-    "cambios": "0: «no compenses»; 2: frase completa sin «el martes»; 4: «el segundo fallo»; 5: «nunca dos días seguidos»; 6: «haz solo cinco minutos»; 7: ejemplos distintos; 10-11: la cadena se presenta; 12: «sigues con el hábito»; 13: presente y referente; 14: «no hace falta ser perfecto»" },
   "lines": [
-    { "show": "Si ayer fallaste, hoy no compenses.", "neg": "no compenses" },
-    { "show": "Compensar es doblar la tarea.", "neg": "doblar" },
-    { "show": "Y a los dos días lo dejas.", "neg": "lo dejas" },
-    { "show": "Fallar un día es normal.", "hi": "normal" },
-    { "show": "Lo que rompe el hábito es el segundo fallo.", "neg": "segundo fallo" },
-    { "show": "La regla: nunca dos días seguidos.", "hi": "nunca dos días" },
-    { "show": "Hoy haz solo cinco minutos.", "hi": "cinco minutos" },
-    { "show": "Diez flexiones. Dos páginas. Un correo.", "hi": "Dos páginas" },
-    { "show": "«Cinco minutos no cuentan.»", "voice": "Estás pensando:", "neg": "no cuentan" },
-    { "show": "Cuentan para lo único que importa.", "hi": "importa" },
-    { "show": "Que no se rompa la cadena de días.", "hi": "cadena" },
-    { "show": "Un hueco no rompe la cadena. Dos, sí.", "neg": "Dos" },
-    { "show": "El viernes sigues con el hábito.", "hi": "sigues" },
-    { "show": "Los que compensan empiezan de cero el lunes.", "neg": "de cero" },
-    { "show": "No hace falta ser perfecto.", "neg": "perfecto" },
-    { "show": "Hace falta volver.", "hi": "volver" },
-    { "show": "Mándaselo a quien haya fallado hoy.", "hi": "hoy" }
-  ]
+    {
+      "show": "Si ayer fallaste, hoy no compenses.",
+      "neg": "no compenses"
+    },
+    {
+      "show": "Compensar es hacer el doble.",
+      "neg": "el doble"
+    },
+    {
+      "show": "Por eso, a los dos días, lo dejas.",
+      "neg": "lo dejas"
+    },
+    {
+      "show": "Lo curioso: un fallo no rompe un hábito.",
+      "hi": "no rompe"
+    },
+    {
+      "show": "Lo rompe el segundo fallo, seguido.",
+      "neg": "segundo fallo"
+    },
+    {
+      "show": "La regla: nunca dos días seguidos.",
+      "hi": "nunca dos días"
+    },
+    {
+      "show": "Hoy te basta con cinco minutos.",
+      "hi": "cinco minutos"
+    },
+    {
+      "show": "Diez flexiones. Dos páginas. Un correo.",
+      "hi": "Dos páginas"
+    },
+    {
+      "show": "«Cinco minutos no cuentan.»",
+      "voice": "Estás pensando:",
+      "neg": "no cuentan"
+    },
+    {
+      "show": "Cuentan para lo que importa: la cadena.",
+      "hi": "cadena"
+    },
+    {
+      "show": "La cadena aguanta un hueco.",
+      "hi": "aguanta"
+    },
+    {
+      "show": "Dos huecos seguidos la rompen.",
+      "neg": "la rompen"
+    },
+    {
+      "show": "El viernes, tú sigues con el hábito.",
+      "hi": "sigues",
+      "join": true
+    },
+    {
+      "show": "Quien compensa vuelve a empezar el lunes.",
+      "neg": "el lunes"
+    },
+    {
+      "show": "No hace falta ser perfecto:",
+      "neg": "perfecto",
+      "join": true
+    },
+    {
+      "show": "hace falta volver.",
+      "hi": "volver"
+    },
+    {
+      "show": "Mándaselo a quien hoy no ha ido al gimnasio.",
+      "hi": "gimnasio"
+    }
+  ],
+  "redaccion": {
+    "fecha": "2026-11-09",
+    "nota": "Reescrito con docs/REDACCION.md: «por eso» reconocible (2), giro con «Lo curioso» (3), la cadena se presenta antes de usarla (9-11), contraste en una toma (12-13), remate en una toma con dos puntos (14-15), envío a alguien reconocible."
+  }
 }

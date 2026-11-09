@@ -49,7 +49,17 @@ function fitCam(k, cs, tEnd) {
   const cx = states.reduce((a, x) => a + x.st.at[0], 0) / states.length, cz = states.reduce((a, x) => a + x.st.at[1], 0) / states.length;
   let out = { ...cs, target: [k.target ? cs.target[0] : cx, cs.target[1], k.target ? cs.target[2] : cz] };
   const saved = { p: camera.position.clone(), q: camera.quaternion.clone(), f: camera.fov };
-  const fits = (st) => { placeCamera(st); for (const x of states) { const h = actors[x.id].userData.h; for (const [dx, dy, dz] of [[-0.42, 0, 0.42], [0.42, 0, 0.42], [-0.42, 0, -0.42], [0.42, 0, -0.42], [-0.3, h * 1.06, 0], [0.3, h * 1.06, 0]]) { const [sx, sy] = toScreen(new THREE.Vector3(x.st.at[0] + dx, dy, x.st.at[1] + dz)); if (sx < 40 || sx > W - 40 || sy < 470 || sy > 1780) return false; } } return true; };
+  // un anillo alrededor de un personaje (regla 9) cuenta como parte de su silueta mientras se ve en esta toma
+  const iNext = SHOTS.cam.indexOf(k) + 1, tNext = SHOTS.cam[iNext] ? SHOTS.cam[iNext].t : 1e9;
+  const rings = (SHOTS.props || []).filter(p => p.type === 'ring' && p.around && (p.t0 ?? 0) < tNext && (p.t1 ?? 1e9) > k.t);
+  // el anillo mira a la cámara y se adelanta `front` hacia ella: su contorno es un círculo de radio R en el plano de la pantalla
+  const pts = (x) => { const h = actors[x.id].userData.h; const P = [[-0.42, 0, 0.42], [0.42, 0, 0.42], [-0.42, 0, -0.42], [0.42, 0, -0.42], [-0.3, h * 1.06, 0], [0.3, h * 1.06, 0]];
+    const right = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 0), up = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 1);
+    for (const r of rings.filter(r => r.around === x.id)) { const R = (r.r ?? 0.6) + (r.tube ?? 0.08) + 0.06;
+      const base = new THREE.Vector3(x.st.at[0], r.y ?? 0.95, x.st.at[1]); const c = base.clone().add(camera.position.clone().sub(base).normalize().multiplyScalar(r.front ?? 0.75));
+      for (let a = 0; a < 8; a++) { const v = c.clone().addScaledVector(right, R * Math.cos(a * Math.PI / 4)).addScaledVector(up, R * Math.sin(a * Math.PI / 4)); P.push([v.x - x.st.at[0], v.y, v.z - x.st.at[1]]); } }
+    return P; };
+  const fits = (st) => { placeCamera(st); for (const x of states) { for (const [dx, dy, dz] of pts(x)) { const [sx, sy] = toScreen(new THREE.Vector3(x.st.at[0] + dx, dy, x.st.at[1] + dz)); if (sx < 40 || sx > W - 40 || sy < 470 || sy > 1780) return false; } } return true; };
   for (let i = 0; i < 14 && !fits(out); i++) out = { ...out, dist: out.dist * 1.08, target: [out.target[0], out.target[1] + 0.02, out.target[2]] };
   camera.position.copy(saved.p); camera.quaternion.copy(saved.q); camera.fov = saved.f; camera.updateProjectionMatrix();
   _fitCache.set(key, out); return out;
@@ -397,7 +407,7 @@ function withFlat(objs, colorOf, fn) {
 window.inspectPixels = function (t) {
   window.seek(t); const items = [];
   for (const [id, a] of Object.entries(actors)) if (a.visible) items.push({ obj: a, id: 'actor:' + id, kind: a.userData.head ? 'actor' : 'crowd' });
-  for (const m of props) if (m.visible) { const p = m.userData.spec; const kind = p.type === 'cross' ? 'mark' : (m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid'))); items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind, age: t - (p.t0 ?? 0), left: (p.t1 ?? 1e9) - t }); }
+  for (const m of props) if (m.visible) { const p = m.userData.spec; const kind = p.type === 'cross' ? 'mark' : (m.userData.billboard ? 'billboard' : (m.userData.path ? 'line' : (m.userData.ring ? 'ring' : 'solid'))); items.push({ obj: m, id: 'prop:' + (p.id || p.type), kind, type: p.type, age: t - (p.t0 ?? 0), left: (p.t1 ?? 1e9) - t }); }
   // siluetas individuales
   const masks = items.map(it => withFlat([it.obj], () => '#ffffff', buf => { const mask = new Uint8Array(MW * MH); let n = 0; const touch = { l: 0, r: 0, t: 0, b: 0 }; for (let i = 0; i < MW * MH; i++) if (buf[i * 4] > 128) { mask[i] = 1; n++; const x = i % MW, y = MH - 1 - Math.floor(i / MW); if (x === 0) touch.l++; if (x === MW - 1) touch.r++; if (y === 0) touch.t++; if (y === MH - 1) touch.b++; } return { mask, n, touch }; }));
   // quién queda delante: todos a la vez, cada uno con su color (índice en el canal rojo)
@@ -409,7 +419,7 @@ window.inspectPixels = function (t) {
     for (let j = i + 1; j < items.length; j++) { const B = masks[j]; let c = 0, aFront = 0, bFront = 0; for (let k = 0; k < MW * MH; k++) if (A.mask[k] && B.mask[k]) { c++; if (front[k] === i) aFront++; else if (front[k] === j) bFront++; } if (c) pairs.push([items[i].id, items[j].id, c, aFront, bFront]); }
   }
   const act = activeLine(t); const objecion = !!(act && act.L.voice);
-  return { t, whip: lastFrame.whip, objecion, textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
+  return { t, whip: lastFrame.whip, objecion, textos: items.filter(x => x.kind === 'billboard' && (x.obj.userData.spec.text || '').split(' ').length >= 3).map(x => x.id), items: items.map((it, i) => ({ id: it.id, kind: it.kind, type: it.type, px: masks[i].n, touch: masks[i].touch, age: it.age ?? 9, left: it.left ?? 9 })), pairs, caption: !!cap, billboards: items.filter(x => x.kind === 'billboard' && (x.age ?? 9) > 0.3 && (x.left ?? 9) > 0.3).length };
 };
 // Inspector: qué ocupa cada cosa en el fotograma actual (rectángulos en píxeles) para medir solapes desde fuera.
 window.inspect = function (t) { window.seek(t); return lastFrame; };

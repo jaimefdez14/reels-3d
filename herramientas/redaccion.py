@@ -89,8 +89,8 @@ def avisos(reel):
     obj = [i for i, L in enumerate(lines) if (L.get('voice') or '').lower().startswith('estás pensando')]
     if not obj:
         out.append('no hay objeción con «Estás pensando:»')
-    elif not any(0.30 <= i / max(n - 1, 1) <= 0.70 for i in obj):
-        out.append(f'la objeción está en la línea {obj[0]} de {n}; va hacia la mitad (35-65 %)')
+    elif not any(0.30 <= i / max(n - 1, 1) <= 0.75 for i in obj):
+        out.append(f'la objeción está en la línea {obj[0]} de {n}; va hacia la mitad (30-75 %; R3 la pone al 70 %)')
     if not any('«' in (L.get('show') or '') for L in lines):
         out.append('no hay frase literal entrecomillada')
     ultima = (lines[-1].get('show') or '').lower()

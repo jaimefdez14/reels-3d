@@ -59,8 +59,8 @@ SHOTS.props = [
   { id: 'sino', type: 'tag', text: '¿Sí o no?', yellow: true, over: 'yo', dx: 0.3, px: 150, t0: L(15, 2), t1: L(16) - 0.05 },
   { id: 'fp', type: 'bubble', text: '¿Tienes un hueco el jueves?', w: 600, over: 'yo', dx: 0.4, accent: true, t0: L(16) - 0.02, t1: L(17) - 0.05, reveal: 16 },
   // le contestan
-  { id: 'resp', type: 'bubble', text: 'Sí, el jueves a las 10.', w: 520, tail: 'right', over: 'el', dx: -0.4, accent: true, t0: L(18, 2), t1: L(19) - 0.05 },
-  { id: 'lin', type: 'line', from: 'el', to: 'yo', lift: 0.5, t0: L(18, 3), t1: L(19) - 0.05 },
+  { id: 'resp', type: 'bubble', text: 'Sí, el jueves a las 10.', w: 520, tail: 'right', over: 'el', dx: -0.4, accent: true, t0: L(18, 4), t1: L(19) - 0.05 },
+  { id: 'lin', type: 'line', from: 'el', to: 'yo', lift: 0.5, t0: L(18, 5), t1: L(19) - 0.05 },
   // remate: el correo malo tachado y el bueno
   { id: 'malo2', type: 'bubble', text: 'Espero que estés bien.', w: 520, over: 'yo', dx: 0.4, t0: L(19, 1), t1: L(20) - 0.05, strike: L(19, 3) },
   { id: 'bueno', type: 'bubble', text: '¿Tienes un hueco el jueves?', w: 600, over: 'yo', dx: 0.4, accent: true, t0: L(20, 1), t1: L(21) - 0.05 },
