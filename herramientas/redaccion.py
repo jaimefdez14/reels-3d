@@ -32,6 +32,9 @@ CIERRE_MAL = ['tu tarea', 'recuerda que', 'qué opinas', 'sígueme', 'te leo en 
 ENVIO = ('envíaselo', 'mándaselo', 'compártelo', 'guárdalo', 'pásaselo')
 
 
+NOTAS = []
+
+
 def avisos(reel):
     out, lines = [], reel['lines']
     n = len(lines)
@@ -103,8 +106,10 @@ def avisos(reel):
     if not any('«' in (L.get('show') or '') for L in lines):
         out.append('no hay frase literal entrecomillada')
     todo = ' '.join(re.sub(r'\s+//?\s+', ' ', (L.get('say') or L.get('show') or '')).replace('*', '').lower() for L in lines)
-    if 'por eso' not in todo:
-        out.append('falta un «por eso» que el espectador reconozca (docs/REDACCION.md §2)')
+    # el «por eso» es una nota, no un error: obligarlo producía conectores metidos a la fuerza (L5, 09-11-2026)
+    NOTAS.clear()
+    if not re.search(r'\b(por eso|así que|resulta que)\b', todo):
+        NOTAS.append('nota: no hay «por eso» / «así que»; comprueba en voz alta si alguna consecuencia lo pide (no lo metas a la fuerza)')
     ultima = re.sub(r'\s+//?\s+', ' ', (lines[-1].get('show') or '')).replace('*', '').lower()
     frases = re.split(r'(?<=[.:;?!»])\s+', ultima)
     if not any(f.startswith(ENVIO) for f in frases):
@@ -117,6 +122,7 @@ def main():
         sys.exit(__doc__)
     reel = json.loads((Path(sys.argv[1]) / 'reel.json').read_text())
     a = avisos(reel)
+    for n_ in NOTAS: print(n_)
     if not a:
         print('ok')
         return

@@ -35,7 +35,7 @@ los 5 ejemplos, no solo esto. Lo mejor de ambos». Los cinco ejemplos son B-R1�
 | **Instrucción con dosis** | Sujeto que hace algo concreto; la dosis al final («cinco minutos», «dos días», «una parte») | «El día que cobras, aparta una parte *antes de pagar nada.*» |
 | **Voz interior o ejemplo** | Frase literal entre comillas, la que el espectador se dice; retoma la instrucción | «Hoy piensas: *«Me lo merezco».*» |
 | **Golpe del punto** | Remate corto pegado a la frase anterior, con humor seco una o dos veces por reel | «Dos días después, *ya no te lo mereces tanto.*» |
-| **«Por eso»** | Una vez por reel, dentro de un punto: la consecuencia que el espectador reconoce («¡anda, es verdad!») | «Por eso, a lo que calcules, *súmale la mitad.*» |
+| **«Por eso»** | Cuando una consecuencia lo pide, dentro de un punto: la que el espectador reconoce («¡anda, es verdad!»). Nunca metido a la fuerza: si la frase anterior no lo causa, sobra (error de L5, 09-11) | «Por eso, a lo que calcules, *súmale la mitad.*» |
 | **Giro hacia la mitad** | El punto del medio cierra el anuncio o lleva «Lo curioso:» / «Y lo que más pesa no es X: es Y» | «Lo curioso: *a veces es más de lo que ibas a pedir.*» |
 | **Remate** | ≤ 10 palabras que vuelven al gancho; dos mitades con dos puntos o punto y coma | «No es pereza: *la tarea era demasiado grande.*» |
 | **Envío** | Una persona que se reconoce en un segundo. Sustituye a «sígueme» y a la pregunta a comentarios | «Mándaselo a quien dice *«mañana lo hago».*» |
@@ -155,12 +155,14 @@ Redacción (guía):
 - [ ] ¿Dentro de cada punto, cada frase retoma la anterior, sin «Pero / Además / En cambio» al principio?
 - [ ] ¿Lo nuevo (y lo amarillo) va al final de cada frase?
 - [ ] ¿Sin calcos, sin muletillas, sin referentes sueltos? ¿Pasa `CASTELLANO.md`?
-- [ ] ¿Hay un «por eso» reconocible y un giro hacia la mitad?
+- [ ] ¿Hay un giro hacia la mitad? ¿Y un «por eso» donde una consecuencia lo pida, sin forzarlo?
+- [ ] ¿El gancho dice a quién va y cumple lo que promete (si dice «cuatro frases», ¿son cuatro frases)?
+- [ ] ¿Los puntos van en el orden en que se hacen y ninguno parece contradecir a otro?
 - [ ] ¿Las cifras son 5 o menos, comparadas y con unidad?
 - [ ] ¿El remate vuelve al gancho en ≤ 10 palabras y el envío nombra a alguien reconocible?
 - [ ] ¿Lo diría así una persona de Madrid en un bar?
 
 Automático: `python3 herramientas/redaccion.py reels/ID` tiene que decir `ok`. Ve conectores prohibidos al empezar,
 calcos y muletillas, jerga, comillas, paréntesis y rayas, subtítulos largos, más de 5 cifras, líneas sin cerrar,
-suspensivos, si falta la frase entre comillas, el «por eso» o el envío, y (estilo A) la objeción. El hilo, el orden de las
+suspensivos, si falta la frase entre comillas o el envío, y (estilo A) la objeción. El «por eso» solo lo anota. El hilo, el orden de las
 palabras y la lectura en voz alta no los ve: son trabajo de quien escribe.

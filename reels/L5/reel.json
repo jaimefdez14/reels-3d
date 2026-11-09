@@ -1,12 +1,12 @@
 {
   "id": "L5",
   "estilo": "B (listas en negro; regla 15: satisfying)",
-  "titulo": "Cuatro frases para cobrar más sin pedir perdón",
+  "titulo": "Cuatro frases para cobrar más si trabajas por tu cuenta",
   "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cuatro frases para cobrar más *sin pedir perdón.*",
+      "show": "Cuatro frases para cobrar más / *si trabajas por tu cuenta.*",
       "pause": 0.35
     },
     {
@@ -14,25 +14,12 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *di tu precio y cállate.*",
+      "show": "Número uno: // *«¿Con qué presupuesto contáis?»*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Dilo de un tirón. / *Y no añadas nada.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Ese silencio incómodo es normal. / *El primero que habla, rebaja.*",
-      "pause": 0.55
-    },
-    {
-      "show": "Número dos: // *pregunta antes de dar tu precio.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "«¿Qué presupuesto / *teníais pensado?»*",
+      "show": "Pregúntalo / *antes de dar tu precio.*",
       "pause": 0.3
     },
     {
@@ -40,16 +27,30 @@
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *«Eso va en el paquete completo».*",
+      "show": "Número dos: // *«Son 1.200 €». Y te callas.*",
+      "pause": 0.3,
+      "pausa_media": 0.7,
+      "say": "Número dos: // «Son mil doscientos euros». Y te callas."
+    },
+    {
+      "show": "Dilo de un tirón, / *sin justificarte.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Ese silencio incómodo es normal: / *el primero que habla, rebaja.*",
+      "pause": 0.55
+    },
+    {
+      "show": "Número tres: // *«Eso va en la versión completa».*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Cuando te pidan algo extra, / *no lo regales.*",
+      "show": "Si te piden algo que no estaba, / *no lo regales.*",
       "pause": 0.3
     },
     {
-      "show": "Ofrece el paquete de arriba. / *Con su precio.*",
+      "show": "Ofrece la versión más cara, / *con su precio.*",
       "pause": 0.55
     },
     {
@@ -58,15 +59,15 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Lo que no está en el presupuesto / *se paga aparte.*",
+      "show": "Dilo antes de empezar: / lo que no estaba, *se paga aparte.*",
       "pause": 0.3
     },
     {
-      "show": "Por eso dilo antes de empezar, / *no cuando ya estás quemado.*",
+      "show": "Así no discutes / *con medio trabajo ya hecho.*",
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir perdón: / *es decir tu precio y callarte.*",
+      "show": "Cobrar más no es pedir perdón: / es preguntar, / *decir tu precio y callarte.*",
       "pause": 0.3
     },
     {
@@ -91,14 +92,24 @@
   "redaccion": {
     "fecha": "2026-11-09",
     "regla": "17 (docs/REDACCION.md)",
-    "nota": "Giro en el punto del medio («Lo curioso:»), «por eso» en el punto 4, remate que vuelve al gancho y envío en lugar de comentarios y «sígueme».",
-    "cambios": [
-      "1: «Y la última *te ahorra discusiones.*» → «Y la última / *te ahorra discusiones.*»",
-      "7: «A veces es más / *de lo que ibas a pedir.*» → «Lo curioso: a veces es más / *de lo que ibas a pedir.*»",
-      "11: «Número cuatro: // *«Si cambia el encargo, lo hablamos».*» → «Número cuatro: // «Si cambia el encargo, / *lo hablamos».*»",
-      "13: «Dilo antes de empezar, / *no cuando ya estás quemado.*» → «Por eso dilo antes de empezar, / *no cuando ya estás quemado.*»",
-      "14: «¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*» → «Cobrar más no es pedir perdón: / *es decir tu precio y callarte.*»",
-      "15: «Y sígueme, *que vienen más.*» → «Mándaselo a quien rebaja / *antes de que se lo pidan.*»"
+    "nota": "Segunda versión tras la pregunta de Jaime («¿es un buen guion? ¿se entiende?»): el gancho dice a quién va (si trabajas por tu cuenta); los cuatro puntos son frases literales, como promete el gancho; primero se pregunta el presupuesto y después se dice el precio (antes estaban al revés y parecía contradecirse); fuera el «por eso» forzado del punto 4; el anuncio («la última te ahorra discusiones») se cierra en el punto 4; el remate recoge los cuatro puntos.",
+    "antes": [
+      "Cuatro frases para cobrar más *sin pedir perdón.*",
+      "Y la última / *te ahorra discusiones.*",
+      "Número uno: // *di tu precio y cállate.*",
+      "Dilo de un tirón. / *Y no añadas nada.*",
+      "Ese silencio incómodo es normal. / *El primero que habla, rebaja.*",
+      "Número dos: // *pregunta antes de dar tu precio.*",
+      "«¿Qué presupuesto / *teníais pensado?»*",
+      "Lo curioso: a veces es más / *de lo que ibas a pedir.*",
+      "Número tres: // *«Eso va en el paquete completo».*",
+      "Cuando te pidan algo extra, / *no lo regales.*",
+      "Ofrece el paquete de arriba. / *Con su precio.*",
+      "Número cuatro: // «Si cambia el encargo, / *lo hablamos».*",
+      "Lo que no está en el presupuesto / *se paga aparte.*",
+      "Por eso dilo antes de empezar, / *no cuando ya estás quemado.*",
+      "Cobrar más no es pedir perdón: / *es decir tu precio y callarte.*",
+      "Mándaselo a quien rebaja / *antes de que se lo pidan.*"
     ]
   }
 }

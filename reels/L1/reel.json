@@ -74,7 +74,7 @@
       "pause": 0.55
     },
     {
-      "show": "Primero tú; *después, todo lo demás.* // Mándaselo a quien / *a día veinte ya está a cero.*",
+      "show": "El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien / *a día veinte ya está a cero.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -105,7 +105,8 @@
       "6: «Los gastos fijos, en una. / *Los caprichos, en otra.*» → «Los gastos fijos, en una; / *los caprichos, en otra.*»",
       "14: «Cinco minutos. *Sin dramas.*» → «Cinco minutos, *sin fustigarte.*»",
       "15: «No es para fustigarte. / Es para ver *en qué se te va.*» → «Por eso a fin de mes / ya sabes *en qué se te va.*»",
-      "16: «Guárdalo para el día *que cobres.* / Y sígueme, *que vienen más.*» → «Primero tú; *después, todo lo demás.* // Mándaselo a quien / *a día veinte ya está a cero.*»"
+      "16: «Guárdalo para el día *que cobres.* / Y sígueme, *que vienen más.*» → «Primero tú; *después, todo lo demás.* // Mándaselo a quien / *a día veinte ya está a cero.*»",
+      "16: «Primero tú; *después, todo lo demás.* // Mándaselo a quien / *a día veinte ya está a cero.*» → «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien / *a día veinte ya está a cero.*» (segunda revisión: el remate solo recogía el punto 1; ahora recoge el reparto de los puntos 1 y 2 y vuelve al gancho)"
     ]
   }
 }

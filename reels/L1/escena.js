@@ -58,7 +58,7 @@ E.obj('dias', 'dias', { t0: S4 - 0.1, t1: w(14, 0), x: 0, y: -520, luz: [[w(13, 
 E.obj('reloj5', 'temporizador', { t0: w(14, 0), t1: w(15, 0) + 0.3, x: 0, y: -520, r: 52, texto: '5', sub: 'MIN', pop: true, p: [[w(14, 0) + 0.3, 0], [wf(14, -1), 1]], hecho: [[wf(14, -1), 0], [wf(14, -1) + 0.3, 1]] });
 
 // ---------- cierre: resumen (vuelve al gancho) y envío ----------
-E.obj('resumen', 'resumen', { t0: TC, t1: w(16, 6), capa: 'pantalla', x: 540, y: 960, items: ['Págate', 'Separa', 'Espera', 'Repasa'], gap: 200,
+E.obj('resumen', 'resumen', { t0: TC, t1: w(16, 9), capa: 'pantalla', x: 540, y: 960, items: ['Págate', 'Separa', 'Espera', 'Repasa'], gap: 200,
   p: [[TC, 0], [TC + 0.9, 4, 'lin']], caja: [-400, -60, 800, 300] });
-E.figura('yo5', { t0: w(16, 6), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(16, 7), 'senalar']] });
-E.obj('enviar', 'enviar', { t0: w(16, 7), t1: D + 1, x: 120, y: -360, r: 64, pop: true, vuelo: [[wf(16, -1), 0], [wf(16, -1) + 0.5, 1, 'in']] });
+E.figura('yo5', { t0: w(16, 9), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(16, 10), 'senalar']] });
+E.obj('enviar', 'enviar', { t0: w(16, 10), t1: D + 1, x: 120, y: -360, r: 64, pop: true, vuelo: [[wf(16, -1), 0], [wf(16, -1) + 0.5, 1, 'in']] });

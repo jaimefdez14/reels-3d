@@ -79,7 +79,7 @@
       "pause": 0.55
     },
     {
-      "show": "No era pereza: / *la tarea era demasiado grande.*",
+      "show": "No necesitas ganas: / *necesitas que empezar sea fácil.*",
       "pause": 0.3
     },
     {
@@ -116,7 +116,8 @@
       "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*»",
       "16: «Mañana sabrás exactamente / *por dónde seguir.*» → «Por eso mañana sabes / *por dónde seguir.*»",
       "17: «Guárdalo para la próxima vez / que digas *«mañana lo hago».*» → «No era pereza: / *la tarea era demasiado grande.*»",
-      "18: «Y sígueme, *que vienen más.*» → «Mándaselo a quien dice / *«mañana lo hago».*»"
+      "18: «Y sígueme, *que vienen más.*» → «Mándaselo a quien dice / *«mañana lo hago».*»",
+      "17: «No era pereza: / *la tarea era demasiado grande.*» → «No necesitas ganas: / *necesitas que empezar sea fácil.*» (segunda revisión: «la tarea era demasiado grande» solo valía para el punto 3; los cinco trucos hacen fácil empezar)"
     ]
   }
 }
