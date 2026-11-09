@@ -59,6 +59,6 @@ E.obj('reloj5', 'temporizador', { t0: w(14, 0), t1: w(15, 0) + 0.3, x: 0, y: -52
 
 // ---------- cierre: resumen + guardar, y seguir ----------
 E.obj('resumen', 'resumen', { t0: TC, t1: w(16, 6), capa: 'pantalla', x: 540, y: 960, items: ['Págate', 'Separa', 'Espera', 'Revisa'], gap: 200,
-  p: [[TC + 0.2, 0], [TC + 1.2, 4, 'lin']], guardar: [[TC + 1.0, 0], [TC + 1.3, 1]], lleno: [[w(16, 3), 0], [w(16, 4), 1]], caja: [-400, -60, 800, 300] });
+  p: [[TC, 0], [TC + 0.9, 4, 'lin']], guardar: [[TC + 0.8, 0], [TC + 1.1, 1]], lleno: [[w(16, 3), 0], [w(16, 4), 1]], caja: [-400, -60, 800, 300] });
 E.figura('yo5', { t0: w(16, 6), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(16, 7), 'senalar']] });
 E.obj('seguir', 'seguir', { t0: w(16, 7), t1: D + 1, x: 120, y: -360, r: 64, pop: true });

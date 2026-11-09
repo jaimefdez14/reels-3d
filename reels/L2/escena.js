@@ -49,14 +49,14 @@ E.obj('papeles', 'papeles', { t0: w(8, 4), t1: N[3].T + 0.45, x: 150, n: 9, k: [
 E.obj('correo', 'bocadillo', { t0: w(9, 0), t1: N[3].T + 0.45, x: 150, y: -520, w: 150, h: 96, pop: true, sobrevive: true, r: 60, on: [[w(9, 4), 0], [wf(9, -1), 1]], caja: [-75, -48, 150, 122] });
 
 // ---------- 4 · Zeigarnik: lo que dejas a medias ----------
-E.numero(4, N[3].T, N[3].S, { desde: 'correo', hacia: 'lista' });
+E.numero(4, N[3].T, N[3].S, { desde: 'correo', hacia: 'bucle0' });
 E.figura('yo4', { t0: N[3].S - 0.1, t1: N[4].T + 0.45, x: -300,
   poses: [[0, 'de_pie'], [w(11, 0), 'triste'], [w(12, 0), 'senalar'], [w(12, 3), 'celebrar'], [wf(12, -1) + 0.3, 'de_pie']] });
 E.obj('lista', 'lista', { t0: w(12, 0) - 0.2, t1: N[4].T + 0.45, x: 160, y: -330, n: 3, w: 320, gap: 80, s: 1.3, pop: true, r: 60,
   p: [[w(12, 0) + 0.6, 0], [w(12, 0) + 1.6, 3, 'lin']], caja: [-160, -130, 320, 260] });
 const orb = [[-430, -560], [-170, -585], [-140, -400]];
 orb.forEach(([x, y], i) => {
-  const ta = w(11, 1) + i * 0.3, tb = w(12, 0) + 0.3 + i * 0.33; const to = [160 - 160 + 18, -330 + (i - 1) * 80];
+  const ta = N[3].S + 0.2 + i * 0.3, tb = w(12, 0) + 0.3 + i * 0.33; const to = [160 - 160 + 18, -330 + (i - 1) * 80];
   E.obj('bucle' + i, 'arcoAbierto', { t0: ta, t1: tb + 0.5, sale: 0.2, r: 34, w: 7, p: [[ta, 0], [ta + 0.4, 0.72]], rot: [[ta, 0], [tb, 4 + i]],
     x: [[ta, x], [tb, x], [tb + 0.45, to[0] + 0.5 * 0, 'in']], y: [[tb, y], [tb + 0.45, to[1], 'in']], libre: true, caja: [-40, -40, 80, 80] });
 });
