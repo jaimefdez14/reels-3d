@@ -162,6 +162,10 @@ Redacción (guía):
 - [ ] ¿El remate vuelve al gancho en ≤ 10 palabras y el envío nombra a alguien reconocible?
 - [ ] ¿Lo diría así una persona de Madrid en un bar?
 
+**Lector en frío (regla 18):** después de `redaccion.py`, un agente nuevo que solo oye la voz (`herramientas/lector.py`)
+tiene que resumir el vídeo como la idea del guion, no marcar frases que no se entiendan y poner 8 o más. Quien escribe
+no vale como lector: ve las escenas en la cabeza.
+
 Automático: `python3 herramientas/redaccion.py reels/ID` tiene que decir `ok`. Ve conectores prohibidos al empezar,
 calcos y muletillas, jerga, comillas, paréntesis y rayas, subtítulos largos, más de 5 cifras, líneas sin cerrar,
 suspensivos, si falta la frase entre comillas o el envío, y (estilo A) la objeción. El «por eso» solo lo anota. El hilo, el orden de las

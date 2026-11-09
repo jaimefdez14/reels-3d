@@ -10,7 +10,7 @@
       "pause": 0.35
     },
     {
-      "show": "Y el tercero / *es el que mejor funciona.*",
+      "show": "El tercero / *es el que mejor funciona.*",
       "pause": 0.5
     },
     {
@@ -32,11 +32,11 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Ni en silencio ni boca abajo. / *En otra habitación.*",
+      "show": "*Ni en silencio ni boca abajo.*",
       "pause": 0.3
     },
     {
-      "show": "Si tienes que ir a por él, / *ya no lo coges.*",
+      "show": "Si tienes que levantarte a por él, / *te da pereza y no lo coges.*",
       "pause": 0.55
     },
     {
@@ -45,15 +45,15 @@
       "pausa_media": 0.7
     },
     {
-      "show": "«Hacer el informe» / no es una tarea. / *«Abrir el documento», sí.*",
+      "show": "Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*",
       "pause": 0.3
     },
     {
-      "show": "Lo curioso: cada trozo que tachas / *te empuja al siguiente.*",
+      "show": "Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*",
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // *una sola pestaña.*",
+      "show": "Número cuatro: // *una sola ventana abierta.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -66,16 +66,16 @@
       "pause": 0.55
     },
     {
-      "show": "Número cinco: // *para a mitad de frase.*",
+      "show": "Número cinco: // *deja algo a medias.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Al terminar el día, / *deja una frase a medias.*",
+      "show": "Al acabar el día, deja sin terminar / *algo fácil.*",
       "pause": 0.3
     },
     {
-      "show": "Por eso mañana sabes / *por dónde seguir.*",
+      "show": "Mañana empiezas por ahí / *y ya estás en marcha.*",
       "pause": 0.55
     },
     {
@@ -119,5 +119,22 @@
       "18: «Y sígueme, *que vienen más.*» → «Mándaselo a quien dice / *«mañana lo hago».*»",
       "17: «No era pereza: / *la tarea era demasiado grande.*» → «No necesitas ganas: / *necesitas que empezar sea fácil.*» (segunda revisión: «la tarea era demasiado grande» solo valía para el punto 3; los cinco trucos hacen fácil empezar)"
     ]
-  }
+  },
+  "lector": [
+    {
+      "ronda": 1,
+      "nota": "lector 7/10: el anuncio del tercero se paga; sin comillas que no se oyen; «para a mitad de frase» ambiguo; el porqué del móvil",
+      "cambios": [
+        "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»",
+        "6: «Ni en silencio ni boca abajo. / *En otra habitación.*» → «*Ni en silencio ni boca abajo.*»",
+        "7: «Si tienes que ir a por él, / *ya no lo coges.*» → «Si tienes que levantarte a por él, / *te da pereza y no lo coges.*»",
+        "9: ««Hacer el informe» / no es una tarea. / *«Abrir el documento», sí.*» → «Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*»",
+        "10: «Lo curioso: cada trozo que tachas / *te empuja al siguiente.*» → «Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*»",
+        "11: «Número cuatro: // *una sola pestaña.*» → «Número cuatro: // *una sola ventana abierta.*»",
+        "14: «Número cinco: // *para a mitad de frase.*» → «Número cinco: // *deja algo a medias.*»",
+        "15: «Al terminar el día, / *deja una frase a medias.*» → «Al acabar el día, deja sin terminar / *algo fácil.*»",
+        "16: «Por eso mañana sabes / *por dónde seguir.*» → «Mañana empiezas por ahí / *y ya estás en marcha.*»"
+      ]
+    }
+  ]
 }

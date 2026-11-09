@@ -27,7 +27,7 @@
       "pause": 0.3
     },
     {
-      "show": "Por eso te llama a ti / *cuando algo se tuerce.*",
+      "show": "Así, cuando algo se tuerce, / *te llama a ti.*",
       "pause": 0.55
     },
     {
@@ -36,7 +36,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "No digas «lo miro». / *Di «lo tienes el jueves».*",
+      "show": "No le digas «lo miro». / *Dile: «Lo tienes el jueves».*",
       "pause": 0.3
     },
     {
@@ -61,11 +61,11 @@
       "pause": 0.3
     },
     {
-      "show": "Y no es presumir: / *es ahorrarle el trabajo de buscarlo.*",
+      "show": "Y no es presumir: / *es ahorrarle buscar lo que haces.*",
       "pause": 0.55
     },
     {
-      "show": "No son tus horas: / *son las fechas que cumples.* // Mándaselo a quien echa horas / *y nadie se entera.*",
+      "show": "Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -78,5 +78,17 @@
       "0: «Tres pasos para que tu jefe / *te tome en serio.*» → «Echas más horas que nadie / *y tu jefe ni se entera.*» (Jaime: «el hook de L3 tampoco me gusta»; situación que se reconoce en vez de promesa genérica; el envío final la repite y cierra el bucle)",
       "1: «Y ninguno es / *echar más horas.*» → «Estos tres pasos lo arreglan / *sin echar ni una hora más.*» (el número de la lista pasa al anuncio y responde al gancho)"
     ]
-  }
+  },
+  "lector": [
+    {
+      "ronda": 1,
+      "nota": "lector 8/10: «por eso» sin antecedente, remate sin sujeto, «lo» lejano, quién habla en la cita",
+      "cambios": [
+        "5: «Por eso te llama a ti / *cuando algo se tuerce.*» → «Así, cuando algo se tuerce, / *te llama a ti.*»",
+        "7: «No digas «lo miro». / *Di «lo tienes el jueves».*» → «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*»",
+        "13: «Y no es presumir: / *es ahorrarle el trabajo de buscarlo.*» → «Y no es presumir: / *es ahorrarle buscar lo que haces.*»",
+        "14: «No son tus horas: / *son las fechas que cumples.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
+      ]
+    }
+  ]
 }

@@ -23,17 +23,17 @@
       "pause": 0.3
     },
     {
-      "show": "Lo curioso: a veces es más / *de lo que ibas a pedir.*",
+      "show": "Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*",
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *«Son 1.200 €». Y te callas.*",
+      "show": "Número dos: // *«Son 1.200 €».*",
       "pause": 0.3,
       "pausa_media": 0.7,
-      "say": "Número dos: // «Son mil doscientos euros». Y te callas."
+      "say": "Número dos: // «Son mil doscientos euros»."
     },
     {
-      "show": "Dilo de un tirón, / *sin justificarte.*",
+      "show": "Y te callas. / *Sin justificarte.*",
       "pause": 0.3
     },
     {
@@ -41,16 +41,16 @@
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *«Eso va en la versión completa».*",
+      "show": "Número tres: // *«Eso lo cobro aparte».*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Si te piden algo que no estaba, / *no lo regales.*",
+      "show": "Cuando te pidan un extra, / *no lo regales.*",
       "pause": 0.3
     },
     {
-      "show": "Ofrece la versión más cara, / *con su precio.*",
+      "show": "Ponle su precio, / *aunque sea pequeño.*",
       "pause": 0.55
     },
     {
@@ -59,7 +59,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Dilo antes de empezar: / lo que no estaba, *se paga aparte.*",
+      "show": "Dilo antes de empezar, / *por si a mitad te lo cambian.*",
       "pause": 0.3
     },
     {
@@ -67,11 +67,11 @@
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir perdón: / es preguntar, / *decir tu precio y callarte.*",
+      "show": "Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*",
       "pause": 0.3
     },
     {
-      "show": "Mándaselo a quien rebaja / *antes de que se lo pidan.*",
+      "show": "Mándaselo a quien rebaja su precio / *sin que se lo pidan.*",
       "pause": 0.3
     }
   ],
@@ -111,5 +111,22 @@
       "Cobrar más no es pedir perdón: / *es decir tu precio y callarte.*",
       "Mándaselo a quien rebaja / *antes de que se lo pidan.*"
     ]
-  }
+  },
+  "lector": [
+    {
+      "ronda": 1,
+      "nota": "lector 7/10: punto 3 con referente y distinto del 4 (extra ahora / cambio a mitad); remate con los cuatro",
+      "cambios": [
+        "4: «Lo curioso: a veces es más / *de lo que ibas a pedir.*» → «Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*»",
+        "5: «Número dos: // *«Son 1.200 €». Y te callas.*» → «Número dos: // *«Son 1.200 €».*»",
+        "6: «Dilo de un tirón, / *sin justificarte.*» → «Y te callas. / *Sin justificarte.*»",
+        "8: «Número tres: // *«Eso va en la versión completa».*» → «Número tres: // *«Eso lo cobro aparte».*»",
+        "9: «Si te piden algo que no estaba, / *no lo regales.*» → «Cuando te pidan un extra, / *no lo regales.*»",
+        "10: «Ofrece la versión más cara, / *con su precio.*» → «Ponle su precio, / *aunque sea pequeño.*»",
+        "12: «Dilo antes de empezar: / lo que no estaba, *se paga aparte.*» → «Dilo antes de empezar, / *por si a mitad te lo cambian.*»",
+        "14: «Cobrar más no es pedir perdón: / es preguntar, / *decir tu precio y callarte.*» → «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*»",
+        "15: «Mándaselo a quien rebaja / *antes de que se lo pidan.*» → «Mándaselo a quien rebaja su precio / *sin que se lo pidan.*»"
+      ]
+    }
+  ]
 }

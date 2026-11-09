@@ -34,6 +34,7 @@ node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si exist
 node herramientas/inspeccionar.js reels/ID 0.2   # solapes por rectángulos (debe decir ok)
 node herramientas/inspeccionar_px.js reels/ID 0.5  # solapes por píxeles, legibilidad, máximo 2 bocadillos (debe decir ok)
 python3 herramientas/redaccion.py reels/ID     # redacción del guion, los dos estilos (debe decir ok)
+python3 herramientas/lector.py reels/ID        # encargo para el lector en frío (regla 18): a un agente nuevo, informe en reels/ID/lector.md
 ```
 
 ## Revisión obligatoria antes de enseñar nada (04-11-2026)
@@ -118,6 +119,14 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    (`herramientas/voz.py`: « / » parte subtítulos dentro de una toma; `"join": true` une una línea con la siguiente).
    Error mío del 09-11: apliqué la guía primero al estilo A y rehíce I1, I3, N5 y N6; Jaime: «no, decía vídeos
    similares a los que te he dado de ejemplo hoy de stickman en 2D». Esos cuatro se han devuelto a como estaban.
+
+18. **Lector en frío antes de la voz (09-11-2026).** Jaime: «falta un revisor. Si un revisor lee el guion de lo que el
+   narrador narra, ¿entendería el vídeo? Yo creo que no». Quien escribe el guion no puede juzgarlo: ve las escenas en la
+   cabeza. Desde ahora cada guion pasa por un **lector en frío**: `python3 herramientas/lector.py reels/ID` da el encargo y
+   se le pasa a un agente nuevo (uno por reel, sin contexto, sin imágenes y sin la opinión de quien escribió). Solo oye
+   la voz. Su informe se guarda en `reels/ID/lector.md`. No hay voz ni escena hasta que el lector resume el vídeo como la
+   idea del guion, no marca frases que no se entiendan solo oyendo y pone 8 o más; tras reescribir, se repite con otro
+   lector nuevo. Va después de `redaccion.py` y antes de `voz.py`.
 
 ## Pendiente de Jaime
 

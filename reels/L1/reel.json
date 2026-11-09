@@ -14,12 +14,12 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *págate a ti primero.*",
+      "show": "Número uno: // *lo primero que pagas eres tú.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "El día que cobras, / aparta una parte *antes de pagar nada.*",
+      "show": "El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*",
       "pause": 0.3
     },
     {
@@ -70,7 +70,7 @@
       "pause": 0.3
     },
     {
-      "show": "Por eso a fin de mes / ya sabes *en qué se te va.*",
+      "show": "Así, a fin de mes / ya sabes *en qué se te va el dinero.*",
       "pause": 0.55
     },
     {
@@ -110,5 +110,16 @@
       "0: «Cuatro reglas para que el sueldo *te llegue a fin de mes.*» → «Si a día veinte ya estás a cero, / *te faltan estas cuatro reglas.*» (Jaime: «mejora el hook de L1»: situación que el espectador reconoce, con cifra, en vez de una promesa genérica; el envío final la repite y cierra el bucle)",
       "1: «Y puedes empezar *con la próxima nómina.*» → «Y ninguna es *ganar más.*» (anuncio que choca con lo que se cree: abre la pregunta de cómo, sin ganar más)"
     ]
-  }
+  },
+  "lector": [
+    {
+      "ronda": 1,
+      "nota": "lector 8/10: regla 1 vaga y calco; «por eso» equivocado",
+      "cambios": [
+        "2: «Número uno: // *págate a ti primero.*» → «Número uno: // *lo primero que pagas eres tú.*»",
+        "3: «El día que cobras, / aparta una parte *antes de pagar nada.*» → «El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*»",
+        "15: «Por eso a fin de mes / ya sabes *en qué se te va.*» → «Así, a fin de mes / ya sabes *en qué se te va el dinero.*»"
+      ]
+    }
+  ]
 }

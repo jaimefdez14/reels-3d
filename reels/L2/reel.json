@@ -10,38 +10,38 @@
       "pause": 0.45
     },
     {
-      "show": "Primera: // la ley de Parkinson.",
+      "show": "Primera: // el trabajo se estira.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "El trabajo se alarga / hasta ocupar / todo el tiempo que le des.",
+      "show": "Ocupa todo el tiempo que le des. / Es la ley de Parkinson.",
       "pause": 0.3
     },
     {
-      "show": "Ponle menos tiempo / y lo terminas antes.",
+      "show": "Así que ponle menos plazo / y lo terminas antes.",
       "pause": 0.55
     },
     {
-      "show": "Segunda: // la ley de Hofstadter.",
+      "show": "Segunda: // todo tarda más de lo que calculas.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Todo tarda más de lo que calculas. / Siempre.",
+      "show": "Siempre. / Lo llaman ley de Hofstadter.",
       "pause": 0.3
     },
     {
-      "show": "Por eso, a lo que calcules, / súmale la mitad.",
+      "show": "Por eso, calcula / y súmale la mitad.",
       "pause": 0.55
     },
     {
-      "show": "Tercera: // la navaja de Hanlon.",
+      "show": "Tercera: // no veas mala fe.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "No veas mala fe / donde solo hay un despiste.",
+      "show": "Casi siempre es un despiste. / Se llama la navaja de Hanlon.",
       "pause": 0.3
     },
     {
@@ -49,33 +49,33 @@
       "pause": 0.55
     },
     {
-      "show": "Cuarta: // el efecto Zeigarnik.",
+      "show": "Cuarta: // lo que dejas a medias te persigue.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Lo que dejas a medias / no te deja en paz.",
+      "show": "No te deja en paz hasta que lo acabas. / Es el efecto Zeigarnik.",
       "pause": 0.3
     },
     {
-      "show": "Apúntalo / y tu cabeza lo suelta.",
+      "show": "Así que apúntalo / y tu cabeza lo suelta.",
       "pause": 0.55
     },
     {
-      "show": "Quinta: // la ley de Pareto.",
+      "show": "Quinta: // unas pocas tareas lo dan casi todo.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Dos de cada diez tareas / dan ocho de cada diez resultados.",
+      "show": "Una de cada cinco tareas / da casi todo el resultado.",
       "pause": 0.3
     },
     {
-      "show": "Haz esas dos primero. / Las otras ocho pueden esperar.",
+      "show": "Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.",
       "pause": 0.55
     },
     {
-      "show": "Los errores son los mismos: / ahora ya tienen nombre.",
+      "show": "Ya las sufrías. / Ahora sabes cómo se llaman.",
       "pause": 0.35
     },
     {
@@ -114,5 +114,28 @@
       "5: «Todo lleva más de lo que crees. / Aunque ya cuentes con ello.» → «Todo tarda más de lo que calculas. / Siempre.» (segunda revisión: «Aunque ya cuentes con ello» no se entendía sin conocer la ley)",
       "0: «Cinco leyes que te ahorran / años de errores en el trabajo.» → «Cinco leyes que ya sufres en el trabajo / aunque no sepas su nombre.» (Jaime: «no son leyes de ahorro de tiempo en el trabajo»; el gancho promete lo que da y lo cierra el remate «ahora ya tienen nombre»)"
     ]
-  }
+  },
+  "lector": [
+    {
+      "ronda": 1,
+      "nota": "lector 7/10: la idea antes que el nombre raro; Pareto sin cuatro cifras seguidas; remate con referente",
+      "cambios": [
+        "1: «Primera: // la ley de Parkinson.» → «Primera: // el trabajo se estira.»",
+        "2: «El trabajo se alarga / hasta ocupar / todo el tiempo que le des.» → «Ocupa todo el tiempo que le des. / Es la ley de Parkinson.»",
+        "3: «Ponle menos tiempo / y lo terminas antes.» → «Así que ponle menos plazo / y lo terminas antes.»",
+        "4: «Segunda: // la ley de Hofstadter.» → «Segunda: // todo tarda más de lo que calculas.»",
+        "5: «Todo tarda más de lo que calculas. / Siempre.» → «Siempre. / Lo llaman ley de Hofstadter.»",
+        "6: «Por eso, a lo que calcules, / súmale la mitad.» → «Por eso, calcula / y súmale la mitad.»",
+        "7: «Tercera: // la navaja de Hanlon.» → «Tercera: // no veas mala fe.»",
+        "8: «No veas mala fe / donde solo hay un despiste.» → «Casi siempre es un despiste. / Se llama la navaja de Hanlon.»",
+        "10: «Cuarta: // el efecto Zeigarnik.» → «Cuarta: // lo que dejas a medias te persigue.»",
+        "11: «Lo que dejas a medias / no te deja en paz.» → «No te deja en paz hasta que lo acabas. / Es el efecto Zeigarnik.»",
+        "12: «Apúntalo / y tu cabeza lo suelta.» → «Así que apúntalo / y tu cabeza lo suelta.»",
+        "13: «Quinta: // la ley de Pareto.» → «Quinta: // unas pocas tareas lo dan casi todo.»",
+        "14: «Dos de cada diez tareas / dan ocho de cada diez resultados.» → «Una de cada cinco tareas / da casi todo el resultado.»",
+        "15: «Haz esas dos primero. / Las otras ocho pueden esperar.» → «Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.»",
+        "16: «Los errores son los mismos: / ahora ya tienen nombre.» → «Ya las sufrías. / Ahora sabes cómo se llaman.»"
+      ]
+    }
+  ]
 }

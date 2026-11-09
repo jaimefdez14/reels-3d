@@ -1,0 +1,9 @@
+# Lector en frío · L4 · 09-11-2026 (ronda 1) · nota 7/10
+Resumen del lector: cinco trucos para empezar en vez de aplazar; no hacen falta ganas, hace falta que empezar sea fácil.
+Fallos marcados:
+1. «Y el tercero es el que mejor funciona.» — promesa que no se paga: al llegar al tres nada dice por qué es el mejor.
+2. «"Hacer el informe" no es una tarea. "Abrir el documento", sí.» — de oído no se oyen las comillas: suena a contradicción.
+3. «Número cinco: para a mitad de frase.» — «para» ambiguo (verbo o preposición) y solo vale para quien escribe.
+4. «Si tienes que ir a por él, ya no lo coges.» — falta el porqué (la pereza de levantarte).
+5. «Número cuatro: una sola pestaña.» — da por hecho el ordenador.
+Abandono: segundo 25-30, en el número tres.
