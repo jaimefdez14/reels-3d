@@ -13,3 +13,6 @@ Fallos marcados: tres cuentas sin decirlo; «se queda a cero» choca con el ganc
 
 # Ronda 3 (lector nuevo) · nota 8/10
 Bloqueantes: «Así lo pillas el día diez» («lo» sin referente); «lo que queda, en dos cuentas» (¿dos o tres?). Estilo: subjuntivo en el envío.
+
+# Ronda 4 (lector nuevo) · nota 8/10 · PASA
+Sin bloqueantes. Estilo: «lo primero que pagas eres tú» abstracto; «dos cuentas más» obliga a contar; la regla 3 parece redundante con la cuenta de caprichos; «la cesta» solo vale para internet.

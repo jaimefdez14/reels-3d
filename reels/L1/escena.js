@@ -33,10 +33,10 @@ E.golpe(wf(0, -1) + 0.4, 0.04);
 // ---------- 1 · págate primero ----------
 E.numero(1, T1, S1, { hacia: 'pila1' });
 E.figura('yo1', { t0: S1 - 0.1, t1: T2 + 0.45, x: -40, cara: true, toca: ['pila1', 'tarro', 'm1', 'm2', 'm3'],
-  poses: [[0, 'de_pie'], [w(3, 3), 'coger'], [w(3, 5), { lean: 10, hf: 6, kf: 6, hb: -8, kb: 6, sf: -40, ef: 10, sb: -20, eb: 10, cab: 2 }, 0.45], [w(3, 8), 'meter'], [w(4, 1), 'de_pie'], [w(4, 5), 'senalar']] });
-E.obj('pila1', 'pila', { t0: S1 - 0.1, t1: T2 + 0.45, x: 200, n: 9, w: 190, hh: 30, k: [[S1, 0], [S1 + 0.9, 9, 'out'], [w(3, 4), 9], [w(3, 8), 6]], caja: [-95, -250, 190, 250], refl: true, sobrevive: true, r: 70, oy: -110 });
-E.obj('tarro', 'tarro', { t0: w(3, 3) - 0.2, t1: T2 + 0.45, x: -330, pop: true, nivel: [[w(3, 5), 0], [w(3, 9), 0.45]], tapa: [[w(4, 3), 0], [w(4, 4) + 0.2, 1, 'out']], luz: [[w(4, 5), 1], [w(4, 7), 0.35]], w: 200, h: 270, caja: [-100, -270, 200, 270], refl: true });
-[0, 1, 2].forEach(i => { const a = w(3, 4) + i * 0.28; E.obj('m' + (i + 1), 'moneda', { t0: a, t1: a + 0.95, entra: 0.1, sale: 0.15, r: 22, n: '', libre: true, x: [[a, 200], [a + 0.9, -330, 'inout']], y: [[a, -210 + i * 22], [a + 0.45, -470], [a + 0.9, -170, 'in']], sfx: false }); });
+  poses: [[0, 'de_pie'], [w(3, 4), 'coger'], [w(3, 7), { lean: 10, hf: 6, kf: 6, hb: -8, kb: 6, sf: -40, ef: 10, sb: -20, eb: 10, cab: 2 }, 0.45], [w(3, 10), 'meter'], [w(4, 1), 'de_pie'], [w(4, 5), 'senalar']] });
+E.obj('pila1', 'pila', { t0: S1 - 0.1, t1: T2 + 0.45, x: 200, n: 9, w: 190, hh: 30, k: [[S1, 0], [S1 + 0.9, 9, 'out'], [w(3, 5), 9], [w(3, 10), 6]], caja: [-95, -250, 190, 250], refl: true, sobrevive: true, r: 70, oy: -110 });
+E.obj('tarro', 'tarro', { t0: w(3, 4) - 0.2, t1: T2 + 0.45, x: -330, pop: true, nivel: [[w(3, 7), 0], [w(3, 12), 0.45]], tapa: [[w(4, 3), 0], [w(4, 4) + 0.2, 1, 'out']], luz: [[w(4, 5), 1], [w(4, 7), 0.35]], w: 200, h: 270, caja: [-100, -270, 200, 270], refl: true });
+[0, 1, 2].forEach(i => { const a = w(3, 5) + i * 0.28; E.obj('m' + (i + 1), 'moneda', { t0: a, t1: a + 0.95, entra: 0.1, sale: 0.15, r: 22, n: '', libre: true, x: [[a, 200], [a + 0.9, -330, 'inout']], y: [[a, -210 + i * 22], [a + 0.45, -470], [a + 0.9, -170, 'in']], sfx: false }); });
 
 // ---------- 2 · una cuenta para cada cosa ----------
 E.numero(2, T2, S2, { desde: 'pila1', hacia: 'fijos' });

@@ -12,3 +12,9 @@ Fallos marcados: «te llama a ti» suena a más marrones; «ahorrarle buscar» t
 
 # Ronda 3 (lector nuevo) · nota 8/10
 Bloqueantes: «eres el primero en quien piensa» (¿para culparte?); «No le digas «lo miro»» (la cita no se oye). Estilo: «ahorrarle tener que preguntártelo» choca con «ni se entera».
+
+# Ronda 4 (lector nuevo) · nota 8/10
+Bloqueante: «eres el primero al que llama para arreglarlo» choca con «sin echar ni una hora más» (suena a más carga). Estilo: «ponérselo fácil» sin objeto; «llega con soluciones» sin a dónde.
+
+# Ronda 5 (lector nuevo) · nota 8/10
+Bloqueante: «eres a quien quiere a su lado» (¿quién quiere a quién?). Estilo: «salidas» → «opciones»; «una vez al mes, tres líneas en un correo» sin verbo.

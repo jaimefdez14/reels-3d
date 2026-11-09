@@ -14,3 +14,9 @@ Fallos marcados: «el primero que habla, rebaja»: ¿quién?; «pedir perdón» 
 
 # Ronda 3 (lector nuevo) · nota 8/10
 Sin bloqueantes: pasa. Estilo: «la última evita que trabajes gratis» no se ata al punto 4; «Cobrar más no es pedir más» choca con pedir 1.200 €.
+
+# Ronda 4 (lector nuevo) · nota 7/10
+Bloqueantes: las citas sin verbo delante («Número uno: «¿Con qué presupuesto contáis?»» suena a pregunta al espectador; «Son mil doscientos euros» suena a dato del vídeo). Con Kokoro las comillas no cambian el tono: cada cita necesita «pregunta:», «di:», «contesta:».
+
+# Ronda 5 (lector nuevo) · nota 7/10
+Bloqueantes: la cita del número uno se mezcla con la narración («contáis» desorienta); «su cifra» y «tienen más» sin referente (el cliente no se nombra). Estilo: el anuncio («la última evita que trabajes gratis») choca con el punto 3; el remate no vuelve a las «cuatro frases».

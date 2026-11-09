@@ -13,3 +13,6 @@ Fallos marcados: «el informe» y «es el que mejor funciona» sin referente; pe
 
 # Ronda 3 (lector nuevo) · nota 7/10
 Bloqueantes: «Por eso este es el mejor» (el porqué no sale de la frase anterior; «tachas» sin lista); «deja a medias una parte fácil» (se entiende al revés). Estilo: «Una pestaña, ni una más» repite.
+
+# Ronda 4 (lector nuevo) · nota 8/10 · PASA
+Sin bloqueantes fuertes. Estilo: «Número uno: cinco minutos…» choca número y cifra; gancho genérico; tras el tercero no hay motivo para quedarse.

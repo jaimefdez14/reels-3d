@@ -10,27 +10,27 @@
       "pause": 0.35
     },
     {
-      "show": "Y la última / *evita que trabajes gratis.*",
+      "show": "Y la última / *te ahorra horas gratis.*",
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *«¿Con qué presupuesto contáis?»*",
+      "show": "Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Pregúntalo / *antes de dar tu precio.*",
+      "show": "Deja que diga una cifra / *antes de decir la tuya.*",
       "pause": 0.3
     },
     {
-      "show": "Porque a veces tienen más / *de lo que ibas a pedir.*",
+      "show": "A veces tiene más / *de lo que ibas a pedir.*",
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *«Son 1.200 €».*",
+      "show": "Número dos: // di tu precio: / *«Son 1.200 €».*",
       "pause": 0.3,
       "pausa_media": 0.7,
-      "say": "Número dos: // «Son mil doscientos euros»."
+      "say": "Número dos: // di tu precio: / «Son mil doscientos euros»."
     },
     {
       "show": "Y te callas. / *Sin justificarte.*",
@@ -41,33 +41,33 @@
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *«Eso lo cobro aparte».*",
+      "show": "Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Cuando te pidan un extra, / *no lo regales.*",
+      "show": "No lo regales, / *aunque sea pequeño.*",
       "pause": 0.3
     },
     {
-      "show": "Ponle su precio, / *aunque sea pequeño.*",
+      "show": "Ponle precio / *y mándalo por escrito.*",
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // «Si cambia el encargo, / *cambia el precio».*",
+      "show": "Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Dilo antes de empezar, / *por si a mitad te lo cambian.*",
+      "show": "Los cambios llegan / *a mitad del trabajo.*",
       "pause": 0.3
     },
     {
-      "show": "Si no, los cambios / *los haces gratis.*",
+      "show": "Si no lo avisas, / *los haces gratis.*",
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir a lo loco: / *es saber qué decir.*",
+      "show": "Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*",
       "pause": 0.3
     },
     {
@@ -145,6 +145,32 @@
       "cambios": [
         "13: «Así no discutes / *con medio trabajo ya hecho.*» → «Si no, los cambios / *los haces gratis.*»",
         "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es saber qué decir.*»"
+      ]
+    },
+    {
+      "ronda": 4,
+      "nota": "7/10; bloqueantes: citas sin verbo delante",
+      "cambios": [
+        "2: «Número uno: // *«¿Con qué presupuesto contáis?»*» → «Número uno: // antes de dar tu precio, pregunta: / *«¿Con qué presupuesto contáis?»*»",
+        "3: «Pregúntalo / *antes de dar tu precio.*» → «Y escucha su cifra / *antes de decir la tuya.*»",
+        "5: «Número dos: // *«Son 1.200 €».*» → «Número dos: // di tu precio: / *«Son 1.200 €».*»",
+        "8: «Número tres: // *«Eso lo cobro aparte».*» → «Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*»",
+        "9: «Cuando te pidan un extra, / *no lo regales.*» → «No lo regales, / *aunque sea pequeño.*»",
+        "10: «Ponle su precio, / *aunque sea pequeño.*» → «Ponle precio / *y mándalo por escrito.*»",
+        "11: «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*» → «Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*»",
+        "12: «Dilo antes de empezar, / *por si a mitad te lo cambian.*» → «Los cambios llegan / *a mitad del trabajo.*»",
+        "13: «Si no, los cambios / *los haces gratis.*» → «Si no lo avisas, / *los haces gratis.*»"
+      ]
+    },
+    {
+      "ronda": 5,
+      "nota": "ronda 5: 7/10",
+      "cambios": [
+        "1: «Y la última / *evita que trabajes gratis.*» → «Y la última / *te ahorra horas gratis.*»",
+        "2: «Número uno: // antes de dar tu precio, pregunta: / *«¿Con qué presupuesto contáis?»*» → «Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*»",
+        "3: «Y escucha su cifra / *antes de decir la tuya.*» → «Deja que diga una cifra / *antes de decir la tuya.*»",
+        "4: «Porque a veces tienen más / *de lo que ibas a pedir.*» → «A veces tiene más / *de lo que ibas a pedir.*»",
+        "14: «Cobrar más no es pedir a lo loco: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*»"
       ]
     }
   ]

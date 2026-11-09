@@ -13,3 +13,6 @@ Fallos marcados: «No veas mala fe» sin referente; la quinta repite; «haz esas
 
 # Ronda 3 (lector nuevo) · nota 7/10
 Bloqueantes: «Si no te contestan, no es mala fe» (¿quién, a qué?) y «Una tarea de cada cinco lo da casi todo» (¿qué da?). Estilo: «así que» repetido, nombres opacos (Hanlon suena a arma, Parkinson a la enfermedad), dos instrucciones seguidas en Pareto.
+
+# Ronda 4 (lector nuevo) · nota 8/10 · PASA
+Sin bloqueantes. Estilo: «navaja» despista un segundo; «calcula lo que tardas» mejor «lo que crees que tardarás»; Zeigarnik no se retiene (la idea sí); falta comprobar cómo pronuncia Kokoro Hofstadter y Zeigarnik.

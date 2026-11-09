@@ -14,12 +14,12 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *llega con soluciones.*",
+      "show": "Número uno: // *ve con soluciones.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "No le lleves solo el problema. / *Llévale dos salidas.*",
+      "show": "No le lleves solo el problema. / *Llévale dos opciones.*",
       "pause": 0.3
     },
     {
@@ -27,7 +27,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*",
+      "show": "Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*",
       "pause": 0.55
     },
     {
@@ -53,7 +53,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Una vez al mes, / *tres líneas en un correo.*",
+      "show": "Una vez al mes, mándale / *tres líneas en un correo.*",
       "pause": 0.3
     },
     {
@@ -61,7 +61,7 @@
       "pause": 0.3
     },
     {
-      "show": "Y no es presumir: / *es ponérselo fácil.*",
+      "show": "Y no es presumir: / *es ponérselo fácil para que te vea.*",
       "pause": 0.55
     },
     {
@@ -107,6 +107,25 @@
         "5: «Así, cuando algo se tuerce, / *eres el primero en quien piensa.*» → «Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*»",
         "7: «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*» → «No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*»",
         "13: «Y no es presumir: / *es ahorrarle tener que preguntártelo.*» → «Y no es presumir: / *es ponérselo fácil.*»"
+      ]
+    },
+    {
+      "ronda": 4,
+      "nota": "8/10; bloqueante: «el primero al que llama para arreglarlo» suena a más trabajo",
+      "cambios": [
+        "2: «Número uno: // *llega con soluciones.*» → «Número uno: // *ve con soluciones.*»",
+        "5: «Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*» → «Así, cuando algo se tuerce, / *eres a quien quiere a su lado.*»",
+        "13: «Y no es presumir: / *es ponérselo fácil.*» → «Y no es presumir: / *es ponérselo fácil para que te vea.*»"
+      ]
+    },
+    {
+      "ronda": 5,
+      "nota": "ronda 5: 8/10",
+      "cambios": [
+        "4: «Y dile cuál / *elegirías tú.*» → «Y dile cuál / *elegirías tú.*»",
+        "3: «No le lleves solo el problema. / *Llévale dos salidas.*» → «No le lleves solo el problema. / *Llévale dos opciones.*»",
+        "5: «Así, cuando algo se tuerce, / *eres a quien quiere a su lado.*» → «Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*»",
+        "11: «Una vez al mes, / *tres líneas en un correo.*» → «Una vez al mes, mándale / *tres líneas en un correo.*»"
       ]
     }
   ]
