@@ -88,13 +88,20 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    Ideas: `docs/IDEAS-2026-11-09.md`. Choques con las reglas 2 y 3 (dosis en número, frase entrecomillada) en
    `docs/SISTEMA-LISTA.md` §6, pendientes de Jaime.
 
+15. **Estilo B aprobado; más detalle, mejores transiciones y «satisfying» (09-11-2026).** Jaime, tras L1 y L2: «el estilo
+   vale, pero: 1. que intenta mejorar los detalles y las transiciones de escena a escena, 2. que sea "satisfying",
+   incluyendo contadores que suman, dinamismos, cosas que se rellenan, etc. Haz L4 y L5». Desde ahora cada reel del estilo B
+   lleva: al menos un **contador que suma** (número que rueda) y algo que **se rellena** por punto; la escena nunca se
+   queda quieta más de 1,5 s; las transiciones encadenan el objeto con la moneda (morph de forma, no solo fundido) y la
+   escena nueva se monta por piezas. L4 (procrastinar) y L5 (subir el precio) aprobadas.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
   ViralClips, decidir cómo se reparte el tope mensual).
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
-- Estilo B: ver L1 y L2, decir si el estilo vale y resolver los choques de `docs/SISTEMA-LISTA.md` §6.
+- Estilo B: resolver los choques de `docs/SISTEMA-LISTA.md` §6 (dosis en número, frase entrecomillada). Ver L4 y L5.
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
   con densidad alta, efectos de sonido por transición, libro opcional y cierre «Envíaselo a…» son la norma de esta
   repo salvo que Jaime diga lo contrario.
