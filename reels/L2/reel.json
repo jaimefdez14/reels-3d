@@ -10,25 +10,25 @@
    "pause": 0.45
   },
   {
-   "show": "Una: // la ley de Parkinson.",
+   "show": "Primera: // la ley de Parkinson.",
    "pause": 0.3,
    "pausa_media": 0.7
   },
   {
-   "show": "El trabajo se estira / hasta ocupar / todo el tiempo que le das.",
+   "show": "El trabajo se alarga / hasta ocupar / todo el tiempo que le des.",
    "pause": 0.3
   },
   {
-   "show": "Dale menos tiempo / y acabará antes.",
+   "show": "Ponle menos tiempo / y lo terminarás antes.",
    "pause": 0.55
   },
   {
-   "show": "Dos: // la ley de Hofstadter.",
+   "show": "Segunda: // la ley de Hofstadter.",
    "pause": 0.3,
    "pausa_media": 0.7
   },
   {
-   "show": "Todo tarda más de lo que crees. / Incluso cuando ya lo sabes.",
+   "show": "Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.",
    "pause": 0.3
   },
   {
@@ -36,7 +36,7 @@
    "pause": 0.55
   },
   {
-   "show": "Tres: // la navaja de Hanlon.",
+   "show": "Tercera: // la navaja de Hanlon.",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -45,11 +45,11 @@
    "pause": 0.3
   },
   {
-   "show": "Ese correo sin contestar / casi nunca es personal.",
+   "show": "Ese correo sin respuesta / casi nunca va contra ti.",
    "pause": 0.55
   },
   {
-   "show": "Cuatro: // el efecto Zeigarnik.",
+   "show": "Cuarta: // el efecto Zeigarnik.",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -62,7 +62,7 @@
    "pause": 0.55
   },
   {
-   "show": "Cinco: // la ley de Pareto.",
+   "show": "Quinta: // la ley de Pareto.",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -79,8 +79,24 @@
    "pause": 0.35
   },
   {
-   "show": "Te leo en comentarios. / Y sígueme para más.",
+   "show": "Te leo en los comentarios. / Y sígueme, que vienen más.",
    "pause": 0.3
   }
- ]
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "1: «Una: // la ley de Parkinson.» → «Primera: // la ley de Parkinson.»",
+   "2: «El trabajo se estira / hasta ocupar / todo el tiempo que le das.» → «El trabajo se alarga / hasta ocupar / todo el tiempo que le des.»",
+   "3: «Dale menos tiempo / y acabará antes.» → «Ponle menos tiempo / y lo terminarás antes.»",
+   "4: «Dos: // la ley de Hofstadter.» → «Segunda: // la ley de Hofstadter.»",
+   "5: «Todo tarda más de lo que crees. / Incluso cuando ya lo sabes.» → «Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.»",
+   "7: «Tres: // la navaja de Hanlon.» → «Tercera: // la navaja de Hanlon.»",
+   "9: «Ese correo sin contestar / casi nunca es personal.» → «Ese correo sin respuesta / casi nunca va contra ti.»",
+   "10: «Cuatro: // el efecto Zeigarnik.» → «Cuarta: // el efecto Zeigarnik.»",
+   "13: «Cinco: // la ley de Pareto.» → «Quinta: // la ley de Pareto.»",
+   "17: «Te leo en comentarios. / Y sígueme para más.» → «Te leo en los comentarios. / Y sígueme, que vienen más.»"
+  ]
+ }
 }

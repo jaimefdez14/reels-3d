@@ -6,15 +6,15 @@
  "coverT": 1.6,
  "lines": [
   {
-   "show": "Cuatro reglas para que tu sueldo *dure todo el mes.*",
+   "show": "Cuatro reglas para que el sueldo *te llegue a fin de mes.*",
    "pause": 0.35
   },
   {
-   "show": "Y puedes empezar *el día que cobres.*",
+   "show": "Y puedes empezar *con la próxima nómina.*",
    "pause": 0.5
   },
   {
-   "show": "Número uno: // *págate primero.*",
+   "show": "Número uno: // *págate a ti primero.*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -36,7 +36,7 @@
    "pause": 0.3
   },
   {
-   "show": "Cuando la de caprichos / llega a cero, *se acabaron los caprichos.*",
+   "show": "Cuando la de caprichos / se queda a cero, *se acabaron los caprichos.*",
    "pause": 0.25
   },
   {
@@ -44,16 +44,16 @@
    "pause": 0.55
   },
   {
-   "show": "Número tres: // *espera dos días.*",
+   "show": "Número tres: // *deja pasar dos días.*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
   {
-   "show": "¿Quieres algo que no necesitas? / *Déjalo en el carrito.*",
+   "show": "¿Te has encaprichado de algo? / *Déjalo en la cesta.*",
    "pause": 0.3
   },
   {
-   "show": "Hoy tu cabeza dice: *«Me lo merezco».*",
+   "show": "Hoy piensas: *«Me lo merezco».*",
    "pause": 0.3
   },
   {
@@ -61,21 +61,38 @@
    "pause": 0.55
   },
   {
-   "show": "Número cuatro: // *mira tus gastos el domingo.*",
+   "show": "Número cuatro: // *repasa tus gastos cada domingo.*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
   {
-   "show": "Cinco minutos. *Sin culpa.*",
+   "show": "Cinco minutos. *Sin dramas.*",
    "pause": 0.3
   },
   {
-   "show": "No es para sentirte mal. / Es para saber *adónde se va.*",
+   "show": "No es para fustigarte. / Es para ver *en qué se te va.*",
    "pause": 0.55
   },
   {
-   "show": "Guárdalo para el día *que cobres.* / Y sígueme *para más.*",
+   "show": "Guárdalo para el día *que cobres.* / Y sígueme, *que vienen más.*",
    "pause": 0.3
   }
- ]
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "0: «Cuatro reglas para que tu sueldo *dure todo el mes.*» → «Cuatro reglas para que el sueldo *te llegue a fin de mes.*»",
+   "1: «Y puedes empezar *el día que cobres.*» → «Y puedes empezar *con la próxima nómina.*»",
+   "2: «Número uno: // *págate primero.*» → «Número uno: // *págate a ti primero.*»",
+   "7: «Cuando la de caprichos / llega a cero, *se acabaron los caprichos.*» → «Cuando la de caprichos / se queda a cero, *se acabaron los caprichos.*»",
+   "9: «Número tres: // *espera dos días.*» → «Número tres: // *deja pasar dos días.*»",
+   "10: «¿Quieres algo que no necesitas? / *Déjalo en el carrito.*» → «¿Te has encaprichado de algo? / *Déjalo en la cesta.*»",
+   "11: «Hoy tu cabeza dice: *«Me lo merezco».*» → «Hoy piensas: *«Me lo merezco».*»",
+   "13: «Número cuatro: // *mira tus gastos el domingo.*» → «Número cuatro: // *repasa tus gastos cada domingo.*»",
+   "14: «Cinco minutos. *Sin culpa.*» → «Cinco minutos. *Sin dramas.*»",
+   "15: «No es para sentirte mal. / Es para saber *adónde se va.*» → «No es para fustigarte. / Es para ver *en qué se te va.*»",
+   "16: «Guárdalo para el día *que cobres.* / Y sígueme *para más.*» → «Guárdalo para el día *que cobres.* / Y sígueme, *que vienen más.*»"
+  ]
+ }
 }

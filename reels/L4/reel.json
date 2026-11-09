@@ -6,20 +6,20 @@
  "coverT": 1.7,
  "lines": [
   {
-   "show": "Cinco formas de dejar *de procrastinar hoy mismo.*",
+   "show": "Cinco trucos para dejar *de procrastinar hoy mismo.*",
    "pause": 0.35
   },
   {
-   "show": "Y la tercera es *la que mejor funciona.*",
+   "show": "Y el tercero es *el que mejor funciona.*",
    "pause": 0.5
   },
   {
-   "show": "Número uno: // *cinco minutos feos.*",
+   "show": "Número uno: // *cinco minutos con lo peor.*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
   {
-   "show": "Pon cinco minutos en el reloj / y haz *la parte más fea.*",
+   "show": "Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*",
    "pause": 0.3
   },
   {
@@ -40,7 +40,7 @@
    "pause": 0.55
   },
   {
-   "show": "Número tres: // *trocéala hasta que dé risa.*",
+   "show": "Número tres: // *trocea la tarea hasta que dé risa.*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -62,7 +62,7 @@
    "pause": 0.3
   },
   {
-   "show": "Tu cabeza no puede saltar / *adonde no hay nada abierto.*",
+   "show": "Tu cabeza no puede escaparse / *a lo que no está abierto.*",
    "pause": 0.55
   },
   {
@@ -71,7 +71,7 @@
    "pausa_media": 0.7
   },
   {
-   "show": "Cuando acabes por hoy, / *deja una frase sin terminar.*",
+   "show": "Al terminar el día, / *deja una frase a medias.*",
    "pause": 0.3
   },
   {
@@ -83,8 +83,22 @@
    "pause": 0.3
   },
   {
-   "show": "Y sígueme *para más.*",
+   "show": "Y sígueme, *que vienen más.*",
    "pause": 0.3
   }
- ]
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "0: «Cinco formas de dejar *de procrastinar hoy mismo.*» → «Cinco trucos para dejar *de procrastinar hoy mismo.*»",
+   "1: «Y la tercera es *la que mejor funciona.*» → «Y el tercero es *el que mejor funciona.*»",
+   "2: «Número uno: // *cinco minutos feos.*» → «Número uno: // *cinco minutos con lo peor.*»",
+   "3: «Pon cinco minutos en el reloj / y haz *la parte más fea.*» → «Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*»",
+   "8: «Número tres: // *trocéala hasta que dé risa.*» → «Número tres: // *trocea la tarea hasta que dé risa.*»",
+   "13: «Tu cabeza no puede saltar / *adonde no hay nada abierto.*» → «Tu cabeza no puede escaparse / *a lo que no está abierto.*»",
+   "15: «Cuando acabes por hoy, / *deja una frase sin terminar.*» → «Al terminar el día, / *deja una frase a medias.*»",
+   "18: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
+  ]
+ }
 }

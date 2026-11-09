@@ -95,6 +95,12 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    queda quieta más de 1,5 s; las transiciones encadenan el objeto con la moneda (morph de forma, no solo fundido) y la
    escena nueva se monta por piezas. L4 (procrastinar) y L5 (subir el precio) aprobadas.
 
+16. **Castellano de verdad, no traducido (09-11-2026).** Jaime: «me gustan mucho, pero los guiones aún no tienen perfección
+   de estar adaptados y redactados en español/castellano». Cada guion pasa `docs/CASTELLANO.md` antes de la voz: fuera los
+   calcos del inglés («sígueme para más», «tu número», «el siguiente nivel», «es personal»…), primero las frases hechas de
+   España («llegar a fin de mes», «la nómina», «lo que más pereza te da», «se paga aparte»), subjuntivo y referentes bien
+   puestos. Los cambios se anotan en `reel.json` → `revision_castellano`. L1, L2, L4 y L5 revisados y regenerados.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que

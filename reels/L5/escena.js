@@ -44,11 +44,11 @@ E.golpe(wf(7, -1), 0.05);
 
 // ---------- 3 · el plan grande: lo extra no se regala, sube de caja ----------
 E.numero(3, N[2].T, N[2].S, { desde: 'tag2', hacia: 'planes' });
-E.figura('yo3', { t0: N[2].S - 0.1, t1: fin(3), x: -360, cara: true, toca: ['extra'], poses: [[0, 'de_pie'], [w(9, 0), 'ofrecer'], [w(9, 5), 'de_pie'], [w(10, 0), 'senalar'], [w(10, 4), 'celebrar']], sonrisa: [[w(10, 4), 1.5]] });
-E.obj('planes', 'planes', { t0: N[2].S - 0.1, t1: fin(3), x: 110, refl: true, r: 90, oy: -110, sel: [[0, -1], [w(8, 5), -1], [w(8, 6), 0], [w(8, 7), 2, 'lin'], [w(9, 0), 2], [w(9, 5), 0], [w(10, 0), 0], [w(10, 3), 2, 'inout']], caja: [-340, -220, 680, 280] });
+E.figura('yo3', { t0: N[2].S - 0.1, t1: fin(3), x: -360, cara: true, toca: ['extra'], poses: [[0, 'de_pie'], [w(9, 0), 'ofrecer'], [w(9, 5), 'de_pie'], [w(10, 0), 'senalar'], [w(10, 5), 'celebrar']], sonrisa: [[w(10, 5), 1.5]] });
+E.obj('planes', 'planes', { t0: N[2].S - 0.1, t1: fin(3), x: 110, items: ['BÁSICO', 'MEDIO', 'COMPLETO'], refl: true, r: 90, oy: -110, sel: [[0, -1], [w(8, 5), -1], [w(8, 6), 0], [w(8, 7), 2, 'lin'], [w(9, 0), 2], [w(9, 5), 0], [w(10, 0), 0], [w(10, 3), 2, 'inout']], caja: [-340, -220, 680, 280] });
 E.obj('extra', 'pieza', { t0: w(9, 2), t1: fin(3), r: 30, texto: '+', libre: true,
   x: [[w(9, 2), -290], [w(9, 4), -290], [w(10, 2), 340, 'inout']], y: [[w(9, 2), -330], [w(9, 4), -330], [w(10, 0), -560], [w(10, 2), -130, 'in']], on: [[w(9, 4), 1], [w(9, 6), 0.3], [w(10, 0), 1]] });
-E.obj('tag3', 'etiqueta', { t0: w(10, 4), t1: fin(3), x: 330, y: -320, w: 230, h: 96, pop: true, v: [[w(10, 4), 0], [wf(10, -1) + 0.4, 1800, 'out']], caja: [-115, -48, 230, 96] });
+E.obj('tag3', 'etiqueta', { t0: w(10, 5), t1: fin(3), x: 330, y: -320, w: 230, h: 96, pop: true, v: [[w(10, 5), 0], [wf(10, -1) + 0.4, 1800, 'out']], caja: [-115, -48, 230, 96] });
 E.obj('ch3', 'chispas', { t0: wf(10, -1) + 0.4, t1: wf(10, -1) + 1.2, x: 330, y: -320, r0: 120, r1: 200, inspeccion: false });
 
 // ---------- 4 · si cambia, lo hablamos: el alcance rebota lo que no está incluido ----------
@@ -68,7 +68,7 @@ golpes4.forEach((tg, i) => {
 E.obj('ch4', 'chispas', { t0: w(13, 0) + 0.6, t1: w(13, 0) + 1.4, x: 110, y: -330, r0: 260, r1: 340, n: 16, inspeccion: false });
 
 // ---------- cierre: resumen, comentarios y seguir ----------
-E.obj('resumen', 'resumen', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, items: ['Calla', 'Pregunta', 'Plan grande', 'Alcance'], gap: 210,
+E.obj('resumen', 'resumen', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, items: ['Calla', 'Pregunta', 'Paquete', 'Encargo'], gap: 210,
   p: [[TC, 0], [TC + 0.9, 4, 'lin']], caja: [-420, -60, 840, 200] });
 E.obj('coment', 'bocadillo', { t0: w(14, 6), t1: w(15, 0), capa: 'pantalla', x: 540, y: 1190, w: 150, h: 92, on: 1, caja: [-75, -46, 150, 120] });
 E.figura('yoF', { t0: w(15, 0), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(15, 1), 'senalar']] });

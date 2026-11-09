@@ -25,7 +25,7 @@ for (let i = 0; i < 5; i++) {
 // ---------- 1 · Parkinson: el trabajo se estira ----------
 E.numero(1, N[0].T, N[0].S, { desde: 'h1', hacia: 'barra1' });
 E.figura('yo1', { t0: N[0].S - 0.1, t1: N[1].T + 0.45, x: -360, toca: ['barra1'],
-  poses: [[0, 'de_pie'], [w(2, 0), 'senalar'], [w(2, 6), 'triste'], [w(3, 0), 'senalar'], [w(3, 4), 'celebrar'], [wf(3, -1) + 0.2, 'de_pie']] });
+  poses: [[0, 'de_pie'], [w(2, 0), 'senalar'], [w(2, 6), 'triste'], [w(3, 0), 'senalar'], [w(3, 5), 'celebrar'], [wf(3, -1) + 0.2, 'de_pie']] });
 E.obj('barra1', 'barra', { t0: N[0].S - 0.1, t1: N[1].T + 0.45, x: 90, y: -330, h: 64, r: 60,
   w: [[0, 560], [w(3, 0), 560], [w(3, 2), 300]], f: [[0, 0.22], [w(2, 2), 0.22], [w(2, 9), 1, 'inout']], marcas: [], caja: [-280, -32, 560, 110] });
 E.obj('rot1', 'rotulo', { t0: w(2, 0), t1: N[1].T + 0.45, x: 90, y: -430, texto: 'TAREA', caja: [-60, -16, 120, 32] });

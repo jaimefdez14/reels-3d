@@ -23,11 +23,11 @@
    "pause": 0.3
   },
   {
-   "show": "El silencio incómodo / *lo aguanta tu precio, no tú.*",
+   "show": "Ese silencio incómodo es normal. / *El primero que habla, rebaja.*",
    "pause": 0.55
   },
   {
-   "show": "Número dos: // *pregunta antes de dar tu número.*",
+   "show": "Número dos: // *pregunta antes de dar tu precio.*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -40,7 +40,7 @@
    "pause": 0.55
   },
   {
-   "show": "Número tres: // *«Eso entra en el plan grande».*",
+   "show": "Número tres: // *«Eso va en el paquete completo».*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
@@ -49,16 +49,16 @@
    "pause": 0.3
   },
   {
-   "show": "Ofrece el siguiente nivel. / *Con su precio.*",
+   "show": "Ofrece el paquete de arriba. / *Con su precio.*",
    "pause": 0.55
   },
   {
-   "show": "Número cuatro: // *«Si cambia, lo hablamos».*",
+   "show": "Número cuatro: // *«Si cambia el encargo, lo hablamos».*",
    "pause": 0.3,
    "pausa_media": 0.7
   },
   {
-   "show": "Lo que no está en el presupuesto / *no está incluido.*",
+   "show": "Lo que no está en el presupuesto / *se paga aparte.*",
    "pause": 0.3
   },
   {
@@ -66,12 +66,26 @@
    "pause": 0.55
   },
   {
-   "show": "¿Cuál vas a usar esta semana? / *Te leo en comentarios.*",
+   "show": "¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*",
    "pause": 0.3
   },
   {
-   "show": "Y sígueme *para más.*",
+   "show": "Y sígueme, *que vienen más.*",
    "pause": 0.3
   }
- ]
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "4: «El silencio incómodo / *lo aguanta tu precio, no tú.*» → «Ese silencio incómodo es normal. / *El primero que habla, rebaja.*»",
+   "5: «Número dos: // *pregunta antes de dar tu número.*» → «Número dos: // *pregunta antes de dar tu precio.*»",
+   "8: «Número tres: // *«Eso entra en el plan grande».*» → «Número tres: // *«Eso va en el paquete completo».*»",
+   "10: «Ofrece el siguiente nivel. / *Con su precio.*» → «Ofrece el paquete de arriba. / *Con su precio.*»",
+   "11: «Número cuatro: // *«Si cambia, lo hablamos».*» → «Número cuatro: // *«Si cambia el encargo, lo hablamos».*»",
+   "12: «Lo que no está en el presupuesto / *no está incluido.*» → «Lo que no está en el presupuesto / *se paga aparte.*»",
+   "14: «¿Cuál vas a usar esta semana? / *Te leo en comentarios.*» → «¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*»",
+   "15: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
+  ]
+ }
 }
