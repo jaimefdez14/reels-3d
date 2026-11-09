@@ -4,99 +4,25 @@
   "idea": "I3 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026). Versión 3 (04-11): sigue pulso a pulso el reel de referencia R3 («Zero clients»), como pidió Jaime.",
   "coverT": 1.4,
   "lines": [
-    {
-      "show": "Esta frase hace que se inclinen hacia ti.",
-      "hi": "inclinen"
-    },
-    {
-      "show": "«Cero clientes.»",
-      "voice": "Cuando dices:",
-      "neg": "Cero"
-    },
-    {
-      "show": "No va del número.",
-      "neg": "número"
-    },
-    {
-      "show": "«¿Merece la pena hablar con este?»",
-      "voice": "Están decidiendo:"
-    },
-    {
-      "show": "Así que dilo tal cual.",
-      "hi": "tal cual"
-    },
-    {
-      "show": "«Cero. Busco el primero. Por eso estoy aquí.»",
-      "hide": true,
-      "pause": 0.9
-    },
-    {
-      "show": "Y enseguida piensan a quién conocen.",
-      "hi": "quién conocen"
-    },
-    {
-      "show": "«Algunos» → te ponen a prueba.",
-      "say": "Si dices «algunos», te ponen a prueba.",
-      "neg": "prueba"
-    },
-    {
-      "show": "«El primero» → pueden ayudarte.",
-      "say": "Si dices «el primero», pueden ayudarte.",
-      "hi": "ayudarte"
-    },
-    {
-      "show": "Lo que digas después decide si te recuerdan.",
-      "hi": "recuerdan"
-    },
-    {
-      "show": "No vendas. Pregunta.",
-      "hi": "Pregunta"
-    },
-    {
-      "show": "«¿Cómo conseguiste el primero?»",
-      "hide": true,
-      "pause": 0.8
-    },
-    {
-      "show": "Los demás solo esperan su turno para hablar.",
-      "neg": "esperan"
-    },
-    {
-      "show": "Adivina a quién recordarán.",
-      "hi": "recordarán"
-    },
-    {
-      "show": "«Cero me hace parecer nuevo.»",
-      "voice": "Estás pensando:",
-      "neg": "nuevo"
-    },
-    {
-      "show": "Bien. Eres nuevo."
-    },
-    {
-      "show": "Al nuevo lo ayudan; al que finge lo examinan.",
-      "neg": "finge"
-    },
-    {
-      "show": "Por eso no vendes: preguntas.",
-      "hi": "preguntas"
-    },
-    {
-      "show": "El cero nunca fue el problema.",
-      "neg": "problema",
-      "join": true
-    },
-    {
-      "show": "Esconderlo, sí.",
-      "hi": "Esconderlo"
-    },
-    {
-      "show": "Mándaselo a quien busca su primer cliente.",
-      "hi": "primer cliente"
-    }
-  ],
-  "redaccion": {
-    "fecha": "2026-11-09",
-    "nota": "Reescrito con docs/REDACCION.md: «Así que» (4), retoma en 6, las flechas se leen como frase (say), punto y coma de contraste (16), «por eso» reconocible (17), remate en una toma (join) y envío nuevo (20)."
-  }
+    { "show": "Esta frase hace que se inclinen hacia ti.", "hi": "inclinen" },
+    { "show": "«Cero clientes.»", "voice": "Cuando dices:", "neg": "Cero" },
+    { "show": "No va del número.", "neg": "número" },
+    { "show": "«¿Merece la pena hablar con este?»", "voice": "Están decidiendo:" },
+    { "show": "Dilo tal cual.", "hi": "tal cual" },
+    { "show": "«Cero. Busco el primero. Por eso estoy aquí.»", "hide": true, "pause": 0.9 },
+    { "show": "Ahora piensan a quién conocen.", "hi": "quién conocen" },
+    { "show": "«Algunos» → te ponen a prueba.", "neg": "prueba" },
+    { "show": "«El primero» → pueden ayudarte.", "hi": "ayudarte" },
+    { "show": "Lo que digas después decide si te recuerdan.", "hi": "recuerdan" },
+    { "show": "No vendas. Pregunta.", "hi": "Pregunta" },
+    { "show": "«¿Cómo conseguiste el primero?»", "hide": true, "pause": 0.8 },
+    { "show": "Los demás esperan su turno para hablar.", "neg": "esperan" },
+    { "show": "Adivina a quién recordarán.", "hi": "recordarán" },
+    { "show": "«Cero me hace parecer nuevo.»", "voice": "Estás pensando:", "neg": "nuevo" },
+    { "show": "Bien. Eres nuevo." },
+    { "show": "Al nuevo lo ayudan. Al que finge lo examinan.", "neg": "finge" },
+    { "show": "No estás vendiendo. Estás preguntando.", "hi": "preguntando" },
+    { "show": "El cero nunca fue el problema.", "neg": "problema" },
+    { "show": "Esconderlo, sí.", "hi": "Esconderlo" }
+  ]
 }

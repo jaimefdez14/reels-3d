@@ -1,0 +1,104 @@
+{
+ "id": "L4",
+ "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md; regla 15: satisfying)",
+ "titulo": "Cinco formas de dejar de procrastinar hoy mismo",
+ "idea": "L4 de docs/IDEAS-2026-11-09.md, aprobada por Jaime el 09-11-2026 («haz L4 y L5»). Pulso de B-R2 (rutina en 5 puntos, fondo negro, segunda línea amarilla en cursiva, el muñeco hace cada acción). Satisfying: contador de minutos que suma, globo de avisos que se dispara, tarea que se trocea y se tacha en cascada, pestañas que se cierran, barra que se completa al día siguiente.",
+ "coverT": 1.7,
+ "lines": [
+  {
+   "show": "Cinco trucos para dejar *de procrastinar hoy mismo.*",
+   "pause": 0.35
+  },
+  {
+   "show": "Y el tercero es *el que mejor funciona.*",
+   "pause": 0.5
+  },
+  {
+   "show": "Número uno: // *cinco minutos con lo peor.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Cuando suene, puedes parar. / *Casi nunca paras.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número dos: // *el móvil, a otra habitación.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Ni en silencio ni boca abajo. / *En otra habitación.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si tienes que levantarte a por él, / *ya no lo coges.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número tres: // *trocea la tarea hasta que dé risa.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "«Hacer el informe» no es una tarea. / *«Abrir el documento», sí.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Cada trozo que tachas / *te empuja al siguiente.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número cuatro: // *una sola pestaña.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tu cabeza no puede escaparse / *a lo que no está abierto.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número cinco: // *para a mitad de frase.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Al terminar el día, / *deja una frase a medias.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mañana sabrás exactamente / *por dónde seguir.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Guárdalo para la próxima vez / que digas *«mañana lo hago».*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y sígueme, *que vienen más.*",
+   "pause": 0.3
+  }
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "0: «Cinco formas de dejar *de procrastinar hoy mismo.*» → «Cinco trucos para dejar *de procrastinar hoy mismo.*»",
+   "1: «Y la tercera es *la que mejor funciona.*» → «Y el tercero es *el que mejor funciona.*»",
+   "2: «Número uno: // *cinco minutos feos.*» → «Número uno: // *cinco minutos con lo peor.*»",
+   "3: «Pon cinco minutos en el reloj / y haz *la parte más fea.*» → «Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*»",
+   "8: «Número tres: // *trocéala hasta que dé risa.*» → «Número tres: // *trocea la tarea hasta que dé risa.*»",
+   "13: «Tu cabeza no puede saltar / *adonde no hay nada abierto.*» → «Tu cabeza no puede escaparse / *a lo que no está abierto.*»",
+   "15: «Cuando acabes por hoy, / *deja una frase sin terminar.*» → «Al terminar el día, / *deja una frase a medias.*»",
+   "18: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
+  ]
+ }
+}

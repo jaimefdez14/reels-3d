@@ -4,90 +4,23 @@
   "idea": "I1 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026). Versión 2 (04-11): sigue pulso a pulso la referencia R1 («Never say it was nice meeting you»).",
   "coverT": 1.4,
   "lines": [
-    {
-      "show": "Nunca abras una reunión con esta frase.",
-      "neg": "Nunca"
-    },
-    {
-      "show": "«¿En qué puedo ayudarte?»",
-      "hide": true,
-      "pause": 0.7
-    },
-    {
-      "show": "Todo el mundo la dice.",
-      "neg": "Todo el mundo"
-    },
-    {
-      "show": "Y a los dos minutos, la reunión está muerta.",
-      "neg": "muerta"
-    },
-    {
-      "show": "Lo primero que preguntas decide la reunión.",
-      "hi": "primero"
-    },
-    {
-      "show": "Cámbiala por dos preguntas.",
-      "hi": "dos preguntas"
-    },
-    {
-      "show": "La primera saca el motivo.",
-      "hi": "motivo"
-    },
-    {
-      "show": "«¿Qué ha pasado para que me llames ahora?»",
-      "hide": true,
-      "pause": 0.8
-    },
-    {
-      "show": "«Suena a interrogatorio.»",
-      "voice": "Estás pensando:",
-      "neg": "interrogatorio"
-    },
-    {
-      "show": "No, si después te callas.",
-      "hi": "callas"
-    },
-    {
-      "show": "Y al callarte, te cuenta por qué ha venido.",
-      "hi": "por qué"
-    },
-    {
-      "show": "Lo curioso es que el motivo no basta.",
-      "neg": "no basta"
-    },
-    {
-      "show": "Para eso está la segunda.",
-      "hi": "segunda"
-    },
-    {
-      "show": "«¿Qué tiene que cambiar en tres meses?»",
-      "hide": true,
-      "pause": 0.8
-    },
-    {
-      "show": "Lo que conteste es lo que te va a comprar.",
-      "hi": "comprar"
-    },
-    {
-      "show": "Al salir, el cliente le dice a su socio:",
-      "join": true
-    },
-    {
-      "show": "«Es el primero que me pregunta qué quiero.»",
-      "hide": true,
-      "pause": 0.9
-    },
-    {
-      "show": "No ofrezcas ayuda: pregunta qué ha pasado.",
-      "hi": "qué ha pasado"
-    },
-    {
-      "show": "Mándaselo a quien tiene una reunión mañana.",
-      "hi": "mañana"
-    }
-  ],
-  "redaccion": {
-    "fecha": "2026-11-09",
-    "nota": "Reescrito con docs/REDACCION.md: sin «Pero» al empezar (11), «Cámbiala» con referente, frase 10 retoma «callas», pregunta 2 acortada, remate que vuelve al gancho (17), envío a alguien reconocible, la frase del cliente en la misma toma que su presentación (join)."
-  }
+    { "show": "Nunca abras una reunión con esta frase.", "neg": "Nunca" },
+    { "show": "«¿En qué puedo ayudarte?»", "hide": true, "pause": 0.7 },
+    { "show": "Todo el mundo la dice.", "neg": "Todo el mundo" },
+    { "show": "A los dos minutos, la reunión está muerta.", "neg": "muerta" },
+    { "show": "Lo primero que preguntas decide la reunión.", "hi": "primero" },
+    { "show": "Cámbialo por dos preguntas.", "hi": "dos preguntas" },
+    { "show": "La primera saca el motivo.", "hi": "motivo" },
+    { "show": "«¿Qué ha pasado para que me llames ahora?»", "hide": true, "pause": 0.8 },
+    { "show": "«Suena a interrogatorio.»", "voice": "Estás pensando:", "neg": "interrogatorio" },
+    { "show": "No, si luego te callas.", "hi": "callas" },
+    { "show": "Ahora sabes por qué está aquí.", "hi": "por qué" },
+    { "show": "Pero saber el motivo no basta.", "neg": "no basta" },
+    { "show": "Para eso está la segunda.", "hi": "segunda" },
+    { "show": "«¿Qué tiene que haber cambiado en tres meses?»", "hide": true, "pause": 0.8 },
+    { "show": "Eso es lo que te va a comprar.", "hi": "comprar" },
+    { "show": "Al salir, el cliente le dice a su socio:" },
+    { "show": "«Es el primero que me pregunta qué quiero.»", "hide": true, "pause": 0.9 },
+    { "show": "Mándaselo a quien se reúna esta semana.", "hi": "semana" }
+  ]
 }

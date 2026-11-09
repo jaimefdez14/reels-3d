@@ -55,40 +55,46 @@ def gaps(x, frame=0.01, below=25, min_len=0.07):
     return out
 
 
-groups, cur = [], []
+# Trozos de voz. Estilo B: « / » separa subtítulos dentro de la misma toma, «*amarillo*» marca color y « // » separa
+# subtítulos metiendo una pausa media (`pausa_media`, 0,55 s). Ambos estilos: `"join": true` une la línea con la siguiente
+# en una sola toma (docs/REDACCION.md §6). Cada toma se lee entera y sus cortes se ajustan al silencio más cercano.
+segs = []  # [línea, texto, qué viene después: 'join' | 'media' | 'pausa']
 for i, L in enumerate(reel['lines']):
-    cur.append(i)
-    if not L.get('join') or i == len(reel['lines']) - 1: groups.append(cur); cur = []
+    raw = (L.get('say') or L['show']).replace('*', '')
+    parts = [re.sub(r'\s+/\s+', ' ', p).strip() for p in re.split(r'\s+//\s+', raw)]
+    for j, p in enumerate(parts):
+        segs.append([i, p, 'media' if j < len(parts) - 1 else ('join' if L.get('join') and i < len(reel['lines']) - 1 else 'pausa')])
+takes, cur = [], []
+for sg in segs:
+    cur.append(sg)
+    if sg[2] != 'join': takes.append(cur); cur = []
 
-out = [np.zeros(int(0.5 * SR))]; t = 0.5; words = [None] * len(reel['lines'])
-for g in groups:
-    texts = [reel['lines'][i].get('say') or reel['lines'][i]['show'] for i in g]
+out = [np.zeros(int(0.5 * SR))]; t = 0.5; words = [[] for _ in reel['lines']]
+for tk in takes:
+    texts = [sg[1] for sg in tk]
     spoken = re.sub(r'[«»“”]', '', ' '.join(texts))
     samples, sr = model.create(spoken, voice=VOICE, speed=SPEED, lang='es')
     assert sr == SR
     x = level(trim(np.asarray(samples, dtype=np.float32)))
     dur = len(x) / SR
-    toks = [t_.split() for t_ in texts]
-    w = [np.array([weight(z) for z in tk], float) for tk in toks]
+    w = [np.array([weight(z) for z in tx.split()], float) for tx in texts]
     total = sum(a.sum() for a in w)
-    # límites entre titulares: estimados por peso y ajustados al silencio más cercano
-    bounds, acc = [0.0], 0.0
-    sil = gaps(x)
+    bounds, acc, sil = [0.0], 0.0, gaps(x)
     for a in w[:-1]:
         acc += a.sum(); est = dur * acc / total
         near = [s_ for s_ in sil if abs(s_ - est) < 0.35 and s_ > bounds[-1] + 0.2]
         bounds.append(min(near, key=lambda s_: abs(s_ - est)) if near else est)
     bounds.append(dur)
-    for k, i in enumerate(g):
-        a, b = bounds[k], bounds[k + 1]; fr = w[k] / w[k].sum(); c = t + a; row = []
-        for f in fr:
-            d = (b - a) * f; row.append([round(c, 3), round(c + d, 3)]); c += d
-        words[i] = row
-        print(f'{i:2d} {b - a:5.2f}s  {texts[k]}' + ('   ↘' if k < len(g) - 1 else ''))
+    for k, sg in enumerate(tk):
+        a, b = bounds[k], bounds[k + 1]; fr = w[k] / w[k].sum(); c = t + a
+        for f_ in fr:
+            d = (b - a) * f_; words[sg[0]].append([round(c, 3), round(c + d, 3)]); c += d
+        print(f'{sg[0]:2d} {b - a:5.2f}s  {sg[1]}' + ('   ↘' if k < len(tk) - 1 else ''))
     out.append(x); t += dur
-    last = g[-1]
-    pause = reel['lines'][last].get('pause', 0.9 if g[0] == 0 else 0.55)
-    out.append(np.zeros(int(pause * SR))); t += pause
+    i, after = tk[-1][0], tk[-1][2]
+    L = reel['lines'][i]
+    gap = L.get('pausa_media', 0.55) if after == 'media' else L.get('pause', 0.9 if i == 0 else 0.55)
+    out.append(np.zeros(int(gap * SR))); t += gap
 out.append(np.zeros(int(1.2 * SR))); t += 1.2
 audio = np.concatenate(out)
 sf.write(os.path.join(vdir, 'voz.wav'), audio, SR, subtype='PCM_16')

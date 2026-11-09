@@ -1,0 +1,91 @@
+{
+ "id": "L5",
+ "estilo": "B (listas en negro; regla 15: satisfying)",
+ "titulo": "Cuatro frases para cobrar más sin pedir perdón",
+ "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
+ "coverT": 1.8,
+ "lines": [
+  {
+   "show": "Cuatro frases para cobrar más *sin pedir perdón.*",
+   "pause": 0.35
+  },
+  {
+   "show": "Y la última *te ahorra discusiones.*",
+   "pause": 0.5
+  },
+  {
+   "show": "Número uno: // *di tu precio y cállate.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Dilo de un tirón. / *Y no añadas nada.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ese silencio incómodo es normal. / *El primero que habla, rebaja.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número dos: // *pregunta antes de dar tu precio.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "«¿Qué presupuesto / *teníais pensado?»*",
+   "pause": 0.3
+  },
+  {
+   "show": "A veces es más / *de lo que ibas a pedir.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número tres: // *«Eso va en el paquete completo».*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Cuando te pidan algo extra, / *no lo regales.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ofrece el paquete de arriba. / *Con su precio.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Número cuatro: // *«Si cambia el encargo, lo hablamos».*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Lo que no está en el presupuesto / *se paga aparte.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Dilo antes de empezar, / *no cuando ya estás quemado.*",
+   "pause": 0.55
+  },
+  {
+   "show": "¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y sígueme, *que vienen más.*",
+   "pause": 0.3
+  }
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "4: «El silencio incómodo / *lo aguanta tu precio, no tú.*» → «Ese silencio incómodo es normal. / *El primero que habla, rebaja.*»",
+   "5: «Número dos: // *pregunta antes de dar tu número.*» → «Número dos: // *pregunta antes de dar tu precio.*»",
+   "8: «Número tres: // *«Eso entra en el plan grande».*» → «Número tres: // *«Eso va en el paquete completo».*»",
+   "10: «Ofrece el siguiente nivel. / *Con su precio.*» → «Ofrece el paquete de arriba. / *Con su precio.*»",
+   "11: «Número cuatro: // *«Si cambia, lo hablamos».*» → «Número cuatro: // *«Si cambia el encargo, lo hablamos».*»",
+   "12: «Lo que no está en el presupuesto / *no está incluido.*» → «Lo que no está en el presupuesto / *se paga aparte.*»",
+   "14: «¿Cuál vas a usar esta semana? / *Te leo en comentarios.*» → «¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*»",
+   "15: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
+  ]
+ }
+}

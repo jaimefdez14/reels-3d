@@ -26,8 +26,7 @@ SHOTS.cam = [
   { t: L(14), whip: true, dist: 10.5, az: 24, target: [0.2, 2.0, 0] },               // lo que te va a comprar
   { t: L(15), whip: true, dist: 14.5, az: 40, target: [1.9, 2.0, -0.8] },             // el cliente va con su socio
   { t: L(16), dist: 11.5, az: 46, target: [2.1, 2.1, -0.9], dur: 2.8 },
-  { t: L(17), whip: true, preset: 'medium', az: -8 },                               // remate: vuelve al gancho
-  { t: L(18), whip: true, preset: 'wide', az: 6 },                                  // envío
+  { t: L(17), whip: true, preset: 'wide', az: 6 },                                  // envío
 ];
 SHOTS.invert = [{ t: L(8) - 0.05, end: L(9) - 0.08 }];
 SHOTS.moves = {
@@ -35,7 +34,7 @@ SHOTS.moves = {
        { t: L(15), at: [2.1, -1.0], rot: -60, head: [20, 0], dur: 1.8 }, { t: L(17), at: [0.75, 0], rot: -90, head: [0, 0], dur: 1.0 }],
   yo: [{ t: L(8), head: [-15, 10], dur: 0.4 }, { t: L(9), head: [6, -4], dur: 0.6 }, { t: L(15) + 0.12, show: false, dur: 0.01 }, { t: L(17) + 0.3, show: true, dur: 0.01 }],
   socio: [{ t: L(15) + 0.35, show: true, dur: 0.01 }, { t: L(17), show: false, dur: 0.01 }],
-  gente: [{ t: 0, show: false, dur: 0.01 }, { t: L(2), show: true, dur: 0.01 }, { t: L(3), show: false, dur: 0.01 }, { t: L(18) + 0.3, show: true, dur: 0.01 }],
+  gente: [{ t: 0, show: false, dur: 0.01 }, { t: L(2), show: true, dur: 0.01 }, { t: L(3), show: false, dur: 0.01 }, { t: L(17) + 0.3, show: true, dur: 0.01 }],
 };
 SHOTS.props = [
   { id: 'mesa', type: 'table', at: [0, 0, -0.9], t0: 0, inDur: 0.01, inEase: 'linear' },
@@ -44,6 +43,7 @@ SHOTS.props = [
   // todo el mundo la dice: bocadillos iguales sobre la sala
   { id: 'td1', type: 'bubble', text: '¿En qué puedo ayudarte?', w: 420, tail: 'none', at: [3.4, 2.3, -3.2], t0: L(2, 1), t1: L(3) - 0.05, px: 150 },
   { id: 'td2', type: 'bubble', text: '¿En qué puedo ayudarte?', w: 420, tail: 'none', at: [-1.8, 2.3, -4.4], t0: L(2, 2), t1: L(3) - 0.05, px: 150 },
+  { id: 'td3', type: 'bubble', text: '¿En qué puedo ayudarte?', w: 420, tail: 'none', at: [-0.2, 2.7, -6.4], t0: L(2, 3), t1: L(3) - 0.05, px: 150 },
   // muerta: tarjetas de perfil en el suelo
   { id: 'cards', type: 'cards', n: 56, cols: 8, at: [0, 0, 2.6], t0: L(3, 3), t1: L(4) - 0.05, inEase: 'out', inDur: 0.6 },
   // dos preguntas: tarjetas numeradas
@@ -51,7 +51,7 @@ SHOTS.props = [
   { id: 'motivo', type: 'card', label: 'MOTIVO', over: 'el', dx: -0.9, t0: L(6, 3), t1: L(7) - 0.05 },
   { id: 'p1', type: 'bubble', text: '¿Qué ha pasado para que me llames ahora?', w: 700, over: 'yo', dx: 0.4, accent: true, t0: L(7) - 0.02, t1: L(8) - 0.3, reveal: 7 },
   // objeción (oscuro)
-  { id: 'interro', type: 'thought', text: '?', w: 220, over: 'yo', t0: L(8), t1: L(9) - 0.08 },
+  { id: 'interro', type: 'thought', text: '¿Esto no es un interrogatorio?', w: 560, over: 'yo', t0: L(8), t1: L(9) - 0.08 },
   { id: 'habla', type: 'line', from: 'el', to: 'yo', lift: 0.5, t0: L(9, 3), t1: L(10) - 0.05 },
   // ahora sabes por qué: la tarjeta MOTIVO con línea desde «el»
   { id: 'motivo2', type: 'card', label: 'MOTIVO', yellow: true, over: 'el', dx: -0.9, t0: L(10, 1), t1: L(12) - 0.05 },
@@ -59,13 +59,10 @@ SHOTS.props = [
   { id: 'x', type: 'cross', over: 'el', dx: -0.9, t0: L(11, 3), t1: L(12) - 0.05, scale: 0.5 },
   // la segunda: contador de tres meses y la pregunta
   { id: 'meses', type: 'bars', n: 3, over: 'el', dx: -0.6, t0: L(13, 5), t1: L(14) + 0.6, each: 0.35 },
-  { id: 'p2', type: 'bubble', text: '¿Qué tiene que cambiar en tres meses?', w: 680, over: 'yo', dx: 0.4, accent: true, t0: L(13) - 0.02, t1: L(14) - 0.05, reveal: 13 },
+  { id: 'p2', type: 'bubble', text: '¿Qué tiene que haber cambiado en tres meses?', w: 720, over: 'yo', dx: 0.4, accent: true, t0: L(13) - 0.02, t1: L(14) - 0.05, reveal: 13 },
   { id: 'paga', type: 'card', label: 'COMPRA', yellow: true, over: 'el', dx: -0.9, t0: L(14, 3), t1: L(15) - 0.05 },
   { id: 'l-paga', type: 'line', from: 'el', to: '#paga', lift: 0.3, t0: L(14, 4), t1: L(15) - 0.05 },
   // la recompensa: el cliente a su socio
   { id: 'dice', type: 'bubble', text: 'Es el primero que me pregunta qué quiero.', w: 720, serif: true, tail: 'left', over: 'el', dx: 0.3, h: 1.0, t0: L(16) - 0.05, t1: L(17) - 0.05, reveal: 16 },
-  // remate: la frase mala, tachada, y el anillo sobre «yo»
-  { id: 'mala2', type: 'bubble', text: '¿En qué puedo ayudarte?', w: 520, over: 'yo', dx: 0.35, t0: L(17, 0), t1: L(17, 4), strike: L(17, 1) },
-  { id: 'anillo', type: 'ring', r: 0.62, tube: 0.08, around: 'yo', y: 1.0, front: 0.7, t0: L(17, 4), draw: L(17, 4), t1: L(18) - 0.05 },
-  { id: 'envio', type: 'arrow', from: [-0.5, 1.4, 0.7], to: [2.6, 1.2, -1.6], lift: 1.0, t0: L(18, 1), drawDur: 0.9 },
+  { id: 'envio', type: 'arrow', from: [-0.5, 1.4, 0.7], to: [2.6, 1.2, -1.6], lift: 1.0, t0: L(17, 1), drawDur: 0.9 },
 ];

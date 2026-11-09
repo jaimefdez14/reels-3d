@@ -13,7 +13,7 @@ de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entr
 
 - `docs/ANALISIS-REFERENCIA.md`: los cinco reels analizados (guiones, estructura, lenguaje, diseño, cámara, sonido).
 - `docs/SISTEMA-3D.md`: el molde de guion de 8 bloques, el lenguaje visual y las comprobaciones. **Es la norma creativa.**
-- `docs/REDACCION.md`: cómo se escribe cada frase del molde para que se narre bien (regla 14).
+- `docs/REDACCION.md`: cómo se escribe cada frase para que se narre bien (regla 17).
 - `motor/`: el motor (Three.js, determinista: `window.seek(t)`), `build.py`, `render.js`, fuentes y vendor.
 - `herramientas/`: `frames.js` (fotogramas), `sheet.py` (hoja de contactos), `voz.py` (voz Kokoro de previas + `timing.json`;
   instalación: venv en `/root/kokoro-venv` con `requirements-kokoro.txt` y los modelos de las *releases* de kokoro-onnx
@@ -23,6 +23,9 @@ de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entr
 
 ## Comandos
 
+Estilo B (listas en negro): `python3 herramientas/voz.py reels/ID --velocidad 1.1` → `python3 motor2d/build.py reels/ID`
+→ los mismos inspectores y `node motor/render.js reels/ID`.
+
 ```
 python3 motor/build.py reels/ID [--sim]        # composición; --sim simula los tiempos (boceto sin voz)
 node herramientas/frames.js $PWD/reels/ID/composition/index.html <dir> t1 t2 …   # fotogramas
@@ -30,7 +33,7 @@ python3 herramientas/sheet.py <dir> hoja.jpg 6   # hoja de contactos
 node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si existe reels/ID/voice/voz.wav)
 node herramientas/inspeccionar.js reels/ID 0.2   # solapes por rectángulos (debe decir ok)
 node herramientas/inspeccionar_px.js reels/ID 0.5  # solapes por píxeles, legibilidad, máximo 2 bocadillos (debe decir ok)
-python3 herramientas/redaccion.py reels/ID     # redacción del guion (debe decir ok)
+python3 herramientas/redaccion.py reels/ID     # redacción del guion, los dos estilos (debe decir ok)
 ```
 
 ## Revisión obligatoria antes de enseñar nada (04-11-2026)
@@ -51,7 +54,7 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    capacidad de replicarlo exactamente para aplicarlo a los temas de los que yo quiero hablar». Se sigue el molde de
    `docs/SISTEMA-3D.md` §1 y el lenguaje visual de §2 sin reinterpretarlos.
 3. **Castellano de España**, natural, frases completas, ≤ 45 caracteres por subtítulo; segunda persona; cifras sí
-   (regla 14), fuentes de plantilla no; una frase literal entrecomillada que el espectador pueda decir.
+   (regla 17), fuentes de plantilla no; una frase literal entrecomillada que el espectador pueda decir.
 4. **Dinero y OK:** no se gasta voz de pago sin decir antes la cifra de caracteres y sin su OK; primero previa con
    Kokoro (gratis) y OK de Jaime; nada se publica sin su OK explícito. Las claves solo como secretos del entorno.
 5. **Trato:** directo y corto; comprobar antes de afirmar; decir lo que no se ha podido comprobar (la voz no se oye
@@ -71,22 +74,50 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 9. **Ninguna figura cortada, nunca (04-11-2026).** Jaime: «sigue habiendo errores con la cámara, se cortan figuras». Ningún personaje principal ni anillo puede salirse del encuadre en ningún fotograma: tampoco en el plano cercano de la objeción (ahora `close` está a 8,5-10 de distancia y muestra el cuerpo entero) ni durante un latigazo. `inspeccionar.js` lo comprueba cada 0,2 s sin excepciones; la multitud de fondo sí puede cortarse por los bordes, como en la referencia.
 
-10. **Claridad y cero solapes, por sistema (04-11-2026).** Jaime: «ponle cabeza… asegurar que no haya errores de solapes de formas, y que se refuerce la claridad». Está en `docs/CLARIDAD.md`: el motor coloca los objetos (anclados, tamaño fijo en pantalla, siempre delante del 3D, titular con halo y ≤ 2 líneas, personajes que saltan de sitio se ocultan en el latigazo) y hay **dos inspectores**: `inspeccionar.js` (rectángulos) e **`inspeccionar_px.js` (píxeles: silueta de cada objeto por separado)**, que detecta mesas que cruzan cuerpos, multitud sobre protagonistas, flechas sobre caras, objetos ilegibles y más de 2 bocadillos a la vez. **Nada se enseña sin los dos en verde.** Jaime: «no regeneres vídeos, vamos a ir con nuevas ideas»: I3, I1 y E1 quedan como están; lo nuevo entra en los siguientes. Ideas nuevas: `docs/IDEAS-2026-11-04b.md`. **Actualización (09-11-2026):** Jaime pidió «genera los reels de nuevo» tras la regla 14: I1, I3, N5 y N6 se han rehecho con la redacción nueva y voz por frase entera; E1 (demo sin voz) y B1 (boceto) siguen como están.
+10. **Claridad y cero solapes, por sistema (04-11-2026).** Jaime: «ponle cabeza… asegurar que no haya errores de solapes de formas, y que se refuerce la claridad». Está en `docs/CLARIDAD.md`: el motor coloca los objetos (anclados, tamaño fijo en pantalla, siempre delante del 3D, titular con halo y ≤ 2 líneas, personajes que saltan de sitio se ocultan en el latigazo) y hay **dos inspectores**: `inspeccionar.js` (rectángulos) e **`inspeccionar_px.js` (píxeles: silueta de cada objeto por separado)**, que detecta mesas que cruzan cuerpos, multitud sobre protagonistas, flechas sobre caras, objetos ilegibles y más de 2 bocadillos a la vez. **Nada se enseña sin los dos en verde.** Jaime: «no regeneres vídeos, vamos a ir con nuevas ideas»: I3, I1 y E1 quedan como están; lo nuevo entra en los siguientes. Ideas nuevas: `docs/IDEAS-2026-11-04b.md`.
 11. **Sonido (04-11-2026):** cama grave muy baja y efectos sintetizados por evento (latigazo, entrada de objeto, marcador de palabra, corte a oscuro, anillo), bajo la voz con sidechain, −14 LUFS, música cortada en seco al final. `herramientas/sonido.py`, eventos de `window.soundEvents()`; lo hace `render.js` solo.
 
 12. **Ideas aprobadas, segunda tanda (04-11-2026):** Jaime: «n5 y n6». N5 (la primera frase del correo, letras D-A-P) y N6 (nunca falles dos veces) de `docs/IDEAS-2026-11-04b.md`. N1-N4 siguen en propuesta.
 
 13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
 
-14. **Redacción: la estructura de la referencia + la guía de Jaime (09-11-2026).** Jaime: «mantén tu estructura de los
-   5 ejemplos… pero aplica esto a la redacción, guionización y narrativa… lo mejor de ambos». `docs/REDACCION.md`: los
-   8 bloques y sus escenas siguen la referencia; cada frase sigue la guía (idea en ≤ 12 palabras, monólogo seguido y
-   leído en voz alta antes de cortar titulares, lo nuevo al final, cada frase retoma la anterior, nada de «Pero / Además /
-   En cambio» al empezar, sin calcos ni muletillas, un «por eso» reconocible, giro hacia la mitad, remate ≤ 10 palabras
-   que vuelve al gancho, envío a alguien reconocible, registro de Madrid). `herramientas/redaccion.py` tiene que decir
-   `ok` antes de hacer escenas. Jaime: «con cifras sin problema y ok a lo de la voz»: cifras permitidas (5 como mucho,
-   comparadas, con su unidad y de dónde salen dentro de la frase), y la voz lee la frase entera: `"join": true` en una
-   línea la une a la siguiente en una sola toma (`herramientas/voz.py`), y los titulares se parten después.
+14. **Segundo estilo: «listas en negro» (09-11-2026).** Jaime subió cinco reels nuevos (listas numeradas, fondo negro,
+   muñeco amarillo plano, subtítulo Inter) y pidió conocerlos «a la perfección… para poder replicar estos vídeos y además
+   generar nuevos… máxima importancia: diseño y animaciones, transiciones, y guion completo». Es el **estilo B**:
+   análisis en `docs/ANALISIS-REFERENCIA-B.md` (guiones transcritos de la voz con Whisper), molde y motor en
+   `docs/SISTEMA-LISTA.md`, motor 2D en `motor2d/`, hojas en `docs/referencia-b/`. Cada reel declara su estilo (A = 3D de
+   rejilla, B = listas en negro) y no se mezclan. Firma del estilo B que no se toca: oscurecer + el último objeto amarillo se
+   transforma en la moneda del número siguiente; indicador de progreso arriba; muñeco que hace la instrucción literal.
+   Primeras previas con Kokoro: `reels/L1` (sueldo, 4 reglas) y `reels/L2` (cinco leyes del trabajo), sin OK todavía.
+   Ideas: `docs/IDEAS-2026-11-09.md`. Choques con las reglas 2 y 3 (dosis en número, frase entrecomillada) en
+   `docs/SISTEMA-LISTA.md` §6, pendientes de Jaime.
+
+15. **Estilo B aprobado; más detalle, mejores transiciones y «satisfying» (09-11-2026).** Jaime, tras L1 y L2: «el estilo
+   vale, pero: 1. que intenta mejorar los detalles y las transiciones de escena a escena, 2. que sea "satisfying",
+   incluyendo contadores que suman, dinamismos, cosas que se rellenan, etc. Haz L4 y L5». Desde ahora cada reel del estilo B
+   lleva: al menos un **contador que suma** (número que rueda) y algo que **se rellena** por punto; la escena nunca se
+   queda quieta más de 1,5 s; las transiciones encadenan el objeto con la moneda (morph de forma, no solo fundido) y la
+   escena nueva se monta por piezas. L4 (procrastinar) y L5 (subir el precio) aprobadas.
+
+16. **Castellano de verdad, no traducido (09-11-2026).** Jaime: «me gustan mucho, pero los guiones aún no tienen perfección
+   de estar adaptados y redactados en español/castellano». Cada guion pasa `docs/CASTELLANO.md` antes de la voz: fuera los
+   calcos del inglés («sígueme para más», «tu número», «el siguiente nivel», «es personal»…), primero las frases hechas de
+   España («llegar a fin de mes», «la nómina», «lo que más pereza te da», «se paga aparte»), subjuntivo y referentes bien
+   puestos. Los cambios se anotan en `reel.json` → `revision_castellano`. L1, L2, L4 y L5 revisados y regenerados.
+
+17. **Redacción: la estructura de los cinco reels del estilo B + la guía de Jaime (09-11-2026).** Jaime, con su guía de
+   redacción: «mantén tu estructura de los 5 ejemplos que hemos visto de stickman, pero aplica esto a la redacción,
+   guionización y narrativa… mézclalo con la forma de estructura desarrollada en los 5 ejemplos, no solo esto. Lo mejor
+   de ambos». Está en `docs/REDACCION.md`: el molde de `docs/SISTEMA-LISTA.md` (gancho con número, lista, objeto que se
+   convierte en la moneda siguiente, resumen y cierre) manda en la estructura; cada frase sigue la guía (idea en ≤ 12
+   palabras, monólogo seguido y leído en voz alta antes de cortar subtítulos, lo nuevo al final, cada frase retoma la
+   anterior, nada de «Pero / Además / En cambio» al empezar, sin calcos ni muletillas, un «por eso» reconocible, giro
+   hacia la mitad, cierre que vuelve al gancho y envío a alguien reconocible). Completa `docs/CASTELLANO.md` (regla 16).
+   `herramientas/redaccion.py` tiene que decir `ok` antes de la voz. Jaime: «con cifras sin problema y ok a lo de la
+   voz»: cifras sí (comparadas, con su unidad y su origen dentro de la frase), y la voz lee la frase entera
+   (`herramientas/voz.py`: « / » parte subtítulos dentro de una toma; `"join": true` une una línea con la siguiente).
+   Error mío del 09-11: apliqué la guía primero al estilo A y rehíce I1, I3, N5 y N6; Jaime: «no, decía vídeos
+   similares a los que te he dado de ejemplo hoy de stickman en 2D». Esos cuatro se han devuelto a como estaban.
 
 ## Pendiente de Jaime
 
@@ -94,6 +125,7 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
   ViralClips, decidir cómo se reparte el tope mensual).
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
+- Estilo B: resolver los choques de `docs/SISTEMA-LISTA.md` §6 (dosis en número, frase entrecomillada). Ver L4 y L5.
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
   con densidad alta, efectos de sonido por transición, libro opcional y cierre «Envíaselo a…» son la norma de esta
   repo salvo que Jaime diga lo contrario.

@@ -57,6 +57,12 @@ for ev in events:
         n = int(0.5 * SR); s = highpass(lowpass(rng.standard_normal(n), 2500), 300) * env(n, 0.25, 0.2); put(s, t, 0.1)
     elif k == 'thud':
         n = int(0.3 * SR); s = np.sin(2 * np.pi * 68 * np.arange(n) / SR) * env(n, 0.003, 0.25) + 0.3 * lowpass(rng.standard_normal(n), 300) * env(n, 0.002, 0.08); put(s, t, 0.35)
+    elif k == 'tickc':  # tic de contador: blip corto que sube de tono a medida que el contador avanza (ev['f'] 0..1)
+        f0 = 1500 + 900 * float(ev.get('f') or 0); n = int(0.03 * SR); s = np.sin(2 * np.pi * f0 * np.arange(n) / SR) * env(n, 0.001, 0.026); put(s, t, 0.09)
+    elif k == 'ding':  # campanita al completar (chispas)
+        n = int(0.7 * SR); tt2 = np.arange(n) / SR; s = (np.sin(2 * np.pi * 1318 * tt2) + 0.5 * np.sin(2 * np.pi * 1976 * tt2) + 0.25 * np.sin(2 * np.pi * 2637 * tt2)) * np.exp(-tt2 * 6) * env(n, 0.002, 0.05); put(s, t, 0.11)
+    elif k == 'fill':  # barrido que sube mientras algo se rellena
+        n = int(0.55 * SR); f = np.linspace(300, 1400, n); s = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.25 * env(n, 0.05, 0.15) + highpass(lowpass(rng.standard_normal(n), 3000), 500) * 0.5 * env(n, 0.3, 0.2); put(s, t, 0.08)
     elif k == 'cut':
         n = int(0.05 * SR); s = highpass(rng.standard_normal(n), 1500) * env(n, 0.001, 0.04); put(s, t, 0.1)
 
