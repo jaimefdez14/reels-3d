@@ -1,16 +1,16 @@
 {
   "id": "L3",
   "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
-  "titulo": "Tres pasos para que tu jefe te tome en serio",
+  "titulo": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
   "idea": "L3 de docs/IDEAS-2026-11-09.md. Molde de B-R1 (identidad: el muñeco gris se vuelve amarillo, anillo de promesas cumplidas, 3 puntos sueltos, fondo negro, subtítulo en dos líneas). Escrito con docs/REDACCION.md (regla 17).",
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Tres pasos para que tu jefe / *te tome en serio.*",
+      "show": "Echas más horas que nadie / *y tu jefe ni se entera.*",
       "pause": 0.35
     },
     {
-      "show": "Y ninguno es / *echar más horas.*",
+      "show": "Estos tres pasos lo arreglan / *sin echar ni una hora más.*",
       "pause": 0.5
     },
     {
@@ -73,6 +73,10 @@
   "redaccion": {
     "fecha": "2026-11-09",
     "regla": "17 (docs/REDACCION.md)",
-    "nota": "Escrito como monólogo y cortado después. Anuncio (1) que se cierra en el punto del medio con cifras comparadas (9); «por eso» en el punto 1; golpe seco con humor (8); remate que vuelve al gancho y envío (14)."
+    "nota": "Escrito como monólogo y cortado después. Anuncio (1) que se cierra en el punto del medio con cifras comparadas (9); «por eso» en el punto 1; golpe seco con humor (8); remate que vuelve al gancho y envío (14).",
+    "cambios": [
+      "0: «Tres pasos para que tu jefe / *te tome en serio.*» → «Echas más horas que nadie / *y tu jefe ni se entera.*» (Jaime: «el hook de L3 tampoco me gusta»; situación que se reconoce en vez de promesa genérica; el envío final la repite y cierra el bucle)",
+      "1: «Y ninguno es / *echar más horas.*» → «Estos tres pasos lo arreglan / *sin echar ni una hora más.*» (el número de la lista pasa al anuncio y responde al gancho)"
+    ]
   }
 }

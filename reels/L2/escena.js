@@ -15,11 +15,11 @@ E.camara([
   [N[4].S - 0.05, [0, -370, 1], 'lin'], [TC, [0, -380, 1.04]],
 ]);
 
-// ---------- gancho: caen cinco puntos y se vuelven las cinco monedas numeradas sobre la cabeza ----------
-E.figura('yo', { t0: 0, t1: N[0].T + 0.45, x: 0, poses: [[0, 'de_pie'], [w(0, 5), 'levantar'], [wf(0, -1), 'de_pie']] });
+// ---------- gancho: cinco monedas con «?» sobre la cabeza; con «su nombre» se numeran ----------
+E.figura('yo', { t0: 0, t1: N[0].T + 0.45, x: 0, poses: [[0, 'de_pie'], [w(0, 4), 'manos_cabeza'], [w(0, 11), 'levantar'], [wf(0, -1) + 0.4, 'de_pie']] });
 for (let i = 0; i < 5; i++) {
   const a = 0.25 + i * 0.22, x = (i - 2) * 92;
-  E.obj('h' + (i + 1), 'moneda', { t0: a, t1: i === 0 ? N[0].T + 0.1 : N[0].T + 0.45, entra: 0.2, x, y: -585, pop: true, r: [[a, 9], [w(0, 3), 9], [w(0, 3) + 0.4 + i * 0.08, 30, 'back']], n: [[0, ''], [w(0, 3) + 0.25 + i * 0.08, i + 1]], sobrevive: i === 0, sfx: false });
+  E.obj('h' + (i + 1), 'moneda', { t0: a, t1: i === 0 ? N[0].T + 0.1 : N[0].T + 0.45, entra: 0.2, x, y: -585, pop: true, r: [[a, 9], [w(0, 4), 9], [w(0, 4) + 0.4 + i * 0.08, 30, 'back']], n: [[0, ''], [w(0, 4) + 0.3, '?'], [w(0, 11) + i * 0.1, i + 1]], sobrevive: i === 0, sfx: false });
 }
 
 // ---------- 1 · Parkinson: el trabajo se estira ----------

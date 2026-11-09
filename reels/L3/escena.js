@@ -17,14 +17,15 @@ E.camara([
   [S3 - 0.05, [0, -380, 1], 'lin'], [TC, [0, -395, 1.05]],
 ]);
 
-// ---------- gancho: el muñeco gris se vuelve amarillo cuando el anillo se cierra (B-R1) ----------
-E.figura('yo', { t0: 0, t1: fin(0), x: -40, cara: true, colorK: [[0, 0], [w(0, 6), 0], [wf(0, -1) + 0.2, 1, 'inout']],
-  poses: [[0, 'de_pie'], [w(0, 4), 'pensar'], [w(0, 7), 'celebrar'], [w(1, 0), 'de_pie'], [w(1, 3), 'encoger']],
-  sonrisa: [[w(0, 7), 0.2], [w(0, 9), 1.4]] });
-E.obj('anilloH', 'anillo', { t0: w(0, 5), t1: fin(0), x: -40, y: -250, rx: 300, ry: 290, p: [[w(0, 5), 0], [wf(0, -1) + 0.2, 1, 'out']], rodea: true, sobrevive: true, r: 70, oy: -250 });
-E.obj('horasH', 'contador', { t0: w(1, 2), t1: fin(0), x: 310, y: -560, v: [[w(1, 2), 8], [wf(1, -1), 12, 'inout']], suf: ' h', size: 64, col: 'txt', miles: false,
-  luz: [[wf(1, -1), 1], [wf(1, -1) + 0.3, 0.3]], caja: [-110, -38, 220, 76] });
-E.obj('xH', 'rotulo', { t0: wf(1, -1), t1: fin(0), x: 310, y: -480, texto: 'NO', caja: [-40, -16, 80, 32] });
+// ---------- gancho: el contador de horas sube y el jefe, de espaldas, ni se entera; con «tres pasos» el anillo se cierra y el muñeco se vuelve amarillo (B-R1) ----------
+E.figura('yo', { t0: 0, t1: fin(0), x: -60, cara: true, colorK: [[0, 0], [w(1, 1), 0], [wf(1, 4) + 0.2, 1, 'inout']],
+  poses: [[0, 'de_pie'], [w(0, 2), 'triste'], [w(0, 5), 'encoger'], [w(1, 0), 'de_pie'], [w(1, 4), 'celebrar'], [wf(1, -1) + 0.2, 'de_pie']],
+  sonrisa: [[0, -0.4], [w(0, 8), -0.8], [w(1, 3), -0.8], [w(1, 5), 1.4]] });
+E.figura('jefeH', { t0: w(0, 5) - 0.2, t1: w(1, 1), x: 400, dir: 1, color: 'gris', poses: [[0, 'de_pie'], [w(0, 7), 'pensar']] });
+E.obj('horasH', 'contador', { t0: 0.2, t1: fin(0), x: 190, y: -330, v: [[0.3, 8], [w(0, 4), 12, 'inout'], [w(0, 10), 13, 'inout']], suf: ' h', size: 70, col: 'txt', miles: false,
+  luz: [[w(1, 5), 1], [w(1, 6) + 0.3, 0.25]], caja: [-110, -40, 220, 80] });
+E.obj('anilloH', 'anillo', { t0: w(1, 1) - 0.1, t1: fin(0), x: -60, y: -250, rx: 300, ry: 290, p: [[w(1, 1) - 0.1, 0], [wf(1, 4) + 0.2, 1, 'out']], rodea: true, sobrevive: true, r: 70, oy: -250 });
+E.obj('chH', 'chispas', { t0: wf(1, 4) + 0.2, t1: wf(1, 4) + 1.0, x: -60, y: -250, r0: 150, r1: 260, inspeccion: false });
 
 // ---------- 1 · llega con la solución ----------
 E.numero(1, T1, S1, { desde: 'anilloH', hacia: 'salB' });

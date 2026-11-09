@@ -6,7 +6,7 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cinco leyes que te ahorran / años de errores en el trabajo.",
+      "show": "Cinco leyes / que ya sufres en el trabajo / aunque no sepas su nombre.",
       "pause": 0.45
     },
     {
@@ -111,7 +111,8 @@
       "15: «Haz esas primero. / El resto puede esperar.» → «Haz esas dos primero. / Las otras ocho pueden esperar.»",
       "16: «¿Cuál de las cinco / te ha pasado esta semana?» → «Los errores son los mismos: / ahora ya tienen nombre.»",
       "17: «Te leo en los comentarios. / Y sígueme, que vienen más.» → «Mándaselo a quien siempre dice / «esto lo saco en una tarde».»",
-      "5: «Todo lleva más de lo que crees. / Aunque ya cuentes con ello.» → «Todo tarda más de lo que calculas. / Siempre.» (segunda revisión: «Aunque ya cuentes con ello» no se entendía sin conocer la ley)"
+      "5: «Todo lleva más de lo que crees. / Aunque ya cuentes con ello.» → «Todo tarda más de lo que calculas. / Siempre.» (segunda revisión: «Aunque ya cuentes con ello» no se entendía sin conocer la ley)",
+      "0: «Cinco leyes que te ahorran / años de errores en el trabajo.» → «Cinco leyes que ya sufres en el trabajo / aunque no sepas su nombre.» (Jaime: «no son leyes de ahorro de tiempo en el trabajo»; el gancho promete lo que da y lo cierra el remate «ahora ya tienen nombre»)"
     ]
   }
 }
