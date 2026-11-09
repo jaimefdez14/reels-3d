@@ -9,3 +9,6 @@ Abandono: segundo 25-28, al empezar el número tres.
 
 # Ronda 2 (lector nuevo) · nota 8/10
 Fallos marcados: «te llama a ti» suena a más marrones; «ahorrarle buscar» torpe; tres verbos seguidos en el remate.
+
+# Ronda 3 (lector nuevo) · nota 8/10
+Bloqueantes: «eres el primero en quien piensa» (¿para culparte?); «No le digas «lo miro»» (la cita no se oye). Estilo: «ahorrarle tener que preguntártelo» choca con «ni se entera».

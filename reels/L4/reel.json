@@ -45,11 +45,11 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Hacer el informe asusta. / *Abrir el documento, no.*",
+      "show": "Hacer un informe asusta. / *Abrir el documento, no.*",
       "pause": 0.3
     },
     {
-      "show": "Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*",
+      "show": "Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*",
       "pause": 0.55
     },
     {
@@ -58,7 +58,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*",
+      "show": "Cierra todas / *menos la de la tarea.*",
       "pause": 0.3
     },
     {
@@ -71,7 +71,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Al acabar el día, deja a medias / *una parte fácil de la tarea.*",
+      "show": "Al acabar el día, para / *en mitad de algo fácil.*",
       "pause": 0.3
     },
     {
@@ -147,6 +147,16 @@
         "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*»",
         "15: «Al acabar el día, deja sin terminar / *algo fácil.*» → «Al acabar el día, deja a medias / *una parte fácil de la tarea.*»",
         "9: «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe asusta. / *Abrir el documento, no.*» (seguía contradiciéndose)"
+      ]
+    },
+    {
+      "ronda": 3,
+      "nota": "ronda 3: 7/10",
+      "cambios": [
+        "9: «Hacer el informe asusta. / *Abrir el documento, no.*» → «Hacer un informe asusta. / *Abrir el documento, no.*»",
+        "10: «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*» → «Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*»",
+        "12: «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*» → «Cierra todas / *menos la de la tarea.*»",
+        "15: «Al acabar el día, deja a medias / *una parte fácil de la tarea.*» → «Al acabar el día, para / *en mitad de algo fácil.*»"
       ]
     }
   ]

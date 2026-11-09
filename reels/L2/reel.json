@@ -19,7 +19,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así que ponle menos plazo / y lo terminas antes.",
+      "show": "Ponle menos plazo / y lo terminas antes.",
       "pause": 0.55
     },
     {
@@ -36,7 +36,7 @@
       "pause": 0.55
     },
     {
-      "show": "Tercera: // si no te contestan, no es mala fe.",
+      "show": "Tercera: // si no te contestan un correo, no es mala fe.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -45,7 +45,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así que escribe otra vez, / sin enfadarte.",
+      "show": "Escribe otra vez, / sin enfadarte.",
       "pause": 0.55
     },
     {
@@ -58,20 +58,20 @@
       "pause": 0.3
     },
     {
-      "show": "Así que apúntalo / y tu cabeza lo suelta.",
+      "show": "Apúntalo / y tu cabeza lo suelta.",
       "pause": 0.55
     },
     {
-      "show": "Quinta: // una tarea de cada cinco lo da casi todo.",
+      "show": "Quinta: // una tarea de cada cinco da casi todo el resultado.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.",
+      "show": "Es la ley de Pareto.",
       "pause": 0.3
     },
     {
-      "show": "Hazla primero; / las demás pueden esperar.",
+      "show": "Busca esa tarea y hazla primero; / las demás pueden esperar.",
       "pause": 0.55
     },
     {
@@ -148,6 +148,19 @@
         "13: «Quinta: // unas pocas tareas lo dan casi todo.» → «Quinta: // una tarea de cada cinco lo da casi todo.»",
         "14: «Una de cada cinco tareas / da casi todo el resultado.» → «Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.»",
         "15: «Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.» → «Hazla primero; / las demás pueden esperar.»"
+      ]
+    },
+    {
+      "ronda": 3,
+      "nota": "7/10: bloqueantes «si no te contestan» sin objeto y «lo da casi todo» sin qué; «así que» repetido",
+      "cambios": [
+        "3: «Así que ponle menos plazo / y lo terminas antes.» → «Ponle menos plazo / y lo terminas antes.»",
+        "7: «Tercera: // si no te contestan, no es mala fe.» → «Tercera: // si no te contestan un correo, no es mala fe.»",
+        "9: «Así que escribe otra vez, / sin enfadarte.» → «Escribe otra vez, / sin enfadarte.»",
+        "12: «Así que apúntalo / y tu cabeza lo suelta.» → «Apúntalo / y tu cabeza lo suelta.»",
+        "13: «Quinta: // una tarea de cada cinco lo da casi todo.» → «Quinta: // una tarea de cada cinco da casi todo el resultado.»",
+        "14: «Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.» → «Es la ley de Pareto.»",
+        "15: «Hazla primero; / las demás pueden esperar.» → «Busca esa tarea y hazla primero; / las demás pueden esperar.»"
       ]
     }
   ]

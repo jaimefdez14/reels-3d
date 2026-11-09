@@ -11,3 +11,6 @@ Abandono: segundo 25-30, en el número tres.
 
 # Ronda 2 (lector nuevo) · nota 8/10
 Fallos marcados: «el primero que habla, rebaja»: ¿quién?; «pedir perdón» sin referente; «lo hablamos» no dice que se cobra; anuncio flojo.
+
+# Ronda 3 (lector nuevo) · nota 8/10
+Sin bloqueantes: pasa. Estilo: «la última evita que trabajes gratis» no se ata al punto 4; «Cobrar más no es pedir más» choca con pedir 1.200 €.

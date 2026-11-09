@@ -63,11 +63,11 @@
       "pause": 0.3
     },
     {
-      "show": "Así no discutes / *con medio trabajo ya hecho.*",
+      "show": "Si no, los cambios / *los haces gratis.*",
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir más: / *es saber qué decir.*",
+      "show": "Cobrar más no es pedir a lo loco: / *es saber qué decir.*",
       "pause": 0.3
     },
     {
@@ -137,6 +137,14 @@
         "7: «Ese silencio incómodo es normal: / *el primero que habla, rebaja.*» → «Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*»",
         "11: «Número cuatro: // «Si cambia el encargo, / *lo hablamos».*» → «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*»",
         "14: «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
+      ]
+    },
+    {
+      "ronda": 3,
+      "nota": "ronda 3: 8/10, sin bloqueantes; se ata «trabajar gratis» al punto 4",
+      "cambios": [
+        "13: «Así no discutes / *con medio trabajo ya hecho.*» → «Si no, los cambios / *los haces gratis.*»",
+        "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es saber qué decir.*»"
       ]
     }
   ]

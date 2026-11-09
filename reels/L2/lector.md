@@ -10,3 +10,6 @@ Abandono: segundo 12-15, en el segundo nombre raro seguido («suena a clase de W
 
 # Ronda 2 (lector nuevo) · nota 7/10
 Fallos marcados: «No veas mala fe» sin referente; la quinta repite; «haz esas» sin decir cuáles; Zeigarnik dice lo mismo dos veces.
+
+# Ronda 3 (lector nuevo) · nota 7/10
+Bloqueantes: «Si no te contestan, no es mala fe» (¿quién, a qué?) y «Una tarea de cada cinco lo da casi todo» (¿qué da?). Estilo: «así que» repetido, nombres opacos (Hanlon suena a arma, Parkinson a la enfermedad), dos instrucciones seguidas en Pareto.

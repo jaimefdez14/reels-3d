@@ -10,3 +10,6 @@ Abandono: segundo 25-30, en el número tres.
 
 # Ronda 2 (lector nuevo) · nota 7/10
 Fallos marcados: «el informe» y «es el que mejor funciona» sin referente; pestaña o ventana; «algo fácil» de qué; el cinco no es para hoy.
+
+# Ronda 3 (lector nuevo) · nota 7/10
+Bloqueantes: «Por eso este es el mejor» (el porqué no sale de la frase anterior; «tachas» sin lista); «deja a medias una parte fácil» (se entiende al revés). Estilo: «Una pestaña, ni una más» repite.
