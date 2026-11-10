@@ -93,7 +93,7 @@ def avisos(reel):
         if L.get('hi') and L.get('neg'):
             out.append(f'{i}: amarillo y rojo en la misma línea')
     for i, L in enumerate(lines[:-1]):  # regla 20: la frase literal de un personaje va en bocadillo, no en la voz
-        if '«' in (L.get('say') or L.get('show') or ''):
+        if '«' in (L.get('say') or L.get('show') or '') and not L.get('cita'):  # "cita": el narrador cita lo que sale en el bocadillo
             out.append(f'{i}: frase entre comillas en la voz; si la dice o la piensa un personaje, va en "bocadillo" (regla 20)')
     if not any('«' in (L.get('show') or '') or L.get('bocadillo') for L in lines):
         out.append('no hay frase literal (bocadillo o cita) que el espectador pueda decir')

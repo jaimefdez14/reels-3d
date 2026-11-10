@@ -10,7 +10,7 @@
       "pause": 0.35
     },
     {
-      "show": "Con tres cosas se entera, / *sin que eches ni una hora más.*",
+      "show": "Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*",
       "pause": 0.5
     },
     {
@@ -197,6 +197,20 @@
       "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
       "cambios": [
         "1: «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*» → «Con tres cosas se entera, / *sin que eches ni una hora más.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA por la segunda frase: «se entera» repetido y tono de anuncio («sin que eches ni una hora más»). Su versión.",
+      "cambios": [
+        "1: «Con tres cosas se entera, / *sin que eches ni una hora más.*» → «Lo arreglan tres cosas, / *y ninguna es echar más horas.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA por la segunda («Lo arreglan tres cosas» calco de *three things fix this*; «lo» ambiguo). Su versión.",
+      "cambios": [
+        "1: «Lo arreglan tres cosas, / *y ninguna es echar más horas.*» → «Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*»"
       ]
     }
   ]

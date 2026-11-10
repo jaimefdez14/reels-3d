@@ -6,11 +6,11 @@
   "coverT": 1.7,
   "lines": [
     {
-      "show": "Llevas tres días / *dejándolo para mañana.*",
+      "show": "Eso que llevas tres días dejando para mañana: / *hoy lo haces.*",
       "pause": 0.35
     },
     {
-      "show": "Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*",
+      "show": "Cinco trucos, / *y el tercero te quita la excusa.*",
       "pause": 0.5
     },
     {
@@ -49,7 +49,7 @@
       "pause": 0.3
     },
     {
-      "show": "Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*",
+      "show": "Por eso te quita la excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*",
       "pause": 0.55
     },
     {
@@ -235,6 +235,24 @@
       "cambios": [
         "0: «Cinco trucos para no dejarlo todo / *para mañana.*» → «Llevas tres días / *dejándolo para mañana.*»",
         "1: «El tercero / *es el que mejor funciona.*» → «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA: «dejándolo» sin antecedente; «el tercero es el que mejor funciona» calco de *works best*. Su versión; la frase del tercero se ajusta para cerrar la promesa.",
+      "cambios": [
+        "0: «Llevas tres días / *dejándolo para mañana.*» → «Eso que llevas tres días dejando para mañana, / *lo vas a hacer hoy.*»",
+        "1: «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*» → «Cinco trucos. / *Y con el tercero ya no hay excusa.*»",
+        "10: «Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso con este no hay excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "PASA por poco. Retoque opcional aplicado: menos tono de anuncio; la frase del tercero cierra la promesa.",
+      "cambios": [
+        "0: «Eso que llevas tres días dejando para mañana, / *lo vas a hacer hoy.*» → «Eso que llevas tres días dejando para mañana: / *hoy lo haces.*»",
+        "1: «Cinco trucos. / *Y con el tercero ya no hay excusa.*» → «Cinco trucos, / *y el tercero te quita la excusa.*»",
+        "10: «Por eso con este no hay excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso te quita la excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»"
       ]
     }
   ]

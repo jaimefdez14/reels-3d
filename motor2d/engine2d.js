@@ -70,7 +70,12 @@ const E = window.E = {
   numero(n, T, S, o = {}) { NUMS.push(Object.assign({ n, T, S }, o)); },
   sfx(t, kind, f) { EXTRA_SFX.push({ t, kind, f }); },
   golpe(t, f = 0.04) { GOLPES.push({ t, f }); },
+  // temblor de cámara (impacto): E.temblor(t, fuerza en px, duración)
+  temblor(t, f = 14, dur = 0.45) { TEMBLORES.push({ t, f, dur }); EXTRA_SFX.push({ t, kind: 'thud' }); },
+  // destello de pantalla (blanco cálido) para remates: E.destello(t, fuerza 0..1)
+  destello(t, f = 0.35, dur = 0.35) { DESTELLOS.push({ t, f, dur }); },
 };
+const TEMBLORES = [], DESTELLOS = [];
 
 // ---------- cámara ----------
 const GOLPES = [];
@@ -79,7 +84,9 @@ function cam(t) {
   // deriva lenta continua (la cámara nunca está del todo quieta) y golpes de zoom en momentos clave
   const dr = CFG.deriva ?? 1; let z = v[2] * (1 + 0.006 * dr * Math.sin(t * 0.55 + 0.4));
   for (const g of GOLPES) { const k = t - g.t; if (k >= 0 && k < 0.9) z *= 1 + g.f * Math.sin(Math.min(1, k / 0.12) * Math.PI / 2) * Math.exp(-k * 4.5); }
-  return { x: v[0] + 5 * dr * Math.sin(t * 0.83), y: v[1] + 4 * dr * Math.sin(t * 0.61 + 1.3), z };
+  let sx = 0, sy = 0;
+  for (const q of TEMBLORES) { const k = (t - q.t) / q.dur; if (k < 0 || k >= 1) continue; const a = q.f * Math.pow(1 - k, 2); sx += a * Math.sin(t * 91.7 + q.t * 13); sy += a * Math.cos(t * 77.3 + q.t * 7); }
+  return { x: v[0] + 5 * dr * Math.sin(t * 0.83) + sx / z, y: v[1] + 4 * dr * Math.sin(t * 0.61 + 1.3) + sy / z, z };
 }
 function toScreen(p, cm) { return [W / 2 + (p[0] - cm.x) * cm.z, H / 2 + (p[1] - cm.y) * cm.z]; }
 
@@ -397,6 +404,17 @@ const TIPOS = {
   // cajas de planes (S, M, L) con la elegida iluminada
   planes(c, o, t) { const L = o.items || ['BÁSICO', 'MEDIO', 'GRANDE'], sel = kf(o.sel, t, -1);
     L.forEach((s, i) => { const sz = 120 + i * 50, x = (i - 1) * 230; const k = clamp(1 - Math.abs(sel - i)); c.fillStyle = mix('#151a17', '#2a2510', k); lineaObj(c, 5, mix('#56605a', '#e6ce46', k)); c.beginPath(); c.roundRect(x - sz / 2, -sz, sz, sz, 14); c.fill(); c.stroke(); c.beginPath(); c.moveTo(x - sz / 2, -sz * 0.72); c.lineTo(x + sz / 2, -sz * 0.72); c.stroke(); texto(c, s, x, 40, 24, mix('#8d9692', '#e6ce46', k), 700, 'center', false, 'middle', 3); }); },
+  // confeti: estallido de papelitos que caen con gravedad y giran (remates); dur, n, fuerza
+  confeti(c, o, t) { const k = (t - o.t0), dur = o.dur || 1.8; if (k < 0 || k > dur) return; const n = o.n || 46, F = o.fuerza || 900;
+    for (let i = 0; i < n; i++) { const r1 = Math.sin(i * 12.9898 + 1.3) * 43758.5453, r2 = Math.sin(i * 78.233 + 4.1) * 12345.678; const u = r1 - Math.floor(r1), v = r2 - Math.floor(r2);
+      const ang = -Math.PI / 2 + (u - 0.5) * 2.2, vel = F * (0.45 + 0.75 * v), x = Math.cos(ang) * vel * k * 0.9, y = Math.sin(ang) * vel * k + 1400 * k * k;
+      const a = clamp(1 - (k - dur * 0.65) / (dur * 0.35)); if (a <= 0) continue; c.save(); c.globalAlpha *= a; c.translate(x, y); c.rotate(k * (6 + 10 * u) + i); c.scale(1, Math.cos(k * (8 + 6 * v) + i));
+      c.fillStyle = i % 3 === 0 ? '#f6f2e4' : (i % 3 === 1 ? C.am : C.amD); c.fillRect(-9, -5, 18, 10); c.restore(); } },
+  // rayos de luz que giran detrás de un objeto (sol / momento clave); r, n, p (0..1 aparición)
+  rayos(c, o, t) { const r = kf(o.r, t, 320), n = o.n || 14, p = clamp(kf(o.p, t, 1)); if (p <= 0) return; c.save(); c.rotate(t * (o.giro ?? 0.25));
+    const g = c.createRadialGradient(0, 0, 10, 0, 0, r); g.addColorStop(0, `rgba(244,217,85,${0.42 * p})`); g.addColorStop(1, 'rgba(244,217,85,0)'); c.fillStyle = g;
+    for (let i = 0; i < n; i++) { const a0 = i * 2 * Math.PI / n, w = Math.PI / n * 0.55; c.beginPath(); c.moveTo(0, 0); c.arc(0, 0, r * (0.55 + 0.45 * p), a0 - w, a0 + w); c.closePath(); c.fill(); }
+    c.restore(); },
   // pieza suelta (cuadradito con símbolo) que vuela de un sitio a otro
   pieza(c, o, t) { const r = kf(o.r, t, 30), on = clamp(kf(o.on, t, 1)); c.fillStyle = mix('#3a4540', C.am, on); c.beginPath(); c.roundRect(-r, -r, 2 * r, 2 * r, 8); c.fill(); if (o.texto) texto(c, o.texto, 0, 2, r, mix('#c9ccca', C.amOsc, on), 700); },
 };
@@ -416,27 +434,29 @@ function buildCaps() {
   });
   CAPS.forEach((c, k) => { const nx = CAPS[k + 1]; c.end = nx ? Math.min(nx.t0 - 0.2, c.t1 + 1.6) : c.t1 + 1.2; if (REEL.lines[c.line].hold) c.end = Math.max(c.end, c.t1 + REEL.lines[c.line].hold); });
 }
+const esGancho = cp => CFG.gancho && (CFG.gancho.lineas || [0]).includes(cp.line);
 function capLayout(cp) {
-  const una = (cp.estilo || CFG.sub) === 'una';
-  const sz1 = una ? 50 : 54, sz2 = una ? 50 : 60;
-  const w1 = una ? 600 : 400, w2 = una ? 600 : (CFG.cursiva ? 600 : 500);
+  const una = (cp.estilo || CFG.sub) === 'una', G = esGancho(cp) ? (CFG.gancho.escala || 1.3) : 1;
+  const sz1 = (una ? 50 : 54) * G, sz2 = (una ? 50 : 60) * G;
+  const w1 = G > 1 ? 700 : (una ? 600 : 400), w2 = G > 1 ? 700 : (una ? 600 : (CFG.cursiva ? 600 : 500));
   const f1 = `${w1} ${sz1}px ${FONT}`, f2 = `${CFG.cursiva && !una ? 'italic ' : ''}${w2} ${sz2}px ${FONT}`;
   const lines = [[]]; const firstY = cp.words.findIndex(w => w.y);
   cp.words.forEach((w, i) => { if (!una && i === firstY && i > 0 && cp.words.slice(i).every(x => x.y)) lines.push([]); lines[lines.length - 1].push(w); });
   // ajuste a 900 px de ancho
   const out = []; for (const ln of lines) { let cur = []; for (const w of ln) { ctx.font = w.y && !una ? f2 : f1; const test = [...cur, w]; const width = test.reduce((a, x) => { ctx.font = x.y && !una ? f2 : f1; return a + ctx.measureText(x.s + ' ').width; }, 0); if (width > 900 && cur.length) { out.push(cur); cur = [w]; } else cur = test; } out.push(cur); }
-  const lh = una ? 66 : 74; const y0 = (cp.y ?? CFG.subY) - (out.length - 1) * lh / 2; const placed = [];
+  const lh = (una ? 66 : 74) * G; const y0 = (cp.y ?? CFG.subY) - (out.length - 1) * lh / 2; const placed = [];
   out.forEach((ln, li) => { const widths = ln.map(w => { ctx.font = w.y && !una ? f2 : f1; return ctx.measureText(w.s).width; }); ctx.font = f1; const sp = ctx.measureText(' ').width; const tot = widths.reduce((a, b) => a + b, 0) + sp * (ln.length - 1); let x = W / 2 - tot / 2; ln.forEach((w, k) => { placed.push({ w, x, y: y0 + li * lh, font: w.y && !una ? f2 : f1, col: w.y ? C.amTxt : C.txt, width: widths[k] }); x += widths[k] + sp; }); });
   return { placed, box: { x: Math.min(...placed.map(p => p.x)) - 10, y: y0 - lh * 0.55, w: Math.max(...placed.map(p => p.x + p.width)) - Math.min(...placed.map(p => p.x)) + 20, h: out.length * lh + 6 } };
 }
 function drawCaps(t) {
   let box = null;
   for (const cp of CAPS) {
-    if (t < cp.t0 - 0.05 || t > cp.end + 0.18) continue;
+    const pre = esGancho(cp) && cp === CAPS[0];  // el primer subtítulo del gancho ya se ve, tenue, en el fotograma 0
+    if ((t < cp.t0 - 0.05 && !pre) || t > cp.end + 0.18) continue;
     const out = clamp((cp.end + 0.18 - t) / 0.18); if (out <= 0) continue;
     const L = cp._L || (cp._L = capLayout(cp)); box = L.box;
     for (const p of L.placed) {
-      const k = EASE.out(clamp((t - p.w.t0 + 0.04) / 0.2)); if (k <= 0) continue;
+      let k = EASE.out(clamp((t - p.w.t0 + 0.04) / 0.2)); if (pre && k < 1) { if (k <= 0) { ctx.save(); ctx.globalAlpha = 0.3 * out; ctx.font = p.font; ctx.fillStyle = p.col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(p.w.s, p.x, p.y); ctx.restore(); continue; } } if (k <= 0) continue;
       ctx.save(); ctx.globalAlpha = k * out; if (k < 1) ctx.filter = `blur(${((1 - k) * 8).toFixed(1)}px)`;
       ctx.font = p.font; ctx.fillStyle = p.col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
       if (p.w.y) { const kb = clamp((t - p.w.t0) / 0.32); const sc = 1 + 0.07 * Math.sin(kb * Math.PI); ctx.translate(p.x + p.width / 2, p.y); ctx.scale(sc, sc); ctx.fillText(p.w.s, -p.width / 2, (1 - k) * 8); } else ctx.fillText(p.w.s, p.x, p.y + (1 - k) * 8);
@@ -515,13 +535,21 @@ function drawFondo() {
 }
 
 // ---------- dibujo de items ----------
-function itemAlpha(it, t) { // entrada y salida por defecto: fundido + desde oscuro
-  const fin = it.entra ?? 0.35, fout = it.sale ?? 0.35; const a = clamp((t - it.t0) / fin) * clamp((it.t1 - t) / fout); return a * kf(it.a, t, 1);
+function itemAlpha(it, t) { // entrada y salida por defecto: fundido + desde oscuro; lo que nace en t ≤ 0 ya está en el fotograma 0
+  const fin = it.entra ?? (it.t0 <= 0 ? 1e-3 : 0.35), fout = it.sale ?? 0.35; const a = clamp((t - it.t0) / fin) * clamp((it.t1 - t) / fout); return a * kf(it.a, t, 1);
 }
-function drawItem(c, it, t, cm, dim) {
+const TMP = mk(), tmp = TMP.getContext('2d');
+function drawItem(c, it, t, cm, dim, fantasma) {
   const a = itemAlpha(it, t); if (a <= 0.001) return null;
+  // estela: copias del objeto en instantes anteriores, cada vez más transparentes (objetos que vuelan)
+  if (it.estela && !fantasma) { const n = it.estela === true ? 5 : it.estela; for (let k = n; k >= 1; k--) { const tg = t - k * 0.035; if (tg < it.t0) continue; c.save(); c.globalAlpha *= 0.32 * (1 - k / (n + 1)); drawItem(c, it, tg, cm, dim, true); c.restore(); } }
+  // barrido de brillo: una franja de luz cruza el objeto en los instantes de `barrido`
+  const bt = (it.barrido || []).find(b => t >= b && t < b + 0.55);
+  if (bt !== undefined && !fantasma) { const T = c.getTransform(); tmp.setTransform(1, 0, 0, 1, 0, 0); tmp.clearRect(0, 0, W, H); tmp.setTransform(T); const g0 = drawItem(tmp, Object.assign({}, it, { barrido: null }), t, cm, dim, true);
+    if (g0 && g0.box) { const b = g0.box, k = (t - bt) / 0.55, cx = b.x + (b.w + 2 * b.h) * k - b.h, gg = tmp.createLinearGradient(cx - 60, b.y, cx + 60, b.y + b.h * 0.4); gg.addColorStop(0, 'rgba(255,250,220,0)'); gg.addColorStop(0.5, 'rgba(255,250,220,0.85)'); gg.addColorStop(1, 'rgba(255,250,220,0)'); tmp.save(); tmp.globalCompositeOperation = 'source-atop'; tmp.fillStyle = gg; tmp.fillRect(b.x - 20, b.y - 20, b.w + 40, b.h + 40); tmp.restore(); }
+    c.save(); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(TMP, 0, 0); c.restore(); return g0; }
   const popFrom = it.kind === 'figura' ? 1 : (it.pop === true ? 0.2 : (it.pop === false ? 1 : 0.72));
-  const pk = EASE.back(clamp((t - it.t0) / 0.4));
+  const pk = it.t0 <= 0 ? 1 : EASE.back(clamp((t - it.t0) / 0.4));
   let s = kf(it.s, t, 1) * lerp(popFrom, 1, pk);
   const x = kf(it.x, t, 0); let y = kf(it.y, t, 0); const rot = kf(it.rot, t, 0);
   let am = 1;
@@ -529,9 +557,9 @@ function drawItem(c, it, t, cm, dim) {
     if (u.desde === it.id && t >= u.T) { const k = EASE.inout(clamp((t - u.T) / 0.42)); am *= 1 - k; s *= lerp(1, 0.55, k); }
     if (u.hacia === it.id) { const k = clamp((t - (u.S + 0.42)) / 0.32); if (k > 0 && k < 1) s *= 1 + 0.14 * Math.sin(k * Math.PI); }
   }
-  if (it.kind === 'figura') y += (1 - EASE.out(clamp((t - it.t0) / 0.5))) * 24;
+  if (it.kind === 'figura' && it.t0 > 0) y += (1 - EASE.out(clamp((t - it.t0) / 0.5))) * 24;
   if (am <= 0.001) return null;
-  const lum = (it.sobrevive && NUMS.some(u => u.desde === it.id && t >= u.T - 0.2)) ? 1 : dim * kf(it.luz, t, 1) * lerp(0.35, 1, clamp((t - it.t0) / (it.entra ?? 0.35)));
+  const lum = (it.sobrevive && NUMS.some(u => u.desde === it.id && t >= u.T - 0.2)) ? 1 : dim * kf(it.luz, t, 1) * (it.t0 <= 0 ? 1 : lerp(0.35, 1, clamp((t - it.t0) / (it.entra ?? 0.35))));
   c.save(); c.globalAlpha = a * am; if (lum < 0.995) c.filter = `brightness(${lum.toFixed(3)})`;
   if (it.kind === 'figura') { c.translate(0, y - kf(it.y, t, 0)); drawFigura(c, it, t, a); c.restore(); const g = it._geo; const S = g.S; return { id: it.id, kind: 'figura', head: [x + g.head[0] * S * g.dir, y + g.head[1] * S], hr: 0.086 * S, body: { x: x - 0.2 * S, y: y + (g.head[1] - 0.09) * S, w: 0.4 * S, h: -(g.head[1] - 0.09) * S } }; }
   c.translate(x, y); if (rot) c.rotate(rot); if (s !== 1) c.scale(s, s);
@@ -540,11 +568,19 @@ function drawItem(c, it, t, cm, dim) {
   return { id: it.id, kind: it.tipo, box: { x: x + r[0] * s, y: y + r[1] * s, w: r[2] * s, h: r[3] * s } };
 }
 
+// ---------- polvo de ambiente: motas que flotan despacio, con paralaje (profundidad) ----------
+function drawPolvo(t, cm) { const n = CFG.polvo === true ? 38 : CFG.polvo; ctx.save();
+  for (let i = 0; i < n; i++) { const r1 = Math.sin(i * 91.3 + 7) * 9341.7, r2 = Math.sin(i * 17.7 + 3) * 2711.3, r3 = Math.sin(i * 5.1 + 1) * 1531.9; const u = r1 - Math.floor(r1), v = r2 - Math.floor(r2), d = 0.3 + 0.7 * (r3 - Math.floor(r3));
+    const x = ((u * W + t * 9 * d - (cm.x + 0) * 0.08 * d) % W + W) % W, y = ((v * H - t * 14 * d - (cm.y + 370) * 0.08 * d) % H + H) % H;
+    const tw = 0.5 + 0.5 * Math.sin(t * (0.8 + u) + i); ctx.globalAlpha = 0.05 + 0.13 * d * tw; ctx.fillStyle = '#f2e6b0'; ctx.beginPath(); ctx.arc(x, y, 1.2 + 2.6 * d, 0, 7); ctx.fill(); }
+  ctx.restore(); }
+
 // ---------- fotograma ----------
 let lastFrame = null;
 function frame(t) {
   const cm = cam(t); const dim = dimAt(t);
   drawFondo();
+  if (CFG.polvo) drawPolvo(t, cm);
   // mundo
   lw.setTransform(1, 0, 0, 1, 0, 0); lw.clearRect(0, 0, W, H); lw.setTransform(cm.z, 0, 0, cm.z, W / 2 - cm.x * cm.z, H / 2 - cm.y * cm.z);
   const geo = []; const vis = ITEMS.filter(it => t >= it.t0 && t <= it.t1 && it.capa === 'mundo').sort((a, b) => (a.z || 0) - (b.z || 0));
@@ -564,6 +600,7 @@ function frame(t) {
   const coins = drawNums(t);
   const prog = drawProgreso(t);
   const cap = drawCaps(t);
+  for (const d of DESTELLOS) { const k = (t - d.t) / d.dur; if (k < 0 || k >= 1) continue; ctx.save(); ctx.globalAlpha = d.f * Math.pow(1 - k, 2); ctx.fillStyle = '#fff6d8'; ctx.fillRect(0, 0, W, H); ctx.restore(); }
   lastFrame = { geo, scrGeo, coins, prog, cap, cm };
 }
 
@@ -613,7 +650,8 @@ window.soundEvents = function () {
   for (const it of ITEMS) { if (it.sfx === false || it.t0 <= 0.05) continue; if (it.tipo === 'anillo' || it.tipo === 'arcoAbierto') ev.push({ t: it.t0, kind: 'swoosh' }); else if (it.pop || ['moneda', 'bocadillo', 'corazon', 'seguir', 'enviar', 'resumen', 'compra', 'temporizador'].includes(it.tipo)) ev.push({ t: it.t0, kind: 'pop' }); }
   for (const e of EXTRA_SFX) ev.push(e);
   for (const it of ITEMS) {
-    if (it.tipo === 'chispas') ev.push({ t: it.t0, kind: 'ding' });
+    if (it.tipo === 'chispas' || it.tipo === 'confeti') ev.push({ t: it.t0, kind: 'ding' });
+    if (it.tipo === 'rayos') ev.push({ t: it.t0, kind: 'swoosh' });
     const key = it.tipo === 'contador' || it.tipo === 'etiqueta' ? 'v' : (it.tipo === 'telefono' ? 'avisos' : (it.tipo === 'bloques' ? 'hechos' : (it.tipo === 'pestanas' ? 'n' : null)));
     if (!key || !Array.isArray(it[key]) || it.sfx === false) continue;
     const L = it[key]; let prev = null, last = -1; const t0 = L[0][0], t1 = L[L.length - 1][0];

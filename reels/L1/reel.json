@@ -6,11 +6,11 @@
   "coverT": 1.6,
   "lines": [
     {
-      "show": "Cobras la nómina el día 28 / *y el 20 ya no te queda ni un euro.*",
+      "show": "Cobras la nómina y a los veinte días / *no te queda ni un euro.*",
       "pause": 0.35
     },
     {
-      "show": "Cuatro reglas para que no te pase, / *y ninguna es ganar más.*",
+      "show": "Cuatro reglas para llegar a fin de mes / *sin ganar más.*",
       "pause": 0.5
     },
     {
@@ -76,7 +76,7 @@
       "pause": 0.55
     },
     {
-      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día 20 / *ya no tiene ni un euro.*",
+      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que a los veinte días / *ya no tiene ni un euro.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -211,6 +211,22 @@
       "cambios": [
         "0: «Cobras el 28 / y el 20 ya estás a cero.» → «Cobras la nómina el día 28 / y el 20 ya no te queda ni un euro.»",
         "16: envío con «ni un euro»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA: «el día 28 y el 20» suena al revés al oído (hay que hacer la cuenta). Su versión.",
+      "cambios": [
+        "0: «Cobras la nómina el día 28 / *y el 20 ya no te queda ni un euro.*» → «Cobras la nómina y a los veinte días / *no te queda ni un euro.*»",
+        "1: «Cuatro reglas para que no te pase, / *y ninguna es ganar más.*» → «Cuatro reglas, / *y ninguna es ganar más.*»",
+        "16: «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día 20 / *ya no tiene ni un euro.*» → «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que a los veinte días / *ya no tiene ni un euro.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA por la segunda frase («ninguna es ganar más»: una regla no «es» ganar más; suena a traducción). Su versión, con frase hecha de España.",
+      "cambios": [
+        "1: «Cuatro reglas, / *y ninguna es ganar más.*» → «Cuatro reglas para llegar a fin de mes / *sin ganar más.*»"
       ]
     }
   ]

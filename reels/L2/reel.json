@@ -6,7 +6,7 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.",
+      "show": "¿Esa tarea de una hora / que te come la tarde? / Tiene nombre. // Es la primera de cinco leyes / del trabajo.",
       "pause": 0.45
     },
     {
@@ -231,6 +231,13 @@
       "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
       "cambios": [
         "0: «Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.» → «Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "PASA. Retoque opcional aplicado: la imagen delante y sin «Y» de arranque.",
+      "cambios": [
+        "0: «Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.» → «¿Esa tarea de una hora / que te come la tarde? / Tiene nombre. // Es la primera de cinco leyes / del trabajo.»"
       ]
     }
   ]
