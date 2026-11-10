@@ -26,3 +26,6 @@ Bloqueante: «te ahorra horas gratis» (se entiende al revés). Estilo: «Son mi
 
 # Lector tras el corrector nativo (10-11) · nota 7/10
 Bloqueante: «Cuatro frases para cobrar más» — solo oyendo no se oye ninguna frase (van en bocadillo) → «Cuatro reglas…». Matices: «Deja que el cliente diga una cifra antes que tú» repite; «los extras, aparte» sin verbo; «Y sin dar explicaciones» colgada.
+
+# Lector nuevo (10-11) · 8/10 · PASA
+Casi bloqueante aplicado: «el primero que habla acaba bajando el precio» (¿quién?) → «si hablas tú primero, acabas bajándolo». Matices: «Y sin dar explicaciones» suelta; la promesa de «la última» algo diluida por la tercera.

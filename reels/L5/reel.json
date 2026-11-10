@@ -38,7 +38,7 @@
       "pause": 0.3
     },
     {
-      "show": "Se hace un silencio incómodo. Aguántalo: / el primero que habla / *acaba bajando el precio.*",
+      "show": "Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*",
       "pause": 0.55
     },
     {
@@ -190,6 +190,13 @@
         "0: «Cuatro frases para cobrar más / *si trabajas por tu cuenta.*» → «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*»",
         "3: «Deja que el cliente diga una cifra / *antes que tú.*» → «Que diga él la cifra / *primero.*»",
         "8: «La tercera: // *los extras, aparte.*» → «La tercera: // *cobra los extras aparte.*»"
+      ]
+    },
+    {
+      "ronda": "nativo-2",
+      "nota": "8/10, sin bloqueantes. PASA. Casi bloqueante aplicado: quién baja el precio.",
+      "cambios": [
+        "7: «Se hace un silencio incómodo. Aguántalo: / el primero que habla / *acaba bajando el precio.*» → «Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*»"
       ]
     }
   ],

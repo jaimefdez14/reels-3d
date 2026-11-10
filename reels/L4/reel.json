@@ -62,7 +62,7 @@
       "pause": 0.3
     },
     {
-      "show": "Si no lo tienes delante, / *no te distrae.*",
+      "show": "*Lo que no ves no te distrae.*",
       "pause": 0.55
     },
     {
@@ -79,7 +79,7 @@
       "pause": 0.55
     },
     {
-      "show": "Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*",
+      "show": "Al final, las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*",
       "pause": 0.3
     },
     {
@@ -165,6 +165,14 @@
       "cambios": [
         "2: «El primero: // *empieza por lo que más pereza te da.*» → «El primero: // *solo cinco minutos.*»",
         "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»"
+      ]
+    },
+    {
+      "ronda": "nativo-2",
+      "nota": "8/10, sin bloqueantes. PASA. Matices aplicados: «lo» ambiguo en la 13; «Las ganas dan igual» sin preparación.",
+      "cambios": [
+        "13: «Si no lo tienes delante, / *no te distrae.*» → «*Lo que no ves no te distrae.*»",
+        "17: «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*» → «Al final, las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
       ]
     }
   ],

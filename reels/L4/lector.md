@@ -19,3 +19,6 @@ Sin bloqueantes fuertes. Estilo: «Número uno: cinco minutos…» choca número
 
 # Lector tras el corrector nativo (10-11) · 8/10; casi bloqueante: el nombre del primer truco no era el truco (la alarma) y chocaba con el cierre
 Casi bloqueantes: «El primero: empieza por lo que más pereza te da» (no es el truco y choca con el cierre); «por eso funciona tan bien» promete más de lo que explica. Estilo: «Y el tercero» sobra la Y.
+
+# Lector nuevo (10-11) · 8/10 · PASA
+Matices aplicados: «Si no lo tienes delante, no te distrae» («lo» ambiguo) → «Lo que no ves no te distrae»; «Las ganas dan igual» → «Al final, las ganas dan igual».
