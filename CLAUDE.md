@@ -155,6 +155,13 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    tick en cada palabra amarilla, contador que sube de tono, latigazo en la transición, whoosh en lo que vuela, moneda,
    brillo en destellos y barridos, golpe en los temblores, impacto en el gancho, campanita en el confeti.
 
+22. **Publicar en @fase.zer0 (10-11-2026).** Jaime: «publica en fase.zer0 el vídeo. ya». Cuenta @fase.zer0 (página
+   «Fase Zero»), token `META_PAGE_TOKEN_3D`. `python3 herramientas/publicar.py reels/ID --video out/ID.mp4 --texto "…"
+   [--url URL] --publicar` (sin `--publicar`, simulacro). La subida directa da `ProcessingFailedError`: se re-codifica a
+   `publicados/ID.mp4`, se sube a esta rama y se publica con `--url` de raw.githubusercontent.com. Queda en
+   `publicados.jsonl`. Voz de las listas (estilo B): ElevenLabs `eEyWolF7iBpMA65GbtAm` (`voz.py --eleven`).
+   **L1 publicado el 10-11:** https://www.instagram.com/reel/DfksplFkqC9/
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
