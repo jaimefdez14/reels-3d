@@ -1,6 +1,10 @@
 """Voz de un reel con Kokoro (previas) y timing.json por palabra.
 
 Uso: /root/kokoro-venv/bin/python herramientas/voz.py reels/ID [--voz em_alex] [--velocidad 1.0]
+     /root/kokoro-venv/bin/python herramientas/voz.py reels/ID --eleven VOICE_ID [--velocidad 1.0]   (de pago: regla 4)
+Con --eleven, la toma sale de ElevenLabs (eleven_multilingual_v2, endpoint with-timestamps) y los tiempos por palabra
+son los reales de la alineación por caracteres; la clave es el secreto ELEVENLABS_API_KEY. Antes de lanzarlo, decir a
+Jaime los caracteres (los imprime --contar) y tener su OK.
 Lee cada frase (lo que dice `say` o, si no hay, `show`). Una línea con `"join": true` sigue en la siguiente: el grupo
 se lee **en una sola toma**, como una frase hablada entera, y después se parte en titulares (docs/REDACCION.md §6).
 Dentro de una toma, el corte entre titulares se ajusta al silencio más cercano (la coma o los dos puntos donde
@@ -14,12 +18,36 @@ import numpy as np, soundfile as sf
 
 args = sys.argv[1:]; reel_dir = os.path.abspath(args[0])
 opt = lambda k, d: args[args.index(k) + 1] if k in args else d
-VOICE = opt('--voz', 'em_alex'); SPEED = float(opt('--velocidad', '1.0')); SR = 24000
+ELEVEN = opt('--eleven', None); CONTAR = '--contar' in args
+VOICE = ELEVEN or opt('--voz', 'em_alex'); SPEED = float(opt('--velocidad', '1.0')); SR = 24000
 reel = json.load(open(os.path.join(reel_dir, 'reel.json')))
 vdir = os.path.join(reel_dir, 'voice'); os.makedirs(vdir, exist_ok=True)
 base = os.environ.get('KOKORO_DIR', os.path.expanduser('~/.cache/hyperframes/tts'))
-import kokoro_onnx
-model = kokoro_onnx.Kokoro(os.path.join(base, 'models', 'kokoro-v1.0.onnx'), os.path.join(base, 'voices', 'voices-v1.0.bin'))
+model = None
+if not ELEVEN and not CONTAR:
+    import kokoro_onnx
+    model = kokoro_onnx.Kokoro(os.path.join(base, 'models', 'kokoro-v1.0.onnx'), os.path.join(base, 'voices', 'voices-v1.0.bin'))
+
+
+def eleven(text):
+    """Una toma con ElevenLabs: (muestras float32 a 24 kHz, [(inicio, fin) por palabra de text.split()])."""
+    import base64, urllib.request
+    body = json.dumps({'text': text, 'model_id': 'eleven_multilingual_v2',
+                       'voice_settings': {'stability': 0.5, 'similarity_boost': 0.75, 'style': 0.0, 'use_speaker_boost': True,
+                                          'speed': SPEED}}).encode()
+    req = urllib.request.Request(f'https://api.elevenlabs.io/v1/text-to-speech/{ELEVEN}/with-timestamps?output_format=pcm_24000',
+                                 data=body, headers={'xi-api-key': os.environ['ELEVENLABS_API_KEY'], 'Content-Type': 'application/json'})
+    d = json.load(urllib.request.urlopen(req, timeout=180))
+    x = np.frombuffer(base64.b64decode(d['audio_base64']), dtype='<i2').astype(np.float32) / 32768
+    al = d.get('normalized_alignment') if d.get('alignment') is None else d['alignment']
+    ch, st, en = al['characters'], al['character_start_times_seconds'], al['character_end_times_seconds']
+    joined = ''.join(ch); spans, pos = [], 0
+    for wd in text.split():
+        k = joined.find(wd, pos)
+        if k < 0: k = pos  # no debería pasar; se queda pegada a la anterior
+        e = min(k + len(wd), len(st)) - 1
+        spans.append((st[min(k, len(st) - 1)], en[max(e, 0)])); pos = k + len(wd)
+    return x, spans
 
 
 def trim(x, thr=0.01, pad=0.04):
@@ -69,10 +97,29 @@ for sg in segs:
     cur.append(sg)
     if sg[2] != 'join': takes.append(cur); cur = []
 
+if CONTAR:
+    n = sum(len(re.sub(r'[«»“”]', '', ' '.join(sg[1] for sg in tk))) for tk in takes)
+    print(f'{n} caracteres en {len(takes)} tomas'); sys.exit()
 out = [np.zeros(int(0.5 * SR))]; t = 0.5; words = [[] for _ in reel['lines']]
 for tk in takes:
     texts = [sg[1] for sg in tk]
     spoken = re.sub(r'[«»“”]', '', ' '.join(texts))
+    if ELEVEN:
+        raw, spans = eleven(spoken)
+        idx = np.where(np.abs(raw) > 0.01)[0]; a0 = max(0, idx[0] - int(0.04 * SR)) / SR if len(idx) else 0.0
+        x = level(trim(raw)); dur = len(x) / SR
+        k0 = 0
+        for k, sg in enumerate(tk):
+            n_ = len(sg[1].split())
+            for (s0, s1) in spans[k0:k0 + n_]:
+                words[sg[0]].append([round(t + max(0, s0 - a0), 3), round(t + min(dur, max(s1 - a0, s0 - a0 + 0.05)), 3)])
+            print(f'{sg[0]:2d} {spans[k0 + n_ - 1][1] - spans[k0][0]:5.2f}s  {sg[1]}' + ('   ↘' if k < len(tk) - 1 else ''))
+            k0 += n_
+        out.append(x); t += dur
+        i, after = tk[-1][0], tk[-1][2]; L = reel['lines'][i]
+        gap = L.get('pausa_media', 0.55) if after == 'media' else L.get('pause', 0.9 if i == 0 else 0.55)
+        out.append(np.zeros(int(gap * SR))); t += gap
+        continue
     samples, sr = model.create(spoken, voice=VOICE, speed=SPEED, lang='es')
     assert sr == SR
     x = level(trim(np.asarray(samples, dtype=np.float32)))
@@ -98,6 +145,6 @@ for tk in takes:
 out.append(np.zeros(int(1.2 * SR))); t += 1.2
 audio = np.concatenate(out)
 sf.write(os.path.join(vdir, 'voz.wav'), audio, SR, subtype='PCM_16')
-json.dump({'words': words, 'duration': round(t, 2), 'motor': 'kokoro', 'voz': VOICE}, open(os.path.join(reel_dir, 'timing.json'), 'w'))
-json.dump({'motor': 'kokoro', 'voz': VOICE, 'velocidad': SPEED}, open(os.path.join(vdir, 'motor.json'), 'w'))
+json.dump({'words': words, 'duration': round(t, 2), 'motor': 'eleven' if ELEVEN else 'kokoro', 'voz': VOICE}, open(os.path.join(reel_dir, 'timing.json'), 'w'))
+json.dump({'motor': 'eleven' if ELEVEN else 'kokoro', 'voz': VOICE, 'velocidad': SPEED}, open(os.path.join(vdir, 'motor.json'), 'w'))
 print('voz.wav', round(t, 2), 's; timing.json escrito')
