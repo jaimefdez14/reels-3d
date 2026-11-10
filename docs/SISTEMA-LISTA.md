@@ -12,7 +12,7 @@ Lista numerada de **3, 4 o 5 puntos**, 45-60 s, **130-170 palabras**, voz a ~160
 |---|---|---|---|
 | 0 | Gancho: número + promesa grande | «Cuatro reglas para que tu sueldo *dure todo el mes.*» · «Cinco leyes que te ahorran años de errores en el trabajo.» · «Tres pasos para que…» | Muñeco + el objeto del tema (pila de monedas, reloj, anillo); algo se dibuja o se transforma en la palabra amarilla |
 | 1 | (Opcional) anuncio | «Y puedes empezar *hoy mismo.*» | Aparece el indicador de progreso |
-| 2…n | Punto: «Número dos: // *nombre.*» | Nombre de 2-4 palabras en imperativo (*Págate primero. Espera dos días.*) o una ley con nombre propio (*la ley de Parkinson*) | Moneda del número sola en el centro (0,7-1,2 s) |
+| 2…n | Punto: «La segunda: // *nombre.*» («El segundo:» si son trucos). **No «Número dos:»**: es calco de *number two* (correctores, 10-11) | Nombre de 2-4 palabras en imperativo (*Ahorra nada más cobrar. Espera dos días.*) o una ley con nombre propio (*la ley de Parkinson*) | Moneda del número sola en el centro (0,7-1,2 s) |
 | · | Instrucción con dosis | «El día que cobras, aparta una parte antes de pagar nada.» Una medida pequeña: cinco minutos, dos días, una parte | El muñeco **hace** la instrucción con un objeto |
 | · | Voz interior o ejemplo | «Hoy tu cabeza dice: *«Me lo merezco».*» | Objeto que aparece (corazón, maraña, bocadillo) |
 | · | Golpe del punto | Frase corta y seca, a veces con humor: «Hasta el mes que viene.» «Dos días después, ya no te lo mereces tanto.» «Dale menos tiempo y acabará antes.» | El objeto cambia de estado (se apaga, se cierra, se alisa, se rellena) |

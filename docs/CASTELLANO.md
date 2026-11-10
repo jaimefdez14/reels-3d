@@ -34,6 +34,11 @@ Calcos encontrados el 10-11-2026 (Jaime: «ese tipo de expresiones son inaceptab
 | «Ves el agujero el día diez» | *see the hole* | «te das cuenta de que vas justo el día diez» |
 | «Cinco minutos con lo peor» | *five ugly minutes* | «empieza por lo que más pereza te da» |
 | «Pedir a lo loco» | — | «pedir de más» |
+| «Número uno: … Número dos: …» | *number one, number two* | «La primera: … La segunda: …» / «El primero: …» (concordando con reglas, cosas, trucos, frases) |
+| «Soluciones, no problemas» | manual de gestión | «No le lleves marrones, llévale soluciones» |
+| «X valen más que Y» con sujeto abstracto | aforismo de LinkedIn | verbo y persona: «Cumplir tres plazos cuenta más que…» |
+| «A quien…» en el envío | escrito | «a ese amigo que…», «a ese compañero que…» |
+| «Pedir de más: es saber qué decir» y antítesis de taza | autoayuda | «no va de pedir más; va de saber qué decir» |
 
 ## 2. Giros de España que hay que buscar primero
 

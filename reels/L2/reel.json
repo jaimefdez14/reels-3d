@@ -6,7 +6,7 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cinco leyes que sufres en el trabajo / aunque no sepas cómo se llaman.",
+      "show": "Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.",
       "pause": 0.45
     },
     {
@@ -19,7 +19,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así que ponle un plazo más corto / y lo acabas antes.",
+      "show": "Ponle un plazo más corto / y lo acabas antes.",
       "pause": 0.55
     },
     {
@@ -28,15 +28,15 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Siempre. / Se llama ley de Hofstadter.",
+      "show": "Y pasa siempre. / Es la ley de Hofstadter.",
       "pause": 0.3
     },
     {
-      "show": "Así que calcula lo que vas a tardar / y súmale la mitad.",
+      "show": "Calcula lo que vas a tardar / y súmale la mitad.",
       "pause": 0.55
     },
     {
-      "show": "Tercera: // si alguien no te contesta un correo, no es mala fe.",
+      "show": "Tercera: // si alguien no te contesta un correo, / no es por mala fe.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -45,7 +45,7 @@
       "pause": 0.3
     },
     {
-      "show": "Vuelve a escribirle, / sin mosquearte.",
+      "show": "Escríbele otra vez / y no te mosquees.",
       "pause": 0.55
     },
     {
@@ -54,7 +54,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Hasta en la ducha te acuerdas. / Es el efecto Zeigarnik.",
+      "show": "Te acuerdas hasta en la ducha. / Es el efecto Zeigarnik.",
       "pause": 0.3
     },
     {
@@ -62,7 +62,7 @@
       "pause": 0.55
     },
     {
-      "show": "Quinta: // una de cada cinco tareas da casi todo el resultado.",
+      "show": "Quinta: // de cada cinco cosas que haces, / una es la que de verdad cuenta.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -71,15 +71,15 @@
       "pause": 0.3
     },
     {
-      "show": "Busca esa tarea y hazla primero; / lo demás puede esperar.",
+      "show": "Busca cuál es y hazla la primera. / Lo demás, que espere.",
       "pause": 0.55
     },
     {
-      "show": "Ya las sufrías. / Ahora sabes cómo se llaman.",
+      "show": "Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.",
       "pause": 0.35
     },
     {
-      "show": "Mándaselo a quien siempre dice / «esto lo saco en una tarde».",
+      "show": "Mándaselo a ese que siempre dice / «esto lo saco en una tarde».",
       "pause": 0.3
     }
   ],
@@ -188,5 +188,27 @@
       "Ya las sufrías. / Ahora sabes cómo se llaman.",
       "Mándaselo a quien siempre dice / «esto lo saco en una tarde»."
     ]
-  }
+  },
+  "corrector": [
+    {
+      "ronda": 1,
+      "cambios": [
+        "0: «Cinco leyes que sufres en el trabajo / aunque no sepas cómo se llaman.» → «Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.»",
+        "3: «Así que ponle un plazo más corto / y lo acabas antes.» → «Ponle un plazo más corto / y lo acabas antes.»",
+        "5: «Siempre. / Se llama ley de Hofstadter.» → «Y pasa siempre. / Es la ley de Hofstadter.»",
+        "6: «Así que calcula lo que vas a tardar / y súmale la mitad.» → «Calcula lo que vas a tardar / y súmale la mitad.»",
+        "7: «Tercera: // si alguien no te contesta un correo, no es mala fe.» → «Tercera: // si alguien no te contesta un correo, / no es por mala fe.»",
+        "9: «Vuelve a escribirle, / sin mosquearte.» → «Escríbele otra vez / y no te mosquees.»",
+        "11: «Hasta en la ducha te acuerdas. / Es el efecto Zeigarnik.» → «Te acuerdas hasta en la ducha. / Es el efecto Zeigarnik.»",
+        "13: «Quinta: // una de cada cinco tareas da casi todo el resultado.» → «Quinta: // de cada cinco cosas que haces, / una es la que de verdad cuenta.»",
+        "15: «Busca esa tarea y hazla primero; / lo demás puede esperar.» → «Busca cuál es y hazla la primera. / Lo demás, que espere.»",
+        "16: «Ya las sufrías. / Ahora sabes cómo se llaman.» → «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.»",
+        "17: «Mándaselo a quien siempre dice / «esto lo saco en una tarde».» → «Mándaselo a ese que siempre dice / «esto lo saco en una tarde».»"
+      ]
+    },
+    {
+      "ronda": 1,
+      "cambios": []
+    }
+  ]
 }

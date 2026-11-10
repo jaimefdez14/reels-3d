@@ -6,7 +6,7 @@
   "coverT": 1.6,
   "lines": [
     {
-      "show": "Si el día veinte ya estás a cero, / *te faltan estas cuatro reglas.*",
+      "show": "Si el día veinte ya estás a cero, / *te hacen falta estas cuatro reglas.*",
       "pause": 0.35
     },
     {
@@ -14,12 +14,12 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *ahorra nada más cobrar.*",
+      "show": "La primera: // *ahorra nada más cobrar.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "El mismo día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*",
+      "show": "El mismo día que cobras, / pasa el diez por ciento a otra cuenta / *antes de pagar nada.*",
       "pause": 0.3
     },
     {
@@ -27,7 +27,7 @@
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *lo que queda, en dos cuentas.*",
+      "show": "La segunda: // *lo que te quede, repártelo en dos cuentas.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -44,7 +44,7 @@
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *antes de un capricho, espera dos días.*",
+      "show": "La tercera: // *antes de darte un capricho, espera dos días.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -53,9 +53,9 @@
       "pause": 0.3
     },
     {
-      "show": "Ese día te parece / *que te lo mereces.*",
+      "show": "En ese momento / *te lo justificas todo.*",
       "pause": 0.3,
-      "bocadillo": "Me lo merezco",
+      "bocadillo": "Me lo he ganado",
       "tipo": "nube"
     },
     {
@@ -63,12 +63,12 @@
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // *repasa tus gastos cada domingo.*",
+      "show": "Y la cuarta: // *repasa los gastos todos los domingos.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Cinco minutos, *sin agobiarte.*",
+      "show": "Cinco minutos *y sin agobios.*",
       "pause": 0.3
     },
     {
@@ -76,7 +76,7 @@
       "pause": 0.55
     },
     {
-      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*",
+      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día veinte / *ya está a cero.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -165,5 +165,21 @@
       "Así ves el agujero el día diez, / *no el día veinte.*",
       "El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*"
     ]
-  }
+  },
+  "corrector": [
+    {
+      "ronda": 1,
+      "cambios": [
+        "0: «Si el día veinte ya estás a cero, / *te faltan estas cuatro reglas.*» → «Si el día veinte ya estás a cero, / *te hacen falta estas cuatro reglas.*»",
+        "2: «Número uno: // *ahorra nada más cobrar.*» → «La primera: // *ahorra nada más cobrar.*»",
+        "3: «El mismo día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*» → «El mismo día que cobras, / pasa el diez por ciento a otra cuenta / *antes de pagar nada.*»",
+        "5: «Número dos: // *lo que queda, en dos cuentas.*» → «La segunda: // *lo que te quede, repártelo en dos cuentas.*»",
+        "9: «Número tres: // *antes de un capricho, espera dos días.*» → «La tercera: // *antes de darte un capricho, espera dos días.*»",
+        "11: «Ese día te parece / *que te lo mereces.*» → «En ese momento / *te lo justificas todo.*»",
+        "13: «Número cuatro: // *repasa tus gastos cada domingo.*» → «Y la cuarta: // *repasa los gastos todos los domingos.*»",
+        "14: «Cinco minutos, *sin agobiarte.*» → «Cinco minutos *y sin agobios.*»",
+        "16: «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*» → «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día veinte / *ya está a cero.*»"
+      ]
+    }
+  ]
 }

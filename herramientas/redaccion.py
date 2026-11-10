@@ -14,6 +14,7 @@ from pathlib import Path
 PEGAMENTO = ['pero', 'sin embargo', 'en cambio', 'además', 'por otro lado', 'cabe destacar',
              'es importante saber', 'es importante', 'ahora bien', '¿y lo de']
 CALCOS = {
+    r'^número (uno|dos|tres|cuatro|cinco):': '«La primera:» / «El primero:» (calco de *number one*)',
     r'\bes por eso que\b': 'por eso', r'\bfue ahí que\b': 'fue ahí donde', r'\blo que pasa es que\b': 'dilo directamente',
     r'\besto es lo que pasa\b': 'lo curioso es esto / nada', r'\baquí está la cosa\b': 'lo curioso es esto / nada',
     r'\bhace \w+ \w+ atrás\b': 'sin «atrás»', r'\bser capaz de\b': 'poder', r'\btomar ventaja\b': 'aprovechar',

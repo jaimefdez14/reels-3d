@@ -14,20 +14,20 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *empieza por lo que más pereza te da.*",
+      "show": "El primero: // *empieza por lo que más pereza te da.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Pon un temporizador de cinco minutos / *y ponte.*",
+      "show": "Ponte una alarma de cinco minutos / *y empieza.*",
       "pause": 0.3
     },
     {
-      "show": "Cuando suene, puedes parar. / *Casi nunca paras.*",
+      "show": "Cuando suene, puedes parar. / *Y casi nunca lo haces.*",
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *el móvil, en otra habitación.*",
+      "show": "El segundo: // *el móvil, en otra habitación.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -40,7 +40,7 @@
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *divide la tarea en trozos.*",
+      "show": "El tercero: // *parte la tarea en trozos.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -49,11 +49,11 @@
       "pause": 0.3
     },
     {
-      "show": "Y es el que mejor funciona / porque cada trozo que acabas / *te empuja al siguiente.*",
+      "show": "Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*",
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // *una sola pestaña abierta.*",
+      "show": "El cuarto: // *una sola pestaña abierta.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -66,12 +66,12 @@
       "pause": 0.55
     },
     {
-      "show": "Número cinco: // *déjate algo a medias.*",
+      "show": "El quinto: // *déjate algo a medias.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Al acabar el día, para / *en mitad de algo fácil.*",
+      "show": "Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*",
       "pause": 0.3
     },
     {
@@ -79,11 +79,11 @@
       "pause": 0.55
     },
     {
-      "show": "No te hacen falta ganas: / *te hace falta que empezar cueste poco.*",
+      "show": "Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*",
       "pause": 0.3
     },
     {
-      "show": "Mándaselo a quien siempre dice / *«mañana lo hago».*",
+      "show": "Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*",
       "pause": 0.3
     }
   ],
@@ -185,5 +185,23 @@
       "No necesitas ganas: / *necesitas que empezar sea fácil.*",
       "Mándaselo a quien dice / *«mañana lo hago».*"
     ]
-  }
+  },
+  "corrector": [
+    {
+      "ronda": 1,
+      "cambios": [
+        "2: «Número uno: // *empieza por lo que más pereza te da.*» → «El primero: // *empieza por lo que más pereza te da.*»",
+        "3: «Pon un temporizador de cinco minutos / *y ponte.*» → «Ponte una alarma de cinco minutos / *y empieza.*»",
+        "4: «Cuando suene, puedes parar. / *Casi nunca paras.*» → «Cuando suene, puedes parar. / *Y casi nunca lo haces.*»",
+        "5: «Número dos: // *el móvil, en otra habitación.*» → «El segundo: // *el móvil, en otra habitación.*»",
+        "8: «Número tres: // *divide la tarea en trozos.*» → «El tercero: // *parte la tarea en trozos.*»",
+        "10: «Y es el que mejor funciona / porque cada trozo que acabas / *te empuja al siguiente.*» → «Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»",
+        "11: «Número cuatro: // *una sola pestaña abierta.*» → «El cuarto: // *una sola pestaña abierta.*»",
+        "14: «Número cinco: // *déjate algo a medias.*» → «El quinto: // *déjate algo a medias.*»",
+        "15: «Al acabar el día, para / *en mitad de algo fácil.*» → «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*»",
+        "17: «No te hacen falta ganas: / *te hace falta que empezar cueste poco.*» → «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*»",
+        "18: «Mándaselo a quien siempre dice / *«mañana lo hago».*» → «Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*»"
+      ]
+    }
+  ]
 }

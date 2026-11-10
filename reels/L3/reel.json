@@ -10,16 +10,16 @@
       "pause": 0.35
     },
     {
-      "show": "Con estas tres cosas se entera, / *sin echar ni una hora más.*",
+      "show": "Haz estas tres cosas y se entera, / *sin echar ni una hora más.*",
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *llévale soluciones, no problemas.*",
+      "show": "La primera: // *no le lleves marrones, llévale soluciones.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Si algo falla, / *llévale dos opciones.*",
+      "show": "Si hay un marrón, / *llévale dos opciones.*",
       "pause": 0.3
     },
     {
@@ -27,11 +27,11 @@
       "pause": 0.3
     },
     {
-      "show": "Así, cuando algo se tuerce, / *acaba contando contigo.*",
+      "show": "Así, cuando hay un lío, / *te llama a ti.*",
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *pon fecha y cúmplela.*",
+      "show": "La segunda: // *ponle fecha y cúmplela.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -41,15 +41,15 @@
       "bocadillo": "Lo tienes el jueves"
     },
     {
-      "show": "Y ese día, *se lo das.*",
+      "show": "Y ese día *se lo das.*",
       "pause": 0.35
     },
     {
-      "show": "Tres plazos cumplidos valen más / *que diez horas extra.*",
+      "show": "Cumplir tres plazos cuenta más / *que diez horas extra.*",
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *cuéntale lo que has hecho.*",
+      "show": "La tercera: // *cuéntale lo que has hecho.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -58,15 +58,15 @@
       "pause": 0.3
     },
     {
-      "show": "Lo que no cuentas, / *para tu jefe no existe.*",
+      "show": "Si no se lo cuentas, / *para él no existe.*",
       "pause": 0.3
     },
     {
-      "show": "Y no es tirarte flores: / *es que él no lo ve.*",
+      "show": "Y no es echarte flores: / *es que si no, no se entera.*",
       "pause": 0.55
     },
     {
-      "show": "Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*",
+      "show": "A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -156,5 +156,23 @@
       "Y no es presumir: / *es ponérselo fácil para que te vea.*",
       "Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*"
     ]
-  }
+  },
+  "corrector": [
+    {
+      "ronda": 1,
+      "cambios": [
+        "1: «Con estas tres cosas se entera, / *sin echar ni una hora más.*» → «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*»",
+        "2: «Número uno: // *llévale soluciones, no problemas.*» → «La primera: // *no le lleves marrones, llévale soluciones.*»",
+        "3: «Si algo falla, / *llévale dos opciones.*» → «Si hay un marrón, / *llévale dos opciones.*»",
+        "5: «Así, cuando algo se tuerce, / *acaba contando contigo.*» → «Así, cuando hay un lío, / *te llama a ti.*»",
+        "6: «Número dos: // *pon fecha y cúmplela.*» → «La segunda: // *ponle fecha y cúmplela.*»",
+        "8: «Y ese día, *se lo das.*» → «Y ese día *se lo das.*»",
+        "9: «Tres plazos cumplidos valen más / *que diez horas extra.*» → «Cumplir tres plazos cuenta más / *que diez horas extra.*»",
+        "10: «Número tres: // *cuéntale lo que has hecho.*» → «La tercera: // *cuéntale lo que has hecho.*»",
+        "12: «Lo que no cuentas, / *para tu jefe no existe.*» → «Si no se lo cuentas, / *para él no existe.*»",
+        "13: «Y no es tirarte flores: / *es que él no lo ve.*» → «Y no es echarte flores: / *es que si no, no se entera.*»",
+        "14: «Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»"
+      ]
+    }
+  ]
 }
