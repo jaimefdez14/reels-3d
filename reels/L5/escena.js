@@ -68,7 +68,7 @@ golpes4.forEach((tg, i) => {
 E.obj('ch4', 'chispas', { t0: w(13, 0) + 0.6, t1: w(13, 0) + 1.4, x: 110, y: -330, r0: 260, r1: 340, n: 16, inspeccion: false });
 
 // ---------- cierre: resumen (vuelve al gancho) y envío ----------
-E.obj('resumen', 'resumen', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, items: ['Pregunta', 'Calla', 'Versión', 'Encargo'], gap: 210,
+E.obj('resumen', 'resumen', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, items: ['Pregunta', 'Calla', 'Aparte', 'Encargo'], gap: 210,
   p: [[TC, 0], [TC + 0.9, 4, 'lin']], caja: [-420, -60, 840, 200] });
 E.figura('yoF', { t0: w(15, 0), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(15, 1), 'senalar']] });
 E.obj('enviar', 'enviar', { t0: w(15, 1), t1: D + 1, x: 120, y: -360, r: 64, pop: true, vuelo: [[wf(15, -1), 0], [wf(15, -1) + 0.5, 1, 'in']] });
