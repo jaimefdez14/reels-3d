@@ -649,6 +649,18 @@ window.soundEvents = function () {
   for (const u of NUMS) { ev.push({ t: u.T, kind: 'whip' }); ev.push({ t: u.T + 0.5, kind: 'pop' }); }
   for (const it of ITEMS) { if (it.sfx === false || it.t0 <= 0.05) continue; if (it.tipo === 'anillo' || it.tipo === 'arcoAbierto') ev.push({ t: it.t0, kind: 'swoosh' }); else if (it.pop || ['moneda', 'bocadillo', 'corazon', 'seguir', 'enviar', 'resumen', 'compra', 'temporizador'].includes(it.tipo)) ev.push({ t: it.t0, kind: 'pop' }); }
   for (const e of EXTRA_SFX) ev.push(e);
+  // más efectos (10-11-2026, Jaime: «faltan efectos sonoros, es muy muy importante»)
+  for (const d of DESTELLOS) ev.push({ t: d.t, kind: 'shine' });
+  for (const it of ITEMS) {
+    if (it.estela && it.t0 > 0.05) ev.push({ t: it.t0, kind: 'whoosh' });  // lo que vuela suena aunque lleve sfx: false
+    if (it.tipo === 'moneda' && it.t0 > 0.05) ev.push({ t: it.t0 + 0.02, kind: 'coin' });
+    if (it.sfx === false) continue;
+    for (const b of (it.barrido || [])) ev.push({ t: b, kind: 'shine' });
+    for (const k of ['x', 'y']) { const L = it[k]; if (!Array.isArray(L)) continue; for (let j = 1; j < L.length; j++) if (Math.abs(L[j][1] - L[j - 1][1]) > 160 && L[j][0] - L[j - 1][0] < 1.2) ev.push({ t: L[j - 1][0], kind: 'whoosh' }); }
+    if (Array.isArray(it.on)) for (let j = 1; j < it.on.length; j++) if (it.on[j][1] > it.on[j - 1][1] + 0.5) ev.push({ t: it.on[j - 1][0], kind: 'pop' });
+  }
+  for (const cp of CAPS) for (const w of cp.words) if (w.y) ev.push({ t: w.t0, kind: 'tick' });
+  if (CFG.gancho) ev.push({ t: 0.02, kind: 'boom' });
   for (const it of ITEMS) {
     if (it.tipo === 'chispas' || it.tipo === 'confeti') ev.push({ t: it.t0, kind: 'ding' });
     if (it.tipo === 'rayos') ev.push({ t: it.t0, kind: 'swoosh' });

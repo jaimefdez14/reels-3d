@@ -148,6 +148,13 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    las citas que dice el propio narrador (la del envío final: «Mándaselo a quien dice "mañana lo hago"») siguen en la
    voz. `redaccion.py` avisa de comillas en la voz fuera de la última línea.
 
+21. **Efectos de sonido, muy importantes (10-11-2026).** Jaime: «faltan efectos sonoros, es muy muy importante». Causa: en
+   los vídeos del estilo B `sonido.py` fallaba (el `python3` del sistema no tiene `soundfile`) y `render.js` seguía sin
+   efectos. Ahora `render.js` usa el Python del venv y **se para** si no hay efectos: nunca se entrega un vídeo sin ellos.
+   Los efectos se oyen (casi no se agachan bajo la voz; la cama sí) y hay uno por cada cosa que pasa: pop al entrar,
+   tick en cada palabra amarilla, contador que sube de tono, latigazo en la transición, whoosh en lo que vuela, moneda,
+   brillo en destellos y barridos, golpe en los temblores, impacto en el gancho, campanita en el confeti.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
