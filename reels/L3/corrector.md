@@ -21,3 +21,6 @@ Aplicado:
 - 3: «Si hay un marrón, / *llévale dos opciones.*» → «Si hay un marrón, / *ve con dos opciones.*»
 - 6: «La segunda: // *ponle fecha y cúmplela.*» → «La segunda: // *ponte un plazo y cúmplelo.*»
 - 14: «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»
+
+# Ronda 3 (corrector nuevo, solo lo que chirría de verdad)
+NINGUNA. Pasa.

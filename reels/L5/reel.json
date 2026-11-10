@@ -56,7 +56,7 @@
       "pause": 0.55
     },
     {
-      "show": "La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*",
+      "show": "La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*",
       "pause": 0.3,
       "pausa_media": 0.7,
       "bocadillo": "Si luego cambiáis cosas, se cobran"
@@ -70,7 +70,7 @@
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir más: / *es saber qué decir.*",
+      "show": "Al final, cobrar más / *es saber qué decir.*",
       "pause": 0.3
     },
     {
@@ -231,6 +231,13 @@
         "11: «La cuarta: // *déjalo claro antes de empezar.*» → «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*»",
         "13: «Si no lo dijiste antes, / *te los comes gratis.*» → «Si no lo has dicho antes, / *te los comes.*»",
         "14: «Cobrar más no va de pedir más: / *va de saber qué decir.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
+      ]
+    },
+    {
+      "ronda": 3,
+      "cambios": [
+        "11: «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*» → «La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*»",
+        "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Al final, cobrar más / *es saber qué decir.*»"
       ]
     }
   ]

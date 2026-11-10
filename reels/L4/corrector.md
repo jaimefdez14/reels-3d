@@ -20,3 +20,6 @@ Aplicado:
 - 4: «Cuando suene, puedes parar. / *Y casi nunca lo haces.*» → «Cuando suene, puedes parar. / *Y casi nunca paras.*»
 - 15: «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*» → «Cuando pares por hoy, / *para justo antes de algo fácil.*»
 - 17: «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*» → «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»
+
+# Ronda 3 (corrector nuevo, solo lo que chirría de verdad)
+NINGUNA. Pasa.

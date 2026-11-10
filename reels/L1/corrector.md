@@ -19,3 +19,6 @@ Aplicado:
 - 11: «En ese momento / *te lo justificas todo.*» → «En ese momento, / *te convences de lo que sea.*»
 - 12: «Dos días después, *ya no tanto.*» → «A los dos días, / *ya no lo ves tan claro.*»
 - 15: «Así te das cuenta de que vas justo / *el día diez, no el veinte.*» → «Así te das cuenta el día diez / de que vas justo, *y no el veinte.*»
+
+# Ronda 3 (corrector nuevo, solo lo que chirría de verdad)
+NINGUNA. Pasa.

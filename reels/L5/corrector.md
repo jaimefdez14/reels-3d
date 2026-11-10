@@ -21,3 +21,9 @@ Aplicado:
 - 11: «La cuarta: // *déjalo claro antes de empezar.*» → «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*»
 - 13: «Si no lo dijiste antes, / *te los comes gratis.*» → «Si no lo has dicho antes, / *te los comes.*»
 - 14: «Cobrar más no va de pedir más: / *va de saber qué decir.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»
+
+# Ronda 3 (corrector nuevo, solo lo que chirría de verdad)
+11 («avisa antes de empezar de que…», atropellado) y 14 («no es X: es Y», eslogan). Se aplica su versión literal; el resto, nativo.
+Aplicado:
+- 11: «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*» → «La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*»
+- 14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Al final, cobrar más / *es saber qué decir.*»

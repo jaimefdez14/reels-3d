@@ -19,3 +19,6 @@ Aplicado:
 - 5: «Y pasa siempre. / Es la ley de Hofstadter.» → «Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.»
 - 15: «Busca cuál es y hazla la primera. / Lo demás, que espere.» → «Busca cuál es y empieza por ella. / Lo demás, que espere.»
 - 16: «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.» → «Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.»
+
+# Ronda 3 (corrector nuevo, solo lo que chirría de verdad)
+NINGUNA. Pasa.
