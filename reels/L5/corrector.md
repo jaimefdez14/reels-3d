@@ -13,3 +13,11 @@ Aplicado:
 - 13: «Si no lo has avisado, / *los haces gratis.*» → «Si no lo dijiste antes, / *te los comes gratis.*»
 - 14: «Cobrar más no es pedir de más: / *es saber qué decir.*» → «Cobrar más no va de pedir más: / *va de saber qué decir.*»
 - 15: «Mándaselo a quien baja el precio / *sin que se lo pidan.*» → «Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*»
+
+# Ronda 2 (corrector nuevo)
+Marcadas de verdad: 2 («pregúntale» sin referente), 11 («déjalo claro» sin decir qué), 13 (indefinido y «gratis» sobra), 14 («no va de… va de…» calco de *it's not about*). Opcional aplicada por la repetición de «aparte» tres veces: bocadillo del 11.
+Aplicado:
+- 2: «La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*» → «La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*»
+- 11: «La cuarta: // *déjalo claro antes de empezar.*» → «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*»
+- 13: «Si no lo dijiste antes, / *te los comes gratis.*» → «Si no lo has dicho antes, / *te los comes.*»
+- 14: «Cobrar más no va de pedir más: / *va de saber qué decir.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»

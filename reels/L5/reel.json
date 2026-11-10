@@ -14,7 +14,7 @@
       "pause": 0.5
     },
     {
-      "show": "La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*",
+      "show": "La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*",
       "pause": 0.3,
       "pausa_media": 0.7,
       "bocadillo": "¿Qué presupuesto tenéis?"
@@ -56,21 +56,21 @@
       "pause": 0.55
     },
     {
-      "show": "La cuarta: // *déjalo claro antes de empezar.*",
+      "show": "La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*",
       "pause": 0.3,
       "pausa_media": 0.7,
-      "bocadillo": "Si luego cambiáis cosas, eso va aparte"
+      "bocadillo": "Si luego cambiáis cosas, se cobran"
     },
     {
       "show": "Los cambios siempre llegan / *a mitad del trabajo.*",
       "pause": 0.3
     },
     {
-      "show": "Si no lo dijiste antes, / *te los comes gratis.*",
+      "show": "Si no lo has dicho antes, / *te los comes.*",
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no va de pedir más: / *va de saber qué decir.*",
+      "show": "Cobrar más no es pedir más: / *es saber qué decir.*",
       "pause": 0.3
     },
     {
@@ -222,6 +222,15 @@
         "13: «Si no lo has avisado, / *los haces gratis.*» → «Si no lo dijiste antes, / *te los comes gratis.*»",
         "14: «Cobrar más no es pedir de más: / *es saber qué decir.*» → «Cobrar más no va de pedir más: / *va de saber qué decir.*»",
         "15: «Mándaselo a quien baja el precio / *sin que se lo pidan.*» → «Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "cambios": [
+        "2: «La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*» → «La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*»",
+        "11: «La cuarta: // *déjalo claro antes de empezar.*» → «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*»",
+        "13: «Si no lo dijiste antes, / *te los comes gratis.*» → «Si no lo has dicho antes, / *te los comes.*»",
+        "14: «Cobrar más no va de pedir más: / *va de saber qué decir.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
       ]
     }
   ]

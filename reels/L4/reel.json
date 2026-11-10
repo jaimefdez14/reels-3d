@@ -23,7 +23,7 @@
       "pause": 0.3
     },
     {
-      "show": "Cuando suene, puedes parar. / *Y casi nunca lo haces.*",
+      "show": "Cuando suene, puedes parar. / *Y casi nunca paras.*",
       "pause": 0.55
     },
     {
@@ -71,7 +71,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*",
+      "show": "Cuando pares por hoy, / *para justo antes de algo fácil.*",
       "pause": 0.3
     },
     {
@@ -79,7 +79,7 @@
       "pause": 0.55
     },
     {
-      "show": "Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*",
+      "show": "Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*",
       "pause": 0.3
     },
     {
@@ -201,6 +201,14 @@
         "15: «Al acabar el día, para / *en mitad de algo fácil.*» → «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*»",
         "17: «No te hacen falta ganas: / *te hace falta que empezar cueste poco.*» → «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*»",
         "18: «Mándaselo a quien siempre dice / *«mañana lo hago».*» → «Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "cambios": [
+        "4: «Cuando suene, puedes parar. / *Y casi nunca lo haces.*» → «Cuando suene, puedes parar. / *Y casi nunca paras.*»",
+        "15: «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*» → «Cuando pares por hoy, / *para justo antes de algo fácil.*»",
+        "17: «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*» → «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
       ]
     }
   ]

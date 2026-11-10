@@ -27,7 +27,7 @@ Calcos encontrados el 10-11-2026 (Jaime: «ese tipo de expresiones son inaceptab
 | Calco | Viene de | En castellano |
 |---|---|---|
 | «Lo primero que pagas eres tú» / «Págate a ti primero» | *pay yourself first* | «Ahorra nada más cobrar», «aparta para ti antes de pagar nada» |
-| «Ve con soluciones» / «Llega con la solución» | *come with solutions* | «Llévale soluciones, no problemas» |
+| «Llega con la solución» / «Ve con soluciones» suelto | *come with solutions* | «No le vayas con marrones, ve con soluciones» |
 | «Tu cabeza lo suelta» / «tu cabeza no puede escaparse» | *your brain lets go* | «te lo quitas de la cabeza», «te olvidas», «no te distraes» |
 | «Tu jefe te quiere a su lado» | *wants you by his side* | «acaba contando contigo» |
 | «Es ponérselo fácil para que te vea» | *make it easy for him to see you* | «es que él no lo ve» |
@@ -35,10 +35,10 @@ Calcos encontrados el 10-11-2026 (Jaime: «ese tipo de expresiones son inaceptab
 | «Cinco minutos con lo peor» | *five ugly minutes* | «empieza por lo que más pereza te da» |
 | «Pedir a lo loco» | — | «pedir de más» |
 | «Número uno: … Número dos: …» | *number one, number two* | «La primera: … La segunda: …» / «El primero: …» (concordando con reglas, cosas, trucos, frases) |
-| «Soluciones, no problemas» | manual de gestión | «No le lleves marrones, llévale soluciones» |
+| «Soluciones, no problemas» / «llevar marrones» | manual de gestión | «No le vayas con marrones, ve con soluciones» (los marrones se «pasan» o se «va con» ellos) |
 | «X valen más que Y» con sujeto abstracto | aforismo de LinkedIn | verbo y persona: «Cumplir tres plazos cuenta más que…» |
 | «A quien…» en el envío | escrito | «a ese amigo que…», «a ese compañero que…» |
-| «Pedir de más: es saber qué decir» y antítesis de taza | autoayuda | «no va de pedir más; va de saber qué decir» |
+| «No va de… va de…» | *it's not about… it's about* | «No es… es…» |
 
 ## 2. Giros de España que hay que buscar primero
 

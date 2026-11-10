@@ -11,3 +11,11 @@ Marcadas (se aplica su versión):
 - 16 «Ya las sufrías.» (eslogan) → «Ya te pasaban. Ahora por lo menos sabes cómo se llaman.»
 - 17 «a quien siempre dice» → «a ese que siempre dice».
 Nativas: 1, 2, 4, 8, 10, 12, 14.
+
+# Ronda 2 (corrector nuevo)
+Marcadas de verdad: 0 (una ley no «te pasa»), 5 («Y pasa siempre» relleno), 15 («hazla la primera»), 16 («Ya te pasaban» arrastra la 0). Opcionales no aplicadas: «Se llama ley de…», «lo que piensas», «la que importa de verdad».
+Aplicado:
+- 0: «Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.» → «Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.»
+- 5: «Y pasa siempre. / Es la ley de Hofstadter.» → «Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.»
+- 15: «Busca cuál es y hazla la primera. / Lo demás, que espere.» → «Busca cuál es y empieza por ella. / Lo demás, que espere.»
+- 16: «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.» → «Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.»

@@ -11,3 +11,11 @@ Aplicado:
 - 13: «Número cuatro: // *repasa tus gastos cada domingo.*» → «Y la cuarta: // *repasa los gastos todos los domingos.*»
 - 14: «Cinco minutos, *sin agobiarte.*» → «Cinco minutos *y sin agobios.*»
 - 16: «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*» → «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día veinte / *ya está a cero.*»
+
+# Ronda 2 (corrector nuevo)
+Marcadas de verdad: 10 (mezcla tiempos; «¿Que has visto…?» muy de Madrid), 11 («te lo justificas todo», de manual), 12 («Dos días después», escrito), 15 (ambigua al oído). Opcionales no aplicadas: 0, 3, 7, 14, 16.
+Aplicado:
+- 10: «¿Has visto algo que te encanta? / *Déjalo en la cesta.*» → «¿Que has visto algo que te encanta? / *Déjalo en la cesta.*»
+- 11: «En ese momento / *te lo justificas todo.*» → «En ese momento, / *te convences de lo que sea.*»
+- 12: «Dos días después, *ya no tanto.*» → «A los dos días, / *ya no lo ves tan claro.*»
+- 15: «Así te das cuenta de que vas justo / *el día diez, no el veinte.*» → «Así te das cuenta el día diez / de que vas justo, *y no el veinte.*»

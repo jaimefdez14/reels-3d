@@ -6,7 +6,7 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.",
+      "show": "Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.",
       "pause": 0.45
     },
     {
@@ -28,7 +28,7 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Y pasa siempre. / Es la ley de Hofstadter.",
+      "show": "Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.",
       "pause": 0.3
     },
     {
@@ -71,11 +71,11 @@
       "pause": 0.3
     },
     {
-      "show": "Busca cuál es y hazla la primera. / Lo demás, que espere.",
+      "show": "Busca cuál es y empieza por ella. / Lo demás, que espere.",
       "pause": 0.55
     },
     {
-      "show": "Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.",
+      "show": "Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.",
       "pause": 0.35
     },
     {
@@ -209,6 +209,15 @@
     {
       "ronda": 1,
       "cambios": []
+    },
+    {
+      "ronda": 2,
+      "cambios": [
+        "0: «Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.» → «Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.»",
+        "5: «Y pasa siempre. / Es la ley de Hofstadter.» → «Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.»",
+        "15: «Busca cuál es y hazla la primera. / Lo demás, que espere.» → «Busca cuál es y empieza por ella. / Lo demás, que espere.»",
+        "16: «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.» → «Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.»"
+      ]
     }
   ]
 }

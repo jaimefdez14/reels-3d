@@ -49,17 +49,17 @@
       "pausa_media": 0.7
     },
     {
-      "show": "¿Has visto algo que te encanta? / *Déjalo en la cesta.*",
+      "show": "¿Que has visto algo que te encanta? / *Déjalo en la cesta.*",
       "pause": 0.3
     },
     {
-      "show": "En ese momento / *te lo justificas todo.*",
+      "show": "En ese momento, / *te convences de lo que sea.*",
       "pause": 0.3,
       "bocadillo": "Me lo he ganado",
       "tipo": "nube"
     },
     {
-      "show": "Dos días después, *ya no tanto.*",
+      "show": "A los dos días, / *ya no lo ves tan claro.*",
       "pause": 0.55
     },
     {
@@ -72,7 +72,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así te das cuenta de que vas justo / *el día diez, no el veinte.*",
+      "show": "Así te das cuenta el día diez / de que vas justo, *y no el veinte.*",
       "pause": 0.55
     },
     {
@@ -179,6 +179,15 @@
         "13: «Número cuatro: // *repasa tus gastos cada domingo.*» → «Y la cuarta: // *repasa los gastos todos los domingos.*»",
         "14: «Cinco minutos, *sin agobiarte.*» → «Cinco minutos *y sin agobios.*»",
         "16: «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*» → «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día veinte / *ya está a cero.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "cambios": [
+        "10: «¿Has visto algo que te encanta? / *Déjalo en la cesta.*» → «¿Que has visto algo que te encanta? / *Déjalo en la cesta.*»",
+        "11: «En ese momento / *te lo justificas todo.*» → «En ese momento, / *te convences de lo que sea.*»",
+        "12: «Dos días después, *ya no tanto.*» → «A los dos días, / *ya no lo ves tan claro.*»",
+        "15: «Así te das cuenta de que vas justo / *el día diez, no el veinte.*» → «Así te das cuenta el día diez / de que vas justo, *y no el veinte.*»"
       ]
     }
   ]

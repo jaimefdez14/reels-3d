@@ -13,3 +13,10 @@ Aplicado:
 - 15: «Al acabar el día, para / *en mitad de algo fácil.*» → «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*»
 - 17: «No te hacen falta ganas: / *te hace falta que empezar cueste poco.*» → «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*»
 - 18: «Mándaselo a quien siempre dice / *«mañana lo hago».*» → «Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*»
+
+# Ronda 2 (corrector nuevo)
+Marcadas de verdad: 4 («Y casi nunca lo haces» ambiguo y de libro), 15 («dejes… déjalo», «dejar en una parte»), 17 («que empezar sea fácil», autoayuda). Opcionales (no aplicadas): 3 alarma/temporizador, 6 «No vale en silencio…», 10 sobra «tan bien».
+Aplicado:
+- 4: «Cuando suene, puedes parar. / *Y casi nunca lo haces.*» → «Cuando suene, puedes parar. / *Y casi nunca paras.*»
+- 15: «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*» → «Cuando pares por hoy, / *para justo antes de algo fácil.*»
+- 17: «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*» → «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»
