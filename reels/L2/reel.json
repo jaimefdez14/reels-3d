@@ -6,63 +6,63 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cinco leyes / que ya sufres en el trabajo / aunque no sepas su nombre.",
+      "show": "Cinco leyes que sufres en el trabajo / aunque no sepas cómo se llaman.",
       "pause": 0.45
     },
     {
-      "show": "Primera: // el trabajo se estira.",
+      "show": "Primera: // el trabajo se alarga.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Ocupa todo el tiempo que le des. / Es la ley de Parkinson.",
+      "show": "Dura todo el tiempo que le des. / Es la ley de Parkinson.",
       "pause": 0.3
     },
     {
-      "show": "Ponle menos plazo / y lo terminas antes.",
+      "show": "Así que ponle un plazo más corto / y lo acabas antes.",
       "pause": 0.55
     },
     {
-      "show": "Segunda: // todo tarda más de lo que calculas.",
+      "show": "Segunda: // todo tarda más de lo que crees.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Siempre. / Lo llaman ley de Hofstadter.",
+      "show": "Siempre. / Se llama ley de Hofstadter.",
       "pause": 0.3
     },
     {
-      "show": "Por eso, calcula lo que tardas / y súmale la mitad.",
+      "show": "Así que calcula lo que vas a tardar / y súmale la mitad.",
       "pause": 0.55
     },
     {
-      "show": "Tercera: // si no te contestan un correo, no es mala fe.",
+      "show": "Tercera: // si alguien no te contesta un correo, no es mala fe.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Casi siempre es un despiste. / Se llama la navaja de Hanlon.",
+      "show": "Casi siempre es un despiste. / Es la navaja de Hanlon.",
       "pause": 0.3
     },
     {
-      "show": "Escribe otra vez, / sin enfadarte.",
+      "show": "Vuelve a escribirle, / sin mosquearte.",
       "pause": 0.55
     },
     {
-      "show": "Cuarta: // lo que dejas a medias te persigue.",
+      "show": "Cuarta: // lo que dejas a medias no te lo quitas de la cabeza.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Hasta en la ducha lo tienes en la cabeza. / Es el efecto Zeigarnik.",
+      "show": "Hasta en la ducha te acuerdas. / Es el efecto Zeigarnik.",
       "pause": 0.3
     },
     {
-      "show": "Apúntalo / y tu cabeza lo suelta.",
+      "show": "Apúntalo / y te quedas tranquilo.",
       "pause": 0.55
     },
     {
-      "show": "Quinta: // una tarea de cada cinco da casi todo el resultado.",
+      "show": "Quinta: // una de cada cinco tareas da casi todo el resultado.",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -71,7 +71,7 @@
       "pause": 0.3
     },
     {
-      "show": "Busca esa tarea y hazla primero; / las demás pueden esperar.",
+      "show": "Busca esa tarea y hazla primero; / lo demás puede esperar.",
       "pause": 0.55
     },
     {
@@ -163,5 +163,30 @@
         "15: «Hazla primero; / las demás pueden esperar.» → «Busca esa tarea y hazla primero; / las demás pueden esperar.»"
       ]
     }
-  ]
+  ],
+  "situacion": "En el trabajo te pasan siempre las mismas cosas: una tarea que te iba a llevar una mañana se come el día entero, todo tarda más de lo que dijiste, te mosqueas porque alguien no te contesta, tienes algo a medias dándote vueltas y te pasas el día con cosas que no importan. Todo eso tiene nombre.",
+  "nativo": {
+    "fecha": "2026-11-10",
+    "regla": "19 y 20",
+    "antes": [
+      "Cinco leyes / que ya sufres en el trabajo / aunque no sepas su nombre.",
+      "Primera: // el trabajo se estira.",
+      "Ocupa todo el tiempo que le des. / Es la ley de Parkinson.",
+      "Ponle menos plazo / y lo terminas antes.",
+      "Segunda: // todo tarda más de lo que calculas.",
+      "Siempre. / Lo llaman ley de Hofstadter.",
+      "Por eso, calcula lo que tardas / y súmale la mitad.",
+      "Tercera: // si no te contestan un correo, no es mala fe.",
+      "Casi siempre es un despiste. / Se llama la navaja de Hanlon.",
+      "Escribe otra vez, / sin enfadarte.",
+      "Cuarta: // lo que dejas a medias te persigue.",
+      "Hasta en la ducha lo tienes en la cabeza. / Es el efecto Zeigarnik.",
+      "Apúntalo / y tu cabeza lo suelta.",
+      "Quinta: // una tarea de cada cinco da casi todo el resultado.",
+      "Es la ley de Pareto.",
+      "Busca esa tarea y hazla primero; / las demás pueden esperar.",
+      "Ya las sufrías. / Ahora sabes cómo se llaman.",
+      "Mándaselo a quien siempre dice / «esto lo saco en una tarde»."
+    ]
+  }
 }

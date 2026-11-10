@@ -18,7 +18,7 @@ de ViralClips / @crecimiento.ai: no se mezcla contenido, código ni memoria entr
 - `herramientas/`: `frames.js` (fotogramas), `sheet.py` (hoja de contactos), `voz.py` (voz Kokoro de previas + `timing.json`;
   instalación: venv en `/root/kokoro-venv` con `requirements-kokoro.txt` y los modelos de las *releases* de kokoro-onnx
   `model-files-v1.0` en `~/.cache/hyperframes/tts/{models,voices}`), `redaccion.py` (guion).
-- `reels/<ID>/`: `reel.json` (guion: `lines[{show, say, hi, neg, voice, pause, hide, join}]`), `shots3d.js` (escena),
+- `reels/<ID>/`: `reel.json` (guion: `lines[{show, say, hi, neg, voice, pause, hide, join, bocadillo}]`), `shots3d.js` (escena),
   `timing.json` (tiempos por palabra de la voz), `voice/voz.wav`, `out/`.
 
 ## Comandos
@@ -34,6 +34,7 @@ node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si exist
 node herramientas/inspeccionar.js reels/ID 0.2   # solapes por rectángulos (debe decir ok)
 node herramientas/inspeccionar_px.js reels/ID 0.5  # solapes por píxeles, legibilidad, máximo 2 bocadillos (debe decir ok)
 python3 herramientas/redaccion.py reels/ID     # redacción del guion, los dos estilos (debe decir ok)
+python3 herramientas/corrector.py reels/ID     # encargo para el corrector nativo (regla 19): a un agente nuevo, informe en reels/ID/corrector.md
 python3 herramientas/lector.py reels/ID        # encargo para el lector en frío (regla 18): a un agente nuevo, informe en reels/ID/lector.md
 ```
 
@@ -127,6 +128,25 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    la voz. Su informe se guarda en `reels/ID/lector.md`. No hay voz ni escena hasta que el lector resume el vídeo como la
    idea del guion, no marca frases que no se entiendan solo oyendo y pone 8 o más; tras reescribir, se repite con otro
    lector nuevo. Va después de `redaccion.py` y antes de `voz.py`.
+
+19. **Castellano nativo, desde la situación, con corrector nativo (10-11-2026).** Jaime, sobre «lo primero que pagas eres
+   tú»: «ese tipo de expresiones son inaceptables… no parecen español nativo». Causa: el guion partía del concepto en
+   inglés (*pay yourself first*) y se «traducía»; las listas de calcos y `redaccion.py` solo cazan palabras sueltas, y el
+   lector en frío mira si se entiende, no si suena a España. Flujo nuevo, en este orden: (1) antes de escribir, contar la
+   **situación** como se la contarías a un amigo en un bar de Madrid («cobras el 28 y el 15 ya vas justo») y sacar las
+   frases de ahí, nunca del nombre inglés de la técnica; (2) `redaccion.py`; (3) **corrector nativo**:
+   `python3 herramientas/corrector.py reels/ID` → agente nuevo que marca toda frase que alguien de Madrid de 30 años no
+   diría en voz alta y escribe cómo la diría; lo que marca se cambia por su versión (quien escribe no decide que «está
+   bien») y se repite con otro corrector hasta que no marque nada; informe en `reels/ID/corrector.md`; cada calco nuevo
+   va a la lista de `docs/CASTELLANO.md`; (4) lector en frío (regla 18); (5) se enseña el guion a Jaime en texto.
+
+20. **Las frases de un personaje van en bocadillo, no en la voz (10-11-2026).** Jaime, sobre L5: «"Son 1.200 €" y otro
+   tipo de bocadillos de los usuarios no parece que tengan que ser parte de la narración y su voz, ya que rompen hilo».
+   La voz solo narra («Número dos: di tu precio y cállate»); lo que dice o piensa un personaje («Son 1.200 €», «Me lo
+   merezco», «Lo tienes el jueves») va en `reel.json` → `bocadillo` de la línea y en la escena como bocadillo (o nube)
+   del muñeco, en pantalla y sin voz, a la vez que el narrador lo presenta. El subtítulo lleva solo la narración. Solo
+   las citas que dice el propio narrador (la del envío final: «Mándaselo a quien dice "mañana lo hago"») siguen en la
+   voz. `redaccion.py` avisa de comillas en la voz fuera de la última línea.
 
 ## Pendiente de Jaime
 

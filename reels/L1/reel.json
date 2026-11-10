@@ -6,37 +6,37 @@
   "coverT": 1.6,
   "lines": [
     {
-      "show": "Si a día veinte ya estás a cero, / *te faltan estas cuatro reglas.*",
+      "show": "Si el día veinte ya estás a cero, / *te faltan estas cuatro reglas.*",
       "pause": 0.35
     },
     {
-      "show": "Y ninguna es *ganar más.*",
+      "show": "Y ninguna es / *ganar más.*",
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *lo primero que pagas eres tú.*",
+      "show": "Número uno: // *ahorra nada más cobrar.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*",
+      "show": "El mismo día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*",
       "pause": 0.3
     },
     {
-      "show": "Y lo que no ves, *no lo gastas.*",
+      "show": "Y lo que no ves, / *no te lo gastas.*",
       "pause": 0.55
     },
     {
-      "show": "Número dos: // *lo que queda, pártelo en dos cuentas más.*",
+      "show": "Número dos: // *lo que queda, en dos cuentas.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Los gastos fijos, en una; / *los caprichos, en otra.*",
+      "show": "Una para los gastos fijos; / *otra para los caprichos.*",
       "pause": 0.3
     },
     {
-      "show": "Cuando la de caprichos / *se vacía, se acabaron los caprichos.*",
+      "show": "Cuando la de caprichos / *se queda vacía, se acabó.*",
       "pause": 0.25
     },
     {
@@ -44,20 +44,22 @@
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *deja pasar dos días.*",
+      "show": "Número tres: // *antes de un capricho, espera dos días.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "¿Te has encaprichado de algo? / *Déjalo en la cesta.*",
+      "show": "¿Has visto algo que te encanta? / *Déjalo en la cesta.*",
       "pause": 0.3
     },
     {
-      "show": "Hoy piensas: *«Me lo merezco».*",
-      "pause": 0.3
+      "show": "Ese día te parece / *que te lo mereces.*",
+      "pause": 0.3,
+      "bocadillo": "Me lo merezco",
+      "tipo": "nube"
     },
     {
-      "show": "Dos días después, *ya no te lo mereces tanto.*",
+      "show": "Dos días después, *ya no tanto.*",
       "pause": 0.55
     },
     {
@@ -66,15 +68,15 @@
       "pausa_media": 0.7
     },
     {
-      "show": "Cinco minutos, *sin fustigarte.*",
+      "show": "Cinco minutos, *sin agobiarte.*",
       "pause": 0.3
     },
     {
-      "show": "Así ves el agujero el día diez, / *no el día veinte.*",
+      "show": "Así te das cuenta de que vas justo / *el día diez, no el veinte.*",
       "pause": 0.55
     },
     {
-      "show": "El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*",
+      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -139,5 +141,29 @@
         "16: «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien / *a día veinte ya está a cero.*» → «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*»"
       ]
     }
-  ]
+  ],
+  "situacion": "Cobras el 28, el 15 ya vas justo y el 20 estás a cero. No es que ganes poco: es que el dinero se va antes de que te des cuenta. Lo que funciona: apartar algo el mismo día que cobras, separar lo fijo de los caprichos, esperar un par de días antes de comprarte algo y echar un vistazo a los gastos el domingo.",
+  "nativo": {
+    "fecha": "2026-11-10",
+    "regla": "19 y 20",
+    "antes": [
+      "Si a día veinte ya estás a cero, / *te faltan estas cuatro reglas.*",
+      "Y ninguna es *ganar más.*",
+      "Número uno: // *lo primero que pagas eres tú.*",
+      "El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*",
+      "Y lo que no ves, *no lo gastas.*",
+      "Número dos: // *lo que queda, pártelo en dos cuentas más.*",
+      "Los gastos fijos, en una; / *los caprichos, en otra.*",
+      "Cuando la de caprichos / *se vacía, se acabaron los caprichos.*",
+      "Hasta el mes *que viene.*",
+      "Número tres: // *deja pasar dos días.*",
+      "¿Te has encaprichado de algo? / *Déjalo en la cesta.*",
+      "Hoy piensas: *«Me lo merezco».*",
+      "Dos días después, *ya no te lo mereces tanto.*",
+      "Número cuatro: // *repasa tus gastos cada domingo.*",
+      "Cinco minutos, *sin fustigarte.*",
+      "Así ves el agujero el día diez, / *no el día veinte.*",
+      "El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*"
+    ]
+  }
 }

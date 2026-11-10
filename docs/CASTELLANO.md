@@ -21,6 +21,20 @@ pasa esta lista, frase a frase, leído en voz alta como lo diría alguien de Mad
 | «Carrito» | *cart* | «la cesta» (lo que dicen las tiendas en España) |
 | «Saltar adonde» / sujeto que no actúa («el trabajo acabará antes») | traducción literal | sujeto humano y verbo concreto: «lo terminarás antes» |
 
+
+Calcos encontrados el 10-11-2026 (Jaime: «ese tipo de expresiones son inaceptables»), que no deben volver:
+
+| Calco | Viene de | En castellano |
+|---|---|---|
+| «Lo primero que pagas eres tú» / «Págate a ti primero» | *pay yourself first* | «Ahorra nada más cobrar», «aparta para ti antes de pagar nada» |
+| «Ve con soluciones» / «Llega con la solución» | *come with solutions* | «Llévale soluciones, no problemas» |
+| «Tu cabeza lo suelta» / «tu cabeza no puede escaparse» | *your brain lets go* | «te lo quitas de la cabeza», «te olvidas», «no te distraes» |
+| «Tu jefe te quiere a su lado» | *wants you by his side* | «acaba contando contigo» |
+| «Es ponérselo fácil para que te vea» | *make it easy for him to see you* | «es que él no lo ve» |
+| «Ves el agujero el día diez» | *see the hole* | «te das cuenta de que vas justo el día diez» |
+| «Cinco minutos con lo peor» | *five ugly minutes* | «empieza por lo que más pereza te da» |
+| «Pedir a lo loco» | — | «pedir de más» |
+
 ## 2. Giros de España que hay que buscar primero
 
 «llegar a fin de mes», «la nómina», «encapricharse», «en qué se te va (el dinero)», «lo que más pereza te da»,

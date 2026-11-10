@@ -13,14 +13,17 @@ import json, re, sys
 from pathlib import Path
 
 d = Path(sys.argv[1]); r = json.loads((d / 'reel.json').read_text())
-voz = ' '.join(re.sub(r'\s+//?\s+', ' ', (L.get('say') or L['show'])).replace('*', '') for L in r['lines'])
+def frase(L):
+    t = re.sub(r'\s+//?\s+', ' ', (L.get('say') or L['show'])).replace('*', '')
+    return t + (f' [en pantalla, bocadillo del personaje, sin voz: «{L["bocadillo"]}»]' if L.get('bocadillo') else '')
+voz = ' '.join(frase(L) for L in r['lines'])
 try:
     dur = round(json.loads((d / 'timing.json').read_text())['duration'])
 except Exception:
     dur = 55
 print(f"""Eres un lector en frío para un guion de vídeo corto (Instagram Reels, ~{dur} s). No uses herramientas ni leas archivos: trabaja solo con el texto de abajo.
 
-Ponte en la piel de esta persona: vive en Madrid, 30 años, lista, no sabe nada del tema, va con el dedo listo para pasar al siguiente vídeo. Oye esta voz UNA vez, de corrido, sin ver imágenes ni subtítulos. No puede volver atrás.
+Ponte en la piel de esta persona: vive en Madrid, 30 años, lista, no sabe nada del tema, va con el dedo listo para pasar al siguiente vídeo. Oye esta voz UNA vez, de corrido, sin subtítulos. No puede volver atrás. La voz es sintética y plana. Lo único que ve son los bocadillos que se indican entre corchetes: frases que dice un personaje en pantalla, sin voz.
 
 Texto que dice la voz:
 «{voz}»

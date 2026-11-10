@@ -13,6 +13,19 @@ los 5 ejemplos, no solo esto. Lo mejor de ambos». Los cinco ejemplos son B-R1�
   registro de Madrid. `CASTELLANO.md` (regla 16) sigue valiendo: es la lista de calcos de este estilo.
 - Donde chocan, §8.
 
+## 0. Flujo (reglas 17-20, en este orden)
+
+1. **Situación primero** (regla 19): contar la escena como se la contarías a un amigo en un bar de Madrid («cobras el
+   28 y el 15 ya vas justo»). Las frases salen de ahí, nunca del nombre inglés de la técnica (*pay yourself first*,
+   *ugly minutes*, *bring solutions*): si la idea tiene nombre inglés, se busca cómo lo dice la gente aquí, no cómo se
+   traduce.
+2. Guion con este documento. **La voz solo narra**; lo que dice o piensa un personaje va en `bocadillo` (regla 20).
+3. `python3 herramientas/redaccion.py reels/ID` → `ok`.
+4. **Corrector nativo** (`herramientas/corrector.py`, agente nuevo): se aplica su versión de cada frase marcada; se
+   repite con otro corrector hasta que no marque nada. Calcos nuevos → `CASTELLANO.md`.
+5. **Lector en frío** (`herramientas/lector.py`, agente nuevo): 8 o más y sin frases bloqueantes.
+6. Guion en texto a Jaime. Después, voz, escena y render.
+
 ## 1. Antes de escribir una sola frase
 
 1. **La idea en una frase de 12 palabras como mucho.** «El sueldo llega a fin de mes si te pagas tú primero.» Si no

@@ -91,6 +91,11 @@ def avisos(reel):
             out.append(f'{i} «{s}»: no termina en punto, dos puntos o interrogación y no lleva "join" (toma suelta)')
         if L.get('hi') and L.get('neg'):
             out.append(f'{i}: amarillo y rojo en la misma línea')
+    for i, L in enumerate(lines[:-1]):  # regla 20: la frase literal de un personaje va en bocadillo, no en la voz
+        if '«' in (L.get('say') or L.get('show') or ''):
+            out.append(f'{i}: frase entre comillas en la voz; si la dice o la piensa un personaje, va en "bocadillo" (regla 20)')
+    if not any('«' in (L.get('show') or '') or L.get('bocadillo') for L in lines):
+        out.append('no hay frase literal (bocadillo o cita) que el espectador pueda decir')
     cifras = [m for L in lines for m in re.findall(r'\d[\d.,]*\d|\d', L.get('show') or '')]
     if len(cifras) > 5:
         out.append(f'{len(cifras)} cifras ({", ".join(cifras)}); 5 como mucho, comparadas y con su unidad')
@@ -103,8 +108,6 @@ def avisos(reel):
         out.append('no hay objeción con «Estás pensando:»')
     elif not any(0.30 <= i / max(n - 1, 1) <= 0.75 for i in obj):
         out.append(f'la objeción está en la línea {obj[0]} de {n}; va hacia la mitad (30-75 %; R3 la pone al 70 %)')
-    if not any('«' in (L.get('show') or '') for L in lines):
-        out.append('no hay frase literal entrecomillada')
     todo = ' '.join(re.sub(r'\s+//?\s+', ' ', (L.get('say') or L.get('show') or '')).replace('*', '').lower() for L in lines)
     # el «por eso» es una nota, no un error: obligarlo producía conectores metidos a la fuerza (L5, 09-11-2026)
     NOTAS.clear()

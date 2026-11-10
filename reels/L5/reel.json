@@ -14,64 +14,67 @@
       "pause": 0.5
     },
     {
-      "show": "Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Deja que diga una cifra / *antes de decir la tuya.*",
-      "pause": 0.3
-    },
-    {
-      "show": "A veces tiene más / *de lo que ibas a pedir.*",
-      "pause": 0.55
-    },
-    {
-      "show": "Número dos: // di tu precio: / *«Son 1.200 €».*",
+      "show": "Número uno: // *pregunta su presupuesto antes de dar el tuyo.*",
       "pause": 0.3,
       "pausa_media": 0.7,
-      "say": "Número dos: // di tu precio: / «Son mil doscientos euros»."
+      "bocadillo": "¿Con qué presupuesto contáis?"
     },
     {
-      "show": "Y te callas. / *Sin justificarte.*",
+      "show": "Deja que el cliente diga una cifra / *antes que tú.*",
       "pause": 0.3
     },
     {
-      "show": "Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*",
+      "show": "A veces es más / *de lo que ibas a pedir.*",
       "pause": 0.55
     },
     {
-      "show": "Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*",
+      "show": "Número dos: // *di tu precio y cállate.*",
       "pause": 0.3,
-      "pausa_media": 0.7
+      "pausa_media": 0.7,
+      "bocadillo": "Son 1.200 €"
     },
     {
-      "show": "No lo regales, / *aunque sea pequeño.*",
+      "show": "*Sin justificarte.*",
       "pause": 0.3
     },
     {
-      "show": "Ponle precio / *y mándalo por escrito.*",
+      "show": "Ese silencio incómodo es normal: / si hablas tú primero, / *acabas bajando el precio.*",
       "pause": 0.55
     },
     {
-      "show": "Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*",
+      "show": "Número tres: // *los extras, aparte.*",
       "pause": 0.3,
-      "pausa_media": 0.7
+      "pausa_media": 0.7,
+      "bocadillo": "Eso lo cobro aparte"
     },
     {
-      "show": "Los cambios llegan / *a mitad del trabajo.*",
+      "show": "Si te piden algo que no estaba, / *no lo regales.*",
       "pause": 0.3
     },
     {
-      "show": "Si no lo avisas, / *los haces gratis.*",
+      "show": "Ponle precio / *y déjalo por escrito.*",
       "pause": 0.55
     },
     {
-      "show": "Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*",
+      "show": "Número cuatro: // *avisa antes de empezar.*",
+      "pause": 0.3,
+      "pausa_media": 0.7,
+      "bocadillo": "Si cambia el encargo, cambia el precio"
+    },
+    {
+      "show": "Los cambios siempre llegan / *a mitad del trabajo.*",
       "pause": 0.3
     },
     {
-      "show": "Mándaselo a quien rebaja su precio / *sin que se lo pidan.*",
+      "show": "Si no lo has avisado, / *los haces gratis.*",
+      "pause": 0.55
+    },
+    {
+      "show": "Cobrar más no es pedir de más: / *es saber qué decir.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Mándaselo a quien baja el precio / *sin que se lo pidan.*",
       "pause": 0.3
     }
   ],
@@ -180,5 +183,28 @@
         "1: «Y la última / *te ahorra horas gratis.*» → «Y la última / *evita que trabajes gratis.*»"
       ]
     }
-  ]
+  ],
+  "situacion": "Trabajas por tu cuenta y siempre acabas cobrando menos de lo que querías: das el precio el primero, lo justificas, te piden cosas de más y las haces gratis, y a mitad del encargo te lo cambian y no te atreves a cobrarlo.",
+  "nativo": {
+    "fecha": "2026-11-10",
+    "regla": "19 y 20",
+    "antes": [
+      "Cuatro frases para cobrar más / *si trabajas por tu cuenta.*",
+      "Y la última / *evita que trabajes gratis.*",
+      "Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*",
+      "Deja que diga una cifra / *antes de decir la tuya.*",
+      "A veces tiene más / *de lo que ibas a pedir.*",
+      "Número dos: // di tu precio: / *«Son 1.200 €».*",
+      "Y te callas. / *Sin justificarte.*",
+      "Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*",
+      "Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*",
+      "No lo regales, / *aunque sea pequeño.*",
+      "Ponle precio / *y mándalo por escrito.*",
+      "Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*",
+      "Los cambios llegan / *a mitad del trabajo.*",
+      "Si no lo avisas, / *los haces gratis.*",
+      "Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*",
+      "Mándaselo a quien rebaja su precio / *sin que se lo pidan.*"
+    ]
+  }
 }

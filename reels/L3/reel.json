@@ -10,16 +10,16 @@
       "pause": 0.35
     },
     {
-      "show": "Estos tres pasos lo arreglan / *sin echar ni una hora más.*",
+      "show": "Con estas tres cosas se entera, / *sin echar ni una hora más.*",
       "pause": 0.5
     },
     {
-      "show": "Número uno: // *ve con soluciones.*",
+      "show": "Número uno: // *llévale soluciones, no problemas.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "No le lleves solo el problema. / *Llévale dos opciones.*",
+      "show": "Si algo falla, / *llévale dos opciones.*",
       "pause": 0.3
     },
     {
@@ -27,7 +27,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*",
+      "show": "Así, cuando algo se tuerce, / *acaba contando contigo.*",
       "pause": 0.55
     },
     {
@@ -36,24 +36,25 @@
       "pausa_media": 0.7
     },
     {
-      "show": "No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*",
-      "pause": 0.3
+      "show": "No le digas que ya lo mirarás: / *dale un día concreto.*",
+      "pause": 0.3,
+      "bocadillo": "Lo tienes el jueves"
     },
     {
-      "show": "Y el jueves, *lo tiene.*",
+      "show": "Y ese día, *se lo das.*",
       "pause": 0.35
     },
     {
-      "show": "Tres fechas cumplidas valen más / *que diez horas extra.*",
+      "show": "Tres plazos cumplidos valen más / *que diez horas extra.*",
       "pause": 0.55
     },
     {
-      "show": "Número tres: // *cuenta lo que has hecho.*",
+      "show": "Número tres: // *cuéntale lo que has hecho.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
     {
-      "show": "Una vez al mes, mándale / *tres líneas en un correo.*",
+      "show": "Una vez al mes, / *un correo de tres líneas.*",
       "pause": 0.3
     },
     {
@@ -61,7 +62,7 @@
       "pause": 0.3
     },
     {
-      "show": "Y no es presumir: / *es ponérselo fácil para que te vea.*",
+      "show": "Y no es tirarte flores: / *es que él no lo ve.*",
       "pause": 0.55
     },
     {
@@ -133,5 +134,27 @@
       "nota": "8/10, sin bloqueantes. PASA.",
       "cambios": []
     }
-  ]
+  ],
+  "situacion": "Eres el que más horas echa de la oficina y tu jefe ni se entera. Lo que se ve no son las horas: es quién le arregla los problemas, quién cumple lo que dice y quién le cuenta lo que ha hecho.",
+  "nativo": {
+    "fecha": "2026-11-10",
+    "regla": "19 y 20",
+    "antes": [
+      "Echas más horas que nadie / *y tu jefe ni se entera.*",
+      "Estos tres pasos lo arreglan / *sin echar ni una hora más.*",
+      "Número uno: // *ve con soluciones.*",
+      "No le lleves solo el problema. / *Llévale dos opciones.*",
+      "Y dile cuál / *elegirías tú.*",
+      "Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*",
+      "Número dos: // *pon fecha y cúmplela.*",
+      "No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*",
+      "Y el jueves, *lo tiene.*",
+      "Tres fechas cumplidas valen más / *que diez horas extra.*",
+      "Número tres: // *cuenta lo que has hecho.*",
+      "Una vez al mes, mándale / *tres líneas en un correo.*",
+      "Lo que no cuentas, / *para tu jefe no existe.*",
+      "Y no es presumir: / *es ponérselo fácil para que te vea.*",
+      "Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*"
+    ]
+  }
 }
