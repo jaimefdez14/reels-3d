@@ -536,7 +536,7 @@ function drawFondo() {
 
 // ---------- dibujo de items ----------
 function itemAlpha(it, t) { // entrada y salida por defecto: fundido + desde oscuro; lo que nace en t ≤ 0 ya está en el fotograma 0
-  const fin = it.entra ?? (it.t0 <= 0 ? 1e-3 : 0.35), fout = it.sale ?? 0.35; const a = clamp((t - it.t0) / fin) * clamp((it.t1 - t) / fout); return a * kf(it.a, t, 1);
+  const fin = it.entra ?? 0.35, fout = it.sale ?? 0.35; const a = (it.t0 <= 0 ? 1 : clamp((t - it.t0) / fin)) * clamp((it.t1 - t) / fout); return a * kf(it.a, t, 1);
 }
 const TMP = mk(), tmp = TMP.getContext('2d');
 function drawItem(c, it, t, cm, dim, fantasma) {

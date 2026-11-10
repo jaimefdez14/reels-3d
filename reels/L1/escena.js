@@ -1,13 +1,13 @@
 // L1 · Cuatro reglas para que tu sueldo dure todo el mes (estilo B, molde de B-R3 + cierre de B-R1/B-R3)
 const w = E.w, wf = E.wf;
 const D = TIMING.duration;
-E.config({ fondo: 'degradado', sub: 'dos', subY: 680, progreso: { n: 4, estilo: 'barras', aparece: w(1, 0), gap: 70 } });
+E.config({ fondo: 'degradado', sub: 'dos', subY: 680, polvo: true, gancho: { lineas: [0], escala: 1.25 }, progreso: { n: 4, estilo: 'barras', aparece: w(1, 0), gap: 70 } });
 
 // tiempos de las transiciones de número: T = «Número», S = la escena nueva entra con el nombre del punto
 const T1 = w(2, 0) - 0.05, S1 = w(2, 2) - 0.12;
 const T2 = w(5, 0) - 0.05, S2 = w(5, 2) - 0.12;
 const T3 = w(9, 0) - 0.05, S3 = w(9, 2) - 0.12;
-const T4 = w(13, 0) - 0.05, S4 = w(13, 2) - 0.12;
+const T4 = w(13, 0) - 0.05, S4 = w(13, 3) - 0.12; // «Y la cuarta:» son tres palabras
 const TC = w(16, 0) - 0.1; // cierre
 
 // cámara: plano lateral fijo con acercamientos lentos; se recoloca a oscuras en cada número
@@ -19,16 +19,27 @@ E.camara([
   [S4 - 0.05, [0, -380, 1], 'lin'], [TC, [0, -395, 1.05]],
 ]);
 
-// ---------- gancho: el contador llega al día 20 y la pila se vacía; con «cuatro reglas» el anillo se dibuja y la pila se rellena ----------
-E.figura('yo', { t0: 0, t1: T1 + 0.45, x: -170, cara: true, toca: ['pila'],
-  poses: [[0, 'de_pie'], [w(0, 5), 'triste'], [w(0, 10), 'senalar'], [w(1, 0), 'ofrecer'], [wf(1, -1) - 0.2, 'de_pie']],
-  sonrisa: [[w(0, 5), -0.6], [w(0, 10), -0.6], [w(0, 12), 1.2]] });
-E.obj('diaH', 'contador', { t0: 0.15, t1: w(0, 9), x: 140, y: -330, v: [[0.3, 1], [w(0, 3) + 0.1, 20, 'inout']], pre: 'día', size: 70, col: 'txt', miles: false,
-  luz: [[w(0, 7), 1], [w(0, 9), 0.2]], caja: [-130, -40, 260, 80] });
-E.obj('pila', 'pila', { t0: 0, t1: T1 + 0.45, x: 140, n: 9, w: 190, hh: 30, k: [[0, 9], [w(0, 4), 9], [w(0, 7) + 0.1, 0, 'in'], [w(0, 11), 0], [wf(0, -1) + 0.4, 9, 'out']], caja: [-95, -250, 190, 250], refl: true });
-E.obj('anilloH', 'anillo', { t0: w(0, 10) - 0.1, t1: T1 + 0.45, x: -10, y: -250, rx: 340, ry: 285, p: [[w(0, 10) - 0.1, 0], [wf(0, -1) + 0.3, 1, 'out']], rodea: true });
-E.obj('chH', 'chispas', { t0: wf(0, -1) + 0.4, t1: wf(0, -1) + 1.2, x: 140, y: -150, r0: 120, r1: 220, inspeccion: false });
-E.golpe(wf(0, -1) + 0.4, 0.04);
+// ---------- gancho visual (REDACCION §2c): fotograma 0 lleno; la nómina se va volando hasta «0 €»; las cuatro reglas la rellenan ----------
+// palabras: Cobras(0) la(1) nómina(2) y(3) a(4) los(5) veinte(6) días(7) no(8) te(9) queda(10) ni(11) un(12) euro(13)
+E.figura('yo', { t0: 0, t1: T1 + 0.45, x: -190, cara: true, toca: ['pila'],
+  poses: [[0, 'celebrar'], [w(0, 4), 'de_pie'], [w(0, 8), 'triste'], [w(1, 8), 'de_pie'], [wf(1, -1), 'celebrar']],
+  sonrisa: [[0, 1.3], [w(0, 4), 0.2], [w(0, 9), -0.9], [w(1, 8), -0.9], [wf(1, -1), 1.4]] });
+E.obj('rayosH', 'rayos', { t0: 0, t1: T1 + 0.3, x: 150, y: -140, r: 360, z: -2, p: [[0, 0.9], [w(0, 4), 0.9], [w(0, 7), 0], [w(1, 8), 0], [wf(1, -1) + 0.3, 1, 'out']], inspeccion: false });
+E.obj('rotNom', 'rotulo', { t0: 0, t1: w(0, 8), x: 150, y: -290, texto: 'NÓMINA', size: 30, col: '#c9ccca', caja: [-80, -16, 160, 32] });
+E.obj('pila', 'pila', { t0: 0, t1: T1 + 0.45, x: 150, n: 9, w: 190, hh: 30, barrido: [w(0, 2) - 0.1, wf(1, -1) + 0.2],
+  k: [[0, 9], [w(0, 4), 9], [w(0, 7) + 0.2, 0, 'in'], [w(1, 8), 0], [wf(1, -1) + 0.3, 9, 'out']], caja: [-95, -250, 190, 250], refl: true });
+for (let i = 0; i < 6; i++) { const a = w(0, 4) + i * 0.16; // las monedas salen volando, con estela
+  E.obj('vuela' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.05, sale: 0.2, r: 26, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
+    x: [[a, 150], [a + 0.8, 520 + i * 40, 'in']], y: [[a, -230 + i * 12], [a + 0.35, -520 - (i % 3) * 30, 'out'], [a + 0.8, -300, 'in']] }); }
+E.obj('diaH', 'contador', { t0: 0, t1: w(0, 9), x: 150, y: -365, v: [[0, 1], [w(0, 4), 1], [w(0, 7) + 0.1, 20, 'inout']], pre: 'día', size: 64, col: 'txt', miles: false,
+  luz: [[w(0, 7), 1], [w(0, 9), 0.2]], caja: [-120, -38, 240, 76] });
+E.obj('ceroH', 'contador', { t0: w(0, 11), t1: w(1, 0) + 0.3, x: 150, y: -180, v: 0, suf: ' €', size: 110, col: '#e4574f', miles: false, pop: true, caja: [-120, -60, 240, 120] });
+E.temblor(w(0, 11), 18, 0.5); E.golpe(w(0, 11), 0.05);
+// «Cuatro reglas»: cuatro monedas numeradas entran en fila sobre la pila
+[0, 1, 2, 3].forEach(i => { const a = w(1, 0) + i * 0.12; E.obj('regla' + i, 'moneda', { t0: a, t1: T1 - 0.05, sale: 0.2, x: 150 + (i - 1.5) * 92, y: -430, r: 34, n: i + 1, pop: true, sfx: i === 0, inspeccion: false }); });
+E.obj('anilloH', 'anillo', { t0: w(1, 8) - 0.1, t1: T1 + 0.45, x: -20, y: -250, rx: 360, ry: 285, p: [[w(1, 8) - 0.1, 0], [wf(1, -1) + 0.3, 1, 'out']], rodea: true });
+E.obj('confH', 'confeti', { t0: wf(1, -1) + 0.25, t1: wf(1, -1) + 2.2, x: 150, y: -260, dur: 1.9, n: 50, capa: 'mundo', inspeccion: false });
+E.destello(wf(1, -1) + 0.25, 0.28); E.golpe(wf(1, -1) + 0.25, 0.05);
 
 // ---------- 1 · págate primero ----------
 E.numero(1, T1, S1, { hacia: 'pila1' });
