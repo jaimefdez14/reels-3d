@@ -255,7 +255,7 @@ const TIPOS = {
     const r = kf(o.r, t, 150); disco(c, r); c.strokeStyle = C.amOsc; c.lineCap = 'round';
     for (let i = 0; i < 12; i++) { const a = i / 12 * 2 * Math.PI; c.lineWidth = r * 0.025; c.beginPath(); c.moveTo(Math.cos(a) * r * 0.82, Math.sin(a) * r * 0.82); c.lineTo(Math.cos(a) * r * 0.9, Math.sin(a) * r * 0.9); c.stroke(); }
     const p = clamp(kf(o.p, t, 0.25)); c.globalAlpha *= 0.55; arcoP(c, r * 0.7, p, r * 0.05, C.amOsc); c.globalAlpha /= 0.55;
-    texto(c, o.texto || '15:00', 0, r * 0.03, r * 0.36, '#2d2711', 600);
+    texto(c, kf(o.texto, t, '15:00'), 0, r * 0.03, r * 0.36, '#2d2711', 600);
   },
   // bocadillo de línea con «···» o texto corto
   bocadillo(c, o, t) {
