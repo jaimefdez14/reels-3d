@@ -78,11 +78,11 @@ E.figura('yo3', { t0: S3 - 0.1, t1: T4 + 0.45, x: -250, cara: true, toca: ['comp
   poses: [[0, 'de_pie'], [w(10, 2), 'senalar'], [w(10, 7), 'de_pie'], [w(11, 0), 'pensar'], [w(11, 4), 'celebrar'], [w(12, 0), 'de_pie'], [w(12, 4), 'encoger'], [wf(12, -1), 'de_pie']],
   sonrisa: [[w(10, 2), 0.6], [w(10, 6), 1.4], [w(11, 4), 1.4], [w(12, 4), 0.2], [w(12, 7), -0.4]] });
 E.obj('rayos3', 'rayos', { t0: w(10, 2), t1: w(10, 8), x: 220, y: -330, r: 300, z: -2, p: [[w(10, 2), 0], [w(10, 5), 1], [w(10, 7), 1], [w(10, 8), 0]], inspeccion: false });
-E.obj('compra', 'compra', { t0: S3 - 0.1, t1: T4 + 0.45, x: 220, y: -330, w: 300, h: 380, caja: [-150, -190, 300, 380], barrido: [w(10, 6) - 0.2],
+E.obj('compra', 'compra', { t0: S3 - 0.1, t1: T4 + 0.1, x: 220, y: -330, w: 300, h: 380, caja: [-150, -190, 300, 380], barrido: [w(10, 6) - 0.2],
   boton: [[0, 'COMPRAR'], [w(10, 8), 'EN ESPERA']], espera: [[w(10, 7), 0], [w(10, 9), 1]], luz: [[w(12, 4), 1], [w(12, 7), 0.55]] });
 E.golpe(w(10, 7), 0.035);
-E.obj('nube', 'bocadillo', { t0: w(11, 0) - 0.05, t1: T4 + 0.45, x: -50, y: -470, w: 262, h: 92, texto: 'Me lo he ganado', size: 32, pop: true, on: [[w(11, 4), 0], [w(11, 5), 1], [w(12, 4), 1], [w(12, 7), 0]],
-  luz: [[w(12, 4), 1], [w(12, 8), 0.45]], sobrevive: true, r: 50, caja: [-131, -46, 262, 118] });
+E.obj('nube', 'bocadillo', { t0: w(11, 0) - 0.05, t1: T4 + 0.45, x: -110, y: -562, w: 300, h: 80, texto: 'Me lo he ganado', size: 30, pop: true, on: [[w(11, 4), 0], [w(11, 5), 1], [w(12, 4), 1], [w(12, 7), 0]],
+  luz: [[w(12, 4), 1], [w(12, 8), 0.45]], sobrevive: true, r: 50, caja: [-150, -40, 300, 106] });
 E.obj('dias3', 'contador', { t0: w(12, 0), t1: T4 - 0.05, x: 220, y: -85, v: [[w(12, 0), 0], [w(12, 3), 2, 'out']], suf: ' días', size: 48, col: 'txt', miles: false, pop: true, caja: [-100, -30, 200, 60] });
 
 // ---------- 4 · repasa los gastos todos los domingos ----------

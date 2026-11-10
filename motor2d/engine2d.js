@@ -445,7 +445,7 @@ function capLayout(cp) {
   // ajuste a 900 px de ancho
   const out = []; for (const ln of lines) { let cur = []; for (const w of ln) { ctx.font = w.y && !una ? f2 : f1; const test = [...cur, w]; const width = test.reduce((a, x) => { ctx.font = x.y && !una ? f2 : f1; return a + ctx.measureText(x.s + ' ').width; }, 0); if (width > 900 && cur.length) { out.push(cur); cur = [w]; } else cur = test; } out.push(cur); }
   const lh = (una ? 66 : 74) * G; const y0 = (cp.y ?? CFG.subY) - (out.length - 1) * lh / 2; const placed = [];
-  out.forEach((ln, li) => { const widths = ln.map(w => { ctx.font = w.y && !una ? f2 : f1; return ctx.measureText(w.s).width; }); ctx.font = f1; const sp = ctx.measureText(' ').width; const tot = widths.reduce((a, b) => a + b, 0) + sp * (ln.length - 1); let x = W / 2 - tot / 2; ln.forEach((w, k) => { placed.push({ w, x, y: y0 + li * lh, font: w.y && !una ? f2 : f1, col: w.y ? C.amTxt : C.txt, width: widths[k] }); x += widths[k] + sp; }); });
+  out.forEach((ln, li) => { const widths = ln.map(w => { ctx.font = w.y && !una ? f2 : f1; return ctx.measureText(w.s).width; }); ctx.font = f1; const sp = Math.max(ctx.measureText(' ').width, 0.34 * sz2); /* hueco amplio: el pop de la palabra amarilla no lo come (10-11-2026) */ const tot = widths.reduce((a, b) => a + b, 0) + sp * (ln.length - 1); let x = W / 2 - tot / 2; ln.forEach((w, k) => { placed.push({ w, x, y: y0 + li * lh, font: w.y && !una ? f2 : f1, col: w.y ? C.amTxt : C.txt, width: widths[k] }); x += widths[k] + sp; }); });
   return { placed, box: { x: Math.min(...placed.map(p => p.x)) - 10, y: y0 - lh * 0.55, w: Math.max(...placed.map(p => p.x + p.width)) - Math.min(...placed.map(p => p.x)) + 20, h: out.length * lh + 6 } };
 }
 function drawCaps(t) {
@@ -459,7 +459,7 @@ function drawCaps(t) {
       let k = EASE.out(clamp((t - p.w.t0 + 0.04) / 0.2)); if (pre && k < 1) { if (k <= 0) { ctx.save(); ctx.globalAlpha = 0.3 * out; ctx.font = p.font; ctx.fillStyle = p.col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(p.w.s, p.x, p.y); ctx.restore(); continue; } } if (k <= 0) continue;
       ctx.save(); ctx.globalAlpha = k * out; if (k < 1) ctx.filter = `blur(${((1 - k) * 8).toFixed(1)}px)`;
       ctx.font = p.font; ctx.fillStyle = p.col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
-      if (p.w.y) { const kb = clamp((t - p.w.t0) / 0.32); const sc = 1 + 0.07 * Math.sin(kb * Math.PI); ctx.translate(p.x + p.width / 2, p.y); ctx.scale(sc, sc); ctx.fillText(p.w.s, -p.width / 2, (1 - k) * 8); } else ctx.fillText(p.w.s, p.x, p.y + (1 - k) * 8);
+      if (p.w.y) { const kb = clamp((t - p.w.t0) / 0.32); const sc = 1 + 0.045 * Math.sin(kb * Math.PI); ctx.translate(p.x + p.width / 2, p.y); ctx.scale(sc, sc); ctx.fillText(p.w.s, -p.width / 2, (1 - k) * 8); } else ctx.fillText(p.w.s, p.x, p.y + (1 - k) * 8);
       ctx.restore();
     }
   }
