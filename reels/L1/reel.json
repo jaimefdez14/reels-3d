@@ -140,6 +140,11 @@
         "15: «Así lo pillas el día diez, / *no el día veinte.*» → «Así ves el agujero el día diez, / *no el día veinte.*»",
         "16: «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien / *a día veinte ya está a cero.*» → «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*»"
       ]
+    },
+    {
+      "ronda": "nativo-1",
+      "nota": "8/10, sin bloqueantes. PASA",
+      "cambios": []
     }
   ],
   "situacion": "Cobras el 28, el 15 ya vas justo y el 20 estás a cero. No es que ganes poco: es que el dinero se va antes de que te des cuenta. Lo que funciona: apartar algo el mismo día que cobras, separar lo fijo de los caprichos, esperar un par de días antes de comprarte algo y echar un vistazo a los gastos el domingo.",

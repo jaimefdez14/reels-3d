@@ -21,3 +21,6 @@ Bloqueante: «eres a quien quiere a su lado» (¿quién quiere a quién?). Estil
 
 # Ronda 6 (lector nuevo) · nota 8/10 · PASA
 Sin bloqueantes. Estilo: «tu jefe te quiere a su lado» no cierra del todo el gancho; «ve con soluciones» suena a manual; «tres líneas» sin decir de qué.
+
+# Lector tras el corrector nativo (10-11) · 8,5/10, sin bloqueantes. PASA (matiz aplicado)
+Matiz aplicado: «te llama a ti» se lee como más marrones (tercera vez que lo marca un lector) → «cuenta contigo». Otros: «no se entera» repetido; la cifra 3 frente a 10 sin base.

@@ -162,6 +162,11 @@
         "14: «Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.» → «Es la ley de Pareto.»",
         "15: «Hazla primero; / las demás pueden esperar.» → «Busca esa tarea y hazla primero; / las demás pueden esperar.»"
       ]
+    },
+    {
+      "ronda": "nativo-1",
+      "nota": "8/10, sin bloqueantes. PASA",
+      "cambios": []
     }
   ],
   "situacion": "En el trabajo te pasan siempre las mismas cosas: una tarea que te iba a llevar una mañana se come el día entero, todo tarda más de lo que dijiste, te mosqueas porque alguien no te contesta, tienes algo a medias dándote vueltas y te pasas el día con cosas que no importan. Todo eso tiene nombre.",

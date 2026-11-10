@@ -16,3 +16,6 @@ Bloqueantes: «Por eso este es el mejor» (el porqué no sale de la frase anteri
 
 # Ronda 4 (lector nuevo) · nota 8/10 · PASA
 Sin bloqueantes fuertes. Estilo: «Número uno: cinco minutos…» choca número y cifra; gancho genérico; tras el tercero no hay motivo para quedarse.
+
+# Lector tras el corrector nativo (10-11) · 8/10; casi bloqueante: el nombre del primer truco no era el truco (la alarma) y chocaba con el cierre
+Casi bloqueantes: «El primero: empieza por lo que más pereza te da» (no es el truco y choca con el cierre); «por eso funciona tan bien» promete más de lo que explica. Estilo: «Y el tercero» sobra la Y.

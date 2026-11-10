@@ -27,7 +27,7 @@
       "pause": 0.3
     },
     {
-      "show": "Así, cuando hay un lío, / *te llama a ti.*",
+      "show": "Así, cuando hay un lío, / *cuenta contigo.*",
       "pause": 0.55
     },
     {
@@ -133,6 +133,13 @@
       "ronda": 6,
       "nota": "8/10, sin bloqueantes. PASA.",
       "cambios": []
+    },
+    {
+      "ronda": "nativo-1",
+      "nota": "8,5/10, sin bloqueantes. PASA (matiz aplicado)",
+      "cambios": [
+        "5: «Así, cuando hay un lío, / *te llama a ti.*» → «Así, cuando hay un lío, / *cuenta contigo.*»"
+      ]
     }
   ],
   "situacion": "Eres el que más horas echa de la oficina y tu jefe ni se entera. Lo que se ve no son las horas: es quién le arregla los problemas, quién cumple lo que dice y quién le cuenta lo que ha hecho.",

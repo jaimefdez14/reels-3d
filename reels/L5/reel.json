@@ -1,12 +1,12 @@
 {
   "id": "L5",
   "estilo": "B (listas en negro; regla 15: satisfying)",
-  "titulo": "Cuatro frases para cobrar más si trabajas por tu cuenta",
+  "titulo": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
   "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cuatro frases para cobrar más / *si trabajas por tu cuenta.*",
+      "show": "Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*",
       "pause": 0.35
     },
     {
@@ -20,7 +20,7 @@
       "bocadillo": "¿Qué presupuesto tenéis?"
     },
     {
-      "show": "Deja que el cliente diga una cifra / *antes que tú.*",
+      "show": "Que diga él la cifra / *primero.*",
       "pause": 0.3
     },
     {
@@ -42,7 +42,7 @@
       "pause": 0.55
     },
     {
-      "show": "La tercera: // *los extras, aparte.*",
+      "show": "La tercera: // *cobra los extras aparte.*",
       "pause": 0.3,
       "pausa_media": 0.7,
       "bocadillo": "Eso lo cobro aparte"
@@ -181,6 +181,15 @@
       "nota": "8/10; único bloqueante: «te ahorra horas gratis» se entiende al revés → se vuelve a «evita que trabajes gratis», que los lectores de las rondas 3 y 4 entendieron sin problema. PASA.",
       "cambios": [
         "1: «Y la última / *te ahorra horas gratis.*» → «Y la última / *evita que trabajes gratis.*»"
+      ]
+    },
+    {
+      "ronda": "nativo-1",
+      "nota": "7/10; bloqueante: el gancho promete «cuatro frases» y la voz ya no las dice (van en bocadillo) → «cuatro reglas». Matices aplicados con versiones de los correctores: 3 (repetía la 2), 8 (sin verbo).",
+      "cambios": [
+        "0: «Cuatro frases para cobrar más / *si trabajas por tu cuenta.*» → «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*»",
+        "3: «Deja que el cliente diga una cifra / *antes que tú.*» → «Que diga él la cifra / *primero.*»",
+        "8: «La tercera: // *los extras, aparte.*» → «La tercera: // *cobra los extras aparte.*»"
       ]
     }
   ],

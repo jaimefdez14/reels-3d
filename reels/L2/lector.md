@@ -16,3 +16,6 @@ Bloqueantes: «Si no te contestan, no es mala fe» (¿quién, a qué?) y «Una t
 
 # Ronda 4 (lector nuevo) · nota 8/10 · PASA
 Sin bloqueantes. Estilo: «navaja» despista un segundo; «calcula lo que tardas» mejor «lo que crees que tardarás»; Zeigarnik no se retiene (la idea sí); falta comprobar cómo pronuncia Kokoro Hofstadter y Zeigarnik.
+
+# Lector tras el corrector nativo (10-11) · 8/10, sin bloqueantes. PASA
+Matices: Zeigarnik no se retiene de oído; «navaja» rompe la palabra «ley»; «Ya las sufrías» referente lejano; patrón idéntico en los cinco bloques.

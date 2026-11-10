@@ -10,11 +10,11 @@
       "pause": 0.35
     },
     {
-      "show": "Y el tercero / *es el que mejor funciona.*",
+      "show": "El tercero / *es el que mejor funciona.*",
       "pause": 0.5
     },
     {
-      "show": "El primero: // *empieza por lo que más pereza te da.*",
+      "show": "El primero: // *solo cinco minutos.*",
       "pause": 0.3,
       "pausa_media": 0.7
     },
@@ -157,6 +157,14 @@
         "10: «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*» → «Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*»",
         "12: «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*» → «Cierra todas / *menos la de la tarea.*»",
         "15: «Al acabar el día, deja a medias / *una parte fácil de la tarea.*» → «Al acabar el día, para / *en mitad de algo fácil.*»"
+      ]
+    },
+    {
+      "ronda": "nativo-1",
+      "nota": "8/10; casi bloqueante: el nombre del primer truco no era el truco (la alarma) y chocaba con el cierre",
+      "cambios": [
+        "2: «El primero: // *empieza por lo que más pereza te da.*» → «El primero: // *solo cinco minutos.*»",
+        "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»"
       ]
     }
   ],

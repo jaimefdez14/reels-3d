@@ -23,3 +23,6 @@ Bloqueantes: la cita del número uno se mezcla con la narración («contáis» d
 
 # Ronda 6 (lector nuevo) · nota 8/10 · PASA (con el anuncio devuelto a «evita que trabajes gratis»)
 Bloqueante: «te ahorra horas gratis» (se entiende al revés). Estilo: «Son mil doscientos euros» aún puede sonar a dato; «mándalo por escrito» ambiguo.
+
+# Lector tras el corrector nativo (10-11) · nota 7/10
+Bloqueante: «Cuatro frases para cobrar más» — solo oyendo no se oye ninguna frase (van en bocadillo) → «Cuatro reglas…». Matices: «Deja que el cliente diga una cifra antes que tú» repite; «los extras, aparte» sin verbo; «Y sin dar explicaciones» colgada.

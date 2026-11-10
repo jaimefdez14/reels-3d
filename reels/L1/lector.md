@@ -16,3 +16,6 @@ Bloqueantes: «Así lo pillas el día diez» («lo» sin referente); «lo que qu
 
 # Ronda 4 (lector nuevo) · nota 8/10 · PASA
 Sin bloqueantes. Estilo: «lo primero que pagas eres tú» abstracto; «dos cuentas más» obliga a contar; la regla 3 parece redundante con la cuenta de caprichos; «la cesta» solo vale para internet.
+
+# Lector tras el corrector nativo (10-11) · 8/10, sin bloqueantes. PASA
+Matices: apartar el 10 % si ya estás a cero; «En ese momento» algo lejos; «Cinco minutos y sin agobios» relleno.
