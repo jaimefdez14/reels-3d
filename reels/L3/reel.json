@@ -10,7 +10,7 @@
       "pause": 0.35
     },
     {
-      "show": "Haz estas tres cosas y se entera, / *sin echar ni una hora más.*",
+      "show": "Con tres cosas se entera, / *sin que eches ni una hora más.*",
       "pause": 0.5
     },
     {
@@ -188,6 +188,15 @@
         "3: «Si hay un marrón, / *llévale dos opciones.*» → «Si hay un marrón, / *ve con dos opciones.*»",
         "6: «La segunda: // *ponle fecha y cúmplela.*» → «La segunda: // *ponte un plazo y cúmplelo.*»",
         "14: «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»"
+      ]
+    }
+  ],
+  "gancho": [
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+      "cambios": [
+        "1: «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*» → «Con tres cosas se entera, / *sin que eches ni una hora más.*»"
       ]
     }
   ]

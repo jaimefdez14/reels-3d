@@ -6,11 +6,11 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*",
+      "show": "Si trabajas por tu cuenta, / *seguramente cobras menos de lo que podrías.*",
       "pause": 0.35
     },
     {
-      "show": "Y con la última / *dejas de trabajar gratis.*",
+      "show": "Cuatro reglas para arreglarlo. / *Y con la última dejas de trabajar gratis.*",
       "pause": 0.5
     },
     {
@@ -254,6 +254,16 @@
       "cambios": [
         "11: «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*» → «La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*»",
         "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Al final, cobrar más / *es saber qué decir.*»"
+      ]
+    }
+  ],
+  "gancho": [
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+      "cambios": [
+        "0: «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*» → «Si trabajas por tu cuenta, / *seguramente cobras menos de lo que podrías.*»",
+        "1: «Y con la última / *dejas de trabajar gratis.*» → «Cuatro reglas para arreglarlo. / *Y con la última dejas de trabajar gratis.*»"
       ]
     }
   ]

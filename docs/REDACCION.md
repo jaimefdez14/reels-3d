@@ -62,6 +62,36 @@ Ganchos válidos: número + promesa (el de la referencia), y dentro de él los t
 sueldo te llegue»), **creencia** («Cinco leyes que nadie te explica…»), **lección**. No valen: «Hoy te voy a contar…»,
 «¿Sabías que…?», «Probablemente…», ni una historia sin tensión.
 
+## 2b. El gancho: buenas prácticas (Jaime, 10-11-2026: «¿son buenos los hooks? ¿captan la atención?»)
+
+Lo que decide si alguien se queda son los primeros 1,5-3 segundos. Reglas:
+1. **La primera frase es una situación del espectador, no la lista.** Algo concreto que le pasa a él, con un detalle que
+   le haga decir «ese soy yo» («Cobras el 28 y el 20 ya estás a cero», «Llevas tres días dejándolo para mañana»). El
+   número («cuatro reglas», «cinco trucos») va en la **segunda** frase, como respuesta. «Cinco X para…» de entrada es el
+   formato más visto y no para el dedo.
+2. **Conflicto o pérdida antes que beneficio.** Lo que te está costando (dinero, horas, que no te vean) engancha más que
+   lo que vas a ganar.
+3. **Cifras y nombres concretos, siempre con su unidad**: «la nómina el día 28», «ni un euro», «tres días», «una hora».
+   Una cifra suelta («el 28», «a cero») no se entiende al oído: Jaime, sobre «Si el día veinte ya estás a cero»: «no se
+   entiende del todo... ¿euros? ¿cada mes?». Nada de «muchas veces», «a menudo».
+4. **≤ 12 palabras y ≤ 3 segundos** la primera frase. Sin «hoy», «te voy a contar», «¿sabías que…?».
+5. **Bucle abierto**: la segunda frase promete algo que llega más tarde («y el tercero es el que mejor funciona», «y
+   ninguna es ganar más»), y el vídeo lo cumple de verdad.
+6. **El gancho también es visual** (§2c): el primer fotograma ya cuenta el problema.
+7. **El envío final vuelve al gancho** (la misma situación con otras palabras).
+
+## 2c. El gancho visual
+
+- **Fotograma 0 lleno**: nada de empezar en negro o con fundido. En el primer fotograma ya están el muñeco, el objeto
+  del problema y la primera frase del gancho en grande.
+- **La imagen enseña el problema de la primera frase**, no la solución: el contador que llega al día 20 y la cuenta
+  vacía; la barra de la tarea que se estira; el reloj que suma horas con el jefe de espaldas; el calendario con
+  «mañana» tachado tres veces; la etiqueta de precio que se encoge.
+- **Movimiento desde el primer fotograma** (algo ya se está moviendo en el fotograma 0) y un **golpe** (zoom, destello,
+  temblor) en la palabra fuerte del gancho.
+- **El número de la segunda frase aparece como objeto** (las monedas 1-4, los cinco puntos) y se convierte en el indicador
+  de progreso.
+
 ## 3. La frase
 
 **Lo conocido delante, lo nuevo al final.** En castellano el acento de la voz cae al final y es lo que se recuerda; en

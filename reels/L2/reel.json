@@ -6,7 +6,7 @@
   "coverT": 1.8,
   "lines": [
     {
-      "show": "Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.",
+      "show": "Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.",
       "pause": 0.45
     },
     {
@@ -222,6 +222,15 @@
         "5: «Y pasa siempre. / Es la ley de Hofstadter.» → «Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.»",
         "15: «Busca cuál es y hazla la primera. / Lo demás, que espere.» → «Busca cuál es y empieza por ella. / Lo demás, que espere.»",
         "16: «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.» → «Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.»"
+      ]
+    }
+  ],
+  "gancho": [
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+      "cambios": [
+        "0: «Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.» → «Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.»"
       ]
     }
   ]

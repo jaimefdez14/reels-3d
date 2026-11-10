@@ -6,11 +6,11 @@
   "coverT": 1.7,
   "lines": [
     {
-      "show": "Cinco trucos para no dejarlo todo / *para mañana.*",
+      "show": "Llevas tres días / *dejándolo para mañana.*",
       "pause": 0.35
     },
     {
-      "show": "El tercero / *es el que mejor funciona.*",
+      "show": "Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*",
       "pause": 0.5
     },
     {
@@ -225,6 +225,16 @@
         "4: «Cuando suene, puedes parar. / *Y casi nunca lo haces.*» → «Cuando suene, puedes parar. / *Y casi nunca paras.*»",
         "15: «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*» → «Cuando pares por hoy, / *para justo antes de algo fácil.*»",
         "17: «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*» → «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
+      ]
+    }
+  ],
+  "gancho": [
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+      "cambios": [
+        "0: «Cinco trucos para no dejarlo todo / *para mañana.*» → «Llevas tres días / *dejándolo para mañana.*»",
+        "1: «El tercero / *es el que mejor funciona.*» → «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*»"
       ]
     }
   ]

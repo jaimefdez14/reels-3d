@@ -6,11 +6,11 @@
   "coverT": 1.6,
   "lines": [
     {
-      "show": "Si el día veinte ya estás a cero, / *te hacen falta estas cuatro reglas.*",
+      "show": "Cobras la nómina el día 28 / *y el 20 ya no te queda ni un euro.*",
       "pause": 0.35
     },
     {
-      "show": "Y ninguna es / *ganar más.*",
+      "show": "Cuatro reglas para que no te pase, / *y ninguna es ganar más.*",
       "pause": 0.5
     },
     {
@@ -76,7 +76,7 @@
       "pause": 0.55
     },
     {
-      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día veinte / *ya está a cero.*",
+      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día 20 / *ya no tiene ni un euro.*",
       "pause": 0.3,
       "pausa_media": 0.5
     }
@@ -193,6 +193,24 @@
         "11: «En ese momento / *te lo justificas todo.*» → «En ese momento, / *te convences de lo que sea.*»",
         "12: «Dos días después, *ya no tanto.*» → «A los dos días, / *ya no lo ves tan claro.*»",
         "15: «Así te das cuenta de que vas justo / *el día diez, no el veinte.*» → «Así te das cuenta el día diez / de que vas justo, *y no el veinte.*»"
+      ]
+    }
+  ],
+  "gancho": [
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+      "cambios": [
+        "0: «Si el día veinte ya estás a cero, / *te hacen falta estas cuatro reglas.*» → «Cobras el 28 / *y el 20 ya estás a cero.*»",
+        "1: «Y ninguna es / *ganar más.*» → «Cuatro reglas para que no te pase, / *y ninguna es ganar más.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «no se entiende del todo... ¿euros? ¿cada mes?»: «a cero» y cifras sin unidad",
+      "cambios": [
+        "0: «Cobras el 28 / y el 20 ya estás a cero.» → «Cobras la nómina el día 28 / y el 20 ya no te queda ni un euro.»",
+        "16: envío con «ni un euro»"
       ]
     }
   ]
