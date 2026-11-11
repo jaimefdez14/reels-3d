@@ -1,0 +1,24 @@
+# Publicación en @fase.zer0 2 veces al día (franjas de pipeline.json, hora de Madrid). Se lanza a dos horas UTC por franja para cubrir
+# el horario de verano y el de invierno; el script solo publica si está dentro de la ventana de la franja y esa franja
+# no se ha publicado ya. Publica el aprobado más antiguo de la cola. docs/PIPELINE.md.
+name: publicar
+on:
+  schedule:
+    - cron: '7 11,12,18,19 * * *'
+  workflow_dispatch:
+    inputs:
+      ya: { description: 'Publicar ya el siguiente de la cola, sin esperar a la franja', type: boolean, default: false }
+permissions: { contents: write, issues: write }
+concurrency: { group: publicar, cancel-in-progress: false }
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env: { GH_TOKEN: '${{ github.token }}', META_PAGE_TOKEN_3D: '${{ secrets.META_PAGE_TOKEN_3D }}' }
+    steps:
+      - uses: actions/checkout@v4
+      - run: git config user.name reels-bot && git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - run: python3 herramientas/pipeline.py publicar ${{ inputs.ya && '--ya' || '' }}
+      - if: always()
+        uses: ./.github/actions/guardar
+        with: { mensaje: 'Cadena: publicación' }

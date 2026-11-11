@@ -1,0 +1,258 @@
+{
+ "id": "L2",
+ "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+ "titulo": "Cinco leyes que te ahorran años de errores en el trabajo",
+ "idea": "Lista de 5 leyes sobre el molde de B-R5 (cinco leyes: número + nombre de la ley + dos frases; fondo grafito, puntos unidos por línea, subtítulo blanco de una línea) con el cierre de B-R4 (pregunta a comentarios). Propuesta para Jaime, previa con Kokoro.",
+ "coverT": 1.8,
+ "lines": [
+  {
+   "show": "Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.",
+   "pause": 0.3,
+   "pausa_media": 0.4
+  },
+  {
+   "show": "Primera: // el trabajo se alarga.",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Dura todo el tiempo que le des. / Es la ley de Parkinson.",
+   "pause": 0.3
+  },
+  {
+   "show": "Ponle un plazo más corto / y lo acabas antes.",
+   "pause": 0.55
+  },
+  {
+   "show": "Segunda: // todo tarda más de lo que crees.",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.",
+   "pause": 0.3
+  },
+  {
+   "show": "Calcula lo que vas a tardar / y súmale la mitad.",
+   "pause": 0.55
+  },
+  {
+   "show": "Tercera: // si alguien no te contesta un correo, / no es por mala fe.",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Casi siempre es un despiste. / Es la navaja de Hanlon.",
+   "pause": 0.3
+  },
+  {
+   "show": "Escríbele otra vez / y no te mosquees.",
+   "pause": 0.55
+  },
+  {
+   "show": "Cuarta: // lo que dejas a medias no te lo quitas de la cabeza.",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Te acuerdas hasta en la ducha. / Es el efecto Zeigarnik.",
+   "pause": 0.3
+  },
+  {
+   "show": "Apúntalo / y te quedas tranquilo.",
+   "pause": 0.55
+  },
+  {
+   "show": "Quinta: // de cada cinco cosas que haces, / una es la que de verdad cuenta.",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Es la ley de Pareto.",
+   "pause": 0.3
+  },
+  {
+   "show": "Busca cuál es y empieza por ella. / Lo demás, que espere.",
+   "pause": 0.55
+  },
+  {
+   "show": "Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.",
+   "pause": 0.35
+  },
+  {
+   "show": "Mándaselo a ese que siempre dice / «esto lo saco en una tarde».",
+   "pause": 0.3
+  }
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "1: «Una: // la ley de Parkinson.» → «Primera: // la ley de Parkinson.»",
+   "2: «El trabajo se estira / hasta ocupar / todo el tiempo que le das.» → «El trabajo se alarga / hasta ocupar / todo el tiempo que le des.»",
+   "3: «Dale menos tiempo / y acabará antes.» → «Ponle menos tiempo / y lo terminarás antes.»",
+   "4: «Dos: // la ley de Hofstadter.» → «Segunda: // la ley de Hofstadter.»",
+   "5: «Todo tarda más de lo que crees. / Incluso cuando ya lo sabes.» → «Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.»",
+   "7: «Tres: // la navaja de Hanlon.» → «Tercera: // la navaja de Hanlon.»",
+   "9: «Ese correo sin contestar / casi nunca es personal.» → «Ese correo sin respuesta / casi nunca va contra ti.»",
+   "10: «Cuatro: // el efecto Zeigarnik.» → «Cuarta: // el efecto Zeigarnik.»",
+   "13: «Cinco: // la ley de Pareto.» → «Quinta: // la ley de Pareto.»",
+   "17: «Te leo en comentarios. / Y sígueme para más.» → «Te leo en los comentarios. / Y sígueme, que vienen más.»"
+  ]
+ },
+ "redaccion": {
+  "fecha": "2026-11-09",
+  "regla": "17 (docs/REDACCION.md)",
+  "nota": "Presente para hábitos (3), frase completa en vez de «Incluso…» (5), el «por eso» del ejemplo de la guía (6), cifras comparadas en Pareto (14-15) sin «el resto», remate que vuelve al gancho (16) y envío con frase literal en lugar de comentarios y «sígueme» (17).",
+  "cambios": [
+   "3: «Ponle menos tiempo / y lo terminarás antes.» → «Ponle menos tiempo / y lo terminas antes.»",
+   "5: «Todo lleva más tiempo del que crees. / Incluso cuando ya cuentas con ello.» → «Todo lleva más de lo que crees. / Aunque ya cuentes con ello.»",
+   "6: «Calcula lo que vas a tardar / y súmale la mitad.» → «Por eso, a lo que calcules, / súmale la mitad.»",
+   "14: «Unas pocas tareas / dan casi todo el resultado.» → «Dos de cada diez tareas / dan ocho de cada diez resultados.»",
+   "15: «Haz esas primero. / El resto puede esperar.» → «Haz esas dos primero. / Las otras ocho pueden esperar.»",
+   "16: «¿Cuál de las cinco / te ha pasado esta semana?» → «Los errores son los mismos: / ahora ya tienen nombre.»",
+   "17: «Te leo en los comentarios. / Y sígueme, que vienen más.» → «Mándaselo a quien siempre dice / «esto lo saco en una tarde».»",
+   "5: «Todo lleva más de lo que crees. / Aunque ya cuentes con ello.» → «Todo tarda más de lo que calculas. / Siempre.» (segunda revisión: «Aunque ya cuentes con ello» no se entendía sin conocer la ley)",
+   "0: «Cinco leyes que te ahorran / años de errores en el trabajo.» → «Cinco leyes que ya sufres en el trabajo / aunque no sepas su nombre.» (Jaime: «no son leyes de ahorro de tiempo en el trabajo»; el gancho promete lo que da y lo cierra el remate «ahora ya tienen nombre»)"
+  ]
+ },
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "lector 7/10: la idea antes que el nombre raro; Pareto sin cuatro cifras seguidas; remate con referente",
+   "cambios": [
+    "1: «Primera: // la ley de Parkinson.» → «Primera: // el trabajo se estira.»",
+    "2: «El trabajo se alarga / hasta ocupar / todo el tiempo que le des.» → «Ocupa todo el tiempo que le des. / Es la ley de Parkinson.»",
+    "3: «Ponle menos tiempo / y lo terminas antes.» → «Así que ponle menos plazo / y lo terminas antes.»",
+    "4: «Segunda: // la ley de Hofstadter.» → «Segunda: // todo tarda más de lo que calculas.»",
+    "5: «Todo tarda más de lo que calculas. / Siempre.» → «Siempre. / Lo llaman ley de Hofstadter.»",
+    "6: «Por eso, a lo que calcules, / súmale la mitad.» → «Por eso, calcula / y súmale la mitad.»",
+    "7: «Tercera: // la navaja de Hanlon.» → «Tercera: // no veas mala fe.»",
+    "8: «No veas mala fe / donde solo hay un despiste.» → «Casi siempre es un despiste. / Se llama la navaja de Hanlon.»",
+    "10: «Cuarta: // el efecto Zeigarnik.» → «Cuarta: // lo que dejas a medias te persigue.»",
+    "11: «Lo que dejas a medias / no te deja en paz.» → «No te deja en paz hasta que lo acabas. / Es el efecto Zeigarnik.»",
+    "12: «Apúntalo / y tu cabeza lo suelta.» → «Así que apúntalo / y tu cabeza lo suelta.»",
+    "13: «Quinta: // la ley de Pareto.» → «Quinta: // unas pocas tareas lo dan casi todo.»",
+    "14: «Dos de cada diez tareas / dan ocho de cada diez resultados.» → «Una de cada cinco tareas / da casi todo el resultado.»",
+    "15: «Haz esas dos primero. / Las otras ocho pueden esperar.» → «Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.»",
+    "16: «Los errores son los mismos: / ahora ya tienen nombre.» → «Ya las sufrías. / Ahora sabes cómo se llaman.»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "nota": "ronda 2: 7/10",
+   "cambios": [
+    "6: «Por eso, calcula / y súmale la mitad.» → «Por eso, calcula lo que tardas / y súmale la mitad.»",
+    "7: «Tercera: // no veas mala fe.» → «Tercera: // si no te contestan, no es mala fe.»",
+    "9: «Ese correo sin respuesta / casi nunca va contra ti.» → «Así que escribe otra vez, / sin enfadarte.»",
+    "11: «No te deja en paz hasta que lo acabas. / Es el efecto Zeigarnik.» → «Hasta en la ducha lo tienes en la cabeza. / Es el efecto Zeigarnik.»",
+    "13: «Quinta: // unas pocas tareas lo dan casi todo.» → «Quinta: // una tarea de cada cinco lo da casi todo.»",
+    "14: «Una de cada cinco tareas / da casi todo el resultado.» → «Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.»",
+    "15: «Es la ley de Pareto. / Haz esas primero; las demás pueden esperar.» → «Hazla primero; / las demás pueden esperar.»"
+   ]
+  },
+  {
+   "ronda": 3,
+   "nota": "7/10: bloqueantes «si no te contestan» sin objeto y «lo da casi todo» sin qué; «así que» repetido",
+   "cambios": [
+    "3: «Así que ponle menos plazo / y lo terminas antes.» → «Ponle menos plazo / y lo terminas antes.»",
+    "7: «Tercera: // si no te contestan, no es mala fe.» → «Tercera: // si no te contestan un correo, no es mala fe.»",
+    "9: «Así que escribe otra vez, / sin enfadarte.» → «Escribe otra vez, / sin enfadarte.»",
+    "12: «Así que apúntalo / y tu cabeza lo suelta.» → «Apúntalo / y tu cabeza lo suelta.»",
+    "13: «Quinta: // una tarea de cada cinco lo da casi todo.» → «Quinta: // una tarea de cada cinco da casi todo el resultado.»",
+    "14: «Es la ley de Pareto. / Busca esa tarea en tu lista de hoy.» → «Es la ley de Pareto.»",
+    "15: «Hazla primero; / las demás pueden esperar.» → «Busca esa tarea y hazla primero; / las demás pueden esperar.»"
+   ]
+  },
+  {
+   "ronda": "nativo-1",
+   "nota": "8/10, sin bloqueantes. PASA",
+   "cambios": []
+  }
+ ],
+ "situacion": "En el trabajo te pasan siempre las mismas cosas: una tarea que te iba a llevar una mañana se come el día entero, todo tarda más de lo que dijiste, te mosqueas porque alguien no te contesta, tienes algo a medias dándote vueltas y te pasas el día con cosas que no importan. Todo eso tiene nombre.",
+ "nativo": {
+  "fecha": "2026-11-10",
+  "regla": "19 y 20",
+  "antes": [
+   "Cinco leyes / que ya sufres en el trabajo / aunque no sepas su nombre.",
+   "Primera: // el trabajo se estira.",
+   "Ocupa todo el tiempo que le des. / Es la ley de Parkinson.",
+   "Ponle menos plazo / y lo terminas antes.",
+   "Segunda: // todo tarda más de lo que calculas.",
+   "Siempre. / Lo llaman ley de Hofstadter.",
+   "Por eso, calcula lo que tardas / y súmale la mitad.",
+   "Tercera: // si no te contestan un correo, no es mala fe.",
+   "Casi siempre es un despiste. / Se llama la navaja de Hanlon.",
+   "Escribe otra vez, / sin enfadarte.",
+   "Cuarta: // lo que dejas a medias te persigue.",
+   "Hasta en la ducha lo tienes en la cabeza. / Es el efecto Zeigarnik.",
+   "Apúntalo / y tu cabeza lo suelta.",
+   "Quinta: // una tarea de cada cinco da casi todo el resultado.",
+   "Es la ley de Pareto.",
+   "Busca esa tarea y hazla primero; / las demás pueden esperar.",
+   "Ya las sufrías. / Ahora sabes cómo se llaman.",
+   "Mándaselo a quien siempre dice / «esto lo saco en una tarde»."
+  ]
+ },
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    "0: «Cinco leyes que sufres en el trabajo / aunque no sepas cómo se llaman.» → «Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.»",
+    "3: «Así que ponle un plazo más corto / y lo acabas antes.» → «Ponle un plazo más corto / y lo acabas antes.»",
+    "5: «Siempre. / Se llama ley de Hofstadter.» → «Y pasa siempre. / Es la ley de Hofstadter.»",
+    "6: «Así que calcula lo que vas a tardar / y súmale la mitad.» → «Calcula lo que vas a tardar / y súmale la mitad.»",
+    "7: «Tercera: // si alguien no te contesta un correo, no es mala fe.» → «Tercera: // si alguien no te contesta un correo, / no es por mala fe.»",
+    "9: «Vuelve a escribirle, / sin mosquearte.» → «Escríbele otra vez / y no te mosquees.»",
+    "11: «Hasta en la ducha te acuerdas. / Es el efecto Zeigarnik.» → «Te acuerdas hasta en la ducha. / Es el efecto Zeigarnik.»",
+    "13: «Quinta: // una de cada cinco tareas da casi todo el resultado.» → «Quinta: // de cada cinco cosas que haces, / una es la que de verdad cuenta.»",
+    "15: «Busca esa tarea y hazla primero; / lo demás puede esperar.» → «Busca cuál es y hazla la primera. / Lo demás, que espere.»",
+    "16: «Ya las sufrías. / Ahora sabes cómo se llaman.» → «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.»",
+    "17: «Mándaselo a quien siempre dice / «esto lo saco en una tarde».» → «Mándaselo a ese que siempre dice / «esto lo saco en una tarde».»"
+   ]
+  },
+  {
+   "ronda": 1,
+   "cambios": []
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    "0: «Cinco leyes que te pasan en el trabajo / aunque no sepas cómo se llaman.» → «Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.»",
+    "5: «Y pasa siempre. / Es la ley de Hofstadter.» → «Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.»",
+    "15: «Busca cuál es y hazla la primera. / Lo demás, que espere.» → «Busca cuál es y empieza por ella. / Lo demás, que espere.»",
+    "16: «Ya te pasaban. / Ahora por lo menos sabes cómo se llaman.» → «Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.»"
+   ]
+  }
+ ],
+ "gancho": [
+  {
+   "fecha": "2026-11-10",
+   "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+   "cambios": [
+    "0: «Cinco leyes que se cumplen en tu trabajo / aunque no sepas cómo se llaman.» → «Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "PASA. Retoque opcional aplicado: la imagen delante y sin «Y» de arranque.",
+   "cambios": [
+    "0: «Esa tarea de una hora / que te come la tarde / tiene nombre. // Y es la primera de cinco leyes / que sufres en el trabajo.» → «¿Esa tarea de una hora / que te come la tarde? / Tiene nombre. // Es la primera de cinco leyes / del trabajo.»"
+   ]
+  },
+  {
+   "fecha": "2026-11-11",
+   "motivo": "Jaime: «no me convence el hook» → elige la opción 1 (situación, alivio, cuatro más)",
+   "cambios": [
+    "0: «¿Esa tarea de una hora / que te come la tarde? / Tiene nombre. // Es la primera de cinco leyes / del trabajo.» → «Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.»",
+    "0 (corrector nativo): «Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.» → «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pillan cada semana.»",
+    "0 (corrector nativo 2): «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pillan cada semana.» → «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: es una ley, en serio. / Y hay otras cuatro / que te la lían cada semana.»",
+    "1 (corrector nativo 2, calco de *work expands*): «Primera: // el trabajo se alarga.» → «Primera: // la tarea se estira.»",
+    "0 (corrector nativo 3): «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: es una ley, en serio. / Y hay otras cuatro / que te la lían cada semana.» → «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es culpa tuya: / hasta tiene nombre de ley. / Y hay otras cuatro / que te la lían cada semana.»",
+    "1: vuelve a «Primera: // el trabajo se alarga.» (el corrector 3 marca «se estira» como calco; el 1 y el 3 dan «se alarga» por bueno)",
+    "0 (Jaime, 11-11: «no me gusta el nuevo gancho, también tiene expresiones informales. Usa el que te dije y aprobé»): «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es culpa tuya: / hasta tiene nombre de ley. / Y hay otras cuatro / que te la lían cada semana.» → «Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.»"
+   ]
+  }
+ ]
+}

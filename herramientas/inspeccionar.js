@@ -22,7 +22,8 @@ const { chromium } = require('playwright'); const path = require('path');
     for (const h of f.heads) if (f.caption && ov(h, f.caption)) add('hc' + h.id, `la cabeza de ${h.id} entra en el titular`);
     // regla 9 (Jaime, 04-11): ningún personaje principal se corta, en ningún plano ni durante un latigazo
     for (const b of (f.bodies || [])) { const r = b.rect || b; if (r.x < 0 || r.x + r.w > 1080 || r.y + r.h > 1800) add('cut' + b.id, `${b.id}: el cuerpo se sale del encuadre (${Math.round(r.x)},${Math.round(r.y)} ${Math.round(r.w)}x${Math.round(r.h)})`); if (r.y < 0) add('cutH' + b.id, `${b.id}: la cabeza se sale por arriba`); }
-    if (f.caption && f.caption.y + f.caption.h > 520) add('capH', `titular demasiado alto: baja hasta ${Math.round(f.caption.y + f.caption.h)} px`);
+    const capMax = f.capMax || 520; // estilo B: el subtítulo va a media pantalla, encima del personaje (motor2d)
+    if (f.caption && f.caption.y + f.caption.h > capMax) add('capH', `titular demasiado bajo: llega hasta ${Math.round(f.caption.y + f.caption.h)} px (máximo ${capMax})`);
   }
   await b.close();
   if (issues.length) { console.log('AVISOS:'); issues.forEach(i => console.log(' ', i)); process.exitCode = 1; } else console.log('ok: sin solapes en', D.toFixed(1), 's');

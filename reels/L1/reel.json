@@ -1,0 +1,233 @@
+{
+  "id": "L1",
+  "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+  "titulo": "Cuatro reglas para que tu sueldo dure todo el mes",
+  "idea": "Lista de 4 sobre el molde de B-R3 (aprender en 20 h: 4 pasos, barritas de progreso, fondo degradado) y el cierre de B-R1/B-R3 (resumen + guardar + seguir). Propuesta para Jaime, previa con Kokoro.",
+  "coverT": 1.6,
+  "lines": [
+    {
+      "show": "Cobras la nómina y a los veinte días / *no te queda ni un euro.*",
+      "pause": 0.35
+    },
+    {
+      "show": "Cuatro reglas para llegar a fin de mes / *sin ganar más.*",
+      "pause": 0.5
+    },
+    {
+      "show": "La primera: // *ahorra nada más cobrar.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "El mismo día que cobras, / pasa el diez por ciento a otra cuenta / *antes de pagar nada.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Y lo que no ves, / *no te lo gastas.*",
+      "pause": 0.55
+    },
+    {
+      "show": "La segunda: // *lo que te quede, repártelo en dos cuentas.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "Una para los gastos fijos; / *otra para los caprichos.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Cuando la de caprichos / *se queda vacía, se acabó.*",
+      "pause": 0.25
+    },
+    {
+      "show": "Hasta el mes *que viene.*",
+      "pause": 0.55
+    },
+    {
+      "show": "La tercera: // *antes de darte un capricho, espera dos días.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "¿Que has visto algo que te encanta? / *Déjalo en la cesta.*",
+      "pause": 0.3
+    },
+    {
+      "show": "En ese momento, / *te convences de lo que sea.*",
+      "pause": 0.3,
+      "bocadillo": "Me lo he ganado",
+      "tipo": "nube"
+    },
+    {
+      "show": "A los dos días, / *ya no lo ves tan claro.*",
+      "pause": 0.55
+    },
+    {
+      "show": "Y la cuarta: // *repasa los gastos todos los domingos.*",
+      "pause": 0.3,
+      "pausa_media": 0.7
+    },
+    {
+      "show": "Cinco minutos *y sin agobios.*",
+      "pause": 0.3
+    },
+    {
+      "show": "Así te das cuenta el día diez / de que vas justo, *y no el veinte.*",
+      "pause": 0.55
+    },
+    {
+      "show": "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que a los veinte días / *ya no tiene ni un euro.*",
+      "pause": 0.3,
+      "pausa_media": 0.5
+    }
+  ],
+  "revision_castellano": {
+    "fecha": "2026-11-09",
+    "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+    "cambios": [
+      "0: «Cuatro reglas para que tu sueldo *dure todo el mes.*» → «Cuatro reglas para que el sueldo *te llegue a fin de mes.*»",
+      "1: «Y puedes empezar *el día que cobres.*» → «Y puedes empezar *con la próxima nómina.*»",
+      "2: «Número uno: // *págate primero.*» → «Número uno: // *págate a ti primero.*»",
+      "7: «Cuando la de caprichos / llega a cero, *se acabaron los caprichos.*» → «Cuando la de caprichos / se queda a cero, *se acabaron los caprichos.*»",
+      "9: «Número tres: // *espera dos días.*» → «Número tres: // *deja pasar dos días.*»",
+      "10: «¿Quieres algo que no necesitas? / *Déjalo en el carrito.*» → «¿Te has encaprichado de algo? / *Déjalo en la cesta.*»",
+      "11: «Hoy tu cabeza dice: *«Me lo merezco».*» → «Hoy piensas: *«Me lo merezco».*»",
+      "13: «Número cuatro: // *mira tus gastos el domingo.*» → «Número cuatro: // *repasa tus gastos cada domingo.*»",
+      "14: «Cinco minutos. *Sin culpa.*» → «Cinco minutos. *Sin dramas.*»",
+      "15: «No es para sentirte mal. / Es para saber *adónde se va.*» → «No es para fustigarte. / Es para ver *en qué se te va.*»",
+      "16: «Guárdalo para el día *que cobres.* / Y sígueme *para más.*» → «Guárdalo para el día *que cobres.* / Y sígueme, *que vienen más.*»"
+    ]
+  },
+  "redaccion": {
+    "fecha": "2026-11-09",
+    "regla": "17 (docs/REDACCION.md)",
+    "nota": "Remate que vuelve al gancho y envío en lugar de «guárdalo / sígueme»; «por eso» reconocible en el punto 4; el punto 1 se hila con «Y lo que no ves»; punto y coma de contraste en el punto 2.",
+    "cambios": [
+      "4: «Lo que no ves, *no lo gastas.*» → «Y lo que no ves, *no lo gastas.*»",
+      "6: «Los gastos fijos, en una. / *Los caprichos, en otra.*» → «Los gastos fijos, en una; / *los caprichos, en otra.*»",
+      "14: «Cinco minutos. *Sin dramas.*» → «Cinco minutos, *sin fustigarte.*»",
+      "15: «No es para fustigarte. / Es para ver *en qué se te va.*» → «Por eso a fin de mes / ya sabes *en qué se te va.*»",
+      "16: «Guárdalo para el día *que cobres.* / Y sígueme, *que vienen más.*» → «Primero tú; *después, todo lo demás.* // Mándaselo a quien / *a día veinte ya está a cero.*»",
+      "16: «Primero tú; *después, todo lo demás.* // Mándaselo a quien / *a día veinte ya está a cero.*» → «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien / *a día veinte ya está a cero.*» (segunda revisión: el remate solo recogía el punto 1; ahora recoge el reparto de los puntos 1 y 2 y vuelve al gancho)",
+      "0: «Cuatro reglas para que el sueldo *te llegue a fin de mes.*» → «Si a día veinte ya estás a cero, / *te faltan estas cuatro reglas.*» (Jaime: «mejora el hook de L1»: situación que el espectador reconoce, con cifra, en vez de una promesa genérica; el envío final la repite y cierra el bucle)",
+      "1: «Y puedes empezar *con la próxima nómina.*» → «Y ninguna es *ganar más.*» (anuncio que choca con lo que se cree: abre la pregunta de cómo, sin ganar más)"
+    ]
+  },
+  "lector": [
+    {
+      "ronda": 1,
+      "nota": "lector 8/10: regla 1 vaga y calco; «por eso» equivocado",
+      "cambios": [
+        "2: «Número uno: // *págate a ti primero.*» → «Número uno: // *lo primero que pagas eres tú.*»",
+        "3: «El día que cobras, / aparta una parte *antes de pagar nada.*» → «El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*»",
+        "15: «Por eso a fin de mes / ya sabes *en qué se te va.*» → «Así, a fin de mes / ya sabes *en qué se te va el dinero.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "nota": "ronda 2: 8/10",
+      "cambios": [
+        "5: «Número dos: // *una cuenta para cada cosa.*» → «Número dos: // *lo que queda, en dos cuentas.*»",
+        "7: «Cuando la de caprichos / se queda a cero, *se acabaron los caprichos.*» → «Cuando la de caprichos / *se vacía, se acabaron los caprichos.*»",
+        "15: «Así, a fin de mes / ya sabes *en qué se te va el dinero.*» → «Así lo pillas el día diez, / *no el día veinte.*»"
+      ]
+    },
+    {
+      "ronda": 3,
+      "nota": "ronda 3: 8/10",
+      "cambios": [
+        "5: «Número dos: // *lo que queda, en dos cuentas.*» → «Número dos: // *lo que queda, pártelo en dos cuentas más.*»",
+        "15: «Así lo pillas el día diez, / *no el día veinte.*» → «Así ves el agujero el día diez, / *no el día veinte.*»",
+        "16: «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien / *a día veinte ya está a cero.*» → «El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*»"
+      ]
+    },
+    {
+      "ronda": "nativo-1",
+      "nota": "8/10, sin bloqueantes. PASA",
+      "cambios": []
+    }
+  ],
+  "situacion": "Cobras el 28, el 15 ya vas justo y el 20 estás a cero. No es que ganes poco: es que el dinero se va antes de que te des cuenta. Lo que funciona: apartar algo el mismo día que cobras, separar lo fijo de los caprichos, esperar un par de días antes de comprarte algo y echar un vistazo a los gastos el domingo.",
+  "nativo": {
+    "fecha": "2026-11-10",
+    "regla": "19 y 20",
+    "antes": [
+      "Si a día veinte ya estás a cero, / *te faltan estas cuatro reglas.*",
+      "Y ninguna es *ganar más.*",
+      "Número uno: // *lo primero que pagas eres tú.*",
+      "El día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*",
+      "Y lo que no ves, *no lo gastas.*",
+      "Número dos: // *lo que queda, pártelo en dos cuentas más.*",
+      "Los gastos fijos, en una; / *los caprichos, en otra.*",
+      "Cuando la de caprichos / *se vacía, se acabaron los caprichos.*",
+      "Hasta el mes *que viene.*",
+      "Número tres: // *deja pasar dos días.*",
+      "¿Te has encaprichado de algo? / *Déjalo en la cesta.*",
+      "Hoy piensas: *«Me lo merezco».*",
+      "Dos días después, *ya no te lo mereces tanto.*",
+      "Número cuatro: // *repasa tus gastos cada domingo.*",
+      "Cinco minutos, *sin fustigarte.*",
+      "Así ves el agujero el día diez, / *no el día veinte.*",
+      "El sueldo no se estira: / *se reparte antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*"
+    ]
+  },
+  "corrector": [
+    {
+      "ronda": 1,
+      "cambios": [
+        "0: «Si el día veinte ya estás a cero, / *te faltan estas cuatro reglas.*» → «Si el día veinte ya estás a cero, / *te hacen falta estas cuatro reglas.*»",
+        "2: «Número uno: // *ahorra nada más cobrar.*» → «La primera: // *ahorra nada más cobrar.*»",
+        "3: «El mismo día que cobras, / pasa un diez por ciento a otra cuenta / *antes de pagar nada.*» → «El mismo día que cobras, / pasa el diez por ciento a otra cuenta / *antes de pagar nada.*»",
+        "5: «Número dos: // *lo que queda, en dos cuentas.*» → «La segunda: // *lo que te quede, repártelo en dos cuentas.*»",
+        "9: «Número tres: // *antes de un capricho, espera dos días.*» → «La tercera: // *antes de darte un capricho, espera dos días.*»",
+        "11: «Ese día te parece / *que te lo mereces.*» → «En ese momento / *te lo justificas todo.*»",
+        "13: «Número cuatro: // *repasa tus gastos cada domingo.*» → «Y la cuarta: // *repasa los gastos todos los domingos.*»",
+        "14: «Cinco minutos, *sin agobiarte.*» → «Cinco minutos *y sin agobios.*»",
+        "16: «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a quien el día veinte / *ya esté a cero.*» → «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día veinte / *ya está a cero.*»"
+      ]
+    },
+    {
+      "ronda": 2,
+      "cambios": [
+        "10: «¿Has visto algo que te encanta? / *Déjalo en la cesta.*» → «¿Que has visto algo que te encanta? / *Déjalo en la cesta.*»",
+        "11: «En ese momento / *te lo justificas todo.*» → «En ese momento, / *te convences de lo que sea.*»",
+        "12: «Dos días después, *ya no tanto.*» → «A los dos días, / *ya no lo ves tan claro.*»",
+        "15: «Así te das cuenta de que vas justo / *el día diez, no el veinte.*» → «Así te das cuenta el día diez / de que vas justo, *y no el veinte.*»"
+      ]
+    }
+  ],
+  "gancho": [
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+      "cambios": [
+        "0: «Si el día veinte ya estás a cero, / *te hacen falta estas cuatro reglas.*» → «Cobras el 28 / *y el 20 ya estás a cero.*»",
+        "1: «Y ninguna es / *ganar más.*» → «Cuatro reglas para que no te pase, / *y ninguna es ganar más.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "motivo": "Jaime: «no se entiende del todo... ¿euros? ¿cada mes?»: «a cero» y cifras sin unidad",
+      "cambios": [
+        "0: «Cobras el 28 / y el 20 ya estás a cero.» → «Cobras la nómina el día 28 / y el 20 ya no te queda ni un euro.»",
+        "16: envío con «ni un euro»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA: «el día 28 y el 20» suena al revés al oído (hay que hacer la cuenta). Su versión.",
+      "cambios": [
+        "0: «Cobras la nómina el día 28 / *y el 20 ya no te queda ni un euro.*» → «Cobras la nómina y a los veinte días / *no te queda ni un euro.*»",
+        "1: «Cuatro reglas para que no te pase, / *y ninguna es ganar más.*» → «Cuatro reglas, / *y ninguna es ganar más.*»",
+        "16: «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que el día 20 / *ya no tiene ni un euro.*» → «El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que a los veinte días / *ya no tiene ni un euro.*»"
+      ]
+    },
+    {
+      "fecha": "2026-11-10",
+      "revisor": "NO PASA por la segunda frase («ninguna es ganar más»: una regla no «es» ganar más; suena a traducción). Su versión, con frase hecha de España.",
+      "cambios": [
+        "1: «Cuatro reglas, / *y ninguna es ganar más.*» → «Cuatro reglas para llegar a fin de mes / *sin ganar más.*»"
+      ]
+    }
+  ]
+}

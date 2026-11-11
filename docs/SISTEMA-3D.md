@@ -13,20 +13,25 @@ con **una frase literal entrecomillada** que pueda copiar.
 
 | # | Bloque | Frases | Fórmulas que funcionan en castellano | Escena asociada |
 |---|---|---|---|---|
-| 1 | Gancho = prohibición / sustitución | 1-2 | «Nunca digas "…"» · «Deja de esperar a…» · «Antes de …, haz esto» · «Esta frase hace que…» | Dos personajes frente a frente, plano medio; la frase prohibida en un bocadillo que se tacha |
+| 1 | Gancho = prohibición / sustitución | 1-2 | «Nunca digas “…”» · «Deja de esperar a…» · «Antes de …, haz esto» · «Esta frase hace que…» | Dos personajes frente a frente, plano medio; la frase prohibida en un bocadillo que se tacha |
 | 2 | Coste | 1-2 | «Todo el mundo lo dice.» «Mañana eres una cara más.» «Te olvida en la siguiente reunión.» | Pull-back: multitud gris, tarjetas de perfil en el suelo |
 | 3 | Técnica con nombre | 1-2 | «Cámbiala por dos frases.» «Busca al conector.» «Usa las cuatro letras.» «El giro del cero.» | Dolly in; el nombre con marcador amarillo; si es acrónimo, letras gigantes |
 | 4 | Mecanismo, pieza a pieza | 6-10 | Cada pieza: nombre corto + «Dices: "…"» (bocadillo) + qué pasa en el otro («Ahora ya sabe dónde archivarte»). | Orbit por pieza; bocadillo blanco con borde amarillo; objeto 3D de la pieza (calendario, puerta, tarjeta) |
 | 5 | Objeción | 2-3 | Rótulo «Estás pensando:» + «Eso suena a chulería.» / «¿Por qué iba a ayudarme?» / «Parezco nuevo.» → «Bien. Lo eres.» | Fondo oscuro 2-4 s, nube de pensamiento, texto blanco con la palabra fuerte en rojo |
-| 6 | Giro | 1-2 | «Pero que te recuerden no basta.» «Casi todos se paran aquí.» «Lo que digas después decide…» | Dolly in a la cabeza del interlocutor; entra la pieza que falta |
-| 7 | Recompensa en escena | 2-3 | Futuro con un tercero: «La semana que viene alguien dice que empieza… y lo primero que oye es: "Tienes que conocer a este tío".» | Fila de personas con travelling; bocadillo del tercero; línea de atención amarilla hacia ti |
+| 6 | Giro | 1-2 | «Que te recuerden no basta.» «Casi todos se paran aquí.» «Lo que digas después decide…» | Dolly in a la cabeza del interlocutor; entra la pieza que falta |
+| 7 | Recompensa en escena | 2-3 | Futuro con un tercero: «La semana que viene alguien dice que empieza… y lo primero que oye es: “Tienes que conocer a esta persona”.» | Fila de personas con travelling; bocadillo del tercero; línea de atención amarilla hacia ti |
 | 8 | Remate espejo + envío | 2-3 | «No vendes. Preguntas.» «El cero nunca fue el problema. Esconderlo, sí.» + «Envíaselo a quien venga contigo al próximo evento.» | Pareja de personajes, flecha curva amarilla; música corta en seco |
+
+**Cómo se escribe cada frase: `docs/REDACCION.md`** (09-11-2026). Este molde manda en la estructura; aquella guía,
+en la frase (orden de las palabras, hilo, calcos, puntuación para la voz, registro de Madrid). Se comprueba con
+`python3 herramientas/redaccion.py reels/ID`.
 
 Reglas de escritura (añaden a las 17, 34, 37, 38, 39, 43 y 48):
 - Cada subtítulo es una oración completa, ≤ 45 caracteres, 2 líneas como mucho en el titular.
 - Una palabra marcada por frase (amarillo = hazlo, rojo = no lo hagas). Nunca las dos en la misma frase.
-- Ninguna cifra, ningún «según un estudio». Si entra el libro, entra en una frase que avanza («Lo mejor de esta
-  técnica lo cuenta Keith Ferrazzi: nunca comas solo»), nunca como fuente de plantilla (regla 48).
+- Cifras sí (Jaime, 09-11-2026): 5 como mucho, comparadas y con su unidad; de dónde sale el dato va dentro de la
+  frase («En un experimento de 1994, unos estudiantes…»), nunca «según un estudio» de plantilla. Si entra el libro,
+  entra en una frase que avanza («Lo mejor de esta técnica lo cuenta Keith Ferrazzi: nunca comas solo»).
 - Nombre inventado y detalle doméstico: «Digamos que se llama Daniel.» «Tu chaqueta es increíble.»
 - La objeción se escribe literal, en la voz del espectador, y se contesta en ≤ 5 palabras.
 - Remate: dos frases paralelas; la segunda invierte la primera. Sin resumen, sin «recuerda que».

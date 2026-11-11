@@ -1,0 +1,58 @@
+[
+ {
+  "id": "L1",
+  "titulo": "Cuatro reglas para que tu sueldo dure todo el mes",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "aprobada",
+  "reel": "L1"
+ },
+ {
+  "id": "L2",
+  "titulo": "Cinco leyes del trabajo",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "aprobada",
+  "reel": "L2"
+ },
+ {
+  "id": "L3",
+  "titulo": "Tres pasos para que tu jefe te tome en serio",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "aprobada",
+  "reel": "L3"
+ },
+ {
+  "id": "L4",
+  "titulo": "Cinco formas de dejar de procrastinar hoy",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "aprobada",
+  "reel": "L4"
+ },
+ {
+  "id": "L5",
+  "titulo": "Cuatro frases que te suben el precio",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "aprobada",
+  "reel": "L5"
+ },
+ {
+  "id": "L6",
+  "titulo": "Cinco cosas que hacen las personas que ahorran sin esfuerzo",
+  "resumen": "Automatizan · no miran el saldo cada día · compran con lista · esperan dos días · celebran barato (pulso de B-R4)",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "propuesta"
+ },
+ {
+  "id": "L7",
+  "titulo": "Tres preguntas antes de aceptar cualquier trabajo",
+  "resumen": "¿Qué aprendo? · ¿Con quién trabajo? · ¿Qué hago el lunes a las nueve? (pulso de B-R1)",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "propuesta"
+ },
+ {
+  "id": "L8",
+  "titulo": "Cinco leyes del dinero que nadie te explica",
+  "resumen": "Parkinson del gasto · interés compuesto · coste de oportunidad · efecto ancla · aversión a la pérdida (pulso de B-R5)",
+  "doc": "docs/IDEAS-2026-11-09.md",
+  "estado": "propuesta"
+ }
+]

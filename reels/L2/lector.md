@@ -1,0 +1,24 @@
+# Lector en frío · L2 · 09-11-2026 (ronda 1) · nota 7/10
+Resumen del lector: cinco «leyes» del trabajo con un consejo cada una. Lo sabría resumir.
+Fallos marcados:
+1. «Los errores son los mismos: ahora ya tienen nombre.» — ¿qué errores? Se habló de leyes, no de errores: sin referente.
+2. «Segunda: la ley de Hofstadter.» — el nombre no se entiende de oído; decir la idea antes que el nombre.
+3. «Dos de cada diez tareas dan ocho de cada diez resultados.» — cuatro cifras seguidas de oído, no da tiempo.
+4. «Tercera: la navaja de Hanlon.» — «navaja» sin contexto descoloca.
+5. «Por eso, a lo que calcules, súmale la mitad.» — sintaxis de escrito.
+Abandono: segundo 12-15, en el segundo nombre raro seguido («suena a clase de Wikipedia»).
+
+# Ronda 2 (lector nuevo) · nota 7/10
+Fallos marcados: «No veas mala fe» sin referente; la quinta repite; «haz esas» sin decir cuáles; Zeigarnik dice lo mismo dos veces.
+
+# Ronda 3 (lector nuevo) · nota 7/10
+Bloqueantes: «Si no te contestan, no es mala fe» (¿quién, a qué?) y «Una tarea de cada cinco lo da casi todo» (¿qué da?). Estilo: «así que» repetido, nombres opacos (Hanlon suena a arma, Parkinson a la enfermedad), dos instrucciones seguidas en Pareto.
+
+# Ronda 4 (lector nuevo) · nota 8/10 · PASA
+Sin bloqueantes. Estilo: «navaja» despista un segundo; «calcula lo que tardas» mejor «lo que crees que tardarás»; Zeigarnik no se retiene (la idea sí); falta comprobar cómo pronuncia Kokoro Hofstadter y Zeigarnik.
+
+# Lector tras el corrector nativo (10-11) · 8/10, sin bloqueantes. PASA
+Matices: Zeigarnik no se retiene de oído; «navaja» rompe la palabra «ley»; «Ya las sufrías» referente lejano; patrón idéntico en los cinco bloques.
+
+## 11-11-2026 · gancho nuevo
+Lector nuevo: 8/10. Entiende el vídeo («cinco leyes con nombre que explican por qué el trabajo te cunde menos»). Marca: la 2.ª ley se mezcla con el gancho y «aunque ya lo tengas en cuenta» choca con «súmale la mitad»; «navaja» de Hanlon desconcierta; «Ya las sufrías» con referente lejano.
