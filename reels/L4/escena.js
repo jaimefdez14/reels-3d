@@ -19,7 +19,7 @@ E.camara([
 // ---------- gancho visual (REDACCION §2c): la TAREA aplazada «MAÑANA» tres veces; con «hoy lo haces» se enciende ----------
 // palabras: Eso(0) que(1) llevas(2) tres(3) días(4) dejando(5) para(6) mañana:(7) hoy(8) lo(9) haces.(10) | Cinco(0) trucos,(1) y(2) el(3) tercero(4) te(5) quita(6) la(7) excusa.(8)
 const tHoy = w(0, 8);
-E.figura('yo', { t0: 0, t1: fin(0), x: -310, cara: true, poses: [[0, 'triste'], [tHoy, 'senalar'], [w(0, 10), 'celebrar'], [w(1, 0), 'de_pie'], [w(1, 4), 'senalar']],
+E.figura('yo', { t0: 0, t1: fin(0), x: -310, cara: true, poses: [[0, 'triste'], [tHoy, 'senalar'], [w(0, 10), 'celebrar'], [w(1, 0), 'de_pie'], [w(1, 6), 'senalar']],
   sonrisa: [[0, -0.6], [tHoy, -0.6], [w(0, 9), 1.4]] });
 E.obj('rayosH', 'rayos', { t0: 0, t1: fin(0), x: 120, y: -330, r: 380, z: -2, p: [[0, 0], [tHoy, 0], [tHoy + 0.5, 1, 'out'], [w(1, 0), 1], [w(1, 0) + 0.6, 0]], inspeccion: false });
 E.obj('tarea', 'bloques', { t0: 0, t1: fin(0), x: 120, y: -330, n: 1, w: 380, h: 220, texto: 'TAREA', hechos: [[tHoy, 0], [w(0, 10), 1]], barrido: [w(0, 10)],
@@ -35,9 +35,9 @@ E.golpe(tHoy, 0.06); E.destello(tHoy, 0.14);
 // «Cinco trucos»: cinco monedas; «el tercero» crece y brilla; las demás se apagan con «te quita la excusa»
 [0, 1, 2, 3, 4].forEach(i => { const a = w(1, 0) + i * 0.1;
   E.obj('truco' + i, 'moneda', { t0: a, t1: N[0].T - 0.05, sale: 0.2, x: 120 + (i - 2) * 82, y: -495, r: 30, n: i + 1, pop: true, sfx: i === 0, inspeccion: false,
-    s: i === 2 ? [[0, 1], [w(1, 4), 1], [w(1, 4) + 0.35, 1.45, 'back']] : 1, luz: i === 2 ? 1 : [[0, 1], [w(1, 6), 1], [w(1, 6) + 0.3, 0.35]], barrido: i === 2 ? [w(1, 5)] : null }); });
-E.obj('chT', 'chispas', { t0: w(1, 4) + 0.2, t1: w(1, 4) + 1.0, x: 120, y: -495, r0: 40, r1: 110, inspeccion: false });
-E.obj('pulso3', 'pulso', { t0: w(1, 4), t1: w(1, 4) + 0.7, capa: 'pantalla', x: 540, y: 360, r0: 10, r1: 46, inspeccion: false, sinDim: true });
+    s: i === 2 ? [[0, 1], [w(1, 6), 1], [w(1, 6) + 0.35, 1.45, 'back']] : 1, luz: i === 2 ? 1 : [[0, 1], [w(1, 9), 1], [w(1, 9) + 0.3, 0.35]], barrido: i === 2 ? [w(1, 10)] : null }); });
+E.obj('chT', 'chispas', { t0: w(1, 10) + 0.2, t1: w(1, 10) + 1.0, x: 120, y: -495, r0: 40, r1: 110, inspeccion: false });
+E.obj('pulso3', 'pulso', { t0: w(1, 6), t1: w(1, 6) + 0.7, capa: 'pantalla', x: 540, y: 360, r0: 10, r1: 46, inspeccion: false, sinDim: true });
 
 // ---------- 1 · cinco minutos feos: el reloj se llena y los minutos siguen sumando ----------
 E.numero(1, N[0].T, N[0].S, { desde: 'tarea', hacia: 'reloj' });
@@ -68,13 +68,13 @@ E.obj('chNo', 'chispas', { t0: w(7, 11), t1: w(7, 11) + 0.8, x: -280, y: -560, r
 
 // ---------- 3 · trocéala: la tarea se parte y se tacha en cascada ----------
 E.numero(3, N[2].T, N[2].S);
-E.figura('yo3', { t0: N[2].S - 0.1, t1: fin(3), x: -370, cara: true, poses: [[0, 'de_pie'], [w(8, 2), 'senalar'], [w(9, 0), 'pensar'], [w(9, 5), 'senalar'], [w(10, 6), 'ofrecer'], [wf(10, -1), 'celebrar']], sonrisa: [[w(9, 0), -0.3], [w(9, 5), 0.6], [wf(10, -1), 1.5]] });
+E.figura('yo3', { t0: N[2].S - 0.1, t1: fin(3), x: -370, cara: true, poses: [[0, 'de_pie'], [w(8, 2), 'senalar'], [w(9, 0), 'pensar'], [w(9, 5), 'senalar'], [w(10, 5), 'ofrecer'], [wf(10, -1), 'celebrar']], sonrisa: [[w(9, 0), -0.3], [w(9, 5), 0.6], [wf(10, -1), 1.5]] });
 E.obj('trozos', 'bloques', { t0: N[2].S - 0.1, t1: fin(3), x: 90, y: -330, n: 6, w: 560, h: 120, texto: 'INFORME', sobrevive: true, r: 80,
-  parte: [[w(8, 4), 0], [w(8, 6) + 0.2, 1]], hechos: [[w(9, 5), 0], [w(9, 5) + 0.3, 1], [w(10, 6), 1], [wf(10, -1), 6, 'in']], barrido: [w(8, 6), wf(10, -1)], caja: [-280, -70, 560, 140] });
-E.obj('cuenta3', 'contador', { t0: w(9, 4), t1: fin(3), x: 90, y: -170, v: [[w(9, 5), 0], [w(9, 5) + 0.3, 1], [w(10, 6), 1], [wf(10, -1), 6, 'in']], suf: ' / 6', size: 60, col: 'txt', miles: false, sfx: false, caja: [-110, -36, 220, 72] });
+  parte: [[w(8, 4), 0], [w(8, 6) + 0.2, 1]], hechos: [[w(9, 5), 0], [w(9, 5) + 0.3, 1], [w(10, 5), 1], [wf(10, -1), 6, 'in']], barrido: [w(8, 6), wf(10, -1)], caja: [-280, -70, 560, 140] });
+E.obj('cuenta3', 'contador', { t0: w(9, 4), t1: fin(3), x: 90, y: -170, v: [[w(9, 5), 0], [w(9, 5) + 0.3, 1], [w(10, 5), 1], [wf(10, -1), 6, 'in']], suf: ' / 6', size: 60, col: 'txt', miles: false, sfx: false, caja: [-110, -36, 220, 72] });
 E.obj('ch3', 'chispas', { t0: wf(10, -1), t1: wf(10, -1) + 0.8, x: 90, y: -330, r0: 200, r1: 320, n: 16, inspeccion: false });
 E.golpe(wf(10, -1), 0.05);
-E.obj('rayos3', 'rayos', { t0: w(10, 0), t1: fin(3), x: 90, y: -330, r: 420, z: -2, p: [[w(10, 0), 0], [w(10, 5), 1, 'out']], inspeccion: false });
+E.obj('rayos3', 'rayos', { t0: w(10, 0), t1: fin(3), x: 90, y: -330, r: 420, z: -2, p: [[w(10, 0), 0], [w(10, 4), 1, 'out']], inspeccion: false });
 E.obj('conf3', 'confeti', { t0: wf(10, -1), t1: wf(10, -1) + 2.0, x: 90, y: -420, n: 56, inspeccion: false }); E.destello(wf(10, -1), 0.22);
 
 // ---------- 4 · una sola pestaña: se cierran una a una ----------

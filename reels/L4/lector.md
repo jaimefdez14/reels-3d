@@ -22,3 +22,6 @@ Casi bloqueantes: «El primero: empieza por lo que más pereza te da» (no es el
 
 # Lector nuevo (10-11) · 8/10 · PASA
 Matices aplicados: «Si no lo tienes delante, no te distrae» («lo» ambiguo) → «Lo que no ves no te distrae»; «Las ganas dan igual» → «Al final, las ganas dan igual».
+
+## 11-11-2026 · gancho «el tercero es el que mejor funciona»
+Lector nuevo: 8/10. Entiende el vídeo. Marca: «Por eso funciona tan bien» no encaja del todo con lo que sigue y la promesa del tercero no se demuestra; «Cuando pares por hoy, para…» repite verbo. Abandonaría hacia el s. 32-35.

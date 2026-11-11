@@ -1,259 +1,268 @@
 {
-  "id": "L4",
-  "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md; regla 15: satisfying)",
-  "titulo": "Cinco formas de dejar de procrastinar hoy mismo",
-  "idea": "L4 de docs/IDEAS-2026-11-09.md, aprobada por Jaime el 09-11-2026 («haz L4 y L5»). Pulso de B-R2 (rutina en 5 puntos, fondo negro, segunda línea amarilla en cursiva, el muñeco hace cada acción). Satisfying: contador de minutos que suma, globo de avisos que se dispara, tarea que se trocea y se tacha en cascada, pestañas que se cierran, barra que se completa al día siguiente.",
-  "coverT": 1.7,
-  "lines": [
-    {
-      "show": "Eso que llevas tres días dejando para mañana: / *hoy lo haces.*",
-      "pause": 0.35
-    },
-    {
-      "show": "Cinco trucos, / *y el tercero te quita la excusa.*",
-      "pause": 0.5
-    },
-    {
-      "show": "El primero: // *solo cinco minutos.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Ponte una alarma de cinco minutos / *y empieza.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Cuando suene, puedes parar. / *Y casi nunca paras.*",
-      "pause": 0.55
-    },
-    {
-      "show": "El segundo: // *el móvil, en otra habitación.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "*Ni en silencio ni boca abajo.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Si tienes que levantarte a por él, / *te da pereza y no lo coges.*",
-      "pause": 0.55
-    },
-    {
-      "show": "El tercero: // *parte la tarea en trozos.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Hacer un informe da pereza. / *Abrir el documento, no.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Por eso te quita la excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*",
-      "pause": 0.55
-    },
-    {
-      "show": "El cuarto: // *una sola pestaña abierta.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Cierra todo / *menos lo que estás haciendo.*",
-      "pause": 0.3
-    },
-    {
-      "show": "*Lo que no ves no te distrae.*",
-      "pause": 0.55
-    },
-    {
-      "show": "El quinto: // *déjate algo a medias.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Cuando pares por hoy, / *para justo antes de algo fácil.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Mañana empiezas por ahí / *y ya has arrancado.*",
-      "pause": 0.55
-    },
-    {
-      "show": "Al final, las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*",
-      "pause": 0.3
-    }
-  ],
-  "revision_castellano": {
-    "fecha": "2026-11-09",
-    "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
-    "cambios": [
-      "0: «Cinco formas de dejar *de procrastinar hoy mismo.*» → «Cinco trucos para dejar *de procrastinar hoy mismo.*»",
-      "1: «Y la tercera es *la que mejor funciona.*» → «Y el tercero es *el que mejor funciona.*»",
-      "2: «Número uno: // *cinco minutos feos.*» → «Número uno: // *cinco minutos con lo peor.*»",
-      "3: «Pon cinco minutos en el reloj / y haz *la parte más fea.*» → «Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*»",
-      "8: «Número tres: // *trocéala hasta que dé risa.*» → «Número tres: // *trocea la tarea hasta que dé risa.*»",
-      "13: «Tu cabeza no puede saltar / *adonde no hay nada abierto.*» → «Tu cabeza no puede escaparse / *a lo que no está abierto.*»",
-      "15: «Cuando acabes por hoy, / *deja una frase sin terminar.*» → «Al terminar el día, / *deja una frase a medias.*»",
-      "18: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
-    ]
+ "id": "L4",
+ "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md; regla 15: satisfying)",
+ "titulo": "Cinco formas de dejar de procrastinar hoy mismo",
+ "idea": "L4 de docs/IDEAS-2026-11-09.md, aprobada por Jaime el 09-11-2026 («haz L4 y L5»). Pulso de B-R2 (rutina en 5 puntos, fondo negro, segunda línea amarilla en cursiva, el muñeco hace cada acción). Satisfying: contador de minutos que suma, globo de avisos que se dispara, tarea que se trocea y se tacha en cascada, pestañas que se cierran, barra que se completa al día siguiente.",
+ "coverT": 1.7,
+ "lines": [
+  {
+   "show": "Eso que llevas tres días dejando para mañana: / *hoy lo haces.*",
+   "pause": 0.35
   },
-  "redaccion": {
-    "fecha": "2026-11-09",
-    "regla": "17 (docs/REDACCION.md)",
-    "nota": "Giro hacia la mitad en el tercer punto («Lo curioso:», cierra el anuncio de la línea 1), «por eso» en el punto 5, remate que vuelve al gancho y envío en lugar de «guárdalo / sígueme»; subtítulos a dos renglones.",
-    "cambios": [
-      "0: «Cinco trucos para dejar *de procrastinar hoy mismo.*» → «Cinco trucos para dejar / *de procrastinar hoy mismo.*»",
-      "1: «Y el tercero es *el que mejor funciona.*» → «Y el tercero / *es el que mejor funciona.*»",
-      "3: «Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*» → «Pon cinco minutos en el reloj / y empieza por *lo que más pereza te da.*»",
-      "7: «Si tienes que levantarte a por él, / *ya no lo coges.*» → «Si tienes que ir a por él, / *ya no lo coges.*»",
-      "8: «Número tres: // *trocea la tarea hasta que dé risa.*» → «Número tres: // *trocea la tarea.*»",
-      "9: ««Hacer el informe» no es una tarea. / *«Abrir el documento», sí.*» → ««Hacer el informe» / no es una tarea. / *«Abrir el documento», sí.*»",
-      "10: «Cada trozo que tachas / *te empuja al siguiente.*» → «Lo curioso: cada trozo que tachas / *te empuja al siguiente.*»",
-      "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*»",
-      "16: «Mañana sabrás exactamente / *por dónde seguir.*» → «Por eso mañana sabes / *por dónde seguir.*»",
-      "17: «Guárdalo para la próxima vez / que digas *«mañana lo hago».*» → «No era pereza: / *la tarea era demasiado grande.*»",
-      "18: «Y sígueme, *que vienen más.*» → «Mándaselo a quien dice / *«mañana lo hago».*»",
-      "17: «No era pereza: / *la tarea era demasiado grande.*» → «No necesitas ganas: / *necesitas que empezar sea fácil.*» (segunda revisión: «la tarea era demasiado grande» solo valía para el punto 3; los cinco trucos hacen fácil empezar)"
-    ]
+  {
+   "show": "Cinco trucos para empezar, / y el tercero / *es el que mejor funciona.*",
+   "pause": 0.5
   },
-  "lector": [
-    {
-      "ronda": 1,
-      "nota": "lector 7/10: el anuncio del tercero se paga; sin comillas que no se oyen; «para a mitad de frase» ambiguo; el porqué del móvil",
-      "cambios": [
-        "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»",
-        "6: «Ni en silencio ni boca abajo. / *En otra habitación.*» → «*Ni en silencio ni boca abajo.*»",
-        "7: «Si tienes que ir a por él, / *ya no lo coges.*» → «Si tienes que levantarte a por él, / *te da pereza y no lo coges.*»",
-        "9: ««Hacer el informe» / no es una tarea. / *«Abrir el documento», sí.*» → «Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*»",
-        "10: «Lo curioso: cada trozo que tachas / *te empuja al siguiente.*» → «Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*»",
-        "11: «Número cuatro: // *una sola pestaña.*» → «Número cuatro: // *una sola ventana abierta.*»",
-        "14: «Número cinco: // *para a mitad de frase.*» → «Número cinco: // *deja algo a medias.*»",
-        "15: «Al terminar el día, / *deja una frase a medias.*» → «Al acabar el día, deja sin terminar / *algo fácil.*»",
-        "16: «Por eso mañana sabes / *por dónde seguir.*» → «Mañana empiezas por ahí / *y ya estás en marcha.*»"
-      ]
-    },
-    {
-      "ronda": 2,
-      "nota": "ronda 2: 7/10",
-      "cambios": [
-        "0: «Cinco trucos para dejar / *de procrastinar hoy mismo.*» → «Cinco trucos para dejar / *de procrastinar desde hoy.*»",
-        "9: «Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*»",
-        "10: «Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*» → «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*»",
-        "11: «Número cuatro: // *una sola ventana abierta.*» → «Número cuatro: // *una sola pestaña.*»",
-        "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*»",
-        "15: «Al acabar el día, deja sin terminar / *algo fácil.*» → «Al acabar el día, deja a medias / *una parte fácil de la tarea.*»",
-        "9: «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe asusta. / *Abrir el documento, no.*» (seguía contradiciéndose)"
-      ]
-    },
-    {
-      "ronda": 3,
-      "nota": "ronda 3: 7/10",
-      "cambios": [
-        "9: «Hacer el informe asusta. / *Abrir el documento, no.*» → «Hacer un informe asusta. / *Abrir el documento, no.*»",
-        "10: «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*» → «Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*»",
-        "12: «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*» → «Cierra todas / *menos la de la tarea.*»",
-        "15: «Al acabar el día, deja a medias / *una parte fácil de la tarea.*» → «Al acabar el día, para / *en mitad de algo fácil.*»"
-      ]
-    },
-    {
-      "ronda": "nativo-1",
-      "nota": "8/10; casi bloqueante: el nombre del primer truco no era el truco (la alarma) y chocaba con el cierre",
-      "cambios": [
-        "2: «El primero: // *empieza por lo que más pereza te da.*» → «El primero: // *solo cinco minutos.*»",
-        "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»"
-      ]
-    },
-    {
-      "ronda": "nativo-2",
-      "nota": "8/10, sin bloqueantes. PASA. Matices aplicados: «lo» ambiguo en la 13; «Las ganas dan igual» sin preparación.",
-      "cambios": [
-        "13: «Si no lo tienes delante, / *no te distrae.*» → «*Lo que no ves no te distrae.*»",
-        "17: «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*» → «Al final, las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
-      ]
-    }
-  ],
-  "situacion": "Tienes algo pendiente desde hace días y cada mañana lo dejas para mañana. No es falta de ganas: es que ponerte cuesta. Lo que ayuda es que empezar sea fácil: poco rato, sin el móvil, en trozos pequeños, con una sola cosa abierta y dejando algo fácil para el día siguiente.",
-  "nativo": {
-    "fecha": "2026-11-10",
-    "regla": "19 y 20",
-    "antes": [
-      "Cinco trucos para dejar / *de procrastinar desde hoy.*",
-      "El tercero / *es el que mejor funciona.*",
-      "Número uno: // *cinco minutos con lo peor.*",
-      "Pon cinco minutos en el reloj / y empieza por *lo que más pereza te da.*",
-      "Cuando suene, puedes parar. / *Casi nunca paras.*",
-      "Número dos: // *el móvil, a otra habitación.*",
-      "*Ni en silencio ni boca abajo.*",
-      "Si tienes que levantarte a por él, / *te da pereza y no lo coges.*",
-      "Número tres: // *trocea la tarea.*",
-      "Hacer un informe asusta. / *Abrir el documento, no.*",
-      "Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*",
-      "Número cuatro: // *una sola pestaña.*",
-      "Cierra todas / *menos la de la tarea.*",
-      "Tu cabeza no puede escaparse / *a lo que no está abierto.*",
-      "Número cinco: // *deja algo a medias.*",
-      "Al acabar el día, para / *en mitad de algo fácil.*",
-      "Mañana empiezas por ahí / *y ya estás en marcha.*",
-      "No necesitas ganas: / *necesitas que empezar sea fácil.*",
-      "Mándaselo a quien dice / *«mañana lo hago».*"
-    ]
+  {
+   "show": "El primero: // *solo cinco minutos.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
   },
-  "corrector": [
-    {
-      "ronda": 1,
-      "cambios": [
-        "2: «Número uno: // *empieza por lo que más pereza te da.*» → «El primero: // *empieza por lo que más pereza te da.*»",
-        "3: «Pon un temporizador de cinco minutos / *y ponte.*» → «Ponte una alarma de cinco minutos / *y empieza.*»",
-        "4: «Cuando suene, puedes parar. / *Casi nunca paras.*» → «Cuando suene, puedes parar. / *Y casi nunca lo haces.*»",
-        "5: «Número dos: // *el móvil, en otra habitación.*» → «El segundo: // *el móvil, en otra habitación.*»",
-        "8: «Número tres: // *divide la tarea en trozos.*» → «El tercero: // *parte la tarea en trozos.*»",
-        "10: «Y es el que mejor funciona / porque cada trozo que acabas / *te empuja al siguiente.*» → «Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»",
-        "11: «Número cuatro: // *una sola pestaña abierta.*» → «El cuarto: // *una sola pestaña abierta.*»",
-        "14: «Número cinco: // *déjate algo a medias.*» → «El quinto: // *déjate algo a medias.*»",
-        "15: «Al acabar el día, para / *en mitad de algo fácil.*» → «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*»",
-        "17: «No te hacen falta ganas: / *te hace falta que empezar cueste poco.*» → «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*»",
-        "18: «Mándaselo a quien siempre dice / *«mañana lo hago».*» → «Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*»"
-      ]
-    },
-    {
-      "ronda": 2,
-      "cambios": [
-        "4: «Cuando suene, puedes parar. / *Y casi nunca lo haces.*» → «Cuando suene, puedes parar. / *Y casi nunca paras.*»",
-        "15: «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*» → «Cuando pares por hoy, / *para justo antes de algo fácil.*»",
-        "17: «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*» → «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
-      ]
-    }
-  ],
-  "gancho": [
-    {
-      "fecha": "2026-11-10",
-      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
-      "cambios": [
-        "0: «Cinco trucos para no dejarlo todo / *para mañana.*» → «Llevas tres días / *dejándolo para mañana.*»",
-        "1: «El tercero / *es el que mejor funciona.*» → «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*»"
-      ]
-    },
-    {
-      "fecha": "2026-11-10",
-      "revisor": "NO PASA: «dejándolo» sin antecedente; «el tercero es el que mejor funciona» calco de *works best*. Su versión; la frase del tercero se ajusta para cerrar la promesa.",
-      "cambios": [
-        "0: «Llevas tres días / *dejándolo para mañana.*» → «Eso que llevas tres días dejando para mañana, / *lo vas a hacer hoy.*»",
-        "1: «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*» → «Cinco trucos. / *Y con el tercero ya no hay excusa.*»",
-        "10: «Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso con este no hay excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»"
-      ]
-    },
-    {
-      "fecha": "2026-11-10",
-      "revisor": "PASA por poco. Retoque opcional aplicado: menos tono de anuncio; la frase del tercero cierra la promesa.",
-      "cambios": [
-        "0: «Eso que llevas tres días dejando para mañana, / *lo vas a hacer hoy.*» → «Eso que llevas tres días dejando para mañana: / *hoy lo haces.*»",
-        "1: «Cinco trucos. / *Y con el tercero ya no hay excusa.*» → «Cinco trucos, / *y el tercero te quita la excusa.*»",
-        "10: «Por eso con este no hay excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso te quita la excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»"
-      ]
-    }
+  {
+   "show": "Ponte una alarma de cinco minutos / *y empieza.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Cuando suene, puedes parar. / *Y casi nunca paras.*",
+   "pause": 0.55
+  },
+  {
+   "show": "El segundo: // *el móvil, en otra habitación.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "*Ni en silencio ni boca abajo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si tienes que levantarte a por él, / *te da pereza y no lo coges.*",
+   "pause": 0.55
+  },
+  {
+   "show": "El tercero: // *parte la tarea en trozos.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Hacer un informe da pereza. / *Abrir el documento, no.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*",
+   "pause": 0.55
+  },
+  {
+   "show": "El cuarto: // *una sola pestaña abierta.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Cierra todo / *menos lo que estás haciendo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "*Lo que no ves no te distrae.*",
+   "pause": 0.55
+  },
+  {
+   "show": "El quinto: // *déjate algo a medias.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Cuando pares por hoy, / *para justo antes de algo fácil.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mañana empiezas por ahí / *y ya has arrancado.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Al final, las ganas dan igual. / *Lo que importa es que te cueste poco empezar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*",
+   "pause": 0.3
+  }
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "0: «Cinco formas de dejar *de procrastinar hoy mismo.*» → «Cinco trucos para dejar *de procrastinar hoy mismo.*»",
+   "1: «Y la tercera es *la que mejor funciona.*» → «Y el tercero es *el que mejor funciona.*»",
+   "2: «Número uno: // *cinco minutos feos.*» → «Número uno: // *cinco minutos con lo peor.*»",
+   "3: «Pon cinco minutos en el reloj / y haz *la parte más fea.*» → «Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*»",
+   "8: «Número tres: // *trocéala hasta que dé risa.*» → «Número tres: // *trocea la tarea hasta que dé risa.*»",
+   "13: «Tu cabeza no puede saltar / *adonde no hay nada abierto.*» → «Tu cabeza no puede escaparse / *a lo que no está abierto.*»",
+   "15: «Cuando acabes por hoy, / *deja una frase sin terminar.*» → «Al terminar el día, / *deja una frase a medias.*»",
+   "18: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
   ]
+ },
+ "redaccion": {
+  "fecha": "2026-11-09",
+  "regla": "17 (docs/REDACCION.md)",
+  "nota": "Giro hacia la mitad en el tercer punto («Lo curioso:», cierra el anuncio de la línea 1), «por eso» en el punto 5, remate que vuelve al gancho y envío en lugar de «guárdalo / sígueme»; subtítulos a dos renglones.",
+  "cambios": [
+   "0: «Cinco trucos para dejar *de procrastinar hoy mismo.*» → «Cinco trucos para dejar / *de procrastinar hoy mismo.*»",
+   "1: «Y el tercero es *el que mejor funciona.*» → «Y el tercero / *es el que mejor funciona.*»",
+   "3: «Pon cinco minutos en el reloj / y empieza *por lo que más pereza te da.*» → «Pon cinco minutos en el reloj / y empieza por *lo que más pereza te da.*»",
+   "7: «Si tienes que levantarte a por él, / *ya no lo coges.*» → «Si tienes que ir a por él, / *ya no lo coges.*»",
+   "8: «Número tres: // *trocea la tarea hasta que dé risa.*» → «Número tres: // *trocea la tarea.*»",
+   "9: ««Hacer el informe» no es una tarea. / *«Abrir el documento», sí.*» → ««Hacer el informe» / no es una tarea. / *«Abrir el documento», sí.*»",
+   "10: «Cada trozo que tachas / *te empuja al siguiente.*» → «Lo curioso: cada trozo que tachas / *te empuja al siguiente.*»",
+   "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*»",
+   "16: «Mañana sabrás exactamente / *por dónde seguir.*» → «Por eso mañana sabes / *por dónde seguir.*»",
+   "17: «Guárdalo para la próxima vez / que digas *«mañana lo hago».*» → «No era pereza: / *la tarea era demasiado grande.*»",
+   "18: «Y sígueme, *que vienen más.*» → «Mándaselo a quien dice / *«mañana lo hago».*»",
+   "17: «No era pereza: / *la tarea era demasiado grande.*» → «No necesitas ganas: / *necesitas que empezar sea fácil.*» (segunda revisión: «la tarea era demasiado grande» solo valía para el punto 3; los cinco trucos hacen fácil empezar)"
+  ]
+ },
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "lector 7/10: el anuncio del tercero se paga; sin comillas que no se oyen; «para a mitad de frase» ambiguo; el porqué del móvil",
+   "cambios": [
+    "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»",
+    "6: «Ni en silencio ni boca abajo. / *En otra habitación.*» → «*Ni en silencio ni boca abajo.*»",
+    "7: «Si tienes que ir a por él, / *ya no lo coges.*» → «Si tienes que levantarte a por él, / *te da pereza y no lo coges.*»",
+    "9: ««Hacer el informe» / no es una tarea. / *«Abrir el documento», sí.*» → «Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*»",
+    "10: «Lo curioso: cada trozo que tachas / *te empuja al siguiente.*» → «Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*»",
+    "11: «Número cuatro: // *una sola pestaña.*» → «Número cuatro: // *una sola ventana abierta.*»",
+    "14: «Número cinco: // *para a mitad de frase.*» → «Número cinco: // *deja algo a medias.*»",
+    "15: «Al terminar el día, / *deja una frase a medias.*» → «Al acabar el día, deja sin terminar / *algo fácil.*»",
+    "16: «Por eso mañana sabes / *por dónde seguir.*» → «Mañana empiezas por ahí / *y ya estás en marcha.*»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "nota": "ronda 2: 7/10",
+   "cambios": [
+    "0: «Cinco trucos para dejar / *de procrastinar hoy mismo.*» → «Cinco trucos para dejar / *de procrastinar desde hoy.*»",
+    "9: «Hacer el informe es demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*»",
+    "10: «Es el que mejor funciona: / cada trozo que tachas / *te empuja al siguiente.*» → «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*»",
+    "11: «Número cuatro: // *una sola ventana abierta.*» → «Número cuatro: // *una sola pestaña.*»",
+    "12: «Cierra todo lo que no sea la tarea. / *Una pestaña. Una ventana.*» → «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*»",
+    "15: «Al acabar el día, deja sin terminar / *algo fácil.*» → «Al acabar el día, deja a medias / *una parte fácil de la tarea.*»",
+    "9: «Hacer el informe / es una tarea demasiado grande. / *Abrir el documento, eso sí es una tarea.*» → «Hacer el informe asusta. / *Abrir el documento, no.*» (seguía contradiciéndose)"
+   ]
+  },
+  {
+   "ronda": 3,
+   "nota": "ronda 3: 7/10",
+   "cambios": [
+    "9: «Hacer el informe asusta. / *Abrir el documento, no.*» → «Hacer un informe asusta. / *Abrir el documento, no.*»",
+    "10: «Por eso este es el mejor: / cada trozo que tachas / *te empuja al siguiente.*» → «Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*»",
+    "12: «Cierra todas menos la de la tarea. / *Una pestaña, ni una más.*» → «Cierra todas / *menos la de la tarea.*»",
+    "15: «Al acabar el día, deja a medias / *una parte fácil de la tarea.*» → «Al acabar el día, para / *en mitad de algo fácil.*»"
+   ]
+  },
+  {
+   "ronda": "nativo-1",
+   "nota": "8/10; casi bloqueante: el nombre del primer truco no era el truco (la alarma) y chocaba con el cierre",
+   "cambios": [
+    "2: «El primero: // *empieza por lo que más pereza te da.*» → «El primero: // *solo cinco minutos.*»",
+    "1: «Y el tercero / *es el que mejor funciona.*» → «El tercero / *es el que mejor funciona.*»"
+   ]
+  },
+  {
+   "ronda": "nativo-2",
+   "nota": "8/10, sin bloqueantes. PASA. Matices aplicados: «lo» ambiguo en la 13; «Las ganas dan igual» sin preparación.",
+   "cambios": [
+    "13: «Si no lo tienes delante, / *no te distrae.*» → «*Lo que no ves no te distrae.*»",
+    "17: «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*» → «Al final, las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
+   ]
+  }
+ ],
+ "situacion": "Tienes algo pendiente desde hace días y cada mañana lo dejas para mañana. No es falta de ganas: es que ponerte cuesta. Lo que ayuda es que empezar sea fácil: poco rato, sin el móvil, en trozos pequeños, con una sola cosa abierta y dejando algo fácil para el día siguiente.",
+ "nativo": {
+  "fecha": "2026-11-10",
+  "regla": "19 y 20",
+  "antes": [
+   "Cinco trucos para dejar / *de procrastinar desde hoy.*",
+   "El tercero / *es el que mejor funciona.*",
+   "Número uno: // *cinco minutos con lo peor.*",
+   "Pon cinco minutos en el reloj / y empieza por *lo que más pereza te da.*",
+   "Cuando suene, puedes parar. / *Casi nunca paras.*",
+   "Número dos: // *el móvil, a otra habitación.*",
+   "*Ni en silencio ni boca abajo.*",
+   "Si tienes que levantarte a por él, / *te da pereza y no lo coges.*",
+   "Número tres: // *trocea la tarea.*",
+   "Hacer un informe asusta. / *Abrir el documento, no.*",
+   "Y es el mejor / porque cada trozo que acabas / *te empuja al siguiente.*",
+   "Número cuatro: // *una sola pestaña.*",
+   "Cierra todas / *menos la de la tarea.*",
+   "Tu cabeza no puede escaparse / *a lo que no está abierto.*",
+   "Número cinco: // *deja algo a medias.*",
+   "Al acabar el día, para / *en mitad de algo fácil.*",
+   "Mañana empiezas por ahí / *y ya estás en marcha.*",
+   "No necesitas ganas: / *necesitas que empezar sea fácil.*",
+   "Mándaselo a quien dice / *«mañana lo hago».*"
+  ]
+ },
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    "2: «Número uno: // *empieza por lo que más pereza te da.*» → «El primero: // *empieza por lo que más pereza te da.*»",
+    "3: «Pon un temporizador de cinco minutos / *y ponte.*» → «Ponte una alarma de cinco minutos / *y empieza.*»",
+    "4: «Cuando suene, puedes parar. / *Casi nunca paras.*» → «Cuando suene, puedes parar. / *Y casi nunca lo haces.*»",
+    "5: «Número dos: // *el móvil, en otra habitación.*» → «El segundo: // *el móvil, en otra habitación.*»",
+    "8: «Número tres: // *divide la tarea en trozos.*» → «El tercero: // *parte la tarea en trozos.*»",
+    "10: «Y es el que mejor funciona / porque cada trozo que acabas / *te empuja al siguiente.*» → «Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»",
+    "11: «Número cuatro: // *una sola pestaña abierta.*» → «El cuarto: // *una sola pestaña abierta.*»",
+    "14: «Número cinco: // *déjate algo a medias.*» → «El quinto: // *déjate algo a medias.*»",
+    "15: «Al acabar el día, para / *en mitad de algo fácil.*» → «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*»",
+    "17: «No te hacen falta ganas: / *te hace falta que empezar cueste poco.*» → «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*»",
+    "18: «Mándaselo a quien siempre dice / *«mañana lo hago».*» → «Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    "4: «Cuando suene, puedes parar. / *Y casi nunca lo haces.*» → «Cuando suene, puedes parar. / *Y casi nunca paras.*»",
+    "15: «Cuando lo dejes por hoy, / *déjalo justo en una parte fácil.*» → «Cuando pares por hoy, / *para justo antes de algo fácil.*»",
+    "17: «Las ganas dan igual. / *Lo que importa es que empezar sea fácil.*» → «Las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*»"
+   ]
+  }
+ ],
+ "gancho": [
+  {
+   "fecha": "2026-11-10",
+   "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+   "cambios": [
+    "0: «Cinco trucos para no dejarlo todo / *para mañana.*» → «Llevas tres días / *dejándolo para mañana.*»",
+    "1: «El tercero / *es el que mejor funciona.*» → «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "NO PASA: «dejándolo» sin antecedente; «el tercero es el que mejor funciona» calco de *works best*. Su versión; la frase del tercero se ajusta para cerrar la promesa.",
+   "cambios": [
+    "0: «Llevas tres días / *dejándolo para mañana.*» → «Eso que llevas tres días dejando para mañana, / *lo vas a hacer hoy.*»",
+    "1: «Cinco trucos para hacerlo hoy. / *Y el tercero es el que mejor funciona.*» → «Cinco trucos. / *Y con el tercero ya no hay excusa.*»",
+    "10: «Y por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso con este no hay excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "PASA por poco. Retoque opcional aplicado: menos tono de anuncio; la frase del tercero cierra la promesa.",
+   "cambios": [
+    "0: «Eso que llevas tres días dejando para mañana, / *lo vas a hacer hoy.*» → «Eso que llevas tres días dejando para mañana: / *hoy lo haces.*»",
+    "1: «Cinco trucos. / *Y con el tercero ya no hay excusa.*» → «Cinco trucos, / *y el tercero te quita la excusa.*»",
+    "10: «Por eso con este no hay excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso te quita la excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-11",
+   "motivo": "Jaime: «el tercero te quita la excusa no suena muy bien» → elige «Cinco trucos para empezar, y el tercero es el que mejor funciona.»; regla 23: «lo que cuenta» → «lo que importa»",
+   "cambios": [
+    "1: «Cinco trucos, / *y el tercero te quita la excusa.*» → «Cinco trucos para empezar, / y el tercero / *es el que mejor funciona.*»",
+    "10: «Por eso te quita la excusa: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*» → «Por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*»",
+    "17: «Al final, las ganas dan igual. / *Lo que cuenta es que te cueste poco empezar.*» → «Al final, las ganas dan igual. / *Lo que importa es que te cueste poco empezar.*»"
+   ]
+  }
+ ]
 }
