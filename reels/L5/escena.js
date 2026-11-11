@@ -20,19 +20,19 @@ E.camara([
 ]);
 
 // ---------- gancho ----------
-// 0: Ese(0) «es(1) un(2) cambio(3) rapidito»(4) ya(5) te(6) ha(7) costado(8) horas(9) gratis(10)
+// 0: Ese(0) «es(1) un(2) cambio(3) pequeño»(4) ya(5) te(6) ha(7) costado(8) horas(9) sin(10) cobrar(11)
 // 1: Cuatro(0) reglas(1) para(2) cobrar(3) más(4) La(5) última(6) lo(7) corta(8) de(9) raíz(10)
 E.figura('yo', { t0: 0, t1: fin(0), x: -340, cara: true,
   poses: [[0, 'ofrecer'], [w(0, 5), 'encoger'], [w(0, 9), 'manos_cabeza'], [w(1, 0), 'de_pie'], [w(1, 8), 'celebrar']],
   sonrisa: [[0, 0.6], [w(0, 5), -0.3], [w(0, 9), -1], [w(1, 0), 0], [w(1, 8), 1.5]] });
 E.figura('cli', { t0: 0, t1: fin(0), x: 340, dir: -1, color: 'gris', poses: [[0, 'senalar'], [w(0, 5), 'de_pie'], [w(1, 8), 'encoger']] });
-E.obj('rapidito', 'bocadillo', { t0: 0, t1: w(1, 9) + 0.15, sale: 0.15, x: 40, y: -470, w: 460, h: 100, texto: 'Es un cambio rapidito', size: 34,
+E.obj('rapidito', 'bocadillo', { t0: 0, t1: w(1, 9) + 0.15, sale: 0.15, x: 40, y: -470, w: 460, h: 100, texto: 'Es un cambio pequeño', size: 34,
   luz: [[w(1, 7), 1], [w(1, 9), 0.4]], caja: [-230, -50, 460, 126] });
 // las horas suben… y el precio de esas horas se queda en 0 €
-E.obj('horasH', 'contador', { t0: w(0, 5) - 0.1, t1: w(1, 0), x: -20, y: -320, v: [[w(0, 5), 0], [wf(0, 10), 9, 'inout']], suf: ' h', size: 64, col: 'txt', miles: false, pop: true, caja: [-90, -38, 180, 76] });
+E.obj('horasH', 'contador', { t0: w(0, 5) - 0.1, t1: w(1, 0), x: -20, y: -320, v: [[w(0, 5), 0], [wf(0, 11), 9, 'inout']], suf: ' h', size: 64, col: 'txt', miles: false, pop: true, caja: [-90, -38, 180, 76] });
 E.obj('precioH', 'etiqueta', { t0: w(0, 5) - 0.1, t1: fin(0), x: -10, y: -170, w: 300, h: 130, pop: true, estela: 4,
-  v: [[w(0, 5), 300], [w(0, 8), 300], [wf(0, 10), 0, 'in']], on: [[wf(0, 10) - 0.2, 1], [wf(0, 10), 0], [w(1, 0), 0], [w(1, 3), 1]], caja: [-150, -65, 300, 130] });
-E.temblor(wf(0, 10) - 0.05, 18, 0.5); E.golpe(wf(0, 10) - 0.05, 0.05);
+  v: [[w(0, 5), 300], [w(0, 8), 300], [wf(0, 11), 0, 'in']], on: [[wf(0, 11) - 0.2, 1], [wf(0, 11), 0], [w(1, 0), 0], [w(1, 3), 1]], caja: [-150, -65, 300, 130] });
+E.temblor(wf(0, 11) - 0.05, 18, 0.5); E.golpe(wf(0, 11) - 0.05, 0.05);
 // «Cuatro reglas»: cuatro monedas; «lo corta de raíz»: un tijeretazo cruza el bocadillo del cliente
 [0, 1, 2, 3].forEach(i => { const a = w(1, 0) + i * 0.12; E.obj('regla' + i, 'moneda', { t0: a, t1: fin(0), x: -135 + i * 90, y: -320, r: 30, n: i + 1, pop: true, sfx: i === 0, inspeccion: false, sobrevive: i === 3 }); });
 E.obj('tijera', 'pieza', { t0: w(1, 7) - 0.1, t1: w(1, 9) + 0.25, sale: 0.15, r: 34, texto: '✂', libre: true, estela: 6, inspeccion: false,
@@ -58,7 +58,7 @@ E.obj('conf2', 'confeti', { t0: wf(4, -1), t1: wf(4, -1) + 1.6, x: 0, y: -360, d
 E.golpe(wf(4, -1), 0.05);
 
 // ---------- 2 · di tu precio y cállate ----------
-// 5: La(0) segunda(1) di(2) tu(3) precio(4) y(5) cállate(6)   6: Y(0) sin(1) dar(2) explicaciones(3)
+// 5: La(0) segunda(1) di(2) tu(3) precio(4) y(5) guarda(6) silencio(7)   6: Y(0) sin(1) dar(2) explicaciones(3)
 // 7: Se(0) hace(1) un(2) silencio(3) incómodo(4) Aguántalo(5) si(6) hablas(7) tú(8) primero(9) acabas(10) bajándolo(11)
 E.numero(2, N[1].T, N[1].S, { desde: 'tag2', hacia: 'precio2' });
 E.figura('yo1', { t0: N[1].S - 0.1, t1: fin(2), x: -340, cara: true,
@@ -93,7 +93,7 @@ E.golpe(wf(10, 1), 0.04);
 
 // ---------- 4 · avisa antes de empezar de que los cambios se pagan ----------
 // 11: La(0) cuarta(1) antes(2) de(3) empezar(4) avisa(5) de(6) que(7) los(8) cambios(9) se(10) pagan(11)
-// 12: Los(0) cambios(1) siempre(2) llegan(3) a(4) mitad(5) del(6) trabajo(7)   13: Si(0) no(1) lo(2) has(3) dicho(4) antes(5) te(6) los(7) comes(8)
+// 12: Los(0) cambios(1) siempre(2) llegan(3) a(4) mitad(5) del(6) trabajo(7)   13: Si(0) no(1) lo(2) has(3) dicho(4) antes(5) los(6) acabas(7) pagando(8) tú(9)
 E.numero(4, N[3].T, N[3].S, { desde: 'extra', hacia: 'alcance' });
 E.figura('yo4', { t0: N[3].S - 0.1, t1: TC, x: -370, cara: true,
   poses: [[0, 'de_pie'], [w(11, 2), 'ofrecer'], [w(12, 0), 'senalar'], [w(13, 0), 'pensar'], [w(13, 6), 'triste']], sonrisa: [[w(11, 9), 1], [w(13, 6), -1]] });
@@ -111,7 +111,7 @@ golpes4.forEach((tg, i) => {
   E.obj('choque' + i, 'pulso', { t0: tg, t1: tg + 0.6, x: ex, y: ey, r0: 20, r1: 80, inspeccion: false });
   E.sfx(tg, 'thud');
 });
-// «Si no lo has dicho antes, te los comes»: tres cambios se cuelan dentro, en gris
+// «Si no lo has dicho antes, los acabas pagando tú»: tres cambios se cuelan dentro, en gris
 const tc = w(13, 6);
 [0, 1, 2].forEach(i => { const a = tc - 0.5 + i * 0.12;
   E.obj('comes' + i, 'pieza', { t0: a, t1: TC, r: 22, texto: '+', on: 0.15, libre: true, estela: 4, sfx: false, inspeccion: false,

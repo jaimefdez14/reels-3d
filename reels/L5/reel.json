@@ -1,288 +1,299 @@
 {
-  "id": "L5",
-  "estilo": "B (listas en negro; regla 15: satisfying)",
-  "titulo": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
-  "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
-  "coverT": 1.8,
-  "lines": [
-    {
-      "show": "Ese «es un cambio rapidito» / *ya te ha costado horas gratis.*",
-      "pause": 0.35,
-      "bocadillo": "Es un cambio rapidito",
-      "cita": true
-    },
-    {
-      "show": "Cuatro reglas para cobrar más. / *La última lo corta de raíz.*",
-      "pause": 0.5
-    },
-    {
-      "show": "La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*",
-      "pause": 0.3,
-      "pausa_media": 0.7,
-      "bocadillo": "¿Qué presupuesto tenéis?"
-    },
-    {
-      "show": "Que diga él la cifra / *primero.*",
-      "pause": 0.3
-    },
-    {
-      "show": "A veces es más / *de lo que ibas a pedir.*",
-      "pause": 0.55
-    },
-    {
-      "show": "La segunda: // *di tu precio y cállate.*",
-      "pause": 0.3,
-      "pausa_media": 0.7,
-      "bocadillo": "Son 1.200 €"
-    },
-    {
-      "show": "*Y sin dar explicaciones.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*",
-      "pause": 0.55
-    },
-    {
-      "show": "La tercera: // *cobra los extras aparte.*",
-      "pause": 0.3,
-      "pausa_media": 0.7,
-      "bocadillo": "Eso lo cobro aparte"
-    },
-    {
-      "show": "Si te piden algo que no entraba en el presupuesto, / *no lo regales.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Ponle precio / *y déjalo por escrito.*",
-      "pause": 0.55
-    },
-    {
-      "show": "La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*",
-      "pause": 0.3,
-      "pausa_media": 0.7,
-      "bocadillo": "Si luego cambiáis cosas, se cobran"
-    },
-    {
-      "show": "Los cambios siempre llegan / *a mitad del trabajo.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Si no lo has dicho antes, / *te los comes.*",
-      "pause": 0.55
-    },
-    {
-      "show": "Al final, cobrar más / *es saber qué decir.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*",
-      "pause": 0.3
-    }
-  ],
-  "revision_castellano": {
-    "fecha": "2026-11-09",
-    "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
-    "cambios": [
-      "4: «El silencio incómodo / *lo aguanta tu precio, no tú.*» → «Ese silencio incómodo es normal. / *El primero que habla, rebaja.*»",
-      "5: «Número dos: // *pregunta antes de dar tu número.*» → «Número dos: // *pregunta antes de dar tu precio.*»",
-      "8: «Número tres: // *«Eso entra en el plan grande».*» → «Número tres: // *«Eso va en el paquete completo».*»",
-      "10: «Ofrece el siguiente nivel. / *Con su precio.*» → «Ofrece el paquete de arriba. / *Con su precio.*»",
-      "11: «Número cuatro: // *«Si cambia, lo hablamos».*» → «Número cuatro: // *«Si cambia el encargo, lo hablamos».*»",
-      "12: «Lo que no está en el presupuesto / *no está incluido.*» → «Lo que no está en el presupuesto / *se paga aparte.*»",
-      "14: «¿Cuál vas a usar esta semana? / *Te leo en comentarios.*» → «¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*»",
-      "15: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
-    ]
+ "id": "L5",
+ "estilo": "B (listas en negro; regla 15: satisfying)",
+ "titulo": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
+ "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
+ "coverT": 1.8,
+ "lines": [
+  {
+   "show": "Ese «es un cambio pequeño» / *ya te ha costado horas sin cobrar.*",
+   "pause": 0.35,
+   "bocadillo": "Es un cambio pequeño",
+   "cita": true
   },
-  "redaccion": {
-    "fecha": "2026-11-09",
-    "regla": "17 (docs/REDACCION.md)",
-    "nota": "Segunda versión tras la pregunta de Jaime («¿es un buen guion? ¿se entiende?»): el gancho dice a quién va (si trabajas por tu cuenta); los cuatro puntos son frases literales, como promete el gancho; primero se pregunta el presupuesto y después se dice el precio (antes estaban al revés y parecía contradecirse); fuera el «por eso» forzado del punto 4; el anuncio («la última te ahorra discusiones») se cierra en el punto 4; el remate recoge los cuatro puntos.",
-    "antes": [
-      "Cuatro frases para cobrar más *sin pedir perdón.*",
-      "Y la última / *te ahorra discusiones.*",
-      "Número uno: // *di tu precio y cállate.*",
-      "Dilo de un tirón. / *Y no añadas nada.*",
-      "Ese silencio incómodo es normal. / *El primero que habla, rebaja.*",
-      "Número dos: // *pregunta antes de dar tu precio.*",
-      "«¿Qué presupuesto / *teníais pensado?»*",
-      "Lo curioso: a veces es más / *de lo que ibas a pedir.*",
-      "Número tres: // *«Eso va en el paquete completo».*",
-      "Cuando te pidan algo extra, / *no lo regales.*",
-      "Ofrece el paquete de arriba. / *Con su precio.*",
-      "Número cuatro: // «Si cambia el encargo, / *lo hablamos».*",
-      "Lo que no está en el presupuesto / *se paga aparte.*",
-      "Por eso dilo antes de empezar, / *no cuando ya estás quemado.*",
-      "Cobrar más no es pedir perdón: / *es decir tu precio y callarte.*",
-      "Mándaselo a quien rebaja / *antes de que se lo pidan.*"
-    ]
+  {
+   "show": "Cuatro reglas para cobrar más. / *La última lo corta de raíz.*",
+   "pause": 0.5
   },
-  "lector": [
-    {
-      "ronda": 1,
-      "nota": "lector 7/10: punto 3 con referente y distinto del 4 (extra ahora / cambio a mitad); remate con los cuatro",
-      "cambios": [
-        "4: «Lo curioso: a veces es más / *de lo que ibas a pedir.*» → «Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*»",
-        "5: «Número dos: // *«Son 1.200 €». Y te callas.*» → «Número dos: // *«Son 1.200 €».*»",
-        "6: «Dilo de un tirón, / *sin justificarte.*» → «Y te callas. / *Sin justificarte.*»",
-        "8: «Número tres: // *«Eso va en la versión completa».*» → «Número tres: // *«Eso lo cobro aparte».*»",
-        "9: «Si te piden algo que no estaba, / *no lo regales.*» → «Cuando te pidan un extra, / *no lo regales.*»",
-        "10: «Ofrece la versión más cara, / *con su precio.*» → «Ponle su precio, / *aunque sea pequeño.*»",
-        "12: «Dilo antes de empezar: / lo que no estaba, *se paga aparte.*» → «Dilo antes de empezar, / *por si a mitad te lo cambian.*»",
-        "14: «Cobrar más no es pedir perdón: / es preguntar, / *decir tu precio y callarte.*» → «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*»",
-        "15: «Mándaselo a quien rebaja / *antes de que se lo pidan.*» → «Mándaselo a quien rebaja su precio / *sin que se lo pidan.*»"
-      ]
-    },
-    {
-      "ronda": 2,
-      "nota": "ronda 2: 8/10",
-      "cambios": [
-        "1: «Y la última / *te ahorra discusiones.*» → «Y la última / *evita que trabajes gratis.*»",
-        "4: «Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*» → «Porque a veces tienen más / *de lo que ibas a pedir.*»",
-        "7: «Ese silencio incómodo es normal: / *el primero que habla, rebaja.*» → «Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*»",
-        "11: «Número cuatro: // «Si cambia el encargo, / *lo hablamos».*» → «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*»",
-        "14: «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
-      ]
-    },
-    {
-      "ronda": 3,
-      "nota": "ronda 3: 8/10, sin bloqueantes; se ata «trabajar gratis» al punto 4",
-      "cambios": [
-        "13: «Así no discutes / *con medio trabajo ya hecho.*» → «Si no, los cambios / *los haces gratis.*»",
-        "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es saber qué decir.*»"
-      ]
-    },
-    {
-      "ronda": 4,
-      "nota": "7/10; bloqueantes: citas sin verbo delante",
-      "cambios": [
-        "2: «Número uno: // *«¿Con qué presupuesto contáis?»*» → «Número uno: // antes de dar tu precio, pregunta: / *«¿Con qué presupuesto contáis?»*»",
-        "3: «Pregúntalo / *antes de dar tu precio.*» → «Y escucha su cifra / *antes de decir la tuya.*»",
-        "5: «Número dos: // *«Son 1.200 €».*» → «Número dos: // di tu precio: / *«Son 1.200 €».*»",
-        "8: «Número tres: // *«Eso lo cobro aparte».*» → «Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*»",
-        "9: «Cuando te pidan un extra, / *no lo regales.*» → «No lo regales, / *aunque sea pequeño.*»",
-        "10: «Ponle su precio, / *aunque sea pequeño.*» → «Ponle precio / *y mándalo por escrito.*»",
-        "11: «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*» → «Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*»",
-        "12: «Dilo antes de empezar, / *por si a mitad te lo cambian.*» → «Los cambios llegan / *a mitad del trabajo.*»",
-        "13: «Si no, los cambios / *los haces gratis.*» → «Si no lo avisas, / *los haces gratis.*»"
-      ]
-    },
-    {
-      "ronda": 5,
-      "nota": "ronda 5: 7/10",
-      "cambios": [
-        "1: «Y la última / *evita que trabajes gratis.*» → «Y la última / *te ahorra horas gratis.*»",
-        "2: «Número uno: // antes de dar tu precio, pregunta: / *«¿Con qué presupuesto contáis?»*» → «Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*»",
-        "3: «Y escucha su cifra / *antes de decir la tuya.*» → «Deja que diga una cifra / *antes de decir la tuya.*»",
-        "4: «Porque a veces tienen más / *de lo que ibas a pedir.*» → «A veces tiene más / *de lo que ibas a pedir.*»",
-        "14: «Cobrar más no es pedir a lo loco: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*»"
-      ]
-    },
-    {
-      "ronda": 6,
-      "nota": "8/10; único bloqueante: «te ahorra horas gratis» se entiende al revés → se vuelve a «evita que trabajes gratis», que los lectores de las rondas 3 y 4 entendieron sin problema. PASA.",
-      "cambios": [
-        "1: «Y la última / *te ahorra horas gratis.*» → «Y la última / *evita que trabajes gratis.*»"
-      ]
-    },
-    {
-      "ronda": "nativo-1",
-      "nota": "7/10; bloqueante: el gancho promete «cuatro frases» y la voz ya no las dice (van en bocadillo) → «cuatro reglas». Matices aplicados con versiones de los correctores: 3 (repetía la 2), 8 (sin verbo).",
-      "cambios": [
-        "0: «Cuatro frases para cobrar más / *si trabajas por tu cuenta.*» → «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*»",
-        "3: «Deja que el cliente diga una cifra / *antes que tú.*» → «Que diga él la cifra / *primero.*»",
-        "8: «La tercera: // *los extras, aparte.*» → «La tercera: // *cobra los extras aparte.*»"
-      ]
-    },
-    {
-      "ronda": "nativo-2",
-      "nota": "8/10, sin bloqueantes. PASA. Casi bloqueante aplicado: quién baja el precio.",
-      "cambios": [
-        "7: «Se hace un silencio incómodo. Aguántalo: / el primero que habla / *acaba bajando el precio.*» → «Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*»"
-      ]
-    }
-  ],
-  "situacion": "Trabajas por tu cuenta y siempre acabas cobrando menos de lo que querías: das el precio el primero, lo justificas, te piden cosas de más y las haces gratis, y a mitad del encargo te lo cambian y no te atreves a cobrarlo.",
-  "nativo": {
-    "fecha": "2026-11-10",
-    "regla": "19 y 20",
-    "antes": [
-      "Cuatro frases para cobrar más / *si trabajas por tu cuenta.*",
-      "Y la última / *evita que trabajes gratis.*",
-      "Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*",
-      "Deja que diga una cifra / *antes de decir la tuya.*",
-      "A veces tiene más / *de lo que ibas a pedir.*",
-      "Número dos: // di tu precio: / *«Son 1.200 €».*",
-      "Y te callas. / *Sin justificarte.*",
-      "Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*",
-      "Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*",
-      "No lo regales, / *aunque sea pequeño.*",
-      "Ponle precio / *y mándalo por escrito.*",
-      "Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*",
-      "Los cambios llegan / *a mitad del trabajo.*",
-      "Si no lo avisas, / *los haces gratis.*",
-      "Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*",
-      "Mándaselo a quien rebaja su precio / *sin que se lo pidan.*"
-    ]
+  {
+   "show": "La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*",
+   "pause": 0.3,
+   "pausa_media": 0.7,
+   "bocadillo": "¿Qué presupuesto tenéis?"
   },
-  "corrector": [
-    {
-      "ronda": 1,
-      "cambios": [
-        "1: «Y la última / *evita que trabajes gratis.*» → «Y con la última / *dejas de trabajar gratis.*»",
-        "2: «Número uno: // *pregunta su presupuesto antes de dar el tuyo.*» → «La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*»",
-        "5: «Número dos: // *di tu precio y cállate.*» → «La segunda: // *di tu precio y cállate.*»",
-        "6: «*Sin justificarte.*» → «*Y sin dar explicaciones.*»",
-        "7: «Ese silencio incómodo es normal: / si hablas tú primero, / *acabas bajando el precio.*» → «Se hace un silencio incómodo. Aguántalo: / el primero que habla / *acaba bajando el precio.*»",
-        "8: «Número tres: // *los extras, aparte.*» → «La tercera: // *los extras, aparte.*»",
-        "9: «Si te piden algo que no estaba, / *no lo regales.*» → «Si te piden algo que no entraba en el presupuesto, / *no lo regales.*»",
-        "11: «Número cuatro: // *avisa antes de empezar.*» → «La cuarta: // *déjalo claro antes de empezar.*»",
-        "13: «Si no lo has avisado, / *los haces gratis.*» → «Si no lo dijiste antes, / *te los comes gratis.*»",
-        "14: «Cobrar más no es pedir de más: / *es saber qué decir.*» → «Cobrar más no va de pedir más: / *va de saber qué decir.*»",
-        "15: «Mándaselo a quien baja el precio / *sin que se lo pidan.*» → «Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*»"
-      ]
-    },
-    {
-      "ronda": 2,
-      "cambios": [
-        "2: «La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*» → «La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*»",
-        "11: «La cuarta: // *déjalo claro antes de empezar.*» → «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*»",
-        "13: «Si no lo dijiste antes, / *te los comes gratis.*» → «Si no lo has dicho antes, / *te los comes.*»",
-        "14: «Cobrar más no va de pedir más: / *va de saber qué decir.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
-      ]
-    },
-    {
-      "ronda": 3,
-      "cambios": [
-        "11: «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*» → «La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*»",
-        "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Al final, cobrar más / *es saber qué decir.*»"
-      ]
-    }
-  ],
-  "gancho": [
-    {
-      "fecha": "2026-11-10",
-      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
-      "cambios": [
-        "0: «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*» → «Si trabajas por tu cuenta, / *seguramente cobras menos de lo que podrías.*»",
-        "1: «Y con la última / *dejas de trabajar gratis.*» → «Cuatro reglas para arreglarlo. / *Y con la última dejas de trabajar gratis.*»"
-      ]
-    },
-    {
-      "fecha": "2026-11-10",
-      "revisor": "NO PASA: «seguramente cobras menos de lo que podrías» abstracto y de coach; «autónomo» es la palabra de aquí; escena vivida. Su versión, con la frase del cliente en bocadillo (regla 20).",
-      "cambios": [
-        "0: «Si trabajas por tu cuenta, / *seguramente cobras menos de lo que podrías.*» → «Si eres autónomo, seguro que has hecho cambios gratis / *porque te dijeron que era un momento.*»",
-        "1: «Cuatro reglas para arreglarlo. / *Y con la última dejas de trabajar gratis.*» → «Cuatro reglas para cobrar más. / *Con la última, se acabó.*»"
-      ]
-    },
-    {
-      "fecha": "2026-11-10",
-      "revisor": "NO PASA: «Si eres X, seguro que has…» fórmula de anuncio; «se acabó» vago; voz y bocadillo decían dos cosas distintas. Su versión: el narrador cita la frase del cliente que sale en el bocadillo.",
-      "cambios": [
-        "0: «Si eres autónomo, seguro que has hecho cambios gratis / *porque te dijeron que era un momento.*» → «Ese «es un cambio rapidito» / *ya te ha costado horas gratis.*»",
-        "1: «Cuatro reglas para cobrar más. / *Con la última, se acabó.*» → «Cuatro reglas para cobrar más. / *La última lo corta de raíz.*»"
-      ]
-    }
+  {
+   "show": "Que diga él la cifra / *primero.*",
+   "pause": 0.3
+  },
+  {
+   "show": "A veces es más / *de lo que ibas a pedir.*",
+   "pause": 0.55
+  },
+  {
+   "show": "La segunda: // *di tu precio y guarda silencio.*",
+   "pause": 0.3,
+   "pausa_media": 0.7,
+   "bocadillo": "Son 1.200 €"
+  },
+  {
+   "show": "*Y sin dar explicaciones.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*",
+   "pause": 0.55
+  },
+  {
+   "show": "La tercera: // *cobra los extras aparte.*",
+   "pause": 0.3,
+   "pausa_media": 0.7,
+   "bocadillo": "Eso lo cobro aparte"
+  },
+  {
+   "show": "Si te piden algo que no entraba en el presupuesto, / *no lo regales.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ponle precio / *y déjalo por escrito.*",
+   "pause": 0.55
+  },
+  {
+   "show": "La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*",
+   "pause": 0.3,
+   "pausa_media": 0.7,
+   "bocadillo": "Si luego cambiáis cosas, se cobran"
+  },
+  {
+   "show": "Los cambios siempre llegan / *a mitad del trabajo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si no lo has dicho antes, / *los acabas pagando tú.*",
+   "pause": 0.55
+  },
+  {
+   "show": "Al final, cobrar más / *es saber qué decir.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*",
+   "pause": 0.3
+  }
+ ],
+ "revision_castellano": {
+  "fecha": "2026-11-09",
+  "motivo": "Jaime: «los guiones aún no tienen perfección de estar adaptados y redactados en castellano». Se quitan calcos del inglés y se usan giros de España.",
+  "cambios": [
+   "4: «El silencio incómodo / *lo aguanta tu precio, no tú.*» → «Ese silencio incómodo es normal. / *El primero que habla, rebaja.*»",
+   "5: «Número dos: // *pregunta antes de dar tu número.*» → «Número dos: // *pregunta antes de dar tu precio.*»",
+   "8: «Número tres: // *«Eso entra en el plan grande».*» → «Número tres: // *«Eso va en el paquete completo».*»",
+   "10: «Ofrece el siguiente nivel. / *Con su precio.*» → «Ofrece el paquete de arriba. / *Con su precio.*»",
+   "11: «Número cuatro: // *«Si cambia, lo hablamos».*» → «Número cuatro: // *«Si cambia el encargo, lo hablamos».*»",
+   "12: «Lo que no está en el presupuesto / *no está incluido.*» → «Lo que no está en el presupuesto / *se paga aparte.*»",
+   "14: «¿Cuál vas a usar esta semana? / *Te leo en comentarios.*» → «¿Cuál vas a usar esta semana? / *Te leo en los comentarios.*»",
+   "15: «Y sígueme *para más.*» → «Y sígueme, *que vienen más.*»"
   ]
+ },
+ "redaccion": {
+  "fecha": "2026-11-09",
+  "regla": "17 (docs/REDACCION.md)",
+  "nota": "Segunda versión tras la pregunta de Jaime («¿es un buen guion? ¿se entiende?»): el gancho dice a quién va (si trabajas por tu cuenta); los cuatro puntos son frases literales, como promete el gancho; primero se pregunta el presupuesto y después se dice el precio (antes estaban al revés y parecía contradecirse); fuera el «por eso» forzado del punto 4; el anuncio («la última te ahorra discusiones») se cierra en el punto 4; el remate recoge los cuatro puntos.",
+  "antes": [
+   "Cuatro frases para cobrar más *sin pedir perdón.*",
+   "Y la última / *te ahorra discusiones.*",
+   "Número uno: // *di tu precio y cállate.*",
+   "Dilo de un tirón. / *Y no añadas nada.*",
+   "Ese silencio incómodo es normal. / *El primero que habla, rebaja.*",
+   "Número dos: // *pregunta antes de dar tu precio.*",
+   "«¿Qué presupuesto / *teníais pensado?»*",
+   "Lo curioso: a veces es más / *de lo que ibas a pedir.*",
+   "Número tres: // *«Eso va en el paquete completo».*",
+   "Cuando te pidan algo extra, / *no lo regales.*",
+   "Ofrece el paquete de arriba. / *Con su precio.*",
+   "Número cuatro: // «Si cambia el encargo, / *lo hablamos».*",
+   "Lo que no está en el presupuesto / *se paga aparte.*",
+   "Por eso dilo antes de empezar, / *no cuando ya estás quemado.*",
+   "Cobrar más no es pedir perdón: / *es decir tu precio y callarte.*",
+   "Mándaselo a quien rebaja / *antes de que se lo pidan.*"
+  ]
+ },
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "lector 7/10: punto 3 con referente y distinto del 4 (extra ahora / cambio a mitad); remate con los cuatro",
+   "cambios": [
+    "4: «Lo curioso: a veces es más / *de lo que ibas a pedir.*» → «Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*»",
+    "5: «Número dos: // *«Son 1.200 €». Y te callas.*» → «Número dos: // *«Son 1.200 €».*»",
+    "6: «Dilo de un tirón, / *sin justificarte.*» → «Y te callas. / *Sin justificarte.*»",
+    "8: «Número tres: // *«Eso va en la versión completa».*» → «Número tres: // *«Eso lo cobro aparte».*»",
+    "9: «Si te piden algo que no estaba, / *no lo regales.*» → «Cuando te pidan un extra, / *no lo regales.*»",
+    "10: «Ofrece la versión más cara, / *con su precio.*» → «Ponle su precio, / *aunque sea pequeño.*»",
+    "12: «Dilo antes de empezar: / lo que no estaba, *se paga aparte.*» → «Dilo antes de empezar, / *por si a mitad te lo cambian.*»",
+    "14: «Cobrar más no es pedir perdón: / es preguntar, / *decir tu precio y callarte.*» → «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*»",
+    "15: «Mándaselo a quien rebaja / *antes de que se lo pidan.*» → «Mándaselo a quien rebaja su precio / *sin que se lo pidan.*»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "nota": "ronda 2: 8/10",
+   "cambios": [
+    "1: «Y la última / *te ahorra discusiones.*» → «Y la última / *evita que trabajes gratis.*»",
+    "4: «Lo curioso: a veces su presupuesto / *es más de lo que ibas a pedir.*» → «Porque a veces tienen más / *de lo que ibas a pedir.*»",
+    "7: «Ese silencio incómodo es normal: / *el primero que habla, rebaja.*» → «Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*»",
+    "11: «Número cuatro: // «Si cambia el encargo, / *lo hablamos».*» → «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*»",
+    "14: «Cobrar más no es pedir perdón: / es preguntar, decir tu precio / *y cobrar aparte lo que no estaba.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
+   ]
+  },
+  {
+   "ronda": 3,
+   "nota": "ronda 3: 8/10, sin bloqueantes; se ata «trabajar gratis» al punto 4",
+   "cambios": [
+    "13: «Así no discutes / *con medio trabajo ya hecho.*» → «Si no, los cambios / *los haces gratis.*»",
+    "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es saber qué decir.*»"
+   ]
+  },
+  {
+   "ronda": 4,
+   "nota": "7/10; bloqueantes: citas sin verbo delante",
+   "cambios": [
+    "2: «Número uno: // *«¿Con qué presupuesto contáis?»*» → «Número uno: // antes de dar tu precio, pregunta: / *«¿Con qué presupuesto contáis?»*»",
+    "3: «Pregúntalo / *antes de dar tu precio.*» → «Y escucha su cifra / *antes de decir la tuya.*»",
+    "5: «Número dos: // *«Son 1.200 €».*» → «Número dos: // di tu precio: / *«Son 1.200 €».*»",
+    "8: «Número tres: // *«Eso lo cobro aparte».*» → «Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*»",
+    "9: «Cuando te pidan un extra, / *no lo regales.*» → «No lo regales, / *aunque sea pequeño.*»",
+    "10: «Ponle su precio, / *aunque sea pequeño.*» → «Ponle precio / *y mándalo por escrito.*»",
+    "11: «Número cuatro: // «Si cambia el encargo, / *cambia el precio».*» → «Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*»",
+    "12: «Dilo antes de empezar, / *por si a mitad te lo cambian.*» → «Los cambios llegan / *a mitad del trabajo.*»",
+    "13: «Si no, los cambios / *los haces gratis.*» → «Si no lo avisas, / *los haces gratis.*»"
+   ]
+  },
+  {
+   "ronda": 5,
+   "nota": "ronda 5: 7/10",
+   "cambios": [
+    "1: «Y la última / *evita que trabajes gratis.*» → «Y la última / *te ahorra horas gratis.*»",
+    "2: «Número uno: // antes de dar tu precio, pregunta: / *«¿Con qué presupuesto contáis?»*» → «Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*»",
+    "3: «Y escucha su cifra / *antes de decir la tuya.*» → «Deja que diga una cifra / *antes de decir la tuya.*»",
+    "4: «Porque a veces tienen más / *de lo que ibas a pedir.*» → «A veces tiene más / *de lo que ibas a pedir.*»",
+    "14: «Cobrar más no es pedir a lo loco: / *es saber qué decir.*» → «Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*»"
+   ]
+  },
+  {
+   "ronda": 6,
+   "nota": "8/10; único bloqueante: «te ahorra horas gratis» se entiende al revés → se vuelve a «evita que trabajes gratis», que los lectores de las rondas 3 y 4 entendieron sin problema. PASA.",
+   "cambios": [
+    "1: «Y la última / *te ahorra horas gratis.*» → «Y la última / *evita que trabajes gratis.*»"
+   ]
+  },
+  {
+   "ronda": "nativo-1",
+   "nota": "7/10; bloqueante: el gancho promete «cuatro frases» y la voz ya no las dice (van en bocadillo) → «cuatro reglas». Matices aplicados con versiones de los correctores: 3 (repetía la 2), 8 (sin verbo).",
+   "cambios": [
+    "0: «Cuatro frases para cobrar más / *si trabajas por tu cuenta.*» → «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*»",
+    "3: «Deja que el cliente diga una cifra / *antes que tú.*» → «Que diga él la cifra / *primero.*»",
+    "8: «La tercera: // *los extras, aparte.*» → «La tercera: // *cobra los extras aparte.*»"
+   ]
+  },
+  {
+   "ronda": "nativo-2",
+   "nota": "8/10, sin bloqueantes. PASA. Casi bloqueante aplicado: quién baja el precio.",
+   "cambios": [
+    "7: «Se hace un silencio incómodo. Aguántalo: / el primero que habla / *acaba bajando el precio.*» → «Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*»"
+   ]
+  }
+ ],
+ "situacion": "Trabajas por tu cuenta y siempre acabas cobrando menos de lo que querías: das el precio el primero, lo justificas, te piden cosas de más y las haces gratis, y a mitad del encargo te lo cambian y no te atreves a cobrarlo.",
+ "nativo": {
+  "fecha": "2026-11-10",
+  "regla": "19 y 20",
+  "antes": [
+   "Cuatro frases para cobrar más / *si trabajas por tu cuenta.*",
+   "Y la última / *evita que trabajes gratis.*",
+   "Número uno: // pregúntale al cliente: / *«¿Con qué presupuesto contáis?»*",
+   "Deja que diga una cifra / *antes de decir la tuya.*",
+   "A veces tiene más / *de lo que ibas a pedir.*",
+   "Número dos: // di tu precio: / *«Son 1.200 €».*",
+   "Y te callas. / *Sin justificarte.*",
+   "Ese silencio incómodo es normal. / Si hablas tú primero, / *acabas rebajando.*",
+   "Número tres: // si te piden un extra, contesta: / *«Eso lo cobro aparte».*",
+   "No lo regales, / *aunque sea pequeño.*",
+   "Ponle precio / *y mándalo por escrito.*",
+   "Número cuatro: // antes de empezar, avisa: / «Si cambia el encargo, / *cambia el precio».*",
+   "Los cambios llegan / *a mitad del trabajo.*",
+   "Si no lo avisas, / *los haces gratis.*",
+   "Cobrar más no es pedir a lo loco: / *es tener estas cuatro frases preparadas.*",
+   "Mándaselo a quien rebaja su precio / *sin que se lo pidan.*"
+  ]
+ },
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    "1: «Y la última / *evita que trabajes gratis.*» → «Y con la última / *dejas de trabajar gratis.*»",
+    "2: «Número uno: // *pregunta su presupuesto antes de dar el tuyo.*» → «La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*»",
+    "5: «Número dos: // *di tu precio y cállate.*» → «La segunda: // *di tu precio y cállate.*»",
+    "6: «*Sin justificarte.*» → «*Y sin dar explicaciones.*»",
+    "7: «Ese silencio incómodo es normal: / si hablas tú primero, / *acabas bajando el precio.*» → «Se hace un silencio incómodo. Aguántalo: / el primero que habla / *acaba bajando el precio.*»",
+    "8: «Número tres: // *los extras, aparte.*» → «La tercera: // *los extras, aparte.*»",
+    "9: «Si te piden algo que no estaba, / *no lo regales.*» → «Si te piden algo que no entraba en el presupuesto, / *no lo regales.*»",
+    "11: «Número cuatro: // *avisa antes de empezar.*» → «La cuarta: // *déjalo claro antes de empezar.*»",
+    "13: «Si no lo has avisado, / *los haces gratis.*» → «Si no lo dijiste antes, / *te los comes gratis.*»",
+    "14: «Cobrar más no es pedir de más: / *es saber qué decir.*» → «Cobrar más no va de pedir más: / *va de saber qué decir.*»",
+    "15: «Mándaselo a quien baja el precio / *sin que se lo pidan.*» → «Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    "2: «La primera: // pregúntale cuánto quiere gastarse / *antes de decir tu precio.*» → «La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*»",
+    "11: «La cuarta: // *déjalo claro antes de empezar.*» → «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*»",
+    "13: «Si no lo dijiste antes, / *te los comes gratis.*» → «Si no lo has dicho antes, / *te los comes.*»",
+    "14: «Cobrar más no va de pedir más: / *va de saber qué decir.*» → «Cobrar más no es pedir más: / *es saber qué decir.*»"
+   ]
+  },
+  {
+   "ronda": 3,
+   "cambios": [
+    "11: «La cuarta: // avisa antes de empezar / *de que los cambios se pagan.*» → «La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*»",
+    "14: «Cobrar más no es pedir más: / *es saber qué decir.*» → «Al final, cobrar más / *es saber qué decir.*»"
+   ]
+  }
+ ],
+ "gancho": [
+  {
+   "fecha": "2026-11-10",
+   "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+   "cambios": [
+    "0: «Cuatro reglas para cobrar más / *si trabajas por tu cuenta.*» → «Si trabajas por tu cuenta, / *seguramente cobras menos de lo que podrías.*»",
+    "1: «Y con la última / *dejas de trabajar gratis.*» → «Cuatro reglas para arreglarlo. / *Y con la última dejas de trabajar gratis.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "NO PASA: «seguramente cobras menos de lo que podrías» abstracto y de coach; «autónomo» es la palabra de aquí; escena vivida. Su versión, con la frase del cliente en bocadillo (regla 20).",
+   "cambios": [
+    "0: «Si trabajas por tu cuenta, / *seguramente cobras menos de lo que podrías.*» → «Si eres autónomo, seguro que has hecho cambios gratis / *porque te dijeron que era un momento.*»",
+    "1: «Cuatro reglas para arreglarlo. / *Y con la última dejas de trabajar gratis.*» → «Cuatro reglas para cobrar más. / *Con la última, se acabó.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "NO PASA: «Si eres X, seguro que has…» fórmula de anuncio; «se acabó» vago; voz y bocadillo decían dos cosas distintas. Su versión: el narrador cita la frase del cliente que sale en el bocadillo.",
+   "cambios": [
+    "0: «Si eres autónomo, seguro que has hecho cambios gratis / *porque te dijeron que era un momento.*» → «Ese «es un cambio rapidito» / *ya te ha costado horas gratis.*»",
+    "1: «Cuatro reglas para cobrar más. / *Con la última, se acabó.*» → «Cuatro reglas para cobrar más. / *La última lo corta de raíz.*»"
+   ]
+  }
+ ],
+ "revision_registro": [
+  {
+   "fecha": "2026-11-11",
+   "motivo": "regla 23 (narrativo no es informal), propuesta a Jaime",
+   "cambios": [
+    "0: «Ese «es un cambio rapidito» / *ya te ha costado horas gratis.*» → «Ese «es un cambio pequeño» / *ya te ha costado horas sin cobrar.*»",
+    "5: «La segunda: // *di tu precio y cállate.*» → «La segunda: // *di tu precio y guarda silencio.*»",
+    "13: «Si no lo has dicho antes, / *te los comes.*» → «Si no lo has dicho antes, / *los acabas pagando tú.*»"
+   ]
+  }
+ ]
 }

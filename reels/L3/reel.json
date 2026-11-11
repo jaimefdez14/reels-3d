@@ -1,217 +1,230 @@
 {
-  "id": "L3",
-  "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
-  "titulo": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
-  "idea": "L3 de docs/IDEAS-2026-11-09.md. Molde de B-R1 (identidad: el muñeco gris se vuelve amarillo, anillo de promesas cumplidas, 3 puntos sueltos, fondo negro, subtítulo en dos líneas). Escrito con docs/REDACCION.md (regla 17).",
-  "coverT": 1.8,
-  "lines": [
-    {
-      "show": "Echas más horas que nadie / *y tu jefe ni se entera.*",
-      "pause": 0.35
-    },
-    {
-      "show": "Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*",
-      "pause": 0.5
-    },
-    {
-      "show": "La primera: // *no le vayas con marrones, ve con soluciones.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Si hay un marrón, / *ve con dos opciones.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Y dile cuál / *elegirías tú.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Así, cuando hay un lío, / *cuenta contigo.*",
-      "pause": 0.55
-    },
-    {
-      "show": "La segunda: // *ponte un plazo y cúmplelo.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "No le digas que ya lo mirarás: / *dale un día concreto.*",
-      "pause": 0.3,
-      "bocadillo": "Lo tienes el jueves"
-    },
-    {
-      "show": "Y ese día *se lo das.*",
-      "pause": 0.35
-    },
-    {
-      "show": "Cumplir tres plazos cuenta más / *que diez horas extra.*",
-      "pause": 0.55
-    },
-    {
-      "show": "La tercera: // *cuéntale lo que has hecho.*",
-      "pause": 0.3,
-      "pausa_media": 0.7
-    },
-    {
-      "show": "Una vez al mes, / *un correo de tres líneas.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Si no se lo cuentas, / *para él no existe.*",
-      "pause": 0.3
-    },
-    {
-      "show": "Y no es echarte flores: / *es que si no, no se entera.*",
-      "pause": 0.55
-    },
-    {
-      "show": "A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*",
-      "pause": 0.3,
-      "pausa_media": 0.5
-    }
-  ],
-  "redaccion": {
-    "fecha": "2026-11-09",
-    "regla": "17 (docs/REDACCION.md)",
-    "nota": "Escrito como monólogo y cortado después. Anuncio (1) que se cierra en el punto del medio con cifras comparadas (9); «por eso» en el punto 1; golpe seco con humor (8); remate que vuelve al gancho y envío (14).",
-    "cambios": [
-      "0: «Tres pasos para que tu jefe / *te tome en serio.*» → «Echas más horas que nadie / *y tu jefe ni se entera.*» (Jaime: «el hook de L3 tampoco me gusta»; situación que se reconoce en vez de promesa genérica; el envío final la repite y cierra el bucle)",
-      "1: «Y ninguno es / *echar más horas.*» → «Estos tres pasos lo arreglan / *sin echar ni una hora más.*» (el número de la lista pasa al anuncio y responde al gancho)"
-    ]
+ "id": "L3",
+ "estilo": "B (listas en negro, docs/ANALISIS-REFERENCIA-B.md)",
+ "titulo": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
+ "idea": "L3 de docs/IDEAS-2026-11-09.md. Molde de B-R1 (identidad: el muñeco gris se vuelve amarillo, anillo de promesas cumplidas, 3 puntos sueltos, fondo negro, subtítulo en dos líneas). Escrito con docs/REDACCION.md (regla 17).",
+ "coverT": 1.8,
+ "lines": [
+  {
+   "show": "Echas más horas que nadie / *y tu jefe ni se entera.*",
+   "pause": 0.35
   },
-  "lector": [
-    {
-      "ronda": 1,
-      "nota": "lector 8/10: «por eso» sin antecedente, remate sin sujeto, «lo» lejano, quién habla en la cita",
-      "cambios": [
-        "5: «Por eso te llama a ti / *cuando algo se tuerce.*» → «Así, cuando algo se tuerce, / *te llama a ti.*»",
-        "7: «No digas «lo miro». / *Di «lo tienes el jueves».*» → «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*»",
-        "13: «Y no es presumir: / *es ahorrarle el trabajo de buscarlo.*» → «Y no es presumir: / *es ahorrarle buscar lo que haces.*»",
-        "14: «No son tus horas: / *son las fechas que cumples.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
-      ]
-    },
-    {
-      "ronda": 2,
-      "nota": "ronda 2: 8/10",
-      "cambios": [
-        "2: «Número uno: // *llega con la solución.*» → «Número uno: // *llega con soluciones.*»",
-        "5: «Así, cuando algo se tuerce, / *te llama a ti.*» → «Así, cuando algo se tuerce, / *eres el primero en quien piensa.*»",
-        "13: «Y no es presumir: / *es ahorrarle buscar lo que haces.*» → «Y no es presumir: / *es ahorrarle tener que preguntártelo.*»",
-        "14: «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
-      ]
-    },
-    {
-      "ronda": 3,
-      "nota": "ronda 3: 8/10",
-      "cambios": [
-        "5: «Así, cuando algo se tuerce, / *eres el primero en quien piensa.*» → «Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*»",
-        "7: «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*» → «No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*»",
-        "13: «Y no es presumir: / *es ahorrarle tener que preguntártelo.*» → «Y no es presumir: / *es ponérselo fácil.*»"
-      ]
-    },
-    {
-      "ronda": 4,
-      "nota": "8/10; bloqueante: «el primero al que llama para arreglarlo» suena a más trabajo",
-      "cambios": [
-        "2: «Número uno: // *llega con soluciones.*» → «Número uno: // *ve con soluciones.*»",
-        "5: «Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*» → «Así, cuando algo se tuerce, / *eres a quien quiere a su lado.*»",
-        "13: «Y no es presumir: / *es ponérselo fácil.*» → «Y no es presumir: / *es ponérselo fácil para que te vea.*»"
-      ]
-    },
-    {
-      "ronda": 5,
-      "nota": "ronda 5: 8/10",
-      "cambios": [
-        "4: «Y dile cuál / *elegirías tú.*» → «Y dile cuál / *elegirías tú.*»",
-        "3: «No le lleves solo el problema. / *Llévale dos salidas.*» → «No le lleves solo el problema. / *Llévale dos opciones.*»",
-        "5: «Así, cuando algo se tuerce, / *eres a quien quiere a su lado.*» → «Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*»",
-        "11: «Una vez al mes, / *tres líneas en un correo.*» → «Una vez al mes, mándale / *tres líneas en un correo.*»"
-      ]
-    },
-    {
-      "ronda": 6,
-      "nota": "8/10, sin bloqueantes. PASA.",
-      "cambios": []
-    },
-    {
-      "ronda": "nativo-1",
-      "nota": "8,5/10, sin bloqueantes. PASA (matiz aplicado)",
-      "cambios": [
-        "5: «Así, cuando hay un lío, / *te llama a ti.*» → «Así, cuando hay un lío, / *cuenta contigo.*»"
-      ]
-    }
-  ],
-  "situacion": "Eres el que más horas echa de la oficina y tu jefe ni se entera. Lo que se ve no son las horas: es quién le arregla los problemas, quién cumple lo que dice y quién le cuenta lo que ha hecho.",
-  "nativo": {
-    "fecha": "2026-11-10",
-    "regla": "19 y 20",
-    "antes": [
-      "Echas más horas que nadie / *y tu jefe ni se entera.*",
-      "Estos tres pasos lo arreglan / *sin echar ni una hora más.*",
-      "Número uno: // *ve con soluciones.*",
-      "No le lleves solo el problema. / *Llévale dos opciones.*",
-      "Y dile cuál / *elegirías tú.*",
-      "Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*",
-      "Número dos: // *pon fecha y cúmplela.*",
-      "No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*",
-      "Y el jueves, *lo tiene.*",
-      "Tres fechas cumplidas valen más / *que diez horas extra.*",
-      "Número tres: // *cuenta lo que has hecho.*",
-      "Una vez al mes, mándale / *tres líneas en un correo.*",
-      "Lo que no cuentas, / *para tu jefe no existe.*",
-      "Y no es presumir: / *es ponérselo fácil para que te vea.*",
-      "Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*"
-    ]
+  {
+   "show": "Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*",
+   "pause": 0.5
   },
-  "corrector": [
-    {
-      "ronda": 1,
-      "cambios": [
-        "1: «Con estas tres cosas se entera, / *sin echar ni una hora más.*» → «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*»",
-        "2: «Número uno: // *llévale soluciones, no problemas.*» → «La primera: // *no le lleves marrones, llévale soluciones.*»",
-        "3: «Si algo falla, / *llévale dos opciones.*» → «Si hay un marrón, / *llévale dos opciones.*»",
-        "5: «Así, cuando algo se tuerce, / *acaba contando contigo.*» → «Así, cuando hay un lío, / *te llama a ti.*»",
-        "6: «Número dos: // *pon fecha y cúmplela.*» → «La segunda: // *ponle fecha y cúmplela.*»",
-        "8: «Y ese día, *se lo das.*» → «Y ese día *se lo das.*»",
-        "9: «Tres plazos cumplidos valen más / *que diez horas extra.*» → «Cumplir tres plazos cuenta más / *que diez horas extra.*»",
-        "10: «Número tres: // *cuéntale lo que has hecho.*» → «La tercera: // *cuéntale lo que has hecho.*»",
-        "12: «Lo que no cuentas, / *para tu jefe no existe.*» → «Si no se lo cuentas, / *para él no existe.*»",
-        "13: «Y no es tirarte flores: / *es que él no lo ve.*» → «Y no es echarte flores: / *es que si no, no se entera.*»",
-        "14: «Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»"
-      ]
-    },
-    {
-      "ronda": 2,
-      "cambios": [
-        "2: «La primera: // *no le lleves marrones, llévale soluciones.*» → «La primera: // *no le vayas con marrones, ve con soluciones.*»",
-        "3: «Si hay un marrón, / *llévale dos opciones.*» → «Si hay un marrón, / *ve con dos opciones.*»",
-        "6: «La segunda: // *ponle fecha y cúmplela.*» → «La segunda: // *ponte un plazo y cúmplelo.*»",
-        "14: «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»"
-      ]
-    }
-  ],
-  "gancho": [
-    {
-      "fecha": "2026-11-10",
-      "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
-      "cambios": [
-        "1: «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*» → «Con tres cosas se entera, / *sin que eches ni una hora más.*»"
-      ]
-    },
-    {
-      "fecha": "2026-11-10",
-      "revisor": "NO PASA por la segunda frase: «se entera» repetido y tono de anuncio («sin que eches ni una hora más»). Su versión.",
-      "cambios": [
-        "1: «Con tres cosas se entera, / *sin que eches ni una hora más.*» → «Lo arreglan tres cosas, / *y ninguna es echar más horas.*»"
-      ]
-    },
-    {
-      "fecha": "2026-11-10",
-      "revisor": "NO PASA por la segunda («Lo arreglan tres cosas» calco de *three things fix this*; «lo» ambiguo). Su versión.",
-      "cambios": [
-        "1: «Lo arreglan tres cosas, / *y ninguna es echar más horas.*» → «Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*»"
-      ]
-    }
+  {
+   "show": "La primera: // no le lleves problemas: llévale soluciones.",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Si surge un problema, / llévale dos opciones.",
+   "pause": 0.3
+  },
+  {
+   "show": "Y dile cuál / *elegirías tú.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Así, cuando algo se complica, / cuenta contigo.",
+   "pause": 0.55
+  },
+  {
+   "show": "La segunda: // *ponte un plazo y cúmplelo.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "No le digas que ya lo mirarás: / *dale un día concreto.*",
+   "pause": 0.3,
+   "bocadillo": "Lo tienes el jueves"
+  },
+  {
+   "show": "Y ese día *se lo das.*",
+   "pause": 0.35
+  },
+  {
+   "show": "Cumplir tres plazos vale más / que diez horas extra.",
+   "pause": 0.55
+  },
+  {
+   "show": "La tercera: // *cuéntale lo que has hecho.*",
+   "pause": 0.3,
+   "pausa_media": 0.7
+  },
+  {
+   "show": "Una vez al mes, / *un correo de tres líneas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si no se lo cuentas, / *para él no existe.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y no es presumir: / es que, si no, no lo sabe.",
+   "pause": 0.55
+  },
+  {
+   "show": "A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*",
+   "pause": 0.3,
+   "pausa_media": 0.5
+  }
+ ],
+ "redaccion": {
+  "fecha": "2026-11-09",
+  "regla": "17 (docs/REDACCION.md)",
+  "nota": "Escrito como monólogo y cortado después. Anuncio (1) que se cierra en el punto del medio con cifras comparadas (9); «por eso» en el punto 1; golpe seco con humor (8); remate que vuelve al gancho y envío (14).",
+  "cambios": [
+   "0: «Tres pasos para que tu jefe / *te tome en serio.*» → «Echas más horas que nadie / *y tu jefe ni se entera.*» (Jaime: «el hook de L3 tampoco me gusta»; situación que se reconoce en vez de promesa genérica; el envío final la repite y cierra el bucle)",
+   "1: «Y ninguno es / *echar más horas.*» → «Estos tres pasos lo arreglan / *sin echar ni una hora más.*» (el número de la lista pasa al anuncio y responde al gancho)"
   ]
+ },
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "lector 8/10: «por eso» sin antecedente, remate sin sujeto, «lo» lejano, quién habla en la cita",
+   "cambios": [
+    "5: «Por eso te llama a ti / *cuando algo se tuerce.*» → «Así, cuando algo se tuerce, / *te llama a ti.*»",
+    "7: «No digas «lo miro». / *Di «lo tienes el jueves».*» → «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*»",
+    "13: «Y no es presumir: / *es ahorrarle el trabajo de buscarlo.*» → «Y no es presumir: / *es ahorrarle buscar lo que haces.*»",
+    "14: «No son tus horas: / *son las fechas que cumples.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "nota": "ronda 2: 8/10",
+   "cambios": [
+    "2: «Número uno: // *llega con la solución.*» → «Número uno: // *llega con soluciones.*»",
+    "5: «Así, cuando algo se tuerce, / *te llama a ti.*» → «Así, cuando algo se tuerce, / *eres el primero en quien piensa.*»",
+    "13: «Y no es presumir: / *es ahorrarle buscar lo que haces.*» → «Y no es presumir: / *es ahorrarle tener que preguntártelo.*»",
+    "14: «Tu jefe no ve tus horas: / ve lo que resuelves, / *cumples y cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*»"
+   ]
+  },
+  {
+   "ronda": 3,
+   "nota": "ronda 3: 8/10",
+   "cambios": [
+    "5: «Así, cuando algo se tuerce, / *eres el primero en quien piensa.*» → «Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*»",
+    "7: «No le digas «lo miro». / *Dile: «Lo tienes el jueves».*» → «No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*»",
+    "13: «Y no es presumir: / *es ahorrarle tener que preguntártelo.*» → «Y no es presumir: / *es ponérselo fácil.*»"
+   ]
+  },
+  {
+   "ronda": 4,
+   "nota": "8/10; bloqueante: «el primero al que llama para arreglarlo» suena a más trabajo",
+   "cambios": [
+    "2: «Número uno: // *llega con soluciones.*» → «Número uno: // *ve con soluciones.*»",
+    "5: «Así, cuando algo se tuerce, / eres el primero al que llama / *para arreglarlo.*» → «Así, cuando algo se tuerce, / *eres a quien quiere a su lado.*»",
+    "13: «Y no es presumir: / *es ponérselo fácil.*» → «Y no es presumir: / *es ponérselo fácil para que te vea.*»"
+   ]
+  },
+  {
+   "ronda": 5,
+   "nota": "ronda 5: 8/10",
+   "cambios": [
+    "4: «Y dile cuál / *elegirías tú.*» → «Y dile cuál / *elegirías tú.*»",
+    "3: «No le lleves solo el problema. / *Llévale dos salidas.*» → «No le lleves solo el problema. / *Llévale dos opciones.*»",
+    "5: «Así, cuando algo se tuerce, / *eres a quien quiere a su lado.*» → «Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*»",
+    "11: «Una vez al mes, / *tres líneas en un correo.*» → «Una vez al mes, mándale / *tres líneas en un correo.*»"
+   ]
+  },
+  {
+   "ronda": 6,
+   "nota": "8/10, sin bloqueantes. PASA.",
+   "cambios": []
+  },
+  {
+   "ronda": "nativo-1",
+   "nota": "8,5/10, sin bloqueantes. PASA (matiz aplicado)",
+   "cambios": [
+    "5: «Así, cuando hay un lío, / *te llama a ti.*» → «Así, cuando hay un lío, / *cuenta contigo.*»"
+   ]
+  }
+ ],
+ "situacion": "Eres el que más horas echa de la oficina y tu jefe ni se entera. Lo que se ve no son las horas: es quién le arregla los problemas, quién cumple lo que dice y quién le cuenta lo que ha hecho.",
+ "nativo": {
+  "fecha": "2026-11-10",
+  "regla": "19 y 20",
+  "antes": [
+   "Echas más horas que nadie / *y tu jefe ni se entera.*",
+   "Estos tres pasos lo arreglan / *sin echar ni una hora más.*",
+   "Número uno: // *ve con soluciones.*",
+   "No le lleves solo el problema. / *Llévale dos opciones.*",
+   "Y dile cuál / *elegirías tú.*",
+   "Así, cuando algo se tuerce, / *tu jefe te quiere a su lado.*",
+   "Número dos: // *pon fecha y cúmplela.*",
+   "No le digas: «Ya lo miro». / *Dile: «Lo tienes el jueves».*",
+   "Y el jueves, *lo tiene.*",
+   "Tres fechas cumplidas valen más / *que diez horas extra.*",
+   "Número tres: // *cuenta lo que has hecho.*",
+   "Una vez al mes, mándale / *tres líneas en un correo.*",
+   "Lo que no cuentas, / *para tu jefe no existe.*",
+   "Y no es presumir: / *es ponérselo fácil para que te vea.*",
+   "Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*"
+  ]
+ },
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    "1: «Con estas tres cosas se entera, / *sin echar ni una hora más.*» → «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*»",
+    "2: «Número uno: // *llévale soluciones, no problemas.*» → «La primera: // *no le lleves marrones, llévale soluciones.*»",
+    "3: «Si algo falla, / *llévale dos opciones.*» → «Si hay un marrón, / *llévale dos opciones.*»",
+    "5: «Así, cuando algo se tuerce, / *acaba contando contigo.*» → «Así, cuando hay un lío, / *te llama a ti.*»",
+    "6: «Número dos: // *pon fecha y cúmplela.*» → «La segunda: // *ponle fecha y cúmplela.*»",
+    "8: «Y ese día, *se lo das.*» → «Y ese día *se lo das.*»",
+    "9: «Tres plazos cumplidos valen más / *que diez horas extra.*» → «Cumplir tres plazos cuenta más / *que diez horas extra.*»",
+    "10: «Número tres: // *cuéntale lo que has hecho.*» → «La tercera: // *cuéntale lo que has hecho.*»",
+    "12: «Lo que no cuentas, / *para tu jefe no existe.*» → «Si no se lo cuentas, / *para él no existe.*»",
+    "13: «Y no es tirarte flores: / *es que él no lo ve.*» → «Y no es echarte flores: / *es que si no, no se entera.*»",
+    "14: «Tu jefe no ve tus horas: / ve lo que resuelves, / *lo que cumples y lo que cuentas.* // Mándaselo a quien echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»"
+   ]
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    "2: «La primera: // *no le lleves marrones, llévale soluciones.*» → «La primera: // *no le vayas con marrones, ve con soluciones.*»",
+    "3: «Si hay un marrón, / *llévale dos opciones.*» → «Si hay un marrón, / *ve con dos opciones.*»",
+    "6: «La segunda: // *ponle fecha y cúmplela.*» → «La segunda: // *ponte un plazo y cúmplelo.*»",
+    "14: «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *cumples y cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*» → «A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*»"
+   ]
+  }
+ ],
+ "gancho": [
+  {
+   "fecha": "2026-11-10",
+   "motivo": "Jaime: «¿son buenos los hooks? ¿captan la atención?»; situación primero, número después",
+   "cambios": [
+    "1: «Haz estas tres cosas y se entera, / *sin echar ni una hora más.*» → «Con tres cosas se entera, / *sin que eches ni una hora más.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "NO PASA por la segunda frase: «se entera» repetido y tono de anuncio («sin que eches ni una hora más»). Su versión.",
+   "cambios": [
+    "1: «Con tres cosas se entera, / *sin que eches ni una hora más.*» → «Lo arreglan tres cosas, / *y ninguna es echar más horas.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "revisor": "NO PASA por la segunda («Lo arreglan tres cosas» calco de *three things fix this*; «lo» ambiguo). Su versión.",
+   "cambios": [
+    "1: «Lo arreglan tres cosas, / *y ninguna es echar más horas.*» → «Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*»"
+   ]
+  }
+ ],
+ "revision_registro": [
+  {
+   "fecha": "2026-11-11",
+   "motivo": "regla 23 (narrativo no es informal), propuesta a Jaime",
+   "cambios": [
+    "2: «La primera: // *no le vayas con marrones, ve con soluciones.*» → «La primera: // no le lleves problemas: llévale soluciones.»",
+    "3: «Si hay un marrón, / *ve con dos opciones.*» → «Si surge un problema, / llévale dos opciones.»",
+    "5: «Así, cuando hay un lío, / *cuenta contigo.*» → «Así, cuando algo se complica, / cuenta contigo.»",
+    "9: «Cumplir tres plazos cuenta más / *que diez horas extra.*» → «Cumplir tres plazos vale más / que diez horas extra.»",
+    "13: «Y no es echarte flores: / *es que si no, no se entera.*» → «Y no es presumir: / es que, si no, no lo sabe.»"
+   ]
+  }
+ ]
 }

@@ -42,11 +42,11 @@ E.figura('yo1', { t0: S1 - 0.1, t1: fin(1), x: -330, cara: true,
   poses: [[0, 'de_pie'], [w(3, 0), 'encoger'], [w(3, 4), 'ofrecer'], [w(4, 1), 'senalar'], [w(5, 0), 'de_pie'], [w(5, 5), 'celebrar']],
   sonrisa: [[w(5, 4), 0.3], [w(5, 6), 1.4]] });
 E.figura('jefe1', { t0: S1 - 0.1, t1: fin(1), x: 340, dir: -1, color: 'gris',
-  poses: [[0, 'de_pie'], [w(3, 3), 'manos_cabeza'], [w(3, 7), 'pensar'], [w(4, 3), 'de_pie'], [w(5, 5), 'senalar']] });
-E.obj('lio', 'maraña', { t0: w(3, 1), t1: w(3, 6),  x: 20, y: -430, r: 70, col: '#8d9692', p: [[w(3, 1), 0], [w(3, 3) + 0.3, 1]], rot: [[w(3, 1), 0], [w(3, 6), 0.6]], caja: [-85, -75, 170, 150] });
+  poses: [[0, 'de_pie'], [w(3, 3), 'manos_cabeza'], [w(3, 6), 'pensar'], [w(4, 3), 'de_pie'], [w(5, 5), 'senalar']] });
+E.obj('lio', 'maraña', { t0: w(3, 1), t1: w(3, 5),  x: 20, y: -430, r: 70, col: '#8d9692', p: [[w(3, 1), 0], [w(3, 3) + 0.3, 1]], rot: [[w(3, 1), 0], [w(3, 5), 0.6]], caja: [-85, -75, 170, 150] });
 E.temblor(w(3, 3), 8, 0.35);
-E.obj('salA', 'bocadillo', { t0: w(3, 6) + 0.05, t1: fin(1), x: -80, y: -420, w: 140, h: 110, texto: 'A', size: 54, pop: true, caja: [-70, -55, 140, 136] });
-E.obj('salB', 'bocadillo', { t0: w(3, 7), t1: fin(1), x: 110, y: -420, w: 140, h: 110, texto: 'B', size: 54, pop: true, on: [[w(4, 2), 0], [w(4, 3), 1]],
+E.obj('salA', 'bocadillo', { t0: w(3, 5) + 0.05, t1: fin(1), x: -80, y: -420, w: 140, h: 110, texto: 'A', size: 54, pop: true, caja: [-70, -55, 140, 136] });
+E.obj('salB', 'bocadillo', { t0: w(3, 6), t1: fin(1), x: 110, y: -420, w: 140, h: 110, texto: 'B', size: 54, pop: true, on: [[w(4, 2), 0], [w(4, 3), 1]],
   sobrevive: true, r: 60, barrido: [w(4, 3)], caja: [-70, -55, 140, 136] });
 E.obj('chB', 'chispas', { t0: w(4, 3), t1: w(4, 3) + 0.8, x: 110, y: -420, r0: 60, r1: 140, inspeccion: false });
 E.obj('pulso1', 'pulso', { t0: w(5, 5), t1: w(5, 5) + 0.7, x: -330, y: -260, r0: 60, r1: 260, inspeccion: false });
@@ -80,10 +80,10 @@ E.figura('yo3', { t0: S3 - 0.1, t1: TC, x: -300, cara: true, toca: ['mesa'], pos
 E.obj('mesa', 'escritorio', { t0: S3 - 0.1, t1: TC, x: -10, silla: true, brillo: [[w(11, 4), 0], [wf(11, -1), 1]], barrido: [wf(11, -1)], refl: true, inspeccion: false, caja: [-330, -400, 500, 400] });
 E.obj('correo', 'lista', { t0: S3 - 0.1, t1: TC, x: 110, y: -470, s: 1.4, n: 3, w: 230, gap: 46, p: [[w(11, 4), 0], [wf(11, -1) + 0.3, 3, 'lin']], caja: [-115, -65, 230, 130] });
 E.figura('jefe3', { t0: S3 - 0.1, t1: TC, x: 390, dir: -1, color: 'gris',
-  poses: [[0, 'de_pie'], [w(12, 4), 'pensar'], [w(13, 9), 'celebrar']] });
-E.obj('duda', 'bocadillo', { t0: w(12, 4), t1: w(13, 9), x: 280, y: -330, w: 110, h: 86, texto: '?', size: 44, pop: true, caja: [-60, -45, 120, 116] });
-E.obj('envioC', 'pieza', { t0: w(13, 5), t1: w(13, 9) + 0.1, r: 30, texto: '✉', libre: true, estela: 6, x: [[w(13, 5), 120], [w(13, 9), 300, 'inout']], y: [[w(13, 5), -470], [w(13, 7), -500], [w(13, 9), -330, 'in']], caja: [-30, -30, 60, 60] });
-E.obj('ch13', 'chispas', { t0: w(13, 9), t1: w(13, 9) + 0.8, x: 300, y: -330, r0: 50, r1: 130, inspeccion: false });
+  poses: [[0, 'de_pie'], [w(12, 4), 'pensar'], [w(13, 8), 'celebrar']] });
+E.obj('duda', 'bocadillo', { t0: w(12, 4), t1: w(13, 8), x: 280, y: -330, w: 110, h: 86, texto: '?', size: 44, pop: true, caja: [-60, -45, 120, 116] });
+E.obj('envioC', 'pieza', { t0: w(13, 4), t1: w(13, 8) + 0.1, r: 30, texto: '✉', libre: true, estela: 6, x: [[w(13, 4), 120], [w(13, 8), 300, 'inout']], y: [[w(13, 4), -470], [w(13, 6), -500], [w(13, 8), -330, 'in']], caja: [-30, -30, 60, 60] });
+E.obj('ch13', 'chispas', { t0: w(13, 8), t1: w(13, 8) + 0.8, x: 300, y: -330, r0: 50, r1: 130, inspeccion: false });
 
 // ---------- cierre: resumen (vuelve al gancho) y envío ----------
 E.obj('resumen', 'resumen', { t0: TC, t1: w(14, 23), capa: 'pantalla', x: 540, y: 960, items: ['Solución', 'Fecha', 'Cuéntalo'], gap: 230,
