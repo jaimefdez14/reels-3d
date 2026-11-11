@@ -11,7 +11,7 @@ const N = [1, 4, 7, 10, 13].map((li, k) => ({ T: w(li, 0) - 0.05, S: w(li, 1) - 
 const TC = w(16, 0) - 0.1;
 
 E.camara([
-  [0, [0, -380, 1.04]], [w(0, 9), [40, -380, 1.0]], [w(0, 12), [0, -385, 1.02]], [N[0].T, [0, -385, 1.04]],
+  [0, [0, -380, 1.04]], [w(0, 16), [40, -380, 1.0]], [w(0, 18), [0, -385, 1.02]], [N[0].T, [0, -385, 1.04]],
   [N[0].S - 0.05, [0, -370, 1], 'lin'], [N[1].T, [40, -380, 1.06]],
   [N[1].S - 0.05, [0, -370, 1], 'lin'], [N[2].T, [0, -380, 1.05]],
   [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(9, 0), [0, -380, 1]], [N[3].T, [-20, -390, 1.06]],
@@ -20,25 +20,25 @@ E.camara([
 ]);
 
 // ---------- gancho ----------
-// 0: ¿Esa(0) tarea(1) de(2) una(3) hora(4) que(5) te(6) come(7) la(8) tarde?(9) Tiene(10) nombre.(11) Es(12) la(13) primera(14) de(15) cinco(16) leyes(17) del(18) trabajo.(19)
-const GH = w(0, 12) + 0.25; // la tarea se va cuando empieza «Es la primera…»
+// 0: Te(0) pones(1) con(2) algo(3) que(4) te(5) iba(6) a(7) llevar(8) una(9) hora(10) y(11) se(12) te(13) va(14) la(15) tarde(16) entera.(17) No(18) es(19) culpa(20) tuya:(21) hasta(22) tiene(23) nombre(24) de(25) ley.(26) Y(27) hay(28) otras(29) cuatro(30) que(31) te(32) la(33) lían(34) cada(35) semana.(36)
+const GH = w(0, 27) + 0.25; // la tarea se va cuando empieza «Y hay cuatro más…»
 E.figura('yo', { t0: 0, t1: N[0].T + 0.45, x: -340, cara: true,
-  poses: [[0, 'de_pie'], [w(0, 5), 'apartarse'], [w(0, 9), 'manos_cabeza'], [w(0, 12), 'de_pie'], [w(0, 16), 'levantar'], [wf(0, -1) + 0.3, 'de_pie']],
-  sonrisa: [[0, 0.4], [w(0, 6), -0.4], [w(0, 9), -1], [w(0, 15), -1], [w(0, 17), 1.2]] });
-E.obj('tareaH', 'barra', { t0: 0, t1: GH, x: [[0, 120], [w(0, 5), 120], [wf(0, 9), 140, 'inout']], y: -330, h: 64,
-  w: [[0, 300], [w(0, 5), 300], [wf(0, 9), 720, 'inout']], f: [[0, 0.3], [w(0, 5), 0.3], [wf(0, 9), 1, 'inout']],
-  barrido: [w(0, 10)], caja: [-360, -32, 720, 64] });
-E.obj('rotTareaH', 'rotulo', { t0: 0, t1: GH, x: 140, y: -265, texto: [[0, 'TAREA'], [w(0, 11), 'TIENE NOMBRE']], size: 28, col: [[0, '#9a9c9b']], caja: [-140, -16, 280, 32] });
-E.obj('horasH', 'contador', { t0: 0, t1: GH, x: 140, y: -440, v: [[0, 1], [w(0, 5), 1], [wf(0, 9), 5, 'inout']], suf: ' h', size: 76, col: 'txt', miles: false, caja: [-90, -42, 180, 84] });
-E.temblor(w(0, 9), 12, 0.4);
-E.golpe(w(0, 11), 0.05); E.destello(w(0, 11), 0.22);
-// «cinco leyes»: las cinco monedas entran en fila, ya numeradas, con rayos detrás
-E.obj('rayosH', 'rayos', { t0: w(0, 16) - 0.1, t1: N[0].T + 0.3, x: 0, y: -440, r: 330, z: -2, p: [[w(0, 16) - 0.1, 0], [w(0, 17), 1, 'out']], inspeccion: false });
+  poses: [[0, 'de_pie'], [w(0, 11), 'apartarse'], [w(0, 16), 'manos_cabeza'], [w(0, 18), 'de_pie'], [w(0, 28), 'levantar'], [wf(0, -1) + 0.3, 'de_pie']],
+  sonrisa: [[0, 0.4], [w(0, 12), -0.4], [w(0, 16), -1], [w(0, 19), -1], [w(0, 21), 1.2]] });
+E.obj('tareaH', 'barra', { t0: 0, t1: GH, x: [[0, 120], [w(0, 11), 120], [wf(0, 17), 140, 'inout']], y: -330, h: 64,
+  w: [[0, 300], [w(0, 11), 300], [wf(0, 17), 720, 'inout']], f: [[0, 0.3], [w(0, 11), 0.3], [wf(0, 17), 1, 'inout']],
+  barrido: [w(0, 17)], caja: [-360, -32, 720, 64] });
+E.obj('rotTareaH', 'rotulo', { t0: 0, t1: GH, x: 140, y: -265, texto: [[0, 'TAREA'], [w(0, 23), 'NOMBRE DE LEY']], size: 28, col: [[0, '#9a9c9b']], caja: [-140, -16, 280, 32] });
+E.obj('horasH', 'contador', { t0: 0, t1: GH, x: 140, y: -440, v: [[0, 1], [w(0, 11), 1], [wf(0, 17), 5, 'inout']], suf: ' h', size: 76, col: 'txt', miles: false, caja: [-90, -42, 180, 84] });
+E.temblor(w(0, 16), 12, 0.4);
+E.golpe(w(0, 26), 0.05); E.destello(w(0, 26), 0.22);
+// «Y hay cuatro más»: la ley y las otras cuatro, las cinco monedas entran en fila, ya numeradas, con rayos detrás
+E.obj('rayosH', 'rayos', { t0: w(0, 28) - 0.1, t1: N[0].T + 0.3, x: 0, y: -440, r: 330, z: -2, p: [[w(0, 28) - 0.1, 0], [w(0, 30), 1, 'out']], inspeccion: false });
 for (let i = 0; i < 5; i++) {
-  const a = w(0, 16) + i * 0.1, x = (i - 2) * 92;
+  const a = w(0, 28) + i * 0.1, x = (i - 2) * 92;
   E.obj('h' + (i + 1), 'moneda', { t0: a, t1: i === 0 ? N[0].T + 0.1 : N[0].T + 0.45, entra: 0.15, x, y: -440, pop: true, r: 32, n: i + 1, sobrevive: i === 0, sfx: i === 0, inspeccion: false });
 }
-E.obj('chH', 'chispas', { t0: w(0, 18), t1: w(0, 18) + 0.8, x: 0, y: -440, r0: 160, r1: 280, n: 16, inspeccion: false });
+E.obj('chH', 'chispas', { t0: w(0, 30), t1: w(0, 30) + 0.8, x: 0, y: -440, r0: 160, r1: 280, n: 16, inspeccion: false });
 
 // ---------- 1 · Parkinson: el trabajo se estira ----------
 // 2: Dura(0) todo(1) el(2) tiempo(3) que(4) le(5) des.(6) Es(7) la(8) ley(9) de(10) Parkinson.(11)

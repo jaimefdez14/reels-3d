@@ -19,3 +19,6 @@ Sin bloqueantes. Estilo: «navaja» despista un segundo; «calcula lo que tardas
 
 # Lector tras el corrector nativo (10-11) · 8/10, sin bloqueantes. PASA
 Matices: Zeigarnik no se retiene de oído; «navaja» rompe la palabra «ley»; «Ya las sufrías» referente lejano; patrón idéntico en los cinco bloques.
+
+## 11-11-2026 · gancho nuevo
+Lector nuevo: 8/10. Entiende el vídeo («cinco leyes con nombre que explican por qué el trabajo te cunde menos»). Marca: la 2.ª ley se mezcla con el gancho y «aunque ya lo tengas en cuenta» choca con «súmale la mitad»; «navaja» de Hanlon desconcierta; «Ya las sufrías» con referente lejano.

@@ -22,3 +22,9 @@ Aplicado:
 
 # Ronda 3 (corrector nuevo, solo lo que chirría de verdad)
 NINGUNA. Pasa.
+
+## 11-11-2026 · gancho nuevo (opción 1 de Jaime)
+- Corrector 1: «algo de una hora» → «algo que te iba a llevar una hora»; «cuatro más que te pasan» → «que te pillan / sufres». Marca también (sin cambiar aún, pendiente de Jaime): 5 «aunque ya lo tengas en cuenta», 7 «mala fe», 13 «la que de verdad cuenta», 16 «Ya las sufrías».
+- Corrector 2: «te pillan» → «te la lían»; «es una ley» solemne; «el trabajo se alarga» calco → «la tarea se estira».
+- Corrector 3: «en serio» muletilla → «No es culpa tuya: hasta tiene nombre de ley»; «se estira» calco → «se alarga»; 2 «Dura todo el tiempo que le des» → «Dura lo que le dejes» (pendiente).
+- Final: «Te pones con algo que te iba a llevar una hora y se te va la tarde entera. No es culpa tuya: hasta tiene nombre de ley. Y hay otras cuatro que te la lían cada semana.» · «Primera: el trabajo se alarga.»

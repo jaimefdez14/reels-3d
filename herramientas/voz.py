@@ -13,7 +13,7 @@ respira la voz) y cada palabra se reparte en proporción a sus letras, con más 
 entre tomas, la pausa de la última línea (`pause`, 0,55 s por defecto; 0,9 tras el gancho).
 Escribe reels/ID/voice/voz.wav + reels/ID/timing.json. Con ElevenLabs se sustituye por los tiempos reales.
 """
-import json, os, re, subprocess, sys
+import hashlib, json, os, re, subprocess, sys
 import numpy as np, soundfile as sf
 
 args = sys.argv[1:]; reel_dir = os.path.abspath(args[0])
@@ -30,7 +30,17 @@ if not ELEVEN and not CONTAR:
 
 
 def eleven(text):
-    """Una toma con ElevenLabs: (muestras float32 a 24 kHz, [(inicio, fin) por palabra de text.split()])."""
+    """Una toma con ElevenLabs: (muestras float32 a 24 kHz, [(inicio, fin) por palabra de text.split()]). Con caché."""
+    f = os.path.join(TOMAS, clave(text))
+    if os.path.exists(f + '.wav'):
+        x, _ = sf.read(f + '.wav', dtype='float32'); return x, [tuple(z) for z in json.load(open(f + '.json'))]
+    x, spans = eleven_api(text)
+    sf.write(f + '.wav', x, SR, subtype='PCM_16'); json.dump(spans, open(f + '.json', 'w'))
+    print('  (de pago)', len(text), 'caracteres')
+    return x, spans
+
+
+def eleven_api(text):
     import base64, urllib.request
     body = json.dumps({'text': text, 'model_id': 'eleven_multilingual_v2',
                        'voice_settings': {'stability': 0.5, 'similarity_boost': 0.75, 'style': 0.0, 'use_speaker_boost': True,
@@ -86,20 +96,54 @@ def gaps(x, frame=0.01, below=25, min_len=0.07):
 # Trozos de voz. Estilo B: « / » separa subtítulos dentro de la misma toma, «*amarillo*» marca color y « // » separa
 # subtítulos metiendo una pausa media (`pausa_media`, 0,55 s). Ambos estilos: `"join": true` une la línea con la siguiente
 # en una sola toma (docs/REDACCION.md §6). Cada toma se lee entera y sus cortes se ajustan al silencio más cercano.
-segs = []  # [línea, texto, qué viene después: 'join' | 'media' | 'pausa']
-for i, L in enumerate(reel['lines']):
-    raw = (L.get('say') or L['show']).replace('*', '')
-    parts = [re.sub(r'\s+/\s+', ' ', p).strip() for p in re.split(r'\s+//\s+', raw)]
-    for j, p in enumerate(parts):
-        segs.append([i, p, 'media' if j < len(parts) - 1 else ('join' if L.get('join') and i < len(reel['lines']) - 1 else 'pausa')])
-takes, cur = [], []
-for sg in segs:
-    cur.append(sg)
-    if sg[2] != 'join': takes.append(cur); cur = []
+def tomas(reel):
+    segs = []  # [línea, texto, qué viene después: 'join' | 'media' | 'pausa']
+    for i, L in enumerate(reel['lines']):
+        raw = (L.get('say') or L['show']).replace('*', '')
+        parts = [re.sub(r'\s+/\s+', ' ', p).strip() for p in re.split(r'\s+//\s+', raw)]
+        for j, p in enumerate(parts):
+            segs.append([i, p, 'media' if j < len(parts) - 1 else ('join' if L.get('join') and i < len(reel['lines']) - 1 else 'pausa')])
+    out, cur = [], []
+    for sg in segs:
+        cur.append(sg)
+        if sg[2] != 'join': out.append(cur); cur = []
+    return out
+
+
+hablado = lambda tk: re.sub(r'[«»“”]', '', ' '.join(sg[1] for sg in tk))
+takes = tomas(reel)
+
+# Caché de tomas de ElevenLabs (voice/tomas/): una toma que no cambia no se vuelve a pagar. Con --reusar, antes de
+# generar se rellena la caché cortando del voz.wav anterior (y su timing.json) las tomas del reel.json de git HEAD.
+TOMAS = os.path.join(vdir, 'tomas'); os.makedirs(TOMAS, exist_ok=True)
+clave = lambda txt: hashlib.sha1(json.dumps([VOICE, SPEED, 'eleven_multilingual_v2', txt]).encode()).hexdigest()[:16]
+if ELEVEN and '--reusar' in args:
+    try:
+        tim = json.load(open(os.path.join(reel_dir, 'timing.json')))
+        rel = os.path.relpath(os.path.join(reel_dir, 'reel.json'), subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], cwd=reel_dir, text=True).strip())
+        viejo = json.loads(subprocess.check_output(['git', 'show', f'HEAD:{rel}'], cwd=reel_dir, text=True))
+        assert tim.get('motor') == 'eleven' and tim.get('voz') == VOICE, 'la voz anterior no es esta de ElevenLabs'
+        wav, _sr = sf.read(os.path.join(vdir, 'voz.wav'), dtype='float32'); assert _sr == SR
+        usados = {}
+        for tk in tomas(viejo):
+            ws = []
+            for sg in tk:
+                k = usados.get(sg[0], 0); n_ = len(sg[1].split()); ws += tim['words'][sg[0]][k:k + n_]; usados[sg[0]] = k + n_
+            a0 = max(0.0, ws[0][0] - 0.08); b0 = min(len(wav) / SR, ws[-1][1] + 0.22)
+            seg = wav[int(a0 * SR):int(b0 * SR)]; f = os.path.join(TOMAS, clave(hablado(tk)))
+            if not os.path.exists(f + '.wav'):
+                sf.write(f + '.wav', seg, SR, subtype='PCM_16')
+                json.dump([[w0 - a0, w1 - a0] for w0, w1 in ws], open(f + '.json', 'w'))
+        print('caché rellenada con las tomas anteriores')
+    except Exception as e:
+        print('no se pudo reusar la voz anterior:', e)
 
 if CONTAR:
-    n = sum(len(re.sub(r'[«»“”]', '', ' '.join(sg[1] for sg in tk))) for tk in takes)
-    print(f'{n} caracteres en {len(takes)} tomas'); sys.exit()
+    n = sum(len(hablado(tk)) for tk in takes)
+    nuevos = [tk for tk in takes if not os.path.exists(os.path.join(TOMAS, clave(hablado(tk))) + '.wav')]
+    print(f'{n} caracteres en {len(takes)} tomas; de pago (sin caché): {sum(len(hablado(tk)) for tk in nuevos)} en {len(nuevos)} tomas')
+    for tk in nuevos: print('  nueva:', hablado(tk))
+    sys.exit()
 out = [np.zeros(int(0.5 * SR))]; t = 0.5; words = [[] for _ in reel['lines']]
 for tk in takes:
     texts = [sg[1] for sg in tk]
