@@ -133,10 +133,10 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    tú»: «ese tipo de expresiones son inaceptables… no parecen español nativo». Causa: el guion partía del concepto en
    inglés (*pay yourself first*) y se «traducía»; las listas de calcos y `redaccion.py` solo cazan palabras sueltas, y el
    lector en frío mira si se entiende, no si suena a España. Flujo nuevo, en este orden: (1) antes de escribir, contar la
-   **situación** como se la contarías a un amigo en un bar de Madrid («cobras el 28 y el 15 ya vas justo») y sacar las
+   **situación** reconocible de aquí («cobras el 28 y el 15 ya vas justo») y sacar las
    frases de ahí, nunca del nombre inglés de la técnica; (2) `redaccion.py`; (3) **corrector nativo**:
-   `python3 herramientas/corrector.py reels/ID` → agente nuevo que marca toda frase que alguien de Madrid de 30 años no
-   diría en voz alta y escribe cómo la diría; lo que marca se cambia por su versión (quien escribe no decide que «está
+   `python3 herramientas/corrector.py reels/ID` → agente nuevo que marca toda frase que un narrador nativo de España no
+   diría así y escribe cómo la diría (en registro de narrador, regla 23); lo que marca se cambia por su versión (quien escribe no decide que «está
    bien») y se repite con otro corrector hasta que no marque nada; informe en `reels/ID/corrector.md`; cada calco nuevo
    va a la lista de `docs/CASTELLANO.md`; (4) lector en frío (regla 18); (5) se enseña el guion a Jaime en texto.
 
@@ -161,6 +161,13 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    `publicados/ID.mp4`, se sube a esta rama y se publica con `--url` de raw.githubusercontent.com. Queda en
    `publicados.jsonl`. Voz de las listas (estilo B): ElevenLabs `eEyWolF7iBpMA65GbtAm` (`voz.py --eleven`).
    **L1 publicado el 10-11:** https://www.instagram.com/reel/DfksplFkqC9/
+
+23. **Narrativo no es informal (11-11-2026).** Jaime, sobre las propuestas del corrector para L2 («a mala leche», «dura lo
+   que le dejes», «te la lían»…): «las propuestas hacen del vídeo demasiado informal. Castellano y narrativo no quiere decir
+   informal». El registro es el de un buen divulgador en la radio: castellano de España natural y cuidado; ni coloquial ni de
+   bar («curro», «te la lían», «a mala leche», «en serio», «mola») ni escrito o de manual. El corrector nativo
+   (`corrector.py`) juzga con ese criterio y nunca propone algo más informal que el original; lo que proponga en registro
+   coloquial no se aplica. Ya no se usa «como se lo contarías a un amigo en un bar».
 
 ## Pendiente de Jaime
 

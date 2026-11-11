@@ -15,8 +15,8 @@ los 5 ejemplos, no solo esto. Lo mejor de ambos». Los cinco ejemplos son B-R1�
 
 ## 0. Flujo (reglas 17-20, en este orden)
 
-1. **Situación primero** (regla 19): contar la escena como se la contarías a un amigo en un bar de Madrid («cobras el
-   28 y el 15 ya vas justo»). Las frases salen de ahí, nunca del nombre inglés de la técnica (*pay yourself first*,
+1. **Situación primero** (regla 19): partir de una escena reconocible de aquí («cobras el 28 y el 15 ya vas justo»).
+   **Registro (regla 23):** registro de narrador: castellano de España natural y cuidado, como un buen divulgador en la radio; ni coloquial (nada de «curro», «te la lían», «a mala leche», «en serio», «mola») ni escrito o de manual. Castellano y narrativo no quiere decir informal. Las frases salen de ahí, nunca del nombre inglés de la técnica (*pay yourself first*,
    *ugly minutes*, *bring solutions*): si la idea tiene nombre inglés, se busca cómo lo dice la gente aquí, no cómo se
    traduce.
 2. Guion con este documento. **La voz solo narra**; lo que dice o piensa un personaje va en `bocadillo` (regla 20).
@@ -203,7 +203,7 @@ Redacción (guía):
 - [ ] ¿Los puntos van en el orden en que se hacen y ninguno parece contradecir a otro?
 - [ ] ¿Las cifras son 5 o menos, comparadas y con unidad?
 - [ ] ¿El remate vuelve al gancho en ≤ 10 palabras y el envío nombra a alguien reconocible?
-- [ ] ¿Lo diría así una persona de Madrid en un bar?
+- [ ] ¿Lo diría así un narrador nativo de España, natural y sin coloquialismos (regla 23)?
 
 **Lector en frío (regla 18):** después de `redaccion.py`, un agente nuevo que solo oye la voz (`herramientas/lector.py`)
 tiene que resumir el vídeo como la idea del guion, no marcar frases que no se entiendan y poner 8 o más. Quien escribe

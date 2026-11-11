@@ -55,7 +55,7 @@ Calcos encontrados el 10-11-2026 (Jaime: «ese tipo de expresiones son inaceptab
 
 ## 4. Prueba final (la hace quien revisa, en voz alta)
 
-1. ¿Alguna frase suena a doblaje? Reescríbela como la dirías tú a un amigo.
+1. ¿Alguna frase suena a doblaje? Reescríbela como la diría un narrador nativo, natural y sin coloquialismos (regla 23).
 2. ¿Hay una frase hecha de aquí que diga lo mismo con menos palabras? Úsala.
 3. ¿Cada subtítulo se entiende sin el anterior? (≤ 32 caracteres por línea).
 4. Anota los cambios en `reel.json` → `revision_castellano` (antes → después).
