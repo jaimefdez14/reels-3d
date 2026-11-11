@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-11T18:15+01:00",
+ "generado": "2026-11-11T18:46+01:00",
  "cuenta": "fase.zer0",
  "repo": "jaimefdez14/reels-3d",
  "franjas": [
@@ -283,12 +283,17 @@
   {
    "id": "L3",
    "titulo": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
-   "estado": "guion",
-   "version": 0,
-   "issue": null,
-   "previa": null,
+   "estado": "previa",
+   "version": 1,
+   "issue": 3,
+   "previa": {
+    "version": 1,
+    "mp4": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L3/L3-v1-previa.mp4",
+    "tira": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L3/L3-v1-tira.jpg",
+    "fecha": "2026-11-11T18:14+01:00"
+   },
    "final": null,
-   "caracteres": null,
+   "caracteres": 754,
    "ok_todo": false,
    "texto": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
    "guion": [
@@ -317,6 +322,13 @@
      "a": "guion",
      "quien": "alta en la cadena",
      "nota": "previa Kokoro hecha en otra sesión; sin OK. La cadena rehace la previa y abre su issue"
+    },
+    {
+     "fecha": "2026-11-11T18:14+01:00",
+     "de": "guion",
+     "a": "previa",
+     "quien": "pipeline",
+     "nota": "v1 lista"
     }
    ],
    "ig": null,
@@ -375,12 +387,17 @@
   {
    "id": "L5",
    "titulo": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
-   "estado": "guion",
-   "version": 0,
-   "issue": null,
-   "previa": null,
+   "estado": "previa",
+   "version": 1,
+   "issue": 4,
+   "previa": {
+    "version": 1,
+    "mp4": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L5/L5-v1-previa.mp4",
+    "tira": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L5/L5-v1-tira.jpg",
+    "fecha": "2026-11-11T18:38+01:00"
+   },
    "final": null,
-   "caracteres": null,
+   "caracteres": 786,
    "ok_todo": false,
    "texto": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
    "guion": [
@@ -410,6 +427,13 @@
      "a": "guion",
      "quien": "alta en la cadena",
      "nota": "previa Kokoro hecha en otra sesión; sin OK. La cadena rehace la previa y abre su issue"
+    },
+    {
+     "fecha": "2026-11-11T18:38+01:00",
+     "de": "guion",
+     "a": "previa",
+     "quien": "pipeline",
+     "nota": "v1 lista"
     }
    ],
    "ig": null,
@@ -615,21 +639,24 @@
    "titulo": "Cinco cosas que hacen las personas que ahorran sin esfuerzo",
    "resumen": "Automatizan · no miran el saldo cada día · compran con lista · esperan dos días · celebran barato (pulso de B-R4)",
    "doc": "docs/IDEAS-2026-11-09.md",
-   "estado": "propuesta"
+   "estado": "propuesta",
+   "issue": 2
   },
   {
    "id": "L7",
    "titulo": "Tres preguntas antes de aceptar cualquier trabajo",
    "resumen": "¿Qué aprendo? · ¿Con quién trabajo? · ¿Qué hago el lunes a las nueve? (pulso de B-R1)",
    "doc": "docs/IDEAS-2026-11-09.md",
-   "estado": "propuesta"
+   "estado": "propuesta",
+   "issue": 2
   },
   {
    "id": "L8",
    "titulo": "Cinco leyes del dinero que nadie te explica",
    "resumen": "Parkinson del gasto · interés compuesto · coste de oportunidad · efecto ancla · aversión a la pérdida (pulso de B-R5)",
    "doc": "docs/IDEAS-2026-11-09.md",
-   "estado": "propuesta"
+   "estado": "propuesta",
+   "issue": 2
   }
  ],
  "gasto_mes": {

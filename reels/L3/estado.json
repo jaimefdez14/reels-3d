@@ -1,7 +1,7 @@
 {
  "id": "L3",
- "estado": "guion",
- "version": 0,
+ "estado": "previa",
+ "version": 1,
  "historial": [
   {
    "fecha": "2026-11-11T18:30+01:00",
@@ -9,6 +9,21 @@
    "a": "guion",
    "quien": "alta en la cadena",
    "nota": "previa Kokoro hecha en otra sesión; sin OK. La cadena rehace la previa y abre su issue"
+  },
+  {
+   "fecha": "2026-11-11T18:14+01:00",
+   "de": "guion",
+   "a": "previa",
+   "quien": "pipeline",
+   "nota": "v1 lista"
   }
- ]
+ ],
+ "issue": 3,
+ "caracteres": 754,
+ "previa": {
+  "version": 1,
+  "mp4": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L3/L3-v1-previa.mp4",
+  "tira": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L3/L3-v1-tira.jpg",
+  "fecha": "2026-11-11T18:14+01:00"
+ }
 }
