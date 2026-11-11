@@ -1,0 +1,14 @@
+{
+ "id": "N5",
+ "estado": "guion",
+ "version": 0,
+ "historial": [
+  {
+   "fecha": "2026-11-11T00:00+01:00",
+   "de": null,
+   "a": "guion",
+   "quien": "alta en la cadena",
+   "nota": "guion revisado; pendiente de previa en la cadena"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "repo": "jaimefdez14/reels-3d",
+  "autorizados": ["jaimefdez14"],
+  "zona": "Europe/Madrid",
+  "franjas": ["13:00", "20:00"],
+  "ventana_min": 75,
+  "max_en_curso": 4,
+  "colchon_aprobados": 6,
+  "kokoro": { "voz": "em_alex", "velocidad": 1.08 },
+  "eleven": { "modelo": "eleven_multilingual_v2", "idioma": "es", "estabilidad": 0.5, "similitud": 0.75, "estilo": 0.0 },
+  "instagram": { "host": "graph.facebook.com", "version": "v21.0", "modo": "resumable" },
+  "pie": { "hashtags": "", "plantilla": "{caption}\n\n{hashtags}" }
+}

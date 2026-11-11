@@ -1,0 +1,14 @@
+{
+ "id": "E1",
+ "estado": "pausado",
+ "version": 0,
+ "historial": [
+  {
+   "fecha": "2026-11-11T00:00+01:00",
+   "de": null,
+   "a": "pausado",
+   "quien": "alta en la cadena",
+   "nota": "hoja de escenas del motor (no se publica)"
+  }
+ ]
+}

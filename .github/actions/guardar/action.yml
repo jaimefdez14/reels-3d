@@ -1,0 +1,19 @@
+name: guardar
+description: Commit de estados, tiempos, ideas y panel a main, reintentando si alguien empujó antes.
+inputs:
+  mensaje: { description: 'mensaje del commit', required: true }
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env: { MSG: '${{ inputs.mensaje }}' }
+      run: |
+        git config user.name "reels-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add reels/*/estado.json reels/*/timing.json reels/*/voice/motor.json ideas.json docs/PANEL.md 2>/dev/null || true
+        git diff --cached --quiet && { echo "nada que guardar"; exit 0; }
+        git commit -q -m "$MSG"
+        for n in 1 2 3 4 5; do
+          git push origin HEAD:main && exit 0
+          sleep $((n*3)); git pull -q --rebase origin main
+        done
+        exit 1

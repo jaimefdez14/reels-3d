@@ -1,0 +1,79 @@
+[
+ {
+  "id": "I1",
+  "titulo": "Las dos preguntas (ventas)",
+  "doc": "docs/IDEAS-2026-11-04.md",
+  "estado": "aprobada",
+  "reel": "I1"
+ },
+ {
+  "id": "I2",
+  "titulo": "Pedir una subida (carrera)",
+  "doc": "docs/IDEAS-2026-11-04.md",
+  "estado": "sustituida",
+  "nota": "versión nueva: N3"
+ },
+ {
+  "id": "I3",
+  "titulo": "El giro del cero (emprender)",
+  "doc": "docs/IDEAS-2026-11-04.md",
+  "estado": "aprobada",
+  "reel": "I3"
+ },
+ {
+  "id": "I4",
+  "titulo": "Esperar a tener ganas (productividad)",
+  "doc": "docs/IDEAS-2026-11-04.md",
+  "estado": "sustituida",
+  "nota": "versión nueva: N1"
+ },
+ {
+  "id": "I5",
+  "titulo": "El precio (negociación)",
+  "doc": "docs/IDEAS-2026-11-04.md",
+  "estado": "sustituida",
+  "nota": "versión nueva: N2"
+ },
+ {
+  "id": "N1",
+  "titulo": "Los cinco minutos feos (productividad)",
+  "resumen": "«Deja de esperar a tener ganas.» Temporizador a 5 y la parte más fea.",
+  "doc": "docs/IDEAS-2026-11-04b.md",
+  "estado": "propuesta"
+ },
+ {
+  "id": "N2",
+  "titulo": "El precio que no dices (negociación)",
+  "resumen": "«Nunca digas tu precio el primero.» La pregunta antes del número.",
+  "doc": "docs/IDEAS-2026-11-04b.md",
+  "estado": "propuesta"
+ },
+ {
+  "id": "N3",
+  "titulo": "El informe de tres líneas (carrera)",
+  "resumen": "«Deja de pedir una subida de sueldo.» Tres líneas un mes antes.",
+  "doc": "docs/IDEAS-2026-11-04b.md",
+  "estado": "propuesta"
+ },
+ {
+  "id": "N4",
+  "titulo": "Salta al ponente (networking)",
+  "resumen": "«En un evento, no hagas cola para hablar con el ponente.» Busca al conector.",
+  "doc": "docs/IDEAS-2026-11-04b.md",
+  "estado": "propuesta"
+ },
+ {
+  "id": "N5",
+  "titulo": "La primera frase del correo (ventas)",
+  "doc": "docs/IDEAS-2026-11-04b.md",
+  "estado": "aprobada",
+  "reel": "N5"
+ },
+ {
+  "id": "N6",
+  "titulo": "Nunca falles dos veces (hábitos)",
+  "doc": "docs/IDEAS-2026-11-04b.md",
+  "estado": "aprobada",
+  "reel": "N6"
+ }
+]

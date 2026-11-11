@@ -1,0 +1,33 @@
+# Previas: cuando una sesión deja un reel en estado «guion» (o a mano, con su id), genera la voz Kokoro, pasa los dos
+# inspectores, renderiza, sube el MP4 y la tira a 1 fps a la release reel-ID y lo comenta en la issue del reel.
+# También abre la issue de ideas propuestas. docs/PIPELINE.md.
+name: produccion
+on:
+  push:
+    branches: [main]
+    paths: ['reels/*/reel.json', 'reels/*/shots3d.js', 'reels/*/estado.json', 'ideas.json']
+  workflow_dispatch:
+    inputs:
+      id: { description: 'Reel (vacío = todos los que están en «guion»)', required: false, default: '' }
+permissions: { contents: write, issues: write }
+concurrency: { group: produccion, cancel-in-progress: false }
+jobs:
+  previa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env: { GH_TOKEN: '${{ github.token }}', ELEVENLABS_API_KEY: '${{ secrets.ELEVENLABS_API_KEY }}' }
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        env: { ID: '${{ inputs.id }}' }
+        run: echo "ids=$(python3 herramientas/pipeline.py pendientes "$ID")" >> "$GITHUB_OUTPUT"
+      - run: python3 herramientas/pipeline.py ideas
+      - uses: ./.github/actions/preparar
+        if: steps.p.outputs.ids != ''
+        with: { kokoro: 'true' }
+      - if: steps.p.outputs.ids != ''
+        env: { IDS: '${{ steps.p.outputs.ids }}' }
+        run: for id in $IDS; do python herramientas/pipeline.py previa "$id"; done
+      - if: always()
+        uses: ./.github/actions/guardar
+        with: { mensaje: 'Cadena: previas ${{ steps.p.outputs.ids }}' }

@@ -27,6 +27,9 @@ python3 herramientas/sheet.py <dir> hoja.jpg 6   # hoja de contactos
 node motor/render.js reels/ID [--hasta 20]     # MP4 1080x1920 (con voz si existe reels/ID/voice/voz.wav)
 node herramientas/inspeccionar.js reels/ID 0.2   # solapes por rectángulos (debe decir ok)
 node herramientas/inspeccionar_px.js reels/ID 0.5  # solapes por píxeles, legibilidad, máximo 2 bocadillos (debe decir ok)
+python3 herramientas/pipeline.py estado        # cadena: estado de reels e ideas (docs/PIPELINE.md, docs/PANEL.md)
+python3 herramientas/pipeline.py producir      # qué toca hacer en esta sesión (arreglar, producir, proponer ideas)
+python3 herramientas/pipeline.py pasar ID guion "nota"   # entregar un reel a la cadena (dispara la previa en Actions)
 ```
 
 ## Revisión obligatoria antes de enseñar nada (04-11-2026)
@@ -74,10 +77,21 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
 
 13. **La objeción va solo en el titular (04-11-2026).** Jaime, sobre «¿Esto no parece un guion?»: «necesito entender el racional de eso, no se entiende, ¿es un error o va ahí de verdad?». Era un error: la referencia pone la objeción en el titular (rótulo «Estás pensando:» + la frase, fondo oscuro) y la escena solo enseña la reacción del personaje. Yo repetía la frase, reformulada, en una nube de pensamiento: dos textos a la vez. Desde ahora la nube de la objeción lleva solo «?» (o no hay nube); nunca una frase. `inspeccionar_px.js` avisa si hay un bocadillo con texto largo mientras el titular lleva rótulo de voz.
 
+14. **Cadena automática (11-11-2026).** Jaime: «Necesitamos generar un sistema automatizado que permita generar videos,
+    revisarlos, iterarlos, dar el ok a la voz de pago, y publicar 2x diaria de forma automatizada». Está en
+    `docs/PIPELINE.md`: una sesión programada escribe y corrige reels (2 al día), GitHub Actions hace previa Kokoro,
+    inspectores, render, voz de pago y publicación (13:00 y 20:00, Madrid), y Jaime decide con órdenes en la issue de
+    cada reel (`/ok-voz`, `/publicar`, `/cambios …`, `/ok-todo`). La regla 4 sigue igual: la voz de pago solo tras
+    `/ok-voz` con la cifra de caracteres a la vista, y nada se publica sin `/publicar` u `/ok-todo` de Jaime. Una
+    sesión solo puede poner un reel en `guion`; nunca en `aprobado` ni `voz_ok`. El estado de cada reel vive en
+    `reels/ID/estado.json` y el resumen en `docs/PANEL.md`.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
-  ViralClips, decidir cómo se reparte el tope mensual).
+  ViralClips, decidir cómo se reparte el tope mensual). Van como secretos de Actions: `ELEVENLABS_API_KEY`,
+  `ELEVEN_VOICE_ID`, `IG_TOKEN`, `IG_USER_ID` (docs/PIPELINE.md).
+- Activar la sesión programada (rutina de Claude Code, 2 al día) con el prompt de docs/PIPELINE.md.
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
 - Las decisiones de `docs/SISTEMA-3D.md` §7 ya no chocan con ninguna regla aquí: la paleta de la referencia, 45-60 s
