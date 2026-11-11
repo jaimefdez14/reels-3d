@@ -1,13 +1,13 @@
-# Panel de reels (se regenera solo; 2026-11-11T17:14+01:00)
+# Panel de reels (se regenera solo; 2026-11-11T17:23+01:00)
 
 | Reel | Título | Estado | Versión | Issue | Publicación |
 |---|---|---|---|---|---|
-| N5 | Nunca empieces un correo con «espero que estés bien» | guion | v0 |  |  |
-| N6 | Nunca falles dos días seguidos | guion | v0 |  |  |
-| B1 | Boceto: nunca digas «encantado de conocerte» | pausado | v0 |  |  |
-| E1 | Hoja de escenas (demo del motor) | pausado | v0 |  |  |
-| I1 | Nunca abras con «¿en qué puedo ayudarte?» | pausado | v0 |  |  |
-| I3 | Cero clientes | pausado | v0 |  |  |
+| B1 | Boceto: nunca digas «encantado de conocerte» | descartado | v0 |  |  |
+| E1 | Hoja de escenas (demo del motor) | descartado | v0 |  |  |
+| I1 | Nunca abras con «¿en qué puedo ayudarte?» | descartado | v0 |  |  |
+| I3 | Cero clientes | descartado | v0 |  |  |
+| N5 | Nunca empieces un correo con «espero que estés bien» | descartado | v0 |  |  |
+| N6 | Nunca falles dos días seguidos | descartado | v0 |  |  |
 
 ## Cola de publicación
 

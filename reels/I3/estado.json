@@ -1,6 +1,6 @@
 {
  "id": "I3",
- "estado": "pausado",
+ "estado": "descartado",
  "version": 0,
  "historial": [
   {
@@ -9,6 +9,13 @@
    "a": "pausado",
    "quien": "alta en la cadena",
    "nota": "regla 10: queda como está; Jaime decide si se publica"
+  },
+  {
+   "fecha": "2026-11-11T18:00+01:00",
+   "de": "pausado",
+   "a": "descartado",
+   "quien": "Jaime",
+   "nota": "regla 15: se descartan todos los vídeos 3D"
   }
  ]
 }

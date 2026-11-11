@@ -1,5 +1,10 @@
 # reels-3d: reglas permanentes
 
+> **11-11-2026: FORMATO 3D DESCARTADO (regla 15).** Jaime: «DESCARTAMOS TODOS LOS VIDEOS CON ANIMACIONES 3D. NOS
+> QUEDAMOS CON LAS ÚLTIMAS QUE HEMOS IDO GENERANDO, ESTÁN FUNCIONANDO MUY BIEN». No se produce, itera ni publica
+> ningún reel 3D (B1, E1, I1, I3, N5, N6 quedan en `descartado`). El motor y la cadena se conservan solo como
+> código; no se reactivan sin que Jaime lo pida.
+
 **Lee esto antes de hacer nada.** Una sesión nueva no recuerda nada de otra: la memoria es este archivo y el resto del
 repositorio. Lo que Jaime decida y no esté escrito aquí se pierde: cuando fije una regla, anótala aquí en ese mismo
 turno, haz commit y push, y díselo.
@@ -85,6 +90,11 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
     `/ok-voz` con la cifra de caracteres a la vista, y nada se publica sin `/publicar` u `/ok-todo` de Jaime. Una
     sesión solo puede poner un reel en `guion`; nunca en `aprobado` ni `voz_ok`. El estado de cada reel vive en
     `reels/ID/estado.json` y el resumen en `docs/PANEL.md`.
+
+15. **Se descartan todos los vídeos 3D (11-11-2026).** Jaime: «DESCARTAMOS TODOS LOS VIDEOS CON ANIMACIONES 3D. NOS
+    QUEDAMOS CON LAS ÚLTIMAS QUE HEMOS IDO GENERANDO, ESTÁN FUNCIONANDO MUY BIEN». Todos los reels de esta repo pasan a
+    `descartado`; la cadena automática (regla 14) no se activa para el formato 3D. Pendiente: qué formato son «las
+    últimas» y si la cadena se adapta a él (si viven en la repo de ViralClips, la regla 1 manda: nada se mezcla).
 
 ## Pendiente de Jaime
 
