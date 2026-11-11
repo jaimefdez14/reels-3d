@@ -1,0 +1,643 @@
+{
+ "generado": "2026-11-11T18:15+01:00",
+ "cuenta": "fase.zer0",
+ "repo": "jaimefdez14/reels-3d",
+ "franjas": [
+  "13:00",
+  "20:00"
+ ],
+ "reels": [
+  {
+   "id": "B1",
+   "titulo": "Boceto: nunca digas «encantado de conocerte»",
+   "estado": "descartado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Boceto: nunca digas «encantado de conocerte»",
+   "guion": [
+    "Nunca digas «encantado de conocerte».",
+    "Todo el mundo lo dice.",
+    "Mañana eres una cara más.",
+    "Lo último que dices es lo que se llevan.",
+    "Cámbialo por dos frases.",
+    "La primera es la etiqueta.",
+    "«Suena a chulería.»",
+    "No si lo dices en broma.",
+    "«Me vas a recordar como el de la agencia que odia estos eventos.»",
+    "Ahora saben dónde archivarte."
+   ],
+   "idea": "",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "descartado",
+     "quien": "alta en la cadena",
+     "nota": "regla 25: se descartan todos los vídeos 3D"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 27.56
+  },
+  {
+   "id": "E1",
+   "titulo": "Hoja de escenas (demo del motor)",
+   "estado": "descartado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Hoja de escenas (demo del motor)",
+   "guion": [
+    "Pasillo de puertas: el calentamiento.",
+    "Atril y público: salta al ponente.",
+    "Letras gigantes: las cuatro letras.",
+    "Escritorio: el informe de tres líneas.",
+    "Temporizador: los cinco minutos feos.",
+    "Monedas: el precio que no dices."
+   ],
+   "idea": "",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "descartado",
+     "quien": "alta en la cadena",
+     "nota": "regla 25: se descartan todos los vídeos 3D"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": null
+  },
+  {
+   "id": "I1",
+   "titulo": "Nunca abras con «¿en qué puedo ayudarte?»",
+   "estado": "descartado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Nunca abras con «¿en qué puedo ayudarte?»",
+   "guion": [
+    "Nunca abras una reunión con esta frase.",
+    "«¿En qué puedo ayudarte?»",
+    "Todo el mundo la dice.",
+    "A los dos minutos, la reunión está muerta.",
+    "Lo primero que preguntas decide la reunión.",
+    "Cámbialo por dos preguntas.",
+    "La primera saca el motivo.",
+    "«¿Qué ha pasado para que me llames ahora?»",
+    "«Suena a interrogatorio.»",
+    "No, si luego te callas.",
+    "Ahora sabes por qué está aquí.",
+    "Pero saber el motivo no basta.",
+    "Para eso está la segunda.",
+    "«¿Qué tiene que haber cambiado en tres meses?»",
+    "Eso es lo que te va a comprar.",
+    "Al salir, el cliente le dice a su socio:",
+    "«Es el primero que me pregunta qué quiero.»",
+    "Mándaselo a quien se reúna esta semana."
+   ],
+   "idea": "I1 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026). Versión 2 (04-11): sigue pulso a pulso la referencia R1 («Never say it was nice meeting you»).",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "descartado",
+     "quien": "alta en la cadena",
+     "nota": "regla 25: se descartan todos los vídeos 3D"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 47.51
+  },
+  {
+   "id": "I3",
+   "titulo": "Cero clientes",
+   "estado": "descartado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Cero clientes",
+   "guion": [
+    "Esta frase hace que se inclinen hacia ti.",
+    "«Cero clientes.»",
+    "No va del número.",
+    "«¿Merece la pena hablar con este?»",
+    "Dilo tal cual.",
+    "«Cero. Busco el primero. Por eso estoy aquí.»",
+    "Ahora piensan a quién conocen.",
+    "«Algunos» → te ponen a prueba.",
+    "«El primero» → pueden ayudarte.",
+    "Lo que digas después decide si te recuerdan.",
+    "No vendas. Pregunta.",
+    "«¿Cómo conseguiste el primero?»",
+    "Los demás esperan su turno para hablar.",
+    "Adivina a quién recordarán.",
+    "«Cero me hace parecer nuevo.»",
+    "Bien. Eres nuevo.",
+    "Al nuevo lo ayudan. Al que finge lo examinan.",
+    "No estás vendiendo. Estás preguntando.",
+    "El cero nunca fue el problema.",
+    "Esconderlo, sí."
+   ],
+   "idea": "I3 de docs/IDEAS-2026-11-04.md (aprobada por Jaime el 04-11-2026). Versión 3 (04-11): sigue pulso a pulso el reel de referencia R3 («Zero clients»), como pidió Jaime.",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "descartado",
+     "quien": "alta en la cadena",
+     "nota": "regla 25: se descartan todos los vídeos 3D"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 47.87
+  },
+  {
+   "id": "L1",
+   "titulo": "Cuatro reglas para que tu sueldo dure todo el mes",
+   "estado": "publicado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Cuatro reglas para que tu sueldo dure todo el mes",
+   "guion": [
+    "Cobras la nómina y a los veinte días / *no te queda ni un euro.*",
+    "Cuatro reglas para llegar a fin de mes / *sin ganar más.*",
+    "La primera: // *ahorra nada más cobrar.*",
+    "El mismo día que cobras, / pasa el diez por ciento a otra cuenta / *antes de pagar nada.*",
+    "Y lo que no ves, / *no te lo gastas.*",
+    "La segunda: // *lo que te quede, repártelo en dos cuentas.*",
+    "Una para los gastos fijos; / *otra para los caprichos.*",
+    "Cuando la de caprichos / *se queda vacía, se acabó.*",
+    "Hasta el mes *que viene.*",
+    "La tercera: // *antes de darte un capricho, espera dos días.*",
+    "¿Que has visto algo que te encanta? / *Déjalo en la cesta.*",
+    "En ese momento, / *te convences de lo que sea.*",
+    "A los dos días, / *ya no lo ves tan claro.*",
+    "Y la cuarta: // *repasa los gastos todos los domingos.*",
+    "Cinco minutos *y sin agobios.*",
+    "Así te das cuenta el día diez / de que vas justo, *y no el veinte.*",
+    "El sueldo no da más de sí: / *hay que repartirlo antes de gastarlo.* // Mándaselo a ese amigo que a los veinte días / *ya no tiene ni un euro.*"
+   ],
+   "idea": "Lista de 4 sobre el molde de B-R3 (aprender en 20 h: 4 pasos, barritas de progreso, fondo degradado) y el cierre de B-R1/B-R3 (resumen + guardar + seguir). Propuesta para Jaime, previa con Kokoro.",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "publicado",
+     "quien": "alta en la cadena",
+     "nota": "publicado antes de la cadena (publicados.jsonl)"
+    }
+   ],
+   "ig": {
+    "permalink": "https://www.instagram.com/reel/DfksplFkqC9/",
+    "media_id": "17979663357146648",
+    "franja": "2026-11-10 19:51",
+    "fecha": "2026-11-10 19:51:34"
+   },
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 56.25
+  },
+  {
+   "id": "L2",
+   "titulo": "Cinco leyes que te ahorran años de errores en el trabajo",
+   "estado": "publicado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Cinco leyes que te ahorran años de errores en el trabajo",
+   "guion": [
+    "Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.",
+    "Primera: // el trabajo se alarga.",
+    "Dura todo el tiempo que le des. / Es la ley de Parkinson.",
+    "Ponle un plazo más corto / y lo acabas antes.",
+    "Segunda: // todo tarda más de lo que crees.",
+    "Siempre, aunque ya lo tengas en cuenta. / Es la ley de Hofstadter.",
+    "Calcula lo que vas a tardar / y súmale la mitad.",
+    "Tercera: // si alguien no te contesta un correo, / no es por mala fe.",
+    "Casi siempre es un despiste. / Es la navaja de Hanlon.",
+    "Escríbele otra vez / y no te mosquees.",
+    "Cuarta: // lo que dejas a medias no te lo quitas de la cabeza.",
+    "Te acuerdas hasta en la ducha. / Es el efecto Zeigarnik.",
+    "Apúntalo / y te quedas tranquilo.",
+    "Quinta: // de cada cinco cosas que haces, / una es la que de verdad cuenta.",
+    "Es la ley de Pareto.",
+    "Busca cuál es y empieza por ella. / Lo demás, que espere.",
+    "Ya las sufrías. / Ahora por lo menos sabes cómo se llaman.",
+    "Mándaselo a ese que siempre dice / «esto lo saco en una tarde»."
+   ],
+   "idea": "Lista de 5 leyes sobre el molde de B-R5 (cinco leyes: número + nombre de la ley + dos frases; fondo grafito, puntos unidos por línea, subtítulo blanco de una línea) con el cierre de B-R4 (pregunta a comentarios). Propuesta para Jaime, previa con Kokoro.",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "publicado",
+     "quien": "alta en la cadena",
+     "nota": "publicado antes de la cadena (publicados.jsonl)"
+    }
+   ],
+   "ig": {
+    "permalink": "https://www.instagram.com/reel/DfmIf8dAB1C/",
+    "media_id": "18040510082845774",
+    "franja": "2026-11-11 09:14",
+    "fecha": "2026-11-11 09:14:02"
+   },
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 59.2
+  },
+  {
+   "id": "L3",
+   "titulo": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
+   "estado": "guion",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Echas más horas que nadie y tu jefe ni se entera: tres pasos",
+   "guion": [
+    "Echas más horas que nadie / *y tu jefe ni se entera.*",
+    "Hay tres cosas que sí ve, / *y ninguna es quedarte hasta tarde.*",
+    "La primera: // *no le vayas con marrones, ve con soluciones.*",
+    "Si hay un marrón, / *ve con dos opciones.*",
+    "Y dile cuál / *elegirías tú.*",
+    "Así, cuando hay un lío, / *cuenta contigo.*",
+    "La segunda: // *ponte un plazo y cúmplelo.*",
+    "No le digas que ya lo mirarás: / *dale un día concreto.*",
+    "Y ese día *se lo das.*",
+    "Cumplir tres plazos cuenta más / *que diez horas extra.*",
+    "La tercera: // *cuéntale lo que has hecho.*",
+    "Una vez al mes, / *un correo de tres líneas.*",
+    "Si no se lo cuentas, / *para él no existe.*",
+    "Y no es echarte flores: / *es que si no, no se entera.*",
+    "A tu jefe le dan igual tus horas: / se fija en lo que resuelves, / *en si cumples y en lo que le cuentas.* // Mándaselo a ese compañero que echa horas / *y nadie se entera.*"
+   ],
+   "idea": "L3 de docs/IDEAS-2026-11-09.md. Molde de B-R1 (identidad: el muñeco gris se vuelve amarillo, anillo de promesas cumplidas, 3 puntos sueltos, fondo negro, subtítulo en dos líneas). Escrito con docs/REDACCION.md (regla 17).",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "guion",
+     "quien": "alta en la cadena",
+     "nota": "previa Kokoro hecha en otra sesión; sin OK. La cadena rehace la previa y abre su issue"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 52.21
+  },
+  {
+   "id": "L4",
+   "titulo": "Cinco formas de dejar de procrastinar hoy mismo",
+   "estado": "guion",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Cinco formas de dejar de procrastinar hoy mismo",
+   "guion": [
+    "Eso que llevas tres días dejando para mañana: / *hoy lo haces.*",
+    "Cinco trucos para empezar, / y el tercero / *es el que mejor funciona.*",
+    "El primero: // *solo cinco minutos.*",
+    "Ponte una alarma de cinco minutos / *y empieza.*",
+    "Cuando suene, puedes parar. / *Y casi nunca paras.*",
+    "El segundo: // *el móvil, en otra habitación.*",
+    "*Ni en silencio ni boca abajo.*",
+    "Si tienes que levantarte a por él, / *te da pereza y no lo coges.*",
+    "El tercero: // *parte la tarea en trozos.*",
+    "Hacer un informe da pereza. / *Abrir el documento, no.*",
+    "Por eso funciona tan bien: / acabas un trozo / *y te pones con el siguiente sin pensarlo.*",
+    "El cuarto: // *una sola pestaña abierta.*",
+    "Cierra todo / *menos lo que estás haciendo.*",
+    "*Lo que no ves no te distrae.*",
+    "El quinto: // *déjate algo a medias.*",
+    "Cuando pares por hoy, / *para justo antes de algo fácil.*",
+    "Mañana empiezas por ahí / *y ya has arrancado.*",
+    "Al final, las ganas dan igual. / *Lo que importa es que te cueste poco empezar.*",
+    "Mándaselo a ese amigo que siempre dice / *«mañana lo hago».*"
+   ],
+   "idea": "L4 de docs/IDEAS-2026-11-09.md, aprobada por Jaime el 09-11-2026 («haz L4 y L5»). Pulso de B-R2 (rutina en 5 puntos, fondo negro, segunda línea amarilla en cursiva, el muñeco hace cada acción). Satisfying: contador de minutos que suma, globo de avisos que se dispara, tarea que se trocea y se tacha en cascada, pestañas que se cierran, barra que se completa al día siguiente.",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "guion",
+     "quien": "alta en la cadena",
+     "nota": "voz de ElevenLabs del 11-11 recuperada en la repo (voice/tomas): /ok-voz cuesta 0 caracteres"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 64.53
+  },
+  {
+   "id": "L5",
+   "titulo": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
+   "estado": "guion",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Cuatro reglas para cobrar más si trabajas por tu cuenta",
+   "guion": [
+    "Ese «es un cambio rapidito» / *ya te ha costado horas gratis.*",
+    "Cuatro reglas para cobrar más. / *La última lo corta de raíz.*",
+    "La primera: // pregúntale al cliente cuánto quiere gastarse / *antes de dar tu precio.*",
+    "Que diga él la cifra / *primero.*",
+    "A veces es más / *de lo que ibas a pedir.*",
+    "La segunda: // *di tu precio y cállate.*",
+    "*Y sin dar explicaciones.*",
+    "Se hace un silencio incómodo. Aguántalo: / si hablas tú primero, / *acabas bajándolo.*",
+    "La tercera: // *cobra los extras aparte.*",
+    "Si te piden algo que no entraba en el presupuesto, / *no lo regales.*",
+    "Ponle precio / *y déjalo por escrito.*",
+    "La cuarta: // antes de empezar, avisa / *de que los cambios se pagan.*",
+    "Los cambios siempre llegan / *a mitad del trabajo.*",
+    "Si no lo has dicho antes, / *te los comes.*",
+    "Al final, cobrar más / *es saber qué decir.*",
+    "Mándaselo a ese amigo que baja el precio / *sin que nadie se lo pida.*"
+   ],
+   "idea": "L5 de docs/IDEAS-2026-11-09.md (aprobada por Jaime el 09-11-2026). Pulso de B-R3 (4 pasos, barritas, fondo degradado) con dos personajes como B-R5. Satisfying: etiqueta de precio que sube rodando, cuenta del silencio, cajas de planes que se iluminan, piezas que rebotan en el límite del alcance.",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "guion",
+     "quien": "alta en la cadena",
+     "nota": "previa Kokoro hecha en otra sesión; sin OK. La cadena rehace la previa y abre su issue"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 55.56
+  },
+  {
+   "id": "N5",
+   "titulo": "Nunca empieces un correo con «espero que estés bien»",
+   "estado": "descartado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Nunca empieces un correo con «espero que estés bien»",
+   "guion": [
+    "«Espero que estés bien.»",
+    "Nadie contesta a ese correo.",
+    "Todo el mundo lo escribe. El tuyo se pierde.",
+    "Usa tres letras.",
+    "D, A, P.",
+    "La P es la que hace que te contesten.",
+    "D es dato.",
+    "Algo de su empresa que hayas visto tú.",
+    "«Vi que abres una tienda en Valencia.»",
+    "A es ayuda.",
+    "Una cosa concreta que puedes hacer por él.",
+    "Una. No tu catálogo entero.",
+    "«Parece un guion.»",
+    "Sí, un guion de tres líneas. Y contestan.",
+    "P es pregunta.",
+    "Una sola, de sí o no.",
+    "«¿Tienes un hueco el jueves?»",
+    "Dato, ayuda, pregunta. Tres líneas.",
+    "Al que pregunta, le contestan.",
+    "No escribas para gustar.",
+    "Escribe para que contesten.",
+    "Mándaselo a quien escriba correos en frío."
+   ],
+   "idea": "N5 de docs/IDEAS-2026-11-04b.md (aprobada por Jaime el 04-11-2026). Sigue pulso a pulso la referencia R5 (FORD).",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "descartado",
+     "quien": "alta en la cadena",
+     "nota": "regla 25: se descartan todos los vídeos 3D"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 50.48
+  },
+  {
+   "id": "N6",
+   "titulo": "Nunca falles dos días seguidos",
+   "estado": "descartado",
+   "version": 0,
+   "issue": null,
+   "previa": null,
+   "final": null,
+   "caracteres": null,
+   "ok_todo": false,
+   "texto": "Nunca falles dos días seguidos",
+   "guion": [
+    "Si ayer fallaste, hoy no compenses.",
+    "Compensar es doblar la tarea.",
+    "Y a los dos días lo dejas.",
+    "Fallar un día es normal.",
+    "Lo que rompe el hábito es el segundo fallo.",
+    "La regla: nunca dos días seguidos.",
+    "Hoy haz solo cinco minutos.",
+    "Diez flexiones. Dos páginas. Un correo.",
+    "«Cinco minutos no cuentan.»",
+    "Cuentan para lo único que importa.",
+    "Que no se rompa la cadena de días.",
+    "Un hueco no rompe la cadena. Dos, sí.",
+    "El viernes sigues con el hábito.",
+    "Los que compensan empiezan de cero el lunes.",
+    "No hace falta ser perfecto.",
+    "Hace falta volver.",
+    "Mándaselo a quien haya fallado hoy."
+   ],
+   "idea": "N6 de docs/IDEAS-2026-11-04b.md (aprobada por Jaime el 04-11-2026). Sigue pulso a pulso la referencia R4 (el contador de cinco).",
+   "cambios": [],
+   "historial": [
+    {
+     "fecha": "2026-11-11T18:30+01:00",
+     "de": null,
+     "a": "descartado",
+     "quien": "alta en la cadena",
+     "nota": "regla 25: se descartan todos los vídeos 3D"
+    }
+   ],
+   "ig": null,
+   "aprobado_en": null,
+   "errores": [],
+   "duracion": 44.14
+  }
+ ],
+ "cola": [],
+ "calendario": [
+  {
+   "franja": "2026-11-11T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-12T13:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-12T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-13T13:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-13T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-14T13:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-14T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-15T13:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-15T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-16T13:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-16T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-17T13:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-17T20:00+01:00",
+   "reel": null
+  },
+  {
+   "franja": "2026-11-18T13:00+01:00",
+   "reel": null
+  }
+ ],
+ "ideas": [
+  {
+   "id": "L1",
+   "titulo": "Cuatro reglas para que tu sueldo dure todo el mes",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "aprobada",
+   "reel": "L1"
+  },
+  {
+   "id": "L2",
+   "titulo": "Cinco leyes del trabajo",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "aprobada",
+   "reel": "L2"
+  },
+  {
+   "id": "L3",
+   "titulo": "Tres pasos para que tu jefe te tome en serio",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "aprobada",
+   "reel": "L3"
+  },
+  {
+   "id": "L4",
+   "titulo": "Cinco formas de dejar de procrastinar hoy",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "aprobada",
+   "reel": "L4"
+  },
+  {
+   "id": "L5",
+   "titulo": "Cuatro frases que te suben el precio",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "aprobada",
+   "reel": "L5"
+  },
+  {
+   "id": "L6",
+   "titulo": "Cinco cosas que hacen las personas que ahorran sin esfuerzo",
+   "resumen": "Automatizan · no miran el saldo cada día · compran con lista · esperan dos días · celebran barato (pulso de B-R4)",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "propuesta"
+  },
+  {
+   "id": "L7",
+   "titulo": "Tres preguntas antes de aceptar cualquier trabajo",
+   "resumen": "¿Qué aprendo? · ¿Con quién trabajo? · ¿Qué hago el lunes a las nueve? (pulso de B-R1)",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "propuesta"
+  },
+  {
+   "id": "L8",
+   "titulo": "Cinco leyes del dinero que nadie te explica",
+   "resumen": "Parkinson del gasto · interés compuesto · coste de oportunidad · efecto ancla · aversión a la pérdida (pulso de B-R5)",
+   "doc": "docs/IDEAS-2026-11-09.md",
+   "estado": "propuesta"
+  }
+ ],
+ "gasto_mes": {
+  "mes": "2026-11",
+  "caracteres": 0
+ },
+ "frenos": {
+  "max_en_curso": 4,
+  "colchon_aprobados": 6
+ }
+}

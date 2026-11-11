@@ -1,4 +1,4 @@
-# Panel de reels (se regenera solo; 2026-11-11T17:30+01:00)
+# Panel de reels (se regenera solo; 2026-11-11T18:15+01:00)
 
 | Reel | Título | Estado | Versión | Issue | Publicación |
 |---|---|---|---|---|---|

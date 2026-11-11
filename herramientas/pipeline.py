@@ -369,6 +369,33 @@ def panel():
     L += ['', '## Cola de publicación', ''] + ([f'{k + 1}. {r} → {proxima_franja(k)}' for k, r in enumerate(cola)] or ['(vacía)'])
     L += ['', '## Ideas', '', '| Idea | Título | Estado | Reel |', '|---|---|---|---|'] + [f"| {d['id']} | {d['titulo']} | {d['estado']} | {d.get('reel', '')} |" for d in ideas()]
     open(os.path.join(ROOT, 'docs', 'PANEL.md'), 'w').write('\n'.join(L) + '\n')
+    panel_json(rs, cola)
+
+
+def panel_json(rs, cola):
+    """docs/panel.json: lo que lee el panel web (panel/index.html). Todo lo que Jaime necesita para decidir."""
+    mes = ahora().strftime('%Y-%m'); gasto = 0; R = []
+    for r, s in rs.items():
+        g = guion(r)
+        if (s.get('ok_voz') or {}).get('fecha', '').startswith(mes): gasto += s['ok_voz'].get('caracteres') or 0
+        R.append({'id': r, 'titulo': g.get('titulo', ''), 'estado': s['estado'], 'version': s.get('version', 0), 'issue': s.get('issue'),
+                  'previa': s.get('previa'), 'final': s.get('final'), 'caracteres': s.get('caracteres'), 'ok_todo': s.get('ok_todo', False),
+                  'texto': pie(g), 'guion': [L.get('show', '') for L in g.get('lines', [])], 'idea': g.get('idea', ''),
+                  'cambios': s.get('cambios', [])[-3:], 'historial': s.get('historial', [])[-6:], 'ig': s.get('ig'),
+                  'aprobado_en': s.get('aprobado_en'), 'errores': s.get('errores', [])[-2:], 'duracion': _dur(r)})
+    publicadas = {s.get('ig', {}).get('franja') for s in rs.values()}
+    libres = [f for f in franjas_desde(ahora(), 20) if f.strftime('%Y-%m-%d %H:%M') not in publicadas][:14]
+    cal = [{'franja': f.isoformat(timespec='minutes'), 'reel': cola[k] if k < len(cola) else None} for k, f in enumerate(libres)]
+    d = {'generado': iso(), 'cuenta': CFG['cuenta'], 'repo': REPO, 'franjas': CFG['franjas'], 'reels': R, 'cola': cola, 'calendario': cal,
+         'ideas': ideas(), 'gasto_mes': {'mes': mes, 'caracteres': gasto},
+         'frenos': {'max_en_curso': CFG['max_en_curso'], 'colchon_aprobados': CFG['colchon_aprobados']}}
+    json.dump(d, open(os.path.join(ROOT, 'docs', 'panel.json'), 'w'), ensure_ascii=False, indent=1)
+
+
+def _dur(r):
+    p = os.path.join(rdir(r), 'timing.json')
+    try: return json.load(open(p)).get('duration')
+    except Exception: return None
 
 
 def main():

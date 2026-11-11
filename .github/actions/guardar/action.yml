@@ -9,7 +9,7 @@ runs:
       env: { MSG: '${{ inputs.mensaje }}' }
       run: |
         git config user.name "reels-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add -A -- reels ideas.json docs/PANEL.md publicados.jsonl publicados 2>/dev/null || git add -A -- reels docs/PANEL.md
+        git add -A -- reels ideas.json docs/PANEL.md docs/panel.json publicados.jsonl publicados 2>/dev/null || git add -A -- reels docs/PANEL.md docs/panel.json
         git diff --cached --quiet && { echo "nada que guardar"; exit 0; }
         git commit -q -m "$MSG"
         for n in 1 2 3 4 5; do

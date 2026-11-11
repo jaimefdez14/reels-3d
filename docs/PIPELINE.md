@@ -63,6 +63,15 @@ idea aprobada ──sesión──▶ guion ──Action──▶ previa (Kokoro)
   (`docs/IDEAS-<fecha>.md` + `ideas.json`); `produccion.yml` abre la issue de ideas.
 - Si la cola está vacía, la franja se salta: nunca se publica nada sin OK.
 
+## Panel
+
+https://jaimefdez14.github.io/reels-3d/ (`panel/index.html`). Arriba, lo que espera una decisión tuya con el vídeo
+dentro, los caracteres de voz que costará, el texto de la publicación y el guion; botones para aprobar la voz,
+aprobar y publicar, pedir cambios o descartar. Debajo: calendario de las próximas franjas, la cadena por estados,
+ideas (sí/no), publicados con su enlace, actividad de los workflows y dos acciones (publicar ya, rehacer previas).
+Sin token se ve todo en solo lectura; con un token de GitHub (Issues y Actions en lectura y escritura, solo esta repo)
+los botones escriben la orden en la issue del reel, como si la escribieras tú.
+
 ## Archivos
 
 - `pipeline.json`: cuenta, franjas, zona, frenos, voces (Kokoro 1,1; ElevenLabs `eEyWolF7iBpMA65GbtAm`).
