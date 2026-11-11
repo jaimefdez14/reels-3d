@@ -1,9 +1,9 @@
-# Panel de reels (se regenera solo; 2026-11-11T17:30+01:00)
+# Panel de reels (se regenera solo; 2026-11-11T17:49+01:00)
 
 | Reel | Título | Estado | Versión | Issue | Publicación |
 |---|---|---|---|---|---|
+| L4 | Cinco formas de dejar de procrastinar hoy mismo | previa | v1 |  |  |
 | L3 | Echas más horas que nadie y tu jefe ni se entera: tres pasos | guion | v0 |  |  |
-| L4 | Cinco formas de dejar de procrastinar hoy mismo | guion | v0 |  |  |
 | L5 | Cuatro reglas para cobrar más si trabajas por tu cuenta | guion | v0 |  |  |
 | L1 | Cuatro reglas para que tu sueldo dure todo el mes | publicado | v0 |  | 2026-11-10 19:51 https://www.instagram.com/reel/DfksplFkqC9/ |
 | L2 | Cinco leyes que te ahorran años de errores en el trabajo | publicado | v0 |  | 2026-11-11 09:14 https://www.instagram.com/reel/DfmIf8dAB1C/ |
