@@ -5,7 +5,7 @@ on:
   issue_comment:
     types: [created]
 permissions: { contents: write, issues: write }
-concurrency: { group: ordenes-${{ github.event.issue.number }}, cancel-in-progress: false }
+concurrency: { group: 'ordenes-${{ github.event.issue.number }}', cancel-in-progress: false }
 jobs:
   orden:
     if: ${{ !github.event.issue.pull_request && github.event.comment.author_association == 'OWNER' && startsWith(github.event.comment.body, '/') }}
