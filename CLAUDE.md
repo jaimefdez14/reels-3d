@@ -95,10 +95,14 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
     QUEDAMOS CON LAS ÚLTIMAS QUE HEMOS IDO GENERANDO, ESTÁN FUNCIONANDO MUY BIEN». Todos los reels de esta repo pasan a
     `descartado`; la cadena automática (regla 14) no se activa para el formato 3D. Pendiente: qué formato son «las
     últimas» y si la cadena se adapta a él (si viven en la repo de ViralClips, la regla 1 manda: nada se mezcla).
+16. **fase.zer0 y crecimiento.ai no se mezclan (11-11-2026).** Jaime: «NO QUIERO MEZCLAR NADA DE LO QUE VA EN
+    CRECIMIENTO.AI CON LO DE FASE.ZER0». Esta repo es **fase.zer0**; ViralClips es @crecimiento.ai. Refuerza la regla 1:
+    ni formatos, ni vídeos, ni guiones, ni ideas, ni métricas, ni código de una cuenta pasan a la otra. Nada de lo que
+    funcione en crecimiento.ai se trae aquí como sustituto del 3D.
 
 ## Pendiente de Jaime
 
-- Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
+- Cuenta de Instagram: **fase.zer0** (11-11-2026). Token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
   ViralClips, decidir cómo se reparte el tope mensual). Van como secretos de Actions: `ELEVENLABS_API_KEY`,
   `ELEVEN_VOICE_ID`, `IG_TOKEN`, `IG_USER_ID` (docs/PIPELINE.md).
 - Activar la sesión programada (rutina de Claude Code, 2 al día) con el prompt de docs/PIPELINE.md.
