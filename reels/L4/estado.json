@@ -8,7 +8,7 @@
    "de": null,
    "a": "guion",
    "quien": "alta en la cadena",
-   "nota": "voz de ElevenLabs hecha el 11-11 en otra sesión, pero su audio (voice/tomas/*.wav) no está en la repo: si das /ok-voz se vuelve a pagar lo que diga la previa"
+   "nota": "voz de ElevenLabs del 11-11 recuperada en la repo (voice/tomas): /ok-voz cuesta 0 caracteres"
   },
   {
    "fecha": "2026-11-11T17:45+01:00",
