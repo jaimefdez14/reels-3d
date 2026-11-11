@@ -168,6 +168,8 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    bar («curro», «te la lían», «a mala leche», «en serio», «mola») ni escrito o de manual. El corrector nativo
    (`corrector.py`) juzga con ese criterio y nunca propone algo más informal que el original; lo que proponga en registro
    coloquial no se aplica. Ya no se usa «como se lo contarías a un amigo en un bar».
+   Y lo que Jaime aprueba palabra a palabra no lo retoca ningún corrector: se usa tal cual (L2, 11-11: «usa el que te
+   dije y aprobé»).
 
 ## Pendiente de Jaime
 
