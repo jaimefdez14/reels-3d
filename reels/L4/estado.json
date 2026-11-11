@@ -1,0 +1,28 @@
+{
+ "id": "L4",
+ "estado": "previa",
+ "version": 1,
+ "historial": [
+  {
+   "fecha": "2026-11-11T18:30+01:00",
+   "de": null,
+   "a": "guion",
+   "quien": "alta en la cadena",
+   "nota": "voz de ElevenLabs hecha el 11-11 en otra sesión, pero su audio (voice/tomas/*.wav) no está en la repo: si das /ok-voz se vuelve a pagar lo que diga la previa"
+  },
+  {
+   "fecha": "2026-11-11T17:45+01:00",
+   "de": "guion",
+   "a": "previa",
+   "quien": "pipeline",
+   "nota": "v1 lista"
+  }
+ ],
+ "caracteres": 907,
+ "previa": {
+  "version": 1,
+  "mp4": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L4/L4-v1-previa.mp4",
+  "tira": "https://github.com/jaimefdez14/reels-3d/releases/download/reel-L4/L4-v1-tira.jpg",
+  "fecha": "2026-11-11T17:45+01:00"
+ }
+}

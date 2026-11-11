@@ -1,4 +1,8 @@
-# reels-3d: reglas permanentes
+# reels-3d (@fase.zer0): reglas permanentes
+
+> **11-11-2026: esta repo es @fase.zer0 y produce solo el estilo B** (muñeco amarillo en 2D, listas en negro, `motor2d/`).
+> El estilo A (3D) está descartado (regla 25). Nada se mezcla con @crecimiento.ai (regla 26). La producción y la
+> publicación van por la cadena automática (regla 24, `docs/PIPELINE.md`).
 
 **Lee esto antes de hacer nada.** Una sesión nueva no recuerda nada de otra: la memoria es este archivo y el resto del
 repositorio. Lo que Jaime decida y no esté escrito aquí se pierde: cuando fije una regla, anótala aquí en ese mismo
@@ -171,10 +175,30 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    Y lo que Jaime aprueba palabra a palabra no lo retoca ningún corrector: se usa tal cual (L2, 11-11: «usa el que te
    dije y aprobé»).
 
+24. **Cadena automática (11-11-2026).** Jaime: «Necesitamos generar un sistema automatizado que permita generar videos,
+    revisarlos, iterarlos, dar el ok a la voz de pago, y publicar 2x diaria de forma automatizada». Está en
+    `docs/PIPELINE.md`: una sesión programada escribe y corrige reels (2 al día, con redacción, corrector nativo y lector
+    en frío como siempre); GitHub Actions hace la previa Kokoro, `redaccion.py`, los inspectores, el render, la voz de
+    ElevenLabs y la publicación en @fase.zer0 (13:00 y 20:00, Madrid); Jaime decide con órdenes en la issue de cada reel
+    (`/ok-voz`, `/publicar`, `/cambios …`, `/ok-todo`). La regla 4 sigue igual: la voz de pago solo tras `/ok-voz` con
+    la cifra de caracteres a la vista, y nada se publica sin `/publicar` u `/ok-todo`. Una sesión solo puede poner un
+    reel en `guion`; nunca en `aprobado` ni `voz_ok`. Estado de cada reel: `reels/ID/estado.json`; resumen: `docs/PANEL.md`.
+    Las tomas de ElevenLabs (`voice/tomas/*.wav`) se guardan en la release `reel-ID` para no pagarlas dos veces.
+
+25. **Se descartan todos los vídeos 3D (11-11-2026).** Jaime: «DESCARTAMOS TODOS LOS VIDEOS CON ANIMACIONES 3D. NOS
+    QUEDAMOS CON LAS ÚLTIMAS QUE HEMOS IDO GENERANDO, ESTÁN FUNCIONANDO MUY BIEN» y «EN FASE ZER0 VAN LOS QUE HEMOS IDO
+    PREPARANDO, COMO LOS DOS ÚLTIMOS QUE HEMOS SUBIDO, DEL PERSONAJE ANIMADO AMARILLO». Solo se produce el estilo B
+    (L1 y L2 son el modelo). B1, E1, I1, I3, N5 y N6 quedan en `descartado`; el motor 3D se conserva solo como código.
+    Las reglas 6-13 aplican al 3D y ya no rigen la producción, salvo lo que sea general (inspectores, claridad, sonido).
+
+26. **fase.zer0 y crecimiento.ai no se mezclan (11-11-2026).** Jaime: «NO QUIERO MEZCLAR NADA DE LO QUE VA EN
+    CRECIMIENTO.AI CON LO DE FASE.ZER0». Refuerza la regla 1: ni formatos, ni vídeos, ni guiones, ni ideas, ni
+    métricas, ni código de una cuenta pasan a la otra.
+
 ## Pendiente de Jaime
 
-- Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
-  ViralClips, decidir cómo se reparte el tope mensual).
+- Para la cadena (regla 24): fusionar con `main`; secretos de Actions `ELEVENLABS_API_KEY` y `META_PAGE_TOKEN_3D`;
+  activar la sesión programada con el prompt de `docs/PIPELINE.md`.
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
 - Estilo B: ver L1-L5 rehechos con la regla 17 (cierre con envío en vez de «sígueme»; L3 nuevo). Las cifras ya están

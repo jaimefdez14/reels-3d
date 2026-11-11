@@ -1,0 +1,14 @@
+{
+ "id": "E1",
+ "estado": "descartado",
+ "version": 0,
+ "historial": [
+  {
+   "fecha": "2026-11-11T18:30+01:00",
+   "de": null,
+   "a": "descartado",
+   "quien": "alta en la cadena",
+   "nota": "regla 25: se descartan todos los vídeos 3D"
+  }
+ ]
+}

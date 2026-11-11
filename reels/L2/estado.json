@@ -1,0 +1,20 @@
+{
+ "id": "L2",
+ "estado": "publicado",
+ "version": 0,
+ "historial": [
+  {
+   "fecha": "2026-11-11T18:30+01:00",
+   "de": null,
+   "a": "publicado",
+   "quien": "alta en la cadena",
+   "nota": "publicado antes de la cadena (publicados.jsonl)"
+  }
+ ],
+ "ig": {
+  "permalink": "https://www.instagram.com/reel/DfmIf8dAB1C/",
+  "media_id": "18040510082845774",
+  "franja": "2026-11-11 09:14",
+  "fecha": "2026-11-11 09:14:02"
+ }
+}
