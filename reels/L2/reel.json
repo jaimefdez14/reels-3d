@@ -6,7 +6,7 @@
  "coverT": 1.8,
  "lines": [
   {
-   "show": "Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es culpa tuya: / hasta tiene nombre de ley. / Y hay otras cuatro / que te la lían cada semana.",
+   "show": "Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.",
    "pause": 0.3,
    "pausa_media": 0.4
   },
@@ -250,7 +250,8 @@
     "0 (corrector nativo 2): «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pillan cada semana.» → «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: es una ley, en serio. / Y hay otras cuatro / que te la lían cada semana.»",
     "1 (corrector nativo 2, calco de *work expands*): «Primera: // el trabajo se alarga.» → «Primera: // la tarea se estira.»",
     "0 (corrector nativo 3): «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es cosa tuya: es una ley, en serio. / Y hay otras cuatro / que te la lían cada semana.» → «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es culpa tuya: / hasta tiene nombre de ley. / Y hay otras cuatro / que te la lían cada semana.»",
-    "1: vuelve a «Primera: // el trabajo se alarga.» (el corrector 3 marca «se estira» como calco; el 1 y el 3 dan «se alarga» por bueno)"
+    "1: vuelve a «Primera: // el trabajo se alarga.» (el corrector 3 marca «se estira» como calco; el 1 y el 3 dan «se alarga» por bueno)",
+    "0 (Jaime, 11-11: «no me gusta el nuevo gancho, también tiene expresiones informales. Usa el que te dije y aprobé»): «Te pones con algo que te iba a llevar una hora / y se te va la tarde entera. // No es culpa tuya: / hasta tiene nombre de ley. / Y hay otras cuatro / que te la lían cada semana.» → «Te pones con algo de una hora / y se te va la tarde entera. // No es cosa tuya: *es una ley.* / Y hay cuatro más / que te pasan cada semana.»"
    ]
   }
  ]

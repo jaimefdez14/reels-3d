@@ -28,3 +28,6 @@ NINGUNA. Pasa.
 - Corrector 2: «te pillan» → «te la lían»; «es una ley» solemne; «el trabajo se alarga» calco → «la tarea se estira».
 - Corrector 3: «en serio» muletilla → «No es culpa tuya: hasta tiene nombre de ley»; «se estira» calco → «se alarga»; 2 «Dura todo el tiempo que le des» → «Dura lo que le dejes» (pendiente).
 - Final: «Te pones con algo que te iba a llevar una hora y se te va la tarde entera. No es culpa tuya: hasta tiene nombre de ley. Y hay otras cuatro que te la lían cada semana.» · «Primera: el trabajo se alarga.»
+
+## 11-11-2026 · versión final del gancho
+Jaime: «no me gusta el nuevo gancho, también tiene expresiones informales. Usa el que te dije y aprobé». Se vuelve a la opción 1 tal cual: «Te pones con algo de una hora y se te va la tarde entera. No es cosa tuya: es una ley. Y hay cuatro más que te pasan cada semana.» Las propuestas de los correctores de arriba no se aplican (regla 23).
