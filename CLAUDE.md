@@ -195,10 +195,19 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
     CRECIMIENTO.AI CON LO DE FASE.ZER0». Refuerza la regla 1: ni formatos, ni vídeos, ni guiones, ni ideas, ni
     métricas, ni código de una cuenta pasan a la otra.
 
+27. **Panel de control (11-11-2026).** Jaime: «necesito una interfaz visual y panel de control… mejorado si lo ves
+    necesario». `panel/index.html`, publicado en GitHub Pages (https://jaimefdez14.github.io/reels-3d/) por
+    `.github/workflows/panel.yml`. Lee `docs/panel.json` (lo escribe `pipeline.py panel` en cada paso) y las ejecuciones
+    de Actions; los botones mandan las mismas órdenes que la issue (`/ok-voz`, `/publicar`, `/cambios …`, ideas
+    `/ok`/`/no`) y lanzan «publicar ya» o «rehacer previas», con un token de GitHub de Jaime guardado solo en su
+    navegador. Hecho desde cero: nada del panel de crecimiento.ai (regla 26). Todo lo nuevo que deba verse en el panel
+    va en `panel_json()` de `herramientas/pipeline.py`.
+
 ## Pendiente de Jaime
 
 - Para la cadena (regla 24): fusionar con `main`; secretos de Actions `ELEVENLABS_API_KEY` y `META_PAGE_TOKEN_3D`;
   activar la sesión programada con el prompt de `docs/PIPELINE.md`.
+- Panel (regla 27): Settings → Pages → Source «GitHub Actions» (una vez) y crear el token del panel.
 - Ver el boceto B1 (`reels/B1`, sin voz, tiempos simulados) y decir qué cambia del estilo antes de hacer el primer
   reel completo.
 - Estilo B: ver L1-L5 rehechos con la regla 17 (cierre con envío en vez de «sígueme»; L3 nuevo). Las cifras ya están
