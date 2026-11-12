@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Clientes, ventas, horas ahorradas. / *Lo que tiene una cifra es más fácil de pagar.*",
+   "show": "Clientes, ventas, horas ahorradas. / *Un logro con números es mucho más fácil de pagar.*",
    "pause": 0.3
   },
   {
@@ -34,11 +34,11 @@
    "bocadillo": "Me gustaría hablar de mi sueldo"
   },
   {
-   "show": "Ni en el pasillo ni al final de otra reunión. / *Con día, hora y el motivo claro.*",
+   "show": "Ni en el pasillo ni al final de otra reunión. / *Con día, hora y un motivo claro.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *di una cantidad concreta y espera la respuesta.*",
+   "show": "El tercero: // *di una cantidad concreta y espera a que te conteste.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "Aguanta ese silencio incómodo: / *también es negociar.*",
+   "show": "Aguanta ese silencio incómodo: / *eso también es negociar.*",
    "pause": 0.3
   },
   {
@@ -70,6 +70,16 @@
     "9: «El silencio incómodo / *también forma parte de la conversación.*» → «Aguanta ese silencio incómodo: / *también es negociar.*»",
     "10: «Las subidas casi nunca se dan solas: / *se piden, y se piden bien.*» → «Las subidas casi nunca llegan solas: / *se piden, y se piden bien.*»",
     "11: «Mándaselo a ese compañero que lleva años / *esperando a que se lo ofrezcan.*» → «Mándaselo a ese compañero que lleva años / *esperando a que le suban el sueldo.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "3: «Clientes, ventas, horas ahorradas. / *Lo que tiene una cifra es más fácil de pagar.*» → «Clientes, ventas, horas ahorradas. / *Un logro con números es mucho más fácil de pagar.*»",
+    "6: «Ni en el pasillo ni al final de otra reunión. / *Con día, hora y el motivo claro.*» → «Ni en el pasillo ni al final de otra reunión. / *Con día, hora y un motivo claro.*»",
+    "7: «El tercero: // *di una cantidad concreta y espera la respuesta.*» → «El tercero: // *di una cantidad concreta y espera a que te conteste.*»",
+    "9: «Aguanta ese silencio incómodo: / *también es negociar.*» → «Aguanta ese silencio incómodo: / *eso también es negociar.*»"
    ]
   }
  ]

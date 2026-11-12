@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Haz tres cosas antes de gastarla. / *La segunda es la que más te ahorra.*",
+   "show": "Antes de gastarla, haz tres cosas. / *La segunda es la que más te ahorra.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *aparta la mitad el día que la cobras.*",
+   "show": "La primera: // *aparta la mitad el mismo día que la cobras.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -28,7 +28,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *adelanta lo que te cobra intereses.*",
+   "show": "La segunda: // *paga antes lo que te cobra intereses.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -37,7 +37,7 @@
    "pause": 0.3
   },
   {
-   "show": "Cada euro que adelantas / *es un euro por el que dejas de pagar intereses.*",
+   "show": "Cada euro que adelantas / *es un euro que ya no te cobra intereses.*",
    "pause": 0.3
   },
   {
@@ -46,7 +46,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Decide la cifra antes de salir de casa, / *y cuando llegues a ella, se acabó.*",
+   "show": "Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues, se acabó.*",
    "pause": 0.3,
    "bocadillo": "Hoy, como mucho 60 €"
   },
@@ -55,7 +55,7 @@
    "pause": 0.3
   },
   {
-   "show": "La paga extra no se nota en lo que gastas: / *se nota en lo que te queda en enero.*",
+   "show": "La paga extra no se nota en lo que gastas, / *sino en lo que te queda en enero.*",
    "pause": 0.3
   },
   {
@@ -76,6 +76,18 @@
     "8: «La tercera: // *date un capricho con precio cerrado.*» → «La tercera: // *date un capricho, pero con un tope.*»",
     "9 bocadillo: «Hoy, hasta 60 €» → «Hoy, como mucho 60 €»",
     "10: «Así lo disfrutas / sin que se vaya la paga entera.» → «Así lo disfrutas / sin que se te vaya la paga entera.»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "1: «Haz tres cosas antes de gastarla. / *La segunda es la que más te ahorra.*» → «Antes de gastarla, haz tres cosas. / *La segunda es la que más te ahorra.*»",
+    "2: «La primera: // *aparta la mitad el día que la cobras.*» → «La primera: // *aparta la mitad el mismo día que la cobras.*»",
+    "5: «La segunda: // *adelanta lo que te cobra intereses.*» → «La segunda: // *paga antes lo que te cobra intereses.*»",
+    "7: «Cada euro que adelantas / *es un euro por el que dejas de pagar intereses.*» → «Cada euro que adelantas / *es un euro que ya no te cobra intereses.*»",
+    "9: «Decide la cifra antes de salir de casa, / *y cuando llegues a ella, se acabó.*» → «Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues, se acabó.*»",
+    "11: «La paga extra no se nota en lo que gastas: / *se nota en lo que te queda en enero.*» → «La paga extra no se nota en lo que gastas, / *sino en lo que te queda en enero.*»"
    ]
   }
  ]

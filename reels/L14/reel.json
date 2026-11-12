@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Cuatro cambios para la primera media hora del día, / *y el primero empieza esta noche.*",
+   "show": "Cuatro cambios para la primera media hora del día, / *y el primero se hace esta noche.*",
    "pause": 0.3
   },
   {
-   "show": "El primero: // *carga el móvil fuera del dormitorio.*",
+   "show": "El primero: // *deja el móvil cargando fuera del dormitorio.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -37,7 +37,7 @@
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *diez minutos de luz natural.*",
+   "show": "El tercero: // *diez minutos de luz del día.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -51,12 +51,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una sola cosa, y por escrito. / *Por la mañana no tienes que pensar: solo empezar.*",
+   "show": "Una sola cosa, y por escrito. / *Así, por la mañana no lo piensas: empiezas.*",
    "pause": 0.3,
    "bocadillo": "Lo primero, el informe"
   },
   {
-   "show": "La mañana no empieza al despertarte: / *empieza la noche anterior.*",
+   "show": "La mañana no empieza cuando te despiertas, / *sino la noche antes.*",
    "pause": 0.3
   },
   {
@@ -77,6 +77,17 @@
     "10: «Una sola cosa, apuntada. / *Por la mañana no tienes que pensar: solo empezar.*» → «Una sola cosa, y por escrito. / *Por la mañana no tienes que pensar: solo empezar.*»",
     "10 bocadillo: «Lo primero: el informe» → «Lo primero, el informe»",
     "12: «Mándaselo a ese amigo que se despierta / *y ya llega tarde a todo.*» → «Mándaselo a ese amigo que va tarde / *desde que abre los ojos.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "1: «Cuatro cambios para la primera media hora del día, / *y el primero empieza esta noche.*» → «Cuatro cambios para la primera media hora del día, / *y el primero se hace esta noche.*»",
+    "2: «El primero: // *carga el móvil fuera del dormitorio.*» → «El primero: // *deja el móvil cargando fuera del dormitorio.*»",
+    "7: «El tercero: // *diez minutos de luz natural.*» → «El tercero: // *diez minutos de luz del día.*»",
+    "10: «Una sola cosa, y por escrito. / *Por la mañana no tienes que pensar: solo empezar.*» → «Una sola cosa, y por escrito. / *Así, por la mañana no lo piensas: empiezas.*»",
+    "11: «La mañana no empieza al despertarte: / *empieza la noche anterior.*» → «La mañana no empieza cuando te despiertas, / *sino la noche antes.*»"
    ]
   }
  ]

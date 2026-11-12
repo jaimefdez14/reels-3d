@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo hace.*",
+   "show": "Hay cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo da.*",
    "pause": 0.3
   },
   {
-   "show": "El primero: // *abre los movimientos de los últimos tres meses.*",
+   "show": "El primero: // *revisa los movimientos de la cuenta de los últimos tres meses.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -29,7 +29,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Las plataformas, las aplicaciones, / el gimnasio, la nube del móvil.",
+   "show": "Las plataformas, las aplicaciones, / el gimnasio, el espacio en la nube.",
    "pause": 0.3
   },
   {
@@ -37,7 +37,7 @@
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *piensa si lo usaste la semana pasada.*",
+   "show": "El tercero: // *pregúntate si lo has usado esta última semana.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "¿Esto lo uso?"
@@ -52,7 +52,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que dejas para luego no se hace nunca, / *y cada mes lo vuelves a pagar.*",
+   "show": "Lo que dejas para luego no lo haces nunca, / *y cada mes lo vuelves a pagar.*",
    "pause": 0.3
   },
   {
@@ -78,6 +78,17 @@
     "9: «El cuarto: // *date de baja hoy, no luego.*» → «El cuarto: // *date de baja hoy mismo, no lo dejes para luego.*»",
     "10: «Luego no llega nunca, / *y cada mes que pasa lo vuelves a pagar.*» → «Lo que dejas para luego no se hace nunca, / *y cada mes lo vuelves a pagar.*»",
     "11: «Tres suscripciones de diez euros / *son trescientos sesenta euros al año.*» → «Tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "1: «Cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo hace.*» → «Hay cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo da.*»",
+    "2: «El primero: // *abre los movimientos de los últimos tres meses.*» → «El primero: // *revisa los movimientos de la cuenta de los últimos tres meses.*»",
+    "5: «Las plataformas, las aplicaciones, / el gimnasio, la nube del móvil.» → «Las plataformas, las aplicaciones, / el gimnasio, el espacio en la nube.»",
+    "7: «El tercero: // *piensa si lo usaste la semana pasada.*» → «El tercero: // *pregúntate si lo has usado esta última semana.*»",
+    "10: «Lo que dejas para luego no se hace nunca, / *y cada mes lo vuelves a pagar.*» → «Lo que dejas para luego no lo haces nunca, / *y cada mes lo vuelves a pagar.*»"
    ]
   }
  ]

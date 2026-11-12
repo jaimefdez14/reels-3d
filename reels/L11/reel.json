@@ -15,7 +15,7 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *el orden del día, por escrito y enviado con antelación.*",
+   "show": "La primera: // *manda el orden del día por escrito y con tiempo.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -24,7 +24,7 @@
    "pause": 0.3
   },
   {
-   "show": "Y nadie pierde los diez primeros minutos / *preguntando para qué está ahí.*",
+   "show": "Y nadie pierde los diez primeros minutos / *preguntándose qué hace ahí.*",
    "pause": 0.3
   },
   {
@@ -33,11 +33,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo importante va al principio, / *cuando todavía hay atención.*",
+   "show": "Lo importante va al principio, / *cuando la gente todavía está atenta.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *cada punto, con un responsable y una fecha.*",
+   "show": "La tercera: // *cada punto sale con un responsable y una fecha.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "Me encargo yo. Para el viernes."
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "La cuarta: // *acábala cinco minutos antes de la hora.*",
+   "show": "La cuarta: // *termina la reunión cinco minutos antes de lo previsto.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -56,7 +56,7 @@
    "pause": 0.3
   },
   {
-   "show": "Una reunión no se mide por lo que dura, / *sino por lo que se decide.*",
+   "show": "Una buena reunión no es la que dura mucho, / *es la que decide algo.*",
    "pause": 0.3
   },
   {
@@ -76,6 +76,18 @@
     "8: «Si no tiene nombre, / *nadie lo hace.*» → «Si no lleva el nombre de alguien, / *no lo hace nadie.*»",
     "9: «La cuarta: // *termina cinco minutos antes.*» → «La cuarta: // *acábala cinco minutos antes de la hora.*»",
     "11: «Una reunión no se mide por lo que dura, / *sino por lo que se decide en ella.*» → «Una reunión no se mide por lo que dura, / *sino por lo que se decide.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "2: «La primera: // *el orden del día, por escrito y enviado con antelación.*» → «La primera: // *manda el orden del día por escrito y con tiempo.*»",
+    "4: «Y nadie pierde los diez primeros minutos / *preguntando para qué está ahí.*» → «Y nadie pierde los diez primeros minutos / *preguntándose qué hace ahí.*»",
+    "6: «Lo importante va al principio, / *cuando todavía hay atención.*» → «Lo importante va al principio, / *cuando la gente todavía está atenta.*»",
+    "7: «La tercera: // *cada punto, con un responsable y una fecha.*» → «La tercera: // *cada punto sale con un responsable y una fecha.*»",
+    "9: «La cuarta: // *acábala cinco minutos antes de la hora.*» → «La cuarta: // *termina la reunión cinco minutos antes de lo previsto.*»",
+    "11: «Una reunión no se mide por lo que dura, / *sino por lo que se decide.*» → «Una buena reunión no es la que dura mucho, / *es la que decide algo.*»"
    ]
   }
  ]

@@ -7,15 +7,15 @@
  "situacion": "Te pones con algo importante, suena un aviso, abres el correo y cuando vuelves ya no sabes por dónde ibas. Así todo el día: has contestado cuarenta correos y lo importante sigue sin hacer.",
  "lines": [
   {
-   "show": "Miras el correo cada pocos minutos / y al final del día / *no has hecho nada importante.*",
+   "show": "Miras el correo cada poco rato / y, al acabar el día, / *no has hecho nada importante.*",
    "pause": 0.45
   },
   {
-   "show": "Tres reglas para que el correo / *deje de marcarte el día.*",
+   "show": "Tres reglas para que el correo / *no decida cómo va tu día.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *lo lees solo dos veces al día.*",
+   "show": "La primera: // *solo lo miras dos veces al día.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -29,16 +29,16 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *si lo contestas en dos minutos, hazlo en el momento.*",
+   "show": "La segunda: // *si se contesta en dos minutos, contéstalo en el momento.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Una confirmación, un sí, una fecha. / Dejarlo para luego y volver a leerlo / *cuesta más que contestar ahora.*",
+   "show": "Una confirmación, un sí, una fecha. / Dejarlo para luego y tener que leerlo otra vez / *cuesta más que contestarlo ya.*",
    "pause": 0.3
   },
   {
-   "show": "Lo demás va a una lista, / *y le buscas un hueco en la agenda.*",
+   "show": "Lo demás lo apuntas en una lista / *y le buscas hueco en la agenda.*",
    "pause": 0.3
   },
   {
@@ -51,11 +51,11 @@
    "pause": 0.3
   },
   {
-   "show": "Lo que de verdad cuesta / *es volver a concentrarte, no leer el correo.*",
+   "show": "Lo que cuesta no es leer el correo: / *es volver a concentrarte.*",
    "pause": 0.3
   },
   {
-   "show": "El correo está lleno de lo que otros quieren de ti. / *Tu trabajo es otra cosa.*",
+   "show": "El correo está lleno de lo que te piden los demás. / *Tu trabajo es otra cosa.*",
    "pause": 0.3
   },
   {
@@ -77,6 +77,20 @@
     "9: «Y quita los avisos. / *Cada aviso te saca de lo que estás haciendo.*» → «Y quita las notificaciones. / *Cada una te saca de lo que estás haciendo.*»",
     "10: «Y volver a concentrarte / *cuesta mucho más que leer un correo.*» → «Lo que de verdad cuesta / *es volver a concentrarte, no leer el correo.*»",
     "11: «El correo es la lista de tareas de los demás. / *Tu trabajo es otra cosa.*» → «El correo está lleno de lo que otros quieren de ti. / *Tu trabajo es otra cosa.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "0: «Miras el correo cada pocos minutos / y al final del día / *no has hecho nada importante.*» → «Miras el correo cada poco rato / y, al acabar el día, / *no has hecho nada importante.*»",
+    "1: «Tres reglas para que el correo / *deje de marcarte el día.*» → «Tres reglas para que el correo / *no decida cómo va tu día.*»",
+    "2: «La primera: // *lo lees solo dos veces al día.*» → «La primera: // *solo lo miras dos veces al día.*»",
+    "5: «La segunda: // *si lo contestas en dos minutos, hazlo en el momento.*» → «La segunda: // *si se contesta en dos minutos, contéstalo en el momento.*»",
+    "6: «Una confirmación, un sí, una fecha. / Dejarlo para luego y volver a leerlo / *cuesta más que contestar ahora.*» → «Una confirmación, un sí, una fecha. / Dejarlo para luego y tener que leerlo otra vez / *cuesta más que contestarlo ya.*»",
+    "7: «Lo demás va a una lista, / *y le buscas un hueco en la agenda.*» → «Lo demás lo apuntas en una lista / *y le buscas hueco en la agenda.*»",
+    "10: «Lo que de verdad cuesta / *es volver a concentrarte, no leer el correo.*» → «Lo que cuesta no es leer el correo: / *es volver a concentrarte.*»",
+    "11: «El correo está lleno de lo que otros quieren de ti. / *Tu trabajo es otra cosa.*» → «El correo está lleno de lo que te piden los demás. / *Tu trabajo es otra cosa.*»"
    ]
   }
  ]

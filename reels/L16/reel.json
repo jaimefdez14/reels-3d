@@ -15,17 +15,17 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *ofrece otra fecha.*",
+   "show": "La primera: // *propón otra fecha.*",
    "pause": 0.3,
    "pausa_media": 0.45,
-   "bocadillo": "Esta semana no puedo; el martes, sí"
+   "bocadillo": "Esta semana no puedo, pero el martes que viene, sí"
   },
   {
-   "show": "No dices que no: / *lo pasas a cuando tienes hueco.*",
+   "show": "No dices que no: / *lo dejas para cuando tengas hueco.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ofrece hacer solo una parte.*",
+   "show": "La segunda: // *ofrécete a hacer solo una parte.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "Todo no, pero te reviso la primera parte"
@@ -35,7 +35,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *pregunta qué dejas de hacer a cambio.*",
+   "show": "La tercera: // *pregunta qué tendrías que dejar a cambio.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "Vale, ¿y qué dejo de lado para hacer esto?"
@@ -51,11 +51,11 @@
    "bocadillo": "Déjame que lo mire y mañana te digo"
   },
   {
-   "show": "El sí que das sin pensar / *es el que más te pesa luego.*",
+   "show": "El sí que das sin pensar / *es el que luego más te pesa.*",
    "pause": 0.3
   },
   {
-   "show": "Cada vez que dices que no a algo, / *le haces hueco a lo que de verdad te importa.*",
+   "show": "Cada vez que dices que no, / *te queda tiempo para lo que te importa.*",
    "pause": 0.3
   },
   {
@@ -77,6 +77,19 @@
     "8 bocadillo: «Déjame mirarlo y te digo mañana» → «Déjame que lo mire y mañana te digo»",
     "9: «El sí que das deprisa / *es del que más te arrepientes.*» → «El sí que das sin pensar / *es el que más te pesa luego.*»",
     "10: «Decir que no a una cosa / *es decir que sí a lo que de verdad te importa.*» → «Cada vez que dices que no a algo, / *le haces hueco a lo que de verdad te importa.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": 2,
+   "cambios": [
+    "2: «La primera: // *ofrece otra fecha.*» → «La primera: // *propón otra fecha.*»",
+    "2 bocadillo: «Esta semana no puedo; el martes, sí» → «Esta semana no puedo, pero el martes que viene, sí»",
+    "3: «No dices que no: / *lo pasas a cuando tienes hueco.*» → «No dices que no: / *lo dejas para cuando tengas hueco.*»",
+    "4: «La segunda: // *ofrece hacer solo una parte.*» → «La segunda: // *ofrécete a hacer solo una parte.*»",
+    "6: «La tercera: // *pregunta qué dejas de hacer a cambio.*» → «La tercera: // *pregunta qué tendrías que dejar a cambio.*»",
+    "9: «El sí que das sin pensar / *es el que más te pesa luego.*» → «El sí que das sin pensar / *es el que luego más te pesa.*»",
+    "10: «Cada vez que dices que no a algo, / *le haces hueco a lo que de verdad te importa.*» → «Cada vez que dices que no, / *te queda tiempo para lo que te importa.*»"
    ]
   }
  ]
