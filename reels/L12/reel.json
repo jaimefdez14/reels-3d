@@ -17,7 +17,8 @@
   {
    "show": "La primera: // *mientras trabajas en algo importante, el correo no se mira.*",
    "pause": 0.3,
-   "pausa_media": 0.45
+   "pausa_media": 0.45,
+   "subY": 660
   },
   {
    "show": "Una hora, o el rato que necesites. / *Durante ese bloque, ni lo abres.*",
