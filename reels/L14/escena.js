@@ -99,7 +99,7 @@ E.numero(4, N[3].T, N[3].S, { desde: 'sol', hacia: 'reloj4' });
 E.figura('yo4', { t0: N[3].S - 0.1, t1: TC, x: -330, cara: true,
   poses: [[0, 'de_pie'], [w(9, 2), 'pensar'], [w(10, 0), 'escribir'], [w(10, 6), 'de_pie'], [w(10, 13), 'celebrar']], sonrisa: [[w(9, 2), 0], [w(10, 13), 1.6]] });
 E.obj('reloj4', 'relojAm', { t0: N[3].S - 0.1, t1: TC, x: 280, y: -480, r: 68, texto: [[0, '23:00'], [w(10, 7), '07:00']], p: [[0, 0.9], [w(10, 7), 0.25]], caja: [-68, -68, 136, 136] });
-E.obj('nota4', 'bocadillo', { t0: w(10, 0), t1: w(10, 6), sale: 0.15, x: -40, y: -545, w: 330, h: 76, texto: 'Lo primero, el informe', size: 28, pop: true,
+E.obj('nota4', 'bocadillo', { t0: w(10, 0), t1: w(10, 6), sale: 0.15, x: -40, y: -510, w: 330, h: 76, texto: 'Lo primero, el informe', size: 28, pop: true,
   on: [[w(10, 0), 0], [w(10, 4), 1]], caja: [-165, -38, 330, 104] });
 E.obj('tarea4', 'bloques', { t0: w(9, 6), t1: TC, x: 110, y: -250, n: 1, w: 340, h: 120, texto: 'INFORME', pop: true, hechos: [[w(10, 9), 0], [w(10, 13), 1, 'out']], barrido: [w(10, 4), w(10, 13)], caja: [-170, -60, 340, 120] });
 dia('dia4', w(10, 9) - 0.2, TC, 0.75, 1, w(10, 10), wf(10, -1) + 0.2);
