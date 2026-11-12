@@ -1,0 +1,67 @@
+{
+ "id": "L14",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Cuatro cambios para tu primera media hora del día",
+ "tema": "Hábitos",
+ "idea": "L14 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Suena la alarma, la apagas con el móvil en la mano y diez minutos después sigues en la cama leyendo mensajes y noticias. Empiezas el día cansado y con la cabeza en lo que quieren los demás.",
+ "lines": [
+  {
+   "show": "Te despiertas / *y lo primero que haces es mirar el móvil.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Cuatro cambios para tu primera media hora, / *y el primero lo haces esta noche.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *el móvil se carga fuera del dormitorio.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si para apagar la alarma tienes que levantarte, / *ya estás de pie.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y no empiezas el día / *leyendo lo que quieren los demás.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *un vaso de agua antes que nada.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Llevas ocho horas sin beber. / *Es lo más fácil que vas a hacer en todo el día.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *diez minutos de luz.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Abre la ventana o sal a dar una vuelta. / *La luz de la mañana es la que te despierta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El cuarto: // *decide la noche antes qué vas a hacer primero.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una sola cosa, apuntada. / *Por la mañana no tienes que pensar: solo empezar.*",
+   "pause": 0.3,
+   "bocadillo": "Lo primero: el informe"
+  },
+  {
+   "show": "La mañana no empieza al despertarte: / *empieza la noche anterior.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que se despierta / *y ya llega tarde a todo.*",
+   "pause": 0.3
+  }
+ ]
+}

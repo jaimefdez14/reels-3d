@@ -1,0 +1,62 @@
+{
+ "id": "L15",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres pasos para pedir una subida de sueldo",
+ "tema": "Trabajo",
+ "idea": "L15 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Llevas dos años en la empresa, haces más que cuando entraste y cobras lo mismo. Esperas a que alguien lo note, y nadie lo nota. Las subidas casi nunca llegan solas: se piden, con datos y en el momento adecuado.",
+ "lines": [
+  {
+   "show": "Llevas dos años con el mismo sueldo / *y nadie te ha dicho nada.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Tres pasos para pedir una subida, / *y el último es el que más cuesta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *apunta lo que has conseguido, con cifras.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Clientes, ventas, horas ahorradas. / *Lo que se puede contar, se puede pagar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Que se vea / *lo que la empresa gana contigo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *pide una reunión solo para eso.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "Me gustaría hablar de mi sueldo"
+  },
+  {
+   "show": "Ni en el pasillo ni al final de otra reunión. / *Con día, hora y el tema dicho.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *di una cantidad concreta y espera la respuesta.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una cifra exacta, no un poco más. / *Y después, deja que hable tu jefe.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El silencio incómodo / *también forma parte de la conversación.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Las subidas casi nunca se dan solas: / *se piden, y se piden bien.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero que lleva años / *esperando a que se lo ofrezcan.*",
+   "pause": 0.3
+  }
+ ]
+}

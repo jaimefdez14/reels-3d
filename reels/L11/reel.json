@@ -1,0 +1,67 @@
+{
+ "id": "L11",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Cuatro reglas para que las reuniones duren la mitad",
+ "tema": "Trabajo",
+ "idea": "L11 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Te convocan a una reunión de una hora, los diez primeros minutos se van en saber para qué estáis ahí y al final nadie sabe quién hace qué. Seis personas, una hora: seis horas de trabajo que no se recuperan.",
+ "lines": [
+  {
+   "show": "Una reunión de una hora con seis personas / *son seis horas de trabajo.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Cuatro reglas para que tus reuniones / *duren la mitad.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *el orden del día, por escrito y antes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Así cada uno llega sabiendo / de qué se va a hablar.",
+   "pause": 0.3
+  },
+  {
+   "show": "Y nadie pierde los diez primeros minutos / *preguntando para qué está ahí.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *empieza por lo que hay que decidir.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo importante, al principio, / *cuando todos están atentos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *cada punto, con un responsable y una fecha.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "Yo me encargo, el viernes"
+  },
+  {
+   "show": "Si no tiene nombre, / *nadie lo hace.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La cuarta: // *termina cinco minutos antes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si se acaba el tiempo, / *lo que falte va por correo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Una reunión no se mide por lo que dura, / *sino por lo que se decide en ella.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero que convoca / *una reunión para todo.*",
+   "pause": 0.3
+  }
+ ]
+}

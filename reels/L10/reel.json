@@ -1,0 +1,67 @@
+{
+ "id": "L10",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Cuatro pasos para encontrar las suscripciones que no usas",
+ "tema": "Dinero",
+ "idea": "L10 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Cada mes se van del banco diez, doce, quince euros por cosas que diste de alta un día y olvidaste: una plataforma, una aplicación, el gimnasio. Nadie las revisa porque son poco dinero, pero juntas al año son mucho.",
+ "lines": [
+  {
+   "show": "Pagas cada mes / *cosas que ya no usas.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Cuatro pasos para encontrarlas en diez minutos, / *y el último es el que nadie hace.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *abre los movimientos de los últimos tres meses.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "En la aplicación del banco, / no hace falta nada más.",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *marca todo lo que se repite.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Plataformas, aplicaciones, el gimnasio, / el espacio en la nube del móvil.",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo normal es encontrar / *más de las que creías.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *pregúntate si lo usaste la semana pasada.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "¿Esto lo uso?"
+  },
+  {
+   "show": "Si la respuesta es no, / *sobra.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El cuarto: // *date de baja hoy, no luego.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Luego no llega nunca, / *y cada mes que pasa lo vuelves a pagar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres suscripciones de diez euros / *son trescientos sesenta euros al año.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que paga tres plataformas / *y solo ve una.*",
+   "pause": 0.3
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "id": "L9",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres cosas antes de gastar la paga extra",
+ "tema": "Dinero",
+ "idea": "L9 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Cobras la paga extra de diciembre y a las dos semanas no queda nada: la mitad se ha ido en cosas que ni recuerdas y la tarjeta sigue cobrando intereses. Lo que funciona es decidir antes de gastar: apartar, pagar deudas y ponerle precio al capricho.",
+ "lines": [
+  {
+   "show": "Cobras la paga extra / *y a las dos semanas ya no queda nada.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Tres cosas antes de gastarla, / *y la segunda te ahorra más que ninguna.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *aparta la mitad el mismo día.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Pásala a otra cuenta / antes de tocar nada.",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo que no tienes a mano / *no se gasta solo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *paga primero lo que te cobra intereses.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "La tarjeta, el préstamo del coche, / lo que hayas comprado a plazos.",
+   "pause": 0.3
+  },
+  {
+   "show": "Cada euro que adelantas ahí / *es un euro de intereses que no pagas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *date un capricho con precio cerrado.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Decide la cifra antes de salir de casa, / *y cuando llegues a ella, se acabó.*",
+   "pause": 0.3,
+   "bocadillo": "Hoy, hasta 60 €"
+  },
+  {
+   "show": "Así lo disfrutas / sin que se vaya la paga entera.",
+   "pause": 0.3
+  },
+  {
+   "show": "La paga extra no se nota en lo que gastas: / *se nota en lo que te queda en enero.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que ya tiene / *la paga de diciembre medio gastada.*",
+   "pause": 0.3
+  }
+ ]
+}

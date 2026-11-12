@@ -1,0 +1,67 @@
+{
+ "id": "L13",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Cuatro cosas para cobrar antes tus facturas",
+ "tema": "Negocio",
+ "idea": "L13 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Eres autónomo o tienes una empresa pequeña: entregas el trabajo, el cliente te paga a noventa días, y mientras tanto el alquiler, la cuota y los proveedores los pagas tú cada mes. Dato: entre empresas, la Ley 3/2004 de morosidad (reformada por la Ley 15/2010) pone un plazo máximo de 60 días que no se puede ampliar por acuerdo.",
+ "lines": [
+  {
+   "show": "Te pagan a noventa días / *y el alquiler lo pagas cada mes.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Cuatro cosas para cobrar antes, / *y la segunda la marca la ley.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *factura el mismo día que entregas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cada día que tardas en facturar / *es un día más que tardas en cobrar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *el plazo de pago, por escrito en el presupuesto.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Entre empresas, la ley pone un máximo / *de sesenta días.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y no se puede alargar, / *aunque los dos estéis de acuerdo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *pide un anticipo del treinta por ciento.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Antes de empezar el trabajo. / *El cliente que adelanta, se compromete.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La cuarta: // *un recordatorio el día que vence.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Amable y con la factura adjunta. / *Sin esperar a que pase una semana.*",
+   "pause": 0.3,
+   "bocadillo": "Hoy vence la factura 23"
+  },
+  {
+   "show": "Cobrar a tiempo no es tener suerte con el cliente: / *es dejarlo todo atado antes de empezar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese autónomo que todavía / *está esperando cobrar septiembre.*",
+   "pause": 0.3
+  }
+ ]
+}

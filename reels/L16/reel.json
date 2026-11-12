@@ -1,0 +1,66 @@
+{
+ "id": "L16",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Cuatro formas de decir que no sin quedar mal",
+ "tema": "Crecimiento",
+ "idea": "L16 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Un compañero te pide un favor, tu jefe te añade algo, un amigo te propone un plan, y a todo dices que sí. A final de semana no has llegado a nada y encima estás agotado. Decir que no se puede hacer bien: dando una alternativa.",
+ "lines": [
+  {
+   "show": "Dices que sí a todo / *y luego no llegas a nada.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Cuatro formas de decir que no / *sin quedar mal con nadie.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *ofrece otra fecha.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "Esta semana no puedo; el martes, sí"
+  },
+  {
+   "show": "No rechazas la petición: / *la colocas donde te cabe.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *ofrece algo más pequeño.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "Todo no, pero te reviso la primera parte"
+  },
+  {
+   "show": "Ayudas, / *pero sin cargar con todo el trabajo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *pregunta qué dejas a cambio.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "¿Qué dejo para hacer esto?"
+  },
+  {
+   "show": "Sirve sobre todo con tu jefe. / *Así decide él qué es lo prioritario.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La cuarta: // *pide tiempo para contestar.*",
+   "pause": 0.3,
+   "pausa_media": 0.45,
+   "bocadillo": "Déjame mirarlo y te digo mañana"
+  },
+  {
+   "show": "El sí que das deprisa / *es del que más te arrepientes.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Decir que no a una cosa / *es decir que sí a lo que de verdad te importa.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que no sabe / *decir que no a nada.*",
+   "pause": 0.3
+  }
+ ]
+}

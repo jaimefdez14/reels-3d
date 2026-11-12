@@ -1,0 +1,66 @@
+{
+ "id": "L12",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres reglas para que el correo deje de mandar en tu día",
+ "tema": "Trabajo",
+ "idea": "L12 de docs/IDEAS-2026-11-12.md; Jaime, 12-11-2026: «escribe todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Te pones con algo importante, suena un aviso, abres el correo y cuando vuelves ya no sabes por dónde ibas. Así todo el día: has contestado cuarenta correos y lo importante sigue sin hacer.",
+ "lines": [
+  {
+   "show": "Miras el correo cada pocos minutos / y al final del día / *no has hecho nada importante.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Tres reglas para que el correo / *deje de mandar en tu día.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *dos momentos al día para leerlo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "A media mañana y a media tarde. / *Fuera de ahí, no se abre.*",
+   "pause": 0.3,
+   "bocadillo": "Lo miro a las doce"
+  },
+  {
+   "show": "Casi todo lo que llega / *puede esperar dos horas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *si se contesta en dos minutos, contesta ya.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una confirmación, un sí, una fecha. / *Leerlo dos veces cuesta más que responder.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo demás, a una lista, / *con su hueco en la agenda.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *cierra la pestaña el resto del tiempo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Y quita los avisos. / *Cada aviso te saca de lo que estás haciendo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y volver a concentrarte / *cuesta mucho más que leer un correo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El correo es la lista de tareas de los demás. / *Tu trabajo es otra cosa.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero que contesta / *en menos de un minuto.*",
+   "pause": 0.3
+  }
+ ]
+}
