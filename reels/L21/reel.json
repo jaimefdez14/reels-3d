@@ -20,11 +20,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Diez páginas son un cuarto de hora: / *menos que el móvil antes de dormir.*",
+   "show": "Diez páginas son un cuarto de hora. / *En un año salen más de 3.600 páginas.*",
    "pause": 0.3
   },
   {
-   "show": "Eso son unos quince libros / *de tamaño normal.*",
+   "show": "Unos quince libros al año / *de tamaño normal.*",
    "pause": 0.3
   },
   {
@@ -33,7 +33,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son media hora al día.*",
+   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son el doble de lo que necesitas.*",
    "pause": 0.3
   },
   {
@@ -47,7 +47,7 @@
    "bocadillo": "Ya que lo he empezado, me lo acabo"
   },
   {
-   "show": "Tiempo para leer tienes: / *está en esa hora de móvil por la noche.*",
+   "show": "Tiempo para leer tienes: / *está en esa hora de móvil / y en los ratos muertos.*",
    "pause": 0.3
   },
   {
@@ -143,6 +143,32 @@
     }
    ],
    "descartado": "lector en frío 1 (8/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Diez páginas son un cuarto de hora: / *menos que el móvil antes de dormir.*",
+     "despues": "Diez páginas son un cuarto de hora. / *En un año salen más de 3.600 páginas.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Eso son unos quince libros / *de tamaño normal.*",
+     "despues": "Unos quince libros al año / *de tamaño normal.*"
+    },
+    {
+     "linea": 6,
+     "antes": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son media hora al día.*",
+     "despues": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son el doble de lo que necesitas.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Tiempo para leer tienes: / *está en esa hora de móvil por la noche.*",
+     "despues": "Tiempo para leer tienes: / *está en esa hora de móvil / y en los ratos muertos.*"
+    }
+   ],
+   "descartado": "lector en frío 2 (7/10)"
   }
  ]
 }

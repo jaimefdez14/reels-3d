@@ -33,7 +33,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Desde fuera, el miedo pesa menos / *y la respuesta está mucho más clara.*",
+   "show": "Desde fuera, el miedo pesa menos / *y sabes enseguida qué le dirías.*",
    "pause": 0.3,
    "bocadillo": "Yo que tú, lo haría"
   },
@@ -47,11 +47,11 @@
    "pause": 0.3
   },
   {
-   "show": "Ponte una fecha: / *cada semana que esperas te cuesta algo.*",
+   "show": "Mientras dudas, las semanas pasan / *y la decisión la toma el tiempo por ti.*",
    "pause": 0.3
   },
   {
-   "show": "Así que deja de darle vueltas: / *decide, y corrige por el camino.*",
+   "show": "Si tiene vuelta atrás, decide hoy. / *Si no, ponte una fecha y ese día decides.*",
    "pause": 0.3
   },
   {
@@ -167,6 +167,27 @@
     }
    ],
    "descartado": "lector en frío 1 (8/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 6,
+     "antes": "Desde fuera, el miedo pesa menos / *y la respuesta está mucho más clara.*",
+     "despues": "Desde fuera, el miedo pesa menos / *y sabes enseguida qué le dirías.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ponte una fecha: / *cada semana que esperas te cuesta algo.*",
+     "despues": "Mientras dudas, las semanas pasan / *y la decisión la toma el tiempo por ti.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Así que deja de darle vueltas: / *decide, y corrige por el camino.*",
+     "despues": "Si tiene vuelta atrás, decide hoy. / *Si no, ponte una fecha y ese día decides.*"
+    }
+   ],
+   "descartado": "lector en frío 2 (8/10)"
   }
  ]
 }

@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una flexión al día. Una página de un libro. / Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*",
+   "show": "Una flexión al día. Una página de un libro. / Cinco minutos de andar. / *Algo tan pequeño no da pereza.*",
    "pause": 0.3
   },
   {
@@ -46,12 +46,12 @@
    "pause": 0.3
   },
   {
-   "show": "Y si un día fallas, la racha sigue. / *Lo que la corta es fallar dos días seguidos.*",
+   "show": "Y si un día fallas, no pasa nada: / *lo grave es fallar dos días seguidos.*",
    "pause": 0.3,
    "bocadillo": "Hoy no me apetece"
   },
   {
-   "show": "En enero sobran ganas. / *Lo que dura es lo que cuesta tan poco / que lo repites sin pensar.*",
+   "show": "En enero sobran ganas. / *Lo que dura es lo pequeño / que repites cada día.*",
    "pause": 0.3
   },
   {
@@ -172,6 +172,27 @@
     }
    ],
    "descartado": "lector en frío 1 (8/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Una flexión al día. Una página de un libro. / Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*",
+     "despues": "Una flexión al día. Una página de un libro. / Cinco minutos de andar. / *Algo tan pequeño no da pereza.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Y si un día fallas, la racha sigue. / *Lo que la corta es fallar dos días seguidos.*",
+     "despues": "Y si un día fallas, no pasa nada: / *lo grave es fallar dos días seguidos.*"
+    },
+    {
+     "linea": 10,
+     "antes": "En enero sobran ganas. / *Lo que dura es lo que cuesta tan poco / que lo repites sin pensar.*",
+     "despues": "En enero sobran ganas. / *Lo que dura es lo pequeño / que repites cada día.*"
+    }
+   ],
+   "descartado": "lector en frío 2 (7/10)"
   }
  ]
 }

@@ -7,7 +7,7 @@
  "situacion": "Llevas meses con una idea para montar algo por tu cuenta, la cuentas en cada cena y no te atreves a dejar el trabajo.",
  "lines": [
   {
-   "show": "Llevas meses pensando en montar algo / *y no te atreves a dejar el trabajo.*",
+   "show": "Llevas meses pensando en montar algo tuyo / *y no te atreves a dejar el trabajo.*",
    "pause": 0.45
   },
   {
@@ -51,7 +51,7 @@
    "pause": 0.3
   },
   {
-   "show": "Con ese colchón decides con calma, / *sin miedo a no llegar a fin de mes.*",
+   "show": "Con ese colchón decides con calma, / *sin miedo a quedarte sin dinero.*",
    "pause": 0.3
   },
   {
@@ -166,6 +166,22 @@
     }
    ],
    "descartado": "lector en frío 1 (8/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Llevas meses pensando en montar algo / *y no te atreves a dejar el trabajo.*",
+     "despues": "Llevas meses pensando en montar algo tuyo / *y no te atreves a dejar el trabajo.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Con ese colchón decides con calma, / *sin miedo a no llegar a fin de mes.*",
+     "despues": "Con ese colchón decides con calma, / *sin miedo a quedarte sin dinero.*"
+    }
+   ],
+   "descartado": "lector en frío 2 (8,5/10); línea 8 se queda como la dejó el corrector (oscila)"
   }
  ]
 }

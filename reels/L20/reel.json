@@ -29,17 +29,17 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Al acabar el trabajo, pídeselo tú. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*",
+   "show": "Pídeselo el mismo día que acabas el trabajo. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*",
    "pause": 0.3,
    "bocadillo": "¿Conoces a alguien que necesite algo así?"
   },
   {
-   "show": "La tercera: // *enseña trabajos que ya has hecho.*",
+   "show": "La tercera: // *a quien te pregunte, / enséñale un trabajo que ya hayas hecho.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Una foto del resultado convence más / *que cualquier explicación.*",
+   "show": "Ver un trabajo terminado convence más / *que cualquier explicación.*",
    "pause": 0.3
   },
   {
@@ -48,11 +48,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces el trabajo se lo lleva / el primero que contesta.*",
+   "show": "El que pide presupuesto suele pedirlo a varios. / *Muchas veces el trabajo se lo lleva / el primero que contesta.*",
    "pause": 0.3
   },
   {
-   "show": "Al principio no vendes por la web: / *vendes por cómo tratas a cada persona.*",
+   "show": "Al principio no vendes por la web: / *vendes por la gente que te conoce / y por cómo la tratas.*",
    "pause": 0.3
   },
   {
@@ -173,6 +173,37 @@
     }
    ],
    "descartado": "lector en frío 1 (8/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 5,
+     "antes": "Al acabar el trabajo, pídeselo tú. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*",
+     "despues": "Pídeselo el mismo día que acabas el trabajo. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La tercera: // *enseña trabajos que ya has hecho.*",
+     "despues": "La tercera: // *a quien te pregunte, / enséñale un trabajo que ya hayas hecho.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Una foto del resultado convence más / *que cualquier explicación.*",
+     "despues": "Ver un trabajo terminado convence más / *que cualquier explicación.*"
+    },
+    {
+     "linea": 9,
+     "antes": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces el trabajo se lo lleva / el primero que contesta.*",
+     "despues": "El que pide presupuesto suele pedirlo a varios. / *Muchas veces el trabajo se lo lleva / el primero que contesta.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Al principio no vendes por la web: / *vendes por cómo tratas a cada persona.*",
+     "despues": "Al principio no vendes por la web: / *vendes por la gente que te conoce / y por cómo la tratas.*"
+    }
+   ],
+   "descartado": "lector en frío 2 (8/10)"
   }
  ]
 }
