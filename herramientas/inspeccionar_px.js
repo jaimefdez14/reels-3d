@@ -35,6 +35,8 @@ const { chromium } = require('playwright'); const path = require('path');
         if (!steady(X) && kx !== 'actor' && kx !== 'crowd') return;
         if (main(Y.id) && (kx === 'billboard' || kx === 'solid' || kx === 'crowd' || kx === 'ring' && front / PX > 0.012 || kx === 'line' && front / PX > 0.004 || kx === 'mark')) add('ov' + X.id + Y.id, `${X.id} tapa a ${Y.id} (${front} px)`);
         else if (ky === 'billboard' && steady(Y) && (kx === 'billboard' || kx === 'solid' || kx === 'crowd' || kx === 'mark')) add('ov' + X.id + Y.id, `${X.id} tapa a ${Y.id} (${front} px)`);
+        // capa de pantalla (barra, rótulo fijo) encima de un objeto del mundo: no la ven los demás casos (L14, «TU DÍA» sobre el vaso, 12-11-2026)
+        else if (X.capa === 'pantalla' && Y.capa === 'mundo' && kx !== 'actor' && ky !== 'actor' && steady(Y) && front / PX > 0.001) add('ov' + X.id + Y.id, `${X.id} (pantalla) tapa a ${Y.id} (${front} px)`);
         else if (main(X.id) && main(Y.id)) add('ov' + X.id + Y.id, `${X.id} y ${Y.id} se solapan (${front} px)`);
       };
       check(ia, ib, c, aFront); check(ib, ia, c, bFront);

@@ -631,7 +631,7 @@ window.inspectPixels = function (t) {
     const a0 = itemAlpha(it, t); if (a0 < 0.5) return; drawItem(pc, Object.assign({}, it, { a: 1, entra: 1e-3, sale: 1e-3, t0: -1e9, t1: 1e9, pop: false }), t, cm, dim);
     const d = pc.getImageData(0, 0, PXW, PXH).data; const m = new Uint8Array(PXW * PXH); let px = 0; const touch = { l: 0, r: 0, t: 0, b: 0 };
     for (let i = 0; i < PXW * PXH; i++) if (d[i * 4 + 3] > 60) { m[i] = 1; px++; const x = i % PXW, y = (i / PXW) | 0; if (x === 0) touch.l++; if (x === PXW - 1) touch.r++; if (y === 0) touch.t++; if (y === PXH - 1) touch.b++; }
-    masks.push({ id: (it.kind === 'figura' ? 'actor:' : 'obj:') + it.id, raw: it, kind: kindOf(it), m, px, touch, idx, age: t - it.t0, left: it.t1 - t });
+    masks.push({ id: (it.kind === 'figura' ? 'actor:' : 'obj:') + it.id, raw: it, kind: kindOf(it), capa: it.capa, m, px, touch, idx, age: t - it.t0, left: it.t1 - t });
   });
   // titular (subtítulo) como silueta
   window.seek(t); const cap = lastFrame.cap; const items = masks.map(({ m, raw, ...rest }) => rest); const pairs = [];
