@@ -1,0 +1,63 @@
+{
+ "id": "L19",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres reglas para que tus ahorros crezcan solos",
+ "tema": "Dinero",
+ "idea": "Jaime, 12-11-2026: «enfocarlo más a hábitos personales, emprendimiento… no tanto a consejos dentro de trabajo de oficina. Conceptos interesantes y de valor». Guion en texto, sin escena ni voz.",
+ "situacion": "Cada mes te dices que ya empezarás a ahorrar cuando ganes más, y así llevas años.",
+ "lines": [
+  {
+   "show": "Piensas que ya ahorrarás / *cuando ganes más.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Ese retraso es lo que más caro te sale. / *Tres reglas para que tu dinero crezca solo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *empieza ya, aunque sea con poco.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cien euros al mes invertidos desde los 25, / al 6 % anual, / *son unos 200.000 euros a los 65.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si empiezas a los 35, / *te quedas en la mitad.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Esos diez años de retraso / *te cuestan el doble de todo lo que pusiste.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *que se aparte solo el día que cobras.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una transferencia automática a otra cuenta. / *Lo que no ves, no te lo gastas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *no lo toques cuando baje.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Habrá años en que baje. / *Quien vende con miedo, convierte la bajada en pérdida.*",
+   "pause": 0.3,
+   "bocadillo": "Lo saco antes de que baje más"
+  },
+  {
+   "show": "Por eso, al ahorrar, el tiempo / *importa más que la cantidad.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a quien dice / *que ya ahorrará el año que viene.*",
+   "pause": 0.3
+  }
+ ],
+ "cifras": "Comprobado (12-11-2026): 100 €/mes, 6 % anual con capitalización mensual: 40 años → 199.149 €; 30 años → 100.452 €. Aportado: 48.000 € y 36.000 €. Diez años de retraso cuestan ~98.700 €, unas dos veces lo aportado."
+}

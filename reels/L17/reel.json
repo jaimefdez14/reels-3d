@@ -1,0 +1,62 @@
+{
+ "id": "L17",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres reglas para que un hábito dure",
+ "tema": "Hábitos",
+ "idea": "Jaime, 12-11-2026: «enfocarlo más a hábitos personales, emprendimiento… no tanto a consejos dentro de trabajo de oficina. Conceptos interesantes y de valor». Guion en texto, sin escena ni voz.",
+ "situacion": "Te apuntas al gimnasio en enero con muchas ganas, vas cinco días seguidos dos horas y en febrero ya no pisas por allí.",
+ "lines": [
+  {
+   "show": "Te apuntas al gimnasio en enero / *y en febrero ya no vas.*",
+   "pause": 0.45
+  },
+  {
+   "show": "No te falta voluntad: empiezas demasiado fuerte. / *Tres reglas para que un hábito dure.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *empieza tan pequeño que te dé hasta vergüenza.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una flexión al día. Una página. Cinco minutos. / *Lo difícil no es hacerlo: es empezar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Cuando ya te sale sin pensar, / *entonces subes.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *ponlo justo después de algo que ya haces.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Después del café, diez sentadillas. / *El café te lo recuerda cada mañana.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *marca en el calendario cada día que lo cumples.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una cruz por día. / Al cabo de unas semanas, / *no querrás romper la fila.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y si un día fallas, no pasa nada. / *Lo grave es fallar dos días seguidos.*",
+   "pause": 0.3,
+   "bocadillo": "Hoy no me apetece"
+  },
+  {
+   "show": "En enero sobran ganas. / *Lo que dura es lo que es fácil de repetir.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a quien ya ha pagado / *el gimnasio de enero.*",
+   "pause": 0.3
+  }
+ ]
+}

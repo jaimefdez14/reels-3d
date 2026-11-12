@@ -1,0 +1,63 @@
+{
+ "id": "L20",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Cuatro formas de conseguir tus primeros clientes",
+ "tema": "Emprendimiento",
+ "idea": "Jaime, 12-11-2026: «enfocarlo más a hábitos personales, emprendimiento… no tanto a consejos dentro de trabajo de oficina. Conceptos interesantes y de valor». Guion en texto, sin escena ni voz.",
+ "situacion": "Has montado tu negocio, tienes la web y las redes listas, y pasan las semanas sin que te escriba nadie.",
+ "lines": [
+  {
+   "show": "Tienes la web lista / *y no te escribe nadie.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Los primeros clientes casi nunca llegan por la web. / *Cuatro formas de conseguirlos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *cuéntales a veinte conocidos a qué te dedicas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "En una frase, y con lo que cuesta. / *Casi todos los primeros clientes salen de tu agenda.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *a cada cliente contento, pídele un nombre.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Al terminar, pregúntale a quién más le vendría bien. / *Llegar recomendado vende solo.*",
+   "pause": 0.3,
+   "bocadillo": "¿Conoces a alguien a quien le venga bien?"
+  },
+  {
+   "show": "La tercera: // *enseña trabajos, no promesas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Un antes y un después convence más / *que cualquier descripción.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La cuarta: // *contesta en menos de una hora.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Quien pregunta suele preguntar a varios. / *Muchas veces gana el primero que responde.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Al principio no se vende con la web, / *sino con la gente que ya te conoce.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que acaba de montar / *su negocio.*",
+   "pause": 0.3
+  }
+ ]
+}

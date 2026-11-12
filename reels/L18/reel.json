@@ -1,0 +1,66 @@
+{
+ "id": "L18",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres pruebas antes de dejar tu trabajo para emprender",
+ "tema": "Emprendimiento",
+ "idea": "Jaime, 12-11-2026: «enfocarlo más a hábitos personales, emprendimiento… no tanto a consejos dentro de trabajo de oficina. Conceptos interesantes y de valor». Guion en texto, sin escena ni voz.",
+ "situacion": "Llevas meses con una idea para montar algo por tu cuenta, la cuentas en cada cena y no te atreves a dejar el trabajo.",
+ "lines": [
+  {
+   "show": "Llevas meses pensando en montar algo / *y no te atreves a dejar el trabajo.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Haces bien. / *Antes, tres pruebas que no cuestan casi nada.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *véndelo antes de hacerlo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cuéntaselo a diez posibles clientes / *y pídeles que paguen por adelantado.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Que te digan que es buena idea no cuesta nada. / *Lo que cuenta es que paguen.*",
+   "pause": 0.3,
+   "bocadillo": "¡Qué buena idea!"
+  },
+  {
+   "show": "La segunda: // *empieza por las tardes, sin dejar la nómina.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Mientras cobras a fin de mes, / *puedes equivocarte sin miedo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Deja el trabajo cuando lo tuyo / *te dé al menos la mitad del sueldo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *ahorra seis meses de gastos.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Los primeros meses casi siempre se cobra / *menos de lo que esperabas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Con ese colchón decides con calma, / *no por miedo a no llegar a fin de mes.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Emprender no es saltar al vacío. / *Es ir comprobando que hay suelo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo que lleva años / *con la idea en un cajón.*",
+   "pause": 0.3
+  }
+ ]
+}

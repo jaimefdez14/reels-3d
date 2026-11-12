@@ -1,0 +1,58 @@
+{
+ "id": "L21",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Tres reglas para leer quince libros al año",
+ "tema": "Hábitos",
+ "idea": "Jaime, 12-11-2026: «enfocarlo más a hábitos personales, emprendimiento… no tanto a consejos dentro de trabajo de oficina. Conceptos interesantes y de valor». Guion en texto, sin escena ni voz.",
+ "situacion": "Dices que no tienes tiempo para leer, pero cada noche, en la cama, pasas una hora con el móvil.",
+ "lines": [
+  {
+   "show": "Dices que no tienes tiempo para leer, / *y cada noche pasas una hora con el móvil.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Tres reglas para leer / *quince libros al año.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *diez páginas al día, ni una menos.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Diez páginas son un cuarto de hora. / *En un año, más de 3.600 páginas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Son unos quince libros / *de los normales.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *lleva siempre el libro encima.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos sueltos suman.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *si un libro te aburre, déjalo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Seguir con un libro que te aburre / *es la forma más rápida de dejar de leer.*",
+   "pause": 0.3,
+   "bocadillo": "Ya que lo he empezado, lo acabo"
+  },
+  {
+   "show": "No te falta tiempo para leer: / *lo tienes repartido en ratos de un cuarto de hora.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a quien siempre dice / *que no tiene tiempo para leer.*",
+   "pause": 0.3
+  }
+ ]
+}
