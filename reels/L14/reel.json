@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Cuatro cambios para la primera media hora del día, / *y el primero se hace esta noche.*",
+   "show": "Cuatro cambios para la primera media hora del día. / *Si cumples todos, tu día entero mejorará.*",
    "pause": 0.3
   },
   {
@@ -98,6 +98,13 @@
     "6: «Llevas ocho horas sin beber. / *Es lo más fácil que vas a hacer en todo el día.*» → «Llevas ocho horas sin beber. / *Es lo primero que necesita el cuerpo.*»",
     "8: «Abre la ventana o sal a dar una vuelta. / *La luz de la mañana es la que te despierta.*» → «Abre la ventana o sal a dar una vuelta. / *La luz le dice al cuerpo que ya es hora de despertarse.*»",
     "9: «El cuarto: // *decide la noche anterior por dónde vas a empezar.*» → «El cuarto: // *decide la noche antes cuál es tu primera tarea.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "jaime",
+   "cambios": [
+    "1: «Cuatro cambios para la primera media hora del día, / *y el primero se hace esta noche.*» → «Cuatro cambios para la primera media hora del día. / *Si cumples todos, tu día entero mejorará.*»"
    ]
   }
  ]
