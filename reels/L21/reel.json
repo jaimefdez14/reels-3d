@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Diez páginas se leen en un cuarto de hora. / *En un año, más de 3.600 páginas.*",
+   "show": "Diez páginas son un cuarto de hora: / *menos que el móvil antes de dormir.*",
    "pause": 0.3
   },
   {
@@ -33,7 +33,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos acaban sumando mucho.*",
+   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son media hora al día.*",
    "pause": 0.3
   },
   {
@@ -42,12 +42,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Empeñarte en terminar un libro que no te gusta / *es lo que antes te quita las ganas de leer.*",
+   "show": "Nada te quita antes las ganas de leer / *que empeñarte en acabar un libro / que no te gusta.*",
    "pause": 0.3,
    "bocadillo": "Ya que lo he empezado, me lo acabo"
   },
   {
-   "show": "No te falta tiempo para leer: / *lo tienes repartido en ratos de un cuarto de hora.*",
+   "show": "Tiempo para leer tienes: / *está en esa hora de móvil por la noche.*",
    "pause": 0.3
   },
   {
@@ -90,6 +90,59 @@
      "despues": "Ya que lo he empezado, me lo acabo"
     }
    ]
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Diez páginas se leen en un cuarto de hora. / *En un año, más de 3.600 páginas.*",
+     "despues": "Diez páginas se leen en un cuarto de hora. / *En un año salen más de 3.600 páginas.*"
+    },
+    {
+     "linea": 6,
+     "antes": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos acaban sumando mucho.*",
+     "despues": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / dan para mucho.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Empeñarte en terminar un libro que no te gusta / *es lo que antes te quita las ganas de leer.*",
+     "despues": "Nada te quita antes las ganas de leer / *que empeñarte en acabar un libro / que no te gusta.*"
+    },
+    {
+     "linea": 9,
+     "antes": "No te falta tiempo para leer: / *lo tienes repartido en ratos de un cuarto de hora.*",
+     "despues": "Tiempo para leer tienes: / *lo que pasa es que está repartido en ratos sueltos.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Tiempo para leer tienes: / *lo que pasa es que está repartido en ratos sueltos.*",
+     "despues": "Tiempo para leer tienes: / *está repartido en ratos sueltos.*",
+     "motivo": "redaccion.py: calco «lo que pasa es que»"
+    }
+   ],
+   "descartado": "línea 1 «Con tres reglas, te lees…» (dudosa, más coloquial: regla 23)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Diez páginas se leen en un cuarto de hora. / *En un año salen más de 3.600 páginas.*",
+     "despues": "Diez páginas son un cuarto de hora: / *menos que el móvil antes de dormir.*"
+    },
+    {
+     "linea": 6,
+     "antes": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / dan para mucho.*",
+     "despues": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son media hora al día.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Tiempo para leer tienes: / *está repartido en ratos sueltos.*",
+     "despues": "Tiempo para leer tienes: / *está en esa hora de móvil por la noche.*"
+    }
+   ],
+   "descartado": "lector en frío 1 (8/10)"
   }
  ]
 }

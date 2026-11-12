@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Y esperar es lo que más caro te sale. / *Tres reglas para que tus ahorros crezcan / sin que hagas nada.*",
+   "show": "Y esa espera es lo que más caro te sale. / *Tres reglas para que tus ahorros, invertidos, / crezcan casi solos.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si inviertes cien euros al mes desde los 25, / al 6 % anual, / *a los 65 tienes unos 200.000.*",
+   "show": "Si inviertes cien euros al mes desde los 25, / al 6 % anual, / *a los 65 tendrás unos 200.000 euros.*",
    "pause": 0.3
   },
   {
@@ -28,7 +28,7 @@
    "pause": 0.3
   },
   {
-   "show": "Esos diez años de espera te cuestan / *más del doble de lo que habrías puesto.*",
+   "show": "Esos diez años de espera / *te cuestan unos cien mil euros.*",
    "pause": 0.3
   },
   {
@@ -37,21 +37,21 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una transferencia automática a otra cuenta. / *Lo que no ves, no te lo gastas.*",
+   "show": "Programa una transferencia automática / a una cuenta de inversión. / *Lo que no ves, no te lo gastas.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *no lo toques cuando la bolsa baje.*",
+   "show": "La tercera: // *no toques lo invertido / cuando la bolsa baje.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Habrá años en que baje. / *Si vendes por miedo, / esa bajada se queda en pérdida de verdad.*",
+   "show": "Habrá años en que baje. / *Si vendes por miedo, esa bajada / se convierte en una pérdida de verdad.*",
    "pause": 0.3,
    "bocadillo": "Lo saco antes de que baje más"
   },
   {
-   "show": "Por eso, al ahorrar, / *cuenta más cuándo empiezas que cuánto pones.*",
+   "show": "Por eso importa más cuándo empiezas / *que cuánto pones.*",
    "pause": 0.3
   },
   {
@@ -107,6 +107,73 @@
     }
    ],
    "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Y esperar es lo que más caro te sale. / *Tres reglas para que tus ahorros crezcan / sin que hagas nada.*",
+     "despues": "Y esa espera es lo que más caro te sale. / *Tres reglas para que tus ahorros crezcan / casi solos.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Si inviertes cien euros al mes desde los 25, / al 6 % anual, / *a los 65 tienes unos 200.000.*",
+     "despues": "Si inviertes cien euros al mes desde los 25, / al 6 % anual, / *a los 65 tendrás unos 200.000 euros.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Esos diez años de espera te cuestan / *más del doble de lo que habrías puesto.*",
+     "despues": "Esos diez años de espera te cuestan / *ocho veces lo que habrías ahorrado en ellos.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Una transferencia automática a otra cuenta. / *Lo que no ves, no te lo gastas.*",
+     "despues": "Programa una transferencia automática a otra cuenta. / *Lo que no ves, no te lo gastas.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Habrá años en que baje. / *Si vendes por miedo, / esa bajada se queda en pérdida de verdad.*",
+     "despues": "Habrá años en que baje. / *Si vendes por miedo, esa bajada / se convierte en una pérdida de verdad.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Por eso, al ahorrar, / *cuenta más cuándo empiezas que cuánto pones.*",
+     "despues": "Por eso, cuando ahorras, / *cuenta más cuándo empiezas que cuánto pones.*"
+    }
+   ],
+   "descartado": "línea 5: sin la cifra de 100.000 € (redaccion.py: máximo 5 cifras); 98.700 € / 12.000 € = 8,2"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Y esa espera es lo que más caro te sale. / *Tres reglas para que tus ahorros crezcan / casi solos.*",
+     "despues": "Y esa espera es lo que más caro te sale. / *Tres reglas para que tus ahorros, invertidos, / crezcan casi solos.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Esos diez años de espera te cuestan / *ocho veces lo que habrías ahorrado en ellos.*",
+     "despues": "Esos diez años de espera / *te cuestan unos cien mil euros.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Programa una transferencia automática a otra cuenta. / *Lo que no ves, no te lo gastas.*",
+     "despues": "Programa una transferencia automática / a una cuenta de inversión. / *Lo que no ves, no te lo gastas.*"
+    },
+    {
+     "linea": 8,
+     "antes": "La tercera: // *no lo toques cuando la bolsa baje.*",
+     "despues": "La tercera: // *no toques lo invertido / cuando la bolsa baje.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Por eso, cuando ahorras, / *cuenta más cuándo empiezas que cuánto pones.*",
+     "despues": "Por eso importa más cuándo empiezas / *que cuánto pones.*"
+    }
+   ],
+   "descartado": "lector en frío 1 (7/10)"
   }
  ]
 }

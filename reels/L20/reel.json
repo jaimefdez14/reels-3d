@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En una frase y diciendo lo que cobras. / *Casi todos los primeros clientes / salen de tu agenda.*",
+   "show": "Explícalo en una frase y di cuánto cobras. / *Casi todos los primeros clientes / salen de tu agenda.*",
    "pause": 0.3
   },
   {
@@ -29,17 +29,17 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Al acabar el trabajo, pregúntale / si conoce a alguien que lo necesite. / *Cuando llegas recomendado, / casi no tienes que convencer.*",
+   "show": "Al acabar el trabajo, pídeselo tú. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*",
    "pause": 0.3,
    "bocadillo": "¿Conoces a alguien que necesite algo así?"
   },
   {
-   "show": "La tercera: // *enseña lo que ya has hecho, / no lo que prometes.*",
+   "show": "La tercera: // *enseña trabajos que ya has hecho.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Un antes y un después convence más / *que cualquier explicación.*",
+   "show": "Una foto del resultado convence más / *que cualquier explicación.*",
    "pause": 0.3
   },
   {
@@ -48,11 +48,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces se lo lleva / el primero que contesta.*",
+   "show": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces el trabajo se lo lleva / el primero que contesta.*",
    "pause": 0.3
   },
   {
-   "show": "Al principio no vendes por la web: / *vendes gracias a la gente que ya te conoce.*",
+   "show": "Al principio no vendes por la web: / *vendes por cómo tratas a cada persona.*",
    "pause": 0.3
   },
   {
@@ -111,6 +111,68 @@
     }
    ],
    "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "En una frase y diciendo lo que cobras. / *Casi todos los primeros clientes / salen de tu agenda.*",
+     "despues": "En una sola frase, y diles lo que cobras. / *Casi todos los primeros clientes / salen de tu agenda.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Al acabar el trabajo, pregúntale / si conoce a alguien que lo necesite. / *Cuando llegas recomendado, / casi no tienes que convencer.*",
+     "despues": "Al acabar el trabajo, pregúntale / si conoce a alguien que lo necesite. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Un antes y un después convence más / *que cualquier explicación.*",
+     "despues": "Enseñar cómo estaba y cómo quedó / *convence más que cualquier explicación.*"
+    },
+    {
+     "linea": 9,
+     "antes": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces se lo lleva / el primero que contesta.*",
+     "despues": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces el trabajo se lo lleva / el primero que contesta.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Al principio no vendes por la web: / *vendes gracias a la gente que ya te conoce.*",
+     "despues": "Al principio no vendes por la web: / *vendes por la gente que ya te conoce.*"
+    }
+   ],
+   "descartado": ""
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "En una sola frase, y diles lo que cobras. / *Casi todos los primeros clientes / salen de tu agenda.*",
+     "despues": "Explícalo en una frase y di cuánto cobras. / *Casi todos los primeros clientes / salen de tu agenda.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Al acabar el trabajo, pregúntale / si conoce a alguien que lo necesite. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*",
+     "despues": "Al acabar el trabajo, pídeselo tú. / *Cuando llegas recomendado, / casi no tienes que convencer a nadie.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La tercera: // *enseña lo que ya has hecho, / no lo que prometes.*",
+     "despues": "La tercera: // *enseña trabajos que ya has hecho.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Enseñar cómo estaba y cómo quedó / *convence más que cualquier explicación.*",
+     "despues": "Una foto del resultado convence más / *que cualquier explicación.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Al principio no vendes por la web: / *vendes por la gente que ya te conoce.*",
+     "despues": "Al principio no vendes por la web: / *vendes por cómo tratas a cada persona.*"
+    }
+   ],
+   "descartado": "lector en frío 1 (8/10)"
   }
  ]
 }

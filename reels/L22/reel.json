@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si tiene arreglo, decide rápido. / *Si sale mal, das marcha atrás.*",
+   "show": "Si tiene vuelta atrás, decide rápido: / *si sale mal, la deshaces.*",
    "pause": 0.3
   },
   {
@@ -28,12 +28,12 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *¿qué le dirías a un amigo en tu lugar?*",
+   "show": "La segunda: // *¿qué le dirías a un amigo / que estuviera en tu lugar?*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Visto desde fuera, el miedo pesa menos / *y la respuesta se ve clara.*",
+   "show": "Desde fuera, el miedo pesa menos / *y la respuesta está mucho más clara.*",
    "pause": 0.3,
    "bocadillo": "Yo que tú, lo haría"
   },
@@ -43,19 +43,19 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No decidir también es una decisión: / *la de seguir igual.*",
+   "show": "No decidir también es decidir: / *decides quedarte como estás.*",
    "pause": 0.3
   },
   {
-   "show": "Ponte una fecha y ese día decides. / *Dudar también te cuesta.*",
+   "show": "Ponte una fecha: / *cada semana que esperas te cuesta algo.*",
    "pause": 0.3
   },
   {
-   "show": "Casi siempre sale mejor decidir / y corregir sobre la marcha / *que esperar a tenerlo claro.*",
+   "show": "Así que deja de darle vueltas: / *decide, y corrige por el camino.*",
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a quien lleva meses / *con la misma duda.*",
+   "show": "Mándaselo a quien lleva semanas / *con la misma duda.*",
    "pause": 0.3
   }
  ],
@@ -100,6 +100,73 @@
     }
    ],
    "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Si tiene arreglo, decide rápido. / *Si sale mal, das marcha atrás.*",
+     "despues": "Si tiene vuelta atrás, decide rápido: / *si sale mal, la deshaces.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Solo las decisiones sin vuelta atrás / *merecen semanas de dudas.*",
+     "despues": "Solo las que no tienen vuelta atrás / *se merecen semanas de dudas.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *¿qué le dirías a un amigo en tu lugar?*",
+     "despues": "La segunda: // *¿qué le dirías a un amigo / que estuviera en tu lugar?*"
+    },
+    {
+     "linea": 6,
+     "antes": "Visto desde fuera, el miedo pesa menos / *y la respuesta se ve clara.*",
+     "despues": "Desde fuera, el miedo pesa menos / *y la respuesta está mucho más clara.*"
+    },
+    {
+     "linea": 8,
+     "antes": "No decidir también es una decisión: / *la de seguir igual.*",
+     "despues": "No decidir también es decidir: / *decides quedarte como estás.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ponte una fecha y ese día decides. / *Dudar también te cuesta.*",
+     "despues": "Ponte una fecha y ese día decides: / *cada semana de dudas también se paga.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Casi siempre sale mejor decidir / y corregir sobre la marcha / *que esperar a tenerlo claro.*",
+     "despues": "Casi siempre sale mejor decidir / y corregir sobre la marcha / *que esperar a tenerlo todo claro.*"
+    }
+   ],
+   "descartado": ""
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "Solo las que no tienen vuelta atrás / *se merecen semanas de dudas.*",
+     "despues": "Solo las decisiones sin vuelta atrás / *merecen semanas de dudas.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ponte una fecha y ese día decides: / *cada semana de dudas también se paga.*",
+     "despues": "Ponte una fecha: / *cada semana que esperas te cuesta algo.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Casi siempre sale mejor decidir / y corregir sobre la marcha / *que esperar a tenerlo todo claro.*",
+     "despues": "Así que deja de darle vueltas: / *decide, y corrige por el camino.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Mándaselo a quien lleva meses / *con la misma duda.*",
+     "despues": "Mándaselo a quien lleva semanas / *con la misma duda.*"
+    }
+   ],
+   "descartado": "lector en frío 1 (8/10)"
   }
  ]
 }

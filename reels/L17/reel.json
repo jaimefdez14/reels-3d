@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "No te falta voluntad: / empiezas con demasiadas ganas. / *Tres reglas para que un hábito dure.*",
+   "show": "No es que te falte voluntad: / es que empiezas con tantas ganas / que te pides demasiado. / *Tres reglas para que un hábito dure.*",
    "pause": 0.3
   },
   {
@@ -20,20 +20,20 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una flexión al día. Una página. Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*",
+   "show": "Una flexión al día. Una página de un libro. / Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*",
    "pause": 0.3
   },
   {
-   "show": "Cuando ya lo haces sin pensar, / *entonces haces un poco más.*",
+   "show": "Cuando ya lo hagas sin pensar, / *añade un poco más.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *hazlo justo después / de algo que ya haces cada día.*",
+   "show": "La segunda: // *hazlo justo después / de algo que ya haces todos los días.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Después del café, diez sentadillas. / *Así el café te lo recuerda cada mañana.*",
+   "show": "Después del café, diez sentadillas. / *Así no tienes que acordarte: / cada mañana te lo recuerda el café.*",
    "pause": 0.3
   },
   {
@@ -42,16 +42,16 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una cruz cada día. / Al cabo de unas semanas, / *no querrás romper la racha.*",
+   "show": "Una cruz cada día. / A las pocas semanas, / *no vas a querer cortar la racha.*",
    "pause": 0.3
   },
   {
-   "show": "Y si un día fallas, no pasa nada. / *Lo grave es fallar dos días seguidos.*",
+   "show": "Y si un día fallas, la racha sigue. / *Lo que la corta es fallar dos días seguidos.*",
    "pause": 0.3,
    "bocadillo": "Hoy no me apetece"
   },
   {
-   "show": "En enero sobran ganas. / *Lo que dura es lo que cuesta poco repetir.*",
+   "show": "En enero sobran ganas. / *Lo que dura es lo que cuesta tan poco / que lo repites sin pensar.*",
    "pause": 0.3
   },
   {
@@ -110,6 +110,68 @@
     }
    ],
    "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "No te falta voluntad: / empiezas con demasiadas ganas. / *Tres reglas para que un hábito dure.*",
+     "despues": "No es que te falte voluntad: / es que empiezas con demasiadas ganas. / *Tres reglas para que un hábito dure.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Cuando ya lo haces sin pensar, / *entonces haces un poco más.*",
+     "despues": "Cuando ya lo hagas sin pensar, / *añade un poco más.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *hazlo justo después / de algo que ya haces cada día.*",
+     "despues": "La segunda: // *hazlo justo después / de algo que ya haces todos los días.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Después del café, diez sentadillas. / *Así el café te lo recuerda cada mañana.*",
+     "despues": "Después del café, diez sentadillas. / *Así no tienes que acordarte: / cada mañana te lo recuerda el café.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Una cruz cada día. / Al cabo de unas semanas, / *no querrás romper la racha.*",
+     "despues": "Una cruz cada día. / A las pocas semanas, / *no vas a querer cortar la racha.*"
+    },
+    {
+     "linea": 10,
+     "antes": "En enero sobran ganas. / *Lo que dura es lo que cuesta poco repetir.*",
+     "despues": "En enero sobran ganas. / *Lo que dura es lo que no cuesta repetir.*"
+    }
+   ],
+   "descartado": ""
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "No es que te falte voluntad: / es que empiezas con demasiadas ganas. / *Tres reglas para que un hábito dure.*",
+     "despues": "No es que te falte voluntad: / es que empiezas con tantas ganas / que te pides demasiado. / *Tres reglas para que un hábito dure.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Una flexión al día. Una página. Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*",
+     "despues": "Una flexión al día. Una página de un libro. / Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Y si un día fallas, no pasa nada. / *Lo grave es fallar dos días seguidos.*",
+     "despues": "Y si un día fallas, la racha sigue. / *Lo que la corta es fallar dos días seguidos.*"
+    },
+    {
+     "linea": 10,
+     "antes": "En enero sobran ganas. / *Lo que dura es lo que no cuesta repetir.*",
+     "despues": "En enero sobran ganas. / *Lo que dura es lo que cuesta tan poco / que lo repites sin pensar.*"
+    }
+   ],
+   "descartado": "lector en frío 1 (8/10)"
   }
  ]
 }
