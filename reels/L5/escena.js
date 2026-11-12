@@ -121,7 +121,7 @@ E.temblor(w(13, 8), 14, 0.45); E.golpe(w(13, 8), 0.04);
 // ---------- cierre: resumen (vuelve al gancho) y envío ----------
 // 14: Al(0) final(1) cobrar(2) más(3) es(4) saber(5) qué(6) decir(7)
 E.obj('rayosC', 'rayos', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, r: 520, z: -2, p: [[TC, 0], [w(14, 5), 1, 'out']], inspeccion: false, sinDim: true });
-E.obj('resumen', 'resumen', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, items: ['Pregunta', 'Calla', 'Aparte', 'Encargo'], gap: 210,
+E.obj('resumen', 'resumen', { t0: TC, t1: w(15, 0), capa: 'pantalla', x: 540, y: 960, items: ['Pregunta', 'Silencio', 'Aparte', 'Encargo'], gap: 210,
   p: [[TC, 0], [TC + 0.9, 4, 'lin']], barrido: [w(14, 5)], caja: [-420, -60, 840, 200] });
 E.obj('confC', 'confeti', { t0: wf(14, -1), t1: wf(14, -1) + 1.9, capa: 'pantalla', x: 540, y: 900, dur: 1.8, n: 54, inspeccion: false });
 E.destello(wf(14, -1), 0.25); E.golpe(wf(14, -1), 0.04);
