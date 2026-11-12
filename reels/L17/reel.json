@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "No es que te falte voluntad: / es que empiezas con tantas ganas / que te pides demasiado. / *Tres reglas para que un hábito dure.*",
+   "show": "No es que te falte voluntad: / es que empiezas con tantas ganas / que te pides demasiado. / *Tres reglas para que en febrero sigas yendo.*",
    "pause": 0.3
   },
   {
@@ -33,7 +33,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Después del café, diez sentadillas. / *Así no tienes que acordarte: / cada mañana te lo recuerda el café.*",
+   "show": "Después del café, una flexión. / *Así no tienes que acordarte: / cada mañana te lo recuerda el café.*",
    "pause": 0.3
   },
   {
@@ -42,7 +42,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una cruz cada día. / A las pocas semanas, / *no vas a querer cortar la racha.*",
+   "show": "A las pocas semanas, / *no vas a querer cortar la racha.*",
    "pause": 0.3
   },
   {
@@ -193,6 +193,27 @@
     }
    ],
    "descartado": "lector en frío 2 (7/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "No es que te falte voluntad: / es que empiezas con tantas ganas / que te pides demasiado. / *Tres reglas para que un hábito dure.*",
+     "despues": "No es que te falte voluntad: / es que empiezas con tantas ganas / que te pides demasiado. / *Tres reglas para que en febrero sigas yendo.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Después del café, diez sentadillas. / *Así no tienes que acordarte: / cada mañana te lo recuerda el café.*",
+     "despues": "Después del café, una flexión. / *Así no tienes que acordarte: / cada mañana te lo recuerda el café.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Una cruz cada día. / A las pocas semanas, / *no vas a querer cortar la racha.*",
+     "despues": "A las pocas semanas, / *no vas a querer cortar la racha.*"
+    }
+   ],
+   "descartado": "lector en frío 3 (8,5/10)"
   }
  ]
 }

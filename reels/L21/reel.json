@@ -24,7 +24,7 @@
    "pause": 0.3
   },
   {
-   "show": "Unos quince libros al año / *de tamaño normal.*",
+   "show": "Al año, eso son unos quince libros / *de tamaño normal.*",
    "pause": 0.3
   },
   {
@@ -33,7 +33,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son el doble de lo que necesitas.*",
+   "show": "En la cola, en el metro, esperando a alguien. / *Esos ratos juntos suman media hora: / el doble de lo que necesitas.*",
    "pause": 0.3
   },
   {
@@ -169,6 +169,22 @@
     }
    ],
    "descartado": "lector en frío 2 (7/10)"
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "Unos quince libros al año / *de tamaño normal.*",
+     "despues": "Al año, eso son unos quince libros / *de tamaño normal.*"
+    },
+    {
+     "linea": 6,
+     "antes": "En la cola, en el metro, esperando a alguien. / *Esos ratos muertos, todos juntos, / son el doble de lo que necesitas.*",
+     "despues": "En la cola, en el metro, esperando a alguien. / *Esos ratos juntos suman media hora: / el doble de lo que necesitas.*"
+    }
+   ],
+   "descartado": "lector en frío 3 (8/10); línea 8 se queda (los lectores oscilan entre las dos versiones)"
   }
  ]
 }
