@@ -347,8 +347,8 @@ const TIPOS = {
     if (o.silla !== false) { lineaObj(c, 5, C.linea); c.beginPath(); c.moveTo(-330, -135); c.lineTo(-190, -135); c.moveTo(-310, -135); c.lineTo(-310, 0); c.moveTo(-210, -135); c.lineTo(-210, 0); c.stroke(); } },
   // papeles apilados (desbordado)
   papeles(c, o, t) { const n = o.n || 6, k = kf(o.k, t, n); for (let i = 0; i < n; i++) { const v = clamp(k - i); if (v <= 0) continue; c.save(); c.globalAlpha *= v; c.translate(Math.sin(i * 2.1) * 14, -i * 16 - (1 - v) * 60); c.rotate(Math.sin(i * 1.7) * 0.08); c.fillStyle = '#1a201d'; lineaObj(c, 3, C.linea); c.beginPath(); c.roundRect(-80, -14, 160, 22, 4); c.fill(); c.stroke(); c.restore(); } },
-  // flecha curva de línea con punta
-  flecha(c, o, t) { const p = clamp(kf(o.p, t, 1)); if (p <= 0) return; const [x1, y1] = o.a, [x2, y2] = o.b, bend = o.curva ?? 0.25; const mx = (x1 + x2) / 2 - (y2 - y1) * bend, my = (y1 + y2) / 2 + (x2 - x1) * bend;
+  // flecha curva de línea con punta: de [x, y] → hasta [x, y] (no «a»/«b»: «a» es la opacidad de cualquier objeto)
+  flecha(c, o, t) { const p = clamp(kf(o.p, t, 1)); if (p <= 0) return; const [x1, y1] = o.de, [x2, y2] = o.hasta, bend = o.curva ?? 0.25; const mx = (x1 + x2) / 2 - (y2 - y1) * bend, my = (y1 + y2) / 2 + (x2 - x1) * bend;
     lineaObj(c, o.w || 5, o.col || C.am); c.setLineDash(o.discontinua ? [14, 12] : []); c.beginPath(); c.moveTo(x1, y1); const N = 30; let px = x1, py = y1, qx = x1, qy = y1; for (let i = 1; i <= N * p; i++) { const u = i / N; qx = px; qy = py; px = (1 - u) * (1 - u) * x1 + 2 * (1 - u) * u * mx + u * u * x2; py = (1 - u) * (1 - u) * y1 + 2 * (1 - u) * u * my + u * u * y2; c.lineTo(px, py); } c.stroke(); c.setLineDash([]);
     if (p > 0.95 && o.punta !== false) { const a = Math.atan2(py - qy, px - qx); c.fillStyle = o.col || C.am; c.beginPath(); c.moveTo(px + Math.cos(a) * 14, py + Math.sin(a) * 14); c.lineTo(px + Math.cos(a + 2.5) * 22, py + Math.sin(a + 2.5) * 22); c.lineTo(px + Math.cos(a - 2.5) * 22, py + Math.sin(a - 2.5) * 22); c.fill(); } },
   // ---------- «satisfying»: contadores, rellenos, chispas ----------
