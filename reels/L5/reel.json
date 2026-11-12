@@ -12,7 +12,7 @@
    "cita": true
   },
   {
-   "show": "Cuatro reglas para cobrar más. / *La última lo corta de raíz.*",
+   "show": "Cuatro reglas para cobrar más. / *Con la última, esos cambios se pagan.*",
    "pause": 0.5
   },
   {
@@ -282,6 +282,13 @@
    "cambios": [
     "0: «Si eres autónomo, seguro que has hecho cambios gratis / *porque te dijeron que era un momento.*» → «Ese «es un cambio rapidito» / *ya te ha costado horas gratis.*»",
     "1: «Cuatro reglas para cobrar más. / *Con la última, se acabó.*» → «Cuatro reglas para cobrar más. / *La última lo corta de raíz.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "motivo": "Jaime: «la última lo corta de raíz no encaja en L5» → opción 1",
+   "cambios": [
+    "1: «Cuatro reglas para cobrar más. / *La última lo corta de raíz.*» → «Cuatro reglas para cobrar más. / *Con la última, esos cambios se pagan.*»"
    ]
   }
  ],
