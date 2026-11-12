@@ -7,7 +7,7 @@
  "situacion": "Te convocan a una reunión de una hora, los diez primeros minutos se van en saber para qué estáis ahí y al final nadie sabe quién hace qué. Seis personas, una hora: seis horas de trabajo que no se recuperan.",
  "lines": [
   {
-   "show": "Una reunión de una hora con seis personas / *son seis horas de trabajo.*",
+   "show": "Una hora de reunión con seis personas / *son seis horas de trabajo.*",
    "pause": 0.45
   },
   {
@@ -15,7 +15,7 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *el orden del día, por escrito y antes.*",
+   "show": "La primera: // *el orden del día, por escrito y enviado con antelación.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -33,21 +33,21 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo importante, al principio, / *cuando todos están atentos.*",
+   "show": "Lo importante va al principio, / *cuando todavía hay atención.*",
    "pause": 0.3
   },
   {
    "show": "La tercera: // *cada punto, con un responsable y una fecha.*",
    "pause": 0.3,
    "pausa_media": 0.45,
-   "bocadillo": "Yo me encargo, el viernes"
+   "bocadillo": "Me encargo yo. Para el viernes."
   },
   {
-   "show": "Si no tiene nombre, / *nadie lo hace.*",
+   "show": "Si no lleva el nombre de alguien, / *no lo hace nadie.*",
    "pause": 0.3
   },
   {
-   "show": "La cuarta: // *termina cinco minutos antes.*",
+   "show": "La cuarta: // *acábala cinco minutos antes de la hora.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -56,12 +56,27 @@
    "pause": 0.3
   },
   {
-   "show": "Una reunión no se mide por lo que dura, / *sino por lo que se decide en ella.*",
+   "show": "Una reunión no se mide por lo que dura, / *sino por lo que se decide.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese compañero que convoca / *una reunión para todo.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "fecha": "2026-11-12",
+   "ronda": 1,
+   "cambios": [
+    "0: «Una reunión de una hora con seis personas / *son seis horas de trabajo.*» → «Una hora de reunión con seis personas / *son seis horas de trabajo.*»",
+    "2: «La primera: // *el orden del día, por escrito y antes.*» → «La primera: // *el orden del día, por escrito y enviado con antelación.*»",
+    "6: «Lo importante, al principio, / *cuando todos están atentos.*» → «Lo importante va al principio, / *cuando todavía hay atención.*»",
+    "7 bocadillo: «Yo me encargo, el viernes» → «Me encargo yo. Para el viernes.»",
+    "8: «Si no tiene nombre, / *nadie lo hace.*» → «Si no lleva el nombre de alguien, / *no lo hace nadie.*»",
+    "9: «La cuarta: // *termina cinco minutos antes.*» → «La cuarta: // *acábala cinco minutos antes de la hora.*»",
+    "11: «Una reunión no se mide por lo que dura, / *sino por lo que se decide en ella.*» → «Una reunión no se mide por lo que dura, / *sino por lo que se decide.*»"
+   ]
   }
  ]
 }

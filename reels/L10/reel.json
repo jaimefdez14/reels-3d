@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Cuatro pasos para encontrarlas en diez minutos, / *y el último es el que nadie hace.*",
+   "show": "Cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo hace.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En la aplicación del banco, / no hace falta nada más.",
+   "show": "Con la aplicación del banco / te basta.",
    "pause": 0.3
   },
   {
@@ -29,39 +29,56 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Plataformas, aplicaciones, el gimnasio, / el espacio en la nube del móvil.",
+   "show": "Las plataformas, las aplicaciones, / el gimnasio, la nube del móvil.",
    "pause": 0.3
   },
   {
-   "show": "Lo normal es encontrar / *más de las que creías.*",
+   "show": "Lo normal es que te salgan / *más cargos de los que creías.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *pregúntate si lo usaste la semana pasada.*",
+   "show": "El tercero: // *piensa si lo usaste la semana pasada.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "¿Esto lo uso?"
   },
   {
-   "show": "Si la respuesta es no, / *sobra.*",
+   "show": "Si no, / *te sobra.*",
    "pause": 0.3
   },
   {
-   "show": "El cuarto: // *date de baja hoy, no luego.*",
+   "show": "El cuarto: // *date de baja hoy mismo, no lo dejes para luego.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Luego no llega nunca, / *y cada mes que pasa lo vuelves a pagar.*",
+   "show": "Lo que dejas para luego no se hace nunca, / *y cada mes lo vuelves a pagar.*",
    "pause": 0.3
   },
   {
-   "show": "Tres suscripciones de diez euros / *son trescientos sesenta euros al año.*",
+   "show": "Tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo que paga tres plataformas / *y solo ve una.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "fecha": "2026-11-12",
+   "ronda": 1,
+   "cambios": [
+    "1: «Cuatro pasos para encontrarlas en diez minutos, / *y el último es el que nadie hace.*» → «Cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo hace.*»",
+    "3: «En la aplicación del banco, / no hace falta nada más.» → «Con la aplicación del banco / te basta.»",
+    "5: «Plataformas, aplicaciones, el gimnasio, / el espacio en la nube del móvil.» → «Las plataformas, las aplicaciones, / el gimnasio, la nube del móvil.»",
+    "6: «Lo normal es encontrar / *más de las que creías.*» → «Lo normal es que te salgan / *más cargos de los que creías.*»",
+    "7: «El tercero: // *pregúntate si lo usaste la semana pasada.*» → «El tercero: // *piensa si lo usaste la semana pasada.*»",
+    "8: «Si la respuesta es no, / *sobra.*» → «Si no, / *te sobra.*»",
+    "9: «El cuarto: // *date de baja hoy, no luego.*» → «El cuarto: // *date de baja hoy mismo, no lo dejes para luego.*»",
+    "10: «Luego no llega nunca, / *y cada mes que pasa lo vuelves a pagar.*» → «Lo que dejas para luego no se hace nunca, / *y cada mes lo vuelves a pagar.*»",
+    "11: «Tres suscripciones de diez euros / *son trescientos sesenta euros al año.*» → «Tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*»"
+   ]
   }
  ]
 }

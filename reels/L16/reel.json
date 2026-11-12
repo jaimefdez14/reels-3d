@@ -7,7 +7,7 @@
  "situacion": "Un compañero te pide un favor, tu jefe te añade algo, un amigo te propone un plan, y a todo dices que sí. A final de semana no has llegado a nada y encima estás agotado. Decir que no se puede hacer bien: dando una alternativa.",
  "lines": [
   {
-   "show": "Dices que sí a todo / *y luego no llegas a nada.*",
+   "show": "Dices que sí a todo / *y luego no te da tiempo a nada.*",
    "pause": 0.45
   },
   {
@@ -21,11 +21,11 @@
    "bocadillo": "Esta semana no puedo; el martes, sí"
   },
   {
-   "show": "No rechazas la petición: / *la colocas donde te cabe.*",
+   "show": "No dices que no: / *lo pasas a cuando tienes hueco.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ofrece algo más pequeño.*",
+   "show": "La segunda: // *ofrece hacer solo una parte.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "Todo no, pero te reviso la primera parte"
@@ -35,32 +35,49 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *pregunta qué dejas a cambio.*",
+   "show": "La tercera: // *pregunta qué dejas de hacer a cambio.*",
    "pause": 0.3,
    "pausa_media": 0.45,
-   "bocadillo": "¿Qué dejo para hacer esto?"
+   "bocadillo": "Vale, ¿y qué dejo de lado para hacer esto?"
   },
   {
-   "show": "Sirve sobre todo con tu jefe. / *Así decide él qué es lo prioritario.*",
+   "show": "Funciona sobre todo con tu jefe: / *así es él quien decide qué va primero.*",
    "pause": 0.3
   },
   {
    "show": "La cuarta: // *pide tiempo para contestar.*",
    "pause": 0.3,
    "pausa_media": 0.45,
-   "bocadillo": "Déjame mirarlo y te digo mañana"
+   "bocadillo": "Déjame que lo mire y mañana te digo"
   },
   {
-   "show": "El sí que das deprisa / *es del que más te arrepientes.*",
+   "show": "El sí que das sin pensar / *es el que más te pesa luego.*",
    "pause": 0.3
   },
   {
-   "show": "Decir que no a una cosa / *es decir que sí a lo que de verdad te importa.*",
+   "show": "Cada vez que dices que no a algo, / *le haces hueco a lo que de verdad te importa.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo que no sabe / *decir que no a nada.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "fecha": "2026-11-12",
+   "ronda": 1,
+   "cambios": [
+    "0: «Dices que sí a todo / *y luego no llegas a nada.*» → «Dices que sí a todo / *y luego no te da tiempo a nada.*»",
+    "3: «No rechazas la petición: / *la colocas donde te cabe.*» → «No dices que no: / *lo pasas a cuando tienes hueco.*»",
+    "4: «La segunda: // *ofrece algo más pequeño.*» → «La segunda: // *ofrece hacer solo una parte.*»",
+    "6: «La tercera: // *pregunta qué dejas a cambio.*» → «La tercera: // *pregunta qué dejas de hacer a cambio.*»",
+    "6 bocadillo: «¿Qué dejo para hacer esto?» → «Vale, ¿y qué dejo de lado para hacer esto?»",
+    "7: «Sirve sobre todo con tu jefe. / *Así decide él qué es lo prioritario.*» → «Funciona sobre todo con tu jefe: / *así es él quien decide qué va primero.*»",
+    "8 bocadillo: «Déjame mirarlo y te digo mañana» → «Déjame que lo mire y mañana te digo»",
+    "9: «El sí que das deprisa / *es del que más te arrepientes.*» → «El sí que das sin pensar / *es el que más te pesa luego.*»",
+    "10: «Decir que no a una cosa / *es decir que sí a lo que de verdad te importa.*» → «Cada vez que dices que no a algo, / *le haces hueco a lo que de verdad te importa.*»"
+   ]
   }
  ]
 }

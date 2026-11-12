@@ -11,16 +11,16 @@
    "pause": 0.45
   },
   {
-   "show": "Tres reglas para que el correo / *deje de mandar en tu día.*",
+   "show": "Tres reglas para que el correo / *deje de marcarte el día.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *dos momentos al día para leerlo.*",
+   "show": "La primera: // *lo lees solo dos veces al día.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "A media mañana y a media tarde. / *Fuera de ahí, no se abre.*",
+   "show": "A media mañana y a media tarde. / *Fuera de esas horas, ni lo abres.*",
    "pause": 0.3,
    "bocadillo": "Lo miro a las doce"
   },
@@ -29,16 +29,16 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *si se contesta en dos minutos, contesta ya.*",
+   "show": "La segunda: // *si lo contestas en dos minutos, hazlo en el momento.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Una confirmación, un sí, una fecha. / *Leerlo dos veces cuesta más que responder.*",
+   "show": "Una confirmación, un sí, una fecha. / Dejarlo para luego y volver a leerlo / *cuesta más que contestar ahora.*",
    "pause": 0.3
   },
   {
-   "show": "Lo demás, a una lista, / *con su hueco en la agenda.*",
+   "show": "Lo demás va a una lista, / *y le buscas un hueco en la agenda.*",
    "pause": 0.3
   },
   {
@@ -47,20 +47,37 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Y quita los avisos. / *Cada aviso te saca de lo que estás haciendo.*",
+   "show": "Y quita las notificaciones. / *Cada una te saca de lo que estás haciendo.*",
    "pause": 0.3
   },
   {
-   "show": "Y volver a concentrarte / *cuesta mucho más que leer un correo.*",
+   "show": "Lo que de verdad cuesta / *es volver a concentrarte, no leer el correo.*",
    "pause": 0.3
   },
   {
-   "show": "El correo es la lista de tareas de los demás. / *Tu trabajo es otra cosa.*",
+   "show": "El correo está lleno de lo que otros quieren de ti. / *Tu trabajo es otra cosa.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese compañero que contesta / *en menos de un minuto.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "fecha": "2026-11-12",
+   "ronda": 1,
+   "cambios": [
+    "1: «Tres reglas para que el correo / *deje de mandar en tu día.*» → «Tres reglas para que el correo / *deje de marcarte el día.*»",
+    "2: «La primera: // *dos momentos al día para leerlo.*» → «La primera: // *lo lees solo dos veces al día.*»",
+    "3: «A media mañana y a media tarde. / *Fuera de ahí, no se abre.*» → «A media mañana y a media tarde. / *Fuera de esas horas, ni lo abres.*»",
+    "5: «La segunda: // *si se contesta en dos minutos, contesta ya.*» → «La segunda: // *si lo contestas en dos minutos, hazlo en el momento.*»",
+    "6: «Una confirmación, un sí, una fecha. / *Leerlo dos veces cuesta más que responder.*» → «Una confirmación, un sí, una fecha. / Dejarlo para luego y volver a leerlo / *cuesta más que contestar ahora.*»",
+    "7: «Lo demás, a una lista, / *con su hueco en la agenda.*» → «Lo demás va a una lista, / *y le buscas un hueco en la agenda.*»",
+    "9: «Y quita los avisos. / *Cada aviso te saca de lo que estás haciendo.*» → «Y quita las notificaciones. / *Cada una te saca de lo que estás haciendo.*»",
+    "10: «Y volver a concentrarte / *cuesta mucho más que leer un correo.*» → «Lo que de verdad cuesta / *es volver a concentrarte, no leer el correo.*»",
+    "11: «El correo es la lista de tareas de los demás. / *Tu trabajo es otra cosa.*» → «El correo está lleno de lo que otros quieren de ti. / *Tu trabajo es otra cosa.*»"
+   ]
   }
  ]
 }

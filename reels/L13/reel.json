@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Cuatro cosas para cobrar antes, / *y la segunda la marca la ley.*",
+   "show": "Cuatro cosas para cobrar antes, / *y una de ellas la dice la ley.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *factura el mismo día que entregas.*",
+   "show": "La primera: // *factura el mismo día que entregas el trabajo.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -24,7 +24,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *el plazo de pago, por escrito en el presupuesto.*",
+   "show": "La segunda: // *pon el plazo de pago por escrito en el presupuesto.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -42,26 +42,42 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Antes de empezar el trabajo. / *El cliente que adelanta, se compromete.*",
+   "show": "Antes de empezar el trabajo. / *El cliente que ya ha adelantado dinero se compromete más.*",
    "pause": 0.3
   },
   {
-   "show": "La cuarta: // *un recordatorio el día que vence.*",
+   "show": "La cuarta: // *manda un recordatorio el mismo día que vence la factura.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Amable y con la factura adjunta. / *Sin esperar a que pase una semana.*",
+   "show": "Un mensaje amable, con la factura adjunta, / *y sin esperar a que pase una semana.*",
    "pause": 0.3,
-   "bocadillo": "Hoy vence la factura 23"
+   "bocadillo": "Te recuerdo que hoy vence la factura 23"
   },
   {
-   "show": "Cobrar a tiempo no es tener suerte con el cliente: / *es dejarlo todo atado antes de empezar.*",
+   "show": "Cobrar a tiempo no depende de tener suerte con el cliente, / *sino de dejarlo todo atado antes de empezar.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese autónomo que todavía / *está esperando cobrar septiembre.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "fecha": "2026-11-12",
+   "ronda": 1,
+   "cambios": [
+    "1: «Cuatro cosas para cobrar antes, / *y la segunda la marca la ley.*» → «Cuatro cosas para cobrar antes, / *y una de ellas la dice la ley.*»",
+    "2: «La primera: // *factura el mismo día que entregas.*» → «La primera: // *factura el mismo día que entregas el trabajo.*»",
+    "4: «La segunda: // *el plazo de pago, por escrito en el presupuesto.*» → «La segunda: // *pon el plazo de pago por escrito en el presupuesto.*»",
+    "8: «Antes de empezar el trabajo. / *El cliente que adelanta, se compromete.*» → «Antes de empezar el trabajo. / *El cliente que ya ha adelantado dinero se compromete más.*»",
+    "9: «La cuarta: // *un recordatorio el día que vence.*» → «La cuarta: // *manda un recordatorio el mismo día que vence la factura.*»",
+    "10: «Amable y con la factura adjunta. / *Sin esperar a que pase una semana.*» → «Un mensaje amable, con la factura adjunta, / *y sin esperar a que pase una semana.*»",
+    "10 bocadillo: «Hoy vence la factura 23» → «Te recuerdo que hoy vence la factura 23»",
+    "11: «Cobrar a tiempo no es tener suerte con el cliente: / *es dejarlo todo atado antes de empezar.*» → «Cobrar a tiempo no depende de tener suerte con el cliente, / *sino de dejarlo todo atado antes de empezar.*»"
+   ]
   }
  ]
 }
