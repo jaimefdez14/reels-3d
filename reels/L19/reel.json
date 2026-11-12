@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Ese retraso es lo que más caro te sale. / *Tres reglas para que tu dinero crezca solo.*",
+   "show": "Y esperar es lo que más caro te sale. / *Tres reglas para que tus ahorros crezcan / sin que hagas nada.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cien euros al mes invertidos desde los 25, / al 6 % anual, / *son unos 200.000 euros a los 65.*",
+   "show": "Si inviertes cien euros al mes desde los 25, / al 6 % anual, / *a los 65 tienes unos 200.000.*",
    "pause": 0.3
   },
   {
@@ -28,11 +28,11 @@
    "pause": 0.3
   },
   {
-   "show": "Esos diez años de retraso / *te cuestan el doble de todo lo que pusiste.*",
+   "show": "Esos diez años de espera te cuestan / *más del doble de lo que habrías puesto.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *que se aparte solo el día que cobras.*",
+   "show": "La segunda: // *que el ahorro salga solo, / el mismo día que cobras.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -41,17 +41,17 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *no lo toques cuando baje.*",
+   "show": "La tercera: // *no lo toques cuando la bolsa baje.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Habrá años en que baje. / *Quien vende con miedo, convierte la bajada en pérdida.*",
+   "show": "Habrá años en que baje. / *Si vendes por miedo, / esa bajada se queda en pérdida de verdad.*",
    "pause": 0.3,
    "bocadillo": "Lo saco antes de que baje más"
   },
   {
-   "show": "Por eso, al ahorrar, el tiempo / *importa más que la cantidad.*",
+   "show": "Por eso, al ahorrar, / *cuenta más cuándo empiezas que cuánto pones.*",
    "pause": 0.3
   },
   {
@@ -59,5 +59,54 @@
    "pause": 0.3
   }
  ],
- "cifras": "Comprobado (12-11-2026): 100 €/mes, 6 % anual con capitalización mensual: 40 años → 199.149 €; 30 años → 100.452 €. Aportado: 48.000 € y 36.000 €. Diez años de retraso cuestan ~98.700 €, unas dos veces lo aportado."
+ "cifras": "Comprobado (12-11-2026): 100 €/mes, 6 % anual con capitalización mensual: 40 años → 199.149 €; 30 años → 100.452 €. Aportado: 48.000 € y 36.000 €. Diez años de retraso cuestan ~98.700 €, unas dos veces lo aportado.",
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Ese retraso es lo que más caro te sale. / *Tres reglas para que tu dinero crezca solo.*",
+     "despues": "Y esperar es lo que más caro te sale. / *Tres reglas para que tus ahorros crezcan / sin que hagas nada.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Cien euros al mes invertidos desde los 25, / al 6 % anual, / *son unos 200.000 euros a los 65.*",
+     "despues": "Si inviertes cien euros al mes desde los 25, / al 6 % anual, / *a los 65 tienes unos 200.000.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Esos diez años de retraso / *te cuestan el doble de todo lo que pusiste.*",
+     "despues": "Esos diez años de espera / te cuestan unos 100.000 euros: / *más del doble de lo que habrías puesto.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La segunda: // *que se aparte solo el día que cobras.*",
+     "despues": "La segunda: // *que el ahorro salga solo, / el mismo día que cobras.*"
+    },
+    {
+     "linea": 8,
+     "antes": "La tercera: // *no lo toques cuando baje.*",
+     "despues": "La tercera: // *no lo toques cuando la bolsa baje.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Habrá años en que baje. / *Quien vende con miedo, convierte la bajada en pérdida.*",
+     "despues": "Habrá años en que baje. / *Si vendes por miedo, / esa bajada se queda en pérdida de verdad.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Por eso, al ahorrar, el tiempo / *importa más que la cantidad.*",
+     "despues": "Por eso, al ahorrar, / *cuenta más cuándo empiezas que cuánto pones.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Esos diez años de espera / te cuestan unos 100.000 euros: / *más del doble de lo que habrías puesto.*",
+     "despues": "Esos diez años de espera te cuestan / *más del doble de lo que habrías puesto.*",
+     "motivo": "redaccion.py: 6 cifras"
+    }
+   ],
+   "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
+  }
+ ]
 }

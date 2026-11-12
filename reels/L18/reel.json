@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Haces bien. / *Antes, tres pruebas que no cuestan casi nada.*",
+   "show": "Haces bien. / *Antes, haz tres pruebas / que casi no cuestan dinero.*",
    "pause": 0.3
   },
   {
@@ -24,7 +24,7 @@
    "pause": 0.3
   },
   {
-   "show": "Que te digan que es buena idea no cuesta nada. / *Lo que cuenta es que paguen.*",
+   "show": "Que te digan que es buena idea es gratis. / *Lo que importa es que paguen.*",
    "pause": 0.3,
    "bocadillo": "¡Qué buena idea!"
   },
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Mientras cobras a fin de mes, / *puedes equivocarte sin miedo.*",
+   "show": "Mientras sigas cobrando a fin de mes, / *puedes equivocarte sin miedo.*",
    "pause": 0.3
   },
   {
@@ -42,25 +42,68 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *ahorra seis meses de gastos.*",
+   "show": "La tercera: // *ten ahorrados seis meses de gastos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Los primeros meses casi siempre se cobra / *menos de lo que esperabas.*",
+   "show": "Los primeros meses casi siempre ganas / *menos de lo que esperabas.*",
    "pause": 0.3
   },
   {
-   "show": "Con ese colchón decides con calma, / *no por miedo a no llegar a fin de mes.*",
+   "show": "Con ese colchón decides con calma, / *sin el miedo de no llegar a fin de mes.*",
    "pause": 0.3
   },
   {
-   "show": "Emprender no es saltar al vacío. / *Es ir comprobando que hay suelo.*",
+   "show": "Emprender así no es tirarse al vacío: / *es comprobar antes de cada paso / que hay suelo.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo que lleva años / *con la idea en un cajón.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Haces bien. / *Antes, tres pruebas que no cuestan casi nada.*",
+     "despues": "Haces bien. / *Antes, haz tres pruebas / que casi no cuestan dinero.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Que te digan que es buena idea no cuesta nada. / *Lo que cuenta es que paguen.*",
+     "despues": "Que te digan que es buena idea es gratis. / *Lo que importa es que paguen.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Mientras cobras a fin de mes, / *puedes equivocarte sin miedo.*",
+     "despues": "Mientras sigas cobrando a fin de mes, / *puedes equivocarte sin miedo.*"
+    },
+    {
+     "linea": 8,
+     "antes": "La tercera: // *ahorra seis meses de gastos.*",
+     "despues": "La tercera: // *ten ahorrados seis meses de gastos.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Los primeros meses casi siempre se cobra / *menos de lo que esperabas.*",
+     "despues": "Los primeros meses casi siempre ganas / *menos de lo que esperabas.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Con ese colchón decides con calma, / *no por miedo a no llegar a fin de mes.*",
+     "despues": "Con ese colchón decides con calma, / *sin el miedo de no llegar a fin de mes.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Emprender no es saltar al vacío. / *Es ir comprobando que hay suelo.*",
+     "despues": "Emprender así no es tirarse al vacío: / *es comprobar antes de cada paso / que hay suelo.*"
+    }
+   ],
+   "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
   }
  ]
 }

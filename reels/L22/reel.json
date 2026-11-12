@@ -20,20 +20,20 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si se puede deshacer, decide rápido. / *Si sale mal, das marcha atrás.*",
+   "show": "Si tiene arreglo, decide rápido. / *Si sale mal, das marcha atrás.*",
    "pause": 0.3
   },
   {
-   "show": "Solo las que no tienen vuelta atrás / *merecen semanas de dudas.*",
+   "show": "Solo las decisiones sin vuelta atrás / *merecen semanas de dudas.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *¿qué le dirías a un amigo?*",
+   "show": "La segunda: // *¿qué le dirías a un amigo en tu lugar?*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Desde fuera, el miedo pesa menos. / *Y la respuesta suele estar clara.*",
+   "show": "Visto desde fuera, el miedo pesa menos / *y la respuesta se ve clara.*",
    "pause": 0.3,
    "bocadillo": "Yo que tú, lo haría"
   },
@@ -43,20 +43,63 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No decidir también es decidir: / *seguir como estás.*",
+   "show": "No decidir también es una decisión: / *la de seguir igual.*",
    "pause": 0.3
   },
   {
-   "show": "Ponte una fecha, y ese día eliges. / *Dudar también tiene un precio.*",
+   "show": "Ponte una fecha y ese día decides. / *Dudar también te cuesta.*",
    "pause": 0.3
   },
   {
-   "show": "Casi siempre, decidir y corregir sobre la marcha / *sale mejor que esperar a estar seguro.*",
+   "show": "Casi siempre sale mejor decidir / y corregir sobre la marcha / *que esperar a tenerlo claro.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a quien lleva meses / *con la misma duda.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Si se puede deshacer, decide rápido. / *Si sale mal, das marcha atrás.*",
+     "despues": "Si tiene arreglo, decide rápido. / *Si sale mal, das marcha atrás.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Solo las que no tienen vuelta atrás / *merecen semanas de dudas.*",
+     "despues": "Solo las decisiones sin vuelta atrás / *merecen semanas de dudas.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *¿qué le dirías a un amigo?*",
+     "despues": "La segunda: // *¿qué le dirías a un amigo en tu lugar?*"
+    },
+    {
+     "linea": 6,
+     "antes": "Desde fuera, el miedo pesa menos. / *Y la respuesta suele estar clara.*",
+     "despues": "Visto desde fuera, el miedo pesa menos / *y la respuesta se ve clara.*"
+    },
+    {
+     "linea": 8,
+     "antes": "No decidir también es decidir: / *seguir como estás.*",
+     "despues": "No decidir también es una decisión: / *la de seguir igual.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ponte una fecha, y ese día eliges. / *Dudar también tiene un precio.*",
+     "despues": "Ponte una fecha y ese día decides. / *Dudar también te cuesta.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Casi siempre, decidir y corregir sobre la marcha / *sale mejor que esperar a estar seguro.*",
+     "despues": "Casi siempre sale mejor decidir / y corregir sobre la marcha / *que esperar a tenerlo claro.*"
+    }
+   ],
+   "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
   }
  ]
 }

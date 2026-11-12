@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Los primeros clientes casi nunca llegan por la web. / *Cuatro formas de conseguirlos.*",
+   "show": "Los primeros clientes casi nunca llegan por la web. / *Te cuento cuatro formas de conseguirlos.*",
    "pause": 0.3
   },
   {
@@ -20,26 +20,26 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En una frase, y con lo que cuesta. / *Casi todos los primeros clientes salen de tu agenda.*",
+   "show": "En una frase y diciendo lo que cobras. / *Casi todos los primeros clientes / salen de tu agenda.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *a cada cliente contento, pídele un nombre.*",
+   "show": "La segunda: // *a cada cliente contento, / pídele que te recomiende a alguien.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Al terminar, pregúntale a quién más le vendría bien. / *Llegar recomendado vende solo.*",
+   "show": "Al acabar el trabajo, pregúntale / si conoce a alguien que lo necesite. / *Cuando llegas recomendado, / casi no tienes que convencer.*",
    "pause": 0.3,
-   "bocadillo": "¿Conoces a alguien a quien le venga bien?"
+   "bocadillo": "¿Conoces a alguien que necesite algo así?"
   },
   {
-   "show": "La tercera: // *enseña trabajos, no promesas.*",
+   "show": "La tercera: // *enseña lo que ya has hecho, / no lo que prometes.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Un antes y un después convence más / *que cualquier descripción.*",
+   "show": "Un antes y un después convence más / *que cualquier explicación.*",
    "pause": 0.3
   },
   {
@@ -48,16 +48,69 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Quien pregunta suele preguntar a varios. / *Muchas veces gana el primero que responde.*",
+   "show": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces se lo lleva / el primero que contesta.*",
    "pause": 0.3
   },
   {
-   "show": "Al principio no se vende con la web, / *sino con la gente que ya te conoce.*",
+   "show": "Al principio no vendes por la web: / *vendes gracias a la gente que ya te conoce.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo que acaba de montar / *su negocio.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Los primeros clientes casi nunca llegan por la web. / *Cuatro formas de conseguirlos.*",
+     "despues": "Los primeros clientes casi nunca llegan por la web. / *Te cuento cuatro formas de conseguirlos.*"
+    },
+    {
+     "linea": 3,
+     "antes": "En una frase, y con lo que cuesta. / *Casi todos los primeros clientes salen de tu agenda.*",
+     "despues": "En una frase y diciendo lo que cobras. / *Casi todos los primeros clientes / salen de tu agenda.*"
+    },
+    {
+     "linea": 4,
+     "antes": "La segunda: // *a cada cliente contento, pídele un nombre.*",
+     "despues": "La segunda: // *a cada cliente contento, / pídele que te recomiende a alguien.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Al terminar, pregúntale a quién más le vendría bien. / *Llegar recomendado vende solo.*",
+     "despues": "Al acabar el trabajo, pregúntale / si conoce a alguien que lo necesite. / *Cuando llegas recomendado, / casi no tienes que convencer.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La tercera: // *enseña trabajos, no promesas.*",
+     "despues": "La tercera: // *enseña lo que ya has hecho, / no lo que prometes.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Un antes y un después convence más / *que cualquier descripción.*",
+     "despues": "Un antes y un después convence más / *que cualquier explicación.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Quien pregunta suele preguntar a varios. / *Muchas veces gana el primero que responde.*",
+     "despues": "El que pide presupuesto suele pedirlo a varios. / *Y muchas veces se lo lleva / el primero que contesta.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Al principio no se vende con la web, / *sino con la gente que ya te conoce.*",
+     "despues": "Al principio no vendes por la web: / *vendes gracias a la gente que ya te conoce.*"
+    },
+    {
+     "linea": 5,
+     "bocadillo_antes": "¿Conoces a alguien a quien le venga bien?",
+     "despues": "¿Conoces a alguien que necesite algo así?"
+    }
+   ],
+   "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
   }
  ]
 }

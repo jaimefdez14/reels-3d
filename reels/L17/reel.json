@@ -11,38 +11,38 @@
    "pause": 0.45
   },
   {
-   "show": "No te falta voluntad: empiezas demasiado fuerte. / *Tres reglas para que un hábito dure.*",
+   "show": "No te falta voluntad: / empiezas con demasiadas ganas. / *Tres reglas para que un hábito dure.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *empieza tan pequeño que te dé hasta vergüenza.*",
+   "show": "La primera: // *empieza por algo tan pequeño / que hasta te dé vergüenza.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Una flexión al día. Una página. Cinco minutos. / *Lo difícil no es hacerlo: es empezar.*",
+   "show": "Una flexión al día. Una página. Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*",
    "pause": 0.3
   },
   {
-   "show": "Cuando ya te sale sin pensar, / *entonces subes.*",
+   "show": "Cuando ya lo haces sin pensar, / *entonces haces un poco más.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ponlo justo después de algo que ya haces.*",
+   "show": "La segunda: // *hazlo justo después / de algo que ya haces cada día.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Después del café, diez sentadillas. / *El café te lo recuerda cada mañana.*",
+   "show": "Después del café, diez sentadillas. / *Así el café te lo recuerda cada mañana.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *marca en el calendario cada día que lo cumples.*",
+   "show": "La tercera: // *tacha en el calendario / cada día que lo hagas.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Una cruz por día. / Al cabo de unas semanas, / *no querrás romper la fila.*",
+   "show": "Una cruz cada día. / Al cabo de unas semanas, / *no querrás romper la racha.*",
    "pause": 0.3
   },
   {
@@ -51,12 +51,65 @@
    "bocadillo": "Hoy no me apetece"
   },
   {
-   "show": "En enero sobran ganas. / *Lo que dura es lo que es fácil de repetir.*",
+   "show": "En enero sobran ganas. / *Lo que dura es lo que cuesta poco repetir.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a quien ya ha pagado / *el gimnasio de enero.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "No te falta voluntad: empiezas demasiado fuerte. / *Tres reglas para que un hábito dure.*",
+     "despues": "No te falta voluntad: / empiezas con demasiadas ganas. / *Tres reglas para que un hábito dure.*"
+    },
+    {
+     "linea": 2,
+     "antes": "La primera: // *empieza tan pequeño que te dé hasta vergüenza.*",
+     "despues": "La primera: // *empieza por algo tan pequeño / que hasta te dé vergüenza.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Una flexión al día. Una página. Cinco minutos. / *Lo difícil no es hacerlo: es empezar.*",
+     "despues": "Una flexión al día. Una página. Cinco minutos. / *Lo que cuesta no es hacerlo: es empezar.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Cuando ya te sale sin pensar, / *entonces subes.*",
+     "despues": "Cuando ya lo haces sin pensar, / *entonces haces un poco más.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *ponlo justo después de algo que ya haces.*",
+     "despues": "La segunda: // *hazlo justo después / de algo que ya haces cada día.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Después del café, diez sentadillas. / *El café te lo recuerda cada mañana.*",
+     "despues": "Después del café, diez sentadillas. / *Así el café te lo recuerda cada mañana.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *marca en el calendario cada día que lo cumples.*",
+     "despues": "La tercera: // *tacha en el calendario / cada día que lo hagas.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Una cruz por día. / Al cabo de unas semanas, / *no querrás romper la fila.*",
+     "despues": "Una cruz cada día. / Al cabo de unas semanas, / *no querrás romper la racha.*"
+    },
+    {
+     "linea": 10,
+     "antes": "En enero sobran ganas. / *Lo que dura es lo que es fácil de repetir.*",
+     "despues": "En enero sobran ganas. / *Lo que dura es lo que cuesta poco repetir.*"
+    }
+   ],
+   "descartado": "propuestas más informales (regla 23) o calcos: «empiezas pasándote», «trabaje por ti»"
   }
  ]
 }
