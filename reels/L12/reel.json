@@ -15,17 +15,17 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *solo lo miras dos veces al día.*",
+   "show": "La primera: // *mientras trabajas en algo importante, el correo no se mira.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "A media mañana y a media tarde. / *Fuera de esas horas, ni lo abres.*",
+   "show": "Una hora, o el rato que necesites. / *Durante ese bloque, ni lo abres.*",
    "pause": 0.3,
-   "bocadillo": "Lo miro a las once"
+   "bocadillo": "Lo miro cuando acabe esto"
   },
   {
-   "show": "Casi todo lo que llega / *puede esperar dos horas.*",
+   "show": "Casi todo lo que llega / *puede esperar a que termines.*",
    "pause": 0.3
   },
   {
@@ -42,12 +42,12 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *cierra el correo el resto del tiempo.*",
+   "show": "La tercera: // *quita las notificaciones.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Y quita las notificaciones. / *Cada una te saca de lo que estás haciendo.*",
+   "show": "Que no te avise cada correo. / *Cada aviso te saca de lo que estás haciendo.*",
    "pause": 0.3
   },
   {
@@ -102,6 +102,18 @@
     "7: «Lo demás lo apuntas en una lista / *y le buscas hueco en la agenda.*» → «Lo que lleva más tiempo lo apuntas en una lista / *y le buscas hueco en la agenda.*»",
     "8: «La tercera: // *cierra la pestaña el resto del tiempo.*» → «La tercera: // *cierra el correo el resto del tiempo.*»",
     "11: «El correo está lleno de lo que te piden los demás. / *Tu trabajo es otra cosa.*» → «El correo está lleno de lo que te piden los demás. / *Lo importante de tu día no está ahí.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "jaime",
+   "cambios": [
+    "2: «La primera: // *solo lo miras dos veces al día.*» → «La primera: // *mientras trabajas en algo importante, el correo no se mira.*»",
+    "3: «A media mañana y a media tarde. / *Fuera de esas horas, ni lo abres.*» → «Una hora, o el rato que necesites. / *Durante ese bloque, ni lo abres.*»",
+    "3 bocadillo: «Lo miro a las once» → «Lo miro cuando acabe esto»",
+    "4: «Casi todo lo que llega / *puede esperar dos horas.*» → «Casi todo lo que llega / *puede esperar a que termines.*»",
+    "8: «La tercera: // *cierra el correo el resto del tiempo.*» → «La tercera: // *quita las notificaciones.*»",
+    "9: «Y quita las notificaciones. / *Cada una te saca de lo que estás haciendo.*» → «Que no te avise cada correo. / *Cada aviso te saca de lo que estás haciendo.*»"
    ]
   }
  ]
