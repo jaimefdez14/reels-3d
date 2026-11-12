@@ -24,7 +24,7 @@
    "pause": 0.3
   },
   {
-   "show": "Y no empiezas el día / *pendiente de lo que te piden los demás.*",
+   "show": "Y no empiezas el día / *leyendo mensajes y correos de los demás.*",
    "pause": 0.3
   },
   {
@@ -33,7 +33,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Llevas ocho horas sin beber. / *Es lo más fácil que vas a hacer en todo el día.*",
+   "show": "Llevas ocho horas sin beber. / *Es lo primero que necesita el cuerpo.*",
    "pause": 0.3
   },
   {
@@ -42,11 +42,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Abre la ventana o sal a dar una vuelta. / *La luz de la mañana es la que te despierta.*",
+   "show": "Abre la ventana o sal a dar una vuelta. / *La luz le dice al cuerpo que ya es hora de despertarse.*",
    "pause": 0.3
   },
   {
-   "show": "El cuarto: // *decide la noche anterior por dónde vas a empezar.*",
+   "show": "El cuarto: // *decide la noche antes cuál es tu primera tarea.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -88,6 +88,16 @@
     "7: «El tercero: // *diez minutos de luz natural.*» → «El tercero: // *diez minutos de luz del día.*»",
     "10: «Una sola cosa, y por escrito. / *Por la mañana no tienes que pensar: solo empezar.*» → «Una sola cosa, y por escrito. / *Así, por la mañana no lo piensas: empiezas.*»",
     "11: «La mañana no empieza al despertarte: / *empieza la noche anterior.*» → «La mañana no empieza cuando te despiertas, / *sino la noche antes.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "4: «Y no empiezas el día / *pendiente de lo que te piden los demás.*» → «Y no empiezas el día / *leyendo mensajes y correos de los demás.*»",
+    "6: «Llevas ocho horas sin beber. / *Es lo más fácil que vas a hacer en todo el día.*» → «Llevas ocho horas sin beber. / *Es lo primero que necesita el cuerpo.*»",
+    "8: «Abre la ventana o sal a dar una vuelta. / *La luz de la mañana es la que te despierta.*» → «Abre la ventana o sal a dar una vuelta. / *La luz le dice al cuerpo que ya es hora de despertarse.*»",
+    "9: «El cuarto: // *decide la noche anterior por dónde vas a empezar.*» → «El cuarto: // *decide la noche antes cuál es tu primera tarea.*»"
    ]
   }
  ]

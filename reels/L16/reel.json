@@ -35,7 +35,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *pregunta qué tendrías que dejar a cambio.*",
+   "show": "La tercera: // *pregunta qué dejas de hacer para hacer eso.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "Vale, ¿y qué dejo de lado para hacer esto?"
@@ -90,6 +90,13 @@
     "6: «La tercera: // *pregunta qué dejas de hacer a cambio.*» → «La tercera: // *pregunta qué tendrías que dejar a cambio.*»",
     "9: «El sí que das sin pensar / *es el que más te pesa luego.*» → «El sí que das sin pensar / *es el que luego más te pesa.*»",
     "10: «Cada vez que dices que no a algo, / *le haces hueco a lo que de verdad te importa.*» → «Cada vez que dices que no, / *te queda tiempo para lo que te importa.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "6: «La tercera: // *pregunta qué tendrías que dejar a cambio.*» → «La tercera: // *pregunta qué dejas de hacer para hacer eso.*»"
    ]
   }
  ]

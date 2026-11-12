@@ -15,7 +15,7 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *manda el orden del día por escrito y con tiempo.*",
+   "show": "La primera: // *manda el orden del día por escrito el día antes.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -43,11 +43,11 @@
    "bocadillo": "Me encargo yo. Para el viernes."
   },
   {
-   "show": "Si no lleva el nombre de alguien, / *no lo hace nadie.*",
+   "show": "Un punto sin nombre / *no lo hace nadie.*",
    "pause": 0.3
   },
   {
-   "show": "La cuarta: // *termina la reunión cinco minutos antes de lo previsto.*",
+   "show": "La cuarta: // *convócala para media hora, no para una.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -88,6 +88,15 @@
     "7: «La tercera: // *cada punto, con un responsable y una fecha.*» → «La tercera: // *cada punto sale con un responsable y una fecha.*»",
     "9: «La cuarta: // *acábala cinco minutos antes de la hora.*» → «La cuarta: // *termina la reunión cinco minutos antes de lo previsto.*»",
     "11: «Una reunión no se mide por lo que dura, / *sino por lo que se decide.*» → «Una buena reunión no es la que dura mucho, / *es la que decide algo.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "2: «La primera: // *manda el orden del día por escrito y con tiempo.*» → «La primera: // *manda el orden del día por escrito el día antes.*»",
+    "8: «Si no lleva el nombre de alguien, / *no lo hace nadie.*» → «Un punto sin nombre / *no lo hace nadie.*»",
+    "9: «La cuarta: // *termina la reunión cinco minutos antes de lo previsto.*» → «La cuarta: // *convócala para media hora, no para una.*»"
    ]
   }
  ]

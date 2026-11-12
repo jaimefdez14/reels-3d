@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Hay cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo da.*",
+   "show": "Hay cuatro pasos para encontrarlas en diez minutos, / *y el último es el que todos dejamos para luego.*",
    "pause": 0.3
   },
   {
@@ -24,7 +24,7 @@
    "pause": 0.3
   },
   {
-   "show": "El segundo: // *marca todo lo que se repite.*",
+   "show": "El segundo: // *apunta todo lo que se repite.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -43,7 +43,7 @@
    "bocadillo": "¿Esto lo uso?"
   },
   {
-   "show": "Si no, / *te sobra.*",
+   "show": "Si no lo recuerdas, / *te sobra.*",
    "pause": 0.3
   },
   {
@@ -56,7 +56,7 @@
    "pause": 0.3
   },
   {
-   "show": "Tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*",
+   "show": "Y no es poco: tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*",
    "pause": 0.3
   },
   {
@@ -89,6 +89,16 @@
     "5: «Las plataformas, las aplicaciones, / el gimnasio, la nube del móvil.» → «Las plataformas, las aplicaciones, / el gimnasio, el espacio en la nube.»",
     "7: «El tercero: // *piensa si lo usaste la semana pasada.*» → «El tercero: // *pregúntate si lo has usado esta última semana.*»",
     "10: «Lo que dejas para luego no se hace nunca, / *y cada mes lo vuelves a pagar.*» → «Lo que dejas para luego no lo haces nunca, / *y cada mes lo vuelves a pagar.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "1: «Hay cuatro pasos para encontrarlas en diez minutos, / *y el último casi nadie lo da.*» → «Hay cuatro pasos para encontrarlas en diez minutos, / *y el último es el que todos dejamos para luego.*»",
+    "4: «El segundo: // *marca todo lo que se repite.*» → «El segundo: // *apunta todo lo que se repite.*»",
+    "8: «Si no, / *te sobra.*» → «Si no lo recuerdas, / *te sobra.*»",
+    "11: «Tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*» → «Y no es poco: tres suscripciones de diez euros al mes / *son trescientos sesenta euros al año.*»"
    ]
   }
  ]

@@ -7,7 +7,7 @@
  "situacion": "Llevas dos años en la empresa, haces más que cuando entraste y cobras lo mismo. Esperas a que alguien lo note, y nadie lo nota. Las subidas casi nunca llegan solas: se piden, con datos y en el momento adecuado.",
  "lines": [
   {
-   "show": "Llevas dos años con el mismo sueldo / *y nadie te ha dicho nada.*",
+   "show": "Llevas dos años con el mismo sueldo / *y nadie te ha hablado de subírtelo.*",
    "pause": 0.45
   },
   {
@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Clientes, ventas, horas ahorradas. / *Un logro con números es mucho más fácil de pagar.*",
+   "show": "Clientes, ventas, horas ahorradas. / *Un logro con números es mucho más difícil de discutir.*",
    "pause": 0.3
   },
   {
@@ -43,11 +43,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una cifra exacta, sin rodeos. / *Y después, deja que hable tu jefe.*",
+   "show": "Para elegirla, mira cuánto se paga por tu puesto fuera. / *Así sabes que no te quedas corto.*",
    "pause": 0.3
   },
   {
-   "show": "Aguanta ese silencio incómodo: / *eso también es negociar.*",
+   "show": "Después habrá un silencio incómodo. / *Aguántalo: eso también es negociar.*",
    "pause": 0.3
   },
   {
@@ -80,6 +80,16 @@
     "6: «Ni en el pasillo ni al final de otra reunión. / *Con día, hora y el motivo claro.*» → «Ni en el pasillo ni al final de otra reunión. / *Con día, hora y un motivo claro.*»",
     "7: «El tercero: // *di una cantidad concreta y espera la respuesta.*» → «El tercero: // *di una cantidad concreta y espera a que te conteste.*»",
     "9: «Aguanta ese silencio incómodo: / *también es negociar.*» → «Aguanta ese silencio incómodo: / *eso también es negociar.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "0: «Llevas dos años con el mismo sueldo / *y nadie te ha dicho nada.*» → «Llevas dos años con el mismo sueldo / *y nadie te ha hablado de subírtelo.*»",
+    "3: «Clientes, ventas, horas ahorradas. / *Un logro con números es mucho más fácil de pagar.*» → «Clientes, ventas, horas ahorradas. / *Un logro con números es mucho más difícil de discutir.*»",
+    "8: «Una cifra exacta, sin rodeos. / *Y después, deja que hable tu jefe.*» → «Para elegirla, mira cuánto se paga por tu puesto fuera. / *Así sabes que no te quedas corto.*»",
+    "9: «Aguanta ese silencio incómodo: / *eso también es negociar.*» → «Después habrá un silencio incómodo. / *Aguántalo: eso también es negociar.*»"
    ]
   }
  ]

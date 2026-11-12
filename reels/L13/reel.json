@@ -7,7 +7,7 @@
  "situacion": "Eres autónomo o tienes una empresa pequeña: entregas el trabajo, el cliente te paga a noventa días, y mientras tanto el alquiler, la cuota y los proveedores los pagas tú cada mes. Dato: entre empresas, la Ley 3/2004 de morosidad (reformada por la Ley 15/2010) pone un plazo máximo de 60 días que no se puede ampliar por acuerdo.",
  "lines": [
   {
-   "show": "Te pagan a noventa días / *y el alquiler lo pagas cada mes.*",
+   "show": "Tu cliente te paga a noventa días / *y el alquiler lo pagas cada mes.*",
    "pause": 0.45
   },
   {
@@ -24,25 +24,25 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *deja el plazo de pago por escrito en el presupuesto.*",
+   "show": "La segunda: // *pon en el presupuesto que pagan en sesenta días como mucho.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Entre empresas, la ley fija un máximo / *de sesenta días.*",
+   "show": "Es el máximo que fija la ley, / también para autónomos. / *Esos noventa días no son legales.*",
    "pause": 0.3
   },
   {
-   "show": "Y no se puede alargar / *ni aunque estéis los dos de acuerdo.*",
+   "show": "Y no se puede alargar / *ni aunque firméis otro plazo.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *pide un anticipo del treinta por ciento.*",
+   "show": "La tercera: // *pide un anticipo del treinta por ciento antes de empezar.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Antes de empezar. / *Quien ya ha adelantado dinero se implica más.*",
+   "show": "*Así, una parte ya la tienes cobrada.*",
    "pause": 0.3
   },
   {
@@ -56,7 +56,7 @@
    "bocadillo": "Te recuerdo que la factura número 23 vence hoy"
   },
   {
-   "show": "Cobrar a tiempo no depende de tener suerte con el cliente, / *sino de dejarlo todo atado antes de empezar.*",
+   "show": "Cobrar a tiempo no depende de tener suerte con el cliente, / *sino de no dejar nada para después.*",
    "pause": 0.3
   },
   {
@@ -92,6 +92,29 @@
     "10: «Un mensaje amable, con la factura adjunta, / *y sin esperar a que pase una semana.*» → «Un mensaje amable, con la factura adjunta, / *sin esperar una semana.*»",
     "10 bocadillo: «Te recuerdo que hoy vence la factura 23» → «Te recuerdo que la factura número 23 vence hoy»",
     "12: «Mándaselo a ese autónomo que todavía / *está esperando cobrar septiembre.*» → «Mándaselo a ese autónomo que todavía / *está esperando a cobrar lo de septiembre.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "4: «La segunda: // *deja el plazo de pago por escrito en el presupuesto.*» → «La segunda: // *pon por escrito en el presupuesto un plazo de pago legal.*»",
+    "5: «Entre empresas, la ley fija un máximo / *de sesenta días.*» → «La ley fija un máximo de sesenta días, / también para autónomos. / *Esos noventa días no son legales.*»",
+    "6: «Y no se puede alargar / *ni aunque estéis los dos de acuerdo.*» → «Y no se puede alargar, / *aunque el cliente y tú lo firméis.*»",
+    "8: «Antes de empezar. / *Quien ya ha adelantado dinero se implica más.*» → «Antes de empezar el trabajo. / *Así, una parte ya la tienes cobrada.*»",
+    "11: «Cobrar a tiempo no depende de tener suerte con el cliente, / *sino de dejarlo todo atado antes de empezar.*» → «Cobrar a tiempo no depende de tener suerte con el cliente, / *sino de no dejar nada para después.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "0: «Te pagan a noventa días / *y el alquiler lo pagas cada mes.*» → «Tu cliente te paga a noventa días / *y el alquiler lo pagas cada mes.*»",
+    "4: «La segunda: // *pon por escrito en el presupuesto un plazo de pago legal.*» → «La segunda: // *pon en el presupuesto que pagan en sesenta días como mucho.*»",
+    "5: «La ley fija un máximo de sesenta días, / también para autónomos. / *Esos noventa días no son legales.*» → «Es el máximo que fija la ley, / también para autónomos. / *Esos noventa días no son legales.*»",
+    "6: «Y no se puede alargar, / *aunque el cliente y tú lo firméis.*» → «Y no se puede alargar / *ni aunque firméis otro plazo.*»",
+    "7: «La tercera: // *pide un anticipo del treinta por ciento.*» → «La tercera: // *pide un anticipo del treinta por ciento antes de empezar.*»",
+    "8: «Antes de empezar el trabajo. / *Así, una parte ya la tienes cobrada.*» → «*Así, una parte ya la tienes cobrada.*»"
    ]
   }
  ]

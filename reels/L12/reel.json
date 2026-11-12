@@ -22,7 +22,7 @@
   {
    "show": "A media mañana y a media tarde. / *Fuera de esas horas, ni lo abres.*",
    "pause": 0.3,
-   "bocadillo": "Lo miro a las doce"
+   "bocadillo": "Lo miro a las once"
   },
   {
    "show": "Casi todo lo que llega / *puede esperar dos horas.*",
@@ -34,15 +34,15 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una confirmación, un sí, una fecha. / Dejarlo para luego y tener que leerlo otra vez / *cuesta más que contestarlo ya.*",
+   "show": "Una confirmación, un sí, una fecha. / *Si lo dejas, tendrás que leerlo dos veces.*",
    "pause": 0.3
   },
   {
-   "show": "Lo demás lo apuntas en una lista / *y le buscas hueco en la agenda.*",
+   "show": "Lo que lleva más tiempo lo apuntas en una lista / *y le buscas hueco en la agenda.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *cierra la pestaña el resto del tiempo.*",
+   "show": "La tercera: // *cierra el correo el resto del tiempo.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -55,7 +55,7 @@
    "pause": 0.3
   },
   {
-   "show": "El correo está lleno de lo que te piden los demás. / *Tu trabajo es otra cosa.*",
+   "show": "El correo está lleno de lo que te piden los demás. / *Lo importante de tu día no está ahí.*",
    "pause": 0.3
   },
   {
@@ -91,6 +91,17 @@
     "7: «Lo demás va a una lista, / *y le buscas un hueco en la agenda.*» → «Lo demás lo apuntas en una lista / *y le buscas hueco en la agenda.*»",
     "10: «Lo que de verdad cuesta / *es volver a concentrarte, no leer el correo.*» → «Lo que cuesta no es leer el correo: / *es volver a concentrarte.*»",
     "11: «El correo está lleno de lo que otros quieren de ti. / *Tu trabajo es otra cosa.*» → «El correo está lleno de lo que te piden los demás. / *Tu trabajo es otra cosa.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "3 bocadillo: «Lo miro a las doce» → «Lo miro a las once»",
+    "6: «Una confirmación, un sí, una fecha. / Dejarlo para luego y tener que leerlo otra vez / *cuesta más que contestarlo ya.*» → «Una confirmación, un sí, una fecha. / *Si lo dejas, tendrás que leerlo dos veces.*»",
+    "7: «Lo demás lo apuntas en una lista / *y le buscas hueco en la agenda.*» → «Lo que lleva más tiempo lo apuntas en una lista / *y le buscas hueco en la agenda.*»",
+    "8: «La tercera: // *cierra la pestaña el resto del tiempo.*» → «La tercera: // *cierra el correo el resto del tiempo.*»",
+    "11: «El correo está lleno de lo que te piden los demás. / *Tu trabajo es otra cosa.*» → «El correo está lleno de lo que te piden los demás. / *Lo importante de tu día no está ahí.*»"
    ]
   }
  ]

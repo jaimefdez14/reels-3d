@@ -7,7 +7,7 @@
  "situacion": "Cobras la paga extra de diciembre y a las dos semanas no queda nada: la mitad se ha ido en cosas que ni recuerdas y la tarjeta sigue cobrando intereses. Lo que funciona es decidir antes de gastar: apartar, pagar deudas y ponerle precio al capricho.",
  "lines": [
   {
-   "show": "Cobras la paga extra / *y a las dos semanas ya no queda nada.*",
+   "show": "Cobras la paga extra de diciembre / *y a las dos semanas ya no queda nada.*",
    "pause": 0.45
   },
   {
@@ -28,7 +28,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *paga antes lo que te cobra intereses.*",
+   "show": "La segunda: // *con lo que queda, paga antes las deudas con intereses.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -37,7 +37,7 @@
    "pause": 0.3
   },
   {
-   "show": "Cada euro que adelantas / *es un euro que ya no te cobra intereses.*",
+   "show": "Esta es la que más te ahorra: / *una tarjeta puede cobrarte un veinte por ciento al año.*",
    "pause": 0.3
   },
   {
@@ -46,12 +46,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues, se acabó.*",
+   "show": "Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues a esa cifra, se acabó.*",
    "pause": 0.3,
    "bocadillo": "Hoy, como mucho 60 €"
   },
   {
-   "show": "Así lo disfrutas / sin que se te vaya la paga entera.",
+   "show": "Así lo disfrutas / sin que se te vaya lo que te queda.",
    "pause": 0.3
   },
   {
@@ -88,6 +88,24 @@
     "7: «Cada euro que adelantas / *es un euro por el que dejas de pagar intereses.*» → «Cada euro que adelantas / *es un euro que ya no te cobra intereses.*»",
     "9: «Decide la cifra antes de salir de casa, / *y cuando llegues a ella, se acabó.*» → «Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues, se acabó.*»",
     "11: «La paga extra no se nota en lo que gastas: / *se nota en lo que te queda en enero.*» → «La paga extra no se nota en lo que gastas, / *sino en lo que te queda en enero.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "0: «Cobras la paga extra / *y a las dos semanas ya no queda nada.*» → «Cobras la paga extra de diciembre / *y a las dos semanas ya no queda nada.*»",
+    "5: «La segunda: // *paga antes lo que te cobra intereses.*» → «La segunda: // *con la otra mitad, adelanta lo que debes con intereses.*»",
+    "7: «Cada euro que adelantas / *es un euro que ya no te cobra intereses.*» → «Esta es la que más te ahorra: / *una tarjeta puede cobrarte un veinte por ciento al año.*»",
+    "9: «Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues, se acabó.*» → «Decide cuánto vas a gastar antes de salir de casa, / *y cuando llegues a esa cifra, se acabó.*»"
+   ]
+  },
+  {
+   "fecha": "2026-11-12",
+   "ronda": "lector",
+   "cambios": [
+    "5: «La segunda: // *con la otra mitad, adelanta lo que debes con intereses.*» → «La segunda: // *con lo que queda, paga antes las deudas con intereses.*»",
+    "10: «Así lo disfrutas / sin que se te vaya la paga entera.» → «Así lo disfrutas / sin que se te vaya lo que te queda.»"
    ]
   }
  ]
