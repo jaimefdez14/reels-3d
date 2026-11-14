@@ -66,13 +66,12 @@ E.numero(1, N[0].T, N[0].S, { desde: 'h3', hacia: 'meses' });
 E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -340, cara: true,
   poses: [[0, 'celebrar'], [w(2, 4), 'ofrecer'], [w(2, 12), 'manos_cabeza'], [w(3, 0), 'de_pie'], [w(3, 2), 'pensar'], [w(3, 7), 'senalar'], [w(4, 1), 'apartarse'], [w(4, 7), 'de_pie'], [w(4, 9), 'senalar']],
   sonrisa: [[0, 1.5], [w(2, 10), 1.2], [w(2, 12), -1.3], [w(3, 2), -0.2], [w(3, 7), 0.3], [w(4, 1), 0], [w(4, 9), 0.8]] });
-E.obj('confiado', 'bocadillo', { t0: N[0].S + 0.05, t1: w(2, 4), sale: 0.15, x: -110, y: -500, w: 320, h: 80, texto: 'Esto no puede fallar', size: 27, pop: true, caja: [-160, -40, 320, 106] });
+E.obj('confiado', 'bocadillo', { t0: N[0].S + 0.05, t1: w(2, 4), sale: 0.15, x: -110, y: -500, w: 340, h: 84, texto: 'Esto no puede fallar', size: 30, pop: true, caja: [-170, -42, 340, 110] });
 tienda('t1', 190, N[0].S - 0.1, w(3, 0), [[0, 1], [w(2, 12) - 0.05, 0]], { puerta: [[0, 0.55], [w(2, 12) - 0.1, 0.55], [w(2, 12) + 0.15, 0, 'in']], luz: [[0, 1], [w(2, 12), 1], [w(2, 12) + 0.3, 0.45]] });
 // un año en el calendario: los doce meses se encienden uno tras otro y el contador suma
 E.obj('cal', 'dias', { t0: w(2, 5), t1: w(3, 0), sale: 0.2, x: 175, y: -440, letras: ['E', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'], gap: 52, pop: true,
   luz: [[w(2, 5), 0], [w(2, 11), 11, 'inout']], caja: [-316, -32, 632, 64] });
-E.obj('meses', 'contador', { t0: N[0].S - 0.1, t1: w(3, 0), sale: 0.2, x: 210, y: -520, r: 50, v: [[w(2, 5), 0], [w(2, 11), 12, 'inout']], pre: '+', suf: ' meses', size: 50, col: AM, miles: false,
-  a: [[0, 0], [w(2, 5) - 0.15, 0], [w(2, 5), 1]], caja: [-150, -30, 300, 60] });
+E.obj('meses', 'contador', { t0: N[0].S - 0.1, t1: w(3, 0), sale: 0.2, x: 235, y: -520, r: 50, v: [[w(2, 5), 0], [w(2, 11), 12, 'inout']], pre: '+', suf: ' meses', size: 50, col: AM, miles: false, caja: [-150, -30, 300, 60] });
 E.temblor(w(2, 12), 14, 0.45); E.golpe(w(2, 12), 0.05);
 // «no te preguntes si puede salir mal»: la pregunta se tacha; «da por hecho»: la certeza se rellena hasta el 100 %
 E.obj('preg', 'rotulo', { t0: w(3, 0) + 0.15, t1: w(4, 0), sale: 0.2, x: 90, y: -470, texto: '¿SALDRÁ MAL?', size: 44, col: '#c9ccca', peso: 700, pop: true, track: 2, caja: [-170, -26, 340, 52] });
@@ -126,7 +125,7 @@ tienda('t8', 200, w(8, 0) - 0.1, TC, [[0, 0], [w(8, 13) - 0.05, 1]], { puerta: [
 E.obj('clientes', 'contador', { t0: w(8, 7), t1: TC, x: 200, y: -470, v: [[w(8, 8), 0], [w(8, 13), 40, 'inout']], suf: ' clientes', size: 50, col: AM, miles: false, pop: true, barrido: [w(8, 13)], caja: [-170, -30, 340, 60] });
 for (let i = 0; i < 6; i++) { const a = w(8, 8) + i * 0.28;
   E.obj('cl8_' + i, 'pieza', { t0: a, t1: a + 0.75, entra: 0.06, sale: 0.15, r: 22, texto: '€', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, -250], [a + 0.7, 200, 'inout']], y: [[a, -330], [a + 0.35, -420], [a + 0.7, -120, 'in']] }); }
+    x: [[a, -250], [a + 0.7, 200, 'inout']], y: [[a, -300], [a + 0.35, -370], [a + 0.7, -120, 'in']] }); }
 E.obj('rayos8', 'rayos', { t0: w(8, 13), t1: TC, x: 200, y: -250, r: 360, z: -2, p: [[w(8, 13), 0], [w(8, 13) + 0.4, 0.9, 'out']], inspeccion: false });
 E.obj('ch8', 'chispas', { t0: w(8, 13), t1: w(8, 13) + 0.8, x: 200, y: -255, r0: 110, r1: 220, inspeccion: false });
 E.destello(w(8, 13), 0.15);

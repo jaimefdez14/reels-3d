@@ -32,12 +32,12 @@ CL.forEach((s, i) => { const a = 0.15 + i * 0.12, x = -110 + i * 115;
     luz: i === 0 ? 1 : [[0, 1], [w(0, 4), 1], [w(0, 5), 0.55], [w(1, 9), 0.55], [w(1, 10), 1]],
     s: i === 0 ? [[0, 1], [w(0, 4), 1], [w(0, 5), 1.25, 'back'], [w(0, 8), 1.1]] : 1, caja: [-40, -40, 80, 80] }); });
 E.obj('pct20', 'rotulo', { t0: w(0, 4) - 0.05, t1: w(1, 3), sale: 0.2, x: -110, y: -515, texto: '20 %', size: 34, col: '#e6ce46', pop: true, caja: [-50, -20, 100, 40] });
-E.obj('fl0', 'flecha', { t0: w(0, 9), t1: w(1, 15), sale: 0.2, de: [-110, -380], hasta: [-60, -235], curva: 0.2, discontinua: true, p: [[w(0, 9), 0], [w(0, 11), 1, 'out']], inspeccion: false });
+E.obj('fl0', 'flecha', { t0: w(0, 9), t1: w(1, 15), sale: 0.2, de: [-110, -385], hasta: [-100, -212], curva: 0.08, discontinua: true, p: [[w(0, 9), 0], [w(0, 11), 1, 'out']], inspeccion: false });
 E.obj('gana0', 'relleno', { t0: w(0, 8), t1: fin(0), x: 110, y: -180, w: 380, h: 50, rotulo: 'LO QUE GANAS', pct: true, pop: true,
   f: [[w(0, 10), 0], [wf(0, -1), 0.8, 'inout']], barrido: [wf(0, -1)], caja: [-190, -60, 520, 90] });
 E.obj('ch0', 'chispas', { t0: wf(0, -1), t1: wf(0, -1) + 0.8, x: 240, y: -180, r0: 60, r1: 150, inspeccion: false });
 E.sfx(w(0, 10), 'fill');
-E.obj('regla', 'rotulo', { t0: w(1, 2), t1: w(1, 5) + 0.1, sale: 0.2, x: 120, y: -305, texto: '80/20', size: 64, col: '#e6ce46', peso: 700, pop: true, caja: [-110, -36, 220, 72] });
+E.obj('regla', 'rotulo', { t0: w(1, 2), t1: w(1, 5) + 0.1, sale: 0.2, x: 210, y: -300, texto: '80/20', size: 64, col: '#e6ce46', peso: 700, pop: true, caja: [-110, -36, 220, 72] });
 // «casi todo tu tiempo se lo llevan los demás»: las horas de los otros cuatro suben en rojo
 E.obj('horas0', 'contador', { t0: w(1, 6), t1: N[0].T - 0.05, sale: 0.2, x: 235, y: -315, v: [[w(1, 7), 0], [wf(1, 14), 40, 'inout']], suf: ' h a la semana', size: 36, col: ROJO, miles: false, pop: true, caja: [-170, -24, 340, 48] });
 E.obj('br0', 'flecha', { t0: w(1, 6), t1: N[0].T - 0.05, sale: 0.2, de: [-30, -368], hasta: [400, -368], curva: 0, col: ROJO, w: 4, discontinua: true, punta: false, p: [[w(1, 6), 0], [w(1, 9), 1, 'out']], inspeccion: false });
@@ -121,6 +121,7 @@ P3.forEach(([s, v0, v1], i) => { const a = N[2].S + i * 0.15, va = v1 === 0, sub
   E.obj('p' + i, 'etiqueta', { t0: a, t1: va ? w(6, 19) : w(7, 0), sale: 0.3, x: 40, y: py(i), w: 280, h: 74, pop: true, r: 60,
     v: va ? v0 : [[a, v0], [sube, v0], [sube + 0.7, v1, 'inout']], on: va ? 0.15 : [[0, 0.2], [sube, 0.2], [sube + 0.5, 1]], luz: va ? [[0, 1], [w(6, 15), 1], [w(6, 17), 0.4]] : 1,
     barrido: va ? null : [sube + 0.7], caja: [-140, -37, 280, 74] });
+  E.obj('hq' + i, 'contador', { t0: w(6, 9) + i * 0.12, t1: va ? w(6, 16) - 0.05 : sube + 0.4, sale: 0.1, x: 240, y: py(i), v: [12, 14, 18][i], suf: ' h', size: 32, col: ROJO, miles: false, pop: true, caja: [-46, -19, 92, 38] });
   if (!va) E.obj('up' + i, 'rotulo', { t0: sube + 0.5, t1: w(7, 0), sale: 0.2, x: 240, y: py(i), texto: '×' + (v1 / v0), size: 34, col: '#e6ce46', peso: 700, pop: true, caja: [-36, -20, 72, 40] }); });
 // E: tachado rojo y fuera
 E.obj('tachE', 'flecha', { t0: w(6, 15), t1: w(6, 19), sale: 0.3, de: [-230, py(1)], hasta: [190, py(1)], curva: 0, col: ROJO, w: 7, punta: false, p: [[w(6, 15), 0], [w(6, 17), 1, 'out']], inspeccion: false });
@@ -136,7 +137,7 @@ E.obj('libres', 'contador', { t0: w(7, 1), t1: TC, x: -60, y: -180, v: [[w(7, 1)
   E.obj('top' + i, 'pieza', { t0: w(7, 4) - 0.1, t1: TC, x: 300, y: yy, r: 46, texto: s, pop: true, on: [[0, 0.3], [w(7, 9), 0.3], [w(7, 10), 1]], caja: [-46, -46, 92, 92] });
   for (let j = 0; j < 3; j++) { const a = w(7, 5) + i * 0.15 + j * 0.3;
     E.obj('hv' + i + j, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.15, r: 16, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-      x: [[a, -60], [a + 0.65, 300, 'inout']], y: [[a, -360], [a + 0.32, -560], [a + 0.65, yy, 'in']] }); } });
+      x: [[a, -60], [a + 0.65, 300, 'inout']], y: [[a, -485], [a + 0.32, -520], [a + 0.65, yy, 'in']] }); } });
 E.obj('chT', 'chispas', { t0: wf(7, -1), t1: wf(7, -1) + 0.8, x: 300, y: -355, r0: 90, r1: 200, inspeccion: false });
 E.destello(wf(7, -1), 0.12);
 

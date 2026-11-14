@@ -44,8 +44,8 @@ E.figura('bluma', { t0: w(1, 2) - 0.1, t1: w(2, 0), sale: 0.2, x: -420, talla: 4
 E.figura('camarero', { t0: w(1, 11) - 0.1, t1: w(2, 0), sale: 0.2, x: -170, cara: true, toca: ['libreta'],
   poses: [[0, 'de_pie'], [w(1, 13), 'ofrecer'], [w(1, 18), 'pensar'], [w(1, 21), 'senalar']],
   sonrisa: [[w(1, 12), 0.6], [w(1, 21), 1.2]] });
-E.obj('libreta', 'lista', { t0: w(1, 12), t1: w(2, 0), sale: 0.2, x: -70, y: -250, n: 3, w: 130, gap: 34, pop: true,
-  brillo: [[w(1, 13), 0], [w(1, 16), 3, 'lin']], caja: [-65, -50, 130, 100] });
+E.obj('libreta', 'lista', { t0: w(1, 12), t1: w(2, 0), sale: 0.2, x: -50, y: -265, n: 3, w: 200, gap: 50, pop: true,
+  brillo: [[w(1, 12), 0.6], [w(1, 16), 3, 'lin']], caja: [-100, -72, 200, 144] });
 // cuentas: las cobradas (1 y 3) se apagan, las que no ha cobrado brillan
 const CU = [80, 150, 220, 290, 360];
 CU.forEach((x, i) => { const a = w(1, 13) + i * 0.1, cobrada = i === 1 || i === 3;
@@ -103,7 +103,7 @@ E.obj('tira', 'flecha', { t0: w(4, 13) - 0.1, t1: fin(1), de: [-250, -300], hast
 // 5: La(0) segunda(1) cuando(2) pares(3) por(4) hoy(5) deja(6) empezado(7) lo(8) siguiente(9)
 // 6: Al(0) día(1) siguiente(2) no(3) empiezas(4) de(5) cero(6) sigues(7) por(8) donde(9) lo(10) dejaste(11)
 E.numero(2, N[1].T, N[1].S, { desde: 'inf1', hacia: 'bar2' });
-E.figura('yo5', { t0: N[1].S - 0.1, t1: fin(2), x: -390, cara: true,
+E.figura('yo5', { t0: N[1].S - 0.1, t1: fin(2), x: -330, cara: true,
   poses: [[0, 'de_pie'], [w(5, 2), 'senalar'], [w(5, 3), 'apartarse'], [w(5, 6), 'ofrecer'], [w(6, 0), 'de_pie'], [w(6, 3), 'encoger'], [w(6, 7), 'senalar'], [wf(6, -1), 'celebrar']],
   sonrisa: [[w(5, 2), 0.5], [w(5, 6), 1], [w(6, 3), 0.2], [wf(6, -1), 1.5]] });
 E.obj('bar2', 'barra', { t0: N[1].S - 0.1, t1: fin(2), x: 120, y: -330, w: 500, h: 52, pop: true, sobrevive: true, r: 60,
@@ -122,20 +122,20 @@ E.obj('ch6', 'chispas', { t0: wf(6, -1), t1: wf(6, -1) + 0.8, x: 120, y: -330, r
 // 7: La(0) tercera(1) antes(2) de(3) dejarlo(4) apunta(5) qué(6) te(7) toca(8) hacer(9) después(10)   [bocadillo «¿Por dónde iba?»]
 // 8: Recuerdas(0) que(1) está(2) a(3) medias(4) pero(5) no(6) por(7) dónde(8) ibas(9) Así(10) al(11) volver(12) no(13) pierdes(14) ni(15) un(16) minuto(17) haciendo(18) memoria(19)
 E.numero(3, N[2].T, N[2].S, { desde: 'bar2', hacia: 'nota' });
-E.figura('yo7', { t0: N[2].S - 0.1, t1: TC, x: -380, cara: true, toca: ['nota'],
-  poses: [[0, 'de_pie'], [w(7, 2), 'pensar'], [w(7, 5), 'coger'], [w(8, 0), 'de_pie'], [w(8, 5), 'encoger'], [w(8, 10), 'senalar'], [w(8, 17), 'celebrar']],
+E.figura('yo7', { t0: N[2].S - 0.1, t1: TC, x: -330, cara: true, toca: ['nota'],
+  poses: [[0, 'de_pie'], [w(7, 2), 'pensar'], [w(7, 5), 'ofrecer'], [w(8, 0), 'de_pie'], [w(8, 5), 'encoger'], [w(8, 10), 'senalar'], [w(8, 17), 'celebrar']],
   sonrisa: [[w(7, 2), -0.4], [w(7, 5), 0.6], [w(8, 5), 0], [w(8, 10), 0.8], [w(8, 17), 1.5]] });
-E.obj('iba', 'bocadillo', { t0: w(7, 2) - 0.1, t1: w(7, 5) + 0.3, sale: 0.2, x: -120, y: -480, w: 290, h: 76, texto: '¿Por dónde iba?', size: 30, pop: true, caja: [-145, -38, 290, 102] });
-E.obj('nota', 'lista', { t0: N[2].S - 0.1, t1: w(8, 13), sale: 0.25, x: 165, y: -380, n: 3, w: 320, gap: 62, sobrevive: false,
-  brillo: [[w(7, 5), 0], [wf(7, -1), 3, 'lin']], p: [[w(8, 10), 0], [w(8, 11) + 0.2, 1, 'out']], barrido: [w(8, 9)], caja: [-160, -100, 320, 200] });
-E.obj('rotNota', 'rotulo', { t0: w(7, 5), t1: w(8, 13), sale: 0.25, x: 165, y: -515, texto: 'SIGUIENTE PASO', size: 28, col: '#e6ce46', pop: true, caja: [-130, -17, 260, 34] });
+E.obj('iba', 'bocadillo', { t0: w(7, 2) - 0.1, t1: w(7, 5) + 0.05, sale: 0.2, x: -90, y: -480, w: 290, h: 76, texto: '¿Por dónde iba?', size: 30, pop: true, caja: [-145, -38, 290, 102] });
+E.obj('nota', 'lista', { t0: N[2].S - 0.1, t1: w(8, 13), sale: 0.25, x: 190, y: -380, n: 3, w: 320, gap: 62, sobrevive: false,
+  brillo: [[N[2].S, 0], [N[2].S + 0.6, 0.6, 'out'], [w(7, 5), 0.6], [wf(7, -1), 3, 'lin']], p: [[w(8, 10), 0], [w(8, 11) + 0.2, 1, 'out']], barrido: [w(8, 9)], caja: [-160, -100, 320, 200] });
+E.obj('rotNota', 'rotulo', { t0: w(7, 5), t1: w(8, 13), sale: 0.25, x: 190, y: -515, texto: 'SIGUIENTE PASO', size: 28, col: '#e6ce46', pop: true, caja: [-130, -17, 260, 34] });
 E.obj('med8', 'relleno', { t0: w(8, 0) - 0.1, t1: TC, x: 80, y: -170, w: 340, h: 46, rotulo: 'A MEDIAS', pct: true,
   f: [[w(8, 0), 0], [w(8, 4), 0.5, 'out'], [w(8, 12), 0.5], [wf(8, -1), 0.8, 'inout']], caja: [-170, -60, 470, 85] });
-E.obj('cero8', 'temporizador', { t0: w(8, 13), t1: TC, x: 130, y: -400, r: 85, texto: '0', sub: 'MIN', pop: true,
+E.obj('cero8', 'temporizador', { t0: w(8, 13), t1: TC, x: 160, y: -400, r: 85, texto: '0', sub: 'MIN', pop: true,
   p: [[w(8, 13), 0], [w(8, 17), 1, 'out']], hecho: [[w(8, 17), 0], [w(8, 17) + 0.35, 1]], barrido: [wf(8, -1)], caja: [-100, -100, 200, 200] });
 E.sfx(w(7, 5), 'fill'); E.sfx(w(8, 0), 'fill'); E.sfx(w(8, 12), 'fill');
 E.temblor(w(8, 6), 8, 0.35);
-E.obj('ch8', 'chispas', { t0: w(8, 17), t1: w(8, 17) + 0.8, x: 130, y: -400, r0: 110, r1: 220, inspeccion: false });
+E.obj('ch8', 'chispas', { t0: w(8, 17), t1: w(8, 17) + 0.8, x: 160, y: -400, r0: 110, r1: 220, inspeccion: false });
 E.golpe(w(8, 17), 0.04); E.destello(w(8, 17), 0.12);
 
 // ---------- cierre: resumen y envío ----------

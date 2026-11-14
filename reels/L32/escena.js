@@ -57,7 +57,7 @@ E.destello(w(1, 17), 0.15);
 // 3: Alquiler(0) comida(1) facturas(2) transporte(3) Si(4) cobras(5) 1.600(6) euros(7) son(8) 800(9)
 E.numero(1, N[0].T, N[0].S, { desde: 'h50', hacia: 'fijos' });
 E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -370, cara: true,
-  poses: [[0, 'de_pie'], [w(2, 3), 'senalar'], [w(3, 0), 'meter'], [w(3, 4), 'de_pie'], [w(3, 6), 'ofrecer'], [w(3, 9), 'celebrar']],
+  poses: [[0, 'de_pie'], [w(2, 3), 'senalar'], [w(3, 0), 'ofrecer'], [w(3, 4), 'de_pie'], [w(3, 6), 'ofrecer'], [w(3, 9), 'celebrar']],
   sonrisa: [[w(2, 3), 0.5], [w(3, 0), 0.3], [w(3, 9), 1.5]] });
 E.obj('barra1', 'relleno', { t0: N[0].S - 0.1, t1: fin(1), x: 60, y: -470, w: 380, h: 48, pop: true, pct: true,
   rotulo: [[0, 'NÓMINA'], [w(3, 6) - 0.1, 'NÓMINA DE 1.600 €']], f: [[w(2, 3) - 0.1, 0], [w(2, 3) + 0.5, 0.5, 'out']], caja: [-190, -60, 470, 90] });
@@ -70,9 +70,9 @@ E.obj('cuenta1', 'contador', { t0: w(3, 0) - 0.1, t1: fin(1), x: 190, y: -360, p
   v: [[w(3, 0), 0], [w(3, 0) + 0.6, 450, 'out'], [w(3, 1) + 0.6, 650, 'out'], [w(3, 2) + 0.6, 730, 'out'], [w(3, 3) + 0.6, 800, 'out']], barrido: [w(3, 9)], caja: [-130, -34, 260, 68] });
 const G1 = ['ALQUILER', 'COMIDA', 'FACTURAS', 'TRANSPORTE'];
 G1.forEach((s, i) => { const a = w(3, i);
-  E.obj('g1_' + i, 'rotulo', { t0: a - 0.05, t1: i < 3 ? w(3, i + 1) - 0.02 : w(3, 4) + 0.2, entra: 0.1, sale: 0.12, x: -60, y: -250, texto: s, size: 30, col: '#c9ccca', pop: true, caja: [-120, -18, 240, 36] });
+  E.obj('g1_' + i, 'rotulo', { t0: a - 0.05, t1: i < 3 ? w(3, i + 1) - 0.02 : w(3, 4) + 0.2, entra: 0.1, sale: 0.12, x: -55, y: -250, texto: s, size: 30, col: '#c9ccca', pop: true, caja: [-120, -18, 240, 36] });
   E.obj('m1_' + i, 'moneda', { t0: a + 0.05, t1: a + 0.7, entra: 0.06, sale: 0.12, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a + 0.05, -60], [a + 0.6, 190, 'inout']], y: [[a + 0.05, -280], [a + 0.3, -340], [a + 0.6, -200, 'in']] });
+    x: [[a + 0.05, -55], [a + 0.6, 190, 'inout']], y: [[a + 0.05, -280], [a + 0.3, -315], [a + 0.6, -200, 'in']] });
   E.golpe(a + 0.6, 0.015); });
 E.obj('ch1', 'chispas', { t0: w(3, 9), t1: w(3, 9) + 0.8, x: 190, y: -360, r0: 110, r1: 220, inspeccion: false });
 E.golpe(w(3, 9), 0.04); E.destello(w(3, 9), 0.12);
@@ -106,7 +106,7 @@ E.obj('rotCena', 'rotulo', { t0: w(5, 5), t1: fin(2), x: -60, y: -180, texto: 'C
 E.obj('m2p', 'moneda', { t0: w(5, 6), t1: w(5, 6) + 0.7, entra: 0.06, sale: 0.12, r: 24, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
   x: [[w(5, 6), 190], [w(5, 6) + 0.6, -60, 'inout']], y: [[w(5, 6), -250], [w(5, 6) + 0.3, -330], [w(5, 6) + 0.6, -250, 'in']] });
 E.sfx(w(5, 6), 'coin');
-E.obj('dice2', 'bocadillo', { t0: w(5, 4) - 0.1, t1: fin(2) - 0.1, sale: 0.2, x: -70, y: -500, w: 500, h: 76, texto: 'Esto sale de la parte de caprichos', size: 25, on: 1, pop: true, caja: [-250, -38, 500, 102] });
+E.obj('dice2', 'bocadillo', { t0: w(5, 4) - 0.1, t1: fin(2) - 0.1, sale: 0.2, x: -40, y: -500, w: 540, h: 80, texto: 'Esto sale de la parte de caprichos', size: 28, on: 1, pop: true, caja: [-270, -40, 540, 106] });
 E.obj('ch2', 'chispas', { t0: wf(5, -1), t1: wf(5, -1) + 0.8, x: -60, y: -250, r0: 80, r1: 170, inspeccion: false });
 E.golpe(wf(5, -1), 0.04);
 

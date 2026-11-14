@@ -17,8 +17,8 @@ const TC = w(11, 0) - 0.1;   // resumen
 E.camara([
   [0, [0, -380, 1.04]], [w(0, 9), [20, -385, 1.07]], [w(1, 0), [0, -380, 1.02]], [N[0].T, [20, -390, 1.06]],
   [N[0].S - 0.05, [0, -380, 1], 'lin'], [w(3, 9), [30, -395, 1.04]], [w(4, 12), [20, -385, 1.06]], [w(5, 0), [0, -390, 1.02]], [N[1].T, [0, -390, 1.05]],
-  [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(7, 10), [30, -395, 1.04]], [w(7, 17), [10, -385, 1.06]], [N[2].T, [10, -390, 1.05]],
-  [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(9, 7), [40, -395, 1.03]], [wf(9, -1), [20, -385, 1.05]], [TX, [0, -385, 1.02]], [TC, [0, -395, 1.05]],
+  [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(7, 10), [-10, -395, 1.04]], [w(7, 17), [10, -385, 1.06]], [N[2].T, [10, -390, 1.05]],
+  [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(9, 7), [-10, -390, 1.03]], [wf(9, -1), [0, -385, 1.03]], [TX, [0, -385, 1.02]], [TC, [0, -395, 1.05]],
 ]);
 
 // fila de la división, arriba (y = FY); dx desplaza la fila entera
@@ -123,7 +123,7 @@ E.obj('mitad2', 'rotulo', { t0: w(7, 24) - 0.05, t1: fin(2), x: 410, y: -380, te
 // 9: Con(0) una(1) tarjeta(2) al(3) dieciocho(4) por(5) ciento(6) setenta(7) y(8) dos(9) entre(10) dieciocho(11) son(12) cuatro(13) en(14) cuatro(15) años(16) debes(17) el(18) doble(19)   [bocadillo «Ya lo iré pagando poco a poco»]
 // 10: La(0) regla(1) no(2) es(3) exacta(4) pero(5) se(6) queda(7) muy(8) cerca(9)
 E.numero(3, N[2].T, N[2].S, { desde: 'dinero', hacia: 'tarjeta' });
-E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -380, cara: true,
+E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -355, cara: true,
   poses: [[0, 'de_pie'], [w(8, 2), 'senalar'], [w(9, 0), 'ofrecer'], [w(9, 7), 'de_pie'], [w(9, 14), 'encoger'], [wf(9, -1) - 0.3, 'manos_cabeza'],
     [w(10, 0), 'de_pie'], [w(10, 5), 'senalar']],
   sonrisa: [[w(8, 2), 0.2], [w(9, 0), 0.9], [w(9, 14), -0.6], [wf(9, -1), -1.4], [w(10, 0), 0], [w(10, 7), 0.8]] });
@@ -133,7 +133,7 @@ E.obj('rotTar', 'rotulo', { t0: N[2].S, t1: TX + 0.25, sale: 0.25, x: 150, y: -4
 E.obj('debes', 'relleno', { t0: w(8, 4) - 0.1, t1: TX + 0.25, sale: 0.25, x: 150, y: -110, w: 420, h: 46, pop: true, rotulo: 'LO QUE DEBES',
   f: [[w(8, 4), 0], [w(8, 8), 0.5, 'out'], [w(9, 14), 0.5], [wf(9, -1), 1, 'inout']], barrido: [wf(9, -1)], caja: [-210, -75, 420, 100] });
 E.sfx(w(8, 4), 'fill'); E.sfx(w(9, 14), 'fill');
-E.obj('pagar', 'bocadillo', { t0: w(9, 0) - 0.1, t1: w(9, 7), sale: 0.2, x: -180, y: -545, w: 380, h: 76, texto: 'Ya lo iré pagando poco a poco', size: 24, pop: true, caja: [-190, -38, 380, 102] });
+E.obj('pagar', 'bocadillo', { t0: w(9, 0) - 0.1, t1: w(9, 7), sale: 0.2, x: -90, y: -533, w: 380, h: 56, texto: 'Ya lo iré pagando poco a poco', size: 23, pop: true, caja: [-190, -28, 380, 82] });
 E.obj('p18', 'pieza', { t0: w(9, 4) - 0.05, t1: TX + 0.25, sale: 0.25, x: PX + 100, y: FY, r: 38, texto: '18', pop: true });
 division('d3', 100, w(9, 7), w(9, 10), w(9, 12), TX + 0.25, 0.25);
 E.obj('res3', 'contador', { t0: w(9, 12) - 0.05, t1: TX + 0.25, sale: 0.25, x: RX + 100, y: FY, v: [[w(9, 12), 0], [wf(9, 13) + 0.1, 4, 'out']],

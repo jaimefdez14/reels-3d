@@ -16,7 +16,7 @@ E.camara([
   [0, [0, -380, 1.04]], [w(0, 10), [20, -385, 1.07]], [w(1, 0), [0, -380, 1.02]], [w(1, 11), [10, -390, 1.05]], [N[0].T, [20, -390, 1.06]],
   [N[0].S - 0.05, [0, -380, 1], 'lin'], [w(3, 0), [20, -385, 1.05]], [w(4, 0), [0, -380, 1.03]], [N[1].T, [0, -390, 1.06]],
   [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(6, 5), [-20, -385, 1.05]], [w(6, 12), [0, -385, 1.03]], [N[2].T, [0, -390, 1.05]],
-  [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(8, 0), [0, -385, 1.03]], [wf(8, -1), [0, -395, 1.07]], [TC, [0, -390, 1.05]],
+  [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(8, 0), [0, -385, 1.03]], [wf(8, -1), [0, -395, 1.05]], [TC, [0, -390, 1.05]],
 ]);
 
 // ---------- gancho ----------
@@ -26,11 +26,11 @@ const GX = 190;
 E.figura('yo', { t0: 0, t1: fin(0), x: -330, cara: true, toca: [],
   poses: [[0, 'celebrar'], [w(0, 4), 'ofrecer'], [w(0, 10), 'celebrar'], [w(0, 12), 'de_pie'], [w(0, 13), 'manos_cabeza'], [w(1, 0), 'senalar'], [w(1, 4), 'encoger'], [w(1, 9), 'de_pie'], [w(1, 11), 'senalar']],
   sonrisa: [[0, 1.4], [w(0, 12), 0.8], [w(0, 13), -1.2], [w(1, 4), -0.6], [w(1, 11), 0.4], [w(1, 20), 1.2]] });
-E.obj('bocaH', 'bocadillo', { t0: 0.3, t1: w(0, 10), sale: 0.2, x: -30, y: -545, w: 420, h: 80, texto: '¡Este mes he facturado un montón!', size: 24, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: 0.3, t1: w(0, 8), sale: 0.2, x: -30, y: -490, w: 420, h: 80, texto: '¡Este mes he facturado un montón!', size: 24, pop: true,
   on: [[0.3, 0], [0.8, 1]], caja: [-210, -40, 420, 106] });
-E.obj('factura', 'etiqueta', { t0: 0.1, t1: fin(0), x: GX, y: -360, w: 360, h: 120,
+E.obj('factura', 'etiqueta', { t0: 0.1, t1: fin(0), x: GX, y: -350, w: 360, h: 120,
   v: [[0.4, 0], [w(0, 7), 3000, 'out'], [w(0, 10), 3000], [w(0, 11) + 0.25, 3630, 'inout']], barrido: [w(0, 7), w(0, 11) + 0.3], caja: [-180, -60, 360, 120] });
-E.obj('rotFact', 'rotulo', { t0: 0.1, t1: fin(0), x: GX, y: -455, texto: [[0, 'FACTURA'], [w(0, 8), '+ 21 % DE IVA'], [w(1, 0), 'EL IVA ES DE HACIENDA']], size: 26, col: '#9a9c9b', caja: [-170, -16, 340, 32] });
+E.obj('rotFact', 'rotulo', { t0: w(0, 8) + 0.05, t1: fin(0), x: GX, y: -450, pop: true, texto: [[0, '+ 21 % DE IVA'], [w(1, 0), 'EL IVA ES DE HACIENDA']], size: 26, col: '#9a9c9b', caja: [-170, -16, 340, 32] });
 E.obj('pilaH', 'pila', { t0: 0.1, t1: fin(0), x: GX, n: 10, w: 190, hh: 26, k: [[w(0, 9), 0], [w(0, 11) + 0.3, 10, 'out'], [w(0, 13), 10], [w(0, 15), 8.3, 'inout']],
   luz: [[0, 1], [w(1, 9), 1], [w(1, 9) + 0.3, 0.5]], caja: [-95, -224, 190, 224], refl: true });
 E.sfx(w(0, 10), 'fill');
@@ -38,7 +38,7 @@ E.obj('menos', 'contador', { t0: w(0, 13) - 0.05, t1: w(1, 9), sale: 0.2, x: GX,
   caja: [-130, -36, 260, 72] });
 for (let i = 0; i < 4; i++) { const a = w(0, 13) + i * 0.14;
   E.obj('fuera' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.05, sale: 0.2, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, GX + 60], [a + 0.8, 580 + i * 30, 'in']], y: [[a, -200], [a + 0.35, -270 - i * 6, 'out'], [a + 0.8, -120, 'in']] }); }
+    x: [[a, GX + 60], [a + 0.8, 580 + i * 30, 'in']], y: [[a, -190], [a + 0.35, -235 - i * 6, 'out'], [a + 0.8, -100, 'in']] }); }
 E.temblor(w(0, 14), 14, 0.45); E.golpe(w(0, 14), 0.05);
 // «tres sobres»: tres monedas; «lo que sobra es lo que ganas»: la primera crece y brilla
 E.obj('rayosH', 'rayos', { t0: w(1, 11) - 0.1, t1: fin(0), x: GX, y: -545, r: 300, z: -2, p: [[w(1, 11) - 0.1, 0], [w(1, 20), 1, 'out']], inspeccion: false });
@@ -73,7 +73,7 @@ E.obj('ivaC', 'contador', { t0: w(2, 4) - 0.1, t1: fin(1), x: T1, y: -330, size:
   v: [[w(2, 4), 0], [wf(2, -1) + 0.2, 630, 'inout'], [w(4, 0), 630], [w(4, 3), 0, 'inout'], [wf(4, -1) + 0.3, 0], [wf(4, -1) + 0.7, 630, 'inout']], caja: [-100, -28, 200, 56] });
 for (let i = 0; i < 5; i++) { const a = w(2, 4) + i * 0.24;
   E.obj('m1_' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.06, sale: 0.15, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, P1], [a + 0.75, T1, 'inout']], y: [[a, -210], [a + 0.38, -500], [a + 0.75, -150, 'in']] }); }
+    x: [[a, P1], [a + 0.75, T1, 'inout']], y: [[a, -235], [a + 0.38, -292], [a + 0.75, -150, 'in']] }); }
 E.sfx(w(2, 4), 'fill');
 E.obj('mismoDia', 'rotulo', { t0: w(2, 6) - 0.1, t1: w(3, 0), sale: 0.2, x: T1, y: -405, texto: 'EL MISMO DÍA', size: 26, col: '#e6ce46', pop: true, caja: [-100, -16, 200, 32] });
 // «Ese veintiuno por ciento … es de Hacienda»: el 21 % rueda; la tapa se cierra con «Hacienda»
@@ -114,12 +114,9 @@ E.obj('gastoC', 'contador', { t0: w(6, 0) - 0.1, t1: fin(2), x: T2, y: -330, siz
   E.obj('tipo' + i, 'rotulo', { t0: a - 0.1, t1: w(6, 10), sale: 0.2, x, y: -480, texto: s, size: 28, col: '#e6ce46', pop: true, caja: [-80, -16, 160, 32] });
   for (let j = 0; j < 2; j++) { const b = a + j * 0.25;
     E.obj('m2_' + i + '_' + j, 'moneda', { t0: b, t1: b + 0.8, entra: 0.06, sale: 0.15, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-      x: [[b, P2], [b + 0.75, T2, 'inout']], y: [[b, -210], [b + 0.38, -420], [b + 0.75, -150, 'in']] }); }
+      x: [[b, P2], [b + 0.75, T2, 'inout']], y: [[b, -235], [b + 0.38, -292], [b + 0.75, -150, 'in']] }); }
 });
 E.sfx(w(6, 0), 'fill'); E.golpe(w(6, 9) + 0.6, 0.04);
-// «De los tres mil sin IVA, te quedan dos mil cuatrocientos»: la resta, en una barra que se vacía hasta el 80 %
-E.obj('resta', 'barra', { t0: w(6, 10) + 0.15, t1: fin(2), x: 70, y: -500, w: 520, h: 48, pop: true,
-  f: [[w(6, 10), 1], [w(6, 12), 1], [w(6, 20) + 0.2, 0.8, 'inout']], marca: 0.8, caja: [-260, -50, 520, 100] });
 E.obj('ch2', 'chispas', { t0: w(6, 22), t1: w(6, 22) + 0.8, x: P2, y: -330, r0: 90, r1: 200, inspeccion: false });
 E.destello(w(6, 22), 0.12);
 
@@ -128,7 +125,7 @@ E.destello(w(6, 22), 0.12);
 // 8: De(0) todo(1) lo(2) que(3) has(4) cobrado,(5) lo(6) tuyo(7) son(8) unos(9) 1.900(10) euros.(11)
 E.numero(3, N[2].T, N[2].S, { desde: 'cuenta2', hacia: 'benef3' });
 const P3 = -60, T3 = 260;
-E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -400, cara: true,
+E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -375, cara: true,
   poses: [[0, 'de_pie'], [w(7, 2), 'meter'], [w(7, 9), 'senalar'], [w(8, 0), 'de_pie'], [w(8, 6), 'senalar'], [wf(8, -1), 'celebrar']],
   sonrisa: [[w(7, 2), 0.5], [w(8, 0), 0], [wf(8, -1), 1.5]] });
 E.obj('pila3', 'pila', { t0: N[2].S - 0.1, t1: w(8, 0), sale: 0.2, x: P3, n: 8, w: 170, hh: 26,
@@ -144,7 +141,7 @@ E.obj('irpfC', 'contador', { t0: w(7, 9) - 0.1, t1: w(8, 0), sale: 0.2, x: T3, y
   v: [[w(7, 9), 0], [wf(7, -1) + 0.2, 480, 'inout']], caja: [-100, -28, 200, 56] });
 for (let i = 0; i < 4; i++) { const a = w(7, 9) + i * 0.22;
   E.obj('m3_' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.06, sale: 0.15, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, P3], [a + 0.75, T3, 'inout']], y: [[a, -200], [a + 0.38, -480], [a + 0.75, -150, 'in']] }); }
+    x: [[a, P3], [a + 0.75, T3, 'inout']], y: [[a, -200], [a + 0.38, -285], [a + 0.75, -150, 'in']] }); }
 E.sfx(w(7, 9), 'fill');
 // «De todo lo que has cobrado, lo tuyo son unos 1.900 euros»: los tres sobres se llenan y LO TUYO baja de 3.630 a 1.920
 const J = [[-80, 'IVA', 630, w(8, 1)], [120, 'GASTOS', 600, w(8, 4)], [320, 'IRPF', 480, w(8, 7)]];

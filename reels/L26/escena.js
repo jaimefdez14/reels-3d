@@ -31,7 +31,7 @@ E.figura('yo', { t0: 0, t1: fin(0), x: -330, cara: true,
 E.obj('pantalla0', 'telefono', { t0: 0, t1: w(1, 0) + 0.2, sale: 0.2, x: 140, y: -420, w: 420, h: 240, brillo: [[0, 1], [w(0, 4), 0.6]], caja: [-210, -120, 420, 240] });
 E.obj('peli0', 'maraña', { t0: 0, t1: w(1, 0) + 0.2, sale: 0.2, x: 140, y: -420, r: 70, p: [[0, 0.35], [w(0, 4), 1, 'out']], rot: [[0, 0], [w(1, 0), 0.6, 'lin']], inspeccion: false });
 E.obj('rotPeli', 'rotulo', { t0: w(0, 3), t1: w(1, 0), sale: 0.2, x: 140, y: -270, texto: 'PELÍCULA MALA', size: 24, col: '#9a9c9b', pop: true, caja: [-120, -16, 240, 32] });
-E.obj('entrada0', 'etiqueta', { t0: w(0, 8) - 0.1, t1: N[0].T + 0.1, x: [[0, 140], [w(1, 0), 140]], y: [[0, -175], [w(1, 0) + 0.2, -175], [w(1, 0) + 0.7, -380, 'out'], [w(1, 13), -380], [wf(1, -1) + 0.2, -150, 'in']],
+E.obj('entrada0', 'etiqueta', { t0: w(0, 8) - 0.1, t1: w(2, 0) + 0.15, sale: 0.3, x: [[0, 140], [w(1, 0), 140]], y: [[0, -175], [w(1, 0) + 0.2, -175], [w(1, 0) + 0.7, -380, 'out'], [w(1, 13), -380], [wf(1, -1) + 0.2, -150, 'in']],
   w: 340, h: 110, pop: true, r: 70, v: [[w(0, 8), 0], [w(0, 10), 9, 'out'], [w(1, 5), 9], [w(1, 8) + 0.3, 30000, 'inout']],
   on: [[0, 1], [w(1, 13), 1], [wf(1, -1), 0.3]], barrido: [w(0, 10), w(1, 8) + 0.3], caja: [-170, -55, 340, 110] });
 E.obj('rotEntrada', 'rotulo', { t0: w(0, 9), t1: w(1, 5), sale: 0.2, x: 140, y: -95, texto: 'ENTRADA', size: 24, col: '#9a9c9b', pop: true, caja: [-80, -16, 160, 32] });
@@ -90,7 +90,7 @@ E.obj('pila', 'pila', { t0: N[1].S - 0.1, t1: fin(2), x: -160, n: 10, w: 150, hh
 for (let i = 0; i < 6; i++) { const a = w(6, 2) + i * 0.2;
   E.obj('m2_' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.15, r: 18, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
     x: [[a, -310], [a + 0.65, -160, 'inout']], y: [[a, -260], [a + 0.33, -440], [a + 0.65, -240, 'in']] }); }
-E.obj('puesto', 'contador', { t0: w(6, 2) - 0.1, t1: fin(2), x: -130, y: -320, v: [[w(6, 2), 0], [w(6, 7), 24000, 'inout']], suf: ' €', size: 42, col: 'txt', pop: true, caja: [-105, -26, 210, 52] });
+E.obj('puesto', 'contador', { t0: w(6, 2) - 0.1, t1: fin(2), x: -110, y: -420, v: [[w(6, 2), 0], [w(6, 7), 24000, 'inout']], suf: ' €', size: 38, col: 'txt', pop: true, caja: [-95, -24, 190, 48] });
 E.obj('cuesta', 'relleno', { t0: w(6, 7), t1: w(7, 0) + 0.1, sale: 0.25, x: 170, y: -330, w: 340, h: 50, rotulo: 'CUESTA DEJARLO', f: [[w(6, 8), 0], [wf(6, -1), 0.95, 'inout']], barrido: [wf(6, -1)], caja: [-170, -65, 340, 92] });
 E.sfx(w(6, 8), 'fill');
 // «un negocio que pierde dinero cada mes»: la línea roja cae y la pérdida suma en rojo
