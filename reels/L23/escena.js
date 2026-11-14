@@ -55,13 +55,13 @@ E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -355, cara: true,
   sonrisa: [[w(2, 2), 0.3], [w(3, 0), 0.6], [w(4, 12), 1.5]] });
 E.obj('sueldo', 'pila', { t0: N[0].S - 0.1, t1: fin(1), x: PX, n: 9, w: 160, hh: 26, r: 60, oy: -110,
   k: [[N[0].S, 0], [N[0].S + 0.5, 1, 'out'], [w(3, 1), 1], [wf(3, 3), 9, 'inout']], barrido: [wf(3, 3)], caja: [-80, -215, 160, 215], refl: true });
-E.obj('rotNeto', 'rotulo', { t0: w(3, 2) - 0.1, t1: w(4, 1), sale: 0.15, x: PX - 10, y: -290, texto: 'SUELDO NETO', size: 24, col: '#c9ccca', pop: true, caja: [-90, -15, 180, 30] });
+E.obj('rotNeto', 'rotulo', { t0: w(3, 2) - 0.1, t1: w(4, 1) - 0.2, sale: 0.15, x: PX - 10, y: -290, texto: 'SUELDO NETO', size: 24, col: '#c9ccca', pop: true, caja: [-90, -15, 180, 30] });
 E.obj('sueldoC', 'contador', { t0: w(4, 1) - 0.05, t1: fin(1), x: PX, y: -290, v: [[w(4, 1), 0], [wf(4, 2), 2000, 'out']], suf: ' €', size: 48, col: 'txt', pop: true, caja: [-120, -30, 240, 60] });
 // «divídelo entre tus horas»: signo ÷ y un reloj de línea que se rellena; «trayectos incluidos» lo completa
 E.obj('div', 'rotulo', { t0: w(3, 5) - 0.1, t1: fin(1), x: 75, y: -150, texto: '÷', size: 80, col: '#e6ce46', pop: true, track: 0, caja: [-30, -40, 60, 80] });
 E.obj('horasMes', 'temporizador', { t0: w(3, 5) - 0.1, t1: fin(1), x: RX, y: -260, r: 88, texto: '', sub: '', pop: true,
   p: [[w(3, 6), 0], [wf(3, 10), 0.82, 'inout'], [w(3, 11), 0.82], [wf(3, 12), 1, 'out']], barrido: [wf(3, 12)], caja: [-104, -104, 208, 208] });
-E.obj('trayecto', 'rotulo', { t0: w(3, 11) - 0.05, t1: w(4, 5), sale: 0.15, x: RX, y: -110, texto: '+ TRAYECTOS', size: 24, col: '#e6ce46', pop: true, caja: [-95, -15, 190, 30] });
+E.obj('trayecto', 'rotulo', { t0: w(3, 11) - 0.05, t1: w(4, 5) - 0.2, sale: 0.15, x: RX, y: -110, texto: '+ TRAYECTOS', size: 24, col: '#e6ce46', pop: true, caja: [-95, -15, 190, 30] });
 E.obj('horasC', 'contador', { t0: w(4, 5) - 0.05, t1: fin(1), x: RX, y: -110, v: [[w(4, 5), 0], [wf(4, 6), 200, 'out']], suf: ' h', size: 44, col: 'txt', miles: false, pop: true, caja: [-90, -28, 180, 56] });
 for (let i = 0; i < 5; i++) { const a = w(3, 5) + i * 0.18;
   E.obj('m1_' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.15, r: 18, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
