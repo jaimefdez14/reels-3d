@@ -44,18 +44,18 @@ E.figura('bluma', { t0: w(1, 2) - 0.1, t1: w(2, 0), sale: 0.2, x: -420, talla: 4
 E.figura('camarero', { t0: w(1, 11) - 0.4, t1: w(2, 0), sale: 0.2, x: -170, cara: true, toca: ['libreta'],
   poses: [[0, 'de_pie'], [w(1, 13), 'ofrecer'], [w(1, 18), 'pensar'], [w(1, 21), 'senalar']],
   sonrisa: [[w(1, 12), 0.6], [w(1, 21), 1.2]] });
-E.obj('libreta', 'lista', { t0: w(1, 11) - 0.3, t1: w(2, 0), sale: 0.2, x: 10, y: -225, n: 3, w: 190, gap: 52, s: 1.15, pop: true,
-  brillo: 3, p: [[w(1, 16), 0], [w(1, 18), 2, 'out']], caja: [-95, -78, 190, 156] });
+E.obj('libreta', 'lista', { t0: w(1, 11) - 0.3, t1: w(2, 0), sale: 0.2, x: 25, y: -225, n: 3, w: 230, gap: 54, s: 1.1, pop: true,
+  brillo: 3, p: [[w(1, 16), 0], [w(1, 18), 2, 'out']], caja: [-115, -80, 230, 160] });
 // cuentas: las cobradas (1 y 3) se apagan, las que no ha cobrado brillan
-const CU = [150, 215, 280, 345, 410];
+const CU = [180, 240, 300, 360, 420];
 CU.forEach((x, i) => { const a = w(1, 13) + i * 0.1, cobrada = i === 1 || i === 3;
-  E.obj('cu' + i, 'pieza', { t0: a, t1: w(2, 0), sale: 0.2, entra: 0.15, x, y: -320, r: 28, texto: '€', pop: true, sfx: i === 0, inspeccion: false,
+  E.obj('cu' + i, 'pieza', { t0: a, t1: w(2, 0), sale: 0.2, entra: 0.15, x, y: -320, r: 26, texto: '€', pop: true, sfx: i === 0, inspeccion: false,
     on: cobrada ? [[0, 1], [w(1, 16), 1], [w(1, 18), 0, 'out']] : 1,
     luz: cobrada ? [[0, 1], [w(1, 16), 1], [w(1, 18), 0.35]] : 1,
     s: cobrada ? 1 : [[0, 1], [w(1, 21), 1], [w(1, 21) + 0.3, 1.2, 'back']], barrido: cobrada ? null : [w(1, 22)] }); });
-E.obj('sinCobrar', 'contador', { t0: w(1, 19), t1: w(2, 0), sale: 0.2, x: 280, y: -220, v: [[w(1, 20), 0], [wf(1, -1), 3, 'out']], suf: ' sin cobrar', size: 44, col: 'txt', miles: false, pop: true,
+E.obj('sinCobrar', 'contador', { t0: w(1, 19), t1: w(2, 0), sale: 0.2, x: 300, y: -220, v: [[w(1, 20), 0], [wf(1, -1), 3, 'out']], suf: ' sin cobrar', size: 44, col: 'txt', miles: false, pop: true,
   caja: [-160, -26, 320, 52] });
-E.obj('chCu', 'chispas', { t0: wf(1, -1), t1: wf(1, -1) + 0.8, x: 280, y: -320, r0: 120, r1: 220, inspeccion: false });
+E.obj('chCu', 'chispas', { t0: wf(1, -1), t1: wf(1, -1) + 0.8, x: 300, y: -320, r0: 120, r1: 220, inspeccion: false });
 
 // ---------- el efecto: a medias se recuerda el doble ----------
 // 2: Se(0) llama(1) efecto(2) Zeigarnik(3) lo(4) que(5) dejas(6) a(7) medias(8) te(9) sigue(10) llamando(11) y(12) eso(13) sirve(14) para(15) no(16) dejar(17) las(18) cosas(19) para(20) luego(21)

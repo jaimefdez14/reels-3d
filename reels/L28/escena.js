@@ -151,7 +151,7 @@ E.obj('tuyo', 'contador', { t0: w(8, 0), t1: TC, x: LX, y: LY, size: 80, col: 't
   v: [[w(8, 1), 3630], [w(8, 3), 3000, 'inout'], [w(8, 4), 3000], [w(8, 6), 2400, 'inout'], [w(8, 7), 2400], [w(8, 10), 1920, 'inout']], barrido: [wf(8, -1)], caja: [-200, -48, 400, 96] });
 J.forEach(([x, rot, eur, a], i) => {
   E.obj('sob' + i, 'tarro', { t0: w(8, 0) + i * 0.1, t1: TC, x, w: 160, h: 210, rotulo: rot, pop: true, nivel: [[a, 0], [a + 0.7, 0.6, 'inout']], caja: [-80, -210, 160, 210], refl: true });
-  E.obj('eur' + i, 'rotulo', { t0: a, t1: TC, x, y: -260, texto: '−' + eur + ' €', size: 26, col: '#e4574f', pop: true, caja: [-70, -16, 140, 32] });
+  E.obj('eur' + i, 'rotulo', { t0: a + 0.6, t1: TC, x, y: -260, texto: '−' + eur + ' €', size: 26, col: '#e4574f', pop: true, caja: [-70, -16, 140, 32] });
   for (let j = 0; j < 2; j++) { const b = a + j * 0.2;
     E.obj('m4_' + i + '_' + j, 'moneda', { t0: b, t1: b + 0.7, entra: 0.06, sale: 0.15, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
       x: [[b, LX], [b + 0.65, x, 'inout']], y: [[b, LY + 40], [b + 0.32, -380], [b + 0.65, -140, 'in']] }); }
