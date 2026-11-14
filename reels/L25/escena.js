@@ -16,16 +16,16 @@ function pinta(c, o, t, y0, y1, dibuja) {
   c.save(); c.lineCap = 'round'; c.lineJoin = 'round';
   if (fa > 0.5) { c.setLineDash([12, 10]); c.strokeStyle = '#6d7671'; c.lineWidth = 4; c.beginPath(); dibuja(c); c.stroke(); c.restore(); return; }
   c.beginPath(); dibuja(c);
-  c.fillStyle = mix(mix('#141917', '#0b0d0c', ap), '#000000', 0); c.fill();
+  c.fillStyle = mix('#141917', '#0b0d0c', ap); c.fill();
   if (on > 0) { c.save(); c.globalAlpha *= on; c.fillStyle = GR(c, y0, y1); c.fill(); c.restore(); }
-  c.strokeStyle = mix(mix('#8d9692', '#3e4241', ap), '#c69f25', on); c.lineWidth = 4; c.stroke(); c.restore();
+  c.strokeStyle = on > 0 ? mix('#8d9692', '#c69f25', on) : mix('#8d9692', '#3e4241', ap); c.lineWidth = 4; c.stroke(); c.restore();
 }
 function tiembla(c, o, t) { const k = E.clamp(E.kf(o.tiembla, t, 0)); if (k > 0) { c.translate(Math.sin(t * 47) * 7 * k, 0); c.rotate(Math.sin(t * 39) * 0.03 * k); } }
 const rr = (c, x, y, w, h, r) => c.roundRect(x, y, w, h, r);
 Object.assign(TIPOS, {
   sofa(c, o, t) { tiembla(c, o, t); const w = o.w || 300, h = w * 0.55;
     pinta(c, o, t, -h, 0, c => { rr(c, -w / 2 + 34, -h, w - 68, h * 0.55, 18); rr(c, -w / 2 + 30, -h * 0.5, w - 60, h * 0.36, 12); rr(c, -w / 2, -h * 0.7, 40, h * 0.62, 16); rr(c, w / 2 - 40, -h * 0.7, 40, h * 0.62, 16); });
-    E.C && (c.strokeStyle = '#8d9692', c.lineWidth = 5, c.lineCap = 'round', c.beginPath(), c.moveTo(-w / 2 + 22, -h * 0.08), c.lineTo(-w / 2 + 22, 0), c.moveTo(w / 2 - 22, -h * 0.08), c.lineTo(w / 2 - 22, 0), c.stroke()); },
+    c.strokeStyle = '#8d9692'; c.lineWidth = 5; c.lineCap = 'round'; c.beginPath(); c.moveTo(-w / 2 + 22, -h * 0.08); c.lineTo(-w / 2 + 22, 0); c.moveTo(w / 2 - 22, -h * 0.08); c.lineTo(w / 2 - 22, 0); c.stroke(); },
   // alfombra en el suelo, por delante (y > 0); ok: encaja (borde amarillo)
   alfombra(c, o, t) { tiembla(c, o, t); const w = o.w || 420, ok = E.clamp(E.kf(o.ok, t, 0));
     c.fillStyle = mix('#3b403e', '#4a4636', ok); c.beginPath(); c.moveTo(-w * 0.4, 8); c.lineTo(w * 0.4, 8); c.lineTo(w / 2, 62); c.lineTo(-w / 2, 62); c.closePath(); c.fill();
@@ -89,12 +89,12 @@ E.temblor(w(0, 12), 12, 0.4);
 // 1: Se(0) llama(1) efecto(2) Diderot(3) el(4) filósofo(5) estrenó(6) una(7) bata(8) y(9) a(10) su(11) lado(12) todo(13) el(14) despacho(15) le(16) pareció(17) viejo(18)
 const B0 = w(2, 0);
 E.obj('rotDid', 'rotulo', { t0: w(1, 1), t1: w(1, 12), sale: 0.2, x: 60, y: -500, texto: 'EFECTO DIDEROT', size: 40, col: '#e6ce46', pop: true, track: 6, barrido: [w(1, 3) + 0.1], caja: [-230, -24, 460, 48] });
-E.figura('did', { t0: w(1, 4) - 0.1, t1: B0 + 0.1, sale: 0.25, x: -360, color: 'gris',
+E.figura('did', { t0: w(1, 4) - 0.1, t1: B0 + 0.1, sale: 0.25, x: -360, talla: 440, color: 'gris',
   poses: [[0, 'de_pie'], [w(1, 6), 'ofrecer'], [w(1, 9), 'de_pie'], [w(1, 13), 'pensar'], [w(1, 16), 'senalar']] });
 E.obj('bata', 'bata', { t0: w(1, 6) - 0.1, t1: B0 + 0.1, sale: 0.25, x: -140, pop: true, on: [[0, 0], [w(1, 8), 0], [w(1, 8) + 0.3, 1]], barrido: [w(1, 9)], caja: [-80, -400, 160, 400], refl: true });
 E.obj('mesaD', 'mesa', { t0: w(1, 4), t1: B0 + 0.1, sale: 0.25, x: 120, w: 220, pop: true, apagado: [[0, 0], [w(1, 13), 0], [w(1, 14) + 0.2, 1]], tiembla: [[0, 0], [w(1, 13), 0], [w(1, 14), 1], [w(1, 18), 0.4]], caja: [-110, -170, 220, 170], refl: true });
 E.obj('estD', 'estanteria', { t0: w(1, 4) + 0.15, t1: B0 + 0.1, sale: 0.25, x: 370, pop: true, apagado: [[0, 0], [w(1, 15), 0], [w(1, 16) + 0.2, 1]], tiembla: [[0, 0], [w(1, 15), 0], [w(1, 16), 1], [w(1, 18), 0.4]], caja: [-85, -340, 170, 340], refl: true });
-E.obj('decis', 'bocadillo', { t0: w(1, 13) - 0.1, t1: B0 - 0.15, sale: 0.2, x: 20, y: -500, w: 500, h: 76, texto: 'Ya puestos, cambio también la mesa', size: 25, pop: true, caja: [-250, -38, 500, 102] });
+E.obj('decis', 'bocadillo', { t0: w(1, 13) - 0.1, t1: B0 - 0.15, sale: 0.2, x: -150, y: -515, w: 500, h: 76, texto: 'Ya puestos, cambio también la mesa', size: 25, pop: true, caja: [-250, -38, 500, 102] });
 E.temblor(w(1, 18), 8, 0.35);
 
 // ---------- «Tres maneras de cortar la cadena»: tres monedas unidas; la cadena se corta ----------

@@ -89,7 +89,7 @@ E.obj('pila', 'pila', { t0: N[1].S - 0.1, t1: fin(2), x: -160, n: 10, w: 150, hh
   k: [[N[1].S, 0], [N[1].S + 0.4, 1, 'out'], [w(6, 2), 1], [w(6, 7), 10, 'inout']], barrido: [w(6, 7), w(7, 24)], caja: [-75, -240, 150, 240], refl: true });
 for (let i = 0; i < 6; i++) { const a = w(6, 2) + i * 0.2;
   E.obj('m2_' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.15, r: 18, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, -310], [a + 0.65, -160, 'inout']], y: [[a, -260], [a + 0.33, -440], [a + 0.65, -240, 'in']] }); }
+    x: [[a, -250], [a + 0.65, -160, 'inout']], y: [[a, -200], [a + 0.33, -360], [a + 0.65, -240, 'in']] }); }
 E.obj('puesto', 'contador', { t0: w(6, 2) - 0.1, t1: fin(2), x: -110, y: -420, v: [[w(6, 2), 0], [w(6, 7), 24000, 'inout']], suf: ' €', size: 38, col: 'txt', pop: true, caja: [-95, -24, 190, 48] });
 E.obj('cuesta', 'relleno', { t0: w(6, 7), t1: w(7, 0) + 0.1, sale: 0.25, x: 170, y: -330, w: 340, h: 50, rotulo: 'CUESTA DEJARLO', f: [[w(6, 8), 0], [wf(6, -1), 0.95, 'inout']], barrido: [wf(6, -1)], caja: [-170, -65, 340, 92] });
 E.sfx(w(6, 8), 'fill');
