@@ -44,8 +44,8 @@ E.figura('bluma', { t0: w(1, 2) - 0.1, t1: w(2, 0), sale: 0.2, x: -420, talla: 4
 E.figura('camarero', { t0: w(1, 11) - 0.4, t1: w(2, 0), sale: 0.2, x: -170, cara: true, toca: ['libreta'],
   poses: [[0, 'de_pie'], [w(1, 13), 'ofrecer'], [w(1, 18), 'pensar'], [w(1, 21), 'senalar']],
   sonrisa: [[w(1, 12), 0.6], [w(1, 21), 1.2]] });
-E.obj('libreta', 'lista', { t0: w(1, 11) - 0.3, t1: w(2, 0), sale: 0.2, x: -40, y: -265, n: 3, w: 240, gap: 56, s: 1.15, pop: true,
-  brillo: 3, p: [[w(1, 16), 0], [w(1, 18), 2, 'out']], caja: [-120, -84, 240, 168] });
+E.obj('libreta', 'lista', { t0: w(1, 11) - 0.3, t1: w(2, 0), sale: 0.2, x: 10, y: -225, n: 3, w: 190, gap: 52, s: 1.15, pop: true,
+  brillo: 3, p: [[w(1, 16), 0], [w(1, 18), 2, 'out']], caja: [-95, -78, 190, 156] });
 // cuentas: las cobradas (1 y 3) se apagan, las que no ha cobrado brillan
 const CU = [150, 215, 280, 345, 410];
 CU.forEach((x, i) => { const a = w(1, 13) + i * 0.1, cobrada = i === 1 || i === 3;
