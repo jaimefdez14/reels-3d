@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Y seguramente le dedicas tu tiempo al resto. / *Tres pasos para darle la vuelta.*",
+   "show": "Y seguramente dedicas / casi todo tu tiempo al resto. / *Hay tres pasos para darle la vuelta.*",
    "pause": 0.3
   },
   {
-   "show": "El primero: // *ordena tus clientes / por lo que te facturan.*",
+   "show": "El primero: // *ordena a tus clientes / por lo que les facturas.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -34,12 +34,12 @@
    "bocadillo": "¿Lo podemos cambiar otra vez?"
   },
   {
-   "show": "El tercero: // *súbeles el precio o déjalos ir.*",
+   "show": "El tercero: // *súbeles el precio / o deja de trabajar con ellos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Ese tiempo que recuperas / *se lo das a los clientes que más te aportan.*",
+   "show": "El tiempo que recuperas, / *dedícaselo a los clientes que más te dejan.*",
    "pause": 0.3
   },
   {
@@ -47,8 +47,41 @@
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a quien trabaja doce horas / *y no le salen las cuentas.*",
+   "show": "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Y seguramente le dedicas tu tiempo al resto. / *Tres pasos para darle la vuelta.*",
+     "despues": "Y seguramente dedicas casi todo tu tiempo al resto. / *Hay tres pasos para darle la vuelta.*"
+    },
+    {
+     "linea": 2,
+     "antes": "El primero: // *ordena tus clientes / por lo que te facturan.*",
+     "despues": "El primero: // *ordena a tus clientes / por lo que les facturas.*"
+    },
+    {
+     "linea": 6,
+     "antes": "El tercero: // *súbeles el precio o déjalos ir.*",
+     "despues": "El tercero: // *súbeles el precio / o deja de trabajar con ellos.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Ese tiempo que recuperas / *se lo das a los clientes que más te aportan.*",
+     "despues": "El tiempo que recuperas, / *dedícaselo a los clientes que más te dejan.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Mándaselo a quien trabaja doce horas / *y no le salen las cuentas.*",
+     "despues": "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*"
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

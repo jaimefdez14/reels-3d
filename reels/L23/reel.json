@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Cuesta diez horas de tu vida. / *Tres pasos para verlo antes de pagar.*",
+   "show": "Cuesta diez horas de trabajo. / *Te cuento cómo verlo en tres pasos / antes de pagar.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide tu sueldo neto entre las horas reales, / *también las del trayecto.*",
+   "show": "Divide tu sueldo neto entre las horas / que le dedicas de verdad, / *contando el trayecto.*",
    "pause": 0.3
   },
   {
@@ -47,16 +47,49 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si pasados dos días lo sigues queriendo, cómpralo. / *Muchas veces ya ni te acordarás.*",
+   "show": "Si a los dos días lo sigues queriendo, / cómpralo. / *Muchas veces ya ni te acuerdas.*",
    "pause": 0.3
   },
   {
-   "show": "El dinero se recupera. / *Las horas que te costó, no.*",
+   "show": "El dinero vuelve a entrar. / *Las horas que te cuesta ganarlo, no.*",
    "pause": 0.3
   },
   {
-   "show": "Guárdalo para la próxima vez / *que vayas a darle a comprar.*",
+   "show": "Guarda este vídeo para la próxima vez / *que vayas a darle al botón de comprar.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Cuesta diez horas de tu vida. / *Tres pasos para verlo antes de pagar.*",
+     "despues": "Cuesta diez horas de trabajo. / *Te cuento cómo verlo en tres pasos / antes de pagar.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Divide tu sueldo neto entre las horas reales, / *también las del trayecto.*",
+     "despues": "Divide tu sueldo neto entre las horas / que le dedicas de verdad, / *contando el trayecto.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Si pasados dos días lo sigues queriendo, cómpralo. / *Muchas veces ya ni te acordarás.*",
+     "despues": "Si a los dos días lo sigues queriendo, cómpralo. / *Muchas veces ya ni te acuerdas.*"
+    },
+    {
+     "linea": 10,
+     "antes": "El dinero se recupera. / *Las horas que te costó, no.*",
+     "despues": "El dinero vuelve a entrar. / *Las horas que te cuesta ganarlo, no.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Guárdalo para la próxima vez / *que vayas a darle a comprar.*",
+     "despues": "Guarda este vídeo para la próxima vez / *que vayas a darle al botón de comprar.*"
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Esto tiene nombre: el efecto Diderot. / *Tres formas de que no te pase.*",
+   "show": "Esto tiene nombre: el efecto Diderot. / *Hay tres maneras de evitarlo.*",
    "pause": 0.3
   },
   {
@@ -19,17 +19,17 @@
    "pause": 0.3
   },
   {
-   "show": "Al lado de la bata, sus muebles parecían viejos. / *Y los fue cambiando uno a uno.*",
+   "show": "Al lado de la bata nueva, / los muebles parecían viejos, / *así que los fue cambiando uno a uno.*",
    "pause": 0.3,
    "bocadillo": "Ya que estamos, cambio la mesa"
   },
   {
-   "show": "La primera: // *antes de comprar, / pregunta qué más te va a pedir.*",
+   "show": "La primera: // *antes de comprar algo, / pregúntate qué más te va a pedir.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "El móvil nuevo pide funda. / *El coche nuevo pide garaje.*",
+   "show": "El móvil nuevo pide una funda. / *El coche nuevo, una plaza de garaje.*",
    "pause": 0.3
   },
   {
@@ -38,7 +38,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Decide cuánto vas a gastar en total, / *no solo en lo primero.*",
+   "show": "Decide cuánto vas a gastar en total, / *no solo en la primera compra.*",
    "pause": 0.3
   },
   {
@@ -47,7 +47,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Pasado ese tiempo, / *la alfombra vieja ya no te parece tan mal.*",
+   "show": "Al cabo de un mes, / *la alfombra vieja ya no te parece tan fea.*",
    "pause": 0.3
   },
   {
@@ -55,8 +55,51 @@
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a quien está a punto / *de reformar la casa.*",
+   "show": "Mándaselo a quien esté a punto / *de reformar la casa.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Esto tiene nombre: el efecto Diderot. / *Tres formas de que no te pase.*",
+     "despues": "Esto tiene nombre: el efecto Diderot. / *Hay tres maneras de evitarlo.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Al lado de la bata, sus muebles parecían viejos. / *Y los fue cambiando uno a uno.*",
+     "despues": "Al lado de la bata nueva, los muebles parecían viejos, / *así que los fue cambiando uno a uno.*"
+    },
+    {
+     "linea": 4,
+     "antes": "La primera: // *antes de comprar, / pregunta qué más te va a pedir.*",
+     "despues": "La primera: // *antes de comprar algo, / pregúntate qué más te va a pedir.*"
+    },
+    {
+     "linea": 5,
+     "antes": "El móvil nuevo pide funda. / *El coche nuevo pide garaje.*",
+     "despues": "El móvil nuevo pide una funda. / *El coche nuevo, una plaza de garaje.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Decide cuánto vas a gastar en total, / *no solo en lo primero.*",
+     "despues": "Decide cuánto vas a gastar en total, / *no solo en la primera compra.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Pasado ese tiempo, / *la alfombra vieja ya no te parece tan mal.*",
+     "despues": "Al cabo de un mes, / *la alfombra vieja ya no te parece tan fea.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Mándaselo a quien está a punto / *de reformar la casa.*",
+     "despues": "Mándaselo a quien esté a punto / *de reformar la casa.*"
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

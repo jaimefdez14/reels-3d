@@ -7,28 +7,28 @@
  "situacion": "Llevas toda la semana dándole vueltas a un informe que no has empezado, y no te lo quitas de la cabeza.",
  "lines": [
   {
-   "show": "Tu cabeza no se olvida / *de lo que dejas a medias.*",
+   "show": "Lo que dejas a medias, / *la cabeza no lo olvida.*",
    "pause": 0.45
   },
   {
-   "show": "Se llama efecto Zeigarnik. / *Tres formas de usarlo para dejar de aplazar.*",
+   "show": "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
    "pause": 0.3
   },
   {
-   "show": "La psicóloga Bliuma Zeigarnik vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
+   "show": "La psicóloga Bliuma Zeigarnik se dio cuenta / de que los camareros recordaban / los pedidos sin cobrar / *y olvidaban los ya pagados.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *empieza solo dos minutos.*",
+   "show": "La primera: // *ponte con ello, / aunque sean dos minutos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que has empezado / *te sigue rondando hasta que lo acabas.*",
+   "show": "Lo que has empezado / *te sigue rondando la cabeza / hasta que lo terminas.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *para a mitad de una frase.*",
+   "show": "La segunda: // *déjalo a mitad de frase.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -42,17 +42,70 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que está escrito / *deja de dar vueltas en la cabeza.*",
+   "show": "Lo que apuntas / *deja de darte vueltas en la cabeza.*",
    "pause": 0.3,
    "bocadillo": "¿Y si se me olvida?"
   },
   {
-   "show": "Empezar cuesta más que seguir. / *Por eso el truco es no terminar del todo.*",
+   "show": "Empezar cuesta más que seguir. / *Por eso conviene dejar siempre / algo sin terminar.*",
    "pause": 0.3
   },
   {
-   "show": "Guárdalo para el próximo lunes / *que no sepas por dónde empezar.*",
+   "show": "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Tu cabeza no se olvida / *de lo que dejas a medias.*",
+     "despues": "Lo que dejas a medias, / *la cabeza no lo olvida.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama efecto Zeigarnik. / *Tres formas de usarlo para dejar de aplazar.*",
+     "despues": "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*"
+    },
+    {
+     "linea": 2,
+     "antes": "La psicóloga Bliuma Zeigarnik vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
+     "despues": "La psicóloga Bliuma Zeigarnik se dio cuenta / de que los camareros recordaban los pedidos sin cobrar / *y olvidaban los ya pagados.*"
+    },
+    {
+     "linea": 3,
+     "antes": "La primera: // *empieza solo dos minutos.*",
+     "despues": "La primera: // *ponte con ello, / aunque sean dos minutos.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Lo que has empezado / *te sigue rondando hasta que lo acabas.*",
+     "despues": "Lo que has empezado / *te sigue rondando la cabeza hasta que lo terminas.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *para a mitad de una frase.*",
+     "despues": "La segunda: // *déjalo a mitad de frase.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Lo que está escrito / *deja de dar vueltas en la cabeza.*",
+     "despues": "Lo que apuntas / *deja de darte vueltas en la cabeza.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Empezar cuesta más que seguir. / *Por eso el truco es no terminar del todo.*",
+     "despues": "Empezar cuesta más que seguir. / *Por eso conviene dejar siempre algo sin terminar.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Guárdalo para el próximo lunes / *que no sepas por dónde empezar.*",
+     "despues": "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

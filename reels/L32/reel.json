@@ -7,11 +7,11 @@
  "situacion": "Cobras el 28 y el 15 ya vas justo, sin saber muy bien en qué se ha ido la nómina.",
  "lines": [
   {
-   "show": "Si no sabes dónde se va tu nómina, / *no es un problema de sueldo: es de reparto.*",
+   "show": "Si no sabes en qué se te va la nómina, / *el problema no es el sueldo: / es cómo lo repartes.*",
    "pause": 0.45
   },
   {
-   "show": "Se llama el reparto cincuenta, treinta, veinte. / *Tres partes para que te cuadren las cuentas.*",
+   "show": "Es la regla del cincuenta, treinta, veinte: / *tres partes para que te cuadren las cuentas.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Casa, comida, facturas, transporte. / *Con 1.600 euros, 800.*",
+   "show": "Casa, comida, facturas, transporte. / *Si cobras 1.600 euros, son 800.*",
    "pause": 0.3
   },
   {
@@ -29,17 +29,17 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cenas, viajes, caprichos. / *480 euros sin sentirte culpable.*",
+   "show": "Cenas, viajes, caprichos. / *480 euros que gastas sin remordimientos.*",
    "pause": 0.3,
    "bocadillo": "¿Me lo puedo permitir?"
   },
   {
-   "show": "La tercera: // *un veinte por ciento para ahorrar, / y sale el primero.*",
+   "show": "La tercera: // *un veinte por ciento para ahorrar, / y se aparta antes que nada.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Trescientos veinte euros que apartas el día que cobras, / *no lo que sobra a fin de mes.*",
+   "show": "Trescientos veinte euros / que guardas el día que cobras, / *no lo que te sobre a fin de mes.*",
    "pause": 0.3
   },
   {
@@ -47,12 +47,60 @@
    "pause": 0.3
   },
   {
-   "show": "Ahorrar no depende de lo que ganas, / *sino del orden en que lo gastas.*",
+   "show": "Para ahorrar no importa tanto cuánto ganas / *como el orden en que lo gastas.*",
    "pause": 0.3
   },
   {
-   "show": "Guárdalo para el día que cobres.",
+   "show": "Guárdate este vídeo para el día que cobres.",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Si no sabes dónde se va tu nómina, / *no es un problema de sueldo: es de reparto.*",
+     "despues": "Si no sabes en qué se te va la nómina, / *el problema no es el sueldo: / es cómo lo repartes.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama el reparto cincuenta, treinta, veinte. / *Tres partes para que te cuadren las cuentas.*",
+     "despues": "Es la regla del cincuenta, treinta, veinte: / *tres partes para que te cuadren las cuentas.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Casa, comida, facturas, transporte. / *Con 1.600 euros, 800.*",
+     "despues": "Casa, comida, facturas, transporte. / *Si cobras 1.600 euros, son 800.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Cenas, viajes, caprichos. / *480 euros sin sentirte culpable.*",
+     "despues": "Cenas, viajes, caprichos. / *480 euros que gastas sin remordimientos.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La tercera: // *un veinte por ciento para ahorrar, / y sale el primero.*",
+     "despues": "La tercera: // *un veinte por ciento para ahorrar, / y se aparta antes que nada.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Trescientos veinte euros que apartas el día que cobras, / *no lo que sobra a fin de mes.*",
+     "despues": "Trescientos veinte euros que guardas el día que cobras, / *no lo que te sobre a fin de mes.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ahorrar no depende de lo que ganas, / *sino del orden en que lo gastas.*",
+     "despues": "Para ahorrar no importa tanto cuánto ganas / *como el orden en que lo gastas.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Guárdalo para el día que cobres.",
+     "despues": "Guárdate este vídeo para el día que cobres."
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

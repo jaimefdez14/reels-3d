@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Y eso es solo el principio. / *Tres sobres para saber cuánto ganas de verdad.*",
+   "show": "Y eso es solo el principio. / *Repártelo en tres sobres / y sabrás cuánto ganas de verdad.*",
    "pause": 0.3
   },
   {
-   "show": "El primero: // *el IVA, el mismo día que cobras.*",
+   "show": "El primero, el IVA: // *apártalo el mismo día que cobras.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -24,16 +24,16 @@
    "pause": 0.3
   },
   {
-   "show": "Si te lo gastas, en el trimestre / *te toca ponerlo de tu bolsillo.*",
+   "show": "Si te lo gastas, al presentar el trimestre / *te toca ponerlo de tu bolsillo.*",
    "pause": 0.3
   },
   {
-   "show": "El segundo: // *un 20 % del beneficio para el IRPF.*",
+   "show": "El segundo: // *aparta un 20 % del beneficio para el IRPF.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Si estás en estimación directa, / *cada trimestre adelantas ese veinte por ciento.*",
+   "show": "Si estás en estimación directa, / *cada trimestre adelantas / ese veinte por ciento.*",
    "pause": 0.3
   },
   {
@@ -47,12 +47,50 @@
    "bocadillo": "¡Este mes he facturado un montón!"
   },
   {
-   "show": "Facturar mucho no es ganar mucho. / *Ganas lo que queda en el último sobre.*",
+   "show": "Facturar mucho no es ganar mucho. / *Lo que ganas / es lo que queda en el último sobre.*",
    "pause": 0.3
   },
   {
-   "show": "Guárdalo para tu próxima factura.",
+   "show": "Guárdate este vídeo / *para cuando hagas la próxima factura.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Y eso es solo el principio. / *Tres sobres para saber cuánto ganas de verdad.*",
+     "despues": "Y eso es solo el principio. / *Repártelo en tres sobres / y sabrás cuánto ganas de verdad.*"
+    },
+    {
+     "linea": 2,
+     "antes": "El primero: // *el IVA, el mismo día que cobras.*",
+     "despues": "El primero, el IVA: // *apártalo el mismo día que cobras.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Si te lo gastas, en el trimestre / *te toca ponerlo de tu bolsillo.*",
+     "despues": "Si te lo gastas, al presentar el trimestre / *te toca ponerlo de tu bolsillo.*"
+    },
+    {
+     "linea": 5,
+     "antes": "El segundo: // *un 20 % del beneficio para el IRPF.*",
+     "despues": "El segundo: // *aparta un 20 % del beneficio para el IRPF.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Facturar mucho no es ganar mucho. / *Ganas lo que queda en el último sobre.*",
+     "despues": "Facturar mucho no es ganar mucho. / *Lo que ganas es lo que queda en el último sobre.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Guárdalo para tu próxima factura.",
+     "despues": "Guárdate este vídeo / *para cuando hagas la próxima factura.*"
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

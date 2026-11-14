@@ -7,7 +7,7 @@
  "situacion": "Tienes dinero en el banco o en un fondo y no sabes si lo que te rinde es mucho o poco.",
  "lines": [
   {
-   "show": "Hay una cuenta de diez segundos / *que te dice cuándo se duplica tu dinero.*",
+   "show": "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*",
    "pause": 0.45
   },
   {
@@ -20,20 +20,20 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide 72 entre lo que te rinde al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "show": "Divide 72 entre el interés que te da al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
    "pause": 0.3
   },
   {
-   "show": "Al nueve por ciento, en ocho. / *Por eso unos pocos puntos importan tanto.*",
+   "show": "Al nueve por ciento, en ocho. / *Por eso un par de puntos / marcan tanta diferencia.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ver lo que pierde tu dinero parado.*",
+   "show": "La segunda: // *saber cuánto pierde tu dinero parado.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Con la inflación funciona igual. / *Si los precios suben un tres por ciento al año, / en veinticuatro años tu dinero vale la mitad.*",
+   "show": "Con la inflación funciona igual. / *Si los precios suben / un tres por ciento al año, / en veinticuatro años / tu dinero valdrá la mitad.*",
    "pause": 0.3
   },
   {
@@ -42,7 +42,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una tarjeta al dieciocho por ciento / *duplica lo que debes en cuatro años.*",
+   "show": "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*",
    "pause": 0.3,
    "bocadillo": "Ya la iré pagando poco a poco"
   },
@@ -55,8 +55,51 @@
    "pause": 0.3
   },
   {
-   "show": "Guárdalo y haz la cuenta / *con lo que te paga tu banco.*",
+   "show": "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Hay una cuenta de diez segundos / *que te dice cuándo se duplica tu dinero.*",
+     "despues": "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Divide 72 entre lo que te rinde al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+     "despues": "Divide 72 entre el interés que te da al año. / *Al seis por ciento, en unos doce años / tienes el doble.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Al nueve por ciento, en ocho. / *Por eso unos pocos puntos importan tanto.*",
+     "despues": "Al nueve por ciento, en ocho. / *Por eso un par de puntos marcan tanta diferencia.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *ver lo que pierde tu dinero parado.*",
+     "despues": "La segunda: // *saber cuánto pierde tu dinero parado.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Con la inflación funciona igual. / *Si los precios suben un tres por ciento al año, / en veinticuatro años tu dinero vale la mitad.*",
+     "despues": "Con la inflación funciona igual. / *Si los precios suben un tres por ciento al año, / en veinticuatro años tu dinero valdrá la mitad.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Una tarjeta al dieciocho por ciento / *duplica lo que debes en cuatro años.*",
+     "despues": "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Guárdalo y haz la cuenta / *con lo que te paga tu banco.*",
+     "despues": "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*"
+    }
+   ],
+   "descartado": ""
   }
  ]
 }

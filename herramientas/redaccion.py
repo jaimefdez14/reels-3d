@@ -30,7 +30,7 @@ MULETILLAS = ['literalmente', 'básicamente', 'honestamente', 'spoiler', 'plot t
 JERGA = ['tío', 'tía', 'bro', 'flipar', 'flipas', 'flipante', 'mola', 'molan', 'platicar', 'checar', 'ahorita',
          'plata', 'computadora', 'celular', 'agendar']
 CIERRE_MAL = ['tu tarea', 'recuerda que', 'qué opinas', 'sígueme', 'te leo en los comentarios']
-ENVIO = ('envíaselo', 'mándaselo', 'compártelo', 'guárdalo', 'pásaselo')
+ENVIO = ('envíaselo', 'mándaselo', 'compártelo', 'guárdalo', 'pásaselo', 'guárdate este vídeo', 'guarda este vídeo')  # regla 24: el cierre puede pedir guardar el vídeo
 
 
 NOTAS = []
