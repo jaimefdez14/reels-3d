@@ -160,7 +160,7 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    [--url URL] --publicar` (sin `--publicar`, simulacro). La subida directa da `ProcessingFailedError`: se re-codifica a
    `publicados/ID.mp4`, se sube a esta rama y se publica con `--url` de raw.githubusercontent.com. Queda en
    `publicados.jsonl`. Voz de las listas (estilo B): ElevenLabs `eEyWolF7iBpMA65GbtAm` (`voz.py --eleven`).
-   **L1 publicado el 10-11:** https://www.instagram.com/reel/DfksplFkqC9/ · **L2 publicado el 11-11:** https://www.instagram.com/reel/DfmIf8dAB1C/ · **L4 publicado el 11-11:** https://www.instagram.com/reel/DfnAT6FCcS5/ · **L5 publicado el 12-11:** https://www.instagram.com/reel/DfoyNbEDmN9/ · **L14 publicado el 12-11:** https://www.instagram.com/reel/Dfp2V7nIedO/ · **L18 publicado el 13-11:** https://www.instagram.com/reel/DfrtsqcANCF/
+   **L1 publicado el 10-11:** https://www.instagram.com/reel/DfksplFkqC9/ · **L2 publicado el 11-11:** https://www.instagram.com/reel/DfmIf8dAB1C/ · **L4 publicado el 11-11:** https://www.instagram.com/reel/DfnAT6FCcS5/ · **L5 publicado el 12-11:** https://www.instagram.com/reel/DfoyNbEDmN9/ · **L14 publicado el 12-11:** https://www.instagram.com/reel/Dfp2V7nIedO/ · **L18 publicado el 13-11:** https://www.instagram.com/reel/DfrtsqcANCF/ · **L19 publicado el 14-11:** https://www.instagram.com/reel/DfuEeSaki4D/
 
 23. **Narrativo no es informal (11-11-2026).** Jaime, sobre las propuestas del corrector para L2 («a mala leche», «dura lo
    que le dejes», «te la lían»…): «las propuestas hacen del vídeo demasiado informal. Castellano y narrativo no quiere decir
