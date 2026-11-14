@@ -41,10 +41,10 @@ E.obj('rotZ', 'rotulo', { t0: w(1, 4) - 0.1, t1: w(1, 12), sale: 0.2, x: 150, y:
 E.obj('rotB', 'rotulo', { t0: w(1, 13), t1: w(2, 0), sale: 0.2, x: 150, y: -420, texto: 'BERLÍN', size: 28, col: '#c9ccca', pop: true, caja: [-70, -17, 140, 34] });
 E.figura('bluma', { t0: w(1, 2) - 0.1, t1: w(2, 0), sale: 0.2, x: -420, talla: 460, color: 'gris',
   poses: [[0, 'de_pie'], [w(1, 4), 'pensar'], [w(1, 7), 'senalar'], [w(1, 12), 'pensar']] });
-E.figura('camarero', { t0: w(1, 11) - 0.1, t1: w(2, 0), sale: 0.2, x: -170, cara: true, toca: ['libreta'],
+E.figura('camarero', { t0: w(1, 11) - 0.4, t1: w(2, 0), sale: 0.2, x: -170, cara: true, toca: ['libreta'],
   poses: [[0, 'de_pie'], [w(1, 13), 'ofrecer'], [w(1, 18), 'pensar'], [w(1, 21), 'senalar']],
   sonrisa: [[w(1, 12), 0.6], [w(1, 21), 1.2]] });
-E.obj('libreta', 'lista', { t0: w(1, 12), t1: w(2, 0), sale: 0.2, x: -50, y: -265, n: 3, w: 200, gap: 50, pop: true,
+E.obj('libreta', 'lista', { t0: w(1, 11) - 0.3, t1: w(2, 0), sale: 0.2, x: -50, y: -265, n: 3, w: 200, gap: 50, pop: true,
   brillo: [[w(1, 12), 0.6], [w(1, 16), 3, 'lin']], caja: [-100, -72, 200, 144] });
 // cuentas: las cobradas (1 y 3) se apagan, las que no ha cobrado brillan
 const CU = [80, 150, 220, 290, 360];
