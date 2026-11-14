@@ -171,6 +171,20 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    Y lo que Jaime aprueba palabra a palabra no lo retoca ningún corrector: se usa tal cual (L2, 11-11: «usa el que te
    dije y aprobé»).
 
+24. **Guiones que enganchen y den autoridad: guardados, interacción y seguidores (14-11-2026).** Jaime: «necesito que
+   estén enfocados a generar guiones que enganchen, conceptos que aporten valor, que aumenten los guardados, engagement,
+   valor percibido, autoridad, y por tanto, me sigan». Las listas de consejos sueltos (dormir mejor, el móvil, repasar la
+   semana) no bastan. Cada idea nueva tiene que llevar, además del molde de la regla 17:
+   (a) **gancho con tensión en los dos primeros segundos**: una cifra que sorprende o una afirmación que contradice lo que
+   el espectador cree («Ese capricho de 120 euros no cuesta 120 euros»), nunca una situación plana;
+   (b) **un concepto con nombre o un mecanismo** que el espectador no conocía (la regla del 72, el efecto Diderot, el coste
+   hundido, el ancla de precio): eso da autoridad y es lo que se cuenta luego a otros;
+   (c) **una herramienta que se pueda reutilizar** (una fórmula, una cuenta, tres preguntas, un reparto): es lo que hace que
+   se guarde;
+   (d) **cifras comprobadas** en la propia sesión, con su supuesto dicho en la frase;
+   (e) **cierre que pide guardar o enviar** a alguien concreto («Guárdalo para la próxima vez que…» o «Mándaselo a…»).
+   Las ideas se puntúan con esos cinco criterios antes de proponerlas (`docs/IDEAS-2026-11-14.md`).
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que
