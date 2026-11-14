@@ -1,0 +1,62 @@
+{
+ "id": "L23",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El precio en horas de vida",
+ "tema": "Dinero",
+ "idea": "L23 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Estás a punto de darle a comprar unas zapatillas de 120 euros sin pensar que son casi dos días de trabajo.",
+ "lines": [
+  {
+   "show": "Ese capricho de 120 euros / *no cuesta 120 euros.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Cuesta diez horas de tu vida. / *Tres pasos para verlo antes de pagar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *calcula lo que ganas de verdad por hora.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Divide tu sueldo neto entre las horas reales, / *también las del trayecto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Con 1.800 euros y 150 horas al mes, / *te salen doce euros la hora.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *pasa cada compra a horas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Esas zapatillas son diez horas. / *El móvil nuevo, casi cien.*",
+   "pause": 0.3,
+   "bocadillo": "¿Diez horas por esto?"
+  },
+  {
+   "show": "Cuando lo ves en horas, / *te preguntas si de verdad lo quieres.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *déjalo dos días en el carrito.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si pasados dos días lo sigues queriendo, cómpralo. / *Muchas veces ya ni te acordarás.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El dinero se recupera. / *Las horas que te costó, no.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Guárdalo para la próxima vez / *que vayas a darle a comprar.*",
+   "pause": 0.3
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "id": "L25",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El efecto Diderot",
+ "tema": "Dinero",
+ "idea": "L25 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Te compras un sofá nuevo y al mes estás mirando alfombras, una lámpara y cortinas nuevas.",
+ "lines": [
+  {
+   "show": "Te compras un sofá nuevo / *y de repente la alfombra ya no pega.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Esto tiene nombre: el efecto Diderot. / *Tres formas de que no te pase.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El filósofo Denis Diderot estrenó una bata / *y acabó cambiando todo el despacho.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Al lado de la bata, sus muebles parecían viejos. / *Y los fue cambiando uno a uno.*",
+   "pause": 0.3,
+   "bocadillo": "Ya que estamos, cambio la mesa"
+  },
+  {
+   "show": "La primera: // *antes de comprar, / pregunta qué más te va a pedir.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "El móvil nuevo pide funda. / *El coche nuevo pide garaje.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *ponle un tope a lo que viene detrás.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Decide cuánto vas a gastar en total, / *no solo en lo primero.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *espera un mes / antes de la siguiente compra.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Pasado ese tiempo, / *la alfombra vieja ya no te parece tan mal.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo caro no es lo que compras: / *es todo lo que viene detrás.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a quien está a punto / *de reformar la casa.*",
+   "pause": 0.3
+  }
+ ]
+}

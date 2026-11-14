@@ -1,0 +1,62 @@
+{
+ "id": "L24",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La regla del 72",
+ "tema": "Dinero",
+ "idea": "L24 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Tienes dinero en el banco o en un fondo y no sabes si lo que te rinde es mucho o poco.",
+ "lines": [
+  {
+   "show": "Hay una cuenta de diez segundos / *que te dice cuándo se duplica tu dinero.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Se llama la regla del 72. / *Y sirve para tres cosas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *saber cuándo se duplica lo que inviertes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Divide 72 entre lo que te rinde al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Al nueve por ciento, en ocho. / *Por eso unos pocos puntos importan tanto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *ver lo que pierde tu dinero parado.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Con la inflación funciona igual. / *Si los precios suben un tres por ciento al año, / en veinticuatro años tu dinero vale la mitad.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *ver lo rápido que crece una deuda.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una tarjeta al dieciocho por ciento / *duplica lo que debes en cuatro años.*",
+   "pause": 0.3,
+   "bocadillo": "Ya la iré pagando poco a poco"
+  },
+  {
+   "show": "Es una aproximación, / *pero se queda muy cerca de la cuenta exacta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Guárdalo y haz la cuenta / *con lo que te paga tu banco.*",
+   "pause": 0.3
+  }
+ ]
+}

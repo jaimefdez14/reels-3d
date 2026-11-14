@@ -1,0 +1,58 @@
+{
+ "id": "L28",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Lo que es tuyo de una factura",
+ "tema": "Emprendimiento",
+ "idea": "L28 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Eres autónomo, cobras una factura de 3.000 euros más IVA y te parece que has ganado eso.",
+ "lines": [
+  {
+   "show": "Facturas 3.000 euros más IVA / *y 630 ya no son tuyos.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Y eso es solo el principio. / *Tres sobres para saber cuánto ganas de verdad.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *el IVA, el mismo día que cobras.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Ese 21 % lo cobras tú, / *pero es de Hacienda.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si te lo gastas, en el trimestre / *te toca ponerlo de tu bolsillo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *un 20 % del beneficio para el IRPF.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si estás en estimación directa, / *cada trimestre adelantas ese veinte por ciento.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *los gastos fijos, / antes de celebrar nada.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cuota de autónomos, alquiler, gestoría. / *Lo que queda después es tu sueldo.*",
+   "pause": 0.3,
+   "bocadillo": "¡Este mes he facturado un montón!"
+  },
+  {
+   "show": "Facturar mucho no es ganar mucho. / *Ganas lo que queda en el último sobre.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Guárdalo para tu próxima factura.",
+   "pause": 0.3
+  }
+ ]
+}

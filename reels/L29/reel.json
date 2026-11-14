@@ -1,0 +1,54 @@
+{
+ "id": "L29",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La regla del 80/20",
+ "tema": "Emprendimiento",
+ "idea": "L29 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Trabajas doce horas al día para tus clientes y a fin de mes no te salen las cuentas.",
+ "lines": [
+  {
+   "show": "El 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Y seguramente le dedicas tu tiempo al resto. / *Tres pasos para darle la vuelta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *ordena tus clientes / por lo que te facturan.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Arriba quedan unos pocos. / *Muchas veces, los que menos se quejan.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *apunta cuánto tiempo te lleva cada uno.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Correos, llamadas, cambios de última hora. / *Ahí aparecen los que te cuestan dinero.*",
+   "pause": 0.3,
+   "bocadillo": "¿Lo podemos cambiar otra vez?"
+  },
+  {
+   "show": "El tercero: // *súbeles el precio o déjalos ir.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Ese tiempo que recuperas / *se lo das a los clientes que más te aportan.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Trabajar más horas no arregla las cuentas. / *Elegir bien para quién trabajas, sí.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a quien trabaja doce horas / *y no le salen las cuentas.*",
+   "pause": 0.3
+  }
+ ]
+}

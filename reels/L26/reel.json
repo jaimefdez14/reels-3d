@@ -1,0 +1,62 @@
+{
+ "id": "L26",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La falacia del coste hundido",
+ "tema": "Crecimiento",
+ "idea": "L26 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Sigues en una carrera, un negocio o un coche que no funciona porque ya has puesto mucho dinero y tiempo.",
+ "lines": [
+  {
+   "show": "Sigues viendo una película mala / *porque ya pagaste la entrada.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Y haces lo mismo con cosas mucho más caras. / *Se llama la falacia del coste hundido.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres claves para que no te atrape.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *lo que ya has gastado no vuelve, / decidas lo que decidas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "La entrada está pagada / *tanto si te quedas como si te vas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Solo cuenta lo que tienes por delante: / *dos horas más de película mala.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *aprende a verla en las cosas grandes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Un coche que no deja de averiarse.*",
+   "pause": 0.3,
+   "bocadillo": "Ya que he llegado hasta aquí…"
+  },
+  {
+   "show": "La tercera: // *hazte una sola pregunta.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si empezaras hoy desde cero, / *¿lo volverías a elegir?*",
+   "pause": 0.3
+  },
+  {
+   "show": "Si la respuesta es no, / *lo que llevas gastado no es motivo para seguir.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Guárdalo para la próxima vez / *que digas «ya que he llegado hasta aquí».*",
+   "pause": 0.3
+  }
+ ]
+}

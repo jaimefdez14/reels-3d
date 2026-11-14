@@ -1,0 +1,58 @@
+{
+ "id": "L30",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El efecto Zeigarnik",
+ "tema": "Hábitos",
+ "idea": "L30 de docs/IDEAS-2026-11-14.md (regla 24); Jaime, 14-11-2026: «todos». Guion en texto, sin escena ni voz.",
+ "situacion": "Llevas toda la semana dándole vueltas a un informe que no has empezado, y no te lo quitas de la cabeza.",
+ "lines": [
+  {
+   "show": "Tu cabeza no se olvida / *de lo que dejas a medias.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Se llama efecto Zeigarnik. / *Tres formas de usarlo para dejar de aplazar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La psicóloga Bliuma Zeigarnik vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *empieza solo dos minutos.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo que has empezado / *te sigue rondando hasta que lo acabas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *para a mitad de una frase.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Al día siguiente no empiezas de cero: / *terminas la frase.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *apunta lo que tienes pendiente.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo que está escrito / *deja de dar vueltas en la cabeza.*",
+   "pause": 0.3,
+   "bocadillo": "¿Y si se me olvida?"
+  },
+  {
+   "show": "Empezar cuesta más que seguir. / *Por eso el truco es no terminar del todo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Guárdalo para el próximo lunes / *que no sepas por dónde empezar.*",
+   "pause": 0.3
+  }
+ ]
+}
