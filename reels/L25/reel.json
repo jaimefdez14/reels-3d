@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Esto tiene nombre: el efecto Diderot. / *Hay tres maneras de evitarlo.*",
+   "show": "Esto tiene nombre: / *el efecto Diderot.*",
    "pause": 0.3
   },
   {
@@ -19,12 +19,16 @@
    "pause": 0.3
   },
   {
-   "show": "Al lado de la bata nueva, / los muebles parecían viejos, / *así que los fue cambiando uno a uno.*",
+   "show": "Al lado de la bata nueva, / *todo lo demás parecía viejo.*",
    "pause": 0.3,
    "bocadillo": "Ya que estamos, cambio la mesa"
   },
   {
-   "show": "La primera: // *antes de comprar algo, / pregúntate qué más te va a pedir.*",
+   "show": "Hay tres maneras de evitarlo.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *antes de comprar algo, pregúntate / qué más vas a tener que comprar.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -33,7 +37,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ponle un tope a lo que viene detrás.*",
+   "show": "La segunda: // *ponle un tope / a todo lo que arrastra esa compra.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -55,7 +59,7 @@
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a quien esté a punto / *de reformar la casa.*",
+   "show": "Mándaselo a quien se acaba / *de comprar un sofá.*",
    "pause": 0.3
   }
  ],
@@ -100,6 +104,36 @@
     }
    ],
    "descartado": ""
+  },
+  {
+   "ronda": "lector 1",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Esto tiene nombre: el efecto Diderot. / *Hay tres maneras de evitarlo.*",
+     "despues": "Esto tiene nombre: / *el efecto Diderot.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Al lado de la bata nueva, / los muebles parecían viejos, / *así que los fue cambiando uno a uno.*",
+     "despues": "Al lado de la bata nueva, / *todo lo demás parecía viejo.*"
+    },
+    {
+     "linea": 4,
+     "antes": "La primera: // *antes de comprar algo, / pregúntate qué más te va a pedir.*",
+     "despues": "La primera: // *antes de comprar algo, pregúntate / qué más vas a tener que comprar.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La segunda: // *ponle un tope a lo que viene detrás.*",
+     "despues": "La segunda: // *ponle un tope / a todo lo que arrastra esa compra.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Mándaselo a quien esté a punto / *de reformar la casa.*",
+     "despues": "Mándaselo a quien se acaba / *de comprar un sofá.*"
+    }
+   ]
   }
  ]
 }

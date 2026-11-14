@@ -31,7 +31,7 @@
   {
    "show": "Cenas, viajes, caprichos. / *480 euros que gastas sin remordimientos.*",
    "pause": 0.3,
-   "bocadillo": "¿Me lo puedo permitir?"
+   "bocadillo": "Esto sale de mi treinta por ciento"
   },
   {
    "show": "La tercera: // *un veinte por ciento para ahorrar, / y se aparta antes que nada.*",
@@ -39,15 +39,15 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Trescientos veinte euros / que guardas el día que cobras, / *no lo que te sobre a fin de mes.*",
+   "show": "Trescientos veinte euros / que guardas el día que cobras, / *sin esperar a ver qué sobra.*",
    "pause": 0.3
   },
   {
-   "show": "Si lo necesario pasa de la mitad, / *ya sabes dónde está el problema.*",
+   "show": "Si lo fijo pasa de la mitad, / *recorta ahí antes que en el ahorro.*",
    "pause": 0.3
   },
   {
-   "show": "Para ahorrar no importa tanto cuánto ganas / *como el orden en que lo gastas.*",
+   "show": "Para ahorrar no importa tanto cuánto ganas / *como apartarlo antes de gastar.*",
    "pause": 0.3
   },
   {
@@ -101,6 +101,26 @@
     }
    ],
    "descartado": ""
+  },
+  {
+   "ronda": "lector 1",
+   "cambios": [
+    {
+     "linea": 7,
+     "antes": "Trescientos veinte euros / que guardas el día que cobras, / *no lo que te sobre a fin de mes.*",
+     "despues": "Trescientos veinte euros / que guardas el día que cobras, / *sin esperar a ver qué sobra.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si lo necesario pasa de la mitad, / *ya sabes dónde está el problema.*",
+     "despues": "Si lo fijo pasa de la mitad, / *recorta ahí antes que en el ahorro.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Para ahorrar no importa tanto cuánto ganas / *como el orden en que lo gastas.*",
+     "despues": "Para ahorrar no importa tanto cuánto ganas / *como apartarlo antes de gastar.*"
+    }
+   ]
   }
  ]
 }

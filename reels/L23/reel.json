@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Cuesta diez horas de trabajo. / *Te cuento cómo verlo en tres pasos / antes de pagar.*",
+   "show": "Cuesta doce horas de trabajo. / *Te cuento cómo verlo en tres pasos / antes de pagar.*",
    "pause": 0.3
   },
   {
@@ -20,11 +20,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide tu sueldo neto entre las horas / que le dedicas de verdad, / *contando el trayecto.*",
+   "show": "Divide tu sueldo neto / entre todas las horas que le dedicas, / *contando el trayecto.*",
    "pause": 0.3
   },
   {
-   "show": "Con 1.800 euros y 150 horas al mes, / *te salen doce euros la hora.*",
+   "show": "Con 1.800 euros y 180 horas al mes, / *te salen diez euros la hora.*",
    "pause": 0.3
   },
   {
@@ -33,12 +33,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Esas zapatillas son diez horas. / *El móvil nuevo, casi cien.*",
+   "show": "Unas zapatillas de ciento veinte euros: / doce horas. / *Un móvil de mil doscientos: ciento veinte.*",
    "pause": 0.3,
-   "bocadillo": "¿Diez horas por esto?"
+   "bocadillo": "¿Doce horas por esto?"
   },
   {
-   "show": "Cuando lo ves en horas, / *te preguntas si de verdad lo quieres.*",
+   "show": "Cuando lo ves en horas, / *te preguntas si lo quieres tanto.*",
    "pause": 0.3
   },
   {
@@ -51,7 +51,7 @@
    "pause": 0.3
   },
   {
-   "show": "El dinero vuelve a entrar. / *Las horas que te cuesta ganarlo, no.*",
+   "show": "El dinero se vuelve a ganar. / *Las horas que dedicas a ganarlo, no.*",
    "pause": 0.3
   },
   {
@@ -90,6 +90,24 @@
     }
    ],
    "descartado": ""
+  },
+  {
+   "ronda": "lector 1",
+   "reescrito": true,
+   "antes": [
+    "Ese capricho de 120 euros / *no cuesta 120 euros.*",
+    "Cuesta diez horas de trabajo. / *Te cuento cómo verlo en tres pasos / antes de pagar.*",
+    "El primero: // *calcula lo que ganas de verdad por hora.*",
+    "Divide tu sueldo neto entre las horas / que le dedicas de verdad, / *contando el trayecto.*",
+    "Con 1.800 euros y 150 horas al mes, / *te salen doce euros la hora.*",
+    "El segundo: // *pasa cada compra a horas.*",
+    "Esas zapatillas son diez horas. / *El móvil nuevo, casi cien.*",
+    "Cuando lo ves en horas, / *te preguntas si de verdad lo quieres.*",
+    "El tercero: // *déjalo dos días en el carrito.*",
+    "Si a los dos días lo sigues queriendo, / cómpralo. / *Muchas veces ya ni te acuerdas.*",
+    "El dinero vuelve a entrar. / *Las horas que te cuesta ganarlo, no.*",
+    "Guarda este vídeo para la próxima vez / *que vayas a darle al botón de comprar.*"
+   ]
   }
  ]
 }

@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Es el ejercicio que más errores evita. / *Se hace en tres pasos.*",
+   "show": "Así ves a tiempo / el error que podría cerrarlo. / *Se hace en tres pasos.*",
    "pause": 0.3
   },
   {
@@ -21,7 +21,8 @@
   },
   {
    "show": "No te preguntes si puede salir mal. / *Da por hecho que ha salido mal.*",
-   "pause": 0.3
+   "pause": 0.3,
+   "bocadillo": "Esto no puede fallar"
   },
   {
    "show": "Así dejas de defender la idea / *y empiezas a buscarle fallos.*",
@@ -34,11 +35,10 @@
   },
   {
    "show": "Pocos clientes, precios demasiado bajos, / *o que el dinero se acabe antes de tiempo.*",
-   "pause": 0.3,
-   "bocadillo": "Esto no puede fallar"
+   "pause": 0.3
   },
   {
-   "show": "El tercero: // *ponle remedio hoy mismo / al primer motivo.*",
+   "show": "El tercero: // *ponle remedio hoy mismo / al motivo más probable.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "Los fallos se ven antes / *cuando los buscas a propósito.*",
+   "show": "Mejor encontrar hoy el motivo del cierre / *que descubrirlo dentro de un año.*",
    "pause": 0.3
   },
   {
@@ -111,6 +111,26 @@
     }
    ],
    "descartado": "«El primero:» se mantiene (firma del estilo B, docs/SISTEMA-LISTA.md)"
+  },
+  {
+   "ronda": "lector 1",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Es el ejercicio que más errores evita. / *Se hace en tres pasos.*",
+     "despues": "Así ves a tiempo / el error que podría cerrarlo. / *Se hace en tres pasos.*"
+    },
+    {
+     "linea": 7,
+     "antes": "El tercero: // *ponle remedio hoy mismo / al primer motivo.*",
+     "despues": "El tercero: // *ponle remedio hoy mismo / al motivo más probable.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Los fallos se ven antes / *cuando los buscas a propósito.*",
+     "despues": "Mejor encontrar hoy el motivo del cierre / *que descubrirlo dentro de un año.*"
+    }
+   ]
   }
  ]
 }

@@ -20,11 +20,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide 72 entre el interés que te da al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "show": "Divide 72 entre lo que te renta al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
    "pause": 0.3
   },
   {
-   "show": "Al nueve por ciento, en ocho. / *Por eso un par de puntos / marcan tanta diferencia.*",
+   "show": "Al nueve por ciento, en ocho. / *Tres puntos más / y llegas cuatro años antes.*",
    "pause": 0.3
   },
   {
@@ -47,7 +47,7 @@
    "bocadillo": "Ya la iré pagando poco a poco"
   },
   {
-   "show": "Es una aproximación, / *pero se queda muy cerca de la cuenta exacta.*",
+   "show": "No es exacta, / *pero se acerca mucho.*",
    "pause": 0.3
   },
   {
@@ -100,6 +100,27 @@
     }
    ],
    "descartado": ""
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "Divide 72 entre el interés que te da al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+     "despues": "Divide 72 entre lo que te renta al año. / *Al seis por ciento, en unos doce años / tienes el doble.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Al nueve por ciento, en ocho. / *Por eso un par de puntos / marcan tanta diferencia.*",
+     "despues": "Al nueve por ciento, en ocho. / *Tres puntos más / y llegas cuatro años antes.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Es una aproximación, / *pero se queda muy cerca de la cuenta exacta.*",
+     "despues": "No es exacta, / *pero se acerca mucho.*"
+    }
+   ],
+   "descartado": "lector en frío 1 (8/10)"
   }
  ]
 }

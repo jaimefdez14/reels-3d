@@ -11,24 +11,19 @@
    "pause": 0.45
   },
   {
-   "show": "Se llama efecto ancla, / *y puedes usarlo a tu favor de tres maneras.*",
+   "show": "Se llama efecto ancla: / *lo que te parece caro / depende del primer precio que ves.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *lo que te parece caro / depende del primer precio que ves.*",
-   "pause": 0.3,
-   "pausa_media": 0.45
-  },
-  {
-   "show": "Después de ver uno de 200 euros, / *el de 40 parece razonable.*",
+   "show": "Sin el de 200, / *ese mismo vino de 40 te parecería caro.*",
    "pause": 0.3
   },
   {
-   "show": "Sin el de 200, / *ese mismo vino te parecería caro.*",
+   "show": "Puedes usarlo a tu favor de tres maneras.",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *si vendes, enseña primero / la opción más cara.*",
+   "show": "La primera: // *si vendes, enseña primero / la opción más cara.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -37,16 +32,25 @@
    "pause": 0.3
   },
   {
-   "show": "Si empiezas por la más barata, / *todo lo demás te parecerá caro.*",
+   "show": "Si empiezas por la más barata, / *al cliente todo lo demás le parecerá caro.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *si compras, ten claro cuánto quieres pagar / antes de que el otro diga un precio.*",
+   "show": "La segunda: // *si compras, desconfía / del primer precio que te enseñan.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Quien da la primera cifra / *marca el resto de la negociación.*",
+   "show": "Antes de entrar, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *si negocias, / di tú la primera cifra.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Quien la dice / *marca el resto de la negociación.*",
    "pause": 0.3,
    "bocadillo": "¿Cuánto pensabas gastarte?"
   },
@@ -110,6 +114,24 @@
     }
    ],
    "descartado": "línea 6: «casi todo el mundo» rebajado a «mucha gente» (no está comprobado)"
+  },
+  {
+   "ronda": "lector 1",
+   "reescrito": true,
+   "antes": [
+    "Los restaurantes ponen en la carta / un vino de 200 euros / *para venderte el de 40.*",
+    "Se llama efecto ancla, / *y puedes usarlo a tu favor de tres maneras.*",
+    "La primera: // *lo que te parece caro / depende del primer precio que ves.*",
+    "Después de ver uno de 200 euros, / *el de 40 parece razonable.*",
+    "Sin el de 200, / *ese mismo vino te parecería caro.*",
+    "La segunda: // *si vendes, enseña primero / la opción más cara.*",
+    "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Mucha gente se queda con la de en medio.*",
+    "Si empiezas por la más barata, / *todo lo demás te parecerá caro.*",
+    "La tercera: // *si compras, ten claro cuánto quieres pagar / antes de que el otro diga un precio.*",
+    "Quien da la primera cifra / *marca el resto de la negociación.*",
+    "Ningún precio se mira por separado: / *siempre lo comparas / con el primero que has visto.*",
+    "Mándaselo a ese amigo que vende / *y siempre enseña primero lo más barato.*"
+   ]
   }
  ]
 }

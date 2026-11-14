@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
+   "show": "Una psicóloga vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
    "pause": 0.3
   },
   {
-   "show": "La psicóloga Bliuma Zeigarnik se dio cuenta / de que los camareros recordaban / los pedidos sin cobrar / *y olvidaban los ya pagados.*",
+   "show": "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
    "pause": 0.3
   },
   {
@@ -24,30 +24,30 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que has empezado / *te sigue rondando la cabeza / hasta que lo terminas.*",
+   "show": "Lo que has empezado / te sigue rondando la cabeza, / *y eso te empuja a terminarlo.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *déjalo a mitad de frase.*",
+   "show": "La segunda: // *al parar, déjalo a medias / en un punto fácil de retomar.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Al día siguiente no empiezas de cero: / *terminas la frase.*",
+   "show": "Al día siguiente no empiezas de cero: / *sigues donde lo dejaste.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *apunta lo que tienes pendiente.*",
+   "show": "La tercera: // *lo que no vas a hacer hoy, / apúntalo con su día.*",
    "pause": 0.3,
-   "pausa_media": 0.45
-  },
-  {
-   "show": "Lo que apuntas / *deja de darte vueltas en la cabeza.*",
-   "pause": 0.3,
+   "pausa_media": 0.45,
    "bocadillo": "¿Y si se me olvida?"
   },
   {
-   "show": "Empezar cuesta más que seguir. / *Por eso conviene dejar siempre / algo sin terminar.*",
+   "show": "Así no se te olvida, / *y deja de darte vueltas / mientras haces lo de hoy.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
    "pause": 0.3
   },
   {
@@ -106,6 +106,23 @@
     }
    ],
    "descartado": ""
+  },
+  {
+   "ronda": "lector 1",
+   "reescrito": true,
+   "antes": [
+    "Lo que dejas a medias, / *la cabeza no lo olvida.*",
+    "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
+    "La psicóloga Bliuma Zeigarnik se dio cuenta / de que los camareros recordaban / los pedidos sin cobrar / *y olvidaban los ya pagados.*",
+    "La primera: // *ponte con ello, / aunque sean dos minutos.*",
+    "Lo que has empezado / *te sigue rondando la cabeza / hasta que lo terminas.*",
+    "La segunda: // *déjalo a mitad de frase.*",
+    "Al día siguiente no empiezas de cero: / *terminas la frase.*",
+    "La tercera: // *apunta lo que tienes pendiente.*",
+    "Lo que apuntas / *deja de darte vueltas en la cabeza.*",
+    "Empezar cuesta más que seguir. / *Por eso conviene dejar siempre / algo sin terminar.*",
+    "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+   ]
   }
  ]
 }

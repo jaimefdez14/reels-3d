@@ -32,12 +32,12 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *reconócela cuando hay mucho más en juego.*",
+   "show": "La segunda: // *la trampa crece / con lo que hay en juego.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Un coche que se pasa la vida en el taller.*",
+   "show": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Y sigues porque ya le has metido / años o dinero.*",
    "pause": 0.3,
    "bocadillo": "Ya que he llegado hasta aquí…"
   },
@@ -105,6 +105,21 @@
     }
    ],
    "descartado": ""
+  },
+  {
+   "ronda": "lector 1",
+   "cambios": [
+    {
+     "linea": 6,
+     "antes": "La segunda: // *reconócela cuando hay mucho más en juego.*",
+     "despues": "La segunda: // *la trampa crece / con lo que hay en juego.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Un coche que se pasa la vida en el taller.*",
+     "despues": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Y sigues porque ya le has metido / años o dinero.*"
+    }
+   ]
   }
  ]
 }
