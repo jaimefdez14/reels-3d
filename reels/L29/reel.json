@@ -29,12 +29,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Correos, llamadas, cambios de última hora. / *Ahí aparecen los que pagan poco / y te quitan muchas horas.*",
+   "show": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí aparecen los que pagan poco / y te quitan muchas horas.*",
    "pause": 0.3,
    "bocadillo": "¿Lo podemos cambiar otra vez?"
   },
   {
-   "show": "El tercero: // *a esos, súbeles el precio / o deja de trabajar con ellos.*",
+   "show": "El tercero: // *a los que pagan poco y te quitan horas, / súbeles el precio / o deja de trabajar con ellos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -95,6 +95,21 @@
     "Correos, llamadas, cambios de última hora. / *Ahí aparecen los que te cuestan dinero.*",
     "El tercero: // *súbeles el precio / o deja de trabajar con ellos.*",
     "El tiempo que recuperas, / *dedícaselo a los clientes que más te dejan.*",
+    "Trabajar más horas no arregla las cuentas. / *Elegir bien para quién trabajas, sí.*",
+    "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*"
+   ]
+  },
+  {
+   "ronda": "lector 2 (8/10)",
+   "antes": [
+    "Si trabajas por tu cuenta, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
+    "Y seguramente dedicas / casi todo tu tiempo al resto. / *Hay tres pasos para darle la vuelta.*",
+    "El primero: // *ordena a tus clientes / por lo que les facturas.*",
+    "Verás que unos pocos / *pagan casi todo.*",
+    "El segundo: // *apunta cuánto tiempo te lleva cada uno.*",
+    "Correos, llamadas, cambios de última hora. / *Ahí aparecen los que pagan poco / y te quitan muchas horas.*",
+    "El tercero: // *a esos, súbeles el precio / o deja de trabajar con ellos.*",
+    "El tiempo que recuperas, / *dedícaselo a los clientes que más te pagan.*",
     "Trabajar más horas no arregla las cuentas. / *Elegir bien para quién trabajas, sí.*",
     "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*"
    ]

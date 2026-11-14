@@ -43,7 +43,7 @@
    "bocadillo": "¿Y si se me olvida?"
   },
   {
-   "show": "Así no se te olvida, / *y deja de darte vueltas / mientras haces lo de hoy.*",
+   "show": "Lo que tiene fecha no se olvida: / *deja de darte vueltas / y te centras en lo de hoy.*",
    "pause": 0.3
   },
   {
@@ -121,6 +121,22 @@
     "La tercera: // *apunta lo que tienes pendiente.*",
     "Lo que apuntas / *deja de darte vueltas en la cabeza.*",
     "Empezar cuesta más que seguir. / *Por eso conviene dejar siempre / algo sin terminar.*",
+    "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+   ]
+  },
+  {
+   "ronda": "lector 2 (8/10)",
+   "antes": [
+    "Lo que dejas a medias, / *la cabeza no lo olvida.*",
+    "Una psicóloga vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
+    "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
+    "La primera: // *ponte con ello, / aunque sean dos minutos.*",
+    "Lo que has empezado / te sigue rondando la cabeza, / *y eso te empuja a terminarlo.*",
+    "La segunda: // *al parar, déjalo a medias / en un punto fácil de retomar.*",
+    "Al día siguiente no empiezas de cero: / *sigues donde lo dejaste.*",
+    "La tercera: // *lo que no vas a hacer hoy, / apúntalo con su día.*",
+    "Así no se te olvida, / *y deja de darte vueltas / mientras haces lo de hoy.*",
+    "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
     "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
    ]
   }

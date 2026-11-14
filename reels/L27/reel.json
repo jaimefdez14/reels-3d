@@ -28,7 +28,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Mucha gente se queda con la de en medio.*",
+   "show": "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la de en medio parece razonable.*",
    "pause": 0.3
   },
   {
@@ -41,7 +41,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Antes de entrar, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
+   "show": "Antes de entrar en la tienda, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
    "pause": 0.3
   },
   {
@@ -50,12 +50,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Quien la dice / *marca el resto de la negociación.*",
+   "show": "Si te preguntan cuánto pensabas gastarte, / *no contestes: di tú el precio.*",
    "pause": 0.3,
    "bocadillo": "¿Cuánto pensabas gastarte?"
   },
   {
-   "show": "Ningún precio se mira por separado: / *siempre lo comparas / con el primero que has visto.*",
+   "show": "Por eso el vino de 40 / *nunca fue tan barato como parecía.*",
    "pause": 0.3
   },
   {
@@ -132,6 +132,32 @@
     "Ningún precio se mira por separado: / *siempre lo comparas / con el primero que has visto.*",
     "Mándaselo a ese amigo que vende / *y siempre enseña primero lo más barato.*"
    ]
+  },
+  {
+   "ronda": 2,
+   "cambios": [
+    {
+     "linea": 5,
+     "antes": "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Mucha gente se queda con la de en medio.*",
+     "despues": "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la de en medio parece razonable.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Antes de entrar, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
+     "despues": "Antes de entrar en la tienda, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Quien la dice / *marca el resto de la negociación.*",
+     "despues": "Si te preguntan cuánto pensabas gastarte, / *no contestes: di tú el precio.*"
+    },
+    {
+     "linea": 11,
+     "antes": "Ningún precio se mira por separado: / *siempre lo comparas / con el primero que has visto.*",
+     "despues": "Por eso el vino de 40 / *nunca fue tan barato como parecía.*"
+    }
+   ],
+   "descartado": "lector en frío 2 (8/10); el bocadillo pasa a la línea 10 y la voz lo presenta"
   }
  ]
 }
