@@ -36,11 +36,11 @@ const PX = 65, RX = 245;     // hueco del interés y del resultado
 E.figura('yo', { t0: 0, t1: fin(0), x: -330, cara: true,
   poses: [[0, 'pensar'], [w(0, 7), 'senalar'], [w(0, 12), 'de_pie'], [w(0, 14), 'celebrar'], [w(1, 0), 'de_pie'], [w(1, 3), 'senalar'], [w(1, 9), 'ofrecer']],
   sonrisa: [[0, 0.2], [w(0, 7), 0.5], [w(0, 14), 1.5], [w(1, 0), 0.6], [w(1, 9), 1.2]] });
-E.obj('reloj0', 'relojAm', { t0: 0, t1: wf(0, 16) + 0.3, sale: 0.3, x: 150, y: -390, r: 85, texto: '10 s',
+E.obj('reloj0', 'relojAm', { t0: 0, t1: w(0, 13), sale: 0.3, x: 150, y: -390, r: 85, texto: '10 s',
   p: [[0.3, 0], [wf(0, 8), 1, 'inout']], caja: [-87, -87, 174, 174] });
 E.obj('pila0', 'pila', { t0: 0, t1: fin(0), x: 150, n: 8, w: 170, hh: 26,
   k: [[0, 4], [w(0, 13), 4], [wf(0, 16), 8, 'inout']], barrido: [wf(0, 16)], caja: [-85, -185, 170, 185], refl: true });
-for (let i = 0; i < 4; i++) { const a = w(0, 13) + i * 0.14;
+for (let i = 0; i < 4; i++) { const a = w(0, 13) + 0.05 + i * 0.14;
   E.obj('m0_' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.15, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
     x: [[a, -260], [a + 0.65, 150, 'inout']], y: [[a, -300], [a + 0.32, -470], [a + 0.65, -120, 'in']] }); }
 E.obj('x2h', 'rotulo', { t0: wf(0, 16) - 0.1, t1: fin(0), x: 335, y: -110, texto: '×2', size: 58, peso: 700, col: AM, track: 0, pop: true, caja: [-50, -32, 100, 64] });
@@ -85,7 +85,7 @@ E.obj('p9', 'pieza', { t0: w(5, 2) - 0.05, t1: fin(1), x: PX, y: FY, r: 38, text
   s: [[0, 1], [w(5, 12), 1], [w(5, 12) + 0.3, 1.2, 'back'], [w(5, 14) + 0.2, 1]] });
 E.obj('res1', 'contador', { t0: w(4, 10) - 0.05, t1: fin(1), x: RX, y: FY, v: [[w(4, 10), 0], [wf(4, 11) + 0.1, 12, 'out'], [w(5, 10), 12], [wf(5, 11) + 0.15, 8, 'inout']],
   size: 66, col: AM, miles: false, pop: true, barrido: [wf(4, 11), wf(5, 11)], caja: [-55, -38, 110, 76] });
-E.obj('anios1', 'contador', { t0: w(4, 12) - 0.1, t1: fin(1), x: 150, y: -290, v: [[w(4, 12), 0], [wf(4, -1), 12, 'inout'], [w(5, 0), 12], [w(5, 2), 0, 'inout'], [w(5, 11), 0], [w(5, 18), 8, 'inout']],
+E.obj('anios1', 'contador', { t0: w(4, 12) - 0.1, t1: fin(1), x: 345, y: -290, v: [[w(4, 12), 0], [wf(4, -1), 12, 'inout'], [w(5, 0), 12], [w(5, 2), 0, 'inout'], [w(5, 11), 0], [w(5, 18), 8, 'inout']],
   pre: 'año ', size: 48, col: 'txt', miles: false, pop: true, caja: [-110, -30, 220, 60] });
 E.obj('x2a', 'rotulo', { t0: wf(4, -1) - 0.1, t1: w(5, 1), sale: 0.2, x: 335, y: -110, texto: '×2', size: 58, peso: 700, col: AM, track: 0, pop: true, caja: [-50, -32, 100, 64] });
 E.obj('x2b', 'rotulo', { t0: w(5, 18), t1: fin(1), x: 335, y: -110, texto: '×2', size: 58, peso: 700, col: AM, track: 0, pop: true, caja: [-50, -32, 100, 64] });
