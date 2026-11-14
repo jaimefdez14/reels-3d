@@ -53,8 +53,8 @@ E.destello(w(1, 20), 0.15);
 // 3: Ese(0) veintiuno(1) por(2) ciento(3) que(4) añades(5) a(6) la(7) factura(8) lo(9) cobras(10) tú,(11) pero(12) es(13) de(14) Hacienda.(15)
 // 4: Si(0) te(1) lo(2) gastas,(3) al(4) presentar(5) el(6) trimestre(7) te(8) toca(9) ponerlo(10) de(11) tu(12) bolsillo.(13)
 E.numero(1, N[0].T, N[0].S, { desde: 's1', hacia: 'tarroIVA' });
-const P1 = -110, T1 = 250;
-E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -360, cara: true,
+const P1 = -80, T1 = 250;
+E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -370, cara: true,
   poses: [[0, 'de_pie'], [w(2, 4), 'meter'], [w(2, 9), 'senalar'], [w(3, 9), 'ofrecer'], [w(3, 12), 'encoger'], [w(4, 0), 'de_pie'], [w(4, 4), 'pensar'], [w(4, 9), 'manos_cabeza'], [wf(4, -1) + 0.2, 'celebrar']],
   sonrisa: [[w(2, 4), 0.6], [w(3, 9), 0.8], [w(3, 12), -0.3], [w(4, 9), -1.2], [wf(4, -1) + 0.2, 1.4]] });
 E.obj('pila1', 'pila', { t0: N[0].S - 0.1, t1: fin(1), x: P1, n: 10, w: 170, hh: 26,

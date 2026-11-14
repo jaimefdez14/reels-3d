@@ -74,7 +74,7 @@ E.obj('rotInv', 'rotulo', { t0: w(2, 6), t1: w(3, 24) + 0.3, sale: 0.2, x: 150, 
 // monedas que vuelan de la mano al montón: «lo que inviertes» y las dos veces que se duplica
 [[w(2, 6), 4], [w(4, 12), 4], [w(5, 11), 4]].forEach(([a0, n], g) => { for (let i = 0; i < n; i++) { const a = a0 + i * (g ? 0.45 : 0.2);
   E.obj(`m1_${g}_${i}`, 'moneda', { t0: a, t1: a + 0.75, entra: 0.06, sale: 0.15, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, -300], [a + 0.7, 150, 'inout']], y: [[a, -320], [a + 0.35, -450], [a + 0.7, -150, 'in']] }); } });
+    x: [[a, -300], [a + 0.7, 150, 'inout']], y: [[a, -320], [a + 0.35, -395], [a + 0.7, -150, 'in']] }); } });
 // la división se escribe: primero el interés (%), luego «72 ÷», luego «= AÑOS»
 E.obj('pPct', 'pieza', { t0: w(3, 2) - 0.05, t1: w(4, 2), sale: 0.15, x: PX, y: FY, r: 38, texto: '%', pop: true });
 E.obj('rotInt', 'rotulo', { t0: w(3, 2), t1: fin(1), x: PX, y: -455, texto: 'INTERÉS AL AÑO', size: 22, col: GRIS, pop: true, caja: [-105, -14, 210, 28] });
