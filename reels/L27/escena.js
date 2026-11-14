@@ -37,8 +37,8 @@ TIPOS.tarifa = function (c, o, t) {
   if (on > 0) { c.save(); c.beginPath(); c.roundRect(-tw / 2 + 6, -h / 2 + 6, tw - 12, h - 12, 14); c.clip(); const g = c.createLinearGradient(0, -h / 2, 0, h / 2); g.addColorStop(0, C.amL); g.addColorStop(1, C.amD);
     c.fillStyle = g; c.fillRect(-tw / 2, -h / 2, tw * EASE.inout(on), h); c.restore(); }
   const k = on > 0.6 ? 1 : 0;
-  texto(c, o.nombre || '', -tw / 2 + 26, 2, 26, k ? C.amOsc : C.txt, 700, 'left', false, 'middle', 3);
-  c.save(); c.translate(tw / 2 - 92, 4); odometro(c, kf(o.v, t, 0), { size: 40, col: k ? '#2d2711' : mix(C.txt, '#e4574f', rojo), suf: ' €', miles: false }); c.restore();
+  texto(c, o.nombre || '', -tw / 2 + 24, 2, 24, k ? C.amOsc : C.txt, 700, 'left', false, 'middle', 3);
+  c.save(); c.translate(tw / 2 - 84, 4); odometro(c, kf(o.v, t, 0), { size: 40, col: k ? '#2d2711' : mix(C.txt, '#e4574f', rojo), suf: ' €', miles: false }); c.restore();
 };
 
 // ---------- escena ----------
@@ -99,12 +99,12 @@ const TX = 120, R1 = -440, R2 = -325, R3 = -210;
 E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -390, cara: true,
   poses: [[0, 'de_pie'], [w(3, 4), 'ofrecer'], [w(4, 0), 'senalar'], [w(4, 10), 'de_pie'], [w(4, 16), 'celebrar'], [w(5, 0), 'senalar'], [w(5, 8), 'manos_cabeza']],
   sonrisa: [[w(3, 4), 0.6], [w(4, 16), 1.5], [w(5, 0), 0.2], [w(5, 8), -1.2]] });
-E.obj('completa', 'tarifa', { t0: N[0].S - 0.1, t1: fin(1), x: TX, y: R1, w: 380, h: 92, nombre: 'COMPLETA', r: 46, sobrevive: false,
-  v: [[w(3, 5), 0], [wf(3, -1) + 0.2, 990, 'out']], rojo: [[w(5, 8), 0], [w(5, 12), 1]], barrido: [w(4, 4), w(4, 14)], caja: [-190, -46, 380, 92] });
-E.obj('intermedia', 'tarifa', { t0: w(4, 6) - 0.15, t1: fin(1), x: TX, y: R2, w: 380, h: 92, nombre: 'INTERMEDIA', r: 46, pop: true,
-  v: [[w(4, 6), 0], [w(4, 8), 490, 'out']], on: [[w(4, 16), 0], [wf(4, -1), 1, 'inout'], [w(5, 2), 1], [w(5, 4), 0]], rojo: [[w(5, 8), 0], [w(5, 12), 1]], caja: [-190, -46, 380, 92] });
-E.obj('basica', 'tarifa', { t0: w(4, 9) - 0.15, t1: fin(1), x: TX, y: R3, w: 380, h: 92, nombre: 'BÁSICA', r: 46, pop: true,
-  v: [[w(4, 9), 0], [w(4, 10) + 0.2, 190, 'out']], barrido: [w(5, 3)], caja: [-190, -46, 380, 92] });
+E.obj('completa', 'tarifa', { t0: N[0].S - 0.1, t1: fin(1), x: TX, y: R1, w: 400, h: 92, nombre: 'COMPLETA', r: 46, sobrevive: false,
+  v: [[w(3, 5), 0], [wf(3, -1) + 0.2, 990, 'out']], rojo: [[w(5, 8), 0], [w(5, 12), 1]], barrido: [w(4, 4), w(4, 14)], caja: [-200, -46, 400, 92] });
+E.obj('intermedia', 'tarifa', { t0: w(4, 6) - 0.15, t1: fin(1), x: TX, y: R2, w: 400, h: 92, nombre: 'INTERMEDIA', r: 46, pop: true,
+  v: [[w(4, 6), 0], [w(4, 8), 490, 'out']], on: [[w(4, 16), 0], [wf(4, -1), 1, 'inout'], [w(5, 2), 1], [w(5, 4), 0]], rojo: [[w(5, 8), 0], [w(5, 12), 1]], caja: [-200, -46, 400, 92] });
+E.obj('basica', 'tarifa', { t0: w(4, 9) - 0.15, t1: fin(1), x: TX, y: R3, w: 400, h: 92, nombre: 'BÁSICA', r: 46, pop: true,
+  v: [[w(4, 9), 0], [w(4, 10) + 0.2, 190, 'out']], barrido: [w(5, 3)], caja: [-200, -46, 400, 92] });
 E.sfx(w(4, 16), 'fill');
 E.obj('ch1', 'chispas', { t0: wf(4, -1), t1: wf(4, -1) + 0.8, x: TX, y: R2, r0: 150, r1: 250, n: 14, inspeccion: false });
 E.golpe(wf(4, -1), 0.04); E.destello(wf(4, -1), 0.12);
