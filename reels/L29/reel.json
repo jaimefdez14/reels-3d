@@ -7,11 +7,11 @@
  "situacion": "Trabajas doce horas al día para tus clientes y a fin de mes no te salen las cuentas.",
  "lines": [
   {
-   "show": "Si eres autónomo, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
+   "show": "Si eres autónomo, / el 20 % de tus clientes / *suele darte el 80 % de lo que ganas.*",
    "pause": 0.45
   },
   {
-   "show": "Se llama la regla del 80/20, / *y casi todo tu tiempo se lo das al resto. / Tres pasos para darle la vuelta.*",
+   "show": "Es la regla del 80/20, / *y casi todo tu tiempo se lo llevan los demás. / Tres pasos para cambiarlo.*",
    "pause": 0.3
   },
   {
@@ -29,7 +29,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí verás quién paga poco / y te quita muchas horas.*",
+   "show": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Cruza las dos listas y verás / quién paga poco y te quita muchas horas.*",
    "pause": 0.3,
    "bocadillo": "¿Lo podemos cambiar otra vez?"
   },
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*",
+   "show": "Mándaselo a quien trabaja doce horas al día / *y aun así no llega a fin de mes.*",
    "pause": 0.3
   }
  ],
@@ -149,6 +149,21 @@
    "antes": [
     "Si eres autónomo, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
     "Y seguramente dedicas / casi todo tu tiempo al resto. / *Esto se arregla en tres pasos.*",
+    "El primero: // *ordena a tus clientes / por lo que les facturas.*",
+    "Verás que unos pocos / *pagan casi todo.*",
+    "El segundo: // *apunta cuánto tiempo te lleva cada uno.*",
+    "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí verás quién paga poco / y te quita muchas horas.*",
+    "El tercero: // *a los que pagan poco y te quitan horas, / súbeles el precio / o deja de trabajar con ellos.*",
+    "El tiempo que recuperes, / *dedícaselo a los clientes que más te pagan.*",
+    "Trabajar más horas / no hace que te salgan las cuentas. / *Elegir bien para quién trabajas, sí.*",
+    "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Si eres autónomo, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
+    "Se llama la regla del 80/20, / *y casi todo tu tiempo se lo das al resto. / Tres pasos para darle la vuelta.*",
     "El primero: // *ordena a tus clientes / por lo que les facturas.*",
     "Verás que unos pocos / *pagan casi todo.*",
     "El segundo: // *apunta cuánto tiempo te lleva cada uno.*",

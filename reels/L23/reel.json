@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Cuesta doce horas de trabajo. / *Haz estas tres cuentas / antes de darle a comprar.*",
+   "show": "Cuesta doce horas de trabajo. / *Haz estas tres cosas / antes de darle a comprar.*",
    "pause": 0.3
   },
   {
@@ -20,11 +20,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide tu sueldo neto / entre todas las horas que trabajas, / *contando lo que tardas en ir y volver.*",
+   "show": "Coge tu sueldo neto / y divídelo entre tus horas de trabajo, / *trayectos incluidos.*",
    "pause": 0.3
   },
   {
-   "show": "Con 1.800 euros y 180 horas al mes, / *te salen diez euros la hora.*",
+   "show": "Con 2.000 euros y unas 200 horas al mes, / *te sale a diez euros la hora.*",
    "pause": 0.3
   },
   {
@@ -42,7 +42,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *déjalo dos días en el carrito.*",
+   "show": "Si a los dos días lo sigues queriendo, / cómpralo. / *Muchas veces, a los dos días, / ya ni te acuerdas.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -182,6 +182,23 @@
     "Si a los dos días lo sigues queriendo, / cómpralo. / *Muchas veces, para entonces, / ya ni te acuerdas de él.*",
     "El dinero se vuelve a ganar. / *Las horas que pasas ganándolo, no.*",
     "Guarda este vídeo para la próxima vez / *que vayas a darle a comprar.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Ese capricho de 120 euros / *no cuesta 120 euros.*",
+    "Cuesta doce horas de trabajo. / *Haz estas tres cuentas / antes de darle a comprar.*",
+    "La primera: // *calcula cuánto ganas de verdad a la hora.*",
+    "Divide tu sueldo neto / entre todas las horas que trabajas, / *contando lo que tardas en ir y volver.*",
+    "Con 1.800 euros y 180 horas al mes, / *te salen diez euros la hora.*",
+    "La segunda: // *pasa cada compra a horas.*",
+    "Unas zapatillas de ciento veinte euros: / *doce horas.*",
+    "Un móvil de mil doscientos euros: / *ciento veinte horas. / Tres semanas de trabajo.*",
+    "La tercera: // *déjalo dos días en el carrito.*",
+    "Si a los dos días lo sigues queriendo, / cómpralo. / *Muchas veces, para entonces, / ya ni te acuerdas de él.*",
+    "El dinero se vuelve a ganar. / *Las horas que pasas ganándolo, no.*",
+    "Mándaselo a ese amigo / *que se compra algo cada vez que cobra.*"
    ]
   }
  ]

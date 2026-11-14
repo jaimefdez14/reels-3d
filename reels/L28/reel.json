@@ -12,7 +12,7 @@
    "bocadillo": "¡Este mes he facturado un montón!"
   },
   {
-   "show": "Son el IVA, y no es lo único. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*",
+   "show": "Eso es el IVA, y no es lo único. / *Aparta en tres sobres lo que no es tuyo: / lo que sobra es lo que ganas.*",
    "pause": 0.3
   },
   {
@@ -34,11 +34,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cuota de autónomos, alquiler, gestoría. / Pongamos que suman seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*",
+   "show": "Cuota de autónomos, alquiler, gestoría. / Pongamos que suman seiscientos euros. / *De los tres mil sin IVA, te quedan / dos mil cuatrocientos de beneficio.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *un veinte por ciento de ese beneficio / para el IRPF.*",
+   "show": "El tercero: // *aparta un veinte por ciento / de ese beneficio para el IRPF.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "Facturar mucho no es ganar mucho: / *lo que ganas es lo que queda / fuera de los sobres.*",
+   "show": "Facturar mucho no es ganar mucho: / *lo que ganas es lo que sobra / después de los tres sobres.*",
    "pause": 0.3
   },
   {
@@ -186,6 +186,22 @@
     "De todo lo que has cobrado, / *lo tuyo son unos 1.900 euros.*",
     "Facturar mucho no es ganar mucho: / *lo que ganas es lo que queda / fuera de los sobres.*",
     "Guarda este vídeo / *para cuando hagas la próxima factura.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Si eres autónomo y facturas / tres mil euros más IVA, / cobras 3.630, / *pero 630 no son tuyos.*",
+    "Son el IVA, y no es lo único. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*",
+    "El primero, el IVA: // *apártalo el mismo día que cobres.*",
+    "Ese veintiuno por ciento / que añades a la factura lo cobras tú, / *pero es de Hacienda.*",
+    "Si te lo gastas, al presentar el trimestre / *te toca ponerlo de tu bolsillo.*",
+    "El segundo: // *los gastos fijos.*",
+    "Cuota de autónomos, alquiler, gestoría. / Pongamos que suman seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*",
+    "El tercero: // *un veinte por ciento de ese beneficio / para el IRPF.*",
+    "De todo lo que has cobrado, / *lo tuyo son unos 1.900 euros.*",
+    "Facturar mucho no es ganar mucho: / *lo que ganas es lo que queda / fuera de los sobres.*",
+    "Mándaselo a ese amigo autónomo / *que cree que gana lo que factura.*"
    ]
   }
  ],

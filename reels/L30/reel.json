@@ -7,15 +7,15 @@
  "situacion": "Llevas toda la semana dándole vueltas a un informe que no has empezado, y no te lo quitas de la cabeza.",
  "lines": [
   {
-   "show": "Tu cabeza recuerda mejor / *lo que no has terminado.*",
+   "show": "Te acuerdas mejor / *de lo que dejas a medias.*",
    "pause": 0.45
   },
   {
-   "show": "En 1927, la psicóloga Bluma Zeigarnik / lo comprobó / *tras ver que un camarero de Berlín / solo recordaba los pedidos sin cobrar.*",
+   "show": "En 1927, la psicóloga Bluma Zeigarnik / lo comprobó al fijarse / en un camarero de Berlín / *que solo se acordaba de las cuentas sin cobrar.*",
    "pause": 0.3
   },
   {
-   "show": "Se llama efecto Zeigarnik. / *Tres maneras de usarlo / para dejar de aplazar las cosas.*",
+   "show": "Se llama efecto Zeigarnik: / lo que dejas a medias te sigue llamando, / *y eso sirve para no dejar las cosas para luego.*",
    "pause": 0.3
   },
   {
@@ -24,11 +24,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "En cuanto empiezas, / *la tarea se te queda rondando por la cabeza.*",
+   "show": "En cuanto empiezas, / la tarea se te queda rondando por la cabeza / *y te pide volver.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *cuando acabes por hoy, / deja empezada la parte siguiente.*",
+   "show": "La segunda: // *cuando pares por hoy, / deja empezado lo siguiente.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -37,17 +37,17 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *antes de dejarlo, / apunta qué es lo siguiente que toca hacer.*",
+   "show": "La tercera: // *antes de dejarlo, / apunta qué te toca hacer después.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "¿Por dónde iba?"
   },
   {
-   "show": "La tarea te ronda, pero el detalle se olvida. / *Así, cuando vuelvas, / no pierdes ni un minuto en acordarte.*",
+   "show": "Recuerdas que está a medias, / pero no por dónde ibas. / *Así, al volver, no pierdes ni un minuto / haciendo memoria.*",
    "pause": 0.3
   },
   {
-   "show": "Lo que no está cerrado / *no se te va de la cabeza.*",
+   "show": "Lo que dejas a medias / *no se te va de la cabeza.*",
    "pause": 0.3
   },
   {
@@ -210,6 +210,22 @@
     "La tarea te ronda, pero el detalle se olvida. / *Así, cuando vuelvas, / no pierdes ni un minuto en acordarte.*",
     "Como el camarero de Berlín: / *lo que no está cerrado / no se te va de la cabeza.*",
     "Guarda este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Tu cabeza recuerda mejor / *lo que no has terminado.*",
+    "En 1927, la psicóloga Bluma Zeigarnik / lo comprobó / *tras ver que un camarero de Berlín / solo recordaba los pedidos sin cobrar.*",
+    "Se llama efecto Zeigarnik. / *Tres maneras de usarlo / para dejar de aplazar las cosas.*",
+    "La primera: // *empieza, aunque sean dos minutos.*",
+    "En cuanto empiezas, / *la tarea se te queda rondando por la cabeza.*",
+    "La segunda: // *cuando acabes por hoy, / deja empezada la parte siguiente.*",
+    "Al día siguiente no empiezas de cero: / *sigues por donde lo dejaste.*",
+    "La tercera: // *antes de dejarlo, / apunta qué es lo siguiente que toca hacer.*",
+    "La tarea te ronda, pero el detalle se olvida. / *Así, cuando vuelvas, / no pierdes ni un minuto en acordarte.*",
+    "Lo que no está cerrado / *no se te va de la cabeza.*",
+    "Mándaselo a ese amigo que lleva semanas / *diciendo «el lunes empiezo».*"
    ]
   }
  ],

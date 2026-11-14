@@ -11,25 +11,25 @@
    "pause": 0.45
   },
   {
-   "show": "Se llama efecto Diderot: / el filósofo estrenó una bata / *y acabó cambiando todo el despacho.*",
+   "show": "Se llama efecto Diderot: / el filósofo estrenó una bata / *y, a su lado, / todo el despacho le pareció viejo.*",
    "pause": 0.3,
    "bocadillo": "Ya puestos, cambio también la mesa"
   },
   {
-   "show": "Tres maneras de que no te pase.",
+   "show": "Tres maneras de cortar la cadena.",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *antes de comprar algo, / piensa qué más vas a necesitar después.*",
+   "show": "La primera: // *antes de comprar algo, / piensa qué más vas a querer cambiar después.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "El móvil nuevo pide una funda. / *El coche nuevo, una plaza de garaje.*",
+   "show": "La lámpara nueva hace que las cortinas / parezcan viejas. / *Y las cortinas, el sofá.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ponle un tope a los gastos / que vienen con esa compra.*",
+   "show": "La segunda: // *ponle un tope / a todo lo que venga detrás.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -160,6 +160,22 @@
     "El filósofo Denis Diderot estrenó una bata / *y acabó cambiando todo el despacho.*",
     "Al lado de la bata nueva, / *todo lo demás parecía viejo.*",
     "Hay tres maneras de evitarlo.",
+    "La primera: // *antes de comprar algo, / piensa qué más vas a necesitar después.*",
+    "El móvil nuevo pide una funda. / *El coche nuevo, una plaza de garaje.*",
+    "La segunda: // *ponle un tope a los gastos / que vienen con esa compra.*",
+    "Decide cuánto vas a gastarte en total, / *no solo en la primera compra.*",
+    "La tercera: // *espera un mes / antes de comprar lo siguiente.*",
+    "Al cabo de un mes, / *la alfombra vieja ya no te parece tan fea.*",
+    "Lo caro no es lo que compras: / *es todo lo que viene detrás.*",
+    "Mándaselo a quien se acaba / *de comprar un sofá.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Te compras un sofá nuevo / *y de repente la alfombra ya no pega.*",
+    "Se llama efecto Diderot: / el filósofo estrenó una bata / *y acabó cambiando todo el despacho.*",
+    "Tres maneras de que no te pase.",
     "La primera: // *antes de comprar algo, / piensa qué más vas a necesitar después.*",
     "El móvil nuevo pide una funda. / *El coche nuevo, una plaza de garaje.*",
     "La segunda: // *ponle un tope a los gastos / que vienen con esa compra.*",

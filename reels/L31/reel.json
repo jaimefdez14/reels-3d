@@ -11,34 +11,34 @@
    "pause": 0.45
   },
   {
-   "show": "Así ves a tiempo / *el fallo que podría hundirlo. / Tres pasos.*",
+   "show": "Así ves a tiempo / el fallo que podría hundirlo. / *Se hace en tres pasos.*",
    "pause": 0.3
   },
   {
    "show": "El primero: // *imagina que ha pasado un año / y el negocio ha cerrado.*",
    "pause": 0.3,
-   "pausa_media": 0.45
+   "pausa_media": 0.45,
+   "bocadillo": "Esto no puede fallar"
   },
   {
    "show": "No te preguntes si puede salir mal. / *Da por hecho que ha salido mal.*",
-   "pause": 0.3,
-   "bocadillo": "Esto no puede fallar"
+   "pause": 0.3
   },
   {
    "show": "Así dejas de defender la idea / *y empiezas a buscarle fallos.*",
    "pause": 0.3
   },
   {
-   "show": "El segundo: // *apunta los tres motivos / más probables por los que cerró.*",
+   "show": "El segundo: // *apunta los tres motivos / más probables por los que ha cerrado.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Pocos clientes, precios demasiado bajos / *o quedarte sin dinero antes de tiempo.*",
+   "show": "Por ejemplo: pocos clientes, / precios demasiado bajos / *o falta de dinero antes de tiempo.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *ponle remedio hoy mismo / al riesgo más probable.*",
+   "show": "El tercero: // *ponle remedio hoy mismo / al motivo más probable.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "Más vale descubrir hoy por qué cerraría / *que enterarte dentro de un año.*",
+   "show": "Más vale saber hoy por qué cerraría / *que enterarte dentro de un año.*",
    "pause": 0.3
   },
   {
@@ -186,6 +186,22 @@
     "Si el motivo es la falta de clientes, / *empieza a vender antes de abrir.*",
     "Más vale descubrir hoy por qué cerraría / *que enterarte dentro de un año.*",
     "Guarda este vídeo y vuelve a verlo / *antes de montar tu próximo negocio.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Antes de montar un negocio, / *imagina que ya ha fracasado.*",
+    "Así ves a tiempo / *el fallo que podría hundirlo. / Tres pasos.*",
+    "El primero: // *imagina que ha pasado un año / y el negocio ha cerrado.*",
+    "No te preguntes si puede salir mal. / *Da por hecho que ha salido mal.*",
+    "Así dejas de defender la idea / *y empiezas a buscarle fallos.*",
+    "El segundo: // *apunta los tres motivos / más probables por los que cerró.*",
+    "Pocos clientes, precios demasiado bajos / *o quedarte sin dinero antes de tiempo.*",
+    "El tercero: // *ponle remedio hoy mismo / al riesgo más probable.*",
+    "Si el motivo es la falta de clientes, / *empieza a vender antes de abrir.*",
+    "Más vale descubrir hoy por qué cerraría / *que enterarte dentro de un año.*",
+    "Mándaselo a ese amigo / *que está a punto de montar un negocio.*"
    ]
   }
  ]

@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Se llama efecto ancla: / *lo que te parece caro / depende del primer precio que ves.*",
+   "show": "Se llama efecto anclaje: / *lo que te parece caro / depende del primer precio que ves.*",
    "pause": 0.3
   },
   {
@@ -19,12 +19,12 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *si vendes, enseña antes lo más caro.*",
+   "show": "La primera: // *si vendes, enseña primero lo más caro.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Ten tres opciones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*",
+   "show": "Ofrece tres tarifas: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*",
    "pause": 0.3
   },
   {
@@ -32,12 +32,12 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *si compras, desconfía / del primer precio que te enseñan.*",
+   "show": "La segunda: // *si compras, desconfía / del primer precio que te enseñen.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Antes de entrar en la tienda, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
+   "show": "Antes de entrar en la tienda, / ten claro cuánto te quieres gastar. / *Así el ancla la pones tú.*",
    "pause": 0.3
   },
   {
@@ -46,12 +46,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si te preguntan cuánto te querías gastar, / *no des tu presupuesto: pon tú el precio.*",
+   "show": "Si te preguntan cuánto te querías gastar, / *no lo digas: ofrece tú una cifra baja.*",
    "pause": 0.3,
    "bocadillo": "¿Cuánto te querías gastar?"
   },
   {
-   "show": "Por eso el vino de 40 / *nunca fue tan barato como parecía.*",
+   "show": "Y el vino de 40 / *nunca fue tan barato como parecía.*",
    "pause": 0.3
   },
   {
@@ -187,6 +187,23 @@
     "Se llama efecto ancla: / *lo que te parece caro / depende del primer precio que ves.*",
     "Sin el de 200, / *ese mismo vino de 40 te parecería caro.*",
     "Puedes usarlo a tu favor de tres maneras.",
+    "La primera: // *si vendes, enseña antes lo más caro.*",
+    "Ten tres opciones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*",
+    "Si empiezas por la más barata, / *al cliente todo lo demás le parecerá caro.*",
+    "La segunda: // *si compras, desconfía / del primer precio que te enseñan.*",
+    "Antes de entrar en la tienda, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
+    "La tercera: // *si negocias, / di tú la primera cifra.*",
+    "Si te preguntan cuánto te querías gastar, / *no des tu presupuesto: pon tú el precio.*",
+    "Por eso el vino de 40 / *nunca fue tan barato como parecía.*",
+    "Mándaselo a ese amigo que tiene un negocio / *y siempre enseña primero lo más barato.*"
+   ]
+  },
+  {
+   "ronda": "corrector + lector únicos (regla 25): solo errores",
+   "antes": [
+    "Los restaurantes ponen en la carta / un vino de 200 euros / *para venderte el de 40.*",
+    "Se llama efecto ancla: / *lo que te parece caro / depende del primer precio que ves.*",
+    "Tres maneras de usarlo a tu favor.",
     "La primera: // *si vendes, enseña antes lo más caro.*",
     "Ten tres opciones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*",
     "Si empiezas por la más barata, / *al cliente todo lo demás le parecerá caro.*",
