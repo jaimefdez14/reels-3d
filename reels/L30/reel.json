@@ -7,27 +7,15 @@
  "situacion": "Llevas toda la semana dándole vueltas a un informe que no has empezado, y no te lo quitas de la cabeza.",
  "lines": [
   {
-   "show": "Tu cabeza recuerda mejor / lo que no has terminado. / *Y eso sirve para dejar de aplazar las cosas.*",
+   "show": "Tu cabeza recuerda mejor / *lo que no has terminado.*",
    "pause": 0.45
   },
   {
-   "show": "Lo descubrieron en Berlín, / en los años veinte. / El psicólogo Kurt Lewin / se fijó en un camarero / *que recordaba todos los pedidos / que aún no había cobrado.*",
+   "show": "En 1927, la psicóloga Bluma Zeigarnik / lo comprobó / *tras ver que un camarero de Berlín / solo recordaba los pedidos sin cobrar.*",
    "pause": 0.3
   },
   {
-   "show": "En cuanto los cobraba, / *se le olvidaban.*",
-   "pause": 0.3
-  },
-  {
-   "show": "Su alumna, Bluma Zeigarnik, / lo comprobó en 1927: / *la gente recordaba casi el doble / de tareas a medias que de tareas terminadas.*",
-   "pause": 0.3
-  },
-  {
-   "show": "Lo que dejas a medias / se te queda en la cabeza / *y te empuja a terminarlo.*",
-   "pause": 0.3
-  },
-  {
-   "show": "Se llama efecto Zeigarnik, / *y puedes aprovecharlo de tres maneras.*",
+   "show": "Se llama efecto Zeigarnik. / *Tres maneras de usarlo / para dejar de aplazar las cosas.*",
    "pause": 0.3
   },
   {
@@ -59,11 +47,11 @@
    "pause": 0.3
   },
   {
-   "show": "Como el camarero de Berlín: / *lo que no está cerrado / no se te va de la cabeza.*",
+   "show": "Lo que no está cerrado / *no se te va de la cabeza.*",
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*",
+   "show": "Mándaselo a ese amigo que lleva semanas / *diciendo «el lunes empiezo».*",
    "pause": 0.3
   }
  ],
@@ -204,7 +192,26 @@
     "Lo que más cuesta es empezar. / *Por eso, empieza, aunque sea poco.*",
     "Guarda este vídeo para el próximo lunes / *que no sepas por dónde empezar.*"
    ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Tu cabeza recuerda mejor / lo que no has terminado. / *Y eso sirve para dejar de aplazar las cosas.*",
+    "Lo descubrieron en Berlín, / en los años veinte. / El psicólogo Kurt Lewin / se fijó en un camarero / *que recordaba todos los pedidos / que aún no había cobrado.*",
+    "En cuanto los cobraba, / *se le olvidaban.*",
+    "Su alumna, Bluma Zeigarnik, / lo comprobó en 1927: / *la gente recordaba casi el doble / de tareas a medias que de tareas terminadas.*",
+    "Lo que dejas a medias / se te queda en la cabeza / *y te empuja a terminarlo.*",
+    "Se llama efecto Zeigarnik, / *y puedes aprovecharlo de tres maneras.*",
+    "La primera: // *empieza, aunque sean dos minutos.*",
+    "En cuanto empiezas, / *la tarea se te queda rondando por la cabeza.*",
+    "La segunda: // *cuando acabes por hoy, / deja empezada la parte siguiente.*",
+    "Al día siguiente no empiezas de cero: / *sigues por donde lo dejaste.*",
+    "La tercera: // *antes de dejarlo, / apunta qué es lo siguiente que toca hacer.*",
+    "La tarea te ronda, pero el detalle se olvida. / *Así, cuando vuelvas, / no pierdes ni un minuto en acordarte.*",
+    "Como el camarero de Berlín: / *lo que no está cerrado / no se te va de la cabeza.*",
+    "Guarda este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+   ]
   }
  ],
- "cifras": "Zeigarnik, «Das Behalten erledigter und unerledigter Handlungen», Psychologische Forschung 9 (1927): las tareas interrumpidas se recordaban unas 1,9 veces más que las terminadas. La anécdota del camarero (Lewin, Berlín, años veinte) es la que se cuenta siempre; sus detalles varían según la fuente. Las réplicas posteriores son irregulares: no se dice que esté demostrado, solo lo que vio ella."
+ "cifras": "Zeigarnik, Psychologische Forschung 9 (1927): tareas interrumpidas recordadas ~1,9 veces más que las terminadas. La anécdota del camarero de Berlín (la observó su profesor, Kurt Lewin) es la que se cuenta siempre; los detalles varían según la fuente."
 }

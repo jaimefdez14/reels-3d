@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Y haces lo mismo con cosas mucho más caras. / *Esto tiene un nombre: / la falacia del coste hundido.*",
+   "show": "Y haces lo mismo con cosas mucho más caras. / *Se llama la falacia del coste hundido.*",
    "pause": 0.3
   },
   {
@@ -55,7 +55,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo para la próxima vez / que pienses / *«ya que he llegado hasta aquí».*",
+   "show": "Mándaselo a ese amigo que sigue en algo / *«porque ya ha llegado hasta aquí».*",
    "pause": 0.3
   }
  ],
@@ -136,6 +136,23 @@
     "Si empezaras hoy desde cero, / *¿lo volverías a elegir?*",
     "Si la respuesta es no, / *lo que llevas gastado / no es motivo para seguir.*",
     "Guárdate este vídeo para la próxima vez / *que te oigas decir / «ya que he llegado hasta aquí».*"
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Sigues viendo una película mala / *porque ya has pagado la entrada.*",
+    "Y haces lo mismo con cosas mucho más caras. / *Esto tiene un nombre: / la falacia del coste hundido.*",
+    "Tres ideas para no caer en ella.",
+    "La primera: // *lo que ya has gastado no lo recuperas, / decidas lo que decidas.*",
+    "La entrada está pagada / *tanto si te quedas como si te vas.*",
+    "Solo cuenta lo que tienes por delante: / *dos horas más de película mala.*",
+    "La segunda: // *cuanto más te juegas, / más cuesta salir de la trampa.*",
+    "Un negocio que pierde dinero cada mes. / Un trabajo que ya no te gusta. / *Y sigues porque ya le has dedicado / años o dinero.*",
+    "La tercera: // *pregúntate solo una cosa.*",
+    "Si hoy empezaras de cero, / *¿lo elegirías otra vez?*",
+    "Si la respuesta es no, / *lo que llevas gastado / no es motivo para seguir.*",
+    "Guarda este vídeo para la próxima vez / que pienses / *«ya que he llegado hasta aquí».*"
    ]
   }
  ]

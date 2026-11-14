@@ -51,7 +51,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo / *para cuando hagas la próxima factura.*",
+   "show": "Mándaselo a ese amigo autónomo / *que cree que gana lo que factura.*",
    "pause": 0.3
   }
  ],
@@ -170,6 +170,22 @@
      "antes": "De todo lo que cobraste, / *lo tuyo son unos 1.900 euros.*",
      "despues": "De todo lo que has cobrado, / *lo tuyo son unos 1.900 euros.*"
     }
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Si eres autónomo y facturas / tres mil euros más IVA, / cobras 3.630, / *pero 630 no son tuyos.*",
+    "Son el IVA, y no es lo único. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*",
+    "El primero, el IVA: // *apártalo el mismo día que cobres.*",
+    "Ese veintiuno por ciento / que añades a la factura lo cobras tú, / *pero es de Hacienda.*",
+    "Si te lo gastas, al presentar el trimestre / *te toca ponerlo de tu bolsillo.*",
+    "El segundo: // *los gastos fijos.*",
+    "Cuota de autónomos, alquiler, gestoría. / Pongamos que suman seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*",
+    "El tercero: // *un veinte por ciento de ese beneficio / para el IRPF.*",
+    "De todo lo que has cobrado, / *lo tuyo son unos 1.900 euros.*",
+    "Facturar mucho no es ganar mucho: / *lo que ganas es lo que queda / fuera de los sobres.*",
+    "Guarda este vídeo / *para cuando hagas la próxima factura.*"
    ]
   }
  ],

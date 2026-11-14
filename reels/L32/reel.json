@@ -51,7 +51,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo para el día que cobres.",
+   "show": "Mándaselo a ese amigo / *que a mitad de mes ya no llega.*",
    "pause": 0.3
   }
  ],
@@ -136,6 +136,22 @@
     "Si lo fijo pasa de la mitad, / *recorta ahí antes que en el ahorro.*",
     "Para ahorrar no importa tanto cuánto ganas / *como apartarlo antes de gastar.*",
     "Guárdate este vídeo para el día que cobres."
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Si no sabes en qué se te va la nómina, / *el problema no es el sueldo: / es cómo lo repartes.*",
+    "Para eso está la regla / del cincuenta, treinta, veinte: / *tres partes para que te cuadren las cuentas.*",
+    "La primera: // *la mitad, para los gastos fijos.*",
+    "Casa, comida, facturas, transporte. / *Si cobras 1.600 euros, son 800.*",
+    "La segunda: // *un treinta por ciento, / para lo que te apetece.*",
+    "Cenas, viajes, caprichos. / *480 euros que gastas sin darle vueltas.*",
+    "La tercera: // *un veinte por ciento para ahorrar, / y lo apartas lo primero.*",
+    "Trescientos veinte euros / que guardas el día que cobras, / *sin esperar a ver qué sobra.*",
+    "Si los gastos fijos pasan de la mitad, / *recorta de ahí antes que del ahorro.*",
+    "Para ahorrar, lo que cuenta / no es cuánto ganas, / *sino apartar el dinero antes de gastar.*",
+    "Guarda este vídeo para el día que cobres."
    ]
   }
  ]

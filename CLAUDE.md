@@ -188,6 +188,15 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    (e) **cierre que pide guardar o enviar** a alguien concreto («Guárdalo para la próxima vez que…» o «Mándaselo a…»).
    Las ideas se puntúan con esos cinco criterios antes de proponerlas (`docs/IDEAS-2026-11-14.md`).
 
+25. **Formato de los publicados + concepto en una frase; pocas rondas (14-11-2026).** Jaime, sobre L23-L32 tras cuatro
+   rondas de correctores y lectores: «lo has cambiado bastante con respecto a los guiones originales que ya funcionaban,
+   ¿no?» (entre un 27 % y un 76 % de palabras cambiadas). Elegió «3, mezcla»: la estructura de L1-L19 (gancho, lista
+   desde el principio con «La primera: …», cierre que vuelve al gancho y «Mándaselo a…» a alguien concreto) y, de la
+   regla 24, el concepto con nombre o la historia que da autoridad **en una sola frase** antes de la lista. Desde ahora,
+   **un corrector nativo y un lector en frío por guion, una vez**: solo se cambia lo que sea un error (calco, frase que
+   no se entiende oyéndola, dato mal); los cambios de gusto entre correctores (Guarda/Guárdate, «se acerca» / «se queda
+   cerca») no se aplican, porque cada ronda deshace la anterior y el guion se aleja del que funcionaba.
+
 ## Pendiente de Jaime
 
 - Nombre de la cuenta de Instagram, token de Meta y voz de ElevenLabs para esta marca (si es la misma clave que

@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Cuesta doce horas de trabajo. / *Antes de darle a comprar, / haz estas tres cuentas.*",
+   "show": "Cuesta doce horas de trabajo. / *Haz estas tres cuentas / antes de darle a comprar.*",
    "pause": 0.3
   },
   {
-   "show": "El primero: // *calcula cuánto ganas de verdad a la hora.*",
+   "show": "La primera: // *calcula cuánto ganas de verdad a la hora.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -28,7 +28,7 @@
    "pause": 0.3
   },
   {
-   "show": "El segundo: // *pasa cada compra a horas.*",
+   "show": "La segunda: // *pasa cada compra a horas.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -42,11 +42,7 @@
    "pause": 0.3
   },
   {
-   "show": "Visto en horas, / *te lo piensas dos veces.*",
-   "pause": 0.3
-  },
-  {
-   "show": "El tercero: // *déjalo dos días en el carrito.*",
+   "show": "La tercera: // *déjalo dos días en el carrito.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -59,7 +55,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo para la próxima vez / *que vayas a darle a comprar.*",
+   "show": "Mándaselo a ese amigo / *que se compra algo cada vez que cobra.*",
    "pause": 0.3
   }
  ],
@@ -168,6 +164,24 @@
      "antes": "Guarda este vídeo para la próxima vez / *que vayas a darle al botón de comprar.*",
      "despues": "Guárdate este vídeo para la próxima vez / *que vayas a darle a comprar.*"
     }
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Ese capricho de 120 euros / *no cuesta 120 euros.*",
+    "Cuesta doce horas de trabajo. / *Antes de darle a comprar, / haz estas tres cuentas.*",
+    "El primero: // *calcula cuánto ganas de verdad a la hora.*",
+    "Divide tu sueldo neto / entre todas las horas que trabajas, / *contando lo que tardas en ir y volver.*",
+    "Con 1.800 euros y 180 horas al mes, / *te salen diez euros la hora.*",
+    "El segundo: // *pasa cada compra a horas.*",
+    "Unas zapatillas de ciento veinte euros: / *doce horas.*",
+    "Un móvil de mil doscientos euros: / *ciento veinte horas. / Tres semanas de trabajo.*",
+    "Visto en horas, / *te lo piensas dos veces.*",
+    "El tercero: // *déjalo dos días en el carrito.*",
+    "Si a los dos días lo sigues queriendo, / cómpralo. / *Muchas veces, para entonces, / ya ni te acuerdas de él.*",
+    "El dinero se vuelve a ganar. / *Las horas que pasas ganándolo, no.*",
+    "Guarda este vídeo para la próxima vez / *que vayas a darle a comprar.*"
    ]
   }
  ]

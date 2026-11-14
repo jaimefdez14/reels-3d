@@ -15,11 +15,7 @@
    "pause": 0.3
   },
   {
-   "show": "Sin el de 200, / *ese mismo vino de 40 te parecería caro.*",
-   "pause": 0.3
-  },
-  {
-   "show": "Puedes usarlo a tu favor de tres maneras.",
+   "show": "Tres maneras de usarlo a tu favor.",
    "pause": 0.3
   },
   {
@@ -182,6 +178,24 @@
      "antes": "Mándaselo a ese amigo que vende / *y siempre enseña primero lo más barato.*",
      "despues": "Mándaselo a ese amigo que tiene un negocio / *y siempre enseña primero lo más barato.*"
     }
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Los restaurantes ponen en la carta / un vino de 200 euros / *para venderte el de 40.*",
+    "Se llama efecto ancla: / *lo que te parece caro / depende del primer precio que ves.*",
+    "Sin el de 200, / *ese mismo vino de 40 te parecería caro.*",
+    "Puedes usarlo a tu favor de tres maneras.",
+    "La primera: // *si vendes, enseña antes lo más caro.*",
+    "Ten tres opciones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*",
+    "Si empiezas por la más barata, / *al cliente todo lo demás le parecerá caro.*",
+    "La segunda: // *si compras, desconfía / del primer precio que te enseñan.*",
+    "Antes de entrar en la tienda, / ten claro cuánto quieres pagar. / *Así el ancla la pones tú.*",
+    "La tercera: // *si negocias, / di tú la primera cifra.*",
+    "Si te preguntan cuánto te querías gastar, / *no des tu presupuesto: pon tú el precio.*",
+    "Por eso el vino de 40 / *nunca fue tan barato como parecía.*",
+    "Mándaselo a ese amigo que tiene un negocio / *y siempre enseña primero lo más barato.*"
    ]
   }
  ]

@@ -11,20 +11,12 @@
    "pause": 0.45
   },
   {
-   "show": "Esto tiene nombre: / *el efecto Diderot.*",
-   "pause": 0.3
-  },
-  {
-   "show": "El filósofo Denis Diderot estrenó una bata / *y acabó cambiando todo el despacho.*",
-   "pause": 0.3
-  },
-  {
-   "show": "Al lado de la bata nueva, / *todo lo demás parecía viejo.*",
+   "show": "Se llama efecto Diderot: / el filósofo estrenó una bata / *y acabó cambiando todo el despacho.*",
    "pause": 0.3,
    "bocadillo": "Ya puestos, cambio también la mesa"
   },
   {
-   "show": "Hay tres maneras de evitarlo.",
+   "show": "Tres maneras de que no te pase.",
    "pause": 0.3
   },
   {
@@ -158,6 +150,24 @@
      "antes": "La tercera: // *espera un mes / antes de la siguiente compra.*",
      "despues": "La tercera: // *espera un mes / antes de comprar lo siguiente.*"
     }
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Te compras un sofá nuevo / *y de repente la alfombra ya no pega.*",
+    "Esto tiene nombre: / *el efecto Diderot.*",
+    "El filósofo Denis Diderot estrenó una bata / *y acabó cambiando todo el despacho.*",
+    "Al lado de la bata nueva, / *todo lo demás parecía viejo.*",
+    "Hay tres maneras de evitarlo.",
+    "La primera: // *antes de comprar algo, / piensa qué más vas a necesitar después.*",
+    "El móvil nuevo pide una funda. / *El coche nuevo, una plaza de garaje.*",
+    "La segunda: // *ponle un tope a los gastos / que vienen con esa compra.*",
+    "Decide cuánto vas a gastarte en total, / *no solo en la primera compra.*",
+    "La tercera: // *espera un mes / antes de comprar lo siguiente.*",
+    "Al cabo de un mes, / *la alfombra vieja ya no te parece tan fea.*",
+    "Lo caro no es lo que compras: / *es todo lo que viene detrás.*",
+    "Mándaselo a quien se acaba / *de comprar un sofá.*"
    ]
   }
  ]

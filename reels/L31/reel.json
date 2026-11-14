@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Así ves a tiempo / el fallo que podría hundirlo. / *Son tres pasos.*",
+   "show": "Así ves a tiempo / *el fallo que podría hundirlo. / Tres pasos.*",
    "pause": 0.3
   },
   {
@@ -51,7 +51,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo y vuelve a verlo / *antes de montar tu próximo negocio.*",
+   "show": "Mándaselo a ese amigo / *que está a punto de montar un negocio.*",
    "pause": 0.3
   }
  ],
@@ -170,6 +170,22 @@
      "antes": "Guárdate este vídeo / *y repásalo antes de tu próximo proyecto.*",
      "despues": "Guárdate este vídeo y vuelve a verlo / *antes de montar tu próximo negocio.*"
     }
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Antes de montar un negocio, / *imagina que ya ha fracasado.*",
+    "Así ves a tiempo / el fallo que podría hundirlo. / *Son tres pasos.*",
+    "El primero: // *imagina que ha pasado un año / y el negocio ha cerrado.*",
+    "No te preguntes si puede salir mal. / *Da por hecho que ha salido mal.*",
+    "Así dejas de defender la idea / *y empiezas a buscarle fallos.*",
+    "El segundo: // *apunta los tres motivos / más probables por los que cerró.*",
+    "Pocos clientes, precios demasiado bajos / *o quedarte sin dinero antes de tiempo.*",
+    "El tercero: // *ponle remedio hoy mismo / al riesgo más probable.*",
+    "Si el motivo es la falta de clientes, / *empieza a vender antes de abrir.*",
+    "Más vale descubrir hoy por qué cerraría / *que enterarte dentro de un año.*",
+    "Guarda este vídeo y vuelve a verlo / *antes de montar tu próximo negocio.*"
    ]
   }
  ]

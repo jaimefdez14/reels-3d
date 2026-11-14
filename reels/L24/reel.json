@@ -59,7 +59,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guarda este vídeo y haz la cuenta / *con el interés que te da tu banco.*",
+   "show": "Mándaselo a ese amigo / *que tiene el dinero parado en el banco.*",
    "pause": 0.3
   }
  ],
@@ -166,6 +166,24 @@
     "La regla no es exacta, / *pero se acerca mucho.*",
     "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
     "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*"
+   ]
+  },
+  {
+   "ronda": "Jaime 14-11: «3, mezcla» (formato de los publicados + concepto en una frase + «Mándaselo a…»)",
+   "antes": [
+    "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*",
+    "Se llama la regla del 72 / *y sirve para tres cosas.*",
+    "La primera: // *saber cuándo se duplica lo que inviertes.*",
+    "Coge el interés que te dan al año / y divide 72 entre ese número. / *Lo que te salga son los años / que tarda en duplicarse.*",
+    "Con un seis por ciento, / setenta y dos entre seis son doce: / *en doce años tienes el doble.*",
+    "Con un nueve por ciento, / setenta y dos entre nueve son ocho. / *Tres puntos más / y tienes el doble cuatro años antes.*",
+    "La segunda: // *la inflación.*",
+    "Si los precios suben / un tres por ciento al año, / setenta y dos entre tres son veinticuatro: / *en veinticuatro años tu dinero vale la mitad.*",
+    "La tercera: // *ver lo rápido que crece una deuda.*",
+    "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*",
+    "La regla no es exacta, / *pero se queda muy cerca.*",
+    "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
+    "Guarda este vídeo y haz la cuenta / *con el interés que te da tu banco.*"
    ]
   }
  ]
