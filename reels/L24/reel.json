@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Coge el interés que te dan al año / y divide 72 entre ese número. / *El resultado son los años / que tarda tu dinero en duplicarse.*",
+   "show": "Coge el interés que te dan al año / y divide 72 entre ese número. / *Lo que te salga son los años / que tarda en duplicarse.*",
    "pause": 0.3
   },
   {
@@ -28,16 +28,16 @@
    "pause": 0.3
   },
   {
-   "show": "Con un nueve por ciento, en ocho. / *Tres puntos más / y lo tienes cuatro años antes.*",
+   "show": "Con un nueve por ciento, / setenta y dos entre nueve son ocho. / *Tres puntos más / y tienes el doble cuatro años antes.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *saber en cuánto tiempo / tu dinero parado pierde la mitad de su valor.*",
+   "show": "La segunda: // *la inflación.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Con la inflación funciona igual. / *Si los precios suben / un tres por ciento al año, / setenta y dos entre tres son veinticuatro: / en veinticuatro años vale la mitad.*",
+   "show": "Si los precios suben / un tres por ciento al año, / setenta y dos entre tres son veinticuatro: / *en veinticuatro años tu dinero vale la mitad.*",
    "pause": 0.3
   },
   {
@@ -51,7 +51,7 @@
    "bocadillo": "Ya lo iré pagando poco a poco"
   },
   {
-   "show": "La regla no es exacta, / *pero se acerca mucho.*",
+   "show": "La regla no es exacta, / *pero se queda muy cerca.*",
    "pause": 0.3
   },
   {
@@ -59,7 +59,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*",
+   "show": "Guarda este vídeo y haz la cuenta / *con el interés que te da tu banco.*",
    "pause": 0.3
   }
  ],
@@ -146,6 +146,24 @@
     "La tercera: // *ver lo rápido que crece una deuda.*",
     "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*",
     "No es exacta, / *pero se acerca mucho.*",
+    "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
+    "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*"
+   ]
+  },
+  {
+   "ronda": "corrector y lector nuevos (8/10)",
+   "antes": [
+    "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*",
+    "Se llama la regla del 72 / *y sirve para tres cosas.*",
+    "La primera: // *saber cuándo se duplica lo que inviertes.*",
+    "Coge el interés que te dan al año / y divide 72 entre ese número. / *El resultado son los años / que tarda tu dinero en duplicarse.*",
+    "Con un seis por ciento, / setenta y dos entre seis son doce: / *en doce años tienes el doble.*",
+    "Con un nueve por ciento, en ocho. / *Tres puntos más / y lo tienes cuatro años antes.*",
+    "La segunda: // *saber en cuánto tiempo / tu dinero parado pierde la mitad de su valor.*",
+    "Con la inflación funciona igual. / *Si los precios suben / un tres por ciento al año, / setenta y dos entre tres son veinticuatro: / en veinticuatro años vale la mitad.*",
+    "La tercera: // *ver lo rápido que crece una deuda.*",
+    "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*",
+    "La regla no es exacta, / *pero se acerca mucho.*",
     "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
     "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*"
    ]

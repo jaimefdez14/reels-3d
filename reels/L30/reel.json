@@ -7,36 +7,40 @@
  "situacion": "Llevas toda la semana dándole vueltas a un informe que no has empezado, y no te lo quitas de la cabeza.",
  "lines": [
   {
-   "show": "Lo que dejas a medias / *no se te va de la cabeza.*",
+   "show": "Hay un truco de la memoria / *que te ayuda a dejar de aplazar las cosas.*",
    "pause": 0.45
   },
   {
-   "show": "Berlín, años veinte. / El psicólogo Kurt Lewin se dio cuenta / de que un camarero se acordaba / *de todos los pedidos sin cobrar.*",
+   "show": "Lo descubrieron en Berlín, / en los años veinte. / El psicólogo Kurt Lewin / se fijó en un camarero / *que recordaba todos los pedidos / que aún no había cobrado.*",
    "pause": 0.3
   },
   {
-   "show": "En cuanto se los pagaban, / *se olvidaba de ellos.*",
+   "show": "En cuanto los cobraba, / *se le olvidaban.*",
    "pause": 0.3
   },
   {
-   "show": "Su alumna, Bluma Zeigarnik, / lo comprobó en 1927. / *La gente se acordaba casi el doble / de las tareas que le habían interrumpido.*",
+   "show": "Su alumna, Bluma Zeigarnik, / lo comprobó en 1927: / *la gente recordaba casi el doble / las tareas a medias que las terminadas.*",
    "pause": 0.3
   },
   {
-   "show": "Se llama efecto Zeigarnik, / *y hay tres formas de usarlo / para no dejarlo todo para mañana.*",
+   "show": "Lo que dejas a medias / se te queda en la cabeza / *y tira de ti para acabarlo.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *ponte con ello, / aunque sean dos minutos.*",
+   "show": "Se llama efecto Zeigarnik, / *y puedes aprovecharlo de tres maneras.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *empieza, aunque sean dos minutos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que has empezado / te sigue rondando por la cabeza, / *y eso hace que quieras acabarlo.*",
+   "show": "Una vez empezada, / *la tarea ya te ronda por la cabeza.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *cuando lo dejes, para en un punto / en el que sea fácil seguir.*",
+   "show": "La segunda: // *no pares al acabar una parte: / deja la siguiente empezada.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -45,21 +49,21 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *lo que no vayas a hacer hoy, / apúntalo y ponle día.*",
+   "show": "La tercera: // *antes de dejarlo, / apunta cuál es el siguiente paso.*",
    "pause": 0.3,
    "pausa_media": 0.45,
-   "bocadillo": "¿Y si se me olvida?"
+   "bocadillo": "¿Por dónde iba?"
   },
   {
-   "show": "Cuando algo tiene fecha, la cabeza lo suelta: / *dejas de darle vueltas / y te centras en lo de hoy.*",
+   "show": "Así, al volver, / *no pierdes ni un minuto en recordarlo.*",
    "pause": 0.3
   },
   {
-   "show": "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
+   "show": "Lo que más cuesta es empezar. / *Por eso, empieza, aunque sea poco.*",
    "pause": 0.3
   },
   {
-   "show": "Guárdate este vídeo para el próximo lunes / *que no sepas por dónde empezar.*",
+   "show": "Guarda este vídeo para el próximo lunes / *que no sepas por dónde empezar.*",
    "pause": 0.3
   }
  ],
@@ -162,6 +166,24 @@
     "Lo que tiene fecha no se olvida: / *deja de darte vueltas / y te centras en lo de hoy.*",
     "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
     "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+   ]
+  },
+  {
+   "ronda": "corrector y lector nuevos (7/10): gancho con tensión, sin la contradicción de la tercera",
+   "antes": [
+    "Lo que dejas a medias / *no se te va de la cabeza.*",
+    "Berlín, años veinte. / El psicólogo Kurt Lewin se dio cuenta / de que un camarero se acordaba / *de todos los pedidos sin cobrar.*",
+    "En cuanto se los pagaban, / *se olvidaba de ellos.*",
+    "Su alumna, Bluma Zeigarnik, / lo comprobó en 1927. / *La gente se acordaba casi el doble / de las tareas que le habían interrumpido.*",
+    "Se llama efecto Zeigarnik, / *y hay tres formas de usarlo / para no dejarlo todo para mañana.*",
+    "La primera: // *ponte con ello, / aunque sean dos minutos.*",
+    "Lo que has empezado / te sigue rondando por la cabeza, / *y eso hace que quieras acabarlo.*",
+    "La segunda: // *cuando lo dejes, para en un punto / en el que sea fácil seguir.*",
+    "Al día siguiente no empiezas de cero: / *sigues por donde lo dejaste.*",
+    "La tercera: // *lo que no vayas a hacer hoy, / apúntalo y ponle día.*",
+    "Cuando algo tiene fecha, la cabeza lo suelta: / *dejas de darle vueltas / y te centras en lo de hoy.*",
+    "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
+    "Guarda este vídeo para el próximo lunes / *que no sepas por dónde empezar.*"
    ]
   }
  ],
