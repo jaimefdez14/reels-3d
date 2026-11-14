@@ -128,6 +128,9 @@ diseños encima de otros diseños». Desde entonces, **nada se le envía sin pas
    la voz. Su informe se guarda en `reels/ID/lector.md`. No hay voz ni escena hasta que el lector resume el vídeo como la
    idea del guion, no marca frases que no se entiendan solo oyendo y pone 8 o más; tras reescribir, se repite con otro
    lector nuevo. Va después de `redaccion.py` y antes de `voz.py`.
+   Lo que reescribe o propone un lector en frío vuelve a pasar por un **corrector nativo nuevo** antes de enseñarlo: los
+   lectores juzgan si se entiende, no si suena a España (L24, 14-11: «Divide 72 entre lo que te renta al año», propuesta
+   de un lector; Jaime: «esto no es español castellano»).
 
 19. **Castellano nativo, desde la situación, con corrector nativo (10-11-2026).** Jaime, sobre «lo primero que pagas eres
    tú»: «ese tipo de expresiones son inaceptables… no parecen español nativo». Causa: el guion partía del concepto en

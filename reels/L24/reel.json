@@ -20,7 +20,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide 72 entre lo que te renta al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "show": "Divide 72 entre la rentabilidad anual. / *Al seis por ciento, en unos doce años / tienes el doble.*",
    "pause": 0.3
   },
   {
@@ -121,6 +121,13 @@
     }
    ],
    "descartado": "lector en frío 1 (8/10)"
+  },
+  {
+   "ronda": "jaime",
+   "linea": 3,
+   "antes": "Divide 72 entre lo que te renta al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "despues": "Divide 72 entre la rentabilidad anual. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "motivo": "Jaime, 14-11: «esto no es español castellano» («lo que te renta», propuesta de un lector en frío)"
   }
  ]
 }

@@ -39,6 +39,8 @@ Calcos encontrados el 10-11-2026 (Jaime: «ese tipo de expresiones son inaceptab
 | «X valen más que Y» con sujeto abstracto | aforismo de LinkedIn | verbo y persona: «Cumplir tres plazos cuenta más que…» |
 | «A quien…» en el envío | escrito | «a ese amigo que…», «a ese compañero que…» |
 | «No va de… va de…» | *it's not about… it's about* | «No es… es…» |
+| «Lo que te renta (al año)» | Latinoamérica / coloquial | «la rentabilidad anual», «el interés que te da» (Jaime, 14-11: «esto no es español castellano») |
+| «Guárdalo» sin referente al cerrar | *save this* | «Guárdate este vídeo para…» (el «lo» se confunde con el dinero del que se acaba de hablar) |
 
 ## 2. Giros de España que hay que buscar primero
 
