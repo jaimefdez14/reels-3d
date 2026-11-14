@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Se llama la regla del 72. / *Y sirve para tres cosas.*",
+   "show": "Se llama la regla del 72 / *y sirve para tres cosas.*",
    "pause": 0.3
   },
   {
@@ -20,20 +20,24 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Divide 72 entre la rentabilidad anual. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+   "show": "Coge el interés que te dan al año / y divide 72 entre ese número. / *El resultado son los años / que tarda tu dinero en duplicarse.*",
    "pause": 0.3
   },
   {
-   "show": "Al nueve por ciento, en ocho. / *Tres puntos más / y llegas cuatro años antes.*",
+   "show": "Con un seis por ciento, / setenta y dos entre seis son doce: / *en doce años tienes el doble.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *saber cuánto pierde tu dinero parado.*",
+   "show": "Con un nueve por ciento, en ocho. / *Tres puntos más / y lo tienes cuatro años antes.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *saber en cuánto tiempo / tu dinero parado pierde la mitad de su valor.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Con la inflación funciona igual. / *Si los precios suben / un tres por ciento al año, / en veinticuatro años / tu dinero valdrá la mitad.*",
+   "show": "Con la inflación funciona igual. / *Si los precios suben / un tres por ciento al año, / setenta y dos entre tres son veinticuatro: / en veinticuatro años vale la mitad.*",
    "pause": 0.3
   },
   {
@@ -44,10 +48,10 @@
   {
    "show": "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*",
    "pause": 0.3,
-   "bocadillo": "Ya la iré pagando poco a poco"
+   "bocadillo": "Ya lo iré pagando poco a poco"
   },
   {
-   "show": "No es exacta, / *pero se acerca mucho.*",
+   "show": "La regla no es exacta, / *pero se acerca mucho.*",
    "pause": 0.3
   },
   {
@@ -128,6 +132,23 @@
    "antes": "Divide 72 entre lo que te renta al año. / *Al seis por ciento, en unos doce años / tienes el doble.*",
    "despues": "Divide 72 entre la rentabilidad anual. / *Al seis por ciento, en unos doce años / tienes el doble.*",
    "motivo": "Jaime, 14-11: «esto no es español castellano» («lo que te renta», propuesta de un lector en frío)"
+  },
+  {
+   "ronda": "Jaime 14-11: «sigue sin entenderse» (la regla, explicada paso a paso) + corrector final",
+   "antes": [
+    "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*",
+    "Se llama la regla del 72. / *Y sirve para tres cosas.*",
+    "La primera: // *saber cuándo se duplica lo que inviertes.*",
+    "Divide 72 entre la rentabilidad anual. / *Al seis por ciento, en unos doce años / tienes el doble.*",
+    "Al nueve por ciento, en ocho. / *Tres puntos más / y llegas cuatro años antes.*",
+    "La segunda: // *saber cuánto pierde tu dinero parado.*",
+    "Con la inflación funciona igual. / *Si los precios suben / un tres por ciento al año, / en veinticuatro años / tu dinero valdrá la mitad.*",
+    "La tercera: // *ver lo rápido que crece una deuda.*",
+    "Con una tarjeta al dieciocho por ciento, / *lo que debes se duplica en cuatro años.*",
+    "No es exacta, / *pero se acerca mucho.*",
+    "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
+    "Guárdate este vídeo y haz la cuenta / *con el interés que te da tu banco.*"
+   ]
   }
  ]
 }

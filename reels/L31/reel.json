@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Así ves a tiempo / el error que podría cerrarlo. / *Se hace en tres pasos.*",
+   "show": "Así ves a tiempo / el fallo que podría hundirlo. / *Son tres pasos.*",
    "pause": 0.3
   },
   {
-   "show": "El primero: // *ponte un año más adelante, / con el negocio ya cerrado.*",
+   "show": "El primero: // *imagina que ha pasado un año / y el negocio ha cerrado.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -29,16 +29,16 @@
    "pause": 0.3
   },
   {
-   "show": "El segundo: // *apunta los tres motivos / más probables del cierre.*",
+   "show": "El segundo: // *apunta los tres motivos / más probables por los que cerró.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Pocos clientes, precios demasiado bajos, / *o que el dinero se acabe antes de tiempo.*",
+   "show": "Pocos clientes, precios demasiado bajos / *o quedarte sin dinero antes de tiempo.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *ponle remedio hoy mismo / al motivo más probable.*",
+   "show": "El tercero: // *ponle remedio hoy mismo / al riesgo más probable.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -47,11 +47,11 @@
    "pause": 0.3
   },
   {
-   "show": "Mejor encontrar hoy el motivo del cierre / *que descubrirlo dentro de un año.*",
+   "show": "Más vale descubrir hoy por qué cerraría / *que enterarte dentro de un año.*",
    "pause": 0.3
   },
   {
-   "show": "Guárdate este vídeo / *y repásalo antes de tu próximo proyecto.*",
+   "show": "Guárdate este vídeo y vuelve a verlo / *antes de montar tu próximo negocio.*",
    "pause": 0.3
   }
  ],
@@ -129,6 +129,46 @@
      "linea": 9,
      "antes": "Los fallos se ven antes / *cuando los buscas a propósito.*",
      "despues": "Mejor encontrar hoy el motivo del cierre / *que descubrirlo dentro de un año.*"
+    }
+   ]
+  },
+  {
+   "ronda": "corrector final (tras el lector)",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Así ves a tiempo / el error que podría cerrarlo. / *Se hace en tres pasos.*",
+     "despues": "Así ves a tiempo / el fallo que podría hundirlo. / *Son tres pasos.*"
+    },
+    {
+     "linea": 2,
+     "antes": "El primero: // *ponte un año más adelante, / con el negocio ya cerrado.*",
+     "despues": "El primero: // *imagina que ha pasado un año / y el negocio ha cerrado.*"
+    },
+    {
+     "linea": 5,
+     "antes": "El segundo: // *apunta los tres motivos / más probables del cierre.*",
+     "despues": "El segundo: // *apunta los tres motivos / más probables por los que cerró.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Pocos clientes, precios demasiado bajos, / *o que el dinero se acabe antes de tiempo.*",
+     "despues": "Pocos clientes, precios demasiado bajos / *o quedarte sin dinero antes de tiempo.*"
+    },
+    {
+     "linea": 7,
+     "antes": "El tercero: // *ponle remedio hoy mismo / al motivo más probable.*",
+     "despues": "El tercero: // *ponle remedio hoy mismo / al riesgo más probable.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Mejor encontrar hoy el motivo del cierre / *que descubrirlo dentro de un año.*",
+     "despues": "Más vale descubrir hoy por qué cerraría / *que enterarte dentro de un año.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Guárdate este vídeo / *y repásalo antes de tu próximo proyecto.*",
+     "despues": "Guárdate este vídeo y vuelve a verlo / *antes de montar tu próximo negocio.*"
     }
    ]
   }

@@ -7,16 +7,16 @@
  "situacion": "Eres autónomo, cobras una factura de 3.000 euros más IVA y te parece que has ganado eso.",
  "lines": [
   {
-   "show": "Si eres autónomo y facturas / tres mil euros más IVA, / cobras 3.630, / *pero 630 ya no son tuyos.*",
+   "show": "Si eres autónomo y facturas / tres mil euros más IVA, / cobras 3.630, / *pero 630 no son tuyos.*",
    "pause": 0.45,
    "bocadillo": "¡Este mes he facturado un montón!"
   },
   {
-   "show": "Son el IVA, y es solo el principio. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*",
+   "show": "Son el IVA, y no es lo único. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*",
    "pause": 0.3
   },
   {
-   "show": "El primero, el IVA: // *apártalo el mismo día que cobras.*",
+   "show": "El primero, el IVA: // *apártalo el mismo día que cobres.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cuota de autónomos, alquiler, gestoría. / Pongamos seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*",
+   "show": "Cuota de autónomos, alquiler, gestoría. / Pongamos que suman seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*",
    "pause": 0.3
   },
   {
@@ -43,7 +43,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "De todo lo que cobraste, / *lo tuyo son unos 1.900 euros.*",
+   "show": "De todo lo que has cobrado, / *lo tuyo son unos 1.900 euros.*",
    "pause": 0.3
   },
   {
@@ -140,6 +140,36 @@
     "De todo lo que cobraste, / *lo tuyo son unos 1.900 euros.*",
     "Facturar mucho no es ganar mucho: / *lo que ganas es lo que queda / fuera de los sobres.*",
     "Guárdate este vídeo / *para cuando hagas la próxima factura.*"
+   ]
+  },
+  {
+   "ronda": "corrector final (tras el lector)",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Si eres autónomo y facturas / tres mil euros más IVA, / cobras 3.630, / *pero 630 ya no son tuyos.*",
+     "despues": "Si eres autónomo y facturas / tres mil euros más IVA, / cobras 3.630, / *pero 630 no son tuyos.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Son el IVA, y es solo el principio. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*",
+     "despues": "Son el IVA, y no es lo único. / *Reparte cada cobro en tres sobres: / lo que quede fuera es lo que ganas.*"
+    },
+    {
+     "linea": 2,
+     "antes": "El primero, el IVA: // *apártalo el mismo día que cobras.*",
+     "despues": "El primero, el IVA: // *apártalo el mismo día que cobres.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Cuota de autónomos, alquiler, gestoría. / Pongamos seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*",
+     "despues": "Cuota de autónomos, alquiler, gestoría. / Pongamos que suman seiscientos euros. / *De los tres mil, te quedan / dos mil cuatrocientos de beneficio.*"
+    },
+    {
+     "linea": 8,
+     "antes": "De todo lo que cobraste, / *lo tuyo son unos 1.900 euros.*",
+     "despues": "De todo lo que has cobrado, / *lo tuyo son unos 1.900 euros.*"
+    }
    ]
   }
  ],

@@ -7,11 +7,11 @@
  "situacion": "Trabajas doce horas al día para tus clientes y a fin de mes no te salen las cuentas.",
  "lines": [
   {
-   "show": "Si trabajas por tu cuenta, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
+   "show": "Si eres autónomo, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
    "pause": 0.45
   },
   {
-   "show": "Y seguramente dedicas / casi todo tu tiempo al resto. / *Hay tres pasos para darle la vuelta.*",
+   "show": "Y seguramente dedicas / casi todo tu tiempo al resto. / *Esto se arregla en tres pasos.*",
    "pause": 0.3
   },
   {
@@ -29,7 +29,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí aparecen los que pagan poco / y te quitan muchas horas.*",
+   "show": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí verás quién paga poco / y te quita muchas horas.*",
    "pause": 0.3,
    "bocadillo": "¿Lo podemos cambiar otra vez?"
   },
@@ -39,11 +39,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "El tiempo que recuperas, / *dedícaselo a los clientes que más te pagan.*",
+   "show": "El tiempo que recuperes, / *dedícaselo a los clientes que más te pagan.*",
    "pause": 0.3
   },
   {
-   "show": "Trabajar más horas no arregla las cuentas. / *Elegir bien para quién trabajas, sí.*",
+   "show": "Trabajar más horas / no hace que te salgan las cuentas. / *Elegir bien para quién trabajas, sí.*",
    "pause": 0.3
   },
   {
@@ -112,6 +112,36 @@
     "El tiempo que recuperas, / *dedícaselo a los clientes que más te pagan.*",
     "Trabajar más horas no arregla las cuentas. / *Elegir bien para quién trabajas, sí.*",
     "Mándaselo a quien trabaja doce horas al día / *y aun así no le salen las cuentas.*"
+   ]
+  },
+  {
+   "ronda": "corrector final (tras el lector)",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Si trabajas por tu cuenta, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*",
+     "despues": "Si eres autónomo, / el 20 % de tus clientes / *te da el 80 % de lo que ganas.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Y seguramente dedicas / casi todo tu tiempo al resto. / *Hay tres pasos para darle la vuelta.*",
+     "despues": "Y seguramente dedicas / casi todo tu tiempo al resto. / *Esto se arregla en tres pasos.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí aparecen los que pagan poco / y te quitan muchas horas.*",
+     "despues": "Cuenta los correos, las llamadas / y los cambios de última hora. / *Ahí verás quién paga poco / y te quita muchas horas.*"
+    },
+    {
+     "linea": 7,
+     "antes": "El tiempo que recuperas, / *dedícaselo a los clientes que más te pagan.*",
+     "despues": "El tiempo que recuperes, / *dedícaselo a los clientes que más te pagan.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Trabajar más horas no arregla las cuentas. / *Elegir bien para quién trabajas, sí.*",
+     "despues": "Trabajar más horas / no hace que te salgan las cuentas. / *Elegir bien para quién trabajas, sí.*"
+    }
    ]
   }
  ]

@@ -11,7 +11,7 @@
    "pause": 0.45
   },
   {
-   "show": "Y haces lo mismo con cosas mucho más caras. / *Tiene nombre: la falacia del coste hundido.*",
+   "show": "Y haces lo mismo con cosas mucho más caras. / *Esto tiene un nombre: / la falacia del coste hundido.*",
    "pause": 0.3
   },
   {
@@ -32,12 +32,12 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *la trampa crece / con lo que hay en juego.*",
+   "show": "La segunda: // *cuanto más te juegas, / más cuesta salir de la trampa.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Y sigues porque ya le has metido / años o dinero.*",
+   "show": "Un negocio que pierde dinero cada mes. / Un trabajo que ya no te gusta. / *Y sigues porque ya le has dedicado / años o dinero.*",
    "pause": 0.3,
    "bocadillo": "Ya que he llegado hasta aquí…"
   },
@@ -47,7 +47,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si empezaras hoy desde cero, / *¿lo volverías a elegir?*",
+   "show": "Si hoy empezaras de cero, / *¿lo elegirías otra vez?*",
    "pause": 0.3
   },
   {
@@ -55,7 +55,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guárdate este vídeo para la próxima vez / *que te oigas decir / «ya que he llegado hasta aquí».*",
+   "show": "Guárdate este vídeo para la próxima vez / que pienses / *«ya que he llegado hasta aquí».*",
    "pause": 0.3
   }
  ],
@@ -119,6 +119,23 @@
      "antes": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Un coche que se pasa la vida en el taller.*",
      "despues": "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Y sigues porque ya le has metido / años o dinero.*"
     }
+   ]
+  },
+  {
+   "ronda": "corrector final",
+   "antes": [
+    "Sigues viendo una película mala / *porque ya has pagado la entrada.*",
+    "Y haces lo mismo con cosas mucho más caras. / *Tiene nombre: la falacia del coste hundido.*",
+    "Tres ideas para no caer en ella.",
+    "La primera: // *lo que ya has gastado no lo recuperas, / decidas lo que decidas.*",
+    "La entrada está pagada / *tanto si te quedas como si te vas.*",
+    "Solo cuenta lo que tienes por delante: / *dos horas más de película mala.*",
+    "La segunda: // *la trampa crece / con lo que hay en juego.*",
+    "Un negocio que pierde dinero cada mes. / Una carrera que ya no te gusta. / *Y sigues porque ya le has metido / años o dinero.*",
+    "La tercera: // *pregúntate solo una cosa.*",
+    "Si empezaras hoy desde cero, / *¿lo volverías a elegir?*",
+    "Si la respuesta es no, / *lo que llevas gastado / no es motivo para seguir.*",
+    "Guárdate este vídeo para la próxima vez / *que te oigas decir / «ya que he llegado hasta aquí».*"
    ]
   }
  ]

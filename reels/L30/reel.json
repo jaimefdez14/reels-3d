@@ -7,15 +7,23 @@
  "situacion": "Llevas toda la semana dándole vueltas a un informe que no has empezado, y no te lo quitas de la cabeza.",
  "lines": [
   {
-   "show": "Lo que dejas a medias, / *la cabeza no lo olvida.*",
+   "show": "Lo que dejas a medias / *no se te va de la cabeza.*",
    "pause": 0.45
   },
   {
-   "show": "Una psicóloga vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
+   "show": "Berlín, años veinte. / El psicólogo Kurt Lewin se dio cuenta / de que un camarero se acordaba / *de todos los pedidos sin cobrar.*",
    "pause": 0.3
   },
   {
-   "show": "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
+   "show": "En cuanto se los pagaban, / *se olvidaba de ellos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Su alumna, Bluma Zeigarnik, / lo comprobó en 1927. / *La gente se acordaba casi el doble / de las tareas que le habían interrumpido.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se llama efecto Zeigarnik, / *y hay tres formas de usarlo / para no dejarlo todo para mañana.*",
    "pause": 0.3
   },
   {
@@ -24,26 +32,26 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que has empezado / te sigue rondando la cabeza, / *y eso te empuja a terminarlo.*",
+   "show": "Lo que has empezado / te sigue rondando por la cabeza, / *y eso hace que quieras acabarlo.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *al parar, déjalo a medias / en un punto fácil de retomar.*",
+   "show": "La segunda: // *cuando lo dejes, para en un punto / en el que sea fácil seguir.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Al día siguiente no empiezas de cero: / *sigues donde lo dejaste.*",
+   "show": "Al día siguiente no empiezas de cero: / *sigues por donde lo dejaste.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *lo que no vas a hacer hoy, / apúntalo con su día.*",
+   "show": "La tercera: // *lo que no vayas a hacer hoy, / apúntalo y ponle día.*",
    "pause": 0.3,
    "pausa_media": 0.45,
    "bocadillo": "¿Y si se me olvida?"
   },
   {
-   "show": "Lo que tiene fecha no se olvida: / *deja de darte vueltas / y te centras en lo de hoy.*",
+   "show": "Cuando algo tiene fecha, la cabeza lo suelta: / *dejas de darle vueltas / y te centras en lo de hoy.*",
    "pause": 0.3
   },
   {
@@ -51,7 +59,7 @@
    "pause": 0.3
   },
   {
-   "show": "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*",
+   "show": "Guárdate este vídeo para el próximo lunes / *que no sepas por dónde empezar.*",
    "pause": 0.3
   }
  ],
@@ -139,6 +147,23 @@
     "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
     "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
    ]
+  },
+  {
+   "ronda": "Jaime 14-11: aprovechar la historia como autoridad (quién, cuándo, qué vio) + corrector final",
+   "antes": [
+    "Lo que dejas a medias, / *la cabeza no lo olvida.*",
+    "Una psicóloga vio que los camareros / recordaban los pedidos sin cobrar / *y olvidaban los que ya estaban pagados.*",
+    "Se llama efecto Zeigarnik, / *y te sirve de tres maneras / para dejar de aplazar las cosas.*",
+    "La primera: // *ponte con ello, / aunque sean dos minutos.*",
+    "Lo que has empezado / te sigue rondando la cabeza, / *y eso te empuja a terminarlo.*",
+    "La segunda: // *al parar, déjalo a medias / en un punto fácil de retomar.*",
+    "Al día siguiente no empiezas de cero: / *sigues donde lo dejaste.*",
+    "La tercera: // *lo que no vas a hacer hoy, / apúntalo con su día.*",
+    "Lo que tiene fecha no se olvida: / *deja de darte vueltas / y te centras en lo de hoy.*",
+    "Empezar cuesta más que seguir. / *Por eso, empieza aunque sea poco.*",
+    "Guárdate este vídeo para el próximo lunes / *en que no sepas por dónde empezar.*"
+   ]
   }
- ]
+ ],
+ "cifras": "Zeigarnik, «Das Behalten erledigter und unerledigter Handlungen», Psychologische Forschung 9 (1927): las tareas interrumpidas se recordaban unas 1,9 veces más que las terminadas. La anécdota del camarero (Lewin, Berlín, años veinte) es la que se cuenta siempre; sus detalles varían según la fuente. Las réplicas posteriores son irregulares: no se dice que esté demostrado, solo lo que vio ella."
 }

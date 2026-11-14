@@ -21,14 +21,14 @@
   {
    "show": "Al lado de la bata nueva, / *todo lo demás parecía viejo.*",
    "pause": 0.3,
-   "bocadillo": "Ya que estamos, cambio la mesa"
+   "bocadillo": "Ya puestos, cambio también la mesa"
   },
   {
    "show": "Hay tres maneras de evitarlo.",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *antes de comprar algo, pregúntate / qué más vas a tener que comprar.*",
+   "show": "La primera: // *antes de comprar algo, / piensa qué más vas a necesitar después.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -37,16 +37,16 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *ponle un tope / a todo lo que arrastra esa compra.*",
+   "show": "La segunda: // *ponle un tope a los gastos / que vienen con esa compra.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Decide cuánto vas a gastar en total, / *no solo en la primera compra.*",
+   "show": "Decide cuánto vas a gastarte en total, / *no solo en la primera compra.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *espera un mes / antes de la siguiente compra.*",
+   "show": "La tercera: // *espera un mes / antes de comprar lo siguiente.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -132,6 +132,31 @@
      "linea": 11,
      "antes": "Mándaselo a quien esté a punto / *de reformar la casa.*",
      "despues": "Mándaselo a quien se acaba / *de comprar un sofá.*"
+    }
+   ]
+  },
+  {
+   "ronda": "corrector final (tras el lector)",
+   "cambios": [
+    {
+     "linea": 5,
+     "antes": "La primera: // *antes de comprar algo, pregúntate / qué más vas a tener que comprar.*",
+     "despues": "La primera: // *antes de comprar algo, / piensa qué más vas a necesitar después.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La segunda: // *ponle un tope / a todo lo que arrastra esa compra.*",
+     "despues": "La segunda: // *ponle un tope a los gastos / que vienen con esa compra.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Decide cuánto vas a gastar en total, / *no solo en la primera compra.*",
+     "despues": "Decide cuánto vas a gastarte en total, / *no solo en la primera compra.*"
+    },
+    {
+     "linea": 9,
+     "antes": "La tercera: // *espera un mes / antes de la siguiente compra.*",
+     "despues": "La tercera: // *espera un mes / antes de comprar lo siguiente.*"
     }
    ]
   }

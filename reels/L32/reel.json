@@ -11,11 +11,11 @@
    "pause": 0.45
   },
   {
-   "show": "Es la regla del cincuenta, treinta, veinte: / *tres partes para que te cuadren las cuentas.*",
+   "show": "Para eso está la regla / del cincuenta, treinta, veinte: / *tres partes para que te cuadren las cuentas.*",
    "pause": 0.3
   },
   {
-   "show": "La primera: // *la mitad, para lo necesario.*",
+   "show": "La primera: // *la mitad, para los gastos fijos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -29,12 +29,12 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Cenas, viajes, caprichos. / *480 euros que gastas sin remordimientos.*",
+   "show": "Cenas, viajes, caprichos. / *480 euros que gastas sin darle vueltas.*",
    "pause": 0.3,
-   "bocadillo": "Esto sale de mi treinta por ciento"
+   "bocadillo": "Esto lo pago con el treinta por ciento"
   },
   {
-   "show": "La tercera: // *un veinte por ciento para ahorrar, / y se aparta antes que nada.*",
+   "show": "La tercera: // *un veinte por ciento para ahorrar, / y lo apartas lo primero.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -43,11 +43,11 @@
    "pause": 0.3
   },
   {
-   "show": "Si lo fijo pasa de la mitad, / *recorta ahí antes que en el ahorro.*",
+   "show": "Si los gastos fijos pasan de la mitad, / *recorta de ahí antes que del ahorro.*",
    "pause": 0.3
   },
   {
-   "show": "Para ahorrar no importa tanto cuánto ganas / *como apartarlo antes de gastar.*",
+   "show": "Para ahorrar, lo que cuenta / no es cuánto ganas, / *sino apartar el dinero antes de gastar.*",
    "pause": 0.3
   },
   {
@@ -120,6 +120,22 @@
      "antes": "Para ahorrar no importa tanto cuánto ganas / *como el orden en que lo gastas.*",
      "despues": "Para ahorrar no importa tanto cuánto ganas / *como apartarlo antes de gastar.*"
     }
+   ]
+  },
+  {
+   "ronda": "corrector final",
+   "antes": [
+    "Si no sabes en qué se te va la nómina, / *el problema no es el sueldo: / es cómo lo repartes.*",
+    "Es la regla del cincuenta, treinta, veinte: / *tres partes para que te cuadren las cuentas.*",
+    "La primera: // *la mitad, para lo necesario.*",
+    "Casa, comida, facturas, transporte. / *Si cobras 1.600 euros, son 800.*",
+    "La segunda: // *un treinta por ciento, / para lo que te apetece.*",
+    "Cenas, viajes, caprichos. / *480 euros que gastas sin remordimientos.*",
+    "La tercera: // *un veinte por ciento para ahorrar, / y se aparta antes que nada.*",
+    "Trescientos veinte euros / que guardas el día que cobras, / *sin esperar a ver qué sobra.*",
+    "Si lo fijo pasa de la mitad, / *recorta ahí antes que en el ahorro.*",
+    "Para ahorrar no importa tanto cuánto ganas / *como apartarlo antes de gastar.*",
+    "Guárdate este vídeo para el día que cobres."
    ]
   }
  ]

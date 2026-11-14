@@ -23,12 +23,12 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *si vendes, enseña primero / la opción más cara.*",
+   "show": "La primera: // *si vendes, enseña antes lo más caro.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la de en medio parece razonable.*",
+   "show": "Ten tres opciones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*",
    "pause": 0.3
   },
   {
@@ -50,16 +50,16 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si te preguntan cuánto pensabas gastarte, / *no contestes: di tú el precio.*",
+   "show": "Si te preguntan cuánto te querías gastar, / *no des tu presupuesto: pon tú el precio.*",
    "pause": 0.3,
-   "bocadillo": "¿Cuánto pensabas gastarte?"
+   "bocadillo": "¿Cuánto te querías gastar?"
   },
   {
    "show": "Por eso el vino de 40 / *nunca fue tan barato como parecía.*",
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a ese amigo que vende / *y siempre enseña primero lo más barato.*",
+   "show": "Mándaselo a ese amigo que tiene un negocio / *y siempre enseña primero lo más barato.*",
    "pause": 0.3
   }
  ],
@@ -158,6 +158,31 @@
     }
    ],
    "descartado": "lector en frío 2 (8/10); el bocadillo pasa a la línea 10 y la voz lo presenta"
+  },
+  {
+   "ronda": "corrector final (tras el lector)",
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "La primera: // *si vendes, enseña primero / la opción más cara.*",
+     "despues": "La primera: // *si vendes, enseña antes lo más caro.*"
+    },
+    {
+     "linea": 5,
+     "antes": "Ofrece tres versiones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la de en medio parece razonable.*",
+     "despues": "Ten tres opciones: / la completa, la intermedia y la básica. / *Al lado de la completa, / la intermedia parece razonable.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Si te preguntan cuánto pensabas gastarte, / *no contestes: di tú el precio.*",
+     "despues": "Si te preguntan cuánto te querías gastar, / *no des tu presupuesto: pon tú el precio.*"
+    },
+    {
+     "linea": 12,
+     "antes": "Mándaselo a ese amigo que vende / *y siempre enseña primero lo más barato.*",
+     "despues": "Mándaselo a ese amigo que tiene un negocio / *y siempre enseña primero lo más barato.*"
+    }
+   ]
   }
  ]
 }
