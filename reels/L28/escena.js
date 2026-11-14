@@ -60,32 +60,32 @@ E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -360, cara: true,
 E.obj('pila1', 'pila', { t0: N[0].S - 0.1, t1: fin(1), x: P1, n: 10, w: 170, hh: 26,
   k: [[N[0].S, 0], [N[0].S + 0.5, 10, 'out'], [w(2, 4), 10], [wf(2, -1), 8.3, 'inout'], [w(4, 9), 8.3], [wf(4, -1), 6.6, 'inout'], [wf(4, -1) + 0.3, 6.6], [wf(4, -1) + 0.7, 8.3, 'inout']],
   caja: [-85, -224, 170, 224], refl: true });
-E.obj('cuenta1', 'contador', { t0: N[0].S, t1: fin(1), x: P1, y: -330, size: 46, col: 'txt', suf: ' €', pop: true,
+E.obj('cuenta1', 'contador', { t0: N[0].S, t1: fin(1), x: P1, y: -365, size: 46, col: 'txt', suf: ' €', pop: true,
   v: [[N[0].S, 0], [N[0].S + 0.5, 3630, 'out'], [w(2, 4), 3630], [wf(2, -1), 3000, 'inout'], [w(4, 9), 3000], [wf(4, -1), 2370, 'inout'], [wf(4, -1) + 0.3, 2370], [wf(4, -1) + 0.7, 3000, 'inout']],
   caja: [-120, -28, 240, 56] });
-E.obj('rotCobro', 'rotulo', { t0: N[0].S, t1: fin(1), x: P1, y: -395, texto: 'LO QUE COBRAS', size: 24, col: '#9a9c9b', caja: [-110, -15, 220, 30] });
+E.obj('rotCobro', 'rotulo', { t0: N[0].S, t1: fin(1), x: P1, y: -430, texto: 'LO QUE COBRAS', size: 24, col: '#9a9c9b', caja: [-110, -15, 220, 30] });
 E.obj('tarroIVA', 'tarro', { t0: N[0].S - 0.1, t1: fin(1), x: T1, w: 200, h: 270, rotulo: 'IVA', sobrevive: true,
   nivel: [[w(2, 4), 0], [wf(2, -1) + 0.2, 0.6, 'inout'], [w(4, 0), 0.6], [w(4, 3), 0, 'inout'], [wf(4, -1) + 0.3, 0], [wf(4, -1) + 0.7, 0.6, 'inout']],
   apagado: [[w(4, 0), 0], [w(4, 1), 1], [wf(4, -1) + 0.3, 1], [wf(4, -1) + 0.6, 0]],
   tapa: [[w(3, 13), 0], [w(3, 15), 1, 'out'], [w(4, 0), 1], [w(4, 0) + 0.25, 0], [wf(4, -1) + 0.6, 0], [wf(4, -1) + 0.9, 1, 'out']],
   barrido: [wf(2, -1) + 0.2, wf(4, -1) + 0.8], caja: [-100, -270, 200, 270], refl: true });
-E.obj('ivaC', 'contador', { t0: w(2, 4) - 0.1, t1: fin(1), x: T1, y: -330, size: 46, col: 'txt', suf: ' €', miles: false, pop: true,
+E.obj('ivaC', 'contador', { t0: w(2, 4) - 0.1, t1: fin(1), x: T1, y: -365, size: 46, col: 'txt', suf: ' €', miles: false, pop: true,
   v: [[w(2, 4), 0], [wf(2, -1) + 0.2, 630, 'inout'], [w(4, 0), 630], [w(4, 3), 0, 'inout'], [wf(4, -1) + 0.3, 0], [wf(4, -1) + 0.7, 630, 'inout']], caja: [-100, -28, 200, 56] });
 for (let i = 0; i < 5; i++) { const a = w(2, 4) + i * 0.24;
   E.obj('m1_' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.06, sale: 0.15, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
     x: [[a, P1], [a + 0.75, T1, 'inout']], y: [[a, -235], [a + 0.38, -292], [a + 0.75, -150, 'in']] }); }
 E.sfx(w(2, 4), 'fill');
-E.obj('mismoDia', 'rotulo', { t0: w(2, 6) - 0.1, t1: w(3, 0), sale: 0.2, x: T1, y: -405, texto: 'EL MISMO DÍA', size: 26, col: '#e6ce46', pop: true, caja: [-100, -16, 200, 32] });
+E.obj('mismoDia', 'rotulo', { t0: w(2, 6) - 0.1, t1: w(3, 0), sale: 0.2, x: T1, y: -430, texto: 'EL MISMO DÍA', size: 26, col: '#e6ce46', pop: true, caja: [-100, -16, 200, 32] });
 // «Ese veintiuno por ciento … es de Hacienda»: el 21 % rueda; la tapa se cierra con «Hacienda»
-E.obj('pct21', 'contador', { t0: w(3, 0) - 0.1, t1: w(4, 0), sale: 0.2, x: T1, y: -470, v: [[w(3, 1), 0], [w(3, 3) + 0.15, 21, 'out']], suf: ' %', size: 56, col: '#e6ce46', miles: false, pop: true,
+E.obj('pct21', 'contador', { t0: w(3, 0) - 0.1, t1: w(4, 0), sale: 0.2, x: T1, y: -505, v: [[w(3, 1), 0], [w(3, 3) + 0.15, 21, 'out']], suf: ' %', size: 56, col: '#e6ce46', miles: false, pop: true,
   caja: [-80, -34, 160, 68] });
-E.obj('hacienda', 'rotulo', { t0: w(3, 12), t1: w(4, 0), sale: 0.2, x: T1, y: -405, texto: 'DE HACIENDA', size: 26, col: '#e4574f', pop: true, caja: [-100, -16, 200, 32] });
-E.obj('flecha1', 'flecha', { t0: w(3, 9) - 0.1, t1: w(3, 12), sale: 0.15, de: [P1 + 60, -430], hasta: [T1 - 90, -430], curva: -0.2, discontinua: true, p: [[w(3, 9), 0], [w(3, 11) + 0.2, 1, 'out']], inspeccion: false });
+E.obj('hacienda', 'rotulo', { t0: w(3, 12), t1: w(4, 0), sale: 0.2, x: T1, y: -430, texto: 'DE HACIENDA', size: 26, col: '#e4574f', pop: true, caja: [-100, -16, 200, 32] });
+E.obj('flecha1', 'flecha', { t0: w(3, 9) - 0.1, t1: w(3, 12), sale: 0.15, de: [P1 + 70, -470], hasta: [T1 - 90, -470], curva: -0.2, discontinua: true, p: [[w(3, 9), 0], [w(3, 11) + 0.2, 1, 'out']], inspeccion: false });
 E.golpe(w(3, 15), 0.04);
 // «Si te lo gastas … de tu bolsillo»: el tarro se vacía y se apaga, pasa el trimestre y los 630 € salen del montón
-E.obj('trim', 'dias', { t0: w(4, 4) - 0.15, t1: fin(1), x: T1, y: -470, letras: ['ENE', 'FEB', 'MAR'], gap: 100, pop: true,
+E.obj('trim', 'dias', { t0: w(4, 4) - 0.15, t1: fin(1), x: T1, y: -505, letras: ['ENE', 'FEB', 'MAR'], gap: 100, pop: true,
   luz: [[w(4, 4), -1], [w(4, 7) + 0.2, 2, 'inout']], caja: [-150, -32, 300, 64] });
-E.obj('bolsillo', 'contador', { t0: w(4, 9) - 0.05, t1: wf(4, -1) + 0.3, sale: 0.2, x: P1, y: -470, v: [[w(4, 9), 0], [w(4, 11), 630, 'out']], pre: '−', suf: ' €', size: 50, col: '#e4574f', miles: false, pop: true,
+E.obj('bolsillo', 'contador', { t0: w(4, 9) - 0.05, t1: wf(4, -1) + 0.3, sale: 0.2, x: P1, y: -505, v: [[w(4, 9), 0], [w(4, 11), 630, 'out']], pre: '−', suf: ' €', size: 50, col: '#e4574f', miles: false, pop: true,
   caja: [-110, -30, 220, 60] });
 E.temblor(w(4, 12), 12, 0.4);
 E.obj('ch1', 'chispas', { t0: wf(4, -1) + 0.7, t1: wf(4, -1) + 1.5, x: T1, y: -150, r0: 120, r1: 220, inspeccion: false });
@@ -101,23 +101,23 @@ E.figura('yo2', { t0: N[1].S - 0.1, t1: fin(2), x: -370, cara: true,
   sonrisa: [[w(5, 2), 0.3], [w(6, 5), 0], [w(6, 21), 1.4]] });
 E.obj('pila2', 'pila', { t0: N[1].S - 0.1, t1: fin(2), x: P2, n: 10, w: 170, hh: 26,
   k: [[N[1].S, 0], [N[1].S + 0.6, 10, 'out'], [w(6, 0), 10], [w(6, 9), 8, 'inout']], caja: [-85, -224, 170, 224], refl: true });
-E.obj('cuenta2', 'contador', { t0: N[1].S, t1: fin(2), x: P2, y: -330, size: 46, col: 'txt', suf: ' €', pop: true, sobrevive: true, r: 60,
+E.obj('cuenta2', 'contador', { t0: N[1].S, t1: fin(2), x: P2, y: -365, size: 46, col: 'txt', suf: ' €', pop: true, sobrevive: true, r: 60,
   v: [[N[1].S, 0], [N[1].S + 0.6, 3000, 'out'], [w(6, 12), 3000], [w(6, 20) + 0.2, 2400, 'inout']], barrido: [w(6, 22)], caja: [-120, -28, 240, 56] });
-E.obj('rotSin', 'rotulo', { t0: N[1].S, t1: fin(2), x: P2, y: -395, texto: [[0, 'SIN IVA'], [w(6, 21), 'BENEFICIO']], size: 24, col: '#9a9c9b', caja: [-90, -15, 180, 30] });
+E.obj('rotSin', 'rotulo', { t0: N[1].S, t1: fin(2), x: P2, y: -430, texto: [[0, 'SIN IVA'], [w(6, 21), 'BENEFICIO']], size: 24, col: '#9a9c9b', caja: [-90, -15, 180, 30] });
 E.obj('tarroG', 'tarro', { t0: N[1].S - 0.1, t1: fin(2), x: T2, w: 200, h: 270, rotulo: 'GASTOS', pop: true,
   nivel: [[w(6, 0), 0], [w(6, 9) + 0.2, 0.55, 'inout']], tapa: [[w(6, 9) + 0.3, 0], [w(6, 9) + 0.6, 1, 'out']], barrido: [w(6, 9) + 0.3], caja: [-100, -270, 200, 270], refl: true });
-E.obj('gastoC', 'contador', { t0: w(6, 0) - 0.1, t1: fin(2), x: T2, y: -330, size: 46, col: 'txt', suf: ' €', miles: false, pop: true,
+E.obj('gastoC', 'contador', { t0: w(6, 0) - 0.1, t1: fin(2), x: T2, y: -365, size: 46, col: 'txt', suf: ' €', miles: false, pop: true,
   v: [[w(6, 0), 0], [w(6, 9) + 0.2, 600, 'inout']], caja: [-100, -28, 200, 56] });
 // «Cuota de autónomos, alquiler, gestoría»: tres rótulos en cascada, cada uno con su moneda que vuela al tarro
 [['CUOTA', w(6, 0), -170], ['ALQUILER', w(6, 3), 40], ['GESTORÍA', w(6, 4), 250]].forEach(([s, a], i, arr) => {
   const x = arr[i][2];
-  E.obj('tipo' + i, 'rotulo', { t0: a - 0.1, t1: w(6, 10), sale: 0.2, x, y: -480, texto: s, size: 28, col: '#e6ce46', pop: true, caja: [-80, -16, 160, 32] });
+  E.obj('tipo' + i, 'rotulo', { t0: a - 0.1, t1: w(6, 10), sale: 0.2, x, y: -505, texto: s, size: 28, col: '#e6ce46', pop: true, caja: [-80, -16, 160, 32] });
   for (let j = 0; j < 2; j++) { const b = a + j * 0.25;
     E.obj('m2_' + i + '_' + j, 'moneda', { t0: b, t1: b + 0.8, entra: 0.06, sale: 0.15, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
       x: [[b, P2], [b + 0.75, T2, 'inout']], y: [[b, -235], [b + 0.38, -292], [b + 0.75, -150, 'in']] }); }
 });
 E.sfx(w(6, 0), 'fill'); E.golpe(w(6, 9) + 0.6, 0.04);
-E.obj('ch2', 'chispas', { t0: w(6, 22), t1: w(6, 22) + 0.8, x: P2, y: -330, r0: 90, r1: 200, inspeccion: false });
+E.obj('ch2', 'chispas', { t0: w(6, 22), t1: w(6, 22) + 0.8, x: P2, y: -365, r0: 90, r1: 200, inspeccion: false });
 E.destello(w(6, 22), 0.12);
 
 // ---------- 3 · el IRPF y la cuenta final ----------
@@ -130,14 +130,14 @@ E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -375, cara: true,
   sonrisa: [[w(7, 2), 0.5], [w(8, 0), 0], [wf(8, -1), 1.5]] });
 E.obj('pila3', 'pila', { t0: N[2].S - 0.1, t1: w(8, 0), sale: 0.2, x: P3, n: 8, w: 170, hh: 26,
   k: [[N[2].S, 0], [N[2].S + 0.5, 8, 'out'], [w(7, 9), 8], [wf(7, -1), 6.4, 'inout']], caja: [-85, -180, 170, 180], refl: true });
-E.obj('benef3', 'etiqueta', { t0: N[2].S - 0.1, t1: w(8, 0), sale: 0.2, x: P3 + 10, y: -330, w: 280, h: 100,
+E.obj('benef3', 'etiqueta', { t0: N[2].S - 0.1, t1: w(8, 0), sale: 0.2, x: P3 + 10, y: -375, w: 280, h: 100,
   v: [[N[2].S, 2400], [w(7, 9), 2400], [wf(7, -1), 1920, 'inout']], caja: [-150, -50, 300, 100] });
-E.obj('rotBen', 'rotulo', { t0: N[2].S, t1: w(8, 0), sale: 0.2, x: P3 + 10, y: -415, texto: 'BENEFICIO', size: 24, col: '#9a9c9b', caja: [-80, -15, 160, 30] });
+E.obj('rotBen', 'rotulo', { t0: N[2].S, t1: w(8, 0), sale: 0.2, x: P3 + 10, y: -460, texto: 'BENEFICIO', size: 24, col: '#9a9c9b', caja: [-80, -15, 160, 30] });
 E.obj('tarroR', 'tarro', { t0: N[2].S + 0.1, t1: w(8, 0), sale: 0.2, x: T3, w: 200, h: 270, rotulo: 'IRPF', pop: true,
   nivel: [[w(7, 9), 0], [wf(7, -1) + 0.2, 0.5, 'inout']], barrido: [wf(7, -1) + 0.2], caja: [-100, -270, 200, 270], refl: true });
-E.obj('pct20', 'contador', { t0: w(7, 3) - 0.1, t1: w(8, 0), sale: 0.2, x: T3, y: -470, v: [[w(7, 4), 0], [w(7, 6) + 0.15, 20, 'out']], suf: ' %', size: 56, col: '#e6ce46', miles: false, pop: true,
+E.obj('pct20', 'contador', { t0: w(7, 3) - 0.1, t1: w(8, 0), sale: 0.2, x: T3, y: -505, v: [[w(7, 4), 0], [w(7, 6) + 0.15, 20, 'out']], suf: ' %', size: 56, col: '#e6ce46', miles: false, pop: true,
   caja: [-80, -34, 160, 68] });
-E.obj('irpfC', 'contador', { t0: w(7, 9) - 0.1, t1: w(8, 0), sale: 0.2, x: T3, y: -330, size: 46, col: 'txt', suf: ' €', miles: false, pop: true,
+E.obj('irpfC', 'contador', { t0: w(7, 9) - 0.1, t1: w(8, 0), sale: 0.2, x: T3, y: -365, size: 46, col: 'txt', suf: ' €', miles: false, pop: true,
   v: [[w(7, 9), 0], [wf(7, -1) + 0.2, 480, 'inout']], caja: [-100, -28, 200, 56] });
 for (let i = 0; i < 4; i++) { const a = w(7, 9) + i * 0.22;
   E.obj('m3_' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.06, sale: 0.15, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
