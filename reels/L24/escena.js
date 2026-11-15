@@ -80,7 +80,7 @@ E.obj('pPct', 'pieza', { t0: w(3, 2) - 0.05, t1: w(4, 2), sale: 0.15, x: PX, y: 
 E.obj('rotInt', 'rotulo', { t0: w(3, 2), t1: fin(1), x: PX, y: -455, texto: 'INTERÉS AL AÑO', size: 22, col: GRIS, pop: true, caja: [-105, -14, 210, 28] });
 division('d1', 0, w(3, 9) + 0.05, w(3, 11), w(3, 18), fin(1));
 E.obj('rotAnios', 'rotulo', { t0: w(3, 20) - 0.05, t1: w(4, 10), sale: 0.15, x: RX, y: FY, texto: 'AÑOS', size: 36, peso: 700, col: AM, pop: true, caja: [-60, -22, 120, 44] });
-E.obj('p6', 'pieza', { t0: w(4, 2) - 0.05, t1: w(5, 2), sale: 0.15, x: PX, y: FY, r: 38, texto: '6', pop: true });
+E.obj('p6', 'pieza', { t0: w(4, 2) - 0.05, t1: w(5, 2) - 0.2, sale: 0.15, x: PX, y: FY, r: 38, texto: '6', pop: true });
 E.obj('p9', 'pieza', { t0: w(5, 2) - 0.05, t1: fin(1), x: PX, y: FY, r: 38, texto: '9', pop: true,
   s: [[0, 1], [w(5, 12), 1], [w(5, 12) + 0.3, 1.2, 'back'], [w(5, 14) + 0.2, 1]] });
 E.obj('res1', 'contador', { t0: w(4, 10) - 0.05, t1: fin(1), x: RX, y: FY, v: [[w(4, 10), 0], [wf(4, 11) + 0.1, 12, 'out'], [w(5, 10), 12], [wf(5, 11) + 0.15, 8, 'inout']],

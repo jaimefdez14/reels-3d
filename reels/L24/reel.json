@@ -7,7 +7,7 @@
  "situacion": "Tienes dinero en el banco o en un fondo y no sabes si lo que te rinde es mucho o poco.",
  "lines": [
   {
-   "show": "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*",
+   "show": "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplicará tu dinero.*",
    "pause": 0.45
   },
   {
@@ -15,7 +15,7 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *saber cuándo se duplica lo que inviertes.*",
+   "show": "La primera: // *saber cuándo se duplicará lo que inviertes.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -203,6 +203,22 @@
     "Con una sola división sabes / *si el tiempo juega a tu favor o en tu contra.*",
     "Mándaselo a ese amigo / *que tiene el dinero parado en el banco.*"
    ]
+  },
+  {
+   "ronda": "jaime",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplica tu dinero.*",
+     "despues": "Hay una cuenta que se hace en diez segundos / *y te dice cuándo se duplicará tu dinero.*"
+    },
+    {
+     "linea": 2,
+     "antes": "La primera: // *saber cuándo se duplica lo que inviertes.*",
+     "despues": "La primera: // *saber cuándo se duplicará lo que inviertes.*"
+    }
+   ],
+   "motivo": "Jaime 15-11: «cambia duplica por duplicará»"
   }
  ]
 }
