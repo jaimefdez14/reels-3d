@@ -31,6 +31,16 @@ TIPOS.ancla = function (c, o, t) {
     c.beginPath(); c.moveTo(x + s * r * 0.2, y - r * 0.22); c.lineTo(x - s * r * 0.02, y - r * 0.02); c.lineTo(x + s * r * 0.24, y + r * 0.04); c.closePath(); c.fill(); });
 };
 // tarjeta de tarifa: nombre a la izquierda y precio (contador) a la derecha; on 0..1 = se rellena de amarillo; rojo 0..1 = precio en rojo
+// bocadillo con la cola a la derecha (cola: 'der') para el vendedor, que está a la derecha; el resto, como el del motor
+const _bocadillo = TIPOS.bocadillo;
+TIPOS.bocadillo = function (c, o, t) {
+  if (o.cola !== 'der') return _bocadillo.call(this, c, o, t);
+  const w = kf(o.w, t, 150), h = kf(o.h, t, 100), on = clamp(kf(o.on, t, 0));
+  c.fillStyle = C.relleno; lineaObj(c, 4, mix('#56605a', '#e6ce46', on));
+  c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, 18); c.moveTo(w * 0.18, h / 2); c.lineTo(w * 0.3, h / 2 + 26); c.lineTo(w * 0.02, h / 2); c.fill(); c.stroke();
+  c.fillStyle = C.relleno; c.fillRect(w * 0.04, h / 2 - 3, w * 0.13, 6);
+  texto(c, o.texto, 0, 2, o.size || 34, mix('#c9ccca', '#e6ce46', on), 600);
+};
 TIPOS.tarifa = function (c, o, t) {
   const tw = o.w || 380, h = o.h || 96, on = clamp(kf(o.on, t, 0)), rojo = clamp(kf(o.rojo, t, 0));
   c.fillStyle = C.relleno; lineaObj(c, 4, mix('#56605a', C.am, Math.min(1, on * 3))); c.beginPath(); c.roundRect(-tw / 2, -h / 2, tw, h, 18); c.fill(); c.stroke();
@@ -147,15 +157,24 @@ E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -390, cara: true,
   poses: [[0, 'de_pie'], [w(8, 4), 'ofrecer'], [w(9, 0), 'de_pie'], [w(9, 3), 'pensar'], [w(9, 7), 'apartarse'], [w(9, 10), 'ofrecer'], [wf(9, -1), 'celebrar']],
   sonrisa: [[w(8, 4), 0.6], [w(9, 3), -0.2], [w(9, 10), 0.6], [wf(9, -1), 1.5]] });
 E.figura('vende3', { t0: N[2].S - 0.1, t1: TC, x: 390, dir: -1, color: 'gris', poses: [[0, 'de_pie'], [w(8, 7), 'pensar'], [w(9, 0), 'ofrecer'], [w(9, 10), 'pensar'], [wf(9, -1), 'encoger']] });
-E.obj('cifra', 'etiqueta', { t0: N[2].S - 0.1, t1: TC, x: 0, y: -330, w: 300, h: 110, r: 60, on: 1,
-  v: [[w(8, 4), 0], [wf(8, -1) + 0.2, 800, 'out'], [w(9, 10), 800], [wf(9, -1) + 0.2, 500, 'inout']], barrido: [wf(8, -1) + 0.2, wf(9, -1) + 0.2], caja: [-150, -55, 300, 110] });
-E.obj('rotCifra', 'rotulo', { t0: w(8, 6) - 0.1, t1: TC, x: 0, y: -235, texto: [[0, 'PRIMERA CIFRA'], [w(9, 12), 'CIFRA BAJA']], size: 26, col: '#e6ce46', pop: true, caja: [-130, -16, 260, 32] });
-E.obj('pregunta', 'bocadillo', { t0: w(9, 0) - 0.1, t1: w(9, 7) + 0.1, sale: 0.15, x: 40, y: -495, w: 410, h: 80, texto: '¿Cuánto te querías gastar?', size: 26, pop: true, caja: [-205, -40, 410, 106] });
+// el vendedor (gris) pregunta; quien pone la primera cifra, baja, es el protagonista (etiqueta amarilla a su lado, 0 → 500 €);
+// el precio del vendedor llega después y baja hacia esa cifra (ancla); la barra de ahorro se rellena a la vez
+const CX = -130, CY = -320, VX = 165, VY = -420;
+E.obj('cifra', 'etiqueta', { t0: N[2].S - 0.1, t1: TC, x: CX, y: CY, w: 260, h: 100, r: 55, on: 1,
+  v: [[w(8, 6), 0], [wf(8, -1) + 0.2, 500, 'out']], s: [[0, 1], [w(9, 12), 1], [w(9, 12) + 0.15, 1.12, 'out'], [w(9, 12) + 0.4, 1, 'inout']],
+  barrido: [wf(8, -1) + 0.2, w(9, 12)], caja: [-130, -50, 260, 100] });
+E.obj('rotCifra', 'rotulo', { t0: w(8, 6) - 0.1, t1: TC, x: CX, y: CY + 82, texto: [[0, 'TU CIFRA'], [w(9, 12), 'CIFRA BAJA']], size: 26, col: '#e6ce46', pop: true, caja: [-120, -16, 240, 32] });
+E.obj('pregunta', 'bocadillo', { t0: w(9, 0) - 0.1, t1: w(9, 7) + 0.1, sale: 0.15, x: 150, y: -520, w: 380, h: 76, cola: 'der', texto: '¿Cuánto te querías gastar?', size: 26, pop: true, caja: [-190, -38, 380, 102] });
+// «no lo digas»: el protagonista se aparta y la escena da un pequeño temblor
+E.temblor(w(9, 7), 6, 0.3);
+E.obj('precioV', 'etiqueta', { t0: w(9, 10) - 0.1, t1: TC, x: [[0, VX], [w(9, 12), VX], [wf(9, -1) + 0.2, VX - 25, 'inout']], y: VY, w: 240, h: 90, r: 50, on: 0.3, pop: true,
+  v: [[w(9, 10), 900], [w(9, 12), 900], [wf(9, -1) + 0.2, 600, 'inout']], caja: [-120, -45, 240, 90] });
+E.obj('rotV', 'rotulo', { t0: w(9, 10), t1: TC, x: VX, y: VY + 72, texto: 'SU PRECIO', size: 24, col: '#9a9c9b', pop: true, caja: [-90, -15, 180, 30] });
 E.obj('ahorro', 'relleno', { t0: w(9, 9), t1: TC, x: 0, y: -125, w: 380, h: 44, rotulo: 'LO QUE AHORRAS', pop: true,
-  f: [[w(9, 10), 0], [wf(9, -1) + 0.2, 1, 'inout']], barrido: [wf(9, -1) + 0.2], caja: [-190, -61, 380, 83] });
-E.sfx(w(9, 10), 'fill');
-E.obj('rayos3', 'rayos', { t0: w(9, 12), t1: TC, x: 0, y: -330, r: 320, z: -2, p: [[w(9, 12), 0], [wf(9, -1), 1, 'out']], inspeccion: false });
-E.obj('ch3', 'chispas', { t0: wf(9, -1), t1: wf(9, -1) + 0.8, x: 0, y: -330, r0: 140, r1: 240, inspeccion: false });
+  f: [[w(9, 12), 0], [wf(9, -1) + 0.2, 1, 'inout']], barrido: [wf(9, -1) + 0.2], caja: [-190, -61, 380, 83] });
+E.sfx(w(9, 12), 'fill');
+E.obj('rayos3', 'rayos', { t0: w(9, 12), t1: TC, x: CX, y: CY, r: 300, z: -2, p: [[w(9, 12), 0], [wf(9, -1), 1, 'out']], inspeccion: false });
+E.obj('ch3', 'chispas', { t0: wf(9, -1), t1: wf(9, -1) + 0.8, x: CX, y: CY, r0: 130, r1: 230, inspeccion: false });
 E.golpe(wf(9, -1), 0.05); E.destello(wf(9, -1), 0.15);
 
 // ---------- cierre: resumen y envío ----------
