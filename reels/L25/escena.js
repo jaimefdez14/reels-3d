@@ -68,7 +68,7 @@ const fin = k => N[k].T + 0.45;
 const TC = w(9, 0) - 0.1;
 
 E.camara([
-  [0, [0, -380, 1.04]], [w(0, 9), [20, -370, 1.08]], [w(1, 0), [0, -380, 1.01]], [w(1, 13), [10, -390, 1.05]], [w(2, 0), [0, -385, 1.03]], [N[0].T, [20, -395, 1.06]],
+  [0, [0, -380, 1.04]], [w(0, 9), [20, -370, 1.08]], [w(1, 0), [0, -380, 1.01]], [w(1, 4), [-15, -385, 1.04]], [w(1, 13), [0, -390, 1.05]], [w(2, 0), [0, -385, 1.03]], [N[0].T, [20, -395, 1.06]],
   [N[0].S - 0.05, [0, -380, 1], 'lin'], [w(4, 0), [0, -385, 1.03]], [w(4, 11), [10, -385, 1.05]], [N[1].T, [0, -390, 1.06]],
   [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(6, 0), [10, -390, 1.04]], [N[2].T, [0, -390, 1.05]],
   [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(8, 5), [10, -385, 1.04]], [TC, [0, -390, 1.05]],
@@ -89,11 +89,11 @@ E.temblor(w(0, 12), 12, 0.4);
 // 1: Se(0) llama(1) efecto(2) Diderot(3) el(4) filósofo(5) estrenó(6) una(7) bata(8) y(9) a(10) su(11) lado(12) todo(13) el(14) despacho(15) le(16) pareció(17) viejo(18)
 const B0 = w(2, 0);
 E.obj('rotDid', 'rotulo', { t0: w(1, 1), t1: w(1, 12), sale: 0.2, x: 60, y: -500, texto: 'EFECTO DIDEROT', size: 40, col: '#e6ce46', pop: true, track: 6, barrido: [w(1, 3) + 0.1], caja: [-230, -24, 460, 48] });
-E.figura('did', { t0: w(1, 4) - 0.1, t1: B0 + 0.1, sale: 0.25, x: -360, talla: 440, color: 'gris',
-  poses: [[0, 'de_pie'], [w(1, 6), 'ofrecer'], [w(1, 9), 'de_pie'], [w(1, 13), 'pensar'], [w(1, 16), 'senalar']] });
-E.obj('bata', 'bata', { t0: w(1, 6) - 0.1, t1: B0 + 0.1, sale: 0.25, x: -140, pop: true, on: [[0, 0], [w(1, 8), 0], [w(1, 8) + 0.3, 1]], barrido: [w(1, 9)], caja: [-80, -400, 160, 400], refl: true });
-E.obj('mesaD', 'mesa', { t0: w(1, 4), t1: B0 + 0.1, sale: 0.25, x: 120, w: 220, pop: true, apagado: [[0, 0], [w(1, 13), 0], [w(1, 14) + 0.2, 1]], tiembla: [[0, 0], [w(1, 13), 0], [w(1, 14), 1], [w(1, 18), 0.4]], caja: [-110, -170, 220, 170], refl: true });
-E.obj('estD', 'estanteria', { t0: w(1, 4) + 0.15, t1: B0 + 0.1, sale: 0.25, x: 370, pop: true, apagado: [[0, 0], [w(1, 15), 0], [w(1, 16) + 0.2, 1]], tiembla: [[0, 0], [w(1, 15), 0], [w(1, 16), 1], [w(1, 18), 0.4]], caja: [-85, -340, 170, 340], refl: true });
+E.figura('did', { t0: w(1, 0) + 0.12, t1: B0 + 0.1, sale: 0.25, x: -360, talla: 440, color: 'gris',
+  poses: [[0, 'de_pie'], [w(1, 3), 'senalar'], [w(1, 5), 'de_pie'], [w(1, 6), 'ofrecer'], [w(1, 9), 'de_pie'], [w(1, 13), 'pensar'], [w(1, 16), 'senalar']] });
+E.obj('bata', 'bata', { t0: w(1, 0) + 0.32, t1: B0 + 0.1, sale: 0.25, x: -160, pop: true, on: [[0, 0], [w(1, 8), 0], [w(1, 8) + 0.3, 1]], barrido: [w(1, 9)], caja: [-80, -400, 160, 400], refl: true });
+E.obj('mesaD', 'mesa', { t0: w(1, 0) + 0.55, t1: B0 + 0.1, sale: 0.25, x: 60, w: 220, pop: true, apagado: [[0, 0], [w(1, 13), 0], [w(1, 14) + 0.2, 1]], tiembla: [[0, 0], [w(1, 13), 0], [w(1, 14), 1], [w(1, 18), 0.4]], caja: [-110, -170, 220, 170], refl: true });
+E.obj('estD', 'estanteria', { t0: w(1, 0) + 0.8, t1: B0 + 0.1, sale: 0.25, x: 275, pop: true, apagado: [[0, 0], [w(1, 15), 0], [w(1, 16) + 0.2, 1]], tiembla: [[0, 0], [w(1, 15), 0], [w(1, 16), 1], [w(1, 18), 0.4]], caja: [-85, -340, 170, 340], refl: true });
 E.obj('decis', 'bocadillo', { t0: w(1, 13) - 0.1, t1: B0 - 0.15, sale: 0.2, x: -150, y: -515, w: 500, h: 76, texto: 'Ya puestos, cambio también la mesa', size: 25, pop: true, caja: [-250, -38, 500, 102] });
 E.temblor(w(1, 18), 8, 0.35);
 
