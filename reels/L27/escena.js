@@ -164,7 +164,7 @@ E.obj('cifra', 'etiqueta', { t0: N[2].S - 0.1, t1: TC, x: CX, y: CY, w: 260, h: 
   v: [[w(8, 6), 0], [wf(8, -1) + 0.2, 500, 'out']], s: [[0, 1], [w(9, 12), 1], [w(9, 12) + 0.15, 1.12, 'out'], [w(9, 12) + 0.4, 1, 'inout']],
   barrido: [wf(8, -1) + 0.2, w(9, 12)], caja: [-130, -50, 260, 100] });
 E.obj('rotCifra', 'rotulo', { t0: w(8, 6) - 0.1, t1: TC, x: CX, y: CY + 82, texto: [[0, 'TU CIFRA'], [w(9, 12), 'CIFRA BAJA']], size: 26, col: '#e6ce46', pop: true, caja: [-120, -16, 240, 32] });
-E.obj('pregunta', 'bocadillo', { t0: w(9, 0) - 0.1, t1: w(9, 7) + 0.1, sale: 0.15, x: 150, y: -520, w: 380, h: 76, cola: 'der', texto: '¿Cuánto te querías gastar?', size: 26, pop: true, caja: [-190, -38, 380, 102] });
+E.obj('pregunta', 'bocadillo', { t0: w(9, 0) - 0.1, t1: w(9, 7) + 0.1, sale: 0.15, x: 90, y: -525, w: 360, h: 72, cola: 'der', texto: '¿Cuánto te querías gastar?', size: 26, pop: true, caja: [-180, -36, 360, 98] });
 // «no lo digas»: el protagonista se aparta y la escena da un pequeño temblor
 E.temblor(w(9, 7), 6, 0.3);
 E.obj('precioV', 'etiqueta', { t0: w(9, 10) - 0.1, t1: TC, x: [[0, VX], [w(9, 12), VX], [wf(9, -1) + 0.2, VX - 25, 'inout']], y: VY, w: 240, h: 90, r: 50, on: 0.3, pop: true,
