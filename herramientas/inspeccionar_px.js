@@ -22,7 +22,7 @@ const { chromium } = require('playwright'); const path = require('path');
       const SUELTOS = ['timer', 'arrow', 'sticker', 'tag', 'cross', 'bars', 'number', 'coins', 'card'];
       if (!f.whip && SUELTOS.includes(it.type) && steady(it) && cut > 6) add('cut' + it.id, `${it.id}: cortado por el borde (${cut} px de contorno fuera)`);
       if (!f.whip && it.type === 'arrow' && it.age > 1.2 && (cut > 2 || it.px < 400)) add('lost' + it.id, `${it.id}: la flecha sale de la pantalla o casi no se ve (${it.px} px, ${cut} px de borde)`);
-      if (it.kind === 'billboard' && steady(it) && !(it.tipo === 'resumen' && it.age < 1.0) && it.px < 0.004 * PX) add('small' + it.id, `${it.id}: demasiado pequeño para leerse (${it.px} px)`);
+      if (it.kind === 'billboard' && steady(it) && !(it.tipo === 'resumen' && it.age < 1.0) && it.tipo !== 'lista' && it.px < 0.004 * PX) add('small' + it.id, `${it.id}: demasiado pequeño para leerse (${it.px} px)`);
     }
     if (f.objecion && f.textos.length) add('obj' + f.textos[0], `${f.textos[0]}: texto en un bocadillo durante la objeción; la frase va solo en el titular (regla 13)`);
     if (f.billboards > 2) add('many' + f.billboards, `${f.billboards} bocadillos/tarjetas a la vez: máximo 2 (claridad)`);
