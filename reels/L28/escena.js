@@ -34,7 +34,7 @@ E.obj('rotFact', 'rotulo', { t0: w(0, 8) + 0.05, t1: fin(0), x: GX, y: -450, pop
 E.obj('pilaH', 'pila', { t0: 0.1, t1: fin(0), x: GX, n: 10, w: 190, hh: 26, k: [[w(0, 9), 0], [w(0, 11) + 0.3, 10, 'out'], [w(0, 13), 10], [w(0, 15), 8.3, 'inout']],
   luz: [[0, 1], [w(1, 9), 1], [w(1, 9) + 0.3, 0.5]], caja: [-95, -224, 190, 224], refl: true });
 E.sfx(w(0, 10), 'fill');
-E.obj('menos', 'contador', { t0: w(0, 13) - 0.05, t1: w(1, 9), sale: 0.2, x: GX, y: -540, v: [[w(0, 13), 0], [w(0, 14) + 0.2, 630, 'out']], pre: '−', suf: ' €', size: 60, col: '#e4574f', miles: false, pop: true,
+E.obj('menos', 'contador', { t0: w(0, 13) - 0.05, t1: w(1, 9) - 0.25, sale: 0.2, x: GX, y: -540, v: [[w(0, 13), 0], [w(0, 14) + 0.2, 630, 'out']], pre: '−', suf: ' €', size: 60, col: '#e4574f', miles: false, pop: true,
   caja: [-130, -36, 260, 72] });
 for (let i = 0; i < 4; i++) { const a = w(0, 13) + i * 0.14;
   E.obj('fuera' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.05, sale: 0.2, r: 22, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
