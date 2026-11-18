@@ -80,15 +80,15 @@ E.sfx(w(3, 4), 'fill');
 const HR = [6, 5, 12, 14, 18];             // horas a la semana de A, C, D, E, B (de 20)
 const hy = i => -430 + i * 76;
 E.numero(2, N[1].T, N[1].S, { desde: 'pocos', hacia: 'h0' });
-E.figura('yo2', { t0: N[1].S - 0.1, t1: fin(2), x: -375, cara: true,
-  poses: [[0, 'de_pie'], [w(4, 2), 'senalar'], [w(4, 6), 'pensar'], [w(5, 0), 'de_pie'], [w(5, 7), 'manos_cabeza'], [w(5, 11), 'senalar'], [w(5, 17), 'encoger']],
+E.figura('yo2', { t0: N[1].S - 0.1, t1: fin(2), x: -368, cara: true,
+  poses: [[0, 'de_pie'], [w(4, 2), 'senalar'], [w(4, 6), 'pensar'], [w(5, 0), 'de_pie'], [w(5, 7), 'manos_cabeza'], [w(5, 11), 'senalar'], [w(5, 17), 'pensar']],
   sonrisa: [[w(4, 2), 0.3], [w(5, 7), -1.2], [w(5, 11), 0.3], [w(5, 18), -0.6]] });
 E.figura('cliente', { t0: N[1].S + 0.3, t1: fin(2), x: 390, dir: -1, color: 'gris', cara: true,
   poses: [[0, 'de_pie'], [w(5, 2), 'senalar'], [w(5, 7), 'ofrecer'], [w(5, 11), 'de_pie']], sonrisa: 0.6 });
 ORD.forEach(([s, v], i) => { const a = N[1].S + 0.1 + i * 0.12, malo = i >= 2, hf = w(4, 3) + i * 0.25;
   E.obj('k' + i, 'pieza', { t0: a, t1: fin(2), entra: 0.2, x: -240, y: hy(i), r: 26, texto: s, pop: true, sfx: false, on: malo ? 0 : 1, caja: [-26, -26, 52, 52] });
   // «Cruza las dos listas»: el euro de cada uno aparece al lado
-  E.obj('e' + i, 'contador', { t0: w(5, 11) + i * 0.1, t1: fin(2), x: -148, y: hy(i), v: [[w(5, 11) + i * 0.1, 0], [w(5, 14) + i * 0.1, v, 'out']], suf: ' €', size: 26, col: malo ? GRIS : '#e6ce46', pop: true, caja: [-62, -17, 124, 34] });
+  E.obj('e' + i, 'contador', { t0: w(5, 11) + i * 0.1, t1: fin(2), x: -148, y: hy(i), v: [[w(5, 11) + i * 0.1, 0], [w(5, 14) + i * 0.1, v, 'out']], suf: ' €', size: 26, col: malo ? GRIS : '#e6ce46', pop: false, caja: [-62, -17, 124, 34] });
   // horas: la barra se rellena; los de pago bajo siguen subiendo con los correos, llamadas y cambios
   const hv = malo ? [[hf, 0], [hf + 0.6, HR[i] * 0.5, 'out'], [w(5, 2) + i * 0.2, HR[i] * 0.5], [w(5, 10) + i * 0.2, HR[i], 'inout']] : [[hf, 0], [hf + 0.6, HR[i], 'out']];
   E.obj('h' + i, 'barra', { t0: a, t1: fin(2), entra: 0.2, x: 40, y: hy(i), w: 230, h: 40, sobrevive: i === 4, r: 40,
