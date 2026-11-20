@@ -96,7 +96,7 @@ E.obj('ahorro', 'tarro', { t0: N[0].S - 0.1, t1: fin(1), x: T1, w: 200, h: 260, 
   nivel: [[w(4, 5), 0], [w(4, 6) + 0.6, 0.25, 'out'], [w(5, 11), 0.25], [wf(5, -1) + 0.4, 0.8, 'out']],
   barrido: [w(4, 6) + 0.6, wf(5, -1) + 0.4], caja: [-100, -260, 200, 260], refl: true });
 E.sfx(w(4, 6), 'fill');
-E.obj('rotAuto', 'rotulo', { t0: w(4, 5), t1: fin(1), x: T1, y: -300, texto: 'AUTOMÁTICO', size: 26, col: AM, pop: true, caja: [-100, -16, 200, 32] });
+E.obj('rotAuto', 'rotulo', { t0: w(4, 5) + 1.0, t1: w(5, 11), sale: 0.2, x: T1, y: -300, texto: 'AUTOMÁTICO', size: 26, col: AM, pop: true, caja: [-100, -16, 200, 32] });
 for (let i = 0; i < 3; i++) { const a = w(4, 5) + i * 0.18;
   E.obj('m1a_' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.12, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
     x: [[a, P1 + 40], [a + 0.6, T1, 'inout']], y: [[a, -250], [a + 0.3, -400], [a + 0.6, -150, 'in']] }); }
