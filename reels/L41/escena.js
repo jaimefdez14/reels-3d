@@ -113,9 +113,9 @@ E.obj('cargo', 'rotulo', { t0: w(4, 1) - 0.1, t1: w(4, 3) + 0.1, sale: 0.1, x: 1
 E.obj('tareasR', 'rotulo', { t0: w(4, 3) + 0.12, t1: fin(1), x: 140, y: -385, texto: 'LAS TAREAS', size: 28, col: '#e6ce46', pop: true, caja: [-90, -16, 180, 32] });
 E.temblor(w(4, 2), 8, 0.3);
 // «Pide que te cuenten un día normal»: alguien del puesto te lo cuenta (bocadillo sin texto) y se enciende un día
-E.figura('cuenta', { t0: w(4, 5) - 0.2, t1: fin(1), x: 420, talla: 300, color: 'gris', dir: -1, cara: true,
+E.figura('cuenta', { t0: w(4, 5) - 0.2, t1: fin(1), x: 400, talla: 300, color: 'gris', dir: -1, cara: true,
   poses: [[0, 'de_pie'], [w(4, 6), 'ofrecer'], [w(4, 10), 'senalar']], sonrisa: 0.8 });
-E.obj('bocaP1', 'bocadillo', { t0: w(4, 6), t1: fin(1) - 0.1, sale: 0.2, x: 400, y: -385, w: 130, h: 64, on: 1, pop: true, caja: [-65, -32, 130, 90] });
+E.obj('bocaP1', 'bocadillo', { t0: w(4, 6), t1: fin(1) - 0.1, sale: 0.2, x: 380, y: -385, w: 130, h: 64, on: 1, pop: true, caja: [-65, -32, 130, 90] });
 E.obj('ch1', 'chispas', { t0: wf(4, -1), t1: wf(4, -1) + 0.8, x: 140, y: -250, r0: 120, r1: 220, inspeccion: false });
 E.golpe(wf(4, -1), 0.04); E.destello(wf(4, -1), 0.1);
 
@@ -149,7 +149,7 @@ E.temblor(w(6, 12), 12, 0.4);
 // 8: Pide(0) formación(1) antes(2) de(3) empezar(4) no(5) cuando(6) ya(7) estés(8) en(9) apuros(10)
 E.numero(3, N[2].T, N[2].S, { desde: 'ventas', hacia: 'form' });
 E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -355, cara: true,
-  poses: [[0, 'de_pie'], [w(7, 2), 'pensar'], [w(7, 6), 'senalar'], [w(8, 0), 'ofrecer'], [w(8, 2), 'escribir'], [w(8, 5), 'de_pie'], [w(8, 8), 'apartarse'], [wf(8, -1) + 0.2, 'celebrar']],
+  poses: [[0, 'de_pie'], [w(7, 2), 'pensar'], [w(7, 6), 'senalar'], [w(8, 0), 'ofrecer'], [w(8, 2), 'coger'], [w(8, 5), 'de_pie'], [w(8, 8), 'apartarse'], [wf(8, -1) + 0.2, 'celebrar']],
   sonrisa: [[0, 0], [w(7, 6), 0.6], [w(8, 2), 1], [w(8, 8), -0.6], [wf(8, -1) + 0.2, 1.5]] });
 E.figura('mentor', { t0: w(7, 2) - 0.1, t1: TC, x: 400, talla: 360, color: 'claro', dir: -1, cara: true,
   poses: [[0, 'de_pie'], [w(7, 6), 'ofrecer'], [w(8, 1), 'senalar'], [w(8, 5), 'de_pie'], [wf(8, -1) + 0.2, 'celebrar']], sonrisa: 1 });
