@@ -1,7 +1,8 @@
 """Contact sheet: python3 sheet.py <dir_with_f_*.png> <out.jpg> [cols]"""
+import os
 import sys, subprocess, glob
 d, out = sys.argv[1], sys.argv[2]; cols = int(sys.argv[3]) if len(sys.argv) > 3 else 9
-fs = sorted(glob.glob(d + '/f_*.png'), key=lambda f: float(f.split('f_')[1][:-4]))
+fs = sorted(glob.glob(d + '/f_*.png'), key=lambda f: float(os.path.basename(f)[2:-4]))
 a = []; [a.extend(['-i', f]) for f in fs]
 n = len(fs); rows = [list(range(i, min(i + cols, n))) for i in range(0, n, cols)]
 fc = ''.join(f'[{i}]scale=270:480[s{i}];' for i in range(n))
