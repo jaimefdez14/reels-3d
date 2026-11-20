@@ -55,7 +55,7 @@ const MX6 = -50, MX24 = 275;
 E.obj('m6', 'cuadricula', { t0: w(1, 9), t1: w(2, 0) + 0.15, sale: 0.25, x: MX6, y: -310, cols: 3, rows: 2, lado: 56, gap: 16, on: [0, 1, 2, 3, 4, 5], pop: true,
   p: [[w(1, 9) + 0.1, 0], [w(1, 11), 1, 'out']], caja: [-96, -64, 192, 128] });
 E.obj('m24', 'cuadricula', { t0: w(1, 12), t1: w(2, 0) + 0.15, sale: 0.25, x: MX24, y: -320, cols: 6, rows: 4, lado: 30, gap: 10, on: [...Array(24).keys()], pop: true,
-  p: [[w(1, 12) + 0.1, 0], [w(1, 14) + 0.2, 0.55, 'out']], caja: [-120, -80, 240, 160] });
+  p: [[w(1, 12) + 0.1, 0], [w(1, 14) + 0.2, 1, 'out']], caja: [-120, -80, 240, 160] });
 E.sfx(w(1, 9), 'fill');
 E.obj('c6', 'contador', { t0: w(1, 10) - 0.1, t1: w(2, 0) + 0.15, sale: 0.25, x: MX6, y: -440, size: 52, col: 'txt', miles: false, pop: true,
   v: [[w(1, 10), 0], [w(1, 10) + 0.4, 6, 'out']], caja: [-50, -30, 100, 60] });
