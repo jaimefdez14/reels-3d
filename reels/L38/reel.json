@@ -7,7 +7,7 @@
  "situacion": "Te pasas el día apagando fuegos y lo importante se queda sin hacer.",
  "lines": [
   {
-   "show": "Acabas el día sin parar / *y lo importante sigue sin hacer.*",
+   "show": "Te pasas el día sin parar / *y lo importante sigue sin hacer.*",
    "pause": 0.45,
    "bocadillo": "No me ha dado tiempo."
   },
@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "De ahí salen cuatro cuadros / *para ordenar tu semana.*",
+   "show": "De ahí sale una tabla de cuatro casillas / *y tres reglas para usarla.*",
    "pause": 0.3
   },
   {
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Urgente e importante, lo haces hoy. / Importante sin prisa, le pones fecha. / Urgente sin importancia, se lo pasas a otro. / *Lo que no es ninguna de las dos, lo borras.*",
+   "show": "Urgente e importante, lo haces hoy. / Importante sin prisa, le pones fecha. / Urgente sin importancia, se lo pasas a otro. / *Lo que no es ni una cosa ni otra, lo borras.*",
    "pause": 0.3
   },
   {
@@ -43,7 +43,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Es lo que más te cambia el año / *y lo primero que se queda sin hacer.*",
+   "show": "Es lo que más pesa al final del año / *y lo primero que se queda sin hacer.*",
    "pause": 0.3
   },
   {
@@ -53,6 +53,34 @@
   {
    "show": "Mándaselo a ese amigo / *que siempre está apagando fuegos.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Acabas el día sin parar / *y lo importante sigue sin hacer.*",
+     "despues": "Te pasas el día sin parar / *y lo importante sigue sin hacer.*"
+    },
+    {
+     "linea": 2,
+     "antes": "De ahí salen cuatro cuadros / *para ordenar tu semana.*",
+     "despues": "De ahí sale una tabla de cuatro casillas / *y tres reglas para usarla.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Urgente e importante, lo haces hoy. / Importante sin prisa, le pones fecha. / Urgente sin importancia, se lo pasas a otro. / *Lo que no es ninguna de las dos, lo borras.*",
+     "despues": "Urgente e importante, lo haces hoy. / Importante sin prisa, le pones fecha. / Urgente sin importancia, se lo pasas a otro. / *Lo que no es ni una cosa ni otra, lo borras.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Es lo que más te cambia el año / *y lo primero que se queda sin hacer.*",
+     "despues": "Es lo que más pesa al final del año / *y lo primero que se queda sin hacer.*"
+    }
+   ]
   }
  ]
 }

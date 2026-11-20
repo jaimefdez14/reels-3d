@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No lo que ganas: lo que gastas. / *Si son 1.700 euros al mes, / son unos 20.000 al año.*",
+   "show": "No lo que ganas: lo que gastas. / *Si gastas 1.700 euros al mes, / son unos 20.000 al año.*",
    "pause": 0.3
   },
   {
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Veinte mil por veinticinco / *son 500.000 euros. / Esa es tu cifra.*",
+   "show": "Veinte mil por veinticinco / *son 500.000 euros. / Eso es lo que necesitas reunir.*",
    "pause": 0.3
   },
   {
@@ -43,7 +43,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Ese cuatro por ciento son veinte mil euros al año. / *En un estudio, a ese ritmo, / el dinero aguantó treinta años / en casi todos los casos.*",
+   "show": "Ese cuatro por ciento son veinte mil euros al año. / *Según un estudio, sacando eso cada año, / el dinero duró treinta años / en casi todos los casos.*",
    "pause": 0.3
   },
   {
@@ -57,6 +57,29 @@
   {
    "show": "Mándaselo a ese amigo / *que dice que nunca podrá dejar de trabajar.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "No lo que ganas: lo que gastas. / *Si son 1.700 euros al mes, / son unos 20.000 al año.*",
+     "despues": "No lo que ganas: lo que gastas. / *Si gastas 1.700 euros al mes, / son unos 20.000 al año.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Veinte mil por veinticinco / *son 500.000 euros. / Esa es tu cifra.*",
+     "despues": "Veinte mil por veinticinco / *son 500.000 euros. / Eso es lo que necesitas reunir.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Ese cuatro por ciento son veinte mil euros al año. / *En un estudio, a ese ritmo, / el dinero aguantó treinta años / en casi todos los casos.*",
+     "despues": "Ese cuatro por ciento son veinte mil euros al año. / *Según un estudio, sacando eso cada año, / el dinero duró treinta años / en casi todos los casos.*"
+    }
+   ]
   }
  ]
 }

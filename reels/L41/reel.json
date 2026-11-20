@@ -12,11 +12,11 @@
    "bocadillo": "Enhorabuena, jefe."
   },
   {
-   "show": "Se llama principio de Peter: / *en una empresa te ascienden / hasta un puesto que ya no sabes hacer.*",
+   "show": "Se llama principio de Peter: / *en una empresa te van ascendiendo / hasta un puesto para el que ya no vales.*",
    "pause": 0.3
   },
   {
-   "show": "Lo escribió Laurence Peter en 1969. / *Tres preguntas antes de aceptar un ascenso.*",
+   "show": "Lo describió Laurence Peter en 1969. / *Antes de aceptar un ascenso, / hazte tres preguntas.*",
    "pause": 0.3
   },
   {
@@ -29,7 +29,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *¿se parece a lo que haces bien?*",
+   "show": "La segunda: // *¿se parece a lo que se te da bien?*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -53,6 +53,29 @@
   {
    "show": "Mándaselo a ese amigo / *que está a punto de aceptar un ascenso.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama principio de Peter: / *en una empresa te ascienden / hasta un puesto que ya no sabes hacer.*",
+     "despues": "Se llama principio de Peter: / *en una empresa te van ascendiendo / hasta un puesto para el que ya no vales.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Lo escribió Laurence Peter en 1969. / *Tres preguntas antes de aceptar un ascenso.*",
+     "despues": "Lo describió Laurence Peter en 1969. / *Antes de aceptar un ascenso, / hazte tres preguntas.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *¿se parece a lo que haces bien?*",
+     "despues": "La segunda: // *¿se parece a lo que se te da bien?*"
+    }
+   ]
   }
  ]
 }

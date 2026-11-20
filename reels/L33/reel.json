@@ -25,29 +25,29 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Con los mismos cien euros durante veinte años, / *acabas con 52.000: / menos de la mitad.*",
+   "show": "Con los mismos cien euros durante veinte años, / *te quedas en 52.000: / menos de la mitad.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *no toques lo que ganas.*",
+   "show": "La segunda: // *no toques lo que te va rindiendo.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que ganas un año se suma a lo que tenías, / *y al año siguiente también da intereses.*",
+   "show": "Lo que te rinde un año se suma a lo que tenías, / *y al año siguiente también da intereses.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *que salga solo el día que cobras.*",
+   "show": "La tercera: // *que el dinero salga solo / el día que cobras.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Programa una transferencia automática / *y no dependerá de que te acuerdes.*",
+   "show": "Deja programada una transferencia periódica / *y no dependerás de acordarte.*",
    "pause": 0.3
   },
   {
-   "show": "Ningún rendimiento está garantizado, / *pero el tiempo trabaja para quien empieza pronto.*",
+   "show": "Ninguna rentabilidad está garantizada, / *pero el tiempo juega a favor / de quien empieza pronto.*",
    "pause": 0.3
   },
   {
@@ -57,6 +57,44 @@
   {
    "show": "Mándaselo a ese amigo / *que dice que ya invertirá cuando gane más.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "Con los mismos cien euros durante veinte años, / *acabas con 52.000: / menos de la mitad.*",
+     "despues": "Con los mismos cien euros durante veinte años, / *te quedas en 52.000: / menos de la mitad.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *no toques lo que ganas.*",
+     "despues": "La segunda: // *no toques lo que te va rindiendo.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Lo que ganas un año se suma a lo que tenías, / *y al año siguiente también da intereses.*",
+     "despues": "Lo que te rinde un año se suma a lo que tenías, / *y al año siguiente también da intereses.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *que salga solo el día que cobras.*",
+     "despues": "La tercera: // *que el dinero salga solo / el día que cobras.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Programa una transferencia automática / *y no dependerá de que te acuerdes.*",
+     "despues": "Deja programada una transferencia periódica / *y no dependerás de acordarte.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ningún rendimiento está garantizado, / *pero el tiempo trabaja para quien empieza pronto.*",
+     "despues": "Ninguna rentabilidad está garantizada, / *pero el tiempo juega a favor / de quien empieza pronto.*"
+    }
+   ]
   }
  ]
 }

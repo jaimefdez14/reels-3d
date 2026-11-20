@@ -20,7 +20,7 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *cuenta lo que pierde si no compra.*",
+   "show": "La primera: // *cuéntale lo que pierde si no compra.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -34,16 +34,16 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una semana de prueba o una primera sesión. / *Lo que ya siente suyo / no lo quiere soltar.*",
+   "show": "Dale una semana de prueba o una primera sesión. / *Lo que ya siente como suyo / no lo quiere soltar.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *si el precio va a subir, dale la fecha.*",
+   "show": "La tercera: // *si el precio va a subir, / dile desde cuándo.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Cuando sabe que el día uno cuesta más, / *esperar también tiene un precio.*",
+   "show": "Si sabe que a partir del día uno cuesta más, / *esperar también le sale caro.*",
    "pause": 0.3
   },
   {
@@ -51,8 +51,41 @@
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a ese amigo / *que tiene un negocio y no sabe cómo vender.*",
+   "show": "Mándaselo a ese amigo / *que tiene un negocio y no sabe vender.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 3,
+     "antes": "La primera: // *cuenta lo que pierde si no compra.*",
+     "despues": "La primera: // *cuéntale lo que pierde si no compra.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Una semana de prueba o una primera sesión. / *Lo que ya siente suyo / no lo quiere soltar.*",
+     "despues": "Dale una semana de prueba o una primera sesión. / *Lo que ya siente como suyo / no lo quiere soltar.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *si el precio va a subir, dale la fecha.*",
+     "despues": "La tercera: // *si el precio va a subir, / dile desde cuándo.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Cuando sabe que el día uno cuesta más, / *esperar también tiene un precio.*",
+     "despues": "Si sabe que a partir del día uno cuesta más, / *esperar también le sale caro.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Mándaselo a ese amigo / *que tiene un negocio y no sabe cómo vender.*",
+     "despues": "Mándaselo a ese amigo / *que tiene un negocio y no sabe vender.*"
+    }
+   ]
   }
  ]
 }

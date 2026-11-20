@@ -12,7 +12,7 @@
    "bocadillo": "¿Para cuándo lo tienes?"
   },
   {
-   "show": "Se llama falacia de la planificación: / unos estudiantes calcularon / que acabarían su trabajo en 34 días / *y tardaron 55.*",
+   "show": "Se llama falacia de la planificación: / unos estudiantes calcularon / que acabarían la tesina en 34 días / *y tardaron 55.*",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No calcules lo que crees que tardarás. / *Busca algo parecido que ya hayas hecho / y cuenta los días que te llevó.*",
+   "show": "No te fíes de lo que crees que vas a tardar. / *Busca algo parecido que ya hayas hecho / y cuenta los días que te llevó.*",
    "pause": 0.3
   },
   {
@@ -53,6 +53,24 @@
   {
    "show": "Mándaselo a ese amigo / *que siempre dice que lo tiene para mañana.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama falacia de la planificación: / unos estudiantes calcularon / que acabarían su trabajo en 34 días / *y tardaron 55.*",
+     "despues": "Se llama falacia de la planificación: / unos estudiantes calcularon / que acabarían la tesina en 34 días / *y tardaron 55.*"
+    },
+    {
+     "linea": 4,
+     "antes": "No calcules lo que crees que tardarás. / *Busca algo parecido que ya hayas hecho / y cuenta los días que te llevó.*",
+     "despues": "No te fíes de lo que crees que vas a tardar. / *Busca algo parecido que ya hayas hecho / y cuenta los días que te llevó.*"
+    }
+   ]
   }
  ]
 }

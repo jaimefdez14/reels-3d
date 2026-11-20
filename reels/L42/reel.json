@@ -7,12 +7,12 @@
  "situacion": "Intentas cambiar un hábito y al cabo de unas semanas lo dejas.",
  "lines": [
   {
-   "show": "Llevas meses intentando cambiar un hábito / *y sientes que no avanzas.*",
+   "show": "Llevas meses intentando cambiar un hábito / *y no notas que avances.*",
    "pause": 0.45,
-   "bocadillo": "Ya empiezo el lunes."
+   "bocadillo": "El lunes empiezo."
   },
   {
-   "show": "Se llama mejora continua: / *mejorar un 1 % al día / te deja 37 veces mejor en un año.*",
+   "show": "Se llama mejora continua: / *un 1 % más cada día, / en un año, multiplica por 37 lo que tenías.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pause": 0.3
   },
   {
-   "show": "Tres reglas para aprovecharla.",
+   "show": "Tres reglas para llevarlo a la práctica.",
    "pause": 0.3
   },
   {
@@ -29,7 +29,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Leer, ahorrar, entrenar. / *Si cambias cinco a la vez, / no cambias ninguna.*",
+   "show": "Leer, ahorrar o entrenar. / *Si cambias cinco cosas a la vez, / no cambias ninguna.*",
    "pause": 0.3
   },
   {
@@ -51,12 +51,51 @@
    "pause": 0.3
   },
   {
-   "show": "Empeorar un 1 % al día también suma: / *en un año te deja casi en cero.*",
+   "show": "Y funciona igual al revés: / *empeorar un 1 % al día / te lleva casi a cero en un año.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo / *que lo deja todo a la segunda semana.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Llevas meses intentando cambiar un hábito / *y sientes que no avanzas.*",
+     "despues": "Llevas meses intentando cambiar un hábito / *y no notas que avances.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama mejora continua: / *mejorar un 1 % al día / te deja 37 veces mejor en un año.*",
+     "despues": "Se llama mejora continua: / *un 1 % más cada día, / en un año, multiplica por 37 lo que tenías.*"
+    },
+    {
+     "linea": 3,
+     "antes": "Tres reglas para aprovecharla.",
+     "despues": "Tres reglas para llevarlo a la práctica."
+    },
+    {
+     "linea": 5,
+     "antes": "Leer, ahorrar, entrenar. / *Si cambias cinco a la vez, / no cambias ninguna.*",
+     "despues": "Leer, ahorrar o entrenar. / *Si cambias cinco cosas a la vez, / no cambias ninguna.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Empeorar un 1 % al día también suma: / *en un año te deja casi en cero.*",
+     "despues": "Y funciona igual al revés: / *empeorar un 1 % al día / te lleva casi a cero en un año.*"
+    },
+    {
+     "linea": 0,
+     "antes": "Ya empiezo el lunes.",
+     "despues": "El lunes empiezo.",
+     "bocadillo": true
+    }
+   ]
   }
  ]
 }

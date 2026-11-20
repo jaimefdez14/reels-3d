@@ -24,7 +24,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Básica, intermedia y completa. / *Con más, el cliente compara y no elige.*",
+   "show": "Básica, intermedia y completa. / *Si pones más, el cliente compara / y no se decide.*",
    "pause": 0.3,
    "bocadillo": "Me lo pienso."
   },
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Márcala como la más elegida. / *Así le quitas al cliente el peso de decidir.*",
+   "show": "Márcala como la más vendida. / *Así le ahorras al cliente / tener que decidir.*",
    "pause": 0.3
   },
   {
@@ -43,16 +43,49 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Mira lo que has vendido este año. / *Lo que no se ha vendido ni una vez, fuera.*",
+   "show": "Mira lo que has vendido este año. / *Lo que no hayas vendido ni una vez, quítalo.*",
    "pause": 0.3
   },
   {
-   "show": "Más opciones no son más ventas: / *muchas veces son ninguna.*",
+   "show": "Más opciones no traen más ventas: / *muchas veces no traen ninguna.*",
    "pause": 0.3
   },
   {
-   "show": "Mándaselo a ese amigo / *que tiene una carta de veinte servicios.*",
+   "show": "Mándaselo a ese amigo / *que ofrece veinte servicios en su web.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "Básica, intermedia y completa. / *Con más, el cliente compara y no elige.*",
+     "despues": "Básica, intermedia y completa. / *Si pones más, el cliente compara / y no se decide.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Márcala como la más elegida. / *Así le quitas al cliente el peso de decidir.*",
+     "despues": "Márcala como la más vendida. / *Así le ahorras al cliente / tener que decidir.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Mira lo que has vendido este año. / *Lo que no se ha vendido ni una vez, fuera.*",
+     "despues": "Mira lo que has vendido este año. / *Lo que no hayas vendido ni una vez, quítalo.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Más opciones no son más ventas: / *muchas veces son ninguna.*",
+     "despues": "Más opciones no traen más ventas: / *muchas veces no traen ninguna.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Mándaselo a ese amigo / *que tiene una carta de veinte servicios.*",
+     "despues": "Mándaselo a ese amigo / *que ofrece veinte servicios en su web.*"
+    }
+   ]
   }
  ]
 }

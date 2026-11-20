@@ -9,10 +9,10 @@
   {
    "show": "Te suben el sueldo 200 euros / *y a los tres meses vas igual de justo.*",
    "pause": 0.45,
-   "bocadillo": "¿Dónde se ha ido la subida?"
+   "bocadillo": "¿En qué se me ha ido la subida?"
   },
   {
-   "show": "Se llama inflación del estilo de vida: / *cuando sube el sueldo, / el gasto sube detrás.*",
+   "show": "Se llama inflación del estilo de vida: / *cuando sube el sueldo, / el gasto va detrás.*",
    "pause": 0.3
   },
   {
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *no subas un gasto fijo / que no pagarías con el sueldo de antes.*",
+   "show": "La tercera: // *no te metas en un gasto fijo / que no podrías pagar con el sueldo de antes.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -53,6 +53,30 @@
   {
    "show": "Mándaselo a ese amigo / *que acaba de cambiar de trabajo.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, sujeto o referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama inflación del estilo de vida: / *cuando sube el sueldo, / el gasto sube detrás.*",
+     "despues": "Se llama inflación del estilo de vida: / *cuando sube el sueldo, / el gasto va detrás.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *no subas un gasto fijo / que no pagarías con el sueldo de antes.*",
+     "despues": "La tercera: // *no te metas en un gasto fijo / que no podrías pagar con el sueldo de antes.*"
+    },
+    {
+     "linea": 0,
+     "antes": "¿Dónde se ha ido la subida?",
+     "despues": "¿En qué se me ha ido la subida?",
+     "bocadillo": true
+    }
+   ]
   }
  ]
 }
