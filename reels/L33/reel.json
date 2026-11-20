@@ -12,7 +12,7 @@
    "bocadillo": "Ya invertiré cuando gane más."
   },
   {
-   "show": "Si los inviertes y te dan un 7 % al año, / *son casi 122.000. / Se llama interés compuesto.*",
+   "show": "Si los inviertes y te dan un 7 % al año, / *son casi 122.000.* / *Se llama interés compuesto.*",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si empiezas diez años más tarde, / *te quedas en 52.000: / menos de la mitad.*",
+   "show": "Si empiezas diez años más tarde, / *te quedas en 52.000:* / *menos de la mitad.*",
    "pause": 0.3
   },
   {
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *que el ahorro se aparte solo, / el mismo día que cobras.*",
+   "show": "La tercera: // *que el ahorro se aparte solo,* / *el mismo día que cobras.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -47,7 +47,7 @@
    "pause": 0.3
   },
   {
-   "show": "Ninguna rentabilidad está garantizada, / *pero el tiempo juega a favor / de quien empieza pronto.*",
+   "show": "Ninguna rentabilidad está garantizada, / *pero el tiempo juega a favor* / *de quien empieza pronto.*",
    "pause": 0.3
   },
   {

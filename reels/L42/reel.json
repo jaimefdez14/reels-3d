@@ -12,11 +12,11 @@
    "bocadillo": "Esta vez sí."
   },
   {
-   "show": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que al empezar.*",
+   "show": "Se llama mejora continua: / *un 1 % más cada día* / *y acabas el año 37 veces mejor* / *que al empezar.*",
    "pause": 0.3
   },
   {
-   "show": "Es una cuenta, no una promesa, / y al revés también funciona: / *empeorar un 1 % al día / te deja casi en cero.*",
+   "show": "Es una cuenta, no una promesa, / y al revés también funciona: / *empeorar un 1 % al día* / *te deja casi en cero.*",
    "pause": 0.3
   },
   {
@@ -29,7 +29,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Leer, ahorrar o entrenar. / *Si cambias cinco cosas a la vez, / no cambias ninguna.*",
+   "show": "Leer, ahorrar o entrenar. / *Si cambias cinco cosas a la vez,* / *no cambias ninguna.*",
    "pause": 0.3
   },
   {
@@ -47,7 +47,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Un día no se nota. / *En tres meses, la lista te enseña / lo que has avanzado.*",
+   "show": "Un día no se nota. / *En tres meses, la lista te enseña* / *lo que has avanzado.*",
    "pause": 0.3
   },
   {

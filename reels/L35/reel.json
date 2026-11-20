@@ -24,7 +24,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Básica, intermedia y completa. / *Si pones más, el cliente compara / y no se decide.*",
+   "show": "Básica, intermedia y completa. / *Si pones más, el cliente compara* / *y no se decide.*",
    "pause": 0.3,
    "bocadillo": "Me lo pienso."
   },
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Márcala como la recomendada. / *Así le ahorras al cliente / tener que decidir.*",
+   "show": "Márcala como la recomendada. / *Así le ahorras al cliente* / *tener que decidir.*",
    "pause": 0.3
   },
   {

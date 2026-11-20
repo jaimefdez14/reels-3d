@@ -59,11 +59,11 @@ E.sfx(w(1, 12), 'whoosh'); E.golpe(w(1, 12) + 0.7, 0.03);
 // «una tabla de cuatro casillas»: se monta pieza a pieza; «urgente o no / importante o no»: los rótulos de los ejes
 const GX = [-20, 150], GY = [-320, -150];
 const Q = [[0, 0], [1, 0], [0, 1], [1, 1]];
-Q.forEach(([cx, cy], i) => { const a = w(2, 4) + i * 0.16;
+Q.forEach(([cx, cy], i) => { const a = w(2, 1) + i * 0.2;
   E.obj('q0_' + i, 'pieza', { t0: a, t1: i === 1 ? fin(0) : N[0].T + 0.2, sale: 0.25, x: GX[cx], y: GY[cy], r: 75, pop: true, sfx: true,
     on: [[0, 0], [w(2, 8) + 0.1 * cx, 0], [w(2, 8) + 0.1 * cx + 0.25, cx === 0 ? 0.6 : 0, 'out'], [w(2, 11), cx === 0 ? 0.6 : 0], [w(2, 11) + 0.25, cy === 0 ? 1 : (cx === 0 ? 0.25 : 0), 'out']],
     luz: [[0, 1], [w(2, 14), 1], [w(2, 14) + 0.3, 0.45]], caja: [-75, -75, 150, 150] }); });
-E.sfx(w(2, 4), 'fill');
+E.sfx(w(2, 1), 'fill');
 E.obj('colU', 'rotulo', { t0: w(2, 8) - 0.05, t1: N[0].T + 0.2, sale: 0.25, x: GX[0], y: -430, texto: 'URGENTE', size: 20, col: GRIS, pop: true, caja: [-80, -14, 160, 28] });
 E.obj('colN', 'rotulo', { t0: w(2, 9) + 0.05, t1: N[0].T + 0.2, sale: 0.25, x: GX[1], y: -430, texto: 'NO URGENTE', size: 20, col: GRIS, pop: true, caja: [-82, -14, 164, 28] });
 E.obj('filI', 'rotulo', { t0: w(2, 11) - 0.05, t1: N[0].T + 0.2, sale: 0.25, x: 345, y: GY[0], texto: 'IMPORTANTE', size: 20, col: '#e6ce46', pop: true, track: 2, caja: [-95, -14, 190, 28] });

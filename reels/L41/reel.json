@@ -12,11 +12,11 @@
    "bocadillo": "Enhorabuena, jefe."
   },
   {
-   "show": "Se llama principio de Peter: / *en una empresa te van ascendiendo / hasta un puesto para el que ya no vales.*",
+   "show": "Se llama principio de Peter: / *en una empresa te van ascendiendo* / *hasta un puesto para el que ya no vales.*",
    "pause": 0.3
   },
   {
-   "show": "Lo describió Laurence Peter en 1969. / *Antes de aceptar el próximo ascenso, / hazte tres preguntas.*",
+   "show": "Lo describió Laurence Peter en 1969. / *Antes de aceptar el próximo ascenso,* / *hazte tres preguntas.*",
    "pause": 0.3
   },
   {
@@ -29,7 +29,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *¿ese trabajo se parece / a lo que se te da bien?*",
+   "show": "La segunda: // *¿ese trabajo se parece* / *a lo que se te da bien?*",
    "pause": 0.3,
    "pausa_media": 0.45
   },

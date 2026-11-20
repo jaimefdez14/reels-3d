@@ -12,7 +12,7 @@
    "bocadillo": "Me lo pienso y te digo."
   },
   {
-   "show": "Comprar le cuesta dinero, y esperar, nada. / *Perder cien euros duele casi el doble / de lo que alegra ganarlos.*",
+   "show": "Comprar le cuesta dinero, y esperar, nada. / *Perder cien euros duele casi el doble* / *de lo que alegra ganarlos.*",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No le digas cuánto va a ahorrar: / *dile lo que pierde cada mes que espera, / 300 euros, por ejemplo.*",
+   "show": "No le digas cuánto va a ahorrar: / *dile lo que pierde cada mes que espera,* / *300 euros, por ejemplo.*",
    "pause": 0.3
   },
   {
@@ -34,11 +34,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Dale una semana de prueba o una primera sesión. / *Lo que ya siente como suyo / no lo quiere soltar.*",
+   "show": "Dale una semana de prueba o una primera sesión. / *Lo que ya siente como suyo* / *no lo quiere soltar.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *si el precio va a subir, / dile desde cuándo.*",
+   "show": "La tercera: // *si el precio va a subir,* / *dile desde cuándo.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },

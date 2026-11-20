@@ -12,7 +12,7 @@
    "bocadillo": "Nunca podré dejar de trabajar."
   },
   {
-   "show": "Hay una cuenta más exacta: / *veinticinco veces lo que gastas en un año. / Se llama regla del 4 %.*",
+   "show": "Hay una cuenta más exacta: / *veinticinco veces lo que gastas en un año.* / *Se llama regla del 4 %.*",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No lo que ganas: lo que gastas. / *Si gastas 1.700 euros al mes, / son unos 20.000 al año.*",
+   "show": "No lo que ganas: lo que gastas. / *Si gastas 1.700 euros al mes,* / *son unos 20.000 al año.*",
    "pause": 0.3
   },
   {
@@ -34,16 +34,16 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Veinte mil por veinticinco / *son 500.000 euros. / Eso es lo que necesitas reunir.*",
+   "show": "Veinte mil por veinticinco / *son 500.000 euros.* / *Eso es lo que necesitas reunir.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *déjalo invertido / y saca como mucho el cuatro por ciento al año.*",
+   "show": "El tercero: // *déjalo invertido* / *y saca como mucho el cuatro por ciento al año.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Ese cuatro por ciento son veinte mil euros al año. / *Y como el resto sigue rindiendo, / un estudio de 1998 vio que el dinero / aguantaba treinta años en casi todos los casos.*",
+   "show": "Ese cuatro por ciento son veinte mil euros al año. / *Y como el resto sigue rindiendo,* / *un estudio de 1998 vio que el dinero* / *aguantaba treinta años en casi todos los casos.*",
    "pause": 0.3
   },
   {

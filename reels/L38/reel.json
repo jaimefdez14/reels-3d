@@ -12,7 +12,7 @@
    "bocadillo": "No me ha dado tiempo."
   },
   {
-   "show": "Eisenhower lo contó en 1954: / *lo urgente casi nunca es importante, / y lo importante casi nunca es urgente.*",
+   "show": "Eisenhower lo contó en 1954: / *lo urgente casi nunca es importante,* / *y lo importante casi nunca es urgente.*",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Todo, sin ordenar. / *Mientras lo lleves en la cabeza, / todo te parecerá urgente.*",
+   "show": "Todo, sin ordenar. / *Mientras lo lleves en la cabeza,* / *todo te parecerá urgente.*",
    "pause": 0.3
   },
   {
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *después de lo de hoy, / sigue con lo importante que no corre prisa.*",
+   "show": "La tercera: // *después de lo de hoy,* / *sigue con lo importante que no corre prisa.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },

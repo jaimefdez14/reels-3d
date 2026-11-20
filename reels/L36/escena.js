@@ -62,9 +62,9 @@ E.obj('rotDef', 'rotulo', { t0: w(1, 4), t1: w(2, 0), sale: 0.25, x: 120, y: -52
   E.figura('gris' + i, { t0: a, t1: w(2, 0), x, talla: 230, color: 'gris', poses: [[0, 'de_pie'], [wf(1, -1) - 0.1 + i * 0.08, 'encoger']] }); });
 
 // «En un experimento»: la casilla de donar órganos (corazón) viene marcada → el 82 % la deja así; si hay que marcarla → el 42 %
-E.obj('rotExp', 'rotulo', { t0: w(2, 0) - 0.05, t1: w(2, 5), sale: 0.2, x: 120, y: -500, pop: true, texto: 'UN EXPERIMENTO', size: 30, col: '#c9ccca', caja: [-140, -18, 280, 36] });
+E.obj('rotExp', 'rotulo', { t0: w(2, 0) - 0.05, t1: w(2, 4) - 0.05, sale: 0.2, x: 120, y: -500, pop: true, texto: 'UN EXPERIMENTO', size: 30, col: '#c9ccca', caja: [-140, -18, 280, 36] });
 E.obj('corazon2', 'corazon', { t0: w(2, 7) - 0.05, t1: w(3, 0), sale: 0.25, x: -60, y: -500, r: 40, pop: true, caja: [-50, -40, 100, 82] });
-E.obj('casilla', 'lista', { t0: w(2, 5) - 0.05, t1: w(3, 0), sale: 0.25, x: 170, y: -500, n: 1, w: 300, pop: true,
+E.obj('casilla', 'lista', { t0: w(2, 4) - 0.05, t1: w(3, 0), sale: 0.25, x: 170, y: -500, n: 1, w: 300, pop: true,
   p: [[w(2, 9), 0], [w(2, 10) + 0.3, 1, 'out'], [w(2, 17), 1], [w(2, 17) + 0.25, 0]], brillo: [[w(2, 9), 0], [w(2, 10) + 0.3, 1], [w(2, 17), 1], [w(2, 17) + 0.25, 0]], caja: [-150, -22, 300, 44] });
 E.obj('rotDonar', 'rotulo', { t0: w(2, 7) - 0.05, t1: w(3, 0), sale: 0.25, x: 185, y: -452, texto: 'DONAR ÓRGANOS', size: 24, col: '#9a9c9b', caja: [-120, -15, 240, 30] });
 E.obj('barra82', 'relleno', { t0: w(2, 9) - 0.1, t1: w(3, 0), sale: 0.25, x: 30, y: -340, w: 330, h: 48, pop: true, pct: true, rotulo: 'VENÍA MARCADA',
@@ -99,7 +99,7 @@ E.sfx(w(4, 6), 'fill');
 E.obj('rotAuto', 'rotulo', { t0: w(4, 5), t1: fin(1), x: T1, y: -300, texto: 'AUTOMÁTICO', size: 26, col: AM, pop: true, caja: [-100, -16, 200, 32] });
 for (let i = 0; i < 3; i++) { const a = w(4, 5) + i * 0.18;
   E.obj('m1a_' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.06, sale: 0.12, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, T1], [a + 0.6, T1, 'inout']], y: [[a, -560], [a + 0.6, -120, 'in']] }); }
+    x: [[a, P1 + 40], [a + 0.6, T1, 'inout']], y: [[a, -250], [a + 0.3, -400], [a + 0.6, -150, 'in']] }); }
 // «Programa una transferencia»: el móvil, y una flecha discontinua del móvil al tarro que se dibuja
 E.obj('movil1', 'telefono', { t0: w(5, 0) - 0.15, t1: fin(1), x: P1, y: -320, w: 130, h: 230, pop: true,
   vibra: [[w(5, 11), 0], [w(5, 11) + 0.1, 1], [wf(5, -1), 0]], caja: [-65, -115, 130, 230] });

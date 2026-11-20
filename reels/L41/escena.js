@@ -25,7 +25,7 @@ E.camara([
 ]);
 
 // escalón de la escalera (bloque gris macizo apoyado en el suelo)
-const escalon = (id, o) => { const h = o.h; return E.obj(id, 'bloques', Object.assign({ n: 1, w: 170, y: -h / 2, pop: true, refl: true, caja: [-85, -h / 2, 170, h] }, o)); };
+const escalon = (id, o) => { const h = o.h; return E.obj(id, 'bloques', Object.assign({ n: 1, w: 156, y: -h / 2, pop: true, refl: true, caja: [-78, -h / 2, 156, h] }, o)); };
 
 // ---------- gancho ----------
 // 0: Eras(0) el(1) mejor(2) de(3) tu(4) equipo(5) te(6) ascendieron(7) y(8) ahora(9) lo(10) pasas(11) mal(12)   [bocadillo del jefe «Enhorabuena, jefe.»]

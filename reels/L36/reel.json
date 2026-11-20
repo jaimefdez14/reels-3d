@@ -12,7 +12,7 @@
    "bocadillo": "Ya me daré de baja."
   },
   {
-   "show": "Se llama efecto de la opción por defecto: / *lo que viene marcado, / casi nadie lo cambia.*",
+   "show": "Se llama efecto de la opción por defecto: / *lo que viene marcado,* / *casi nadie lo cambia.*",
    "pause": 0.3
   },
   {
@@ -42,7 +42,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *cuando te des de alta en un mes gratis, / apunta cuándo termina.*",
+   "show": "La tercera: // *cuando te des de alta en un mes gratis,* / *apunta cuándo termina.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },

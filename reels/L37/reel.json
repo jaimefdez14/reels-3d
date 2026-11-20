@@ -12,7 +12,7 @@
    "bocadillo": "¿En qué se me ha ido la subida?"
   },
   {
-   "show": "Se llama inflación del estilo de vida: / *cuando sube el sueldo, / el gasto va detrás.*",
+   "show": "Se llama inflación del estilo de vida: / *cuando sube el sueldo,* / *el gasto va detrás.*",
    "pause": 0.3
   },
   {
@@ -20,7 +20,7 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *decide a dónde va la subida / antes de cobrarla.*",
+   "show": "La primera: // *decide a dónde va la subida* / *antes de cobrarla.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -34,11 +34,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "De esos 200 euros, 100 al ahorro. / *En diez años son 12.000, / sin contar intereses.*",
+   "show": "De esos 200 euros, 100 al ahorro. / *En diez años son 12.000,* / *sin contar intereses.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *no te metas en un gasto fijo / que no podrías pagar con el sueldo de antes.*",
+   "show": "La tercera: // *no te metas en un gasto fijo* / *que no podrías pagar con el sueldo de antes.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },

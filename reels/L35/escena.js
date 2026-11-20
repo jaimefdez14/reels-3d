@@ -51,12 +51,12 @@ E.obj('rotPar', 'rotulo', { t0: w(1, 2) - 0.05, t1: w(1, 15), sale: 0.25, x: 110
 E.obj('rayP', 'rayos', { t0: w(1, 2), t1: w(1, 9), x: 150, y: -330, r: 300, z: -2, p: [[w(1, 2), 0], [w(1, 5), 1, 'out'], [w(1, 8), 1], [w(1, 9), 0]], inspeccion: false });
 // el estudio: 6 tarros de mermelada frente a 24; los tarros se llenan al aparecer
 const MX6 = -50, MX24 = 275;
-for (let i = 0; i < 6; i++) { const a = w(1, 9) + i * 0.09;
-  E.obj('m6_' + i, 'tarro', { t0: a, t1: w(2, 0) + 0.15, sale: 0.25, x: MX6 + ((i % 3) - 1) * 62, y: -250 + (i < 3 ? -82 : 0), w: 52, h: 66, pop: true, sfx: i === 0,
-    nivel: [[a + 0.1, 0], [a + 0.5, 0.85, 'out']], caja: [-26, -66, 52, 66] }); }
-for (let i = 0; i < 24; i++) { const a = w(1, 12) + i * 0.035;
-  E.obj('m24_' + i, 'tarro', { t0: a, t1: w(2, 0) + 0.15, sale: 0.25, x: MX24 + ((i % 6) - 2.5) * 40, y: -250 - (3 - Math.floor(i / 6)) * 52, w: 34, h: 44, pop: true, sfx: i % 8 === 0,
-    nivel: [[a + 0.1, 0], [a + 0.4, 0.85, 'out']], caja: [-17, -44, 34, 44] }); }
+// (tarros no: a este tamaño el tipo `tarro` se deforma; son casillas que se encienden, como tarros en una mesa)
+E.obj('m6', 'cuadricula', { t0: w(1, 9), t1: w(2, 0) + 0.15, sale: 0.25, x: MX6, y: -310, cols: 3, rows: 2, lado: 56, gap: 16, on: [0, 1, 2, 3, 4, 5], pop: true,
+  p: [[w(1, 9) + 0.1, 0], [w(1, 11), 1, 'out']], caja: [-96, -64, 192, 128] });
+E.obj('m24', 'cuadricula', { t0: w(1, 12), t1: w(2, 0) + 0.15, sale: 0.25, x: MX24, y: -320, cols: 6, rows: 4, lado: 30, gap: 10, on: [...Array(24).keys()], pop: true,
+  p: [[w(1, 12) + 0.1, 0], [w(1, 14) + 0.2, 0.55, 'out']], caja: [-120, -80, 240, 160] });
+E.sfx(w(1, 9), 'fill');
 E.obj('c6', 'contador', { t0: w(1, 10) - 0.1, t1: w(2, 0) + 0.15, sale: 0.25, x: MX6, y: -440, size: 52, col: 'txt', miles: false, pop: true,
   v: [[w(1, 10), 0], [w(1, 10) + 0.4, 6, 'out']], caja: [-50, -30, 100, 60] });
 E.obj('c24', 'contador', { t0: w(1, 21) - 0.1, t1: w(2, 0) + 0.15, sale: 0.25, x: MX24, y: -490, size: 52, col: 'txt', miles: false, pop: true,
