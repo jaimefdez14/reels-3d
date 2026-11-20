@@ -1,0 +1,58 @@
+{
+ "id": "L35",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La paradoja de la elección",
+ "tema": "Negocio",
+ "idea": "L35 de docs/IDEAS-2026-11-19.md (regla 24, ganchos alineados); Jaime, 20-11-2026: «genera l33 a l42». Guion en texto, sin escena ni voz.",
+ "situacion": "Tu web ofrece muchos servicios y los clientes no se deciden.",
+ "lines": [
+  {
+   "show": "Tienes veinte servicios en tu web / *y nadie se decide por ninguno.*",
+   "pause": 0.45
+  },
+  {
+   "show": "Se llama paradoja de la elección: / en un estudio, con 6 mermeladas en la mesa / *compró diez veces más gente que con 24.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para vender más con menos.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *ofrece tres opciones como mucho.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Básica, intermedia y completa. / *Con más, el cliente compara y no elige.*",
+   "pause": 0.3,
+   "bocadillo": "Me lo pienso."
+  },
+  {
+   "show": "La segunda: // *recomienda una.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Márcala como la más elegida. / *Así le quitas al cliente el peso de decidir.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *quita lo que nadie compra.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Mira lo que has vendido este año. / *Lo que no se ha vendido ni una vez, fuera.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Más opciones no son más ventas: / *muchas veces son ninguna.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que tiene una carta de veinte servicios.*",
+   "pause": 0.3
+  }
+ ]
+}

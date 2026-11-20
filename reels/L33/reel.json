@@ -1,0 +1,62 @@
+{
+ "id": "L33",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El interés compuesto",
+ "tema": "Dinero",
+ "idea": "L33 de docs/IDEAS-2026-11-19.md (regla 24, ganchos alineados); Jaime, 20-11-2026: «genera l33 a l42». Guion en texto, sin escena ni voz.",
+ "situacion": "Ahorras cien euros al mes y los dejas en la cuenta del banco.",
+ "lines": [
+  {
+   "show": "Si ahorras cien euros al mes, / *en treinta años tienes 36.000.*",
+   "pause": 0.45,
+   "bocadillo": "Ya invertiré cuando gane más."
+  },
+  {
+   "show": "Si los inviertes y te dan un 7 % al año, / *son casi 122.000. / Se llama interés compuesto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para aprovecharlo.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *empieza cuanto antes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Con los mismos cien euros durante veinte años, / *acabas con 52.000: / menos de la mitad.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *no toques lo que ganas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo que ganas un año se suma a lo que tenías, / *y al año siguiente también da intereses.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *que salga solo el día que cobras.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Programa una transferencia automática / *y no dependerá de que te acuerdes.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ningún rendimiento está garantizado, / *pero el tiempo trabaja para quien empieza pronto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo que más pesa no es cuánto pones: / *es cuántos años lo dejas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que dice que ya invertirá cuando gane más.*",
+   "pause": 0.3
+  }
+ ]
+}

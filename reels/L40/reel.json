@@ -1,0 +1,62 @@
+{
+ "id": "L40",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La regla del 4 %",
+ "tema": "Dinero",
+ "idea": "L40 de docs/IDEAS-2026-11-19.md (regla 24, ganchos alineados); Jaime, 20-11-2026: «genera l33 a l42». Guion en texto, sin escena ni voz.",
+ "situacion": "Piensas que para dejar de trabajar necesitarías una cifra imposible.",
+ "lines": [
+  {
+   "show": "Crees que para dejar de trabajar / *necesitas un millón de euros.*",
+   "pause": 0.45,
+   "bocadillo": "Nunca podré dejar de trabajar."
+  },
+  {
+   "show": "Hay una cuenta más exacta: / *veinticinco veces lo que gastas en un año. / Se llama regla del 4 %.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se hace en tres pasos.",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *calcula lo que gastas en un año.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "No lo que ganas: lo que gastas. / *Si son 1.700 euros al mes, / son unos 20.000 al año.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *multiplícalo por veinticinco.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Veinte mil por veinticinco / *son 500.000 euros. / Esa es tu cifra.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *saca como mucho el cuatro por ciento al año.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Ese cuatro por ciento son veinte mil euros al año. / *En un estudio, a ese ritmo, / el dinero aguantó treinta años / en casi todos los casos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Es una regla orientativa, no una garantía, / *pero te dice cuánto te falta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo que cuenta no es cuánto ganas: / *es cuánto necesitas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que dice que nunca podrá dejar de trabajar.*",
+   "pause": 0.3
+  }
+ ]
+}

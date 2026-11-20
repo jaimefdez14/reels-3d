@@ -1,0 +1,58 @@
+{
+ "id": "L37",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La inflación del estilo de vida",
+ "tema": "Dinero",
+ "idea": "L37 de docs/IDEAS-2026-11-19.md (regla 24, ganchos alineados); Jaime, 20-11-2026: «genera l33 a l42». Guion en texto, sin escena ni voz.",
+ "situacion": "Te suben el sueldo y al poco tiempo vas igual de justo.",
+ "lines": [
+  {
+   "show": "Te suben el sueldo 200 euros / *y a los tres meses vas igual de justo.*",
+   "pause": 0.45,
+   "bocadillo": "¿Dónde se ha ido la subida?"
+  },
+  {
+   "show": "Se llama inflación del estilo de vida: / *cuando sube el sueldo, / el gasto sube detrás.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para que no te pase.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *decide a dónde va la subida / antes de cobrarla.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si lo decides después, / *ya se la habrán llevado los gastos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *guarda la mitad de cada subida.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "De esos 200 euros, 100 al ahorro. / *En diez años son 12.000, / sin contar intereses.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *no subas un gasto fijo / que no pagarías con el sueldo de antes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Un piso más caro o un coche nuevo / *te atan durante años.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ganar más sirve de poco / *si el gasto sube al mismo ritmo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que acaba de cambiar de trabajo.*",
+   "pause": 0.3
+  }
+ ]
+}

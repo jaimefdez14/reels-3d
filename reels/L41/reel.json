@@ -1,0 +1,58 @@
+{
+ "id": "L41",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El principio de Peter",
+ "tema": "Trabajo",
+ "idea": "L41 de docs/IDEAS-2026-11-19.md (regla 24, ganchos alineados); Jaime, 20-11-2026: «genera l33 a l42». Guion en texto, sin escena ni voz.",
+ "situacion": "Eras muy bueno en tu puesto, te ascienden a jefe y ahora lo pasas mal.",
+ "lines": [
+  {
+   "show": "Eras el mejor de tu equipo, / te ascendieron / *y ahora lo pasas mal.*",
+   "pause": 0.45,
+   "bocadillo": "Enhorabuena, jefe."
+  },
+  {
+   "show": "Se llama principio de Peter: / *en una empresa te ascienden / hasta un puesto que ya no sabes hacer.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo escribió Laurence Peter en 1969. / *Tres preguntas antes de aceptar un ascenso.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *¿qué vas a hacer cada día?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "No el cargo: las tareas. / *Pide que te cuenten un día normal.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *¿se parece a lo que haces bien?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "El mejor vendedor no tiene por qué / *ser el mejor jefe de ventas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *¿quién te va a enseñar?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Pide formación antes de empezar, / *no cuando ya estés en apuros.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Subir / *no siempre es avanzar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que está a punto de aceptar un ascenso.*",
+   "pause": 0.3
+  }
+ ]
+}
