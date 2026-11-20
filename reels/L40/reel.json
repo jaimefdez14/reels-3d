@@ -38,12 +38,12 @@
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *saca como mucho el cuatro por ciento al año.*",
+   "show": "El tercero: // *déjalo invertido / y saca como mucho el cuatro por ciento al año.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Ese cuatro por ciento son veinte mil euros al año. / *Según un estudio, sacando eso cada año, / el dinero duró treinta años / en casi todos los casos.*",
+   "show": "Ese cuatro por ciento son veinte mil euros al año. / *Y como el resto sigue rindiendo, / un estudio de 1998 vio que el dinero / aguantaba treinta años en casi todos los casos.*",
    "pause": 0.3
   },
   {
@@ -78,6 +78,31 @@
      "linea": 8,
      "antes": "Ese cuatro por ciento son veinte mil euros al año. / *En un estudio, a ese ritmo, / el dinero aguantó treinta años / en casi todos los casos.*",
      "despues": "Ese cuatro por ciento son veinte mil euros al año. / *Según un estudio, sacando eso cada año, / el dinero duró treinta años / en casi todos los casos.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 7,
+     "antes": "El tercero: // *saca como mucho el cuatro por ciento al año.*",
+     "despues": "El tercero: // *déjalo invertido / y saca como mucho el cuatro por ciento al año.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Ese cuatro por ciento son veinte mil euros al año. / *Según un estudio, sacando eso cada año, / el dinero duró treinta años / en casi todos los casos.*",
+     "despues": "Ese cuatro por ciento son veinte mil euros al año. / *Como lo demás sigue rindiendo, / según un estudio de 1998, / el dinero aguantó treinta años / en casi todos los casos.*"
+    }
+   ],
+   "cambios_corrector": [
+    {
+     "linea": 8,
+     "antes": "Ese cuatro por ciento son veinte mil euros al año. / *Como lo demás sigue rindiendo, / según un estudio de 1998, / el dinero aguantó treinta años / en casi todos los casos.*",
+     "despues": "Ese cuatro por ciento son veinte mil euros al año. / *Y como el resto sigue rindiendo, / un estudio de 1998 vio que el dinero / aguantaba treinta años en casi todos los casos.*"
     }
    ]
   }

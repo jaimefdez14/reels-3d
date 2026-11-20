@@ -12,11 +12,11 @@
    "bocadillo": "Me lo pienso y te digo."
   },
   {
-   "show": "Se llama aversión a la pérdida: / *perder cien euros duele casi el doble / de lo que alegra ganarlos.*",
+   "show": "Comprar le cuesta dinero, y esperar, nada. / *Perder cien euros duele casi el doble / de lo que alegra ganarlos.*",
    "pause": 0.3
   },
   {
-   "show": "Lo midieron Kahneman y Tversky, / *y se puede usar al vender.*",
+   "show": "Se llama aversión a la pérdida: / lo midieron Kahneman y Tversky, / *y hay tres formas de usarla al vender.*",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "No le digas cuánto va a ahorrar: / *dile cuánto pierde cada mes que espera.*",
+   "show": "No le digas cuánto va a ahorrar: / *dile lo que pierde cada mes que espera, / 300 euros, por ejemplo.*",
    "pause": 0.3
   },
   {
@@ -43,7 +43,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si sabe que a partir del día uno cuesta más, / *esperar también le sale caro.*",
+   "show": "Si sabe que el mes que viene cuesta más, / *esperar también le sale caro.*",
    "pause": 0.3
   },
   {
@@ -84,6 +84,41 @@
      "linea": 10,
      "antes": "Mándaselo a ese amigo / *que tiene un negocio y no sabe cómo vender.*",
      "despues": "Mándaselo a ese amigo / *que tiene un negocio y no sabe vender.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama aversión a la pérdida: / *perder cien euros duele casi el doble / de lo que alegra ganarlos.*",
+     "despues": "Comprar le cuesta dinero, y esperar, nada. / *Perder cien euros duele casi el doble / de lo que alegra ganarlos.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Lo midieron Kahneman y Tversky, / *y se puede usar al vender.*",
+     "despues": "Se llama aversión a la pérdida: / lo midieron Kahneman y Tversky, / *y hay tres formas de usarla al vender.*"
+    },
+    {
+     "linea": 4,
+     "antes": "No le digas cuánto va a ahorrar: / *dile cuánto pierde cada mes que espera.*",
+     "despues": "No le digas cuánto va a ahorrar: / *dile cuánto pierde cada mes que espera, / por ejemplo, 300 euros.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si sabe que a partir del día uno cuesta más, / *esperar también le sale caro.*",
+     "despues": "Si sabe que el mes que viene cuesta más, / *esperar también le sale caro.*"
+    }
+   ],
+   "cambios_corrector": [
+    {
+     "linea": 4,
+     "antes": "No le digas cuánto va a ahorrar: / *dile cuánto pierde cada mes que espera, / por ejemplo, 300 euros.*",
+     "despues": "No le digas cuánto va a ahorrar: / *dile lo que pierde cada mes que espera, / 300 euros, por ejemplo.*"
     }
    ]
   }

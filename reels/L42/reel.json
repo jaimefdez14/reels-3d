@@ -9,14 +9,14 @@
   {
    "show": "Llevas meses intentando cambiar un hábito / *y no notas que avances.*",
    "pause": 0.45,
-   "bocadillo": "El lunes empiezo."
+   "bocadillo": "Esta vez sí."
   },
   {
-   "show": "Se llama mejora continua: / *un 1 % más cada día, / en un año, multiplica por 37 lo que tenías.*",
+   "show": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que al empezar.*",
    "pause": 0.3
   },
   {
-   "show": "Es una cuenta, no una promesa, / *pero explica por qué lo pequeño suma.*",
+   "show": "Es una cuenta, no una promesa, / y al revés también funciona: / *empeorar un 1 % al día / te deja casi en cero.*",
    "pause": 0.3
   },
   {
@@ -51,7 +51,7 @@
    "pause": 0.3
   },
   {
-   "show": "Y funciona igual al revés: / *empeorar un 1 % al día / te lleva casi a cero en un año.*",
+   "show": "Que no lo notes / *no quiere decir que no avances.*",
    "pause": 0.3
   },
   {
@@ -94,6 +94,42 @@
      "antes": "Ya empiezo el lunes.",
      "despues": "El lunes empiezo.",
      "bocadillo": true
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama mejora continua: / *un 1 % más cada día, / en un año, multiplica por 37 lo que tenías.*",
+     "despues": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que como empezaste.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Es una cuenta, no una promesa, / *pero explica por qué lo pequeño suma.*",
+     "despues": "Es una cuenta, no una promesa, / y al revés también funciona: / *empeorar un 1 % al día / te deja casi en cero.*"
+    },
+    {
+     "linea": 10,
+     "antes": "Y funciona igual al revés: / *empeorar un 1 % al día / te lleva casi a cero en un año.*",
+     "despues": "Que no lo notes / *no quiere decir que no avances.*"
+    },
+    {
+     "linea": 0,
+     "antes": "El lunes empiezo.",
+     "despues": "Esta vez sí.",
+     "bocadillo": true
+    }
+   ],
+   "cambios_corrector": [
+    {
+     "linea": 1,
+     "antes": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que como empezaste.*",
+     "despues": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que al empezar.*"
     }
    ]
   }

@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "De ahí sale una tabla de cuatro casillas / *y tres reglas para usarla.*",
+   "show": "De ahí sale una tabla de cuatro casillas: / urgente o no, importante o no. / *Y tres reglas para usarla.*",
    "pause": 0.3
   },
   {
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *empieza por lo importante que no corre prisa.*",
+   "show": "La tercera: // *después de lo de hoy, / sigue con lo importante que no corre prisa.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -79,6 +79,31 @@
      "linea": 8,
      "antes": "Es lo que más te cambia el año / *y lo primero que se queda sin hacer.*",
      "despues": "Es lo que más pesa al final del año / *y lo primero que se queda sin hacer.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 2,
+     "antes": "De ahí sale una tabla de cuatro casillas / *y tres reglas para usarla.*",
+     "despues": "De ahí sale una tabla de cuatro casillas, / urgente o no, importante o no, / *y tres reglas para usarla.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *empieza por lo importante que no corre prisa.*",
+     "despues": "La tercera: // *después de lo de hoy, / sigue con lo importante que no corre prisa.*"
+    }
+   ],
+   "cambios_corrector": [
+    {
+     "linea": 2,
+     "antes": "De ahí sale una tabla de cuatro casillas, / urgente o no, importante o no, / *y tres reglas para usarla.*",
+     "despues": "De ahí sale una tabla de cuatro casillas: / urgente o no, importante o no. / *Y tres reglas para usarla.*"
     }
    ]
   }

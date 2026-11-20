@@ -7,7 +7,7 @@
  "situacion": "Te suben el sueldo y al poco tiempo vas igual de justo.",
  "lines": [
   {
-   "show": "Te suben el sueldo 200 euros / *y a los tres meses vas igual de justo.*",
+   "show": "Te suben el sueldo 200 euros al mes / *y a los tres meses vas igual de justo.*",
    "pause": 0.45,
    "bocadillo": "¿En qué se me ha ido la subida?"
   },
@@ -75,6 +75,19 @@
      "antes": "¿Dónde se ha ido la subida?",
      "despues": "¿En qué se me ha ido la subida?",
      "bocadillo": true
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Te suben el sueldo 200 euros / *y a los tres meses vas igual de justo.*",
+     "despues": "Te suben el sueldo 200 euros al mes / *y a los tres meses vas igual de justo.*"
     }
    ]
   }

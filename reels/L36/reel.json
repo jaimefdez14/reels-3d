@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "En un experimento, si la casilla de donante / venía marcada, aceptaba el 82 %. / *Si había que marcarla, el 42 %.*",
+   "show": "En un experimento, / si la casilla de donar órganos / venía marcada, la dejaba así el 82 %. / *Si había que marcarla, solo el 42 %.*",
    "pause": 0.3
   },
   {
@@ -33,12 +33,12 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *deja de pagar lo que no usas.*",
+   "show": "La segunda: // *revisa cada mes los recibos domiciliados.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Revisa los recibos de la cuenta / *y da de baja lo que no hayas usado este mes.*",
+   "show": "Mira qué se te cobra sin que lo notes / *y da de baja lo que no hayas usado.*",
    "pause": 0.3
   },
   {
@@ -124,6 +124,36 @@
      "antes": "Ya la cancelaré.",
      "despues": "Ya me daré de baja.",
      "bocadillo": true
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 2,
+     "antes": "En un experimento, si la casilla de donante / venía marcada, aceptaba el 82 %. / *Si había que marcarla, el 42 %.*",
+     "despues": "En un experimento, / si la casilla de donar órganos / venía marcada, la dejaba así el 82 %. / *Si había que marcarla, solo el 42 %.*"
+    },
+    {
+     "linea": 6,
+     "antes": "La segunda: // *deja de pagar lo que no usas.*",
+     "despues": "La segunda: // *revisa lo que se te cobra solo cada mes.*"
+    }
+   ],
+   "cambios_corrector": [
+    {
+     "linea": 6,
+     "antes": "La segunda: // *revisa lo que se te cobra solo cada mes.*",
+     "despues": "La segunda: // *revisa cada mes los recibos domiciliados.*"
+    },
+    {
+     "linea": 7,
+     "antes": "Revisa los recibos de la cuenta / *y da de baja lo que no hayas usado este mes.*",
+     "despues": "Mira qué se te cobra sin que lo notes / *y da de baja lo que no hayas usado.*"
     }
    ]
   }

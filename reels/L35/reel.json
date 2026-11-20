@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Márcala como la más vendida. / *Así le ahorras al cliente / tener que decidir.*",
+   "show": "Márcala como la recomendada. / *Así le ahorras al cliente / tener que decidir.*",
    "pause": 0.3
   },
   {
@@ -84,6 +84,19 @@
      "linea": 10,
      "antes": "Mándaselo a ese amigo / *que tiene una carta de veinte servicios.*",
      "despues": "Mándaselo a ese amigo / *que ofrece veinte servicios en su web.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "cambios por frases que no se entienden oyéndolas; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 6,
+     "antes": "Márcala como la más vendida. / *Así le ahorras al cliente / tener que decidir.*",
+     "despues": "Márcala como la recomendada. / *Así le ahorras al cliente / tener que decidir.*"
     }
    ]
   }
