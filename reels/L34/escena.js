@@ -47,7 +47,7 @@ E.temblor(wf(0, -1), 12, 0.4); E.golpe(w(0, 9) + 0.2, 0.03);
 
 // «falacia de la planificación»: el nombre; 34 días calculados, 55 reales
 E.figura('est', { t0: w(1, 0), t1: N[0].T + 0.2, x: -380, cara: true,
-  poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [w(1, 6), 'pensar'], [w(1, 10), 'escribir'], [w(1, 13), 'ofrecer'], [w(1, 17), 'manos_cabeza'], [w(2, 0), 'de_pie'], [w(2, 3), 'senalar'], [wf(2, -1), 'celebrar']],
+  poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [w(1, 6), 'pensar'], [w(1, 10), 'senalar'], [w(1, 13), 'ofrecer'], [w(1, 17), 'manos_cabeza'], [w(2, 0), 'de_pie'], [w(2, 3), 'senalar'], [wf(2, -1), 'celebrar']],
   sonrisa: [[0, 0], [w(1, 6), 0.3], [w(1, 14), 0.9], [w(1, 17), -1.3], [w(2, 0), 0.2], [wf(2, -1), 1.4]] });
 E.obj('falacia', 'rotulo', { t0: w(1, 2) - 0.05, t1: w(2, 0) - 0.05, sale: 0.2, x: 70, y: -505, texto: 'FALACIA DE LA PLANIFICACIÓN', size: 28, col: '#e6ce46', pop: true, caja: [-300, -18, 600, 36] });
 E.destello(w(1, 2), 0.1);

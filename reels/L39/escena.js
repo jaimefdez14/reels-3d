@@ -59,14 +59,14 @@ E.obj('rotCompra', 'rotulo', { t0: w(1, 0) + 0.15, t1: w(1, 7) - 0.12, sale: 0.2
   texto: [[0, 'COMPRAR: PAGA'], [w(1, 5), 'ESPERAR: GRATIS']], size: 30, col: '#e6ce46', caja: [-160, -18, 320, 36] });
 E.golpe(w(1, 3), 0.03);
 // «Perder cien euros duele casi el doble de lo que alegra ganarlos»: dos barras que se rellenan
-E.obj('barP', 'relleno', { t0: w(1, 7) - 0.1, t1: w(2, 0), sale: 0.2, x: -110, y: -420, w: 380, h: 50, pop: true, rotulo: 'PERDER 100 €',
-  f: [[w(1, 10) - 0.05, 0], [w(1, 10) + 0.6, 0.95, 'out']], caja: [-190, -60, 380, 90] });
-E.obj('barG', 'relleno', { t0: w(1, 13), t1: w(2, 0), sale: 0.2, x: -110, y: -260, w: 380, h: 50, pop: true, rotulo: 'GANAR 100 €',
-  f: [[w(1, 17) - 0.05, 0], [w(1, 17) + 0.5, 0.5, 'out']], caja: [-190, -60, 380, 90] });
+E.obj('barP', 'relleno', { t0: w(1, 7) - 0.1, t1: w(2, 0), sale: 0.2, x: -160, y: -420, w: 340, h: 50, pop: true, rotulo: 'PERDER 100 €',
+  f: [[w(1, 10) - 0.05, 0], [w(1, 10) + 0.6, 0.95, 'out']], caja: [-170, -60, 340, 90] });
+E.obj('barG', 'relleno', { t0: w(1, 13), t1: w(2, 0), sale: 0.2, x: -160, y: -260, w: 340, h: 50, pop: true, rotulo: 'GANAR 100 €',
+  f: [[w(1, 17) - 0.05, 0], [w(1, 17) + 0.5, 0.5, 'out']], caja: [-170, -60, 340, 90] });
 E.sfx(w(1, 10), 'fill'); E.sfx(w(1, 17), 'fill');
-E.obj('doble', 'rotulo', { t0: w(1, 11), t1: w(2, 0), sale: 0.2, x: -110, y: -345, texto: 'CASI ×2', size: 34, col: ROJO, pop: true, caja: [-75, -20, 150, 40] });
+E.obj('doble', 'rotulo', { t0: w(1, 11), t1: w(2, 0), sale: 0.2, x: 120, y: -420, texto: 'CASI ×2', size: 34, col: ROJO, pop: true, caja: [-75, -20, 150, 40] });
 E.temblor(w(1, 10) + 0.3, 12, 0.4);
-E.obj('chG', 'chispas', { t0: w(1, 17) + 0.5, t1: w(1, 17) + 1.2, x: -110, y: -260, r0: 40, r1: 110, inspeccion: false });
+E.obj('chG', 'chispas', { t0: w(1, 17) + 0.5, t1: w(1, 17) + 1.2, x: -160, y: -260, r0: 40, r1: 110, inspeccion: false });
 // «Se llama aversión a la pérdida: lo midieron Kahneman y Tversky»
 E.obj('nombre', 'rotulo', { t0: w(2, 2) - 0.1, t1: w(2, 12), sale: 0.2, x: -60, y: -470, texto: 'AVERSIÓN A LA PÉRDIDA', size: 38, col: '#e6ce46', peso: 700, track: 2, pop: true, caja: [-280, -24, 560, 48] });
 E.obj('rayosN', 'rayos', { t0: w(2, 2), t1: w(2, 12), sale: 0.2, x: -60, y: -470, r: 300, z: -2, p: [[w(2, 2), 0], [w(2, 5), 0.8, 'out']], inspeccion: false });

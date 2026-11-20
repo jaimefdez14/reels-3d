@@ -121,7 +121,7 @@ E.temblor(w(4, 13), 10, 0.35);
 // 6: Márcala(0) como(1) la(2) recomendada(3) Así(4) le(5) ahorras(6) al(7) cliente(8) tener(9) que(10) decidir(11)
 E.numero(2, N[1].T, N[1].S, { desde: 'planes1', hacia: 'planes2' });
 E.figura('yo2', { t0: N[1].S - 0.1, t1: fin(2), x: -375, cara: true,
-  poses: [[0, 'de_pie'], [w(5, 2), 'senalar'], [w(6, 0), 'escribir'], [w(6, 3), 'senalar'], [w(6, 4), 'ofrecer'], [w(6, 9), 'celebrar']],
+  poses: [[0, 'de_pie'], [w(5, 2), 'senalar'], [w(6, 0), 'senalar'], [w(6, 3), 'senalar'], [w(6, 4), 'ofrecer'], [w(6, 9), 'celebrar']],
   sonrisa: [[0, 0.4], [w(5, 2), 0.8], [w(6, 3), 1.2], [w(6, 6), 0.8], [w(6, 10), 1.5]] });
 E.obj('planes2', 'planes', { t0: N[1].S - 0.1, t1: fin(2), x: PLX, y: PLY, s: PLS, pop: true, r: 60, oy: -60,
   items: ['BÁSICA', 'INTERMEDIA', 'COMPLETA'], sel: [[w(5, 2), -1], [w(5, 3), 1, 'out']], caja: [-290, -220, 630, 280] });
