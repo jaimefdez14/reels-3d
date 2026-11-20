@@ -30,19 +30,19 @@ const escalon = (id, o) => { const h = o.h; return E.obj(id, 'bloques', Object.a
 // ---------- gancho ----------
 // 0: Eras(0) el(1) mejor(2) de(3) tu(4) equipo(5) te(6) ascendieron(7) y(8) ahora(9) lo(10) pasas(11) mal(12)   [bocadillo del jefe «Enhorabuena, jefe.»]
 // el equipo: tres barras de rendimiento; la tuya se llena entera
-const EQ = [{ id: 'cA', x: -420, f: 0.45 }, { id: 'yo', x: -280, f: 1 }, { id: 'cB', x: -140, f: 0.55 }];
-E.figura('cA', { t0: 0, t1: w(0, 6) + 0.25, sale: 0.25, x: -420, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 2) + 0.2, 'encoger']] });
-E.figura('cB', { t0: 0, t1: w(0, 6) + 0.25, sale: 0.25, x: -140, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 2) + 0.3, 'apartarse']] });
+const EQ = [{ id: 'cA', x: -395, f: 0.45 }, { id: 'yo', x: -265, f: 1 }, { id: 'cB', x: -135, f: 0.55 }];
+E.figura('cA', { t0: 0, t1: w(0, 6), sale: 0.25, x: -395, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 2) + 0.2, 'encoger']] });
+E.figura('cB', { t0: 0, t1: w(0, 6), sale: 0.25, x: -135, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 2) + 0.3, 'apartarse']] });
 EQ.forEach((q, i) => { const yo = q.id === 'yo';
-  E.obj('rend' + i, 'relleno', { t0: 0, t1: w(0, 6) + 0.2, sale: 0.2, x: q.x, y: yo ? -400 : -330, w: 120, h: 26,
+  E.obj('rend' + i, 'relleno', { t0: 0, t1: w(0, 6), sale: 0.2, x: q.x, y: yo ? -400 : -330, w: 120, h: 26,
     f: yo ? [[0.3, 0], [w(0, 2) + 0.5, 1, 'out']] : [[0.3, 0], [0.9, q.f, 'out']], caja: [-60, -13, 120, 26] }); });
 E.sfx(0.3, 'fill');
-E.obj('chRend', 'chispas', { t0: w(0, 2) + 0.5, t1: w(0, 2) + 1.3, x: -280, y: -400, r0: 50, r1: 120, inspeccion: false });
+E.obj('chRend', 'chispas', { t0: w(0, 2) + 0.5, t1: w(0, 2) + 1.3, x: -265, y: -400, r0: 50, r1: 120, inspeccion: false });
 E.golpe(w(0, 2) + 0.5, 0.03);
 // «te ascendieron»: aparece la escalera y el muñeco sube al primer peldaño; el jefe le da la enhorabuena
 const ST = [{ x: -150, h: 60 }, { x: 30, h: 120 }, { x: 210, h: 180 }];
-ST.forEach((s, i) => escalon('e0_' + i, { t0: w(0, 5) + i * 0.1, t1: w(1, 0), sale: 0.25, x: s.x, h: s.h, luz: i === 0 ? 1 : 0.6 }));
-E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.25, x: [[0, -280], [w(0, 7), -280], [w(0, 7) + 0.45, -150, 'inout']], y: [[w(0, 7), 0], [w(0, 7) + 0.22, -130, 'out'], [w(0, 7) + 0.45, -60, 'in']],
+ST.forEach((s, i) => escalon('e0_' + i, { t0: w(0, 6) + i * 0.08, t1: w(1, 0), sale: 0.25, x: s.x, h: s.h, luz: i === 0 ? 1 : 0.6 }));
+E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.25, x: [[0, -265], [w(0, 7), -265], [w(0, 7) + 0.45, -150, 'inout']], y: [[w(0, 7), 0], [w(0, 7) + 0.22, -130, 'out'], [w(0, 7) + 0.45, -60, 'in']],
   talla: 330, cara: true, toca: ['e0_0'],
   poses: [[0, 'de_pie'], [w(0, 2), 'celebrar'], [w(0, 7), 'levantar'], [w(0, 7) + 0.5, 'celebrar'], [w(0, 9), 'manos_cabeza'], [w(0, 12) + 0.3, 'triste']],
   sonrisa: [[0, 0.6], [w(0, 2), 1.5], [w(0, 8), 1.2], [w(0, 9), -0.8], [w(0, 12), -1.4]] });
@@ -101,7 +101,7 @@ E.destello(wf(2, -1), 0.12);
 // 3: La(0) primera(1) qué(2) vas(3) a(4) hacer(5) cada(6) día(7)
 // 4: No(0) el(1) cargo(2) las(3) tareas(4) Pide(5) que(6) te(7) cuenten(8) un(9) día(10) normal(11)
 E.numero(1, N[0].T, N[0].S, { desde: 'q1', hacia: 'tareas' });
-E.figura('yoP1', { t0: N[0].S - 0.1, t1: fin(1), x: -380, cara: true,
+E.figura('yoP1', { t0: N[0].S - 0.1, t1: fin(1), x: -355, cara: true,
   poses: [[0, 'de_pie'], [w(3, 2), 'pensar'], [w(3, 6), 'senalar'], [w(4, 0), 'encoger'], [w(4, 3), 'senalar'], [w(4, 5), 'ofrecer'], [w(4, 9), 'pensar'], [wf(4, -1), 'celebrar']],
   sonrisa: [[0, 0.2], [w(3, 2), 0], [w(3, 6), 0.6], [w(4, 0), -0.2], [w(4, 3), 0.8], [w(4, 9), 0.5], [wf(4, -1), 1.5]] });
 E.obj('semana', 'dias', { t0: N[0].S - 0.05, t1: fin(1), x: 130, y: -470, letras: ['L', 'M', 'X', 'J', 'V'], gap: 84, pop: true,
@@ -123,7 +123,7 @@ E.golpe(wf(4, -1), 0.04); E.destello(wf(4, -1), 0.1);
 // 5: La(0) segunda(1) ese(2) trabajo(3) se(4) parece(5) a(6) lo(7) que(8) se(9) te(10) da(11) bien(12)
 // 6: El(0) mejor(1) vendedor(2) no(3) tiene(4) por(5) qué(6) ser(7) el(8) mejor(9) jefe(10) de(11) ventas(12)
 E.numero(2, N[1].T, N[1].S, { desde: 'tareas', hacia: 'barA' });
-E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -380, cara: true,
+E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -355, cara: true,
   poses: [[0, 'de_pie'], [w(5, 2), 'pensar'], [w(5, 7), 'senalar'], [w(6, 0), 'celebrar'], [w(6, 3), 'de_pie'], [w(6, 7), 'encoger'], [w(6, 10), 'manos_cabeza']],
   sonrisa: [[0, 0.2], [w(5, 7), 0.8], [w(6, 0), 1.5], [w(6, 3), 0.4], [w(6, 7), -0.4], [w(6, 10), -1.3]] });
 E.obj('barA', 'relleno', { t0: N[1].S - 0.1, t1: fin(2), x: 130, y: -460, w: 340, h: 44, pop: true, sobrevive: false, r: 50,
@@ -148,7 +148,7 @@ E.temblor(w(6, 12), 12, 0.4);
 // 7: La(0) tercera(1) quién(2) te(3) va(4) a(5) enseñar(6)
 // 8: Pide(0) formación(1) antes(2) de(3) empezar(4) no(5) cuando(6) ya(7) estés(8) en(9) apuros(10)
 E.numero(3, N[2].T, N[2].S, { desde: 'ventas', hacia: 'form' });
-E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -380, cara: true,
+E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -355, cara: true,
   poses: [[0, 'de_pie'], [w(7, 2), 'pensar'], [w(7, 6), 'senalar'], [w(8, 0), 'ofrecer'], [w(8, 2), 'escribir'], [w(8, 5), 'de_pie'], [w(8, 8), 'apartarse'], [wf(8, -1) + 0.2, 'celebrar']],
   sonrisa: [[0, 0], [w(7, 6), 0.6], [w(8, 2), 1], [w(8, 8), -0.6], [wf(8, -1) + 0.2, 1.5]] });
 E.figura('mentor', { t0: w(7, 2) - 0.1, t1: TC, x: 400, talla: 360, color: 'claro', dir: -1, cara: true,

@@ -50,7 +50,7 @@ E.obj('pilaH', 'pila', { t0: w(1, 8) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: H
   luz: [[0, 1], [w(2, 11), 1], [w(2, 16), 0.5]], barrido: [w(1, 16)], caja: [-90, -212, 180, 212], refl: true });
 E.obj('x37', 'contador', { t0: w(1, 11) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX + 250, y: -330, pre: '× ', size: 64, col: 'txt', miles: false, pop: true,
   v: [[w(1, 11), 1], [w(1, 14) + 0.3, 37, 'inout'], [w(2, 11), 37], [w(2, 21), 0, 'inout']], barrido: [w(1, 16)], caja: [-90, -36, 180, 72] });
-E.obj('rotH', 'rotulo', { t0: w(1, 2) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: [[0, -300], [w(1, 4) - 0.1, -300], [w(1, 5), 60, 'inout']], pop: true, size: [[0, 40], [w(1, 4) - 0.1, 40], [w(1, 5), 28, 'inout']],
+E.obj('rotH', 'rotulo', { t0: w(1, 2) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: [[0, -300], [w(1, 4) - 0.1, -300], [w(1, 5), 60, 'inout']], pop: true, size: 28, s: [[0, 1.45], [w(1, 4) - 0.1, 1.45], [w(1, 5), 1, 'inout']], col: '#c9ccca',
   texto: [[0, 'MEJORA CONTINUA'], [w(1, 12), 'UN AÑO'], [w(2, 1), 'UNA CUENTA'], [w(2, 7), 'AL REVÉS'], [w(2, 19), 'CASI CERO']], caja: [-160, -17, 320, 34] });
 E.sfx(w(1, 8), 'fill');
 E.obj('chH', 'chispas', { t0: w(1, 14) + 0.3, t1: w(1, 14) + 1.1, x: HX + 250, y: -330, r0: 70, r1: 160, inspeccion: false });

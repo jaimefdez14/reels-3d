@@ -74,8 +74,8 @@ E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -360, cara: true,
   sonrisa: [[w(3, 2), 0.6], [w(3, 4), 1.4], [w(4, 0), 0.4], [w(4, 13), 1.5]] });
 E.obj('pronto', 'tarro', { t0: N[0].S - 0.1, t1: fin(1), x: -20, w: 200, h: 320, rotulo: 'DESDE HOY', pop: true, sobrevive: true, r: 80, oy: -160,
   nivel: [[w(3, 2), 0], [w(3, 4) + 0.5, 0.2, 'out'], [w(4, 6), 0.3], [w(4, 9) + 0.3, 1, 'in']], barrido: [w(4, 9) + 0.3, w(4, 13)], caja: [-50, -320, 200, 320], refl: true });
-E.obj('cPronto', 'contador', { t0: w(3, 2) - 0.1, t1: fin(1), x: -20, y: -385, pop: true, suf: ' €', size: 46, col: 'txt',
-  v: [[w(3, 2), 0], [w(3, 4) + 0.5, 1200, 'out'], [w(4, 6), 6000, 'inout'], [w(4, 9) + 0.3, 122000, 'in']], caja: [-125, -28, 250, 56] });
+E.obj('cPronto', 'contador', { t0: w(4, 6) - 0.1, t1: fin(1), x: -20, y: -385, pop: true, suf: ' €', size: 46, col: 'txt',
+  v: [[w(4, 6), 0], [w(4, 9) + 0.3, 122000, 'in']], caja: [-125, -28, 250, 56] });
 for (let i = 0; i < 4; i++) { const a = w(3, 2) + i * 0.3;
   E.obj('m1_' + i, 'moneda', { t0: a, t1: a + 0.6, entra: 0.05, sale: 0.12, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
     x: [[a, -250], [a + 0.5, -20, 'inout']], y: [[a, -300], [a + 0.25, -400], [a + 0.5, -230, 'in']] }); }

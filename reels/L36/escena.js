@@ -89,7 +89,7 @@ E.destello(w(3, 5), 0.12);
 // 5: Programa(0) una(1) transferencia(2) para(3) el(4) día(5) que(6) cobras(7) Si(8) no(9) haces(10) nada(11) ahorras(12)
 E.numero(1, N[0].T, N[0].S, { desde: 's1', hacia: 'ahorro' });
 const P1 = -150, T1 = 200;
-E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -390, cara: true, toca: ['movil1'],
+E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -365, cara: true, toca: ['movil1'],
   poses: [[0, 'de_pie'], [w(4, 3), 'senalar'], [w(4, 6), 'celebrar'], [w(5, 0), 'ofrecer'], [w(5, 4), 'senalar'], [w(5, 8), 'de_pie'], [w(5, 9), 'encoger'], [w(5, 12), 'celebrar']],
   sonrisa: [[w(4, 3), 0.5], [w(4, 6), 1.3], [w(5, 0), 0.4], [w(5, 9), 0.2], [w(5, 12), 1.5]] });
 E.obj('ahorro', 'tarro', { t0: N[0].S - 0.1, t1: fin(1), x: T1, w: 200, h: 260, rotulo: 'AHORRO', pop: true, sobrevive: true, r: 80, oy: -130,

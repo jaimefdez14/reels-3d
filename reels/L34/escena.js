@@ -47,12 +47,15 @@ E.temblor(wf(0, -1), 12, 0.4); E.golpe(w(0, 9) + 0.2, 0.03);
 
 // «falacia de la planificación»: el nombre; 34 días calculados, 55 reales
 E.figura('est', { t0: w(1, 0), t1: N[0].T + 0.2, x: -380, cara: true,
-  poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [w(1, 6), 'pensar'], [w(1, 13), 'ofrecer'], [w(1, 17), 'manos_cabeza'], [w(2, 0), 'de_pie'], [w(2, 3), 'senalar'], [wf(2, -1), 'celebrar']],
+  poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [w(1, 6), 'pensar'], [w(1, 10), 'escribir'], [w(1, 13), 'ofrecer'], [w(1, 17), 'manos_cabeza'], [w(2, 0), 'de_pie'], [w(2, 3), 'senalar'], [wf(2, -1), 'celebrar']],
   sonrisa: [[0, 0], [w(1, 6), 0.3], [w(1, 14), 0.9], [w(1, 17), -1.3], [w(2, 0), 0.2], [wf(2, -1), 1.4]] });
 E.obj('falacia', 'rotulo', { t0: w(1, 2) - 0.05, t1: w(2, 0) - 0.05, sale: 0.2, x: 70, y: -505, texto: 'FALACIA DE LA PLANIFICACIÓN', size: 28, col: '#e6ce46', pop: true, caja: [-300, -18, 600, 36] });
 E.destello(w(1, 2), 0.1);
-E.obj('rotDias', 'rotulo', { t0: w(1, 8) - 0.1, t1: w(2, 0) - 0.05, sale: 0.2, x: 130, y: -445, texto: [[0, 'CALCULARON'], [w(1, 17), 'TARDARON']], size: 24, col: '#9a9c9b', pop: true, caja: [-110, -15, 220, 30] });
-E.obj('cuentaH', 'contador', { t0: w(1, 8), t1: w(2, 0) - 0.05, sale: 0.2, x: 130, y: -375, suf: ' días', size: 60, col: 'txt', miles: false, pop: true,
+// «unos estudiantes … la tesina»: el montón de la tesina crece mientras calculan
+E.obj('tesina', 'papeles', { t0: w(1, 6) - 0.1, t1: w(2, 0) - 0.05, sale: 0.2, x: -150, n: 6, k: [[w(1, 6), 0], [w(1, 12) + 0.3, 6, 'out']], refl: true, caja: [-95, -120, 190, 120] });
+E.obj('rotTesina', 'rotulo', { t0: w(1, 12) - 0.05, t1: w(2, 0) - 0.05, sale: 0.2, x: -150, y: -175, texto: 'TESINA', size: 24, col: '#9a9c9b', pop: true, caja: [-60, -15, 120, 30] });
+E.obj('rotDias', 'rotulo', { t0: w(1, 13) - 0.1, t1: w(2, 0) - 0.05, sale: 0.2, x: 130, y: -445, texto: [[0, 'CALCULARON'], [w(1, 17), 'TARDARON']], size: 24, col: '#9a9c9b', pop: true, caja: [-110, -15, 220, 30] });
+E.obj('cuentaH', 'contador', { t0: w(1, 13) - 0.15, t1: w(2, 0) - 0.05, sale: 0.2, x: 130, y: -375, suf: ' días', size: 60, col: 'txt', miles: false, pop: true,
   v: [[w(1, 13), 0], [w(1, 15), 34, 'out'], [w(1, 17), 34], [w(1, 18) + 0.3, 55, 'out']], barrido: [w(1, 15)], caja: [-160, -36, 320, 72] });
 E.obj('plazoH', 'barra', { t0: w(1, 9), t1: w(2, 0) - 0.05, sale: 0.2, x: 130, y: -220, w: 420, h: 46, pop: true, marca: 34 / 55, rotMarca: 'PLAN',
   marcas: [[34 / 55, '34'], [1, '55']], f: [[w(1, 13), 0], [w(1, 15), 34 / 55, 'out'], [w(1, 17), 34 / 55], [w(1, 18) + 0.3, 1, 'out']], caja: [-210, -90, 420, 150] });

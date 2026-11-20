@@ -80,7 +80,7 @@ E.destello(wf(2, -1), 0.12);
 // 4: Todo(0) sin(1) ordenar(2) Mientras(3) lo(4) lleves(5) en(6) la(7) cabeza(8) todo(9) te(10) parecerá(11) urgente(12)
 E.numero(1, N[0].T, N[0].S, { desde: 's1', hacia: 'lista1' });
 const L1X = 170;
-E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -370, cara: true,
+E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -350, cara: true,
   poses: [[0, 'de_pie'], [w(3, 2), 'escribir'], [w(4, 3), 'de_pie', 0.3], [w(4, 5), 'manos_cabeza'], [w(4, 11), 'encoger'], [wf(4, -1) + 0.1, 'senalar']],
   sonrisa: [[w(3, 2), 0.6], [wf(3, -1), 1.2], [w(4, 5), -1], [w(4, 11), -0.6], [wf(4, -1) + 0.1, 0.6]] });
 // la lista se escribe renglón a renglón y la barra APUNTADO se llena
@@ -95,10 +95,10 @@ for (let i = 0; i < 5; i++) { const a = w(3, 2) + i * 0.32;
 E.obj('ch1a', 'chispas', { t0: wf(3, -1) + 0.1, t1: wf(3, -1) + 0.9, x: L1X, y: -330, r0: 120, r1: 230, inspeccion: false });
 E.golpe(wf(3, -1) + 0.1, 0.04);
 // «Mientras lo lleves en la cabeza»: la maraña junto a la cabeza; «todo te parecerá urgente»: se vuelve roja
-E.obj('lio1', 'maraña', { t0: w(4, 5) - 0.1, t1: w(4, 12) + 0.02, sale: 0.05, x: -180, y: -470, r: 55, p: [[w(4, 5), 0], [w(4, 8) + 0.2, 1, 'out']], rot: [[w(4, 5), 0], [fin(1), 1.2, 'lin']],
+E.obj('lio1', 'maraña', { t0: w(4, 5) - 0.1, t1: w(4, 12) + 0.02, sale: 0.05, x: -150, y: -470, r: 55, p: [[w(4, 5), 0], [w(4, 8) + 0.2, 1, 'out']], rot: [[w(4, 5), 0], [fin(1), 1.2, 'lin']],
   caja: [-70, -40, 140, 80] });
-E.obj('lio1r', 'maraña', { t0: w(4, 12) + 0.03, t1: fin(1), entra: 0.1, x: -180, y: -470, r: 55, col: ROJO, rot: [[w(4, 5), 0], [fin(1), 1.2, 'lin']], s: [[w(4, 12), 1], [w(4, 12) + 0.3, 1.15, 'back']], caja: [-70, -40, 140, 80] });
-E.obj('urg4', 'rotulo', { t0: w(4, 12) - 0.05, t1: fin(1), x: -180, y: -385, texto: 'TODO URGENTE', size: 26, col: ROJO, peso: 700, pop: true, caja: [-110, -17, 220, 34] });
+E.obj('lio1r', 'maraña', { t0: w(4, 12) + 0.03, t1: fin(1), entra: 0.1, x: -150, y: -470, r: 55, col: ROJO, rot: [[w(4, 5), 0], [fin(1), 1.2, 'lin']], s: [[w(4, 12), 1], [w(4, 12) + 0.3, 1.15, 'back']], caja: [-70, -40, 140, 80] });
+E.obj('urg4', 'rotulo', { t0: w(4, 12) - 0.05, t1: fin(1), x: -150, y: -385, texto: 'TODO URGENTE', size: 26, col: ROJO, peso: 700, pop: true, caja: [-110, -17, 220, 34] });
 E.temblor(w(4, 12), 12, 0.4);
 
 // ---------- 2 · sepáralo en cuatro ----------
