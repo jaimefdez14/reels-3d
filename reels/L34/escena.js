@@ -46,7 +46,7 @@ E.sfx(w(0, 13), 'fill');
 E.temblor(wf(0, -1), 12, 0.4); E.golpe(w(0, 9) + 0.2, 0.03);
 
 // «falacia de la planificación»: el nombre; 34 días calculados, 55 reales
-E.figura('est', { t0: w(1, 0), t1: N[0].T + 0.2, x: -380, cara: true,
+E.figura('est', { t0: w(1, 0), t1: N[0].T + 0.2, x: -350, cara: true,
   poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [w(1, 6), 'pensar'], [w(1, 10), 'senalar'], [w(1, 13), 'ofrecer'], [w(1, 17), 'manos_cabeza'], [w(2, 0), 'de_pie'], [w(2, 3), 'senalar'], [wf(2, -1), 'celebrar']],
   sonrisa: [[0, 0], [w(1, 6), 0.3], [w(1, 14), 0.9], [w(1, 17), -1.3], [w(2, 0), 0.2], [wf(2, -1), 1.4]] });
 E.obj('falacia', 'rotulo', { t0: w(1, 2) - 0.05, t1: w(2, 0) - 0.05, sale: 0.2, x: 70, y: -505, texto: 'FALACIA DE LA PLANIFICACIÓN', size: 28, col: '#e6ce46', pop: true, caja: [-300, -18, 600, 36] });
@@ -72,7 +72,7 @@ E.obj('chH', 'chispas', { t0: w(2, 3) + 0.3, t1: w(2, 3) + 1.1, x: 20, y: -350, 
 // 3: La(0) primera(1) mira(2) cuánto(3) tardaste(4) la(5) última(6) vez(7)
 // 4: No(0) te(1) fíes(2) de(3) lo(4) que(5) crees(6) que(7) vas(8) a(9) tardar(10) Busca(11) algo(12) parecido(13) que(14) ya(15) hayas(16) hecho(17) y(18) cuenta(19) los(20) días(21) que(22) te(23) llevó(24)
 E.numero(1, N[0].T, N[0].S, { desde: 'r1', hacia: 'reloj1' });
-E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -380, cara: true, toca: [],
+E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -355, cara: true, toca: [],
   poses: [[0, 'de_pie'], [w(3, 2), 'senalar'], [w(3, 5), 'pensar'], [w(4, 0), 'encoger'], [w(4, 11), 'senalar'], [w(4, 17), 'coger'], [w(4, 19), 'senalar'], [wf(4, -1), 'celebrar']],
   sonrisa: [[0, 0.3], [w(3, 5), 0.5], [w(4, 0), -0.6], [w(4, 11), 0.4], [w(4, 19), 0.8], [wf(4, -1), 1.5]] });
 // el reloj rebobina hasta la última vez
