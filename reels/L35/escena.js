@@ -91,7 +91,7 @@ E.figura('yo1', { t0: N[0].S - 0.1, t1: fin(1), x: -375, cara: true,
 const QUEDAN = [11, 12, 13];
 for (let i = 0; i < 20; i++) { const a = N[0].S - 0.1 + i * 0.025, queda = QUEDAN.indexOf(i);
   if (queda >= 0) {
-    E.obj('p1_' + i, 'pieza', { t0: a, t1: w(4, 0) - 0.02, sale: 0.2, r: 27, pop: true, sfx: false,
+    E.obj('p1_' + i, 'pieza', { t0: a, t1: w(4, 0) - 0.15, sale: 0.15, r: 27, pop: true, sfx: false,
       x: PX(150, i), y: [[0, PY(-450, i)], [w(3, 4), PY(-450, i)], [w(3, 5) + 0.1, -300, 'inout']],
       on: [[0, 0.35], [w(3, 3), 0.35], [w(3, 4), 1]], s: [[0, 1], [w(3, 4), 1], [w(3, 5) + 0.1, 1.25, 'back']], caja: [-27, -27, 54, 54] });
   } else { const v = w(3, 3) + (i % 10) * 0.05;
@@ -153,7 +153,7 @@ const VEND = [5, 1, 12, 18, 9];   // una por columna: al juntarse en fila no se 
 const FILA = (k) => 150 + (k - 2) * 72;
 for (let i = 0; i < 20; i++) { const a = N[2].S - 0.1 + i * 0.03, vk = VEND.indexOf(i);
   if (vk >= 0) { const b = w(8, 0) + 0.2 + vk * 0.25, m = w(8, 15) + 0.35;
-    E.obj('p3_' + i, 'pieza', { t0: a, t1: TC + 0.1, sale: 0.25, r: 27, pop: true, sfx: false,
+    E.obj('p3_' + i, 'pieza', { t0: a, t1: TC - 0.05, sale: 0.2, r: 27, pop: true, sfx: false,
       x: [[0, PX(150, i)], [m, PX(150, i)], [m + 0.5, FILA(vk), 'inout']], y: [[0, PY(-460, i)], [m, PY(-460, i)], [m + 0.5, -330, 'inout']],
       on: [[0, 0.12], [b, 0.12], [b + 0.15, 1, 'out']], s: [[0, 1], [b, 1], [b + 0.12, 1.25], [b + 0.3, 1, 'out']], caja: [-27, -27, 54, 54] });
     E.obj('pv' + vk, 'pulso', { t0: b, t1: b + 0.6, x: PX(150, i), y: PY(-460, i), r0: 28, r1: 70, inspeccion: false });
@@ -168,7 +168,7 @@ E.sfx(w(8, 15), 'whoosh'); E.temblor(w(8, 9) + 0.1, 6, 0.3);
 E.obj('anio', 'relleno', { t0: w(8, 0) - 0.15, t1: w(8, 15), sale: 0.25, x: 150, y: -140, w: 360, h: 34, pop: true, rotulo: 'ESTE AÑO',
   f: [[w(8, 0), 0], [w(8, 6) + 0.3, 1, 'lin']], caja: [-180, -56, 360, 73] });
 E.sfx(w(8, 0), 'fill');
-E.obj('rot3', 'rotulo', { t0: wf(8, -1), t1: TC + 0.1, sale: 0.25, x: 150, y: -240, texto: 'LO QUE SE VENDE', size: 26, col: '#e6ce46', pop: true, caja: [-130, -16, 260, 32] });
+E.obj('rot3', 'rotulo', { t0: wf(8, -1), t1: TC - 0.05, sale: 0.2, x: 150, y: -205, texto: 'LO QUE SE VENDE', size: 26, col: '#e6ce46', pop: true, caja: [-130, -16, 260, 32] });
 E.obj('ch3', 'chispas', { t0: w(8, 15) + 0.85, t1: w(8, 15) + 1.65, x: 150, y: -330, r0: 120, r1: 240, inspeccion: false });
 E.golpe(w(8, 15) + 0.85, 0.04); E.destello(w(8, 15) + 0.85, 0.12);
 
