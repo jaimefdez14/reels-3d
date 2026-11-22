@@ -139,7 +139,7 @@ E.obj('ventas', 'pila', { t0: w(6, 0) - 0.1, t1: fin(2), x: 120, n: 6, w: 150, h
 for (let i = 0; i < 4; i++) { const a = w(6, 0) + i * 0.15;
   E.obj('mv' + i, 'moneda', { t0: a, t1: a + 0.6, entra: 0.06, sale: 0.12, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
     x: [[a, -300], [a + 0.5, 120, 'inout']], y: [[a, -300], [a + 0.25, -250], [a + 0.5, -110, 'in']] }); }
-[{ id: 'eq1', x: 330 }, { id: 'eq2', x: 450 }].forEach((q, i) => E.figura(q.id, { t0: w(6, 7) + i * 0.12, t1: fin(2), x: q.x, talla: 240, color: 'gris', dir: -1,
+[{ id: 'eq1', x: 330 }, { id: 'eq2', x: 425 }].forEach((q, i) => E.figura(q.id, { t0: w(6, 7) + i * 0.12, t1: fin(2), x: q.x, talla: 240, color: 'gris', dir: -1,
   poses: [[0, 'de_pie'], [w(6, 10) + i * 0.1, i ? 'encoger' : 'manos_cabeza']] }));
 E.obj('maraña2', 'maraña', { t0: w(6, 10), t1: fin(2), x: 390, y: -330, r: 40, p: [[w(6, 10), 0], [wf(6, -1) + 0.2, 1, 'out']], rot: [[w(6, 10), 0], [fin(2), 0.6, 'lin']], caja: [-55, -32, 110, 64] });
 E.temblor(w(6, 12), 12, 0.4);
