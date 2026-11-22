@@ -140,7 +140,7 @@ E.obj('tarroI', 'tarro', { t0: N[2].S - 0.1, t1: TG, x: TX, w: 220, h: 290, rotu
   nivel: [[w(7, 2), 0], [w(7, 3) + 0.4, 1, 'out'], [w(7, 5), 1], [w(7, 5) + 0.4, 0.93, 'out'], [w(8, 13), 0.93], [w(8, 15) + 0.3, 1, 'inout'],
     [yr0, 1], [yr0 + 0.25, 0.93], [yr0 + 0.5, 1], [yr0 + 0.75, 0.93], [yr0 + 1.0, 1], [yr0 + 1.25, 0.93], [yr1, 1]],
   barrido: [w(7, 3) + 0.4, w(8, 15) + 0.3, yr1], caja: [-110, -290, 220, 290], refl: true });
-E.obj('cInv', 'contador', { t0: w(7, 2) - 0.1, t1: TG, x: TX, y: -345, pop: true, suf: ' €', size: 46, col: 'txt', v: [[w(7, 2), 0], [w(7, 3) + 0.4, 500000, 'out']], caja: [-120, -28, 240, 56] });
+E.obj('cInv', 'contador', { t0: w(7, 2) - 0.1, t1: TG, x: TX, y: -385, pop: true, suf: ' €', size: 46, col: 'txt', v: [[w(7, 2), 0], [w(7, 3) + 0.4, 500000, 'out']], caja: [-120, -28, 240, 56] });
 E.sfx(w(7, 2), 'fill');
 // «saca como mucho el cuatro por ciento al año»: el 4 % rueda y una moneda sale del tarro hacia el muñeco
 E.obj('pct4', 'contador', { t0: w(7, 8) - 0.1, t1: w(8, 16) - 0.05, sale: 0.2, x: LX, y: -470, pop: true, suf: ' %', size: 72, col: '#e6ce46', miles: false,
@@ -157,7 +157,7 @@ for (let i = 0; i < 4; i++) { const a = w(8, 4) + i * 0.15;
     x: [[a, TX], [a + 0.6, LX + 30, 'inout']], y: [[a, -260], [a + 0.3, -400], [a + 0.6, -270, 'in']] }); }
 E.sfx(w(8, 5), 'fill');
 // «Y como el resto sigue rindiendo»: monedas que caen dentro y el tarro vuelve a llenarse
-E.obj('rinde', 'rotulo', { t0: w(8, 12), t1: w(8, 24), sale: 0.2, x: TX, y: -420, pop: true, texto: 'SIGUE RINDIENDO', size: 24, col: '#e6ce46', caja: [-130, -16, 260, 32] });
+E.obj('rinde', 'rotulo', { t0: w(8, 12), t1: w(8, 24), sale: 0.2, x: TX, y: -455, pop: true, texto: 'SIGUE RINDIENDO', size: 24, col: '#e6ce46', caja: [-130, -16, 260, 32] });
 for (let i = 0; i < 5; i++) { const a = w(8, 13) + i * 0.16;
   E.obj('rd' + i, 'moneda', { t0: a, t1: a + 0.55, entra: 0.05, sale: 0.12, r: 16, n: '', libre: true, estela: 4, sfx: false, inspeccion: false,
     x: [[a, TX - 90 + i * 45], [a + 0.5, TX - 20 + i * 10, 'in']], y: [[a, -470], [a + 0.5, -200, 'in']] }); }
