@@ -132,7 +132,7 @@ V.forEach((v, i) => { const [cx, cy] = v.q, a = i === 0 ? N[1].S - 0.1 : w(5, 4)
 });
 E.sfx(w(5, 4), 'fill');
 E.obj('colU2', 'rotulo', { t0: w(5, 4) + 0.1, t1: fin(2), x: HX[0], y: -430, texto: 'URGENTE', size: 20, col: GRIS, pop: true, caja: [-80, -14, 160, 28] });
-E.obj('colN2', 'rotulo', { t0: w(5, 4) + 0.2, t1: fin(2), x: HX[1], y: -430, texto: 'NO URGENTE', size: 20, col: GRIS, pop: true, caja: [-82, -14, 164, 28] });
+E.obj('colN2', 'rotulo', { t0: w(5, 4) + 0.5, t1: fin(2), x: HX[1], y: -430, texto: 'NO URGENTE', size: 20, col: GRIS, pop: true, caja: [-82, -14, 164, 28] });
 // el contador suma las casillas decididas: 0 → 4
 E.obj('cuenta2', 'contador', { t0: w(6, 0) - 0.1, t1: fin(2), x: 370, y: -500, pop: true, suf: ' de 4', size: 50, col: 'txt', miles: false,
   v: [[w(6, 0), 0], [w(6, 4), 0], [w(6, 5), 1, 'out'], [w(6, 10), 1], [w(6, 11), 2, 'out'], [w(6, 17), 2], [w(6, 18), 3, 'out'], [w(6, 30), 3], [wf(6, -1), 4, 'out']],
@@ -156,7 +156,7 @@ const B3 = 130;
 E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -370, cara: true,
   poses: [[0, 'de_pie'], [w(7, 2), 'senalar'], [w(7, 6), 'celebrar'], [w(7, 7), 'senalar'], [wf(7, -1), 'celebrar'], [w(8, 0), 'de_pie'], [w(8, 3), 'senalar'], [w(8, 9), 'pensar'], [w(8, 13), 'manos_cabeza']],
   sonrisa: [[w(7, 2), 0.5], [w(7, 6), 1.2], [w(7, 7), 0.6], [wf(7, -1), 1.5], [w(8, 3), 0.6], [w(8, 9), -0.2], [w(8, 13), -1.2]] });
-E.obj('hoy3', 'relleno', { t0: N[2].S - 0.15, t1: w(8, 0) + 0.1, sale: 0.25, x: B3, y: -430, w: 400, h: 46, rotulo: [[0, 'LO DE HOY'], [w(7, 6) + 0.3, 'LO DE HOY, HECHO']],
+E.obj('hoy3', 'relleno', { t0: N[2].S - 0.15, t1: w(8, 0) - 0.05, sale: 0.2, x: B3, y: -430, w: 400, h: 46, rotulo: [[0, 'LO DE HOY'], [w(7, 6) + 0.3, 'LO DE HOY, HECHO']],
   f: [[w(7, 2), 0], [w(7, 6) + 0.3, 1, 'inout']], barrido: [w(7, 6) + 0.3], caja: [-200, -57, 400, 80] });
 E.obj('imp3', 'relleno', { t0: N[2].S - 0.1, t1: w(8, 0) + 0.1, sale: 0.25, x: B3, y: -280, w: 400, h: 46, rotulo: 'IMPORTANTE, SIN PRISA', r: 60,
   f: [[w(7, 7), 0], [wf(7, -1), 1, 'inout']], barrido: [wf(7, -1)], caja: [-200, -57, 400, 80] });
