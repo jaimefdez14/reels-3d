@@ -123,7 +123,7 @@ E.golpe(w(4, 16) + 0.2, 0.04); E.temblor(w(4, 16) + 0.25, 10, 0.35);
 // 5: La(0) segunda(1) deja(2) que(3) lo(4) pruebe(5)
 // 6: Dale(0) una(1) semana(2) de(3) prueba(4) o(5) una(6) primera(7) sesión(8) Lo(9) que(10) ya(11) siente(12) como(13) suyo(14) no(15) lo(16) quiere(17) soltar(18)
 E.numero(2, N[1].T, N[1].S, { desde: 'tarroP', hacia: 'prod2' });
-E.figura('yo2', { t0: N[1].S - 0.1, t1: fin(2), x: -390, cara: true,
+E.figura('yo2', { t0: N[1].S - 0.1, t1: fin(2), x: -360, cara: true,
   poses: [[0, 'de_pie'], [w(5, 2), 'ofrecer'], [w(5, 5) + 0.3, 'de_pie'], [w(6, 0), 'senalar'], [w(6, 5), 'ofrecer'], [w(6, 9), 'de_pie'], [w(6, 15), 'coger'], [w(6, 17) + 0.3, 'celebrar']],
   sonrisa: [[w(5, 2), 0.6], [w(6, 0), 0.5], [w(6, 15), 0], [w(6, 17) + 0.3, 1.5]] });
 E.figura('cli2', { t0: N[1].S - 0.1, t1: fin(2), x: 390, dir: -1, color: 'gris', cara: true, toca: ['prod2'],
@@ -155,7 +155,7 @@ E.golpe(w(6, 14), 0.04); E.sfx(w(6, 17), 'thud'); E.destello(w(6, 14), 0.12);
 // 8: Si(0) sabe(1) que(2) el(3) mes(4) que(5) viene(6) cuesta(7) más(8) esperar(9) también(10) le(11) sale(12) caro(13)
 E.numero(3, N[2].T, N[2].S, { desde: 'corazon2', hacia: 'pilaHoy' });
 const PH = -160, PM = 120;
-E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -400, cara: true,
+E.figura('yo3', { t0: N[2].S - 0.1, t1: TC, x: -365, cara: true,
   poses: [[0, 'de_pie'], [w(7, 4), 'senalar'], [w(7, 8), 'ofrecer'], [w(8, 0), 'senalar'], [w(8, 9), 'de_pie'], [wf(8, -1), 'celebrar']],
   sonrisa: [[w(7, 4), 0.3], [w(7, 8), 0.7], [w(8, 9), 0.4], [wf(8, -1), 1.4]] });
 E.figura('cli3', { t0: N[2].S - 0.1, t1: TC, x: 400, dir: -1, color: 'gris', cara: true,
@@ -170,7 +170,7 @@ E.obj('flecha3', 'flecha', { t0: w(7, 6), t1: w(8, 9), sale: 0.2, de: [PH + 40, 
 E.obj('sube3', 'rotulo', { t0: w(7, 7), t1: w(8, 9), sale: 0.2, x: PM, y: -235, texto: 'SUBE', size: 28, col: ROJO, pop: true, caja: [-50, -17, 100, 34] });
 E.sfx(w(7, 7), 'fill'); E.golpe(w(7, 7) + 0.4, 0.03);
 // «dile desde cuándo»: el reloj se rellena hasta el día de la subida
-E.obj('reloj3', 'relojAm', { t0: w(7, 8) - 0.1, t1: w(8, 9), sale: 0.25, x: -20, y: -430, r: 70, texto: '', pop: true,
+E.obj('reloj3', 'relojAm', { t0: w(7, 8) - 0.1, t1: w(8, 9) - 0.1, sale: 0.2, x: -20, y: -430, r: 70, texto: '', pop: true,
   p: [[w(7, 9), 0], [w(8, 6), 1, 'inout']], caja: [-70, -70, 140, 140] });
 E.obj('rotDesde', 'rotulo', { t0: w(7, 9), t1: w(8, 9), sale: 0.2, x: 210, y: -430, texto: 'DESDE…', size: 28, col: '#e6ce46', pop: true, caja: [-70, -17, 140, 34] });
 E.obj('ch3a', 'chispas', { t0: w(8, 6), t1: w(8, 6) + 0.8, x: -20, y: -430, r0: 80, r1: 160, inspeccion: false });
