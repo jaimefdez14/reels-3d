@@ -18,7 +18,7 @@ const TC = w(9, 0) - 0.1;   // remate y resumen
 const ROJO = '#e4574f';
 
 E.camara([
-  [0, [0, -380, 1.04]], [w(0, 7), [0, -385, 1.06]], [w(1, 0), [0, -380, 1.02]], [w(1, 7), [10, -385, 1.04]], [w(1, 17), [0, -390, 1.06]],
+  [0, [0, -380, 1.04]], [w(0, 6), [0, -385, 1.06]], [w(1, 0), [0, -380, 1.02]], [w(1, 9), [10, -385, 1.04]], [w(1, 16), [0, -390, 1.06]],
   [w(2, 0), [0, -380, 1.02]], [w(2, 8), [-15, -385, 1.04]], [w(2, 13), [0, -390, 1.06]], [N[0].T, [0, -390, 1.05]],
   [N[0].S - 0.05, [0, -380, 1], 'lin'], [w(4, 0), [-15, -385, 1.03]], [w(4, 11), [10, -385, 1.05]], [N[1].T, [0, -390, 1.06]],
   [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(6, 0), [-15, -385, 1.04]], [w(6, 9), [15, -385, 1.05]], [N[2].T, [0, -390, 1.05]],
@@ -26,47 +26,47 @@ E.camara([
 ]);
 
 // ---------- gancho ----------
-// 0: Tu(0) cliente(1) dice(2) que(3) se(4) lo(5) pensará(6) y(7) no(8) vuelve(9) a(10) escribir(11)   [bocadillo «Me lo pienso y te digo.»]
-// 1: Comprar(0) le(1) cuesta(2) dinero(3) y(4) esperar(5) nada(6) Perder(7) cien(8) euros(9) duele(10) casi(11) el(12) doble(13) de(14) lo(15) que(16) alegra(17) ganarlos(18)
+// 0: Perder(0) cien(1) euros(2) te(3) duele(4) el(5) doble(6) de(7) lo(8) que(9) te(10) alegra(11) ganarlos(12)
+// 1: Por(0) eso(1) tu(2) cliente(3) dice(4) que(5) se(6) lo(7) pensará(8) y(9) no(10) vuelve(11) a(12) escribir(13) comprar(14) le(15) cuesta(16) dinero(17) y(18) esperar(19) nada(20)   [bocadillo «Me lo pienso y te digo.»]
 // 2: Se(0) llama(1) aversión(2) a(3) la(4) pérdida(5) lo(6) midieron(7) Kahneman(8) y(9) Tversky(10) y(11) hay(12) tres(13) formas(14) de(15) usarla(16) al(17) vender(18)
 // el vendedor (amarillo) a la derecha, el cliente (gris) a la izquierda: su bocadillo apunta hacia él
 E.figura('yo', { t0: 0, t1: fin(0), x: 360, dir: -1, cara: true,
-  poses: [[0, 'ofrecer'], [w(0, 7), 'de_pie'], [w(0, 9), 'encoger'], [w(1, 0), 'senalar'], [w(1, 5), 'encoger'], [w(1, 7), 'de_pie'], [w(1, 10), 'triste'],
-    [w(1, 17), 'celebrar'], [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 11), 'de_pie'], [w(2, 13), 'senalar'], [w(2, 18), 'celebrar']],
-  sonrisa: [[0, 1], [w(0, 7), 0], [w(0, 9), -1], [w(1, 0), 0], [w(1, 5), -0.6], [w(1, 10), -1.3], [w(1, 17), 1.2], [w(2, 2), 0.3], [w(2, 18), 1.5]] });
-E.figura('cli', { t0: 0, t1: w(0, 9) + 0.4, sale: 0.35, x: [[0, -370], [w(0, 7), -370], [w(0, 9) + 0.5, -420, 'in']], dir: [[0, 1], [w(0, 7), 1], [w(0, 7) + 0.05, -1]],
-  color: 'gris', cara: true, poses: [[0, 'pensar'], [w(0, 7), 'andar']] });
-E.obj('bocaCli', 'bocadillo', { t0: 0.3, t1: w(0, 8), sale: 0.2, x: -40, y: -480, w: 400, h: 80, texto: 'Me lo pienso y te digo.', size: 28, pop: true,
-  on: [[0.3, 0], [0.8, 1]], caja: [-200, -40, 400, 106] });
-// el producto y su botón de comprar, entre los dos
-E.obj('prod0', 'compra', { t0: 0.1, t1: w(1, 7) + 0.1, sale: 0.25, x: 30, y: -180, w: 230, h: 300, pop: true,
-  espera: [[0, 0], [w(0, 7), 0], [w(0, 9), 1], [w(1, 0), 1], [w(1, 0) + 0.2, 0], [w(1, 5), 0], [w(1, 5) + 0.2, 1]], pulsa: [[w(1, 0), 0], [w(1, 0) + 0.15, 1], [w(1, 0) + 0.35, 0]],
+  poses: [[0, 'senalar'], [w(0, 4), 'encoger'], [w(0, 8), 'de_pie'], [w(0, 11), 'celebrar'], [w(1, 0), 'de_pie'], [w(1, 4), 'ofrecer'], [w(1, 9), 'encoger'],
+    [w(1, 14), 'senalar'], [w(1, 19), 'encoger'], [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 11), 'de_pie'], [w(2, 13), 'senalar'], [w(2, 18), 'celebrar']],
+  sonrisa: [[0, 0.3], [w(0, 4), -1.3], [w(0, 11), 1.2], [w(1, 0), 0], [w(1, 9), -0.6], [w(1, 14), 0], [w(1, 19), -0.6], [w(2, 2), 0.3], [w(2, 18), 1.5]] });
+// «Perder cien euros te duele el doble de lo que te alegra ganarlos»: dos barras que se rellenan desde el primer segundo
+E.obj('barP', 'relleno', { t0: 0.1, t1: w(1, 1), sale: 0.2, x: -160, y: -420, w: 340, h: 50, pop: true, rotulo: 'PERDER 100 €',
+  f: [[w(0, 2) - 0.1, 0], [w(0, 4) + 0.5, 0.95, 'out']], caja: [-170, -60, 340, 90] });
+E.obj('barG', 'relleno', { t0: w(0, 6), t1: w(1, 1), sale: 0.2, x: -160, y: -260, w: 340, h: 50, pop: true, rotulo: 'GANAR 100 €',
+  f: [[w(0, 11) - 0.1, 0], [w(0, 11) + 0.5, 0.5, 'out']], caja: [-170, -60, 340, 90] });
+E.sfx(w(0, 2), 'fill'); E.sfx(w(0, 11), 'fill');
+E.obj('doble', 'rotulo', { t0: w(0, 5), t1: w(1, 1), sale: 0.2, x: 120, y: -420, texto: 'CASI ×2', size: 34, col: ROJO, pop: true, caja: [-75, -20, 150, 40] });
+E.temblor(w(0, 4) + 0.3, 12, 0.4);
+E.obj('chG', 'chispas', { t0: w(0, 11) + 0.5, t1: w(0, 11) + 1.2, x: -160, y: -260, r0: 40, r1: 110, inspeccion: false });
+// «Por eso tu cliente dice que se lo pensará»: llega el cliente, el producto con su botón y el bocadillo
+E.figura('cli', { t0: w(1, 2) - 0.1, t1: w(1, 9) + 0.4, sale: 0.35, x: [[0, -370], [w(1, 8) + 0.1, -370], [w(1, 9) + 0.5, -420, 'in']], dir: [[0, 1], [w(1, 8) + 0.1, 1], [w(1, 8) + 0.15, -1]],
+  color: 'gris', cara: true, poses: [[0, 'pensar'], [w(1, 8) + 0.1, 'andar']] });
+E.obj('bocaCli', 'bocadillo', { t0: w(1, 3), t1: w(1, 8) + 0.2, sale: 0.2, x: -40, y: -480, w: 400, h: 80, texto: 'Me lo pienso y te digo.', size: 28, pop: true,
+  on: [[w(1, 3), 0], [w(1, 4), 1]], caja: [-200, -40, 400, 106] });
+E.obj('prod0', 'compra', { t0: w(1, 2) - 0.1, t1: w(1, 14) + 1.7, sale: 0.25, x: 30, y: -180, w: 230, h: 300, pop: true,
+  espera: [[0, 0], [w(1, 8), 0], [w(1, 9), 1], [w(1, 14), 1], [w(1, 14) + 0.2, 0], [w(1, 19), 0], [w(1, 19) + 0.2, 1]], pulsa: [[w(1, 14), 0], [w(1, 14) + 0.15, 1], [w(1, 14) + 0.35, 0]],
   caja: [-115, -150, 230, 300] });
 // «y no vuelve a escribir»: en su sitio queda un móvil sin avisos; los días pasan
-E.obj('movil0', 'telefono', { t0: w(0, 9), t1: w(1, 0) + 0.1, sale: 0.25, x: -330, y: -190, w: 150, h: 260, pop: true, avisos: 0,
-  brillo: [[w(0, 9), 1], [w(1, 0), 0.3]], caja: [-75, -130, 150, 260] });
-E.obj('dias0', 'dias', { t0: w(0, 10), t1: w(1, 0) + 0.1, sale: 0.25, x: -130, y: -420, letras: ['L', 'M', 'X', 'J', 'V'], gap: 76, pop: true,
-  luz: [[w(0, 11), 0], [w(1, 0) - 0.1, 4, 'lin']], caja: [-185, -32, 370, 64] });
-E.obj('rotSin', 'rotulo', { t0: w(0, 11), t1: w(1, 0) + 0.1, sale: 0.25, x: -130, y: -500, texto: 'NI UN MENSAJE', size: 24, col: '#9a9c9b', pop: true, caja: [-120, -16, 240, 32] });
-E.temblor(w(0, 11), 8, 0.35);
-// «Comprar le cuesta dinero»: la pila baja y las monedas vuelan al producto; «y esperar, nada»: no se mueve nada
-E.obj('pila0', 'pila', { t0: w(1, 0) + 0.12, t1: w(1, 7) - 0.05, sale: 0.25, x: -300, n: 7, w: 160, hh: 26, pop: true,
-  k: [[w(1, 0) + 0.12, 0], [w(1, 0) + 0.5, 7, 'out'], [w(1, 2), 7], [w(1, 3) + 0.3, 4, 'inout']], caja: [-80, -160, 160, 160], refl: true });
-for (let i = 0; i < 3; i++) { const a = w(1, 2) + i * 0.15;
+E.obj('movil0', 'telefono', { t0: w(1, 9), t1: w(1, 14) - 0.05, sale: 0.25, x: -330, y: -190, w: 150, h: 260, pop: true, avisos: 0,
+  brillo: [[w(1, 9), 1], [w(1, 13), 0.3]], caja: [-75, -130, 150, 260] });
+E.obj('dias0', 'dias', { t0: w(1, 10), t1: w(1, 14) - 0.05, sale: 0.25, x: -130, y: -420, letras: ['L', 'M', 'X', 'J', 'V'], gap: 76, pop: true,
+  luz: [[w(1, 10), 0], [w(1, 14) - 0.15, 4, 'lin']], caja: [-185, -32, 370, 64] });
+E.obj('rotSin', 'rotulo', { t0: w(1, 11), t1: w(1, 14) - 0.05, sale: 0.25, x: -130, y: -500, texto: 'NI UN MENSAJE', size: 24, col: '#9a9c9b', pop: true, caja: [-120, -16, 240, 32] });
+E.temblor(w(1, 11), 8, 0.35);
+// «comprar le cuesta dinero»: la pila baja y las monedas vuelan al producto; «y esperar, nada»: no se mueve nada
+E.obj('pila0', 'pila', { t0: w(1, 14) + 0.12, t1: w(1, 20) + 0.3, sale: 0.25, x: -300, n: 7, w: 160, hh: 26, pop: true,
+  k: [[w(1, 14) + 0.12, 0], [w(1, 14) + 0.5, 7, 'out'], [w(1, 16), 7], [w(1, 17) + 0.3, 4, 'inout']], caja: [-80, -160, 160, 160], refl: true });
+for (let i = 0; i < 3; i++) { const a = w(1, 16) + i * 0.15;
   E.obj('paga' + i, 'moneda', { t0: a, t1: a + 0.7, entra: 0.05, sale: 0.12, r: 22, n: '', libre: true, estela: 5, sfx: i === 0, inspeccion: false,
     x: [[a, -300], [a + 0.6, 30, 'inout']], y: [[a, -120], [a + 0.3, -300], [a + 0.6, -200, 'in']] }); }
-E.obj('rotCompra', 'rotulo', { t0: w(1, 0) + 0.15, t1: w(1, 7) - 0.12, sale: 0.2, x: -100, y: -440, pop: true,
-  texto: [[0, 'COMPRAR: PAGA'], [w(1, 5), 'ESPERAR: GRATIS']], size: 30, col: '#e6ce46', caja: [-160, -18, 320, 36] });
-E.golpe(w(1, 3), 0.03);
-// «Perder cien euros duele casi el doble de lo que alegra ganarlos»: dos barras que se rellenan
-E.obj('barP', 'relleno', { t0: w(1, 7) - 0.1, t1: w(2, 0), sale: 0.2, x: -160, y: -420, w: 340, h: 50, pop: true, rotulo: 'PERDER 100 €',
-  f: [[w(1, 10) - 0.05, 0], [w(1, 10) + 0.6, 0.95, 'out']], caja: [-170, -60, 340, 90] });
-E.obj('barG', 'relleno', { t0: w(1, 13), t1: w(2, 0), sale: 0.2, x: -160, y: -260, w: 340, h: 50, pop: true, rotulo: 'GANAR 100 €',
-  f: [[w(1, 17) - 0.05, 0], [w(1, 17) + 0.5, 0.5, 'out']], caja: [-170, -60, 340, 90] });
-E.sfx(w(1, 10), 'fill'); E.sfx(w(1, 17), 'fill');
-E.obj('doble', 'rotulo', { t0: w(1, 11), t1: w(2, 0), sale: 0.2, x: 120, y: -420, texto: 'CASI ×2', size: 34, col: ROJO, pop: true, caja: [-75, -20, 150, 40] });
-E.temblor(w(1, 10) + 0.3, 12, 0.4);
-E.obj('chG', 'chispas', { t0: w(1, 17) + 0.5, t1: w(1, 17) + 1.2, x: -160, y: -260, r0: 40, r1: 110, inspeccion: false });
+E.obj('rotCompra', 'rotulo', { t0: w(1, 14) + 0.15, t1: w(1, 20) + 0.3, sale: 0.2, x: -100, y: -440, pop: true,
+  texto: [[0, 'COMPRAR: PAGA'], [w(1, 19), 'ESPERAR: GRATIS']], size: 30, col: '#e6ce46', caja: [-160, -18, 320, 36] });
+E.golpe(w(1, 17), 0.03);
 // «Se llama aversión a la pérdida: lo midieron Kahneman y Tversky»
 E.obj('nombre', 'rotulo', { t0: w(2, 2) - 0.1, t1: w(2, 12), sale: 0.2, x: -60, y: -470, texto: 'AVERSIÓN A LA PÉRDIDA', size: 38, col: '#e6ce46', peso: 700, track: 2, pop: true, caja: [-280, -24, 560, 48] });
 E.obj('rayosN', 'rayos', { t0: w(2, 2), t1: w(2, 12), sale: 0.2, x: -60, y: -470, r: 300, z: -2, p: [[w(2, 2), 0], [w(2, 5), 0.8, 'out']], inspeccion: false });

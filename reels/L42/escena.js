@@ -15,51 +15,54 @@ const fin = k => N[k].T + 0.45;
 const TC = w(10, 0) - 0.1;   // resumen
 
 E.camara([
-  [0, [0, -380, 1.04]], [w(0, 10), [15, -385, 1.07]], [w(1, 0), [0, -380, 1.02]], [w(1, 14), [10, -390, 1.06]], [w(2, 6), [0, -380, 1.03]],
-  [w(2, 21), [-10, -385, 1.06]], [w(3, 0), [0, -380, 1.02]], [N[0].T, [20, -390, 1.05]],
+  [0, [0, -380, 1.04]], [w(0, 3), [15, -385, 1.07]], [w(0, 7), [0, -385, 1.03]], [w(1, 0), [-10, -380, 1.02]], [w(1, 8), [10, -390, 1.06]], [w(2, 0), [0, -380, 1.02]],
+  [w(2, 7), [-10, -385, 1.06]], [w(3, 0), [0, -380, 1.02]], [N[0].T, [20, -390, 1.05]],
   [N[0].S - 0.05, [0, -380, 1], 'lin'], [w(5, 0), [-15, -385, 1.04]], [w(5, 6), [10, -385, 1.05]], [N[1].T, [0, -390, 1.06]],
   [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(7, 0), [-15, -385, 1.03]], [w(7, 9), [10, -385, 1.05]], [N[2].T, [0, -390, 1.05]],
   [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(9, 0), [15, -385, 1.03]], [wf(9, -1), [0, -390, 1.06]], [TC, [0, -390, 1.05]],
 ]);
 
 // ---------- gancho ----------
-// 0: Llevas(0) meses(1) intentando(2) cambiar(3) un(4) hábito(5) y(6) no(7) notas(8) que(9) avances(10)   [bocadillo «Esta vez sí.»]
-// 1: Se(0) llama(1) mejora(2) continua(3) un(4) 1(5) %(6) más(7) cada(8) día(9) y(10) acabas(11) el(12) año(13) 37(14) veces(15) mejor(16) que(17) al(18) empezar(19)
-// 2: Es(0) una(1) cuenta(2) no(3) una(4) promesa(5) y(6) al(7) revés(8) también(9) funciona(10) empeorar(11) un(12) 1(13) %(14) al(15) día(16) te(17) deja(18) casi(19) en(20) cero(21)
+// 0: Un(0) 1(1) %(2) mejor(3) cada(4) día(5) son(6) 37(7) veces(8) mejor(9) en(10) un(11) año(12)   [bocadillo «¿Solo un 1 %?»]
+// 1: Y(0) un(1) 1(2) %(3) peor(4) cada(5) día(6) te(7) deja(8) casi(9) en(10) cero(11) Se(12) llama(13) mejora(14) continua(15)
+// 2: Es(0) una(1) cuenta(2) no(3) una(4) promesa(5) pero(6) explica(7) por(8) qué(9) lo(10) pequeño(11) suma(12)
 // 3: Tres(0) reglas(1) para(2) llevarlo(3) a(4) la(5) práctica(6)
 const HX = 150;
 E.figura('yo', { t0: 0, t1: fin(0), x: -340, cara: true,
-  poses: [[0, 'celebrar'], [w(0, 2), 'levantar'], [w(0, 5), 'de_pie'], [w(0, 7), 'encoger'], [w(0, 10), 'manos_cabeza'], [w(1, 0), 'de_pie'], [w(1, 2), 'senalar'],
-    [w(1, 11), 'ofrecer'], [w(1, 15), 'celebrar'], [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 11), 'triste'], [w(2, 19), 'manos_cabeza'],
+  poses: [[0, 'celebrar'], [w(0, 3), 'levantar'], [w(0, 6), 'senalar'], [w(0, 8), 'celebrar'], [w(1, 0), 'de_pie'], [w(1, 4), 'triste'], [w(1, 7), 'manos_cabeza'],
+    [w(1, 12), 'senalar'], [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 6), 'ofrecer'], [w(2, 10), 'celebrar'],
     [w(3, 0), 'de_pie'], [w(3, 1), 'senalar'], [w(3, 3), 'celebrar']],
-  sonrisa: [[0, 1.4], [w(0, 5), 0.6], [w(0, 7), -0.6], [w(0, 10), -1.2], [w(1, 2), 0.4], [w(1, 15), 1.5], [w(2, 2), 0.4], [w(2, 11), -0.8], [w(2, 19), -1.3], [w(3, 1), 0.4], [w(3, 3), 1.4]] });
-E.obj('bocaH', 'bocadillo', { t0: 0.3, t1: w(0, 7), sale: 0.2, x: -110, y: -490, w: 300, h: 80, texto: 'Esta vez sí.', size: 30, pop: true,
+  sonrisa: [[0, 1.4], [w(0, 6), 0.8], [w(0, 8), 1.5], [w(1, 0), 0.3], [w(1, 4), -0.8], [w(1, 7), -1.3], [w(1, 12), 0.3], [w(2, 2), 0.4], [w(2, 10), 1.4], [w(3, 1), 0.4], [w(3, 3), 1.4]] });
+// regla 20: la duda del espectador va en bocadillo, sin voz, mientras la voz dice la cifra
+E.obj('bocaH', 'bocadillo', { t0: 0.3, t1: w(0, 8), sale: 0.2, x: -110, y: -490, w: 300, h: 80, texto: '¿Solo un 1 %?', size: 30, pop: true,
   on: [[0.3, 0], [0.8, 1]], caja: [-150, -40, 300, 106] });
-// «llevas meses»: los días pasan, la barra del hábito sube y vuelve atrás
-E.obj('habito', 'relleno', { t0: 0.1, t1: w(1, 0) + 0.1, sale: 0.25, x: HX, y: -330, w: 360, h: 46, rotulo: 'TU HÁBITO',
-  f: [[0.3, 0], [w(0, 2), 0.32, 'out'], [w(0, 4), 0.06, 'inout'], [w(0, 6), 0.3, 'out'], [w(0, 8), 0.05, 'inout'], [w(0, 10), 0.22, 'out'], [wf(0, -1) + 0.2, 0.04, 'inout']],
-  caja: [-180, -57, 360, 80] });
-E.obj('diasH', 'dias', { t0: 0.1, t1: w(1, 0) + 0.1, sale: 0.25, x: HX, y: -190, gap: 70, luz: [[0.3, 0], [wf(0, -1), 6, 'lin']], caja: [-240, -32, 480, 64] });
-E.temblor(w(0, 8), 10, 0.35);
-// «un 1 % más cada día»: moneda del 1 %; la pila crece y el contador rueda hasta × 37
-E.obj('uno', 'moneda', { t0: w(1, 5) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: -460, r: 44, n: [[0, '1 %'], [w(2, 8), '−1 %']], pop: true, sfx: true,
-  s: [[0, 1], [w(1, 8), 1], [w(1, 8) + 0.15, 1.15], [w(1, 8) + 0.35, 1], [w(1, 9), 1], [w(1, 9) + 0.15, 1.15], [w(1, 9) + 0.35, 1]],
-  luz: [[0, 1], [w(2, 8), 1], [w(2, 8) + 0.3, 0.55]], inspeccion: false, caja: [-44, -44, 88, 88] });
-E.obj('pilaH', 'pila', { t0: w(1, 8) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, n: 10, w: 180, hh: 24,
-  k: [[w(1, 8), 1], [w(1, 14) + 0.3, 10, 'inout'], [w(2, 11), 10], [w(2, 21), 0.4, 'inout']],
-  luz: [[0, 1], [w(2, 11), 1], [w(2, 16), 0.5]], barrido: [w(1, 16)], caja: [-90, -212, 180, 212], refl: true });
-E.obj('x37', 'contador', { t0: w(1, 11) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX + 250, y: -330, pre: '× ', size: 64, col: 'txt', miles: false, pop: true,
-  v: [[w(1, 11), 1], [w(1, 14) + 0.3, 37, 'inout'], [w(2, 11), 37], [w(2, 21), 0, 'inout']], barrido: [w(1, 16)], caja: [-90, -36, 180, 72] });
-E.obj('rotH', 'rotulo', { t0: w(1, 2) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: [[0, -300], [w(1, 4) - 0.1, -300], [w(1, 5), 60, 'inout']], pop: true, size: 28, s: [[0, 1.45], [w(1, 4) - 0.1, 1.45], [w(1, 5), 1, 'inout']], col: '#c9ccca',
-  texto: [[0, 'MEJORA CONTINUA'], [w(1, 12), 'UN AÑO'], [w(2, 1), 'UNA CUENTA'], [w(2, 7), 'AL REVÉS'], [w(2, 19), 'CASI CERO']], caja: [-160, -17, 320, 34] });
-E.sfx(w(1, 8), 'fill');
-E.obj('chH', 'chispas', { t0: w(1, 14) + 0.3, t1: w(1, 14) + 1.1, x: HX + 250, y: -330, r0: 70, r1: 160, inspeccion: false });
-E.golpe(w(1, 14) + 0.3, 0.05); E.destello(w(1, 16), 0.15);
-E.sfx(w(2, 11), 'whoosh');
-for (let i = 0; i < 5; i++) { const a = w(2, 13) + i * 0.3;
-  E.obj('cae' + i, 'moneda', { t0: a, t1: a + 0.8, entra: 0.05, sale: 0.2, r: 20, n: '', libre: true, estela: 5, sfx: false, inspeccion: false,
-    x: [[a, HX + 40], [a + 0.8, 600 + i * 30, 'in']], y: [[a, -180 + i * 18], [a + 0.35, -260, 'out'], [a + 0.8, -60, 'in']] }); }
-E.temblor(w(2, 21), 12, 0.4); E.golpe(w(2, 21), 0.04);
+// «un 1 % mejor cada día»: la moneda del 1 % entra con la primera palabra, los días se encienden y la pila crece
+E.obj('uno', 'moneda', { t0: 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: -460, r: 44, n: [[0, '1 %'], [w(1, 2), '−1 %'], [w(2, 10), '1 %']], pop: true, sfx: true,
+  s: [[0, 1], [w(0, 4), 1], [w(0, 4) + 0.15, 1.15], [w(0, 4) + 0.35, 1], [w(0, 5), 1], [w(0, 5) + 0.15, 1.15], [w(0, 5) + 0.35, 1],
+    [w(1, 5), 1], [w(1, 5) + 0.15, 1.15], [w(1, 5) + 0.35, 1], [w(1, 6), 1], [w(1, 6) + 0.15, 1.15], [w(1, 6) + 0.35, 1]],
+  luz: 1, inspeccion: false, caja: [-44, -44, 88, 88] });
+E.obj('diasH', 'dias', { t0: 0.3, t1: w(1, 8), sale: 0.25, x: HX, y: -570, gap: 70, pop: true,
+  luz: [[0.3, 0], [w(0, 3), 0], [wf(0, 5), 6, 'lin'], [w(1, 4) - 0.2, 6], [w(1, 4), 0], [wf(1, 6), 6, 'lin']], caja: [-240, -32, 480, 64] });
+E.obj('pilaH', 'pila', { t0: 0.3, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, n: 10, w: 180, hh: 24, pop: true,
+  k: [[0.3, 1], [w(0, 3), 1], [wf(0, 5), 3, 'out'], [w(0, 7), 3], [w(0, 9) + 0.2, 10, 'inout'], [w(1, 2), 10], [w(1, 11), 0.4, 'inout'],
+    [w(2, 9), 0.4], [wf(2, -1) + 0.2, 10, 'inout']],
+  luz: [[0, 1], [w(1, 2), 1], [w(1, 8), 0.5], [w(2, 9), 0.5], [w(2, 10), 1]], barrido: [w(0, 9) + 0.2, wf(2, -1) + 0.2], caja: [-90, -212, 180, 212], refl: true });
+E.obj('x37', 'contador', { t0: w(0, 6) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX + 250, y: -330, pre: '× ', size: 64, col: 'txt', miles: false, pop: true,
+  v: [[w(0, 6), 1], [w(0, 7) + 0.5, 37, 'inout'], [w(1, 7), 37], [w(1, 11), 0, 'inout'], [w(2, 9), 0], [wf(2, -1) + 0.2, 37, 'inout']],
+  barrido: [w(0, 8)], caja: [-90, -36, 180, 72] });
+E.obj('rotH', 'rotulo', { t0: 0.4, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: 60, pop: true, size: 28, col: '#c9ccca',
+  texto: [[0, '1 % AL DÍA'], [w(0, 6), 'UN AÑO'], [w(1, 0), 'AL REVÉS'], [w(1, 9), 'CASI CERO'], [w(1, 12), 'MEJORA CONTINUA'], [w(2, 0), 'UNA CUENTA'], [w(2, 7), 'LO PEQUEÑO SUMA']],
+  caja: [-160, -17, 320, 34] });
+E.sfx(w(0, 3), 'fill'); E.sfx(w(1, 7), 'whoosh'); E.sfx(w(2, 10), 'fill');
+E.obj('chH', 'chispas', { t0: w(0, 7) + 0.5, t1: w(0, 7) + 1.3, x: HX + 250, y: -330, r0: 70, r1: 160, inspeccion: false });
+E.golpe(w(0, 7) + 0.5, 0.05); E.destello(w(0, 8), 0.15);
+E.temblor(w(1, 11), 12, 0.4); E.golpe(w(1, 11), 0.04);
+// «lo pequeño suma»: monedas de un 1 % caen sobre la pila, que vuelve a subir
+for (let i = 0; i < 4; i++) { const a = w(2, 9) + i * 0.8 / 3;
+  E.obj('cae' + i, 'moneda', { t0: a, t1: a + 0.55, entra: 0.05, sale: 0.15, r: 20, n: '', libre: true, estela: 4, sfx: false, inspeccion: false,
+    x: HX, y: [[a, -430], [a + 0.55, -130, 'in']] }); }
+E.obj('chS', 'chispas', { t0: wf(2, -1) + 0.2, t1: wf(2, -1) + 1.0, x: HX + 250, y: -330, r0: 70, r1: 160, inspeccion: false });
+E.golpe(wf(2, -1) + 0.2, 0.04);
 // «Tres reglas para llevarlo a la práctica»: tres monedas; la primera crece y pasa a la regla uno
 E.obj('rayosH', 'rayos', { t0: w(3, 0), t1: fin(0), x: HX, y: -330, r: 300, z: -2, p: [[w(3, 0), 0], [w(3, 3), 1, 'out']], inspeccion: false });
 [0, 1, 2].forEach(i => { const a = w(3, 0) + i * 0.12;

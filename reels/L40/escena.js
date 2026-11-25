@@ -7,7 +7,7 @@
 const w = E.w, wf = E.wf;
 const D = TIMING.duration;
 E.config({ fondo: 'negro', sub: 'dos', cursiva: true, subY: 690, polvo: true, gancho: { lineas: [0], escala: 1.25 },
-  progreso: { n: 3, estilo: 'puntos', aparece: w(2, 3), gap: 70, y: 360 } });
+  progreso: { n: 3, estilo: 'puntos', aparece: w(1, 11), gap: 70, y: 360 } });
 
 // «El primero: // …» → T en «El», S en la primera palabra del punto
 const N = [3, 5, 7].map(li => ({ T: w(li, 0) - 0.05, S: w(li, 2) - 0.12 }));
@@ -18,8 +18,8 @@ const TE = w(11, 0) - 0.1;  // envío
 const ROJO = '#e4574f', GRIS = '#9a9c9b';
 
 E.camara([
-  [0, [0, -380, 1.04]], [w(0, 10), [20, -385, 1.07]], [w(1, 0), [0, -380, 1.02]], [w(1, 5), [-15, -385, 1.04]], [w(1, 13), [10, -390, 1.06]],
-  [w(2, 0), [0, -385, 1.03]], [N[0].T, [0, -390, 1.05]],
+  [0, [0, -380, 1.04]], [w(0, 3), [20, -385, 1.07]], [w(0, 10), [0, -380, 1.02]], [w(0, 15), [-15, -385, 1.04]], [w(1, 0), [10, -390, 1.06]],
+  [w(1, 6), [0, -385, 1.03]], [w(2, 0), [-10, -385, 1.05]], [N[0].T, [0, -390, 1.05]],
   [N[0].S - 0.05, [0, -380, 1], 'lin'], [w(4, 0), [-15, -385, 1.04]], [w(4, 7), [15, -385, 1.03]], [w(4, 13), [0, -390, 1.06]], [N[1].T, [0, -390, 1.05]],
   [N[1].S - 0.05, [0, -380, 1], 'lin'], [w(6, 0), [-15, -385, 1.04]], [w(6, 5), [10, -385, 1.06]], [w(6, 9), [0, -385, 1.03]], [N[2].T, [0, -390, 1.05]],
   [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(8, 0), [-15, -385, 1.04]], [w(8, 10), [10, -385, 1.03]], [w(8, 16), [-10, -385, 1.05]], [w(8, 24), [0, -390, 1.06]],
@@ -27,39 +27,39 @@ E.camara([
 ]);
 
 // ---------- gancho ----------
-// 0: Crees(0) que(1) para(2) dejar(3) de(4) trabajar(5) necesitas(6) un(7) millón(8) de(9) euros(10)   [bocadillo «Nunca podré dejar de trabajar.»]
-// 1: Hay(0) una(1) cuenta(2) más(3) exacta(4) veinticinco(5) veces(6) lo(7) que(8) gastas(9) en(10) un(11) año(12) Se(13) llama(14) regla(15) del(16) 4(17) %(18)
-// 2: Se(0) hace(1) en(2) tres(3) pasos(4)
+// 0: No(0) necesitas(1) un(2) millón(3) de(4) euros(5) para(6) dejar(7) de(8) trabajar(9) necesitas(10) veinticinco(11) veces(12) lo(13) que(14) gastas(15) en(16) un(17) año(18)   [bocadillo «Nunca podré dejar de trabajar.»]
+// 1: Se(0) llama(1) regla(2) del(3) 4(4) %(5) y(6) es(7) una(8) cuenta(9) de(10) tres(11) pasos(12)
+// 2: Se(0) hace(1) así(2)
 E.figura('yo', { t0: 0, t1: fin(0), x: -340, cara: true,
-  poses: [[0, 'pensar'], [w(0, 6), 'encoger'], [w(0, 8) + 0.2, 'manos_cabeza'], [w(1, 0), 'de_pie'], [w(1, 2), 'pensar'], [w(1, 5), 'senalar'], [w(1, 13), 'de_pie'],
-    [w(1, 17), 'celebrar'], [w(2, 0), 'de_pie'], [w(2, 3), 'ofrecer']],
-  sonrisa: [[0, -0.3], [w(0, 6), -0.8], [w(0, 8) + 0.2, -1.3], [w(1, 0), -0.2], [w(1, 5), 0.4], [w(1, 17), 1.5], [w(2, 3), 1]] });
-E.obj('bocaH', 'bocadillo', { t0: 0.35, t1: w(1, 0), sale: 0.2, x: -40, y: -490, w: 440, h: 80, texto: 'Nunca podré dejar de trabajar.', size: 25, pop: true,
+  poses: [[0, 'pensar'], [w(0, 3), 'encoger'], [w(0, 6), 'manos_cabeza'], [w(0, 10), 'de_pie'], [w(0, 11), 'senalar'], [w(0, 16), 'de_pie'],
+    [w(1, 2), 'celebrar'], [w(1, 6), 'de_pie'], [w(1, 11), 'ofrecer'], [w(2, 0), 'de_pie'], [w(2, 1), 'ofrecer']],
+  sonrisa: [[0, -0.3], [w(0, 3), -0.8], [w(0, 6), -1.3], [w(0, 10), -0.2], [w(0, 11), 0.4], [w(1, 2), 1.5], [w(1, 11), 1]] });
+E.obj('bocaH', 'bocadillo', { t0: 0.35, t1: w(0, 10), sale: 0.2, x: -40, y: -490, w: 440, h: 80, texto: 'Nunca podré dejar de trabajar.', size: 25, pop: true,
   on: [[0.35, 0], [0.9, 1]], caja: [-220, -40, 440, 106] });
-E.obj('rotMeta0', 'rotulo', { t0: w(0, 2) - 0.05, t1: w(1, 5) - 0.05, sale: 0.2, x: 150, y: -220, pop: true,
-  texto: [[0, 'PARA DEJAR DE TRABAJAR'], [w(1, 2) - 0.05, 'NO HACE FALTA TANTO']], size: 24, col: GRIS, caja: [-190, -16, 380, 32] });
-// el millón: rueda hasta 1.000.000 € y se apaga con «una cuenta más exacta»
-E.obj('millon', 'etiqueta', { t0: w(0, 5) - 0.1, t1: w(1, 5) - 0.05, sale: 0.25, x: 150, y: -330, w: 480, h: 120, r: 70, pop: true,
-  v: [[w(0, 6), 0], [w(0, 10) + 0.25, 1000000, 'out']], on: [[0, 1], [w(1, 1), 1], [w(1, 4), 0.3]],
-  s: [[0, 1], [w(1, 1), 1], [w(1, 4), 0.85, 'inout']], barrido: [w(0, 10) + 0.3], caja: [-240, -60, 480, 120] });
-E.sfx(w(0, 6), 'fill');
-E.golpe(w(0, 10) + 0.25, 0.04); E.temblor(w(0, 10) + 0.3, 12, 0.4);
-// «veinticinco veces lo que gastas en un año»: × 25 rueda; debajo, lo que se multiplica
-E.obj('x25h', 'contador', { t0: w(1, 5) - 0.1, t1: w(1, 13) + 0.05, sale: 0.2, x: 150, y: -390, pop: true, pre: '× ', size: 96, col: '#e6ce46', miles: false,
-  v: [[w(1, 5), 0], [w(1, 6) + 0.2, 25, 'out']], caja: [-130, -56, 260, 112] });
-E.obj('gastoH', 'rotulo', { t0: w(1, 7) - 0.05, t1: w(1, 13) + 0.05, sale: 0.2, x: 150, y: -270, pop: true, texto: 'LO QUE GASTAS EN UN AÑO', size: 26, col: '#c9ccca', caja: [-200, -16, 400, 32] });
-for (let i = 0; i < 6; i++) { const a = w(1, 9) + i * 0.1;
+E.obj('rotMeta0', 'rotulo', { t0: w(0, 6) - 0.05, t1: w(0, 10) - 0.05, sale: 0.2, x: 150, y: -220, pop: true,
+  texto: 'PARA DEJAR DE TRABAJAR', size: 24, col: GRIS, caja: [-190, -16, 380, 32] });
+// el millón: rueda hasta 1.000.000 € con «un millón de euros» y se apaga con «necesitas veinticinco veces»
+E.obj('millon', 'etiqueta', { t0: w(0, 1) + 0.1, t1: w(0, 11) - 0.05, sale: 0.25, x: 150, y: -330, w: 480, h: 120, r: 70, pop: true,
+  v: [[w(0, 2), 0], [w(0, 5) + 0.1, 1000000, 'out']], on: [[0, 1], [w(0, 9), 1], [w(0, 10), 0.3]],
+  s: [[0, 1], [w(0, 9), 1], [w(0, 10), 0.85, 'inout']], barrido: [w(0, 5) + 0.15], caja: [-240, -60, 480, 120] });
+E.sfx(w(0, 2), 'fill');
+E.golpe(w(0, 5) + 0.15, 0.04); E.temblor(w(0, 5) + 0.2, 12, 0.4);
+// «necesitas veinticinco veces lo que gastas en un año»: × 25 rueda; debajo, lo que se multiplica
+E.obj('x25h', 'contador', { t0: w(0, 10) - 0.1, t1: fin(0), sale: 0.2, x: 150, y: -390, pop: true, pre: '× ', size: 96, col: '#e6ce46', miles: false,
+  v: [[w(0, 11), 0], [w(0, 12) + 0.2, 25, 'out']], barrido: [w(0, 12) + 0.25], caja: [-130, -56, 260, 112] });
+E.obj('gastoH', 'rotulo', { t0: w(0, 13) - 0.05, t1: w(1, 0) + 0.2, sale: 0.2, x: 150, y: -270, pop: true, texto: 'LO QUE GASTAS EN UN AÑO', size: 26, col: '#c9ccca', caja: [-200, -16, 400, 32] });
+for (let i = 0; i < 6; i++) { const a = w(0, 14) + i * 0.1;
   E.obj('gh' + i, 'moneda', { t0: a, t1: a + 0.6, entra: 0.05, sale: 0.15, r: 18, n: '', libre: true, estela: 4, sfx: i === 0, inspeccion: false,
     x: [[a, -40 + i * 40], [a + 0.55, 150, 'inout']], y: [[a, -150], [a + 0.3, -210], [a + 0.55, -390, 'in']] }); }
 // «Se llama regla del 4 %»: la moneda del 4 % con rayos
-E.obj('rayosH', 'rayos', { t0: w(1, 15) - 0.1, t1: fin(0), x: 150, y: -350, r: 300, z: -2, p: [[w(1, 15) - 0.1, 0], [w(1, 17) + 0.3, 1, 'out'], [w(2, 2), 1], [w(2, 3) + 0.3, 0.4]], inspeccion: false });
-E.obj('m4', 'moneda', { t0: w(1, 16) - 0.05, t1: N[0].T + 0.3, sale: 0.2, x: 150, y: [[0, -350], [w(2, 2), -350], [w(2, 3) + 0.3, -430, 'inout']], r: [[0, 90], [w(2, 2), 90], [w(2, 3) + 0.3, 62, 'inout']],
-  n: '4 %', pop: true, sfx: true, luz: [[0, 1], [w(2, 3), 1], [w(2, 3) + 0.3, 0.45]], barrido: [w(1, 18)], inspeccion: false });
-E.obj('rotRegla', 'rotulo', { t0: w(1, 14), t1: w(2, 2), sale: 0.2, x: 150, y: -210, pop: true, texto: 'REGLA DEL 4 %', size: 34, col: '#e6ce46', peso: 700, caja: [-150, -20, 300, 40] });
-E.golpe(w(1, 17), 0.05); E.destello(w(1, 17), 0.14);
-E.obj('chH', 'chispas', { t0: w(1, 17), t1: w(1, 17) + 0.8, x: 150, y: -350, r0: 100, r1: 200, inspeccion: false });
-// «tres pasos»: tres monedas; la primera crece y es la que viaja al número uno
-[0, 1, 2].forEach(i => { const a = w(2, 3) + i * 0.12;
+E.obj('rayosH', 'rayos', { t0: w(1, 2) - 0.1, t1: fin(0), x: 150, y: -350, r: 300, z: -2, p: [[w(1, 2) - 0.1, 0], [w(1, 4) + 0.3, 1, 'out'], [w(1, 9), 1], [w(1, 11) + 0.3, 0.4]], inspeccion: false });
+E.obj('m4', 'moneda', { t0: w(1, 3) - 0.05, t1: N[0].T + 0.3, sale: 0.2, x: 150, y: [[0, -350], [w(1, 10), -350], [w(1, 11) + 0.3, -430, 'inout']], r: [[0, 90], [w(1, 10), 90], [w(1, 11) + 0.3, 62, 'inout']],
+  n: '4 %', pop: true, sfx: true, luz: [[0, 1], [w(1, 11), 1], [w(1, 11) + 0.3, 0.45]], barrido: [w(1, 5)], inspeccion: false });
+E.obj('rotRegla', 'rotulo', { t0: w(1, 1), t1: w(1, 10), sale: 0.2, x: 150, y: -210, pop: true, texto: 'REGLA DEL 4 %', size: 34, col: '#e6ce46', peso: 700, caja: [-150, -20, 300, 40] });
+E.golpe(w(1, 4), 0.05); E.destello(w(1, 4), 0.14);
+E.obj('chH', 'chispas', { t0: w(1, 4), t1: w(1, 4) + 0.8, x: 150, y: -350, r0: 100, r1: 200, inspeccion: false });
+// «una cuenta de tres pasos»: tres monedas; la primera crece y es la que viaja al número uno
+[0, 1, 2].forEach(i => { const a = w(1, 11) + i * 0.12;
   E.obj('p' + (i + 1), 'moneda', { t0: a, t1: i === 0 ? fin(0) : N[0].T - 0.05, sale: 0.2, sobrevive: i === 0, x: 150 + (i - 1) * 105, y: -250, r: 38, n: i + 1, pop: true, sfx: i === 0, inspeccion: false,
     s: i === 0 ? [[0, 1], [wf(2, -1) - 0.1, 1], [wf(2, -1) + 0.25, 1.35, 'back']] : 1, luz: i === 0 ? 1 : [[0, 1], [wf(2, -1) - 0.1, 1], [wf(2, -1) + 0.2, 0.4]] }); });
 

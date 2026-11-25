@@ -28,32 +28,30 @@ E.camara([
 const escalon = (id, o) => { const h = o.h; return E.obj(id, 'bloques', Object.assign({ n: 1, w: 156, y: -h / 2, pop: true, refl: true, caja: [-78, -h / 2, 156, h] }, o)); };
 
 // ---------- gancho ----------
-// 0: Eras(0) el(1) mejor(2) de(3) tu(4) equipo(5) te(6) ascendieron(7) y(8) ahora(9) lo(10) pasas(11) mal(12)   [bocadillo del jefe «Enhorabuena, jefe.»]
-// el equipo: tres barras de rendimiento; la tuya se llena entera
-const EQ = [{ id: 'cA', x: -395, f: 0.45 }, { id: 'yo', x: -265, f: 1 }, { id: 'cB', x: -135, f: 0.55 }];
-E.figura('cA', { t0: 0, t1: w(0, 6), sale: 0.25, x: -395, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 2) + 0.2, 'encoger']] });
-E.figura('cB', { t0: 0, t1: w(0, 6), sale: 0.25, x: -135, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 2) + 0.3, 'apartarse']] });
-EQ.forEach((q, i) => { const yo = q.id === 'yo';
-  E.obj('rend' + i, 'relleno', { t0: 0, t1: w(0, 6), sale: 0.2, x: q.x, y: yo ? -400 : -330, w: 120, h: 26,
-    f: yo ? [[0.3, 0], [w(0, 2) + 0.5, 1, 'out']] : [[0.3, 0], [0.9, q.f, 'out']], caja: [-60, -13, 120, 26] }); });
-E.sfx(0.3, 'fill');
-E.obj('chRend', 'chispas', { t0: w(0, 2) + 0.5, t1: w(0, 2) + 1.3, x: -265, y: -400, r0: 50, r1: 120, inspeccion: false });
-E.golpe(w(0, 2) + 0.5, 0.03);
-// «te ascendieron»: aparece la escalera y el muñeco sube al primer peldaño; el jefe le da la enhorabuena
+// 0: Te(0) ascienden(1) por(2) hacer(3) bien(4) tu(5) trabajo(6) y(7) ese(8) es(9) justo(10) el(11) problema(12)   [bocadillo del jefe «Enhorabuena, jefe.»]
+// «hacer bien tu trabajo»: la barra de rendimiento del muñeco se llena entera (la del compañero se queda a medias);
+// «te ascienden»: aparece la escalera, el muñeco sube y el jefe le felicita; «y ese es justo el problema»: se le amontonan los papeles
+E.figura('cA', { t0: 0, t1: w(0, 7), sale: 0.25, x: -400, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 3), 'encoger'], [w(0, 6), 'apartarse']] });
+[{ id: 'cA', x: -400, f: 0.45 }, { id: 'yo', x: -275, f: 1 }].forEach((q, i) => { const yo = q.id === 'yo';
+  E.obj('rend' + i, 'relleno', { t0: 0, t1: w(0, 7), sale: 0.2, x: q.x, y: yo ? -540 : -470, w: 120, h: 26,
+    f: yo ? [[0.2, 0], [w(0, 4) + 0.3, 1, 'out']] : [[0.2, 0], [w(0, 3), q.f, 'out']], caja: [-60, -13, 120, 26] }); });
+E.sfx(0.2, 'fill');
+E.obj('chRend', 'chispas', { t0: w(0, 4) + 0.3, t1: w(0, 4) + 1.1, x: -275, y: -540, r0: 50, r1: 120, inspeccion: false });
+E.golpe(w(0, 4) + 0.3, 0.03);
 const ST = [{ x: -150, h: 60 }, { x: 30, h: 120 }, { x: 210, h: 180 }];
-ST.forEach((s, i) => escalon('e0_' + i, { t0: w(0, 6) + i * 0.08, t1: w(1, 0), sale: 0.25, x: s.x, h: s.h, luz: i === 0 ? 1 : 0.6 }));
-E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.25, x: [[0, -265], [w(0, 7), -265], [w(0, 7) + 0.45, -150, 'inout']], y: [[w(0, 7), 0], [w(0, 7) + 0.22, -130, 'out'], [w(0, 7) + 0.45, -60, 'in']],
+ST.forEach((s, i) => escalon('e0_' + i, { t0: w(0, 1) - 0.1 + i * 0.08, t1: w(1, 0), sale: 0.25, x: s.x, h: s.h, luz: i === 0 ? 1 : 0.6 }));
+E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.25, x: [[0, -275], [w(0, 1), -275], [w(0, 1) + 0.45, -150, 'inout']], y: [[w(0, 1), 0], [w(0, 1) + 0.22, -130, 'out'], [w(0, 1) + 0.45, -60, 'in']],
   talla: 330, cara: true, toca: ['e0_0'],
-  poses: [[0, 'de_pie'], [w(0, 2), 'celebrar'], [w(0, 7), 'levantar'], [w(0, 7) + 0.5, 'celebrar'], [w(0, 9), 'manos_cabeza'], [w(0, 12) + 0.3, 'triste']],
-  sonrisa: [[0, 0.6], [w(0, 2), 1.5], [w(0, 8), 1.2], [w(0, 9), -0.8], [w(0, 12), -1.4]] });
-E.figura('jefe0', { t0: w(0, 5), t1: w(1, 0), sale: 0.25, x: 370, talla: 340, color: 'gris', dir: -1, cara: true,
-  poses: [[0, 'de_pie'], [w(0, 6), 'ofrecer'], [w(0, 9), 'de_pie']], sonrisa: 1 });
-E.obj('bocaH', 'bocadillo', { t0: w(0, 6), t1: w(0, 12), sale: 0.2, x: 270, y: -440, w: 340, h: 76, texto: 'Enhorabuena, jefe.', size: 30, pop: true,
-  on: [[w(0, 6), 0], [w(0, 7) + 0.3, 1]], caja: [-170, -38, 340, 102] });
-E.obj('pulsoE', 'pulso', { t0: w(0, 7) + 0.45, t1: w(0, 7) + 1.1, x: -150, y: -60, r0: 40, r1: 130, inspeccion: false });
-E.sfx(w(0, 7) + 0.45, 'thud');
-// «y ahora lo pasas mal»: se le amontonan los papeles y se le enreda la cabeza
-E.obj('papeles0', 'papeles', { t0: w(0, 8), t1: w(1, 0), sale: 0.25, x: 30, y: -120, n: 7, k: [[w(0, 8), 0], [w(0, 12), 7, 'lin']], caja: [-80, -125, 160, 120] });
+  poses: [[0, 'coger'], [w(0, 1), 'levantar'], [w(0, 1) + 0.5, 'celebrar'], [w(0, 7), 'manos_cabeza'], [w(0, 12) + 0.3, 'triste']],
+  sonrisa: [[0, 0.6], [w(0, 1), 1.5], [w(0, 6), 1.2], [w(0, 7), -0.8], [w(0, 12), -1.4]] });
+E.figura('jefe0', { t0: w(0, 1) - 0.2, t1: w(1, 0), sale: 0.25, x: 370, talla: 340, color: 'gris', dir: -1, cara: true,
+  poses: [[0, 'de_pie'], [w(0, 1), 'ofrecer'], [w(0, 8), 'de_pie']], sonrisa: 1 });
+E.obj('bocaH', 'bocadillo', { t0: w(0, 1), t1: w(0, 12), sale: 0.2, x: 270, y: -440, w: 340, h: 76, texto: 'Enhorabuena, jefe.', size: 30, pop: true,
+  on: [[w(0, 1), 0], [w(0, 1) + 0.3, 1]], caja: [-170, -38, 340, 102] });
+E.obj('pulsoE', 'pulso', { t0: w(0, 1) + 0.45, t1: w(0, 1) + 1.1, x: -150, y: -60, r0: 40, r1: 130, inspeccion: false });
+E.sfx(w(0, 1) + 0.45, 'thud');
+// «y ese es justo el problema»: se le amontonan los papeles y se le enreda la cabeza
+E.obj('papeles0', 'papeles', { t0: w(0, 7), t1: w(1, 0), sale: 0.25, x: 30, y: -120, n: 7, k: [[w(0, 7), 0], [w(0, 12), 7, 'lin']], caja: [-80, -125, 160, 120] });
 E.obj('maraña0', 'maraña', { t0: w(0, 10), t1: w(1, 0), sale: 0.25, x: -150, y: -470, r: 46, p: [[w(0, 10), 0], [w(0, 12) + 0.3, 1, 'out']], rot: [[w(0, 10), 0], [w(1, 0), 0.8, 'lin']], caja: [-62, -36, 124, 72] });
 E.temblor(w(0, 12), 14, 0.45); E.golpe(w(0, 12), 0.05);
 
