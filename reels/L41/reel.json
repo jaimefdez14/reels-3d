@@ -7,7 +7,7 @@
  "situacion": "Eras muy bueno en tu puesto, te ascienden a jefe y ahora lo pasas mal.",
  "lines": [
   {
-   "show": "Eras el mejor de tu equipo, / te ascendieron / *y ahora lo pasas mal.*",
+   "show": "Te ascienden por hacer bien tu trabajo, / *y ese es justo el problema.*",
    "pause": 0.45,
    "bocadillo": "Enhorabuena, jefe."
   },
@@ -92,6 +92,19 @@
      "linea": 5,
      "antes": "La segunda: // *¿se parece a lo que se te da bien?*",
      "despues": "La segunda: // *¿ese trabajo se parece / a lo que se te da bien?*"
+    }
+   ]
+  }
+ ],
+ "ganchos": [
+  {
+   "fecha": "25-11-2026",
+   "motivo": "métricas de docs/METRICAS-2026-11-24.md: ganchos con cifra o situación general, sin nicho ni abstracto",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Eras el mejor de tu equipo, / te ascendieron / *y ahora lo pasas mal.*",
+     "despues": "Te ascienden por hacer bien tu trabajo, / *y ese es justo el problema.*"
     }
    ]
   }

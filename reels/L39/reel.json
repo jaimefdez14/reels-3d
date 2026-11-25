@@ -7,13 +7,13 @@
  "situacion": "Envías un presupuesto, el cliente dice que se lo pensará y no vuelve.",
  "lines": [
   {
-   "show": "Tu cliente dice que se lo pensará / *y no vuelve a escribir.*",
-   "pause": 0.45,
-   "bocadillo": "Me lo pienso y te digo."
+   "show": "Perder cien euros te duele el doble / *de lo que te alegra ganarlos.*",
+   "pause": 0.45
   },
   {
-   "show": "Comprar le cuesta dinero, y esperar, nada. / *Perder cien euros duele casi el doble* / *de lo que alegra ganarlos.*",
-   "pause": 0.3
+   "show": "Por eso tu cliente dice que se lo pensará / *y no vuelve a escribir: / comprar le cuesta dinero, y esperar, nada.*",
+   "pause": 0.3,
+   "bocadillo": "Me lo pienso y te digo."
   },
   {
    "show": "Se llama aversión a la pérdida: / lo midieron Kahneman y Tversky, / *y hay tres formas de usarla al vender.*",
@@ -119,6 +119,29 @@
      "linea": 4,
      "antes": "No le digas cuánto va a ahorrar: / *dile cuánto pierde cada mes que espera, / por ejemplo, 300 euros.*",
      "despues": "No le digas cuánto va a ahorrar: / *dile lo que pierde cada mes que espera, / 300 euros, por ejemplo.*"
+    }
+   ]
+  }
+ ],
+ "ganchos": [
+  {
+   "fecha": "25-11-2026",
+   "motivo": "métricas de docs/METRICAS-2026-11-24.md: ganchos con cifra o situación general, sin nicho ni abstracto",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Tu cliente dice que se lo pensará / *y no vuelve a escribir.*",
+     "despues": "Perder cien euros te duele el doble / *de lo que te alegra ganarlos.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Comprar le cuesta dinero, y esperar, nada. / *Perder cien euros duele casi el doble* / *de lo que alegra ganarlos.*",
+     "despues": "Por eso tu cliente dice que se lo pensará / *y no vuelve a escribir: / comprar le cuesta dinero, y esperar, nada.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Se llama aversión a la pérdida: / lo midieron Kahneman y Tversky, / *y hay tres formas de usarla al vender.*",
+     "despues": "Se llama aversión a la pérdida: / lo midieron Kahneman y Tversky, / *y hay tres formas de usarla al vender.*"
     }
    ]
   }

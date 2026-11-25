@@ -7,16 +7,16 @@
  "situacion": "Intentas cambiar un hábito y al cabo de unas semanas lo dejas.",
  "lines": [
   {
-   "show": "Llevas meses intentando cambiar un hábito / *y no notas que avances.*",
+   "show": "Un 1 % mejor cada día / *son 37 veces mejor en un año.*",
    "pause": 0.45,
-   "bocadillo": "Esta vez sí."
+   "bocadillo": "¿Solo un 1 %?"
   },
   {
-   "show": "Se llama mejora continua: / *un 1 % más cada día* / *y acabas el año 37 veces mejor* / *que al empezar.*",
+   "show": "Y un 1 % peor cada día / *te deja casi en cero. / Se llama mejora continua.*",
    "pause": 0.3
   },
   {
-   "show": "Es una cuenta, no una promesa, / y al revés también funciona: / *empeorar un 1 % al día* / *te deja casi en cero.*",
+   "show": "Es una cuenta, no una promesa, / *pero explica por qué lo pequeño suma.*",
    "pause": 0.3
   },
   {
@@ -130,6 +130,30 @@
      "linea": 1,
      "antes": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que como empezaste.*",
      "despues": "Se llama mejora continua: / *un 1 % más cada día / y acabas el año 37 veces mejor / que al empezar.*"
+    }
+   ]
+  }
+ ],
+ "ganchos": [
+  {
+   "fecha": "25-11-2026",
+   "motivo": "métricas de docs/METRICAS-2026-11-24.md: ganchos con cifra o situación general, sin nicho ni abstracto",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Llevas meses intentando cambiar un hábito / *y no notas que avances.*",
+     "despues": "Un 1 % mejor cada día / *son 37 veces mejor en un año.*",
+     "bocadillo": null
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama mejora continua: / *un 1 % más cada día* / *y acabas el año 37 veces mejor* / *que al empezar.*",
+     "despues": "Y un 1 % peor cada día / *te deja casi en cero. / Se llama mejora continua.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Es una cuenta, no una promesa, / y al revés también funciona: / *empeorar un 1 % al día* / *te deja casi en cero.*",
+     "despues": "Es una cuenta, no una promesa, / *pero explica por qué lo pequeño suma.*"
     }
    ]
   }

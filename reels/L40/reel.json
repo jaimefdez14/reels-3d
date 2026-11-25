@@ -7,16 +7,16 @@
  "situacion": "Piensas que para dejar de trabajar necesitarías una cifra imposible.",
  "lines": [
   {
-   "show": "Crees que para dejar de trabajar / *necesitas un millón de euros.*",
+   "show": "No necesitas un millón de euros / *para dejar de trabajar: / necesitas veinticinco veces lo que gastas en un año.*",
    "pause": 0.45,
    "bocadillo": "Nunca podré dejar de trabajar."
   },
   {
-   "show": "Hay una cuenta más exacta: / *veinticinco veces lo que gastas en un año.* / *Se llama regla del 4 %.*",
+   "show": "Se llama regla del 4 %, / *y es una cuenta de tres pasos.*",
    "pause": 0.3
   },
   {
-   "show": "Se hace en tres pasos.",
+   "show": "Se hace así.",
    "pause": 0.3
   },
   {
@@ -103,6 +103,24 @@
      "linea": 8,
      "antes": "Ese cuatro por ciento son veinte mil euros al año. / *Como lo demás sigue rindiendo, / según un estudio de 1998, / el dinero aguantó treinta años / en casi todos los casos.*",
      "despues": "Ese cuatro por ciento son veinte mil euros al año. / *Y como el resto sigue rindiendo, / un estudio de 1998 vio que el dinero / aguantaba treinta años en casi todos los casos.*"
+    }
+   ]
+  }
+ ],
+ "ganchos": [
+  {
+   "fecha": "25-11-2026",
+   "motivo": "métricas de docs/METRICAS-2026-11-24.md: ganchos con cifra o situación general, sin nicho ni abstracto",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Crees que para dejar de trabajar / *necesitas un millón de euros.*",
+     "despues": "No necesitas un millón de euros / *para dejar de trabajar: / necesitas veinticinco veces lo que gastas en un año.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Hay una cuenta más exacta: / *veinticinco veces lo que gastas en un año.* / *Se llama regla del 4 %.*",
+     "despues": "Se llama regla del 4 %, / *y es una cuenta de tres pasos.*"
     }
    ]
   }
