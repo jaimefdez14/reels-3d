@@ -33,10 +33,10 @@ const escalon = (id, o) => { const h = o.h; return E.obj(id, 'bloques', Object.a
 // «te ascienden»: aparece la escalera, el muñeco sube y el jefe le felicita; «y ese es justo el problema»: se le amontonan los papeles
 E.figura('cA', { t0: 0, t1: w(0, 7), sale: 0.25, x: -400, talla: 270, color: 'gris', poses: [[0, 'de_pie'], [w(0, 3), 'encoger'], [w(0, 6), 'apartarse']] });
 [{ id: 'cA', x: -400, f: 0.45 }, { id: 'yo', x: -275, f: 1 }].forEach((q, i) => { const yo = q.id === 'yo';
-  E.obj('rend' + i, 'relleno', { t0: 0, t1: w(0, 7), sale: 0.2, x: q.x, y: yo ? -540 : -470, w: 120, h: 26,
+  E.obj('rend' + i, 'relleno', { t0: 0, t1: w(0, 7), sale: 0.2, x: q.x, y: 60, w: 120, h: 26,
     f: yo ? [[0.2, 0], [w(0, 4) + 0.3, 1, 'out']] : [[0.2, 0], [w(0, 3), q.f, 'out']], caja: [-60, -13, 120, 26] }); });
 E.sfx(0.2, 'fill');
-E.obj('chRend', 'chispas', { t0: w(0, 4) + 0.3, t1: w(0, 4) + 1.1, x: -275, y: -540, r0: 50, r1: 120, inspeccion: false });
+E.obj('chRend', 'chispas', { t0: w(0, 4) + 0.3, t1: w(0, 4) + 1.1, x: -275, y: 60, r0: 50, r1: 120, inspeccion: false });
 E.golpe(w(0, 4) + 0.3, 0.03);
 const ST = [{ x: -150, h: 60 }, { x: 30, h: 120 }, { x: 210, h: 180 }];
 ST.forEach((s, i) => escalon('e0_' + i, { t0: w(0, 1) - 0.1 + i * 0.08, t1: w(1, 0), sale: 0.25, x: s.x, h: s.h, luz: i === 0 ? 1 : 0.6 }));
@@ -71,7 +71,7 @@ E.figura('yo1', { t0: w(1, 0) + 0.05, t1: w(2, 0), sale: 0.25, x: xk, y: yk, tal
   poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [H1[0], 'levantar'], [H1[0] + 0.45, 'celebrar'], [H1[1], 'levantar'], [H1[1] + 0.45, 'celebrar'], [H1[2], 'levantar'], [H1[2] + 0.45, 'celebrar'],
     [w(1, 17), 'encoger'], [w(1, 19), 'manos_cabeza'], [wf(1, -1) + 0.3, 'triste']],
   sonrisa: [[0, 0.4], [H1[0], 1.2], [H1[2] + 0.5, 1.4], [w(1, 17), -0.3], [w(1, 19), -1.5]] });
-E.obj('sabes', 'relleno', { t0: w(1, 5) - 0.1, t1: w(2, 0), sale: 0.25, x: -300, y: -470, w: 220, h: 40, pop: true, rotulo: 'LO QUE SABES HACER',
+E.obj('sabes', 'relleno', { t0: w(1, 5) - 0.1, t1: w(2, 0) - 0.3, sale: 0.25, x: -300, y: -470, w: 220, h: 40, pop: true, rotulo: 'LO QUE SABES HACER',
   f: [[w(1, 5), 0], [w(1, 7), 1, 'out'], [w(1, 18), 1], [w(1, 19) + 0.3, 0.15, 'inout']], caja: [-110, -54, 220, 74] });
 E.sfx(w(1, 5), 'fill');
 E.temblor(w(1, 19), 14, 0.45); E.golpe(w(1, 19), 0.05);
@@ -83,7 +83,7 @@ E.figura('yo2', { t0: w(2, 0) - 0.05, t1: fin(0), x: [[0, -360], [w(2, 8), -360]
 E.obj('rotLP', 'rotulo', { t0: w(2, 2) - 0.1, t1: w(2, 6), sale: 0.2, x: 170, y: -460, texto: 'LAURENCE PETER', size: 32, col: GRIS, pop: true, caja: [-170, -18, 340, 36] });
 E.obj('anio', 'contador', { t0: w(2, 1), t1: w(2, 6), sale: 0.2, x: 170, y: -340, size: 120, miles: false, pop: true,
   v: [[w(2, 3), 0], [w(2, 5) + 0.45, 1969, 'out']], barrido: [w(2, 5) + 0.5], caja: [-170, -60, 340, 120] });
-E.obj('libro', 'papeles', { t0: w(2, 1), t1: w(2, 6), sale: 0.2, x: 170, y: -14, n: 6, k: [[w(2, 1), 0], [w(2, 5), 6, 'lin']], caja: [-95, -110, 190, 125] });
+E.obj('libro', 'papeles', { t0: w(2, 1), t1: w(2, 6) - 0.3, sale: 0.2, x: 170, y: -14, n: 6, k: [[w(2, 1), 0], [w(2, 5), 6, 'lin']], caja: [-95, -110, 190, 125] });
 E.obj('chAnio', 'chispas', { t0: w(2, 5) + 0.45, t1: w(2, 5) + 1.25, x: 170, y: -340, r0: 150, r1: 250, inspeccion: false });
 E.golpe(w(2, 5) + 0.45, 0.04);
 // «Antes de aceptar el próximo ascenso»: la puerta del ascenso se entreabre; «tres preguntas»: tres monedas con «?»

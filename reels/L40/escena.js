@@ -6,7 +6,7 @@
 // Regla 20: «Nunca podré dejar de trabajar.» va en bocadillo del muñeco del gancho; la voz solo narra.
 const w = E.w, wf = E.wf;
 const D = TIMING.duration;
-E.config({ fondo: 'negro', sub: 'dos', cursiva: true, subY: 690, polvo: true, gancho: { lineas: [0], escala: 1.25 },
+E.config({ fondo: 'negro', sub: 'dos', cursiva: true, subY: 690, polvo: true, gancho: { lineas: [0], escala: 1.0 },
   progreso: { n: 3, estilo: 'puntos', aparece: w(1, 11), gap: 70, y: 360 } });
 
 // «El primero: // …» → T en «El», S en la primera palabra del punto
@@ -34,18 +34,18 @@ E.figura('yo', { t0: 0, t1: fin(0), x: -340, cara: true,
   poses: [[0, 'pensar'], [w(0, 3), 'encoger'], [w(0, 6), 'manos_cabeza'], [w(0, 10), 'de_pie'], [w(0, 11), 'senalar'], [w(0, 16), 'de_pie'],
     [w(1, 2), 'celebrar'], [w(1, 6), 'de_pie'], [w(1, 11), 'ofrecer'], [w(2, 0), 'de_pie'], [w(2, 1), 'ofrecer']],
   sonrisa: [[0, -0.3], [w(0, 3), -0.8], [w(0, 6), -1.3], [w(0, 10), -0.2], [w(0, 11), 0.4], [w(1, 2), 1.5], [w(1, 11), 1]] });
-E.obj('bocaH', 'bocadillo', { t0: 0.35, t1: w(0, 10), sale: 0.2, x: -40, y: -490, w: 440, h: 80, texto: 'Nunca podré dejar de trabajar.', size: 25, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: 0.35, t1: w(0, 10) - 0.15, sale: 0.2, x: -40, y: -490, w: 440, h: 80, texto: 'Nunca podré dejar de trabajar.', size: 25, pop: true,
   on: [[0.35, 0], [0.9, 1]], caja: [-220, -40, 440, 106] });
-E.obj('rotMeta0', 'rotulo', { t0: w(0, 6) - 0.05, t1: w(0, 10) - 0.05, sale: 0.2, x: 150, y: -220, pop: true,
+E.obj('rotMeta0', 'rotulo', { t0: w(0, 6) - 0.05, t1: w(0, 10) - 0.15, sale: 0.2, x: 150, y: -220, pop: true,
   texto: 'PARA DEJAR DE TRABAJAR', size: 24, col: GRIS, caja: [-190, -16, 380, 32] });
 // el millón: rueda hasta 1.000.000 € con «un millón de euros» y se apaga con «necesitas veinticinco veces»
-E.obj('millon', 'etiqueta', { t0: w(0, 1) + 0.1, t1: w(0, 11) - 0.05, sale: 0.25, x: 150, y: -330, w: 480, h: 120, r: 70, pop: true,
-  v: [[w(0, 2), 0], [w(0, 5) + 0.1, 1000000, 'out']], on: [[0, 1], [w(0, 9), 1], [w(0, 10), 0.3]],
-  s: [[0, 1], [w(0, 9), 1], [w(0, 10), 0.85, 'inout']], barrido: [w(0, 5) + 0.15], caja: [-240, -60, 480, 120] });
+E.obj('millon', 'etiqueta', { t0: w(0, 1) + 0.1, t1: w(0, 10) - 0.15, sale: 0.25, x: 150, y: -330, w: 480, h: 120, r: 70, pop: true,
+  v: [[w(0, 2), 0], [w(0, 5) + 0.1, 1000000, 'out']], on: [[0, 1], [w(0, 9), 1], [w(0, 10) - 0.2, 0.3]],
+  s: [[0, 1], [w(0, 9), 1], [w(0, 10) - 0.2, 0.85, 'inout']], barrido: [w(0, 5) + 0.15], caja: [-240, -60, 480, 120] });
 E.sfx(w(0, 2), 'fill');
 E.golpe(w(0, 5) + 0.15, 0.04); E.temblor(w(0, 5) + 0.2, 12, 0.4);
 // «necesitas veinticinco veces lo que gastas en un año»: × 25 rueda; debajo, lo que se multiplica
-E.obj('x25h', 'contador', { t0: w(0, 10) - 0.1, t1: fin(0), sale: 0.2, x: 150, y: -390, pop: true, pre: '× ', size: 96, col: '#e6ce46', miles: false,
+E.obj('x25h', 'contador', { t0: w(0, 10) + 0.1, t1: w(1, 2) - 0.1, sale: 0.2, x: 150, y: -390, pop: true, pre: '× ', size: 96, col: '#e6ce46', miles: false,
   v: [[w(0, 11), 0], [w(0, 12) + 0.2, 25, 'out']], barrido: [w(0, 12) + 0.25], caja: [-130, -56, 260, 112] });
 E.obj('gastoH', 'rotulo', { t0: w(0, 13) - 0.05, t1: w(1, 0) + 0.2, sale: 0.2, x: 150, y: -270, pop: true, texto: 'LO QUE GASTAS EN UN AÑO', size: 26, col: '#c9ccca', caja: [-200, -16, 400, 32] });
 for (let i = 0; i < 6; i++) { const a = w(0, 14) + i * 0.1;

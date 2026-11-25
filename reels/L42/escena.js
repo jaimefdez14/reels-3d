@@ -37,25 +37,27 @@ E.figura('yo', { t0: 0, t1: fin(0), x: -340, cara: true,
 E.obj('bocaH', 'bocadillo', { t0: 0.3, t1: w(0, 8), sale: 0.2, x: -110, y: -490, w: 300, h: 80, texto: '¿Solo un 1 %?', size: 30, pop: true,
   on: [[0.3, 0], [0.8, 1]], caja: [-150, -40, 300, 106] });
 // «un 1 % mejor cada día»: la moneda del 1 % entra con la primera palabra, los días se encienden y la pila crece
-E.obj('uno', 'moneda', { t0: 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: -460, r: 44, n: [[0, '1 %'], [w(1, 2), '−1 %'], [w(2, 10), '1 %']], pop: true, sfx: true,
+E.obj('uno', 'moneda', { t0: 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: -460, r: 44, n: [[0, '1 %'], [w(1, 2), '−1 %'], [w(2, 2), '1 %']], pop: true, sfx: true,
   s: [[0, 1], [w(0, 4), 1], [w(0, 4) + 0.15, 1.15], [w(0, 4) + 0.35, 1], [w(0, 5), 1], [w(0, 5) + 0.15, 1.15], [w(0, 5) + 0.35, 1],
     [w(1, 5), 1], [w(1, 5) + 0.15, 1.15], [w(1, 5) + 0.35, 1], [w(1, 6), 1], [w(1, 6) + 0.15, 1.15], [w(1, 6) + 0.35, 1]],
   luz: 1, inspeccion: false, caja: [-44, -44, 88, 88] });
-E.obj('diasH', 'dias', { t0: 0.3, t1: w(1, 8), sale: 0.25, x: HX, y: -570, gap: 70, pop: true,
-  luz: [[0.3, 0], [w(0, 3), 0], [wf(0, 5), 6, 'lin'], [w(1, 4) - 0.2, 6], [w(1, 4), 0], [wf(1, 6), 6, 'lin']], caja: [-240, -32, 480, 64] });
+E.obj('diasH', 'dias', { t0: 0.3, t1: w(2, 8), sale: 0.25, x: HX, y: 140, gap: 70, pop: true,
+  luz: [[0.3, 0], [w(0, 3), 0], [wf(0, 5), 6, 'lin'], [w(1, 4) - 0.2, 6], [w(1, 4), 0], [wf(1, 6), 6, 'lin'], [w(2, 1), 6], [w(2, 2), 0], [wf(2, 5), 6, 'lin']], caja: [-240, -32, 480, 64] });
 E.obj('pilaH', 'pila', { t0: 0.3, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, n: 10, w: 180, hh: 24, pop: true,
   k: [[0.3, 1], [w(0, 3), 1], [wf(0, 5), 3, 'out'], [w(0, 7), 3], [w(0, 9) + 0.2, 10, 'inout'], [w(1, 2), 10], [w(1, 11), 0.4, 'inout'],
-    [w(2, 9), 0.4], [wf(2, -1) + 0.2, 10, 'inout']],
-  luz: [[0, 1], [w(1, 2), 1], [w(1, 8), 0.5], [w(2, 9), 0.5], [w(2, 10), 1]], barrido: [w(0, 9) + 0.2, wf(2, -1) + 0.2], caja: [-90, -212, 180, 212], refl: true });
+    [w(2, 2), 0.4], [wf(2, 5), 2.5, 'out'], [w(2, 9), 2.5], [wf(2, -1) + 0.2, 10, 'inout']],
+  luz: [[0, 1], [w(1, 2), 1], [w(1, 8), 0.5], [w(2, 2), 0.5], [w(2, 3), 1]], barrido: [w(0, 9) + 0.2, wf(2, -1) + 0.2], caja: [-90, -212, 180, 212], refl: true });
 E.obj('x37', 'contador', { t0: w(0, 6) - 0.1, t1: w(3, 0) - 0.05, sale: 0.25, x: HX + 250, y: -330, pre: '× ', size: 64, col: 'txt', miles: false, pop: true,
-  v: [[w(0, 6), 1], [w(0, 7) + 0.5, 37, 'inout'], [w(1, 7), 37], [w(1, 11), 0, 'inout'], [w(2, 9), 0], [wf(2, -1) + 0.2, 37, 'inout']],
+  v: [[w(0, 6), 1], [w(0, 7) + 0.5, 37, 'inout'], [w(1, 7), 37], [w(1, 11), 0, 'inout'], [w(2, 2), 0], [wf(2, 5), 5, 'out'], [w(2, 9), 5], [wf(2, -1) + 0.2, 37, 'inout']],
   barrido: [w(0, 8)], caja: [-90, -36, 180, 72] });
 E.obj('rotH', 'rotulo', { t0: 0.4, t1: w(3, 0) - 0.05, sale: 0.25, x: HX, y: 60, pop: true, size: 28, col: '#c9ccca',
   texto: [[0, '1 % AL DÍA'], [w(0, 6), 'UN AÑO'], [w(1, 0), 'AL REVÉS'], [w(1, 9), 'CASI CERO'], [w(1, 12), 'MEJORA CONTINUA'], [w(2, 0), 'UNA CUENTA'], [w(2, 7), 'LO PEQUEÑO SUMA']],
   caja: [-160, -17, 320, 34] });
-E.sfx(w(0, 3), 'fill'); E.sfx(w(1, 7), 'whoosh'); E.sfx(w(2, 10), 'fill');
+E.sfx(w(0, 3), 'fill'); E.sfx(w(1, 7), 'whoosh'); E.sfx(w(2, 2), 'fill'); E.sfx(w(2, 9), 'fill');
 E.obj('chH', 'chispas', { t0: w(0, 7) + 0.5, t1: w(0, 7) + 1.3, x: HX + 250, y: -330, r0: 70, r1: 160, inspeccion: false });
 E.golpe(w(0, 7) + 0.5, 0.05); E.destello(w(0, 8), 0.15);
+E.obj('chM', 'chispas', { t0: w(1, 14), t1: w(1, 14) + 0.8, x: HX, y: 60, r0: 50, r1: 130, inspeccion: false });
+E.golpe(w(1, 14), 0.03); E.destello(w(1, 14), 0.1);
 E.temblor(w(1, 11), 12, 0.4); E.golpe(w(1, 11), 0.04);
 // «lo pequeño suma»: monedas de un 1 % caen sobre la pila, que vuelve a subir
 for (let i = 0; i < 4; i++) { const a = w(2, 9) + i * 0.8 / 3;
