@@ -12,7 +12,7 @@
    "bocadillo": "Ahí no se pierde nada."
   },
   {
-   "show": "Con una inflación del 3 % al año, / *valdrían unos 744 euros. / Se llama pérdida de poder adquisitivo.*",
+   "show": "Si los precios suben un 3 % al año, / *en diez años valdrán unos 744 euros. / Se llama pérdida de poder adquisitivo.*",
    "pause": 0.3
   },
   {
@@ -20,16 +20,16 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *ten a mano solo lo que vayas a necesitar.*",
+   "show": "La primera: // *ten a mano tres meses de gastos.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar parado.*",
+   "show": "Eso es para imprevistos, / *no para todo el dinero que tengas.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *no dejes parado lo que no vas a usar en años.*",
+   "show": "La segunda: // *lo que no vayas a usar en años, / que no esté parado.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *una vez al año, compara lo que rinde / con lo que suben los precios.*",
+   "show": "La tercera: // *una vez al año, compara lo que rinde / tu dinero con lo que han subido los precios.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -84,6 +84,44 @@
      "linea": 9,
      "antes": "Ahorrar no es solo guardar: / *es que lo guardado no pierda valor.*",
      "despues": "Ahorrar no es solo guardar: / *es conseguir que lo guardado no pierda valor.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "7/10; cambios por frases que no se entendían oyéndolas o no cuadraban; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Con una inflación del 3 % al año, / *valdrían unos 744 euros. / Se llama pérdida de poder adquisitivo.*",
+     "despues": "Si los precios suben un 3 % al año, / *valdrían unos 744 euros. / Se llama pérdida de poder adquisitivo.*"
+    },
+    {
+     "linea": 3,
+     "antes": "La primera: // *ten a mano solo lo que vayas a necesitar.*",
+     "despues": "La primera: // *ten a mano tres meses de gastos.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar parado.*",
+     "despues": "Eso es para imprevistos, / *no para todo el dinero que tengas.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *no dejes parado lo que no vas a usar en años.*",
+     "despues": "La segunda: // *lo que no vayas a usar en años, / que no esté parado.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Busca una cuenta que te dé intereses, / *o infórmate sobre una inversión / que se ajuste a lo que necesitas.*",
+     "despues": "Busca una cuenta que te dé intereses, / *o infórmate sobre una inversión / que se ajuste a lo que necesitas.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *una vez al año, compara lo que rinde / con lo que suben los precios.*",
+     "despues": "La tercera: // *una vez al año, compara lo que te da / tu dinero con lo que suben los precios.*"
     }
    ]
   }

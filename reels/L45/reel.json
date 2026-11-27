@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Solo lo imprescindible: alquiler, comida, facturas. / *Lo demás puede esperar.*",
+   "show": "Solo lo imprescindible: alquiler, comida, facturas. / *Ocio y suscripciones no cuentan.*",
    "pause": 0.3
   },
   {
@@ -34,20 +34,20 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Esa es la cantidad que necesitas reunir. / *Reunirla es tu primera meta.*",
+   "show": "Esa es la cantidad que necesitas reunir.",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *aparta una cantidad fija el día que cobras.*",
+   "show": "El tercero: // *aparta una cantidad fija el día que cobras, / en una cuenta aparte.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Cien euros al mes, sin pensarlo, / *y no los toques salvo para una emergencia.*",
+   "show": "Con cien euros al mes tardas casi cuatro años; / *con cuatrocientos, poco más de once meses.*",
    "pause": 0.3
   },
   {
-   "show": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin él.*",
+   "show": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin nada.*",
    "pause": 0.3
   },
   {
@@ -74,6 +74,39 @@
      "linea": 9,
      "antes": "Un fondo de emergencia no da dinero: / *te quita el miedo a quedarte sin él.*",
      "despues": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin él.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "7/10; cambios por frases que no se entendían oyéndolas o no cuadraban; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "Solo lo imprescindible: alquiler, comida, facturas. / *Lo demás puede esperar.*",
+     "despues": "Solo lo imprescindible: alquiler, comida, facturas. / *Ocio y suscripciones no cuentan.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Esa es la cantidad que necesitas reunir. / *Reunirla es tu primera meta.*",
+     "despues": "Esa es la cantidad que necesitas reunir."
+    },
+    {
+     "linea": 7,
+     "antes": "El tercero: // *aparta una cantidad fija el día que cobras.*",
+     "despues": "El tercero: // *aparta una cantidad fija el día que cobras, / en una cuenta aparte.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Cien euros al mes, sin pensarlo, / *y no los toques salvo para una emergencia.*",
+     "despues": "Con cien euros al mes tardas casi cuatro años; / *con cuatrocientos, poco más de once meses.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin él.*",
+     "despues": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin nada.*"
     }
    ]
   }

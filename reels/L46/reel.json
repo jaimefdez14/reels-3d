@@ -7,16 +7,16 @@
  "situacion": "Quieres vender algo tuyo y nadie te ofrece lo que pides.",
  "lines": [
   {
-   "show": "Pides más por tu coche / *de lo que pagarías por uno igual.*",
+   "show": "Cuando vendes tu coche, / *pides más de lo que pagarías por uno igual.*",
    "pause": 0.45,
    "bocadillo": "Vale mucho más."
   },
   {
-   "show": "Se llama efecto de dotación: / *en un experimento con tazas, los que / tenían una pedían más del doble / de lo que ofrecían los que no.*",
+   "show": "Se llama efecto de dotación: / *en un experimento con tazas, los dueños / pedían más del doble de lo que / ofrecían los compradores.*",
    "pause": 0.3
   },
   {
-   "show": "Tres reglas para ponerle un precio justo.",
+   "show": "Tres reglas para ponerle precio a tu coche.",
    "pause": 0.3
   },
   {
@@ -38,12 +38,12 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *ponle fecha.*",
+   "show": "La tercera: // *ponle fecha límite al precio.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento.*",
+   "show": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento y vuelve a probar.*",
    "pause": 0.3
   },
   {
@@ -79,6 +79,39 @@
      "linea": 8,
      "antes": "Si en dos semanas no hay ofertas, / *baja el precio un diez por ciento.*",
      "despues": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "8/10; cambios por frases que no se entendían oyéndolas o no cuadraban; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Pides más por tu coche / *de lo que pagarías por uno igual.*",
+     "despues": "Cuando vendes tu coche, / *pides más de lo que pagarías por uno igual.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama efecto de dotación: / *en un experimento con tazas, los que / tenían una pedían más del doble / de lo que ofrecían los que no.*",
+     "despues": "Se llama efecto de dotación: / *en un experimento con tazas, los dueños / pedían más del doble de lo que / ofrecían los compradores.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Tres reglas para ponerle un precio justo.",
+     "despues": "Tres reglas para ponerle precio a tu coche."
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *ponle fecha.*",
+     "despues": "La tercera: // *ponle fecha límite al precio.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento.*",
+     "despues": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento y vuelve a probar.*"
     }
    ]
   }

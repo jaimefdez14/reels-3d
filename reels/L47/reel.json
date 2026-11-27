@@ -12,7 +12,7 @@
    "bocadillo": "Solo pago el mínimo."
   },
   {
-   "show": "Se llama método de la avalancha: / *pagar antes la deuda que más intereses tiene.*",
+   "show": "Se llama método de la avalancha / *y sirve para salir de deudas: / pagar antes la que más intereses tiene.*",
    "pause": 0.3
   },
   {
@@ -25,25 +25,25 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobran al año.*",
+   "show": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con su interés.*",
    "pause": 0.3
   },
   {
-   "show": "El segundo: // *paga el mínimo de todas.*",
+   "show": "El segundo: // *paga la cuota mínima de todas.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Y lo que te sobre, / *a la que tenga más intereses.*",
+   "show": "Y todo lo que te sobre del mes, / *a la que más intereses tenga.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *cuando termines una, sigue con la siguiente.*",
+   "show": "El tercero: // *cuando liquides una, pasa a la siguiente.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que pagabas por la primera, / *súmalo a la segunda.*",
+   "show": "Lo que pagabas por la que has liquidado, / *súmaselo a la siguiente.*",
    "pause": 0.3
   },
   {
@@ -90,6 +90,44 @@
      "antes": "Solo es el pago mínimo.",
      "despues": "Solo pago el mínimo.",
      "bocadillo": true
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "7/10; cambios por frases que no se entendían oyéndolas o no cuadraban; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama método de la avalancha: / *pagar antes la deuda que más intereses tiene.*",
+     "despues": "Se llama método de la avalancha / *y sirve para salir de deudas: / pagar antes la que más intereses tiene.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobran al año.*",
+     "despues": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con su interés.*"
+    },
+    {
+     "linea": 5,
+     "antes": "El segundo: // *paga el mínimo de todas.*",
+     "despues": "El segundo: // *paga la cuota mínima de todas.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Y lo que te sobre, / *a la que tenga más intereses.*",
+     "despues": "Y todo lo que te sobre del mes, / *a la que más intereses tenga.*"
+    },
+    {
+     "linea": 7,
+     "antes": "El tercero: // *cuando termines una, sigue con la siguiente.*",
+     "despues": "El tercero: // *cuando liquides una, pasa a la siguiente.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Lo que pagabas por la primera, / *súmalo a la segunda.*",
+     "despues": "Lo que pagabas por la que has liquidado, / *súmaselo a la siguiente.*"
     }
    ]
   }

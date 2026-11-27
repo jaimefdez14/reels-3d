@@ -12,7 +12,7 @@
    "bocadillo": "Aún tengo tiempo."
   },
   {
-   "show": "Se llama ley de Parkinson, de 1955: / *el trabajo se alarga hasta ocupar / todo el tiempo disponible.*",
+   "show": "Se llama ley de Parkinson, / *por el historiador que la formuló en 1955: / el trabajo se alarga hasta ocupar / todo el tiempo disponible.*",
    "pause": 0.3
   },
   {
@@ -43,11 +43,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Una hora, sin móvil, / *y al terminar, paras.*",
+   "show": "Una hora, sin móvil. / *Suena la alarma y paras.*",
    "pause": 0.3
   },
   {
-   "show": "No es trabajar más: / *es dejar de estirar lo que ya está hecho.*",
+   "show": "No es trabajar más: / *es no dejar que el trabajo se estire.*",
    "pause": 0.3
   },
   {
@@ -79,6 +79,29 @@
      "linea": 7,
      "antes": "La tercera: // *trabaja en bloques con hora de fin.*",
      "despues": "La tercera: // *trabaja por bloques, con hora de fin.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "8/10; cambios por frases que no se entendían oyéndolas o no cuadraban; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama ley de Parkinson, de 1955: / *el trabajo se alarga hasta ocupar / todo el tiempo disponible.*",
+     "despues": "Se llama ley de Parkinson, / *por el escritor que la formuló en 1955: / el trabajo se alarga hasta ocupar / todo el tiempo disponible.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Una hora, sin móvil, / *y al terminar, paras.*",
+     "despues": "Una hora, sin móvil. / *Suena la alarma y paras.*"
+    },
+    {
+     "linea": 9,
+     "antes": "No es trabajar más: / *es dejar de estirar lo que ya está hecho.*",
+     "despues": "No es trabajar más: / *es no dejar que el trabajo se estire.*"
     }
    ]
   }

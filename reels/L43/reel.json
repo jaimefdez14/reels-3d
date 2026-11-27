@@ -7,7 +7,7 @@
  "situacion": "Pagas cada día pequeñas cosas y a fin de mes no sabes en qué se ha ido el dinero.",
  "lines": [
   {
-   "show": "Tres euros al día no parecen nada. / *Son 1.095 euros al año.*",
+   "show": "Un café de tres euros al día no parece nada. / *Son 1.095 euros al año.*",
    "pause": 0.45,
    "bocadillo": "Es solo un café."
   },
@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Tres pasos para encontrarlos.",
+   "show": "Tres pasos para encontrarlos y recortarlos.",
    "pause": 0.3
   },
   {
@@ -34,16 +34,16 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que usas de verdad se queda. / *Lo que pagas por inercia, fuera.*",
+   "show": "Lo que te da algo a cambio se queda. / *Lo que pagas por inercia, fuera.*",
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *lo que quites, ahórralo el día que cobras.*",
+   "show": "El tercero: // *lo que quites, apártalo a otra cuenta / el día que cobras.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Si quitas tres euros al día, / *te quedan 1.095 euros al año.*",
+   "show": "Quita esos tres euros / *y en un año tienes 1.095 euros.*",
    "pause": 0.3
   },
   {
@@ -74,6 +74,39 @@
      "linea": 9,
      "antes": "No se trata de dejar de disfrutar: / *se trata de elegir en qué se va el dinero.*",
      "despues": "No es cuestión de dejar de disfrutar, / *sino de decidir en qué se te va el dinero.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota": "7/10; cambios por frases que no se entendían oyéndolas o no cuadraban; pasan por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Tres euros al día no parecen nada. / *Son 1.095 euros al año.*",
+     "despues": "Un café de tres euros al día no parece nada. / *Son 1.095 euros al año.*"
+    },
+    {
+     "linea": 2,
+     "antes": "Tres pasos para encontrarlos.",
+     "despues": "Tres pasos para encontrarlos y recortarlos."
+    },
+    {
+     "linea": 6,
+     "antes": "Lo que usas de verdad se queda. / *Lo que pagas por inercia, fuera.*",
+     "despues": "Lo que te da algo a cambio se queda. / *Lo que pagas por inercia, fuera.*"
+    },
+    {
+     "linea": 7,
+     "antes": "El tercero: // *lo que quites, ahórralo el día que cobras.*",
+     "despues": "El tercero: // *lo que quites, apártalo a otra cuenta / el día que cobras.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si quitas tres euros al día, / *te quedan 1.095 euros al año.*",
+     "despues": "Quita esos tres euros / *y en un año tienes 1.095 euros.*"
     }
    ]
   }
