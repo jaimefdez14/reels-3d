@@ -7,12 +7,12 @@
  "situacion": "Pagas el mínimo de la tarjeta cada mes y la deuda no baja.",
  "lines": [
   {
-   "show": "Una tarjeta al 20 % anual / *te cobra 200 euros al año por cada mil que debes.*",
+   "show": "Una tarjeta al 20 % / *te cobra 200 euros al año por cada mil que debes.*",
    "pause": 0.45,
-   "bocadillo": "Solo es el pago mínimo."
+   "bocadillo": "Solo pago el mínimo."
   },
   {
-   "show": "Se llama método de la avalancha: / *pagar primero la deuda que más cuesta.*",
+   "show": "Se llama método de la avalancha: / *pagar antes la deuda que más intereses tiene.*",
    "pause": 0.3
   },
   {
@@ -20,12 +20,12 @@
    "pause": 0.3
   },
   {
-   "show": "El primero: // *apunta todas tus deudas con su interés.*",
+   "show": "El primero: // *apunta todas tus deudas / y lo que te cobran de intereses.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobra al año.*",
+   "show": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobran al año.*",
    "pause": 0.3
   },
   {
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Y lo que te sobre, / *a la que cobra más intereses.*",
+   "show": "Y lo que te sobre, / *a la que tenga más intereses.*",
    "pause": 0.3
   },
   {
@@ -53,6 +53,45 @@
   {
    "show": "Mándaselo a ese amigo / *que paga el mínimo de la tarjeta cada mes.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Una tarjeta al 20 % anual / *te cobra 200 euros al año por cada mil que debes.*",
+     "despues": "Una tarjeta al 20 % / *te cobra 200 euros al año por cada mil que debes.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama método de la avalancha: / *pagar primero la deuda que más cuesta.*",
+     "despues": "Se llama método de la avalancha: / *pagar antes la deuda que más intereses tiene.*"
+    },
+    {
+     "linea": 3,
+     "antes": "El primero: // *apunta todas tus deudas con su interés.*",
+     "despues": "El primero: // *apunta todas tus deudas / y lo que te cobran de intereses.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobra al año.*",
+     "despues": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobran al año.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Y lo que te sobre, / *a la que cobra más intereses.*",
+     "despues": "Y lo que te sobre, / *a la que tenga más intereses.*"
+    },
+    {
+     "linea": 0,
+     "antes": "Solo es el pago mínimo.",
+     "despues": "Solo pago el mínimo.",
+     "bocadillo": true
+    }
+   ]
   }
  ]
 }

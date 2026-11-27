@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Se arma en tres pasos.",
+   "show": "Se construye en tres pasos.",
    "pause": 0.3
   },
   {
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Esa es la cantidad que necesitas reunir. / *Hasta que llegues, es tu primera meta.*",
+   "show": "Esa es la cantidad que necesitas reunir. / *Reunirla es tu primera meta.*",
    "pause": 0.3
   },
   {
@@ -47,12 +47,35 @@
    "pause": 0.3
   },
   {
-   "show": "Un fondo de emergencia no da dinero: / *te quita el miedo a quedarte sin él.*",
+   "show": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin él.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo / *que vive de nómina en nómina.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 2,
+     "antes": "Se arma en tres pasos.",
+     "despues": "Se construye en tres pasos."
+    },
+    {
+     "linea": 6,
+     "antes": "Esa es la cantidad que necesitas reunir. / *Hasta que llegues, es tu primera meta.*",
+     "despues": "Esa es la cantidad que necesitas reunir. / *Reunirla es tu primera meta.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Un fondo de emergencia no da dinero: / *te quita el miedo a quedarte sin él.*",
+     "despues": "Un fondo de emergencia no te da dinero: / *te quita el miedo a quedarte sin él.*"
+    }
+   ]
   }
  ]
 }

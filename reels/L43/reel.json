@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Café, propinas, suscripciones, envíos. / *Lo que no se apunta no se ve.*",
+   "show": "Café, suscripciones, comisiones, gastos de envío. / *Lo que no se apunta no se ve.*",
    "pause": 0.3
   },
   {
@@ -43,16 +43,39 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si quitas tres euros al día, / *son 1.095 euros al año para ti.*",
+   "show": "Si quitas tres euros al día, / *te quedan 1.095 euros al año.*",
    "pause": 0.3
   },
   {
-   "show": "No se trata de dejar de disfrutar: / *se trata de elegir en qué se va el dinero.*",
+   "show": "No es cuestión de dejar de disfrutar, / *sino de decidir en qué se te va el dinero.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo / *que dice que no sabe en qué se le va el dinero.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 4,
+     "antes": "Café, propinas, suscripciones, envíos. / *Lo que no se apunta no se ve.*",
+     "despues": "Café, suscripciones, comisiones, gastos de envío. / *Lo que no se apunta no se ve.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si quitas tres euros al día, / *son 1.095 euros al año para ti.*",
+     "despues": "Si quitas tres euros al día, / *te quedan 1.095 euros al año.*"
+    },
+    {
+     "linea": 9,
+     "antes": "No se trata de dejar de disfrutar: / *se trata de elegir en qué se va el dinero.*",
+     "despues": "No es cuestión de dejar de disfrutar, / *sino de decidir en qué se te va el dinero.*"
+    }
+   ]
   }
  ]
 }

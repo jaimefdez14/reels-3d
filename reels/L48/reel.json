@@ -12,7 +12,7 @@
    "bocadillo": "Aún tengo tiempo."
   },
   {
-   "show": "Se llama ley de Parkinson, de 1955: / *el trabajo se expande hasta ocupar / el tiempo que le des.*",
+   "show": "Se llama ley de Parkinson, de 1955: / *el trabajo se alarga hasta ocupar / todo el tiempo disponible.*",
    "pause": 0.3
   },
   {
@@ -25,11 +25,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si piensas en cinco días, / *ponte tres.*",
+   "show": "Si calculas cinco días, / *concédete tres.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *pon una fecha con alguien esperando.*",
+   "show": "La segunda: // *fija una fecha de entrega que alguien espere.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *trabaja en bloques con hora de fin.*",
+   "show": "La tercera: // *trabaja por bloques, con hora de fin.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -53,6 +53,34 @@
   {
    "show": "Mándaselo a ese amigo / *que siempre lo entrega a última hora.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 1,
+     "antes": "Se llama ley de Parkinson, de 1955: / *el trabajo se expande hasta ocupar / el tiempo que le des.*",
+     "despues": "Se llama ley de Parkinson, de 1955: / *el trabajo se alarga hasta ocupar / todo el tiempo disponible.*"
+    },
+    {
+     "linea": 4,
+     "antes": "Si piensas en cinco días, / *ponte tres.*",
+     "despues": "Si calculas cinco días, / *concédete tres.*"
+    },
+    {
+     "linea": 5,
+     "antes": "La segunda: // *pon una fecha con alguien esperando.*",
+     "despues": "La segunda: // *fija una fecha de entrega que alguien espere.*"
+    },
+    {
+     "linea": 7,
+     "antes": "La tercera: // *trabaja en bloques con hora de fin.*",
+     "despues": "La tercera: // *trabaja por bloques, con hora de fin.*"
+    }
+   ]
   }
  ]
 }

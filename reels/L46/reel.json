@@ -7,12 +7,12 @@
  "situacion": "Quieres vender algo tuyo y nadie te ofrece lo que pides.",
  "lines": [
   {
-   "show": "Pides más por tu coche / *de lo que pagarías por el mismo coche.*",
+   "show": "Pides más por tu coche / *de lo que pagarías por uno igual.*",
    "pause": 0.45,
    "bocadillo": "Vale mucho más."
   },
   {
-   "show": "Se llama efecto de dotación: / *en un experimento con tazas, quienes la tenían / pedían más del doble de lo que / ofrecían quienes no.*",
+   "show": "Se llama efecto de dotación: / *en un experimento con tazas, los que / tenían una pedían más del doble / de lo que ofrecían los que no.*",
    "pause": 0.3
   },
   {
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si no lo pagarías tú, / *no esperes que lo pague otro.*",
+   "show": "Si tú no lo pagas, / *no esperes que lo pague otro.*",
    "pause": 0.3
   },
   {
@@ -43,7 +43,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si en dos semanas no hay ofertas, / *baja el precio un diez por ciento.*",
+   "show": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento.*",
    "pause": 0.3
   },
   {
@@ -53,6 +53,34 @@
   {
    "show": "Mándaselo a ese amigo / *que lleva meses con el coche en venta.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 0,
+     "antes": "Pides más por tu coche / *de lo que pagarías por el mismo coche.*",
+     "despues": "Pides más por tu coche / *de lo que pagarías por uno igual.*"
+    },
+    {
+     "linea": 1,
+     "antes": "Se llama efecto de dotación: / *en un experimento con tazas, quienes la tenían / pedían más del doble de lo que / ofrecían quienes no.*",
+     "despues": "Se llama efecto de dotación: / *en un experimento con tazas, los que / tenían una pedían más del doble / de lo que ofrecían los que no.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Si no lo pagarías tú, / *no esperes que lo pague otro.*",
+     "despues": "Si tú no lo pagas, / *no esperes que lo pague otro.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si en dos semanas no hay ofertas, / *baja el precio un diez por ciento.*",
+     "despues": "Si en dos semanas no te ha llegado ninguna oferta, / *baja el precio un diez por ciento.*"
+    }
+   ]
   }
  ]
 }

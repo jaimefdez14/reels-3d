@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Tres reglas para que no te pase.",
+   "show": "Tres reglas para evitarlo.",
    "pause": 0.3
   },
   {
@@ -25,7 +25,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar quieto.*",
+   "show": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar parado.*",
    "pause": 0.3
   },
   {
@@ -34,7 +34,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Busca una cuenta que te pague algo, / *o infórmate de una inversión que encaje contigo.*",
+   "show": "Busca una cuenta que te dé intereses, / *o infórmate sobre una inversión / que se ajuste a lo que necesitas.*",
    "pause": 0.3
   },
   {
@@ -43,16 +43,49 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si rinde menos que los precios, / *pierdes aunque el saldo no baje.*",
+   "show": "Si rinde menos de lo que suben los precios, / *pierdes aunque el saldo no baje.*",
    "pause": 0.3
   },
   {
-   "show": "Ahorrar no es solo guardar: / *es que lo guardado no pierda valor.*",
+   "show": "Ahorrar no es solo guardar: / *es conseguir que lo guardado no pierda valor.*",
    "pause": 0.3
   },
   {
    "show": "Mándaselo a ese amigo / *que lo guarda todo en la cuenta corriente.*",
    "pause": 0.3
+  }
+ ],
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: solo errores (calco, referente que falla, palabra que aquí no se usa); los cambios de gusto no se aplican",
+   "cambios": [
+    {
+     "linea": 2,
+     "antes": "Tres reglas para que no te pase.",
+     "despues": "Tres reglas para evitarlo."
+    },
+    {
+     "linea": 4,
+     "antes": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar quieto.*",
+     "despues": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar parado.*"
+    },
+    {
+     "linea": 6,
+     "antes": "Busca una cuenta que te pague algo, / *o infórmate de una inversión que encaje contigo.*",
+     "despues": "Busca una cuenta que te dé intereses, / *o infórmate sobre una inversión / que se ajuste a lo que necesitas.*"
+    },
+    {
+     "linea": 8,
+     "antes": "Si rinde menos que los precios, / *pierdes aunque el saldo no baje.*",
+     "despues": "Si rinde menos de lo que suben los precios, / *pierdes aunque el saldo no baje.*"
+    },
+    {
+     "linea": 9,
+     "antes": "Ahorrar no es solo guardar: / *es que lo guardado no pierda valor.*",
+     "despues": "Ahorrar no es solo guardar: / *es conseguir que lo guardado no pierda valor.*"
+    }
+   ]
   }
  ]
 }
