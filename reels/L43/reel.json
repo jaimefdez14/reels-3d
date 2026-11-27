@@ -1,0 +1,58 @@
+{
+ "id": "L43",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Los gastos hormiga",
+ "tema": "Dinero",
+ "idea": "L43, 27-11-2026: Jaime «genera nuevos guiones». Ganchos con cifra o situación general (docs/METRICAS-2026-11-24.md), herramienta de pasos y cierre a un amigo. Guion en texto, sin escena ni voz.",
+ "situacion": "Pagas cada día pequeñas cosas y a fin de mes no sabes en qué se ha ido el dinero.",
+ "lines": [
+  {
+   "show": "Tres euros al día no parecen nada. / *Son 1.095 euros al año.*",
+   "pause": 0.45,
+   "bocadillo": "Es solo un café."
+  },
+  {
+   "show": "Se llaman gastos hormiga: / *pequeños, diarios y casi invisibles.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres pasos para encontrarlos.",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *apunta todo lo que pagues durante un mes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Café, propinas, suscripciones, envíos. / *Lo que no se apunta no se ve.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *sepáralo en lo que usas y lo que no.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo que usas de verdad se queda. / *Lo que pagas por inercia, fuera.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *lo que quites, ahórralo el día que cobras.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si quitas tres euros al día, / *son 1.095 euros al año para ti.*",
+   "pause": 0.3
+  },
+  {
+   "show": "No se trata de dejar de disfrutar: / *se trata de elegir en qué se va el dinero.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que dice que no sabe en qué se le va el dinero.*",
+   "pause": 0.3
+  }
+ ]
+}

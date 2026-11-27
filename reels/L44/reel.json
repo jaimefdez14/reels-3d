@@ -1,0 +1,58 @@
+{
+ "id": "L44",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La pérdida de poder adquisitivo",
+ "tema": "Dinero",
+ "idea": "L44, 27-11-2026: Jaime «genera nuevos guiones». Ganchos con cifra o situación general (docs/METRICAS-2026-11-24.md), herramienta de pasos y cierre a un amigo. Guion en texto, sin escena ni voz.",
+ "situacion": "Guardas el dinero en la cuenta corriente y con los años da para menos.",
+ "lines": [
+  {
+   "show": "Mil euros en un cajón / *no valen lo mismo dentro de diez años.*",
+   "pause": 0.45,
+   "bocadillo": "Ahí no se pierde nada."
+  },
+  {
+   "show": "Con una inflación del 3 % al año, / *valdrían unos 744 euros. / Se llama pérdida de poder adquisitivo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para que no te pase.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *ten a mano solo lo que vayas a necesitar.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Tres meses de gastos para imprevistos. / *Lo demás no tiene por qué estar quieto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *no dejes parado lo que no vas a usar en años.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Busca una cuenta que te pague algo, / *o infórmate de una inversión que encaje contigo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *una vez al año, compara lo que rinde / con lo que suben los precios.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si rinde menos que los precios, / *pierdes aunque el saldo no baje.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Ahorrar no es solo guardar: / *es que lo guardado no pierda valor.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que lo guarda todo en la cuenta corriente.*",
+   "pause": 0.3
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "id": "L45",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El fondo de emergencia",
+ "tema": "Dinero",
+ "idea": "L45, 27-11-2026: Jaime «genera nuevos guiones». Ganchos con cifra o situación general (docs/METRICAS-2026-11-24.md), herramienta de pasos y cierre a un amigo. Guion en texto, sin escena ni voz.",
+ "situacion": "Vas de nómina a nómina y un imprevisto te descuadra el mes.",
+ "lines": [
+  {
+   "show": "Si mañana dejas de cobrar, / *tu colchón tiene que durar tres meses.*",
+   "pause": 0.45,
+   "bocadillo": "Ya ahorraré."
+  },
+  {
+   "show": "Se llama fondo de emergencia: / *con 1.500 euros de gastos al mes, son 4.500.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se arma en tres pasos.",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *calcula lo que gastas cada mes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Solo lo imprescindible: alquiler, comida, facturas. / *Lo demás puede esperar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *multiplícalo por tres.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Esa es la cantidad que necesitas reunir. / *Hasta que llegues, es tu primera meta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *aparta una cantidad fija el día que cobras.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cien euros al mes, sin pensarlo, / *y no los toques salvo para una emergencia.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Un fondo de emergencia no da dinero: / *te quita el miedo a quedarte sin él.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que vive de nómina en nómina.*",
+   "pause": 0.3
+  }
+ ]
+}

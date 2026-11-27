@@ -1,0 +1,58 @@
+{
+ "id": "L47",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El método de la avalancha",
+ "tema": "Dinero",
+ "idea": "L47, 27-11-2026: Jaime «genera nuevos guiones». Ganchos con cifra o situación general (docs/METRICAS-2026-11-24.md), herramienta de pasos y cierre a un amigo. Guion en texto, sin escena ni voz.",
+ "situacion": "Pagas el mínimo de la tarjeta cada mes y la deuda no baja.",
+ "lines": [
+  {
+   "show": "Una tarjeta al 20 % anual / *te cobra 200 euros al año por cada mil que debes.*",
+   "pause": 0.45,
+   "bocadillo": "Solo es el pago mínimo."
+  },
+  {
+   "show": "Se llama método de la avalancha: / *pagar primero la deuda que más cuesta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se hace en tres pasos.",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *apunta todas tus deudas con su interés.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Tarjeta, préstamo del coche, compras a plazos. / *Cada una con lo que te cobra al año.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *paga el mínimo de todas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Y lo que te sobre, / *a la que cobra más intereses.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *cuando termines una, sigue con la siguiente.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo que pagabas por la primera, / *súmalo a la segunda.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Pagar solo el mínimo / *es la forma más lenta de salir de una deuda.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que paga el mínimo de la tarjeta cada mes.*",
+   "pause": 0.3
+  }
+ ]
+}
