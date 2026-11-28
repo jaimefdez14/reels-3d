@@ -1,0 +1,37 @@
+# Órdenes de Jaime en las issues (/ok-voz, /ok-todo, /publicar, /cambios, /descartar, /pausar, /reanudar; en ideas,
+# /ok y /no). Solo cuentan las del dueño del repo. /ok-voz genera la voz de pago y la versión final. docs/PIPELINE.md.
+name: ordenes
+on:
+  issue_comment:
+    types: [created]
+permissions: { contents: write, issues: write }
+concurrency: { group: 'ordenes-${{ github.event.issue.number }}', cancel-in-progress: false }
+jobs:
+  orden:
+    if: ${{ !github.event.issue.pull_request && github.event.comment.author_association == 'OWNER' && startsWith(github.event.comment.body, '/') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: '${{ github.token }}'
+      ELEVENLABS_API_KEY: '${{ secrets.ELEVENLABS_API_KEY }}'
+    steps:
+      - uses: actions/checkout@v4
+      - id: o
+        run: python3 herramientas/pipeline.py orden
+      - run: python3 herramientas/pipeline.py panel
+      - uses: ./.github/actions/guardar
+        with: { mensaje: 'Cadena: orden en la issue ${{ github.event.issue.number }}' }
+      - uses: ./.github/actions/preparar
+        if: steps.o.outputs.accion != ''
+        with: { kokoro: "${{ steps.o.outputs.accion == 'previa' }}" }
+      - if: steps.o.outputs.accion == 'final'
+        env: { ID: '${{ steps.o.outputs.id }}' }
+        run: python herramientas/pipeline.py final "$ID"
+      - if: steps.o.outputs.accion == 'previa'
+        env: { ID: '${{ steps.o.outputs.id }}' }
+        run: python herramientas/pipeline.py previa "$ID"
+      - if: always() && steps.o.outputs.accion != ''
+        run: python3 herramientas/pipeline.py panel
+      - if: always() && steps.o.outputs.accion != ''
+        uses: ./.github/actions/guardar
+        with: { mensaje: 'Cadena: ${{ steps.o.outputs.accion }} ${{ steps.o.outputs.id }}' }

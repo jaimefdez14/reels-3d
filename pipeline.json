@@ -1,0 +1,13 @@
+{
+  "repo": "jaimefdez14/reels-3d",
+  "cuenta": "fase.zer0",
+  "autorizados": ["jaimefdez14"],
+  "zona": "Europe/Madrid",
+  "franjas": ["13:00", "20:00"],
+  "ventana_min": 75,
+  "max_en_curso": 4,
+  "colchon_aprobados": 6,
+  "kokoro": { "voz": "em_alex", "velocidad": 1.1 },
+  "eleven": { "voz": "eEyWolF7iBpMA65GbtAm", "velocidad": 1.0 },
+  "hashtags_por_defecto": ""
+}

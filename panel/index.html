@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Panel fase.zer0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Panel de una cuenta de reels: arriba lo que espera una decisión de Jaime (con el vídeo), luego el calendario de
+   franjas, la cadena por estados, ideas, publicados y la actividad de los workflows. Negro + amarillo del muñeco. */
+:root{
+  --bg:#f5f4ef; --surface:#ffffff; --surface-2:#ecebe4; --line:#dcdad1;
+  --fg:#151514; --muted:#6b6960; --accent:#ffd21f; --accent-ink:#151514; --accent-text:#8a6d00;
+  --ok:#1f8a3b; --warn:#b06a00; --bad:#c9353a; --info:#2f64c9;
+  --display:"Archivo Black","Arial Black",Impact,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:14px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d0d0e; --surface:#161618; --surface-2:#202023; --line:#2c2c30;
+  --fg:#f2f0ea; --muted:#9a978f; --accent:#ffd21f; --accent-ink:#121212; --accent-text:#ffd21f;
+  --ok:#3fb950; --warn:#e3a008; --bad:#ff6369; --info:#6ea8ff; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d0d0e; --surface:#161618; --surface-2:#202023; --line:#2c2c30;
+  --fg:#f2f0ea; --muted:#9a978f; --accent:#ffd21f; --accent-ink:#121212; --accent-text:#ffd21f;
+  --ok:#3fb950; --warn:#e3a008; --bad:#ff6369; --info:#6ea8ff; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+a{color:inherit}
+button,textarea,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font:400 1.05rem/1.2 var(--display);letter-spacing:.01em;text-transform:uppercase}
+.sub{color:var(--muted);font-size:.85rem}
+.num{font-variant-numeric:tabular-nums}
+
+/* cabecera */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:14px 12px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:12px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.brand svg{flex:none}
+.brand h1{font:400 1.25rem/1 var(--display)}
+.brand .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 12px;cursor:pointer;font-size:.85rem;font-weight:600}
+.iconbtn:hover{border-color:var(--fg)}
+
+/* resumen */
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font:400 1.8rem/1.1 var(--display)}
+.stat span{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.stat.hot{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stat.hot span{color:var(--accent-ink);opacity:.75}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:first-child{grid-column:1/-1}}
+
+.section{display:flex;flex-direction:column;gap:12px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* decisiones */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card.urgente{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.video{background:#000;aspect-ratio:9/16;max-height:62vh;width:100%;display:block}
+.card-body{padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{font-size:1.02rem;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 9px;font-size:.75rem;font-weight:600;background:var(--surface-2);white-space:nowrap}
+.pill i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.e-guion{color:var(--muted)} .e-previa,.e-final{color:var(--accent-text)} .e-voz_ok{color:var(--info)} .e-aprobado{color:var(--ok)}
+.e-publicado{color:var(--ok)} .e-fallo,.e-cambios{color:var(--warn)} .e-descartado,.e-pausado{color:var(--muted)}
+.coste{border:1px dashed var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem}
+.coste b{font-variant-numeric:tabular-nums}
+.texto{background:var(--surface-2);border-radius:10px;padding:9px 11px;font-size:.88rem;white-space:pre-wrap;overflow-wrap:anywhere}
+details summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+details ol{margin:8px 0 0;padding-left:22px;font-size:.88rem;display:flex;flex-direction:column;gap:2px}
+.acciones{display:flex;flex-wrap:wrap;gap:8px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 13px;font-weight:600;font-size:.88rem;cursor:pointer}
+.btn:hover{border-color:var(--fg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(.95)}
+.btn.danger{color:var(--bad)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.confirm{border:1px solid var(--accent);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:8px;font-size:.88rem}
+textarea{width:100%;min-height:84px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px;resize:vertical}
+.aviso{border-left:3px solid var(--warn);padding:6px 10px;background:var(--surface-2);border-radius:0 8px 8px 0;font-size:.85rem;overflow-wrap:anywhere}
+.aviso.bad{border-left-color:var(--bad)}
+.procesando{display:flex;gap:8px;align-items:center;font-size:.88rem;color:var(--info)}
+.spin{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:g 1s linear infinite}
+@keyframes g{to{transform:rotate(1turn)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.vacio{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:18px;color:var(--muted);font-size:.9rem}
+
+/* calendario */
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+@media (max-width:720px){.cal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dia{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.dia h4{margin:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.slot{border-radius:8px;padding:6px 8px;font-size:.82rem;display:flex;gap:6px;align-items:baseline;min-width:0}
+.slot b{font-variant-numeric:tabular-nums;flex:none}
+.slot span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.slot.lleno{background:var(--accent);color:var(--accent-ink)}
+.slot.libre{background:var(--surface-2);color:var(--muted)}
+
+/* cadena */
+.flujo{display:grid;grid-template-columns:repeat(6,minmax(140px,1fr));gap:8px;overflow-x:auto;padding-bottom:4px}
+.col{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.col h4{margin:0;display:flex;justify-content:space-between;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.chip{border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.82rem;background:var(--bg);overflow-wrap:anywhere}
+.chip small{display:block;color:var(--muted)}
+.chip.alerta{border-color:var(--warn)}
+.flujo-wrap{overflow-x:auto}
+
+/* listas */
+.lista{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column}
+.fila{display:flex;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid var(--line);min-width:0;flex-wrap:wrap}
+.fila:first-child{border-top:0}
+.fila .t{flex:1;min-width:180px}
+.fila .t small{display:block;color:var(--muted)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:820px){.dos{grid-template-columns:1fr}}
+
+/* ajustes y avisos */
+dialog{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--fg);max-width:min(520px,calc(100vw - 32px));padding:18px}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog form{display:flex;flex-direction:column;gap:12px}
+dialog input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px}
+dialog ol{padding-left:20px;margin:0;font-size:.88rem;display:flex;flex-direction:column;gap:4px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);
+  padding:10px 16px;border-radius:12px;font-size:.9rem;max-width:calc(100vw - 32px);z-index:20;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.banner{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.9rem}
+.banner .t{flex:1;min-width:200px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="8" fill="var(--accent)"/><circle cx="15" cy="8.5" r="3.6" fill="var(--accent-ink)"/><path d="M15 12.5v8.5M15 21l-4 5M15 21l4 5M9.5 15.5h11" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+    <div style="min-width:0"><h1>fase.zer0</h1><div class="sub" id="act">Cargando…</div></div>
+  </div>
+  <button class="iconbtn" id="refrescar" type="button">Actualizar</button>
+  <button class="iconbtn" id="ajustes" type="button">GitHub</button>
+</header>
+
+<main class="wrap" style="margin-top:18px">
+  <div id="conexion"></div>
+  <section class="stats" id="stats" aria-label="Resumen"></section>
+
+  <section class="section">
+    <div class="section-head"><h2>Te toca decidir</h2><span class="sub">Previas y finales que esperan tu orden</span></div>
+    <div id="decidir" class="cards"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Calendario</h2><span class="sub" id="cal-sub"></span></div>
+    <div id="cal" class="cal"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>La cadena</h2><span class="sub">De la idea a Instagram</span></div>
+    <div class="flujo-wrap"><div id="flujo" class="flujo"></div></div>
+  </section>
+
+  <div class="dos">
+    <section class="section">
+      <div class="section-head"><h2>Ideas</h2><span class="sub">Ninguna se produce sin tu sí</span></div>
+      <div id="ideas"></div>
+    </section>
+    <section class="section">
+      <div class="section-head"><h2>Publicados</h2><span class="sub">@fase.zer0</span></div>
+      <div id="publicados"></div>
+    </section>
+  </div>
+
+  <div class="dos">
+    <section class="section">
+      <div class="section-head"><h2>Actividad</h2><span class="sub">Lo que ha hecho la cadena</span></div>
+      <div id="runs"></div>
+    </section>
+    <section class="section">
+      <div class="section-head"><h2>Acciones</h2></div>
+      <div class="lista">
+        <div class="fila"><div class="t">Publicar ya el siguiente de la cola<small>Sin esperar a la franja de las 13:00 o las 20:00</small></div><button class="btn" id="ya" type="button">Publicar ya</button></div>
+        <div class="fila"><div class="t">Rehacer previas pendientes<small>Vuelve a lanzar la cadena para los reels en «guion»</small></div><button class="btn" id="rehacer" type="button">Lanzar</button></div>
+        <div class="fila"><div class="t">Ver todo en GitHub<small>Issues, vídeos (releases) y workflows</small></div><a class="btn" id="enlace-repo" href="#" target="_blank" rel="noopener">Abrir</a></div>
+      </div>
+      <div id="confirm-accion"></div>
+    </section>
+  </div>
+</main>
+
+<dialog id="dlg">
+  <form method="dialog" id="dlg-form">
+    <h2>Conectar con GitHub</h2>
+    <p class="sub" style="margin:0">El panel se ve sin conexión. Para decidir desde aquí (aprobar voz, publicar, pedir cambios), pega un token de GitHub. Se guarda solo en este navegador.</p>
+    <ol>
+      <li>Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>.</li>
+      <li>Repository access: <b>Only select repositories</b> → <b>reels-3d</b>.</li>
+      <li>Permissions: <b>Issues</b> y <b>Actions</b> en «Read and write»; <b>Contents</b> en «Read-only».</li>
+      <li>Genera el token y pégalo aquí.</li>
+    </ol>
+    <label for="tok" class="sub">Token</label>
+    <input id="tok" type="password" autocomplete="off" placeholder="github_pat_…">
+    <div class="acciones">
+      <button class="btn primary" value="guardar" type="submit">Guardar</button>
+      <button class="btn" value="borrar" type="submit">Quitar token</button>
+      <button class="btn" value="cancelar" type="submit">Cerrar</button>
+    </div>
+  </form>
+</dialog>
+<div id="toast" class="toast" hidden></div>
+
+<script>
+const REPO = 'jaimefdez14/reels-3d';
+const API = 'https://api.github.com/repos/' + REPO;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store = { get(k){ try { return localStorage.getItem(k) } catch { return null } }, set(k,v){ try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k,v) } catch {} } };
+const token = () => store.get('fz_token');
+const fmtN = n => (n ?? 0).toLocaleString('es-ES');
+const TZ = 'Europe/Madrid';
+const fecha = (iso, o) => new Date(iso).toLocaleString('es-ES', { timeZone: TZ, ...o });
+const hace = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 1 ? 'ahora' : m < 60 ? `hace ${m} min` : m < 1440 ? `hace ${Math.round(m/60)} h` : `hace ${Math.round(m/1440)} d` };
+const ESTADO = { guion:'En producción', previa:'Previa lista', fallo:'Corrigiendo', cambios:'Cambios pedidos', voz_ok:'Generando final', final:'Final lista', aprobado:'En cola', publicado:'Publicado', descartado:'Descartado', pausado:'Pausado' };
+const pill = e => `<span class="pill e-${e}"><i></i>${ESTADO[e] || e}</span>`;
+let DATA = null, RUNS = [];
+const pendientes = () => { try { return JSON.parse(store.get('fz_pend') || '{}') } catch { return {} } };
+const setPend = p => store.set('fz_pend', JSON.stringify(p));
+
+function toast(msg){ const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 5200) }
+
+async function gh(path, opts = {}){
+  const h = { Accept: 'application/vnd.github+json', ...(opts.headers || {}) };
+  if (token()) h.Authorization = 'Bearer ' + token();
+  const r = await fetch(path.startsWith('http') ? path : API + path, { ...opts, headers: h });
+  if (!r.ok) { const e = new Error((await r.text()).slice(0, 300)); e.status = r.status; throw e }
+  return r.status === 204 ? null : r.json();
+}
+
+async function cargar(){
+  $('#act').textContent = 'Actualizando…';
+  try {
+    if (token()) DATA = await gh('/contents/docs/panel.json?ref=main', { headers: { Accept: 'application/vnd.github.raw+json' } });
+    else DATA = await (await fetch(`https://raw.githubusercontent.com/${REPO}/main/docs/panel.json?t=${Date.now()}`)).json();
+  } catch (e) { $('#act').textContent = 'No se pudo leer el estado (' + (e.status || 'red') + ')'; return }
+  try { RUNS = (await gh('/actions/runs?per_page=8')).workflow_runs || [] } catch { RUNS = [] }
+  // una orden enviada deja de estar «procesando» cuando el estado del reel cambia
+  const p = pendientes(); for (const k of Object.keys(p)) { const r = DATA.reels.find(x => x.id === p[k].id); if (!r || r.estado !== p[k].estado || Date.now() - p[k].t > 45*60000) delete p[k] } setPend(p);
+  pintar();
+}
+
+function pintar(){
+  const D = DATA, R = D.reels.filter(r => !['descartado'].includes(r.estado));
+  $('#act').textContent = `Estado de la cadena ${hace(D.generado)} · ${fecha(D.generado, { hour:'2-digit', minute:'2-digit' })}`;
+  $('#enlace-repo').href = `https://github.com/${REPO}/issues`;
+  $('#conexion').innerHTML = token() ? '' : `<div class="banner"><div class="t"><b>Solo lectura.</b> Conecta GitHub para aprobar la voz, publicar o pedir cambios desde aquí.</div><button class="btn primary" type="button" onclick="abrirAjustes()">Conectar</button></div>`;
+
+  const decidir = R.filter(r => ['previa','final'].includes(r.estado));
+  const curso = R.filter(r => ['guion','fallo','cambios','voz_ok'].includes(r.estado));
+  const cola = D.cola.length, pub = R.filter(r => r.estado === 'publicado').length;
+  const cubiertas = D.calendario.filter(c => c.reel).length;
+  $('#stats').innerHTML = [
+    [decidir.length, 'Te toca decidir', decidir.length > 0],
+    [curso.length, 'En producción'],
+    [cola, `En cola · ${cubiertas ? 'hasta ' + fecha(D.calendario.filter(c=>c.reel).at(-1).franja, { weekday:'short', day:'numeric' }) : 'sin franjas cubiertas'}`],
+    [pub, 'Publicados'],
+    [fmtN(D.gasto_mes.caracteres), 'Voz de pago este mes'],
+  ].map(([n, t, hot]) => `<div class="stat${hot ? ' hot' : ''}"><b class="num">${n}</b><span>${t}</span></div>`).join('');
+
+  // te toca decidir
+  const p = pendientes();
+  $('#decidir').innerHTML = decidir.length ? decidir.map(r => tarjeta(r, p[r.id])).join('') :
+    `<div class="vacio">Nada pendiente. ${curso.length ? `La cadena está trabajando en ${curso.map(r => r.id).join(', ')}.` : 'Cuando la sesión programada termine un reel, su previa aparecerá aquí.'}</div>`;
+  for (const r of R.filter(r => ['fallo','cambios'].includes(r.estado))) { /* visibles en la cadena */ }
+
+  // calendario: 7 días
+  const dias = {}; for (const c of D.calendario) { const k = fecha(c.franja, { weekday:'long', day:'numeric', month:'short' }); (dias[k] ||= []).push(c) }
+  const huecos = D.calendario.filter(c => !c.reel).length;
+  $('#cal-sub').textContent = huecos === D.calendario.length ? 'Cola vacía: las franjas se saltan hasta que apruebes una final' : `${D.calendario.length - huecos} de ${D.calendario.length} franjas cubiertas`;
+  $('#cal').innerHTML = Object.entries(dias).slice(0, 7).map(([d, cs]) => `<div class="dia"><h4>${esc(d)}</h4>${cs.map(c => {
+    const r = c.reel && D.reels.find(x => x.id === c.reel);
+    return `<div class="slot ${r ? 'lleno' : 'libre'}"><b>${fecha(c.franja, { hour:'2-digit', minute:'2-digit' })}</b><span>${r ? esc(r.id + ' · ' + r.titulo) : 'Libre'}</span></div>` }).join('')}</div>`).join('');
+
+  // la cadena
+  const cols = [['guion','En producción',['guion','fallo','cambios']],['previa','Previa',['previa']],['voz_ok','Voz de pago',['voz_ok']],['final','Final',['final']],['aprobado','En cola',['aprobado']],['publicado','Publicado',['publicado']]];
+  $('#flujo').innerHTML = cols.map(([k, t, es]) => { const rs = R.filter(r => es.includes(r.estado));
+    return `<div class="col"><h4><span>${t}</span><span class="num">${rs.length}</span></h4>${rs.map(r => `<div class="chip${['fallo','cambios'].includes(r.estado) ? ' alerta' : ''}"><b>${esc(r.id)}</b> ${esc(r.titulo)}<small>${r.estado === 'fallo' ? 'Un control no dio ok; la sesión lo corrige' : r.estado === 'cambios' ? 'Cambios: ' + esc((r.cambios.at(-1) || {}).texto || '') : r.version ? 'v' + r.version : ''}</small></div>`).join('') || '<span class="sub">—</span>'}</div>` }).join('');
+
+  // ideas
+  const pro = D.ideas.filter(i => i.estado === 'propuesta'), apr = D.ideas.filter(i => i.estado === 'aprobada' && !i.reel);
+  $('#ideas').innerHTML = `<div class="lista">${pro.map(i => `<div class="fila"><div class="t"><b>${esc(i.id)}</b> · ${esc(i.titulo)}<small>${esc(i.resumen || '')}</small></div>
+      ${p['idea-' + i.id] ? '<span class="procesando"><span class="spin"></span>Enviado</span>' : `<div class="acciones"><button class="btn primary" type="button" onclick="idea('${esc(i.id)}','ok',${i.issue || 0})">Sí</button><button class="btn" type="button" onclick="idea('${esc(i.id)}','no',${i.issue || 0})">No</button></div>`}</div>`).join('')}
+    ${apr.map(i => `<div class="fila"><div class="t"><b>${esc(i.id)}</b> · ${esc(i.titulo)}<small>Aprobada; la sesión programada la producirá</small></div>${pill('guion')}</div>`).join('')}
+    ${!pro.length && !apr.length ? '<div class="fila"><div class="t sub">Sin ideas pendientes. Cuando queden menos de 4 aprobadas, la sesión propondrá nuevas.</div></div>' : ''}</div>`;
+
+  // publicados
+  const ps = D.reels.filter(r => r.estado === 'publicado').sort((a, b) => (b.ig?.fecha || '').localeCompare(a.ig?.fecha || ''));
+  $('#publicados').innerHTML = `<div class="lista">${ps.map(r => `<div class="fila"><div class="t"><b>${esc(r.id)}</b> · ${esc(r.titulo)}<small>${r.ig?.fecha ? fecha(r.ig.fecha.replace(' ', 'T'), { weekday:'short', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' }) : ''}</small></div>${r.ig?.permalink ? `<a class="btn" href="${esc(r.ig.permalink)}" target="_blank" rel="noopener">Ver en Instagram</a>` : ''}</div>`).join('') || '<div class="fila"><div class="t sub">Todavía nada.</div></div>'}</div>`;
+
+  // actividad
+  const nombre = { produccion:'Previas', ordenes:'Orden tuya', publicar:'Publicación', panel:'Panel' };
+  $('#runs').innerHTML = `<div class="lista">${RUNS.map(w => { const est = w.status !== 'completed' ? ['En marcha','e-voz_ok'] : w.conclusion === 'success' ? ['Ok','e-aprobado'] : w.conclusion === 'skipped' ? ['Sin nada que hacer','e-guion'] : ['Falló','e-fallo'];
+    return `<div class="fila"><div class="t">${esc(nombre[w.name] || w.name)}<small>${hace(w.created_at)} · ${esc(w.event === 'schedule' ? 'programada' : w.event === 'issue_comment' ? 'comentario' : w.event)}</small></div><a class="pill ${est[1]}" href="${esc(w.html_url)}" target="_blank" rel="noopener"><i></i>${est[0]}</a></div>` }).join('') || '<div class="fila"><div class="t sub">Sin datos de GitHub Actions.</div></div>'}</div>`;
+}
+
+function tarjeta(r, pend){
+  const v = r.estado === 'final' ? r.final : r.previa;
+  const cambios = (r.cambios || []).at(-1);
+  let acciones;
+  if (pend) acciones = `<div class="procesando"><span class="spin"></span>${esc(pend.msg)}</div>`;
+  else if (r.estado === 'previa') acciones = `<div class="acciones">
+      <button class="btn primary" type="button" onclick="pedir('${r.id}','ok-voz')">Aprobar voz</button>
+      <button class="btn" type="button" onclick="pedir('${r.id}','ok-todo')">Voz y publicar</button>
+      <button class="btn" type="button" onclick="pedir('${r.id}','cambios')">Pedir cambios</button>
+      <button class="btn danger" type="button" onclick="pedir('${r.id}','descartar')">Descartar</button></div>`;
+  else acciones = `<div class="acciones">
+      <button class="btn primary" type="button" onclick="pedir('${r.id}','publicar')">Publicar</button>
+      <button class="btn" type="button" onclick="pedir('${r.id}','cambios')">Pedir cambios</button>
+      <button class="btn danger" type="button" onclick="pedir('${r.id}','descartar')">Descartar</button></div>`;
+  return `<article class="card${r.estado === 'previa' || r.estado === 'final' ? ' urgente' : ''}" id="c-${esc(r.id)}">
+    ${v?.mp4 ? `<video class="video" controls playsinline preload="metadata" src="${esc(v.mp4)}#t=0.5"></video>` : ''}
+    <div class="card-body">
+      <div class="meta">${pill(r.estado)}<span class="pill">${esc(r.id)} · v${r.version}</span>${r.duracion ? `<span class="pill num">${Math.round(r.duracion)} s</span>` : ''}</div>
+      <h3>${esc(r.titulo)}</h3>
+      ${r.estado === 'previa' ? `<div class="coste">Voz de ElevenLabs al aprobar: <b>${r.caracteres == null ? '¿?' : fmtN(r.caracteres) + ' caracteres'}</b>${r.caracteres === 0 ? ' (ya pagada)' : ''}</div>` : `<div class="coste">Esta es la versión exacta que se publicará con la voz final.</div>`}
+      ${cambios && !cambios.hecho ? '' : ''}
+      ${(r.errores || []).length ? `<div class="aviso bad">Último error al publicar: ${esc(r.errores.at(-1).error.slice(-220))}</div>` : ''}
+      <div><div class="sub" style="margin-bottom:4px">Texto de la publicación</div><div class="texto">${esc(r.texto)}</div></div>
+      <details><summary>Guion (${r.guion.length} frases)</summary><ol>${r.guion.map(l => `<li>${esc(l.replace(/\*/g, ''))}</li>`).join('')}</ol></details>
+      <div class="meta">${v?.tira ? `<a class="sub" href="${esc(v.tira)}" target="_blank" rel="noopener">Tira a 1 fps</a>` : ''}${r.issue ? `<a class="sub" href="https://github.com/${REPO}/issues/${r.issue}" target="_blank" rel="noopener">Issue #${r.issue}</a>` : ''}</div>
+      <div id="z-${esc(r.id)}">${acciones}</div>
+    </div></article>`;
+}
+
+const TEXTOS = {
+  'ok-voz': r => [`Se generará la voz de ElevenLabs (${r.caracteres == null ? 'caracteres sin calcular' : fmtN(r.caracteres) + ' caracteres'}) y la versión final. Después decides si se publica.`, 'Aprobar y gastar'],
+  'ok-todo': r => [`Se generará la voz (${r.caracteres == null ? '¿?' : fmtN(r.caracteres)} caracteres) y la final entrará en la cola de publicación sin volver a preguntarte si pasa los controles.`, 'Aprobar todo'],
+  'publicar': r => [`Entra en la cola y sale en la próxima franja libre.`, 'Poner en la cola'],
+  'descartar': r => [`El reel se descarta y su issue se cierra.`, 'Descartar'],
+  'cambios': r => [`Escribe qué hay que cambiar. La próxima sesión programada lo corrige y vuelve con una previa nueva.`, 'Enviar cambios'],
+};
+const MSG = { 'ok-voz':'Generando la voz y la final (unos 15 min)…', 'ok-todo':'Generando la final; entrará sola en la cola…', publicar:'Entrando en la cola…', descartar:'Descartando…', cambios:'Cambios enviados; los recoge la próxima sesión…' };
+
+function pedir(id, cmd){
+  if (!token()) { abrirAjustes(); return }
+  const r = DATA.reels.find(x => x.id === id); const [txt, ok] = TEXTOS[cmd](r);
+  $('#z-' + id).innerHTML = `<div class="confirm"><div>${esc(txt)}</div>${cmd === 'cambios' ? `<textarea id="t-${id}" placeholder="Por ejemplo: el gancho dura demasiado; la moneda del punto 3 tapa el subtítulo"></textarea>` : ''}
+    <div class="acciones"><button class="btn ${cmd === 'descartar' ? 'danger' : 'primary'}" type="button" onclick="enviar('${id}','${cmd}')">${ok}</button><button class="btn" type="button" onclick="pintar()">Cancelar</button></div></div>`;
+  if (cmd === 'cambios') $('#t-' + id).focus();
+}
+
+async function enviar(id, cmd){
+  const r = DATA.reels.find(x => x.id === id);
+  let body = '/' + cmd;
+  if (cmd === 'cambios') { const t = $('#t-' + id).value.trim(); if (!t) { $('#t-' + id).focus(); return } body += ' ' + t }
+  try {
+    await gh(`/issues/${r.issue}/comments`, { method: 'POST', body: JSON.stringify({ body }) });
+    const p = pendientes(); p[id] = { id, estado: r.estado, t: Date.now(), msg: MSG[cmd] }; setPend(p);
+    toast(`Orden enviada: ${body.split(' ')[0]} en ${id}`); pintar();
+  } catch (e) { toast(e.status === 401 || e.status === 403 ? 'GitHub rechazó el token: revisa que tenga Issues en lectura y escritura' : 'No se pudo enviar: ' + e.message.slice(0, 120)) }
+}
+
+async function idea(id, cmd, issue){
+  if (!token()) { abrirAjustes(); return }
+  if (!issue) { toast('Esta idea todavía no tiene issue; la cadena la abrirá en su próxima vuelta'); return }
+  try { await gh(`/issues/${issue}/comments`, { method: 'POST', body: JSON.stringify({ body: `/${cmd} ${id}` }) });
+    const p = pendientes(); p['idea-' + id] = { id: '_', estado: '_', t: Date.now() }; setPend(p); toast(`Idea ${id}: ${cmd === 'ok' ? 'aprobada' : 'descartada'}`); pintar() }
+  catch (e) { toast('No se pudo enviar: ' + e.message.slice(0, 120)) }
+}
+
+function accion(tipo){
+  if (!token()) { abrirAjustes(); return }
+  const txt = tipo === 'ya' ? (DATA.cola.length ? `Se publica ahora ${DATA.cola[0]} en @fase.zer0.` : 'La cola está vacía: no hay nada aprobado que publicar.') : 'Se vuelven a generar las previas de los reels en «guion».';
+  $('#confirm-accion').innerHTML = `<div class="confirm" style="margin-top:10px"><div>${esc(txt)}</div><div class="acciones">${tipo === 'ya' && !DATA.cola.length ? '' : `<button class="btn primary" type="button" onclick="lanzar('${tipo}')">Confirmar</button>`}<button class="btn" type="button" onclick="$('#confirm-accion').innerHTML=''">Cancelar</button></div></div>`;
+}
+async function lanzar(tipo){
+  try {
+    if (tipo === 'ya') await gh('/actions/workflows/publicar.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: 'main', inputs: { ya: 'true' } }) });
+    else await gh('/actions/workflows/produccion.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: 'main' }) });
+    $('#confirm-accion').innerHTML = ''; toast(tipo === 'ya' ? 'Publicación lanzada; tarda unos minutos' : 'Cadena lanzada'); setTimeout(cargar, 4000);
+  } catch (e) { toast(e.status === 403 ? 'El token necesita Actions en lectura y escritura' : 'No se pudo lanzar: ' + e.message.slice(0, 120)) }
+}
+
+function abrirAjustes(){ $('#tok').value = token() || ''; $('#dlg').showModal() }
+$('#dlg').addEventListener('close', () => { const v = $('#dlg').returnValue;
+  if (v === 'guardar' && $('#tok').value.trim()) { store.set('fz_token', $('#tok').value.trim()); toast('Conectado. Ya puedes decidir desde el panel'); cargar() }
+  if (v === 'borrar') { store.set('fz_token', null); toast('Token quitado'); cargar() } });
+$('#ajustes').onclick = abrirAjustes; $('#refrescar').onclick = cargar;
+$('#ya').onclick = () => accion('ya'); $('#rehacer').onclick = () => accion('rehacer');
+cargar(); setInterval(() => { if (!document.hidden && !document.querySelector('.confirm')) cargar() }, token() ? 60000 : 180000);
+</script>
+</body>
+</html>
