@@ -38,8 +38,8 @@ E.figura('cA', { t0: 0, t1: G1, sale: 0.25, x: 110, talla: 300, color: 'gris', c
 E.figura('cB', { t0: 0, t1: G1, sale: 0.25, x: 410, talla: 300, color: 'gris', dir: -1, cara: true,
   poses: [[0, 'encoger'], [0.7, 'ofrecer', 0.25], [w(0, 2), 'senalar', 0.25], [w(0, 4), 'levantar', 0.25], [w(0, 7), 'encoger', 0.25], [w(0, 10), 'ofrecer', 0.25], [w(0, 13), 'senalar', 0.25]] });
 E.obj('cosa', 'bloques', { t0: 0, t1: G1, sale: 0.25, x: 260, y: -32, n: 1, w: 64, h: 64, refl: true, caja: [-32, -32, 64, 64] });
-E.obj('bocaH', 'bocadillo', { t0: 0, t1: w(0, 12), sale: 0.2, x: 250, y: -440, w: 470, h: 76, texto: '¿Y de qué color lo pintamos?', size: 28,
-  on: [[0.15, 0], [0.5, 1]], caja: [-235, -38, 470, 102] });
+E.obj('bocaH', 'bocadillo', { t0: 0, t1: w(0, 12), sale: 0.2, x: 215, y: -440, w: 460, h: 76, texto: '¿Y de qué color lo pintamos?', size: 28,
+  on: [[0.15, 0], [0.5, 1]], caja: [-230, -38, 460, 102] });
 E.obj('barH', 'relleno', { t0: 0, t1: G1, sale: 0.25, x: 250, y: 100, w: 440, h: 32, rotulo: 'LO QUE MENOS IMPORTA',
   f: [[0, 0.08], [w(0, 2), 0.22, 'lin'], [w(0, 7), 0.5, 'lin'], [wf(0, -1), 1, 'lin']], barrido: [wf(0, -1)], caja: [-220, -52, 440, 68] });
 E.sfx(0.1, 'fill'); E.sfx(w(0, 7), 'fill');
