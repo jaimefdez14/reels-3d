@@ -125,7 +125,7 @@ const FILAS = [{ t: w(6, 0) - 0.05, y: -500, s: 'LLEGÓ TARDE', col: GRIS }, { t
   { t: w(6, 8) - 0.05, y: -320, s: 'FALTABA UNA PIEZA', col: GRIS }, { t: w(6, 13) - 0.05, y: -230, s: 'NADIE REVISA EL ALMACÉN', col: AM }];
 FILAS.forEach((f, i) => { const ww = f.s.length * 20 + 20;
   E.obj('fila' + i, 'rotulo', { t0: f.t, t1: fin(2), x: 170, y: f.y, texto: f.s, size: 26, col: f.col, peso: i === 3 ? 700 : 600, pop: true, caja: [-ww / 2, -16, ww, 32] });
-  if (i > 0) E.obj('pqF' + i, 'moneda', { t0: w(6, [2, 7, 12][i - 1]) - 0.1, t1: fin(2), x: -110, y: f.y - 45, r: 22, n: '?', pop: true, sfx: false, caja: [-22, -22, 44, 44] });
+  if (i > 0) E.obj('pqF' + i, 'moneda', { t0: w(6, [2, 7, 12][i - 1]) - 0.1, t1: fin(2), x: -90, y: f.y, r: 22, n: '?', pop: true, sfx: false, caja: [-22, -22, 44, 44] });
 });
 // «nadie revisa el almacén»: chispas en la última respuesta
 E.obj('chAlm', 'chispas', { t0: wf(6, -1), t1: wf(6, -1) + 0.8, x: 170, y: -230, r0: 120, r1: 240, inspeccion: false });
