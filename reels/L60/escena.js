@@ -28,7 +28,7 @@ E.camara([
 
 // rejilla de cien casillas (10 × 10): la plantilla; DIEZ = las diez que sacan la mitad del trabajo
 const DIEZ = [3, 17, 22, 38, 41, 56, 64, 79, 85, 92];
-const GX = -20, GY = -200;
+const GX = -45, GY = -200;
 const rejilla = (id, o) => E.obj(id, 'cuadricula', Object.assign({ x: GX, y: GY, cols: 10, rows: 10, lado: 24, gap: 8, on: DIEZ, caja: [-156, -156, 312, 312] }, o));
 
 // ---------- gancho ----------
