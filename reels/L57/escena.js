@@ -49,7 +49,7 @@ E.temblor(w(0, 14), 14, 0.45); E.golpe(w(0, 14), 0.05);
 E.figura('yo1', { t0: w(1, 0) - 0.05, t1: w(2, 0), sale: 0.25, x: -355, cara: true,
   poses: [[0, 'de_pie'], [w(1, 2), 'senalar'], [w(1, 7), 'apartarse'], [w(1, 13), 'pensar'], [w(1, 17), 'ofrecer'], [wf(1, -1), 'celebrar']],
   sonrisa: [[0, 0], [w(1, 2), 0.6], [w(1, 7), -0.4], [w(1, 13), 0.3], [wf(1, -1), 1.5]] });
-E.obj('rotHanlon', 'rotulo', { t0: w(1, 3) - 0.1, t1: w(2, 0), sale: 0.25, x: 120, y: -470, texto: 'NAVAJA DE HANLON', size: 34, col: AM, peso: 700, pop: true, caja: [-210, -20, 420, 40] });
+E.obj('rotHanlon', 'rotulo', { t0: w(1, 1) - 0.1, t1: w(2, 0), sale: 0.25, x: 120, y: -470, texto: 'NAVAJA DE HANLON', size: 34, col: AM, peso: 700, pop: true, caja: [-210, -20, 420, 40] });
 E.obj('chHanlon', 'chispas', { t0: w(1, 6), t1: w(1, 6) + 0.8, x: 120, y: -470, r0: 120, r1: 240, inspeccion: false });
 E.golpe(w(1, 6), 0.04);
 E.obj('barMala', 'relleno', { t0: w(1, 7) - 0.1, t1: w(2, 0), sale: 0.25, x: 120, y: -330, w: 360, h: 44, pop: true, rotulo: 'MALA FE',
