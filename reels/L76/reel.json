@@ -59,5 +59,13 @@
    "pause": 0.3
   }
  ],
- "texto_publicacion": "Un abrigo de 200 euros puede salirte más barato que uno de 50. Se llama coste por uso: lo que pagas, dividido entre las veces que lo usas. Tres reglas para aplicarlo.\n\n#finanzaspersonales #ahorro #consumo #dinero"
+ "texto_publicacion": "Un abrigo de 200 euros puede salirte más barato que uno de 50. Se llama coste por uso: lo que pagas, dividido entre las veces que lo usas. Tres reglas para aplicarlo.\n\n#finanzaspersonales #ahorro #consumo #dinero",
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
+   "cambios": []
+  }
+ ],
+ "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
 }

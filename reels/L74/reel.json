@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Se llama efecto señuelo: / *una opción que casi nadie elige* / *y que hace parecer barata a la cara.*",
+   "show": "Se llama efecto señuelo: / *una opción que casi nadie elige* / *y que hace que la cara parezca barata.*",
    "pause": 0.3
   },
   {
@@ -59,5 +59,18 @@
    "pause": 0.3
   }
  ],
- "texto_publicacion": "Las palomitas medianas del cine están para que compres las grandes. Se llama efecto señuelo: una opción que casi nadie elige y que hace parecer barata a la cara. Tres preguntas antes de elegir. Los precios son un ejemplo.\n\n#finanzaspersonales #consumo #psicologia #ahorro"
+ "texto_publicacion": "Las palomitas medianas del cine están para que compres las grandes. Se llama efecto señuelo: una opción que casi nadie elige y que hace parecer barata a la cara. Tres preguntas antes de elegir. Los precios son un ejemplo.\n\n#finanzaspersonales #consumo #psicologia #ahorro",
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
+   "cambios": [
+    {
+     "antes": "*y que hace parecer barata a la cara.*",
+     "despues": "*y que hace que la cara parezca barata.*"
+    }
+   ]
+  }
+ ],
+ "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
 }

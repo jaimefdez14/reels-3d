@@ -59,5 +59,13 @@
    "pause": 0.3
   }
  ],
- "texto_publicacion": "Si alguien te cae bien, das por hecho que también trabaja bien. Se llama efecto halo y lo describió un psicólogo en 1920. Tres reglas para que no te engañe.\n\n#psicologia #trabajo #liderazgo #decisiones"
+ "texto_publicacion": "Si alguien te cae bien, das por hecho que también trabaja bien. Se llama efecto halo y lo describió un psicólogo en 1920. Tres reglas para que no te engañe.\n\n#psicologia #trabajo #liderazgo #decisiones",
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
+   "cambios": []
+  }
+ ],
+ "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
 }

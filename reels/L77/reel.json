@@ -59,5 +59,13 @@
    "pause": 0.3
   }
  ],
- "texto_publicacion": "Una hipoteca de 200.000 euros te acaba costando más de 300.000: al 3 % fijo y a treinta años, pagas unos 103.000 euros de intereses. Tres reglas para pagar menos.\n\nEs un ejemplo orientativo, no asesoramiento financiero.\n\n#hipoteca #finanzaspersonales #vivienda #ahorro"
+ "texto_publicacion": "Una hipoteca de 200.000 euros te acaba costando más de 300.000: al 3 % fijo y a treinta años, pagas unos 103.000 euros de intereses. Tres reglas para pagar menos.\n\nEs un ejemplo orientativo, no asesoramiento financiero.\n\n#hipoteca #finanzaspersonales #vivienda #ahorro",
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
+   "cambios": []
+  }
+ ],
+ "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
 }

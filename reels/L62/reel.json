@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "El tercero: // *arregla la última respuesta,* / *no la primera.*",
+   "show": "El tercero: // *arregla la última causa,* / *no la primera.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -55,5 +55,18 @@
    "pause": 0.3
   }
  ],
- "texto_publicacion": "Arreglas el mismo problema cada mes y al mes siguiente vuelve a salir. En Toyota usan una técnica que se llama los cinco porqués: preguntar por qué hasta dar con la causa. Se hace en tres pasos.\n\n#trabajo #productividad #negocios #organizacion"
+ "texto_publicacion": "Arreglas el mismo problema cada mes y al mes siguiente vuelve a salir. En Toyota usan una técnica que se llama los cinco porqués: preguntar por qué hasta dar con la causa. Se hace en tres pasos.\n\n#trabajo #productividad #negocios #organizacion",
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
+   "cambios": [
+    {
+     "antes": "El tercero: // *arregla la última respuesta,* / *no la primera.*",
+     "despues": "El tercero: // *arregla la última causa,* / *no la primera.*"
+    }
+   ]
+  }
+ ],
+ "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
 }

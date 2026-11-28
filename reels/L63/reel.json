@@ -59,5 +59,13 @@
    "pause": 0.3
   }
  ],
- "texto_publicacion": "Esa tarea de dos minutos lleva una semana en tu lista. Hay una regla para eso, la de los dos minutos, de David Allen: si algo se hace en menos de dos minutos, se hace en el momento. Tres reglas para aplicarla.\n\n#productividad #habitos #organizacion #trabajo"
+ "texto_publicacion": "Esa tarea de dos minutos lleva una semana en tu lista. Hay una regla para eso, la de los dos minutos, de David Allen: si algo se hace en menos de dos minutos, se hace en el momento. Tres reglas para aplicarla.\n\n#productividad #habitos #organizacion #trabajo",
+ "corrector": [
+  {
+   "ronda": 1,
+   "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
+   "cambios": []
+  }
+ ],
+ "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
 }
