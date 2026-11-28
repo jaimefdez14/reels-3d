@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Lo probaron en el año 2000 / con una camiseta ridícula: / quien la llevaba creía que la vería media clase, / *y se fijó la cuarta parte.*",
+   "show": "Lo probaron en el año 2000 / con una camiseta ridícula: / quien la llevaba creía que la vería media clase, / *y solo se fijó uno de cada cuatro.*",
    "pause": 0.3
   },
   {
@@ -65,6 +65,19 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*y se fijó la cuarta parte.*",
+     "despues": "*y solo se fijó uno de cada cuatro.*"
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."

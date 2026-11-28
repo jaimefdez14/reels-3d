@@ -42,12 +42,12 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *no ahorres al 2 %* / *mientras debes al 20 %.*",
+   "show": "La tercera: // *si debes dinero de la tarjeta,* / *ese extra va primero ahí.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Tener ahorros y deuda de tarjeta a la vez / *es pagar por tu propio dinero.*",
+   "show": "Tus ahorros te dan un 2 % al año / *y la tarjeta te cobra un 20 %.*",
    "pause": 0.3
   },
   {
@@ -65,6 +65,23 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "La tercera: // *no ahorres al 2 %* / *mientras debes al 20 %.*",
+     "despues": "La tercera: // *si debes dinero de la tarjeta,* / *ese extra va primero ahí.*"
+    },
+    {
+     "antes": "Tener ahorros y deuda de tarjeta a la vez / *es pagar por tu propio dinero.*",
+     "despues": "Tus ahorros te dan un 2 % al año / *y la tarjeta te cobra un 20 %.*"
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."

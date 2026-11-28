@@ -47,7 +47,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "A quien le corresponda, / *con todo lo que necesite para hacerla.*",
+   "show": "Pásasela a quien le corresponda, / *con todo lo que necesite para hacerla.*",
    "pause": 0.3
   },
   {
@@ -65,6 +65,19 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "A quien le corresponda, / ",
+     "despues": "Pásasela a quien le corresponda, / "
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."

@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Se llama efecto señuelo: / *una opción que casi nadie elige* / *y que hace que la cara parezca barata.*",
+   "show": "Se llama efecto señuelo: / *una opción que casi nadie elige* / *y que hace que la más cara parezca barata.*",
    "pause": 0.3
   },
   {
@@ -47,11 +47,11 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Si venías a por las de 4 euros / *y sales con las de 7, ha funcionado.*",
+   "show": "Si venías a por las de 4 euros / *y sales con las de 7, el señuelo ha funcionado.*",
    "pause": 0.3
   },
   {
-   "show": "La opción que nadie compra / *es la que más vende.*",
+   "show": "La opción que casi nadie compra / *es la que más hace vender.*",
    "pause": 0.3
   },
   {
@@ -68,6 +68,27 @@
     {
      "antes": "*y que hace parecer barata a la cara.*",
      "despues": "*y que hace que la cara parezca barata.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*y que hace que la cara parezca barata.*",
+     "despues": "*y que hace que la más cara parezca barata.*"
+    },
+    {
+     "antes": "*y sales con las de 7, ha funcionado.*",
+     "despues": "*y sales con las de 7, el señuelo ha funcionado.*"
+    },
+    {
+     "antes": "La opción que nadie compra / *es la que más vende.*",
+     "despues": "La opción que casi nadie compra / *es la que más hace vender.*"
     }
    ]
   }

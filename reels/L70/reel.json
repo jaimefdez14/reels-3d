@@ -7,12 +7,12 @@
  "situacion": "A última hora del día dices que sí a cualquier cosa o compras lo primero que ves.",
  "lines": [
   {
-   "show": "Un juez concede más permisos / *después de comer que justo antes.*",
+   "show": "Un juez deja salir a más presos / *después de comer que justo antes.*",
    "pause": 0.45,
    "bocadillo": "Denegado."
   },
   {
-   "show": "Lo midieron en 2011 con más de mil casos: / tras el descanso, dos de cada tres salían adelante; / *justo antes de comer, casi ninguno.*",
+   "show": "Lo midieron en 2011 con más de mil casos: / después de comer, concedía dos de cada tres permisos; / *justo antes, casi ninguno.*",
    "pause": 0.3
   },
   {
@@ -65,6 +65,23 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "Un juez concede más permisos / *después de comer que justo antes.*",
+     "despues": "Un juez deja salir a más presos / *después de comer que justo antes.*"
+    },
+    {
+     "antes": "tras el descanso, dos de cada tres salían adelante; / *justo antes de comer, casi ninguno.*",
+     "despues": "después de comer, concedía dos de cada tres permisos; / *justo antes, casi ninguno.*"
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."

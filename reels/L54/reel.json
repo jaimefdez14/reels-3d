@@ -29,7 +29,7 @@
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *¿qué se deja de hacer para llegar?*",
+   "show": "La segunda: // *¿qué se deja de hacer* / *para llegar a la cifra?*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -38,7 +38,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *¿hay otra cifra que lo compense?*",
+   "show": "La tercera: // *¿qué otra cifra hay que mirar a la vez?*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -61,6 +61,23 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*¿qué se deja de hacer para llegar?*",
+     "despues": "*¿qué se deja de hacer* / *para llegar a la cifra?*"
+    },
+    {
+     "antes": "*¿hay otra cifra que lo compense?*",
+     "despues": "*¿qué otra cifra hay que mirar a la vez?*"
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."

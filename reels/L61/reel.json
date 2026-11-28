@@ -12,7 +12,7 @@
    "bocadillo": "Yo no salgo antes de las diez."
   },
   {
-   "show": "Lo calculó en 2014 un economista de Stanford / *con datos de fábricas de munición.*",
+   "show": "Lo calculó en 2014 un economista de Stanford / *con datos de fábricas de munición* / *de la Primera Guerra Mundial.*",
    "pause": 0.3
   },
   {
@@ -68,6 +68,19 @@
     {
      "antes": "Cansado, tardas el doble / *y después te toca corregirlo.*",
      "despues": "Cansado, tardas el doble / *y después te toca corregir lo que has hecho.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*con datos de fábricas de munición.*",
+     "despues": "*con datos de fábricas de munición* / *de la Primera Guerra Mundial.*"
     }
    ]
   }

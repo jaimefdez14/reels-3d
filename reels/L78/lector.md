@@ -35,3 +35,32 @@ Hacia el segundo 18-20, en «Tres cifras de tu nómina que conviene mirar»: la 
 ## 6. Nota
 
 7/10. Se sigue de corrido y el gancho es bueno; fallan el puente a la lista y la tercera cifra.
+
+## Segunda lectura, otro lector (28-11-2026)
+
+Nota: 7/10.
+
+**1. De qué va.** Tu nómina tiene tres cifras (bruto anual, retención de IRPF y base de cotización) que importan más que lo que te ingresan. Me llevo la idea general; no me llevo por qué de 2.000 me llegan 1.600, que es lo que me prometieron.
+
+**2. Frase a frase.**
+- «Si cobras 2.000… le cuestas unos 2.600»: claro y sorprende.
+- Bocadillo «¿Y a mí por qué me llegan 1.600?»: lo leo antes de que la voz haya dicho 1.600; se entiende, y es la pregunta que me hago.
+- «Se llama coste laboral… cotizaciones que la empresa paga por ti»: lo sigo, aunque «cotizaciones» lo oigo sin saber bien qué es (¿Seguridad Social?).
+- «Y de esos 2.000, a tu cuenta llegan unos 1.600»: claro.
+- «La diferencia está en tres cifras de tu nómina»: aquí espero que me expliquen los 400 euros que faltan. No ocurre. Las tres cifras no explican la diferencia: son tres cosas que conviene mirar. Promesa incumplida.
+- «La primera: el bruto anual. Es la cifra que se negocia. Con el mismo bruto, dos personas pueden cobrar un neto distinto»: salto. Vengo de un bruto al mes y paso al anual sin aviso, y no me dicen por qué dos personas cobran distinto. Me quedo con la duda.
+- «La segunda: la retención de IRPF. Si te retienen de menos…»: no me dicen qué es la retención (lo que Hacienda te quita cada mes a cuenta). La consecuencia sí se entiende.
+- «La tercera: la base de cotización. Con ella se calcula…»: la mejor de las tres; entiendo para qué sirve aunque no sepa qué es.
+- Cierre: claro, y el amigo es reconocible.
+
+**3. Gancho.** Me quedo: cifra concreta y me afecta. Va dirigido a cualquier asalariado. Cumple a medias: abre con «¿adónde va el dinero?» y responde «mira estas tres cifras».
+
+**4. Dónde lo dejaría.** Hacia el segundo 22-25, en «el bruto anual. Es la cifra que se negocia»: noto que ya no me van a contestar la pregunta del bocadillo.
+
+**5. Frases que más fallan.**
+- «La diferencia está en tres cifras de tu nómina.» Promete explicar los 1.600 y no lo hace. Propuesta: «De tu nómina importan tres cifras, y ninguna es lo que te ingresan.»
+- «Con el mismo bruto, dos personas pueden cobrar un neto distinto.» Falta el porqué. Propuesta: añadir «porque a cada uno le retienen un porcentaje distinto».
+- «La segunda: la retención de IRPF.» Sin definir. Propuesta: «La segunda: la retención de IRPF, lo que Hacienda te descuenta cada mes.»
+- «La primera: el bruto anual.» Cambio de mes a año sin aviso. Propuesta: «La primera: el bruto anual, tus 2.000 por las pagas del año.»
+
+**6. Nota:** 7/10. Se entiende cada frase por separado; falla el hilo entre la pregunta del gancho y la lista.

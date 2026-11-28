@@ -16,7 +16,7 @@
    "pause": 0.3
   },
   {
-   "show": "Tres reglas para aguantar hasta el final.",
+   "show": "Tres reglas para aguantar hasta que salga solo.",
    "pause": 0.3
   },
   {
@@ -64,6 +64,19 @@
     {
      "antes": "La tercera: // *si fallas un día, sigue al siguiente.*",
      "despues": "La tercera: // *si fallas un día,* / *retómalo al día siguiente.*"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "Tres reglas para aguantar hasta el final.",
+     "despues": "Tres reglas para aguantar hasta que salga solo."
     }
    ]
   }

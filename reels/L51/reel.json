@@ -38,7 +38,7 @@
    "pausa_media": 0.45
   },
   {
-   "show": "Diez minutos para lo pequeño. / *Si no se cierra, lo decide una persona.*",
+   "show": "Diez minutos para lo pequeño. / *Si no se cierra, lo decide quien convoca.*",
    "pause": 0.3
   },
   {
@@ -68,6 +68,19 @@
     {
      "antes": "El historiador Parkinson la contó en 1957:",
      "despues": "El historiador Parkinson la describió en 1957:"
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*Si no se cierra, lo decide una persona.*",
+     "despues": "*Si no se cierra, lo decide quien convoca.*"
     }
    ]
   }

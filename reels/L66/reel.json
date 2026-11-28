@@ -7,7 +7,7 @@
  "situacion": "Solo en casa no avanzas; en la biblioteca o con alguien pendiente de ti, sí.",
  "lines": [
   {
-   "show": "En una fábrica subieron la luz / y se produjo más. / *La bajaron, y también.*",
+   "show": "En una fábrica subieron la luz / y se produjo más. / *La bajaron, y también se produjo más.*",
    "pause": 0.45,
    "bocadillo": "Que nos están mirando."
   },
@@ -68,6 +68,19 @@
     {
      "antes": "Tres formas de usarlo contigo.",
      "despues": "Tres formas de usarlo a tu favor."
+    }
+   ]
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*La bajaron, y también.*",
+     "despues": "*La bajaron, y también se produjo más.*"
     }
    ]
   }

@@ -42,7 +42,7 @@
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *en lo caro, mira el precio completo.*",
+   "show": "La tercera: // *en lo caro, redondea al millar.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
@@ -65,6 +65,19 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 8,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "*en lo caro, mira el precio completo.*",
+     "despues": "*en lo caro, redondea al millar.*"
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."

@@ -24,34 +24,34 @@
    "pause": 0.3
   },
   {
-   "show": "La primera: // *si adelantas dinero, cuanto antes.*",
+   "show": "La primera: // *si puedes devolver dinero antes de tiempo,* / *hazlo cuanto antes.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Lo que amortizas al principio / *quita muchos más intereses que al final.*",
+   "show": "Lo que devuelves al principio / *quita muchos más intereses que al final.*",
    "pause": 0.3
   },
   {
-   "show": "La segunda: // *al amortizar, reduce plazo.*",
+   "show": "La segunda: // *cuando devuelvas dinero antes de tiempo,* / *pídele al banco quitar años,* / *no bajar la cuota.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "Bajar la cuota te alivia el mes. / *Acortar los años ahorra más.*",
+   "show": "Bajar la cuota te alivia el mes. / *Quitar años ahorra más intereses.*",
    "pause": 0.3
   },
   {
-   "show": "La tercera: // *compara la TAE, no la cuota.*",
+   "show": "La tercera: // *antes de firmar, compara los bancos* / *por la TAE, no por el interés que anuncian.*",
    "pause": 0.3,
    "pausa_media": 0.45
   },
   {
-   "show": "La TAE incluye comisiones y gastos. / *La cuota, no.*",
+   "show": "La TAE es el coste real al año, / *con comisiones y gastos incluidos.*",
    "pause": 0.3
   },
   {
-   "show": "En una hipoteca no solo cuenta el interés: / *también cuántos años lo pagas.*",
+   "show": "En una hipoteca, cada año de menos / *son intereses que no pagas.*",
    "pause": 0.3
   },
   {
@@ -65,6 +65,58 @@
    "ronda": 1,
    "nota": "regla 25: un corrector nativo, una vez; solo errores (calco, referente, giro que aquí no se usa)",
    "cambios": []
+  }
+ ],
+ "lector": [
+  {
+   "ronda": 1,
+   "nota_lector": 7,
+   "nota": "regla 25: un lector en frío, una vez; solo se cambia lo que no se entiende oyéndolo (referente, contradicción, elipsis); pasa por un corrector nuevo (regla 18)",
+   "cambios": [
+    {
+     "antes": "La primera: // *si adelantas dinero, cuanto antes.*",
+     "despues": "La primera: // *si puedes devolver dinero antes de tiempo,* / *hazlo cuanto antes.*"
+    },
+    {
+     "antes": "Lo que amortizas al principio / ",
+     "despues": "Lo que devuelves al principio / "
+    },
+    {
+     "antes": "La segunda: // *al amortizar, reduce plazo.*",
+     "despues": "La segunda: // *cuando adelantes dinero,* / *pide quitar años, no bajar la cuota.*"
+    },
+    {
+     "antes": "La tercera: // *compara la TAE, no la cuota.*",
+     "despues": "La tercera: // *antes de firmar, compara los bancos* / *por la TAE, no por la cuota.*"
+    },
+    {
+     "antes": "La TAE incluye comisiones y gastos. / *La cuota, no.*",
+     "despues": "La TAE es el coste real al año, / *con comisiones y gastos incluidos.*"
+    }
+   ]
+  },
+  {
+   "ronda": 2,
+   "nota_lector": 7,
+   "nota": "segundo lector nuevo: 7/10; cambios aplicados, sin tercera lectura (regla 25). Pendiente de Jaime.",
+   "cambios": [
+    {
+     "antes": "La segunda: // *cuando adelantes dinero,* / *pide quitar años, no bajar la cuota.*",
+     "despues": "La segunda: // *cuando devuelvas dinero antes de tiempo,* / *pídele al banco quitar años,* / *no bajar la cuota.*"
+    },
+    {
+     "antes": "*Acortar los años ahorra más.*",
+     "despues": "*Quitar años ahorra más intereses.*"
+    },
+    {
+     "antes": "*por la TAE, no por la cuota.*",
+     "despues": "*por la TAE, no por el interés que anuncian.*"
+    },
+    {
+     "antes": "En una hipoteca no solo cuenta el interés: / *también cuántos años lo pagas.*",
+     "despues": "En una hipoteca, cada año de menos / *son intereses que no pagas.*"
+    }
+   ]
   }
  ],
  "datos": "Nombres, años y cifras comprobados el 28-11-2026 (búsqueda web y cálculo propio)."
