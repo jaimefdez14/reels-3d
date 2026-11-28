@@ -23,6 +23,14 @@ E.camara([
   [N[2].S - 0.05, [0, -380, 1], 'lin'], [w(8, 0), [-10, -385, 1.04]], [w(8, 6), [10, -385, 1.05]], [TC - 0.1, [0, -385, 1.04]], [TC, [0, -390, 1.05]],
 ]);
 
+// poses sentadas (el muñeco no se levanta de la mesa)
+const SIT = { hf: 85, kf: 85, hb: 80, kb: 80, sit: 0.27 };
+const S_MIRA = Object.assign({ lean: -4, sf: 80, ef: 20, sb: -6, eb: 10, cab: -4 }, SIT);
+const S_AGOBIO = Object.assign({ lean: 2, sf: 150, ef: 150, sb: 140, eb: 150, cab: -6 }, SIT);
+const S_PIENSA = Object.assign({ lean: 4, sf: 20, ef: 140, sb: -6, eb: 6, cab: 10 }, SIT);
+const S_TRISTE = Object.assign({ lean: 16, sf: 2, ef: 4, sb: -2, eb: 4, cab: 22 }, SIT);
+const S_BIEN = Object.assign({ lean: -4, sf: 160, ef: 10, sb: 150, eb: 10, cab: -10 }, SIT);
+
 // barra de concentración bajo el suelo (se repite en cada punto) y su rótulo
 const conc = (id, o) => E.obj(id, 'relleno', Object.assign({ x: -60, y: 70, w: 380, h: 40, caja: [-190, -20, 380, 40] }, o));
 const rotConc = (id, o) => E.obj(id, 'rotulo', Object.assign({ x: -60, y: 128, texto: 'CONCENTRACIÓN', size: 24, col: GRIS, caja: [-120, -13, 240, 26] }, o));
@@ -32,7 +40,7 @@ const rotConc = (id, o) => E.obj(id, 'rotulo', Object.assign({ x: -60, y: 128, t
 // trabaja en la mesa con la barra llena; el móvil vibra, lo mira 5 s y la barra se vacía; luego vuelve a subir muy despacio
 E.obj('mesa0', 'escritorio', { t0: 0, t1: w(1, 0), sale: 0.2, x: -80, brillo: [[0, 1], [w(0, 1), 1], [w(0, 2), 0.2], [w(0, 6), 0.2], [w(1, 0), 0.5]], refl: true, inspeccion: false, caja: [-330, -400, 500, 400] });
 E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.2, x: -360, cara: true, toca: ['mesa0'],
-  poses: [[0, 'escribir'], [w(0, 0) - 0.1, 'sentado'], [w(0, 1), 'coger'], [w(0, 5), 'sentado'], [w(0, 7), 'manos_cabeza'], [w(0, 9) + 0.2, 'escribir']],
+  poses: [[0, 'escribir'], [w(0, 0) - 0.1, 'sentado'], [w(0, 1), S_MIRA], [w(0, 5), 'sentado'], [w(0, 7), S_AGOBIO], [w(0, 9) + 0.2, 'escribir']],
   sonrisa: [[0, 0.6], [w(0, 1), 0.9], [w(0, 6), -0.4], [w(0, 7), -1.3], [w(0, 11), -0.6]] });
 E.obj('movil0', 'telefono', { t0: 0, t1: w(1, 0), sale: 0.2, x: 320, y: -330, w: 130, h: 230,
   avisos: [[0, 0], [0.25, 1, 'out']], vibra: [[0, 0.9], [w(0, 1), 0.9], [w(0, 2), 0]], brillo: [[0, 0.6], [w(0, 1), 1], [w(0, 5), 1], [w(0, 6), 0.4]], caja: [-65, -115, 130, 230] });
@@ -51,7 +59,7 @@ E.sfx(w(0, 9), 'fill');
 // la barra es «tu atención»: al decir «se queda», tres piezas salen de ella y se quedan pegadas al móvil
 E.obj('mesa1', 'escritorio', { t0: w(1, 0), t1: w(2, 0), sale: 0.2, x: -80, brillo: 0.5, refl: true, inspeccion: false, caja: [-330, -400, 500, 400] });
 E.figura('yo1', { t0: w(1, 0), t1: w(2, 0), sale: 0.2, x: -360, cara: true, toca: ['mesa1'],
-  poses: [[0, 'escribir'], [w(1, 9), 'sentado'], [w(1, 13), 'pensar'], [wf(1, -1), 'triste']],
+  poses: [[0, 'escribir'], [w(1, 9), 'sentado'], [w(1, 13), S_PIENSA], [wf(1, -1), S_TRISTE]],
   sonrisa: [[0, -0.2], [w(1, 9), -0.6], [wf(1, -1), -1.2]] });
 E.obj('rotRes', 'rotulo', { t0: w(1, 2) - 0.1, t1: w(2, 0) - 0.1, sale: 0.2, x: 0, y: -480, texto: 'RESIDUO DE ATENCIÓN', size: 34, col: AM, peso: 700, pop: true, caja: [-240, -20, 480, 40] });
 E.obj('chRes', 'chispas', { t0: w(1, 4), t1: w(1, 4) + 0.8, x: 0, y: -480, r0: 120, r1: 240, inspeccion: false });
@@ -122,7 +130,7 @@ E.numero(2, N[1].T, N[1].S, { desde: 'conc3', hacia: 'reloj5' });
 E.obj('mesa5', 'escritorio', { t0: N[1].S - 0.1, t1: fin(2), x: -80, refl: true, inspeccion: false, caja: [-330, -400, 500, 400],
   brillo: [[0, 0.3], [w(5, 2), 0.3], [w(5, 3), 1], [w(6, 4), 1], [wf(6, -1), 0, 'inout']] });
 E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -360, cara: true, toca: ['mesa5'],
-  poses: [[0, 'sentado'], [w(5, 3), 'escribir'], [w(5, 5), 'sentado'], [w(6, 0), 'escribir'], [w(6, 4), 'sentado'], [wf(6, -1), 'escribir']],
+  poses: [[0, 'sentado'], [w(5, 3), 'escribir'], [w(5, 5), 'sentado'], [w(6, 0), 'escribir'], [w(6, 4), 'sentado'], [wf(6, -1), S_BIEN]],
   sonrisa: [[0, 0.3], [w(5, 5), 0.8], [wf(6, -1), 1.4]] });
 E.obj('arroba', 'pieza', { t0: w(5, 2) - 0.1, t1: fin(2), sale: 0.2, x: 175, y: -345, r: 34, texto: '@', pop: true,
   on: [[0, 1], [w(6, 4), 1], [wf(6, -1), 0.15, 'inout']], caja: [-34, -34, 68, 68] });
@@ -144,9 +152,9 @@ E.golpe(wf(6, -1), 0.04);
 // 8: Si(0) no(1) puedes(2) antes(3) de(4) cambiar(5) de(6) tarea(7) apunta(8) por(9) dónde(10) ibas(11)
 E.numero(3, N[2].T, N[2].S, { desde: 'conc5', hacia: 'tarea' });
 E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -360, cara: true,
-  poses: [[0, 'de_pie'], [w(7, 2), 'senalar'], [w(7, 5) + 0.3, 'celebrar'], [w(7, 7), 'de_pie'], [w(7, 8), 'senalar'], [w(8, 0), 'encoger'], [w(8, 5), 'pensar'], [w(8, 8), 'escribir'], [wf(8, -1), 'celebrar']],
+  poses: [[0, 'de_pie'], [w(7, 2), 'senalar'], [w(7, 5) + 0.3, 'celebrar'], [w(7, 7), 'de_pie'], [w(7, 8), 'senalar'], [w(8, 0), 'encoger'], [w(8, 5), 'pensar'], [w(8, 8), 'coger'], [wf(8, -1), 'celebrar']],
   sonrisa: [[0, 0.3], [w(7, 5), 1.5], [w(8, 0), -0.5], [w(8, 8), 0.4], [wf(8, -1), 1.4]] });
-E.obj('rotCosa', 'rotulo', { t0: w(7, 3) - 0.1, t1: TC, x: 130, y: -430, size: 26, col: AM, pop: true, texto: [[0, 'UNA COSA'], [w(8, 5), 'CAMBIAS DE TAREA']], caja: [-160, -15, 320, 30] });
+E.obj('rotCosa', 'rotulo', { t0: w(7, 3) - 0.1, t1: TC, x: 130, y: -430, size: 26, col: AM, pop: true, texto: [[0, 'UNA COSA'], [w(8, 5), 'CAMBIAR DE TAREA']], caja: [-160, -15, 320, 30] });
 E.obj('tarea', 'bloques', { t0: N[2].S - 0.1, t1: TC, x: 130, y: -320, n: 4, w: 380, h: 90, pop: true,
   parte: [[w(7, 2), 0], [w(7, 3), 1, 'out']], hechos: [[w(7, 3), 0], [w(7, 5) + 0.2, 4, 'lin'], [w(8, 0), 4], [w(8, 2), 2, 'inout']], caja: [-190, -55, 380, 110] });
 E.sfx(w(7, 3), 'fill');
