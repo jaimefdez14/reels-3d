@@ -43,11 +43,11 @@ E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.25, x: -330, talla: 340, cara: true
   sonrisa: [[0, 0.3], [w(0, 5), 1], [w(0, 9), 1.5], [L0, -0.4], [w(0, 16), 1.5]] });
 E.obj('chP0', 'chispas', { t0: w(0, 9) + 0.3, t1: w(0, 9) + 1.0, x: -110, y: -120, r0: 60, r1: 150, inspeccion: false });
 E.golpe(w(0, 9) + 0.3, 0.04);
-E.figura('cA', { t0: 0, t1: w(1, 0), sale: 0.25, x: 190, talla: 300, color: 'gris', cara: true,
+E.figura('cA', { t0: 0, t1: w(1, 0), sale: 0.25, x: 170, talla: 300, color: 'gris', cara: true,
   poses: [[0, 'meter'], [0.7, 'coger'], [1.4, 'meter'], [w(0, 5), 'coger'], [w(0, 9), 'meter'], [L0, 'pensar'], [w(0, 14), 'senalar']], sonrisa: [[0, 0.2], [L0, 0.8]] });
-E.figura('obs0', { t0: 0, t1: w(1, 0), sale: 0.25, x: 430, talla: 330, color: 'gris', dir: -1, cara: true, toca: ['papel0'],
+E.figura('obs0', { t0: 0, t1: w(1, 0), sale: 0.25, x: 395, talla: 330, color: 'gris', dir: -1, cara: true, toca: ['papel0'],
   poses: [[0, 'pensar'], [w(0, 5), 'escribir'], [L0, 'pensar'], [w(0, 13), 'escribir']], sonrisa: 0 });
-E.obj('bocaH', 'bocadillo', { t0: L0, t1: wf(0, -1) + 0.4, sale: 0.2, x: 210, y: -440, w: 380, h: 76, texto: 'Que nos están mirando.', size: 30, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: L0, t1: wf(0, -1) + 0.4, sale: 0.2, x: 190, y: -440, w: 380, h: 76, texto: 'Que nos están mirando.', size: 30, pop: true,
   on: [[L0, 0], [L0 + 0.3, 1]], caja: [-190, -38, 380, 102] });
 E.obj('chP1', 'chispas', { t0: w(0, 16) + 0.3, t1: w(0, 16) + 1.1, x: -110, y: -190, r0: 70, r1: 170, inspeccion: false });
 E.temblor(w(0, 16), 14, 0.45); E.golpe(w(0, 16), 0.05);

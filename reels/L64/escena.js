@@ -95,15 +95,15 @@ E.obj('pulsoB', 'pulso', { t0: w(3, 4) + 0.4, t1: w(3, 4) + 1.0, x: 120, y: -35,
 E.sfx(w(3, 4) + 0.4, 'pop');
 // diez minutos: el temporizador se rellena cada día de la semana
 E.obj('tmp', 'temporizador', { t0: w(4, 0) - 0.1, t1: fin(1), x: 120, y: -320, r: 85, texto: '10', sub: 'MIN', pop: true, sobrevive: true,
-  p: [[w(4, 1), 0], [w(4, 5), 1, 'lin']], hecho: [[w(4, 6), 0], [w(4, 6) + 0.35, 1, 'out']], caja: [-104, -104, 208, 208] });
+  p: [[w(4, 1), 0], [w(4, 5), 1, 'lin']], caja: [-104, -104, 208, 208] });
 E.sfx(w(4, 1), 'fill');
 E.obj('sem', 'dias', { t0: w(4, 1), t1: fin(1), x: 120, y: -470, letras: ['L', 'M', 'X', 'J', 'V'], gap: 84, pop: true,
   luz: [[w(4, 2), -1], [w(4, 5) + 0.2, 4, 'lin']], caja: [-200, -32, 400, 64] });
 E.obj('chT', 'chispas', { t0: w(4, 6) + 0.3, t1: w(4, 6) + 1.0, x: 120, y: -320, r0: 110, r1: 200, inspeccion: false });
 E.golpe(w(4, 6) + 0.3, 0.04);
 // «mejor que una hora»: el bloque gris de una hora, pesado, a un lado
-E.obj('hora', 'bloques', { t0: w(4, 8) - 0.1, t1: fin(1), x: 400, y: -110, n: 1, w: 120, h: 220, pop: true, refl: true, caja: [-60, -110, 120, 220] });
-E.obj('rotHora', 'rotulo', { t0: w(4, 8), t1: fin(1), x: 400, y: -270, texto: 'UNA HORA', size: 26, col: GRIS, pop: true, caja: [-80, -16, 160, 32] });
+E.obj('hora', 'bloques', { t0: w(4, 8) - 0.1, t1: fin(1), x: 380, y: -110, n: 1, w: 120, h: 220, pop: true, refl: true, caja: [-60, -110, 120, 220] });
+E.obj('rotHora', 'rotulo', { t0: w(4, 8), t1: fin(1), x: 380, y: -265, texto: 'UNA HORA', size: 26, col: GRIS, pop: true, caja: [-80, -16, 160, 32] });
 E.temblor(w(4, 9), 8, 0.3);
 
 // ---------- 2 · siempre a la misma hora ----------
@@ -146,7 +146,7 @@ E.obj('res', 'relleno', { t0: w(8, 2), t1: TC, x: 110, y: -200, w: 380, h: 44, p
   f: [[w(8, 5), 0], [wf(8, -1) + 0.2, 1, 'out']], barrido: [wf(8, -1) + 0.25], caja: [-190, -56, 380, 78] });
 E.sfx(w(8, 5), 'fill');
 E.obj('chR', 'chispas', { t0: wf(8, -1) + 0.2, t1: wf(8, -1) + 1.0, x: 290, y: -200, r0: 40, r1: 120, inspeccion: false });
-E.destello(wf(8, -1) + 0.2, 0.12);
+E.golpe(wf(8, -1) + 0.2, 0.04);
 
 // ---------- cierre: resumen y envío ----------
 // 9: No(0) te(1) faltaba(2) fuerza(3) de(4) voluntad(5) te(6) faltaban(7) semanas(8)
