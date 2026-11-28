@@ -40,7 +40,7 @@ const bx = [[0, 400], [w(0, 6), 372, 'lin'], [tM, 372], [tM + 0.35, 400, 'out']]
 const dx = bx.map(k => [k[0], k[1] - 400, k[2]]);
 cuerda('soga0', { t0: 0, t1: tM + 0.1, sale: 0.1, x: dx, de: [-440, RY], hasta: [325, RY] });
 cuerda('soga0t', { t0: tM, t1: w(1, 0), entra: 0.1, sale: 0.25, x: dx, de: [20, RY], hasta: [325, RY] });
-cuerda('soga0f', { t0: tM, t1: w(1, 0), entra: 0.1, sale: 0.25, de: [-440, RY + 6], hasta: [20, RY], curva: [[tM, 0], [tM + 0.5, 0.2, 'out']] });
+cuerda('soga0f', { t0: tM, t1: w(1, 0), entra: 0.1, sale: 0.25, de: [-440, RY + 6], hasta: [20, RY], curva: 0.16 });
 E.obj('peso0', 'bloques', { t0: 0, t1: w(1, 0), sale: 0.25, n: 1, w: 150, h: 230, x: bx, y: -115, refl: true, caja: [-75, -115, 150, 230] });
 [{ x: -150, t: 0 }, { x: -275, t: w(0, 1) - 0.05 }, { x: -400, t: w(0, 2) + 0.1 }].forEach((q, i) =>
   E.figura('gente0_' + i, { t0: q.t, t1: w(1, 0), sale: 0.25, x: q.x, talla: 290, color: 'gris', cara: i === 2, toca: ['bocaH'],
@@ -134,7 +134,7 @@ for (let i = 0; i < 5; i++) { const a = N[0].S + i * 0.1;
     on: [[0, 0], [w(5, 5) + i * 0.14, 0], [w(5, 5) + i * 0.14 + 0.18, 1], [w(5, 10), 1], [w(5, 10) + 0.3 + i * 0.05, 0]], caja: [-28, -28, 56, 56] }); }
 E.sfx(w(5, 5), 'fill');
 E.obj('cuenta', 'contador', { t0: N[0].S - 0.1, t1: fin(1), x: 90, y: -440, size: 120, miles: false, pop: true, sobrevive: true, r: 70, suave: true,
-  v: [[w(5, 0), 0], [w(5, 1) + 0.35, 5, 'lin'], [tQ, 5], [w(5, 10) + 0.4, 15, 'lin']], barrido: [w(5, 1) + 0.4], caja: [-90, -62, 180, 124] });
+  v: [[N[0].S, 1], [N[0].S + 0.5, 5, 'lin'], [tQ, 5], [w(5, 10) + 0.4, 15, 'lin']], barrido: [w(5, 1) + 0.4], caja: [-90, -62, 180, 124] });
 E.obj('ch5', 'chispas', { t0: w(5, 8), t1: w(5, 8) + 0.8, x: 90, y: -305, r0: 60, r1: 150, inspeccion: false });
 E.golpe(w(5, 8), 0.04);
 E.temblor(w(5, 11), 12, 0.4);

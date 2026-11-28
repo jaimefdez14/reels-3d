@@ -139,7 +139,6 @@ E.obj('rotMas', 'rotulo', { t0: w(6, 6) - 0.05, t1: w(7, 0), sale: 0.2, x: 150, 
 E.obj('tarea', 'bloques', { t0: w(6, 2) + 0.1, t1: fin(2), x: -55, y: -40, n: 3, w: 240, h: 70, pop: true, sobrevive: true, r: 60, refl: true,
   parte: [[w(6, 3), 0], [w(6, 4) + 0.3, 1, 'out']], hechos: [[w(6, 5), 0], [wf(6, -1) + 0.4, 3, 'lin']], caja: [-125, -50, 250, 90] });
 E.sfx(w(6, 5), 'fill');
-E.obj('rotFacil', 'rotulo', { t0: w(7, 2) - 0.1, t1: fin(2), sale: 0.2, x: -110, y: -370, texto: 'LO FÁCIL', size: 24, col: GRIS, pop: true, caja: [-70, -14, 140, 28] });
 E.obj('papel2', 'papeles', { t0: w(7, 1), t1: fin(2), sale: 0.2, x: 175, y: -14, n: 3, k: [[w(7, 1), 0], [w(7, 4), 3, 'lin']], caja: [-95, -70, 190, 82] });
 E.temblor(w(7, 12), 10, 0.35); E.sfx(w(7, 12), 'thud');
 
@@ -148,10 +147,10 @@ E.temblor(w(7, 12), 10, 0.35); E.sfx(w(7, 12), 'thud');
 // 9: Se(0) puede(1) criticar(2) un(3) informe(4) sin(5) poner(6) en(7) duda(8) a(9) quien(10) lo(11) ha(12) escrito(13)
 E.numero(3, N[2].T, N[2].S, { desde: 'tarea', hacia: 'inf' });
 E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -350, talla: 340, cara: true,
-  poses: [[0, 'de_pie'], [w(8, 2), 'senalar'], [w(8, 5), 'de_pie'], [w(9, 2), 'escribir'], [w(9, 5), 'ofrecer'], [wf(9, -1) + 0.2, 'celebrar']],
+  poses: [[0, 'de_pie'], [w(8, 2), 'senalar'], [w(8, 5), 'de_pie'], [w(9, 2), 'senalar'], [w(9, 5), 'ofrecer'], [wf(9, -1) + 0.2, 'celebrar']],
   sonrisa: [[0, 0.3], [w(8, 2), 0.6], [w(9, 5), 1.2], [wf(9, -1) + 0.2, 1.5]] });
 E.figura('otro3', { t0: N[2].S - 0.05, t1: TC, x: 340, talla: 320, color: 'gris', dir: -1, cara: true,
-  poses: [[0, 'de_pie'], [w(8, 5), 'pensar'], [w(9, 5), 'de_pie'], [w(9, 10), 'escribir'], [wf(9, -1) + 0.2, 'celebrar']],
+  poses: [[0, 'de_pie'], [w(8, 5), 'pensar'], [w(9, 5), 'de_pie'], [w(9, 10), 'ofrecer'], [wf(9, -1) + 0.2, 'celebrar']],
   sonrisa: [[0, 0.3], [w(8, 7), 0.6], [w(9, 10), 1.1], [wf(9, -1) + 0.2, 1.5]] });
 E.obj('rotTrab', 'rotulo', { t0: w(8, 3) - 0.1, t1: TC, x: -20, y: -440, texto: [[0, 'EL TRABAJO'], [w(9, 4), 'EL INFORME']], size: 30, col: AM, pop: true, caja: [-110, -18, 220, 36] });
 E.obj('inf', 'lista', { t0: N[2].S - 0.1, t1: TC, x: -20, y: -280, n: 3, w: 300, gap: 66, pop: true, r: 70,
