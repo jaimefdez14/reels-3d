@@ -37,13 +37,13 @@ E.figura('yo', { t0: 0, t1: w(1, 0), sale: 0.2, x: -360, cara: true, toca: ['mes
 E.obj('movil0', 'telefono', { t0: 0, t1: w(1, 0), sale: 0.2, x: 320, y: -330, w: 130, h: 230,
   avisos: [[0, 0], [0.25, 1, 'out']], vibra: [[0, 0.9], [w(0, 1), 0.9], [w(0, 2), 0]], brillo: [[0, 0.6], [w(0, 1), 1], [w(0, 5), 1], [w(0, 6), 0.4]], caja: [-65, -115, 130, 230] });
 E.sfx(0.25, 'pop');
-E.obj('bocaH', 'bocadillo', { t0: w(0, 0), t1: w(0, 6), sale: 0.2, x: -250, y: -470, w: 340, h: 76, texto: 'Solo es un mensaje.', size: 30, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: w(0, 0), t1: w(0, 6), sale: 0.2, x: -110, y: -470, w: 340, h: 76, texto: 'Solo es un mensaje.', size: 30, pop: true,
   on: [[w(0, 0), 0], [w(0, 0) + 0.3, 1]], caja: [-170, -38, 340, 102] });
 E.obj('seg0', 'contador', { t0: w(0, 3) - 0.1, t1: w(1, 0), sale: 0.2, x: 320, y: -150, suf: ' s', size: 58, col: 'txt', miles: false, pop: true,
   v: [[w(0, 3), 0], [w(0, 4) + 0.4, 5, 'out']], barrido: [w(0, 4) + 0.45], caja: [-80, -34, 160, 68] });
 conc('conc0', { t0: 0, t1: w(1, 0), sale: 0.2, f: [[0, 1], [w(0, 3), 1], [w(0, 4) + 0.4, 0.08, 'inout'], [w(0, 7), 0.08], [w(1, 0), 0.3, 'lin']] });
 rotConc('rotC0', { t0: 0, t1: w(1, 0), sale: 0.2 });
-E.obj('maraña0', 'maraña', { t0: w(0, 7), t1: w(1, 0), sale: 0.2, x: -330, y: -440, r: 42, p: [[w(0, 7), 0], [w(0, 9), 1, 'out']], rot: [[w(0, 7), 0], [w(1, 0), 0.8, 'lin']], caja: [-58, -34, 116, 68] });
+E.obj('maraña0', 'maraña', { t0: w(0, 7), t1: w(1, 0), sale: 0.2, x: -240, y: -495, r: 36, p: [[w(0, 7), 0], [w(0, 9), 1, 'out']], rot: [[w(0, 7), 0], [w(1, 0), 0.8, 'lin']], caja: [-58, -34, 116, 68] });
 E.temblor(w(0, 7), 14, 0.45); E.golpe(w(0, 7), 0.05);
 E.sfx(w(0, 9), 'fill');
 
