@@ -58,7 +58,7 @@ E.obj('rotRegla', 'rotulo', { t0: w(1, 5) - 0.1, t1: w(2, 0), sale: 0.25, x: 120
 E.obj('chRegla', 'chispas', { t0: w(1, 9), t1: w(1, 9) + 0.8, x: 120, y: -470, r0: 140, r1: 260, inspeccion: false });
 E.golpe(w(1, 9), 0.04);
 E.obj('reloj1', 'temporizador', { t0: w(1, 0) + 0.05, t1: w(2, 0), sale: 0.25, x: 140, y: -230, r: 110, texto: '2', sub: 'MIN', pop: true,
-  p: [[w(1, 10), 0], [wf(1, 18), 1, 'lin']], hecho: [[w(1, 22), 0], [w(1, 23) + 0.25, 1, 'out']], caja: [-132, -132, 264, 264] });
+  p: [[w(1, 10), 0], [wf(1, 18), 1, 'lin']], hecho: [[w(1, 22), 0], [w(1, 23) + 0.25, 0.995, 'out']], caja: [-132, -132, 264, 264] });
 E.sfx(w(1, 10), 'fill');
 E.obj('ch1', 'chispas', { t0: w(1, 23) + 0.2, t1: w(1, 23) + 1.0, x: 140, y: -230, r0: 140, r1: 240, inspeccion: false });
 E.golpe(w(1, 23) + 0.2, 0.04); E.destello(w(1, 23) + 0.2, 0.12);
@@ -94,7 +94,7 @@ E.figura('yoP1', { t0: N[0].S - 0.1, t1: fin(1), x: -340, cara: true,
   poses: [[0, 'de_pie'], [w(4, 2), 'pensar'], [w(4, 6), 'senalar'], [w(5, 0), 'senalar'], [w(5, 3), 'ofrecer'], [w(5, 7), 'ofrecer'], [wf(5, -1), 'celebrar']],
   sonrisa: [[0, 0.2], [w(4, 6), 1], [w(5, 0), 0.6], [w(5, 7), 0.8], [wf(5, -1), 1.5]] });
 E.obj('reloj4', 'temporizador', { t0: N[0].S - 0.1, t1: fin(1), x: 150, y: -400, r: 72, texto: '2', sub: 'MIN', pop: true,
-  p: [[w(4, 4), 0], [w(4, 6) + 0.15, 1, 'inout']], hecho: [[w(4, 6), 0], [w(4, 6) + 0.4, 1, 'out']], caja: [-90, -90, 180, 180] });
+  p: [[w(4, 4), 0], [w(4, 6) + 0.15, 1, 'inout']], hecho: [[w(4, 6), 0], [w(4, 6) + 0.4, 0.995, 'out']], caja: [-90, -90, 180, 180] });
 E.sfx(w(4, 4), 'fill');
 E.obj('ch4', 'chispas', { t0: w(4, 6) + 0.3, t1: w(4, 6) + 1.1, x: 150, y: -400, r0: 100, r1: 190, inspeccion: false });
 E.golpe(w(4, 6) + 0.3, 0.04);

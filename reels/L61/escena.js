@@ -37,7 +37,7 @@ E.figura('yo', { t0: 0, t1: fin(0), x: -345, cara: true,
     [w(3, 0), 'senalar'], [w(3, 3), 'celebrar']],
   sonrisa: [[0, 0.3], [w(0, 6), 0.8], [w(0, 9), -0.4], [w(0, 12), -1.3], [w(1, 0), 0.2], [w(1, 1), 0.6], [w(2, 2), 0.6], [w(2, 12), -0.2], [w(2, 16), -1],
     [w(3, 0), 0.4], [w(3, 3), 1.5]] });
-E.obj('bocaH', 'bocadillo', { t0: 0.25, t1: w(0, 12) + 0.2, sale: 0.2, x: 5, y: -478, w: 470, h: 76, texto: 'Yo no salgo antes de las diez.', size: 28, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: 0.25, t1: w(0, 12) + 0.2, sale: 0.2, x: 40, y: -478, w: 470, h: 76, texto: 'Yo no salgo antes de las diez.', size: 28, pop: true,
   on: [[0.25, 0], [0.6, 1]], caja: [-235, -38, 470, 102] });
 E.obj('h70', 'contador', { t0: 0, t1: w(1, 0), sale: 0.25, x: 120, y: -290, size: 46, suf: ' HORAS', miles: false, col: 'txt',
   v: [[0, 0], [w(0, 2), 70, 'out']], barrido: [w(0, 2)], caja: [-105, -28, 210, 56] });
@@ -169,4 +169,4 @@ E.destello(wf(10, -1), 0.22); E.golpe(wf(10, -1), 0.04);
 E.figura('yoF', { t0: w(11, 0), t1: D + 1, x: -110, cara: true, poses: [[0, 'de_pie'], [w(11, 1), 'senalar']] });
 E.obj('enviar', 'enviar', { t0: w(11, 1), t1: D + 1, x: 120, y: -360, r: 64, pop: true, barrido: [w(11, 10)], vuelo: [[wf(11, -1), 0], [wf(11, -1) + 0.5, 1, 'in']] });
 E.figura('comp', { t0: w(11, 3) - 0.1, t1: D + 1, x: 390, talla: 330, color: 'gris', dir: -1, cara: true,
-  poses: [[0, 'de_pie'], [w(11, 8), 'escribir']], sonrisa: [[0, 0.3], [w(11, 8), -0.6]] });
+  poses: [[0, 'de_pie'], [w(11, 8), 'coger']], sonrisa: [[0, 0.3], [w(11, 8), -0.6]] });
