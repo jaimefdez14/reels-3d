@@ -83,7 +83,7 @@ E.obj('libro', 'papeles', { t0: w(2, 1), t1: PB - 0.1, sale: 0.2, x: 170, y: -14
 E.obj('chAnio', 'chispas', { t0: w(2, 6) + 0.7, t1: w(2, 6) + 1.5, x: 170, y: -330, r0: 150, r1: 250, inspeccion: false });
 E.golpe(w(2, 6) + 0.7, 0.04);
 // la central nuclear: bloque grande que recibe el visto bueno; su barra de minutos casi no se llena
-E.obj('central', 'bloques', { t0: PB, t1: G3, sale: 0.25, x: -50, y: -95, n: 1, w: 190, h: 190, pop: true, refl: true,
+E.obj('central', 'bloques', { t0: PB, t1: G3, sale: 0.25, x: -50, y: -95, n: 1, w: 190, h: 190, pop: true,
   hechos: [[w(2, 9), 0], [w(2, 9) + 0.35, 1, 'out']], barrido: [w(2, 9) + 0.35], luz: [[0, 1], [w(2, 16), 1], [w(2, 17), 0.55]], caja: [-95, -95, 190, 190] });
 E.obj('chCen', 'chispas', { t0: w(2, 9) + 0.35, t1: w(2, 9) + 1.1, x: -50, y: -95, r0: 110, r1: 200, inspeccion: false });
 E.golpe(w(2, 9) + 0.35, 0.03);
@@ -94,7 +94,7 @@ E.obj('rotCen', 'rotulo', { t0: w(2, 13) - 0.1, t1: G3, sale: 0.25, x: -50, y: -
 E.figura('com', { t0: PB + 0.1, t1: G3, sale: 0.25, x: 165, talla: 210, color: 'gris',
   poses: [[0, 'de_pie'], [w(2, 9), 'levantar', 0.25], [w(2, 12), 'de_pie'], [w(2, 16), 'ofrecer', 0.25], [w(2, 17), 'senalar', 0.25], [w(2, 19), 'levantar', 0.25], [w(2, 21), 'ofrecer', 0.25], [w(2, 23), 'encoger', 0.25]] });
 // las bicicletas: bloque pequeño, mucha voz y la barra de «casi una hora» llena
-E.obj('bicis', 'bloques', { t0: w(2, 15) - 0.05, t1: G3, sale: 0.25, x: 360, y: -35, n: 1, w: 100, h: 70, pop: true, refl: true, caja: [-50, -35, 100, 70] });
+E.obj('bicis', 'bloques', { t0: w(2, 15) - 0.05, t1: G3, sale: 0.25, x: 360, y: -35, n: 1, w: 100, h: 70, pop: true, caja: [-50, -35, 100, 70] });
 E.obj('vozB', 'ondas', { t0: w(2, 16) - 0.05, t1: G3, sale: 0.25, x: 360, y: -180, n: 9, pop: true, amp: [[w(2, 16), 0], [w(2, 17), 1, 'out']], caja: [-115, -50, 230, 100] });
 E.obj('barHora', 'relleno', { t0: w(2, 16), t1: G3, sale: 0.25, x: 350, y: 100, w: 290, h: 32, pop: true, rotulo: 'CASI UNA HORA',
   f: [[w(2, 16), 0], [wf(2, 19) + 0.3, 0.75, 'lin'], [wf(2, 23), 0.93, 'out']], barrido: [wf(2, 23)], caja: [-145, -52, 290, 68] });
@@ -153,7 +153,7 @@ E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -355, cara: true,
 const K6 = [[w(6, 2), w(6, 3) + 0.3], [w(6, 4), w(6, 5) + 0.15], [w(6, 5) + 0.15, wf(6, 6)]];
 [0, 1, 2].forEach(i => { const x = -50 + i * 195;
   E.obj('tm' + i, 'temporizador', { t0: N[1].S - 0.1 + i * 0.1, t1: T7, sale: 0.2, x, y: -330, r: 56, texto: '', sub: '', pop: true,
-    p: [[K6[i][0], 0], [K6[i][1], 1, 'inout']], hecho: [[K6[i][1], 0], [K6[i][1] + 0.3, 1, 'out']], caja: [-74, -74, 148, 148] });
+    p: [[K6[i][0], 0], [K6[i][1], 1, 'inout']], hecho: [[K6[i][1], 0], [K6[i][1] + 0.3, 0.96, 'out']], caja: [-74, -74, 148, 148] });
   E.obj('pt' + i, 'relleno', { t0: N[1].S + i * 0.1, t1: T7, sale: 0.2, x, y: -190, w: 140, h: 28, pop: true,
     f: [[K6[i][0], 0], [K6[i][1], 1, 'inout']], caja: [-70, -14, 140, 28] });
   E.sfx(K6[i][0], 'fill'); E.sfx(K6[i][1], 'ding'); E.golpe(K6[i][1], 0.015); });
@@ -162,7 +162,7 @@ E.obj('ch2a', 'chispas', { t0: wf(6, 6), t1: wf(6, 6) + 0.8, x: 340, y: -330, r0
 // diez minutos para lo pequeño: reloj grande, el contador rueda hasta 10; no se cierra → decide quien convoca
 const DX = 150, DY = -280, C7 = w(7, 10);
 E.obj('diez', 'temporizador', { t0: T7 + 0.1, t1: fin(2), x: DX, y: DY, r: 100, texto: '', sub: '', pop: true, sobrevive: true,
-  p: [[w(7, 0), 0], [w(7, 4) + 0.3, 0.8, 'lin'], [w(7, 8), 1, 'lin']], hecho: [[C7, 0], [C7 + 0.4, 1, 'out']], barrido: [C7 + 0.45], caja: [-120, -120, 240, 240] });
+  p: [[w(7, 0), 0], [w(7, 4) + 0.3, 0.8, 'lin'], [w(7, 8), 1, 'lin']], hecho: [[C7, 0], [C7 + 0.4, 0.96, 'out']], barrido: [C7 + 0.45], caja: [-120, -120, 240, 240] });
 E.obj('diezN', 'contador', { t0: T7 + 0.15, t1: C7 - 0.05, sale: 0.15, x: DX, y: DY, size: 58, col: 'txt', suf: ' MIN', miles: false, libre: true,
   v: [[w(7, 0), 0], [w(7, 1) + 0.3, 10, 'out']], caja: [-88, -34, 176, 68] });
 E.sfx(w(7, 0), 'fill');
