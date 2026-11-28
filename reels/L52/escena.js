@@ -185,7 +185,7 @@ BY.forEach((y, i) => {
   E.sfx(b, 'fill'); });
 E.sfx(w(9, 10), 'fill');
 // «Una lista a la vista de todos»: el equipo la mira; «para que nadie se esconda»: el que estaba apagado se enciende y su barra sube
-[{ x: 270, luz: 1 }, { x: 370, luz: 1 }, { x: 465, luz: [[0, 0.35], [w(9, 10), 0.35], [w(9, 12), 1]] }].forEach((q, i) =>
+[{ x: 245, luz: 1 }, { x: 340, luz: 1 }, { x: 435, luz: [[0, 0.35], [w(9, 10), 0.35], [w(9, 12), 1]] }].forEach((q, i) =>
   E.figura('gente9_' + i, { t0: w(9, 0) - 0.1 + i * 0.12, t1: TC, x: q.x, talla: 250, color: 'gris', dir: -1, luz: q.luz,
     poses: i === 2 ? [[0, 'encoger'], [w(9, 10), 'encoger'], [w(9, 12), 'de_pie'], [wf(9, -1) + 0.2, 'celebrar']] : [[0, 'de_pie'], [w(9, 4) + i * 0.1, 'senalar'], [w(9, 7), 'de_pie']] }));
 E.obj('ch9', 'chispas', { t0: wf(9, -1) + 0.2, t1: wf(9, -1) + 1.0, x: 5, y: BY[2], r0: 60, r1: 170, inspeccion: false });
