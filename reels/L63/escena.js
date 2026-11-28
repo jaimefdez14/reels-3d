@@ -36,8 +36,8 @@ E.camara([
 // 3: Tres(0) reglas(1) para(2) aplicarla(3)
 E.figura('yo', { t0: 0, t1: fin(0), x: -340, cara: true,
   poses: [[0, 'pensar'], [w(0, 5), 'apartarse'], [w(0, 10), 'encoger'],
-    [w(1, 0), 'de_pie'], [w(1, 2), 'senalar'], [w(1, 10), 'pensar'], [w(1, 19), 'escribir'], [w(1, 23), 'celebrar'],
-    [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 7), 'escribir'], [w(2, 9), 'pensar'], [w(2, 11), 'manos_cabeza'], [w(2, 14), 'celebrar'],
+    [w(1, 0), 'de_pie'], [w(1, 2), 'senalar'], [w(1, 10), 'pensar'], [w(1, 19), 'ofrecer'], [w(1, 23), 'celebrar'],
+    [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 7), 'senalar'], [w(2, 9), 'pensar'], [w(2, 11), 'manos_cabeza'], [w(2, 14), 'celebrar'],
     [w(3, 0), 'de_pie'], [w(3, 1), 'senalar'], [w(3, 3), 'celebrar']],
   sonrisa: [[0, 0.2], [w(0, 5), -0.4], [w(0, 10), -1.2], [w(1, 2), 0.3], [w(1, 10), 0.2], [w(1, 23), 1.5], [w(2, 2), 0.6], [w(2, 9), -0.2], [w(2, 11), -1.0], [w(2, 14), 1.4],
     [w(3, 1), 0.5], [w(3, 3), 1.4]] });
@@ -91,7 +91,7 @@ E.destello(w(3, 3), 0.12);
 // 5: Contestar(0) ese(1) mensaje(2) pedir(3) la(4) cita(5) o(6) pagar(7) ese(8) recibo(9)
 E.numero(1, N[0].T, N[0].S, { desde: 'r1', hacia: 'reloj4' });
 E.figura('yoP1', { t0: N[0].S - 0.1, t1: fin(1), x: -340, cara: true,
-  poses: [[0, 'de_pie'], [w(4, 2), 'pensar'], [w(4, 6), 'senalar'], [w(5, 0), 'escribir'], [w(5, 3), 'coger'], [w(5, 7), 'ofrecer'], [wf(5, -1), 'celebrar']],
+  poses: [[0, 'de_pie'], [w(4, 2), 'pensar'], [w(4, 6), 'senalar'], [w(5, 0), 'senalar'], [w(5, 3), 'ofrecer'], [w(5, 7), 'ofrecer'], [wf(5, -1), 'celebrar']],
   sonrisa: [[0, 0.2], [w(4, 6), 1], [w(5, 0), 0.6], [w(5, 7), 0.8], [wf(5, -1), 1.5]] });
 E.obj('reloj4', 'temporizador', { t0: N[0].S - 0.1, t1: fin(1), x: 150, y: -400, r: 72, texto: '2', sub: 'MIN', pop: true,
   p: [[w(4, 4), 0], [w(4, 6) + 0.15, 1, 'inout']], hecho: [[w(4, 6), 0], [w(4, 6) + 0.4, 1, 'out']], caja: [-90, -90, 180, 180] });
@@ -112,7 +112,7 @@ E.golpe(wf(5, -1), 0.04); E.destello(wf(5, -1), 0.1);
 // 7: Una(0) tarea(1) sin(2) fecha(3) se(4) queda(5) en(6) la(7) lista(8) para(9) siempre(10)
 E.numero(2, N[1].T, N[1].S, { desde: 'hechas', hacia: 'larga' });
 E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -340, cara: true,
-  poses: [[0, 'de_pie'], [w(6, 3), 'levantar'], [w(6, 6), 'senalar'], [w(6, 9), 'escribir'], [w(7, 0), 'de_pie'], [w(7, 2), 'encoger'], [w(7, 5), 'pensar'], [w(7, 9), 'manos_cabeza'], [wf(7, -1) + 0.2, 'triste']],
+  poses: [[0, 'de_pie'], [w(6, 3), 'levantar'], [w(6, 6), 'senalar'], [w(6, 9), 'celebrar'], [w(7, 0), 'de_pie'], [w(7, 2), 'encoger'], [w(7, 5), 'pensar'], [w(7, 9), 'manos_cabeza'], [wf(7, -1) + 0.2, 'triste']],
   sonrisa: [[0, 0.2], [w(6, 6), 0.8], [w(6, 9), 1.3], [w(7, 2), -0.2], [w(7, 9), -1.3]] });
 E.obj('larga', 'barra', { t0: N[1].S - 0.1, t1: w(7, 1), sale: 0.25, x: 120, y: -440, h: 50, pop: true,
   w: [[w(6, 3), 140], [w(6, 5) + 0.4, 440, 'out']], f: [[w(6, 3), 0.2], [w(6, 5) + 0.4, 1, 'out']], caja: [-220, -25, 440, 50] });

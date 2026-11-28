@@ -38,9 +38,9 @@ E.obj('chArr', 'chispas', { t0: w(0, 3) + 0.2, t1: w(0, 3) + 1.0, x: -70, y: -17
 E.golpe(w(0, 3) + 0.2, 0.03);
 E.obj('meses', 'dias', { t0: 0, t1: w(1, 0), sale: 0.25, x: -50, y: -500, letras: ['E', 'F', 'M', 'A', 'M', 'J'], gap: 76,
   luz: [[0, 0], [w(0, 4), 0], [w(0, 5) + 0.2, 1, 'inout'], [w(0, 8), 1], [w(0, 9) + 0.2, 2, 'inout']], caja: [-220, -32, 440, 64] });
-E.figura('cA', { t0: 0, t1: w(1, 0), sale: 0.25, x: 400, talla: 290, color: 'gris', dir: -1, cara: true,
+E.figura('cA', { t0: 0, t1: w(1, 0), sale: 0.25, x: 365, talla: 290, color: 'gris', dir: -1, cara: true,
   poses: [[0, 'de_pie'], [w(0, 3), 'ofrecer'], [w(0, 7), 'de_pie'], [w(0, 10), 'encoger']], sonrisa: [[0, 0.3], [w(0, 3), 1], [w(0, 10), -0.8]] });
-E.obj('bocaH', 'bocadillo', { t0: w(0, 9), t1: w(1, 0), sale: 0.2, x: 330, y: -430, w: 250, h: 76, texto: '¿Otra vez?', size: 32, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: w(0, 9), t1: w(1, 0), sale: 0.2, x: 305, y: -430, w: 250, h: 76, texto: '¿Otra vez?', size: 32, pop: true,
   on: [[w(0, 9), 0], [w(0, 10) + 0.3, 1]], caja: [-125, -38, 250, 102] });
 E.temblor(w(0, 10), 14, 0.45); E.golpe(w(0, 10), 0.05);
 E.obj('pulsoP', 'pulso', { t0: w(0, 10) + 0.1, t1: w(0, 10) + 0.8, x: -70, y: -170, r0: 50, r1: 150, inspeccion: false });

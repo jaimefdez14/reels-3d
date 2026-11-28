@@ -31,26 +31,26 @@ E.camara([
 // 0: Trabajar(0) 70(1) horas(2) a(3) la(4) semana(5) rinde(6) casi(7) lo(8) mismo(9) que(10) trabajar(11) 55(12)   [bocadillo «Yo no salgo antes de las diez.»]
 // el muñeco echa horas: el contador rueda a 70 y el montón de lo que rinde crece; con «55» crece otro montón casi igual
 E.figura('yo', { t0: 0, t1: fin(0), x: -345, cara: true,
-  poses: [[0, 'escribir'], [w(0, 6), 'levantar'], [w(0, 9), 'encoger'], [w(0, 12), 'manos_cabeza'],
+  poses: [[0, 'coger'], [w(0, 6), 'levantar'], [w(0, 9), 'encoger'], [w(0, 12), 'manos_cabeza'],
     [w(1, 0), 'de_pie'], [w(1, 1), 'senalar'], [w(1, 8), 'pensar'], [w(1, 16), 'senalar'],
     [w(2, 0), 'de_pie'], [w(2, 2), 'senalar'], [w(2, 12), 'encoger'], [w(2, 16), 'triste'],
     [w(3, 0), 'senalar'], [w(3, 3), 'celebrar']],
   sonrisa: [[0, 0.3], [w(0, 6), 0.8], [w(0, 9), -0.4], [w(0, 12), -1.3], [w(1, 0), 0.2], [w(1, 1), 0.6], [w(2, 2), 0.6], [w(2, 12), -0.2], [w(2, 16), -1],
     [w(3, 0), 0.4], [w(3, 3), 1.5]] });
-E.obj('bocaH', 'bocadillo', { t0: 0.25, t1: w(0, 12) + 0.2, sale: 0.2, x: -45, y: -470, w: 470, h: 76, texto: 'Yo no salgo antes de las diez.', size: 28, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: 0.25, t1: w(0, 12) + 0.2, sale: 0.2, x: 5, y: -478, w: 470, h: 76, texto: 'Yo no salgo antes de las diez.', size: 28, pop: true,
   on: [[0.25, 0], [0.6, 1]], caja: [-235, -38, 470, 102] });
-E.obj('h70', 'contador', { t0: 0, t1: w(1, 0), sale: 0.25, x: 130, y: -290, size: 50, suf: ' HORAS', miles: false, col: 'txt',
+E.obj('h70', 'contador', { t0: 0, t1: w(1, 0), sale: 0.25, x: 120, y: -290, size: 46, suf: ' HORAS', miles: false, col: 'txt',
   v: [[0, 0], [w(0, 2), 70, 'out']], barrido: [w(0, 2)], caja: [-105, -28, 210, 56] });
-E.obj('p70', 'pila', { t0: 0, t1: w(1, 0), sale: 0.25, x: 130, n: 9, w: 130, hh: 24, refl: true,
+E.obj('p70', 'pila', { t0: 0, t1: w(1, 0), sale: 0.25, x: 120, n: 9, w: 130, hh: 24, refl: true,
   k: [[0, 1], [0.3, 1], [w(0, 6) + 0.2, 8, 'out']], caja: [-65, -184, 130, 184] });
 E.sfx(0.3, 'fill');
-E.obj('h55', 'contador', { t0: w(0, 10), t1: w(1, 0), sale: 0.25, x: 380, y: -290, size: 50, suf: ' HORAS', miles: false, col: 'txt', pop: true,
+E.obj('h55', 'contador', { t0: w(0, 10), t1: w(1, 0), sale: 0.25, x: 355, y: -290, size: 46, suf: ' HORAS', miles: false, col: 'txt', pop: true,
   v: [[w(0, 11), 0], [w(0, 12) + 0.35, 55, 'out']], barrido: [w(0, 12) + 0.4], caja: [-105, -28, 210, 56] });
-E.obj('p55', 'pila', { t0: w(0, 10), t1: w(1, 0), sale: 0.25, x: 380, n: 9, w: 130, hh: 24, refl: true,
+E.obj('p55', 'pila', { t0: w(0, 10), t1: w(1, 0), sale: 0.25, x: 355, n: 9, w: 130, hh: 24, refl: true,
   k: [[w(0, 10), 0], [wf(0, -1), 7.5, 'out']], caja: [-65, -184, 130, 184] });
 E.sfx(w(0, 10), 'fill');
-E.obj('casi', 'rotulo', { t0: w(0, 7) - 0.05, t1: w(1, 0), sale: 0.2, x: 255, y: -375, texto: 'CASI LO MISMO', size: 28, col: AM, pop: true, caja: [-130, -16, 260, 32] });
-E.obj('chH', 'chispas', { t0: w(0, 9), t1: w(0, 9) + 0.8, x: 255, y: -375, r0: 90, r1: 190, inspeccion: false });
+E.obj('casi', 'rotulo', { t0: w(0, 7) - 0.05, t1: w(1, 0), sale: 0.2, x: 238, y: -375, texto: 'CASI LO MISMO', size: 28, col: AM, pop: true, caja: [-130, -16, 260, 32] });
+E.obj('chH', 'chispas', { t0: w(0, 9), t1: w(0, 9) + 0.8, x: 238, y: -375, r0: 90, r1: 190, inspeccion: false });
 E.golpe(w(0, 9), 0.05); E.destello(w(0, 9), 0.15);
 E.temblor(w(0, 12) + 0.35, 12, 0.4);
 
@@ -66,7 +66,7 @@ E.obj('rotGM', 'rotulo', { t0: w(1, 16) - 0.1, t1: w(2, 0), sale: 0.2, x: 150, y
 
 // 2: Se(0) llama(1) ley(2) de(3) los(4) rendimientos(5) decrecientes(6) a(7) partir(8) de(9) cierto(10) punto(11) cada(12) hora(13) de(14) más(15) rinde(16) menos(17)
 // una columna de monedas por hora: las tres primeras iguales; a partir de cierto punto, cada una más baja
-E.obj('rotLey', 'rotulo', { t0: w(2, 2) - 0.1, t1: w(3, 0), sale: 0.2, x: 120, y: -470, texto: 'RENDIMIENTOS DECRECIENTES', size: 30, col: AM, peso: 700, pop: true, caja: [-265, -18, 530, 36] });
+E.obj('rotLey', 'rotulo', { t0: w(2, 0), t1: w(3, 0), sale: 0.2, x: 120, y: -470, texto: 'RENDIMIENTOS DECRECIENTES', size: 30, col: AM, peso: 700, pop: true, caja: [-265, -18, 530, 36] });
 E.obj('chLey', 'chispas', { t0: w(2, 6), t1: w(2, 6) + 0.8, x: 120, y: -470, r0: 140, r1: 260, inspeccion: false });
 E.golpe(w(2, 6), 0.04);
 const CX = i => -125 + i * 88;
@@ -138,7 +138,7 @@ E.golpe(wf(7, -1) + 0.3, 0.04); E.destello(wf(7, -1) + 0.3, 0.1);
 // 9: Cansado(0) tardas(1) el(2) doble(3) y(4) después(5) te(6) toca(7) corregir(8) lo(9) que(10) has(11) hecho(12)
 E.numero(3, N[2].T, N[2].S, { desde: 'reloj2', hacia: 'energia' });
 E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -355, cara: true,
-  poses: [[0, 'de_pie'], [w(8, 2), 'sentado'], [wf(8, -1), 'celebrar'], [w(9, 0), 'triste'], [w(9, 1), 'escribir'], [w(9, 5), 'manos_cabeza'], [w(9, 8), 'escribir']],
+  poses: [[0, 'de_pie'], [w(8, 2), 'levantar'], [wf(8, -1), 'celebrar'], [w(9, 0), 'triste'], [w(9, 1), 'coger'], [w(9, 5), 'manos_cabeza'], [w(9, 8), 'coger']],
   sonrisa: [[0, 0.2], [w(8, 2), 1], [wf(8, -1), 1.5], [w(9, 0), -0.8], [w(9, 5), -1.3], [w(9, 8), -0.6]] });
 E.obj('energia', 'barra', { t0: N[2].S - 0.1, t1: TC, x: 80, y: -420, w: 400, h: 44, pop: true, marca: 0.15, rotMarca: 'AGOTADO', r: 50,
   f: [[N[2].S, 0.9], [w(8, 2), 0.4, 'inout'], [w(8, 3), 0.4], [wf(8, -1), 1, 'out'], [w(9, 0), 1], [w(9, 0) + 0.5, 0.2, 'inout']],
@@ -147,7 +147,7 @@ E.sfx(w(8, 3), 'fill');
 E.obj('ch3', 'chispas', { t0: wf(8, -1), t1: wf(8, -1) + 0.8, x: 80, y: -420, r0: 100, r1: 220, inspeccion: false });
 E.golpe(wf(8, -1), 0.04); E.destello(wf(8, -1), 0.1);
 // «Cansado, tardas el doble»: una barra que tarda el doble en llenarse que su marca
-E.obj('rotCans', 'rotulo', { t0: w(9, 0) - 0.1, t1: TC, x: 80, y: -335, texto: 'CANSADO', size: 24, col: '#c9ccca', pop: true, caja: [-70, -14, 140, 28] });
+E.obj('rotCans', 'rotulo', { t0: w(9, 0) - 0.1, t1: TC, x: 80, y: -347, texto: 'CANSADO', size: 24, col: '#c9ccca', pop: true, caja: [-70, -14, 140, 28] });
 E.obj('doble', 'barra', { t0: w(9, 0), t1: TC, x: 80, y: -275, w: 400, h: 44, pop: true, marca: 0.5, r: 50,
   f: [[w(9, 1), 0], [w(9, 3) + 0.5, 1, 'lin']], caja: [-200, -48, 400, 96] });
 E.sfx(w(9, 1), 'fill');

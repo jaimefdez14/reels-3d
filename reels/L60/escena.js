@@ -126,8 +126,9 @@ E.numero(2, N[1].T, N[1].S, { desde: 'reloj', hacia: 'trabajo' });
 E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -360, cara: true,
   poses: [[0, 'de_pie'], [w(6, 2), 'pensar'], [w(6, 4), 'senalar'], [w(6, 8), 'celebrar'], [w(7, 0), 'ofrecer'], [w(7, 5), 'senalar'], [w(7, 10), 'apartarse'], [wf(7, -1), 'celebrar']],
   sonrisa: [[0, 0.2], [w(6, 4), 0.4], [w(6, 8), 1.5], [w(7, 0), 0.9], [w(7, 10), 0.2], [wf(7, -1), 1.3]] });
-E.obj('trabajo', 'bloques', { t0: N[1].S - 0.1, t1: fin(2), x: 70, y: -440, n: 5, w: 420, h: 84, pop: true, r: 90, texto: 'TU TRABAJO',
+E.obj('trabajo', 'bloques', { t0: N[1].S - 0.1, t1: fin(2), x: 70, y: -440, n: 5, w: 420, h: 84, pop: true, r: 90,
   parte: [[w(6, 3), 0], [w(6, 5), 1, 'out']], hechos: [[w(6, 8), 0], [wf(6, -1) + 0.2, 1, 'out']], caja: [-210, -52, 420, 104] });
+E.obj('rotTu', 'rotulo', { t0: w(6, 5), t1: w(6, 8) - 0.05, sale: 0.15, x: 70, y: -350, texto: 'TU TRABAJO', size: 24, col: GRIS, pop: true, caja: [-90, -14, 180, 28] });
 E.obj('ch2a', 'chispas', { t0: wf(6, -1) + 0.2, t1: wf(6, -1) + 1.0, x: 70 - 210 + 42, y: -440, r0: 60, r1: 150, inspeccion: false });
 E.golpe(wf(6, -1) + 0.2, 0.04); E.sfx(w(6, 8), 'fill');
 E.obj('rotRes', 'rotulo', { t0: w(6, 8) - 0.05, t1: w(7, 0), sale: 0.2, x: -140 + 42, y: -340, texto: 'DA RESULTADO', size: 24, col: AM, pop: true, caja: [-105, -14, 210, 28] });

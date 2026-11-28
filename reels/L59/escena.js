@@ -82,7 +82,7 @@ E.destello(wf(2, -1), 0.12);
 // 4: Las(0) seis(1) más(2) importantes(3) de(4) mañana(5) Ni(6) una(7) más(8)
 E.numero(1, N[0].T, N[0].S, { desde: 'p1', hacia: 'lista1' });
 E.figura('yoP1', { t0: N[0].S - 0.1, t1: fin(1), x: -355, cara: true,
-  poses: [[0, 'de_pie'], [w(3, 2), 'pensar'], [w(3, 5), 'escribir'], [w(4, 0), 'senalar'], [w(4, 3), 'ofrecer'], [w(4, 6), 'apartarse'], [wf(4, -1) + 0.1, 'celebrar']],
+  poses: [[0, 'de_pie'], [w(3, 2), 'pensar'], [w(3, 5), 'coger'], [w(4, 0), 'senalar'], [w(4, 3), 'ofrecer'], [w(4, 6), 'apartarse'], [wf(4, -1) + 0.1, 'celebrar']],
   sonrisa: [[0, 0.2], [w(3, 5), 0.8], [w(4, 0), 1], [w(4, 6), -0.3], [wf(4, -1) + 0.1, 1.5]] });
 E.obj('luna', 'bola', { t0: w(3, 3), t1: w(4, 4), sale: 0.25, x: -150, y: -470, r: 34, pop: true, luz: 0.55, caja: [-34, -34, 68, 68] });
 E.obj('rotNoche', 'rotulo', { t0: w(3, 3), t1: w(4, 4), sale: 0.15, x: 100, y: -470, texto: 'POR LA NOCHE', size: 28, col: GRIS, pop: true, caja: [-130, -17, 260, 34] });
@@ -134,8 +134,8 @@ E.temblor(w(6, 9), 8, 0.35);
 // 8: Lo(0) que(1) quede(2) sin(3) hacer(4) pasa(5) a(6) la(7) lista(8) del(9) día(10) siguiente(11)
 E.numero(3, N[2].T, N[2].S, { desde: 'bar0', hacia: 'hoy' });
 E.figura('yoP3', { t0: N[2].S - 0.1, t1: TC, x: -355, cara: true,
-  poses: [[0, 'de_pie'], [w(7, 2), 'senalar'], [w(7, 5), 'escribir'], [w(7, 7), 'apartarse'], [w(7, 9), 'escribir'], [wf(7, -1), 'celebrar'],
-    [w(8, 0), 'escribir'], [w(8, 5), 'senalar'], [wf(8, -1) + 0.1, 'celebrar']],
+  poses: [[0, 'de_pie'], [w(7, 2), 'senalar'], [w(7, 5), 'coger'], [w(7, 7), 'apartarse'], [w(7, 9), 'coger'], [wf(7, -1), 'celebrar'],
+    [w(8, 0), 'coger'], [w(8, 5), 'senalar'], [wf(8, -1) + 0.1, 'celebrar']],
   sonrisa: [[0, 0.2], [w(7, 5), 0.6], [w(7, 7), -0.2], [w(7, 9), 0.4], [wf(7, -1), 1.5], [w(8, 0), 0.6], [wf(8, -1) + 0.1, 1.4]] });
 E.obj('rotHoy', 'rotulo', { t0: N[2].S, t1: TC, x: 60, y: -480, texto: 'HOY', size: 30, col: AM, peso: 700, pop: true, caja: [-50, -18, 100, 36] });
 E.obj('hoy', 'lista', { t0: N[2].S - 0.1, t1: TC, x: 60, y: -300, n: 6, w: 300, gap: 50, pop: true,
