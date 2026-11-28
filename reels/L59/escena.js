@@ -38,16 +38,16 @@ E.figura('mag', { t0: 0, t1: w(2, 9) + 0.3, sale: 0.3, x: 370, talla: 360, color
   poses: [[0, 'de_pie'], [w(0, 7), 'pensar'], [w(1, 10), 'coger'], [w(1, 14), 'pensar'], [w(2, 3), 'ofrecer'], [w(2, 8), 'de_pie']],
   sonrisa: [[0, 0], [w(1, 10), 0.4], [w(2, 3), 1.2]] });
 E.obj('anio', 'contador', { t0: 0, t1: w(0, 9), sale: 0.2, x: 250, y: -460, size: 80, miles: false,
-  v: [[0, 1880], [w(0, 1) + 0.4, 1918, 'out']], barrido: [w(0, 1) + 0.45], caja: [-130, -45, 260, 90] });
+  v: [[0, 0], [w(0, 1) + 0.4, 1918, 'out']], barrido: [w(0, 1) + 0.45], caja: [-130, -45, 260, 90] });
 E.obj('chAnio', 'chispas', { t0: w(0, 1) + 0.4, t1: w(0, 1) + 1.1, x: 250, y: -460, r0: 90, r1: 170, inspeccion: false });
 E.obj('listaH', 'lista', { t0: 0, t1: w(2, 0), sale: 0.25, x: [[0, 20], [w(1, 8), 20], [w(1, 8) + 0.5, 110, 'inout']], y: -250, n: 6, w: 240, gap: 44,
   brillo: [[0.1, 0], [w(0, 3), 1], [w(0, 6) + 0.4, 6, 'lin'], [w(1, 4), 6], [w(1, 5), 0], [w(1, 8), 6, 'lin']], caja: [-120, -128, 240, 256] });
 E.sfx(w(0, 3), 'fill');
-E.obj('bocaH', 'bocadillo', { t0: w(0, 7) - 0.1, t1: w(1, 0), sale: 0.2, x: -150, y: -470, w: 470, h: 76, texto: 'Págueme lo que crea que vale.', size: 27, pop: true,
+E.obj('bocaH', 'bocadillo', { t0: w(0, 7) - 0.1, t1: w(1, 0), sale: 0.2, x: -175, y: -470, w: 470, h: 76, texto: 'Págueme lo que crea que vale.', size: 27, pop: true,
   on: [[w(0, 7), 0], [w(0, 7) + 0.3, 1]], caja: [-235, -38, 470, 102] });
-E.obj('cifra', 'contador', { t0: w(0, 10), t1: w(1, 13), sale: 0.2, x: 250, y: -460, size: 72, suf: ' $', pop: true,
+E.obj('cifra', 'contador', { t0: w(0, 10), t1: w(1, 13), sale: 0.2, x: 275, y: -460, size: 72, suf: ' $', pop: true,
   v: [[w(0, 11), 0], [w(0, 12) + 0.45, 25000, 'out']], barrido: [w(0, 13) + 0.2], caja: [-150, -42, 300, 84] });
-E.obj('chCifra', 'chispas', { t0: w(0, 12) + 0.45, t1: w(0, 12) + 1.2, x: 250, y: -460, r0: 110, r1: 200, inspeccion: false });
+E.obj('chCifra', 'chispas', { t0: w(0, 12) + 0.45, t1: w(0, 12) + 1.2, x: 275, y: -460, r0: 110, r1: 200, inspeccion: false });
 E.golpe(w(0, 12) + 0.45, 0.05); E.destello(w(0, 12) + 0.45, 0.15); E.temblor(w(0, 12) + 0.45, 10, 0.35);
 
 // 1: Se(0) llamaba(1) Ivy(2) Lee(3) y(4) según(5) se(6) cuenta(7) se(8) la(9) enseñó(10) a(11) un(12) magnate(13) del(14) acero(15)
