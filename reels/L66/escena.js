@@ -46,7 +46,7 @@ E.golpe(w(0, 9) + 0.3, 0.04);
 E.figura('cA', { t0: 0, t1: w(1, 0), sale: 0.25, x: 170, talla: 300, color: 'gris', cara: true,
   poses: [[0, 'meter'], [0.7, 'coger'], [1.4, 'meter'], [w(0, 5), 'coger'], [w(0, 9), 'meter'], [L0, 'pensar'], [w(0, 14), 'senalar']], sonrisa: [[0, 0.2], [L0, 0.8]] });
 E.figura('obs0', { t0: 0, t1: w(1, 0), sale: 0.25, x: 395, talla: 330, color: 'gris', dir: -1, cara: true, toca: ['papel0'],
-  poses: [[0, 'pensar'], [w(0, 5), 'escribir'], [L0, 'pensar'], [w(0, 13), 'escribir']], sonrisa: 0 });
+  poses: [[0, 'pensar'], [w(0, 5), 'senalar'], [L0, 'pensar'], [w(0, 13), 'senalar']], sonrisa: 0 });
 E.obj('bocaH', 'bocadillo', { t0: L0, t1: wf(0, -1) + 0.4, sale: 0.2, x: 190, y: -440, w: 380, h: 76, texto: 'Que nos están mirando.', size: 30, pop: true,
   on: [[L0, 0], [L0 + 0.3, 1]], caja: [-190, -38, 380, 102] });
 E.obj('chP1', 'chispas', { t0: w(0, 16) + 0.3, t1: w(0, 16) + 1.1, x: -110, y: -190, r0: 70, r1: 170, inspeccion: false });
@@ -123,7 +123,7 @@ E.figura('yoP2', { t0: N[1].S - 0.1, t1: fin(2), x: -360, cara: true, toca: ['me
 E.obj('mesa2', 'escritorio', { t0: N[1].S - 0.1, t1: fin(2), x: -80, brillo: [[w(6, 2), 0], [w(6, 5), 0.6], [w(7, 9), 0.6], [w(7, 10) + 0.3, 1]], refl: true, inspeccion: false, caja: [-330, -400, 500, 400] });
 [{ id: 'g1', x: 250, t: w(6, 4) - 0.2 }, { id: 'g2', x: 420, t: w(6, 4) }].forEach((q, i) => E.figura(q.id, { t0: q.t, t1: fin(2), x: i === 0 ? [[0, 250], [w(7, 4), 250], [w(7, 6) + 0.2, 180, 'inout']] : q.x,
   talla: 270, color: 'gris', dir: -1, cara: true,
-  poses: i === 0 ? [[0, 'de_pie'], [w(6, 5), 'escribir'], [w(7, 4), 'andar'], [w(7, 6) + 0.2, 'escribir']] : [[0, 'de_pie'], [w(6, 5) + 0.15, 'pensar']], sonrisa: 0.5 }));
+  poses: i === 0 ? [[0, 'de_pie'], [w(6, 5), 'pensar'], [w(7, 4), 'andar'], [w(7, 6) + 0.2, 'senalar']] : [[0, 'de_pie'], [w(6, 5) + 0.15, 'pensar']], sonrisa: 0.5 }));
 E.obj('barBib', 'relleno', { t0: N[1].S - 0.1, t1: fin(2), x: 300, y: -450, w: 300, h: 44, pop: true, sobrevive: true, r: 50,
   rotulo: [[0, ''], [w(7, 2) - 0.05, 'BIBLIOTECA']], f: [[w(6, 2), 0], [wf(6, -1), 0.3, 'out'], [w(7, 9), 0.3], [w(7, 10) + 0.3, 0.92, 'out']], barrido: [w(7, 10) + 0.35], caja: [-150, -56, 300, 78] });
 E.obj('barSofa', 'relleno', { t0: w(7, 11), t1: fin(2), x: 300, y: -340, w: 300, h: 44, pop: true, rotulo: 'SOFÁ',
