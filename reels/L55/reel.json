@@ -1,0 +1,63 @@
+{
+ "id": "L55",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El efecto Pigmalión",
+ "tema": "Trabajo",
+ "idea": "L55, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Tu jefe no espera nada de ti, te da solo lo fácil y acabas rindiendo menos.",
+ "lines": [
+  {
+   "show": "Tu jefe te trata según lo que espera de ti, / *y acabas dándole la razón.*",
+   "pause": 0.45,
+   "bocadillo": "De este no espero mucho."
+  },
+  {
+   "show": "Se llama efecto Pigmalión. / *Se probó en un colegio en los años sesenta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "A los profesores les dijeron / que unos alumnos iban a destacar. / *Los habían elegido al azar,* / *y fueron los que más mejoraron.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas si tienes gente a tu cargo.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *di en voz alta lo que esperas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si confías en alguien, díselo. / *Si te lo callas, no le sirve de nada.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *encarga algo un poco más difícil.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Dar siempre lo fácil / *es decirle a alguien que no puede con más.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *corrige el trabajo, no a la persona.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Se puede criticar un informe / *sin poner en duda a quien lo ha escrito.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La gente suele llegar / *hasta donde esperas que llegue.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que acaba de estrenarse como jefe.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Tu jefe te trata según lo que espera de ti, y acabas dándole la razón. Se llama efecto Pigmalión y se probó en un colegio en los años sesenta. Tres reglas si tienes gente a tu cargo.\n\n#liderazgo #trabajo #psicologia #equipo"
+}

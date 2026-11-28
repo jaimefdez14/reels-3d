@@ -1,0 +1,63 @@
+{
+ "id": "L57",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La navaja de Hanlon",
+ "tema": "Trabajo",
+ "idea": "L57, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Un compañero no te contesta o no te avisa de algo y das por hecho que va contra ti.",
+ "lines": [
+  {
+   "show": "Tu compañero no te contesta / *y ya das por hecho que lo hace a propósito.*",
+   "pause": 0.45,
+   "bocadillo": "Lo hace para fastidiarme."
+  },
+  {
+   "show": "Hay una regla, la navaja de Hanlon: / *no atribuyas a la mala fe* / *lo que se explica por un descuido.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se publicó en 1980 en un libro de humor / *y sirve para cualquier oficina.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres preguntas antes de enfadarte.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *¿puede ser un despiste?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Un correo sin leer es más frecuente / *que un compañero que te quiere mal.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *¿sabía que lo necesitabas?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Puede que nadie le haya dicho / *que era para hoy.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *¿se lo has preguntado?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una llamada de dos minutos / *ahorra una semana de malas caras.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Casi nadie va contra ti: / *la mayoría va con prisa.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero / *que cree que todos van contra él.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Tu compañero no te contesta y ya das por hecho que lo hace a propósito. Hay una regla que se llama navaja de Hanlon: no atribuyas a la mala fe lo que se explica por un descuido. Tres preguntas antes de enfadarte.\n\n#trabajo #comunicacion #psicologia #equipo"
+}

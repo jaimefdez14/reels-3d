@@ -1,0 +1,63 @@
+{
+ "id": "L78",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El coste laboral",
+ "tema": "Dinero",
+ "idea": "L78, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Solo miras lo que te ingresan a fin de mes y no sabes qué significan las demás cifras de la nómina.",
+ "lines": [
+  {
+   "show": "Si cobras 2.000 euros brutos al mes, / *a tu empresa le cuestas unos 2.600.*",
+   "pause": 0.45,
+   "bocadillo": "¿Y a mí por qué me llegan 1.600?"
+  },
+  {
+   "show": "Se llama coste laboral: / *tu sueldo bruto más las cotizaciones* / *que la empresa paga por ti.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Y de esos 2.000, / *a tu cuenta llegan unos 1.600.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres cifras de tu nómina que conviene mirar.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *el bruto anual.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Es la cifra que se negocia. / *El neto cambia de una persona a otra.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *la retención de IRPF.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si te retienen de menos, / *lo pagas después en la declaración.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *la base de cotización.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "De ella salen tu paro, / *tu baja y tu pensión.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tu nómina dice mucho más / *que lo que te llega al banco.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que solo mira lo que le ingresan.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Si cobras 2.000 euros brutos al mes, a tu empresa le cuestas unos 2.600, y a tu cuenta llegan unos 1.600. Tres cifras de tu nómina que conviene mirar.\n\nCifras aproximadas para un contrato indefinido en España, en doce pagas y sin hijos; cambian según cada caso.\n\n#nomina #trabajo #finanzaspersonales #sueldo"
+}

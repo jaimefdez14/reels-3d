@@ -1,0 +1,63 @@
+{
+ "id": "L53",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La ley de Brooks",
+ "tema": "Trabajo",
+ "idea": "L53, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "El proyecto va tarde, meten a tres personas nuevas y va todavía más tarde.",
+ "lines": [
+  {
+   "show": "Si un proyecto va con retraso, / *meter más gente lo retrasa todavía más.*",
+   "pause": 0.45,
+   "bocadillo": "Que entren tres más."
+  },
+  {
+   "show": "Se llama ley de Brooks. / *La formuló en 1975 Fred Brooks,* / *que había dirigido un gran proyecto en IBM.*",
+   "pause": 0.3
+  },
+  {
+   "show": "A los nuevos hay que enseñarles, / *y quien enseña deja de avanzar.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para un proyecto atrasado.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *recorta antes de contratar.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Quita lo que no sea imprescindible / *y entrega primero lo importante.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *si metes gente, que sea al principio.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "A mitad de proyecto, / *cada persona nueva frena a las demás.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *mueve la fecha a tiempo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Avisar con un mes de margen / *es mejor que fallar el último día.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Hay trabajos que no van más rápido / *por repartirlos entre más gente.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero / *que tiene un proyecto con retraso.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Si un proyecto va con retraso, meter más gente lo retrasa todavía más. Se llama ley de Brooks y la formuló en 1975 un ingeniero que había dirigido un gran proyecto en IBM. Tres reglas para un proyecto atrasado.\n\n#trabajo #proyectos #liderazgo #productividad"
+}

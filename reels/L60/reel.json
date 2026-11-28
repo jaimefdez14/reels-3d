@@ -1,0 +1,63 @@
+{
+ "id": "L60",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La ley de Price",
+ "tema": "Trabajo",
+ "idea": "L60, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "En tu departamento hay dos o tres personas que sacan casi todo el trabajo y el resto acompaña.",
+ "lines": [
+  {
+   "show": "En una empresa de cien personas, / *diez hacen la mitad del trabajo.*",
+   "pause": 0.45,
+   "bocadillo": "¿Y los otros noventa?"
+  },
+  {
+   "show": "Se llama ley de Price: / *la mitad del trabajo la hace* / *la raíz cuadrada de la plantilla.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Un físico la formuló en 1963 / contando artículos de científicos, / *y en muchas empresas pasa algo parecido.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres cosas que puedes hacer con ella.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *averigua quiénes son esos diez.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Fíjate en cómo trabajan / *y en qué no pierden el tiempo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *mira qué parte de tu trabajo da resultado.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Dedícale más horas a eso / *y menos a lo que nadie echa en falta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *si tienes equipo, cuida a esos pocos.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cuando se va uno de ellos, / *se nota como si se fueran muchos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El trabajo nunca se reparte / *a partes iguales.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero / *que saca adelante medio departamento.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "En una empresa de cien personas, diez hacen la mitad del trabajo. Se llama ley de Price: un físico la formuló en 1963 contando artículos de científicos, y en muchas empresas pasa algo parecido. Es una aproximación, no una ley exacta.\n\n#trabajo #productividad #equipo #liderazgo"
+}

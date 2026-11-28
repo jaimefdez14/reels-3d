@@ -1,0 +1,63 @@
+{
+ "id": "L69",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El efecto Benjamin Franklin",
+ "tema": "Crecimiento",
+ "idea": "L69, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Te cuesta pedir ayuda porque crees que molestas y que vas a quedar peor.",
+ "lines": [
+  {
+   "show": "Si quieres caerle bien a alguien, / *pídele un favor.*",
+   "pause": 0.45,
+   "bocadillo": "¿Me dejaría ese libro?"
+  },
+  {
+   "show": "Se llama efecto Benjamin Franklin. / *Tenía un rival en política* / *y le pidió prestado un libro raro.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El rival se lo dejó, / *y acabaron siendo amigos.* / *A quien ayudamos le cogemos aprecio.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para usarlo en el trabajo.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *pide algo pequeño.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Un consejo o una opinión. / *Algo que no lleve más de cinco minutos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *pide lo que esa persona sabe hacer bien.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "A todos nos gusta / *que nos pregunten por lo que dominamos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *da las gracias y cuenta cómo te fue.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Saber que su ayuda sirvió / *es lo que hace que quiera repetir.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Pedir ayuda no te hace quedar peor: / *te acerca a quien te la da.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *al que le cuesta pedir cualquier cosa.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Si quieres caerle bien a alguien, pídele un favor. Se llama efecto Benjamin Franklin: tenía un rival en política, le pidió prestado un libro y acabaron siendo amigos. Tres reglas para usarlo en el trabajo.\n\n#psicologia #trabajo #relaciones #crecimientopersonal"
+}

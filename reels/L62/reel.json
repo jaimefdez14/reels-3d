@@ -1,0 +1,59 @@
+{
+ "id": "L62",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Los cinco porqués",
+ "tema": "Trabajo",
+ "idea": "L62, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "El mismo fallo vuelve cada mes: lo arreglas deprisa y al mes siguiente estás otra vez igual.",
+ "lines": [
+  {
+   "show": "Arreglas el mismo problema cada mes / *y al mes siguiente vuelve a salir.*",
+   "pause": 0.45,
+   "bocadillo": "¿Otra vez?"
+  },
+  {
+   "show": "En Toyota usan una técnica / que se llama los cinco porqués: / *preguntar por qué hasta dar con la causa.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se hace en tres pasos.",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *describe el fallo con un hecho.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "El pedido llegó dos días tarde. / *Todavía sin buscar culpables.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *pregunta por qué,* / *y a cada respuesta vuelve a preguntarlo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Llegó tarde porque salió tarde. / Salió tarde porque faltaba una pieza. / *Faltaba porque nadie revisa el almacén.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *arregla la última respuesta,* / *no la primera.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si alguien revisa el almacén cada lunes, / *el pedido deja de llegar tarde.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Un problema que vuelve / *es un problema que se arregló por encima.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero / *que apaga el mismo fuego cada semana.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Arreglas el mismo problema cada mes y al mes siguiente vuelve a salir. En Toyota usan una técnica que se llama los cinco porqués: preguntar por qué hasta dar con la causa. Se hace en tres pasos.\n\n#trabajo #productividad #negocios #organizacion"
+}

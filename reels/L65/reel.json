@@ -1,0 +1,59 @@
+{
+ "id": "L65",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La curva del olvido",
+ "tema": "Hábitos",
+ "idea": "L65, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Estudias algo una tarde entera y a la semana no te acuerdas de casi nada.",
+ "lines": [
+  {
+   "show": "Mañana habrás olvidado / *más de la mitad de lo que aprendas hoy.*",
+   "pause": 0.45,
+   "bocadillo": "Si ayer me lo sabía."
+  },
+  {
+   "show": "Se llama curva del olvido. / *La midió el psicólogo Ebbinghaus en 1885* / *aprendiéndose listas de sílabas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo que no se repasa se pierde rápido. / *Con tres repasos se evita.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *al día siguiente.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Diez minutos, sin mirar los apuntes. / *Intenta recordarlo tú.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *a la semana.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Te costará menos, / *y lo que falle es lo que hay que releer.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *al mes.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Con tres repasos espaciados / *se te queda más que con una tarde entera.*",
+   "pause": 0.3
+  },
+  {
+   "show": "No hace falta estudiar más horas: / *hace falta repasar a tiempo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que lo estudia todo la noche de antes.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Mañana habrás olvidado más de la mitad de lo que aprendas hoy. Se llama curva del olvido y la midió el psicólogo Ebbinghaus en 1885. Con tres repasos se evita.\n\n#aprendizaje #estudio #habitos #crecimientopersonal"
+}

@@ -1,0 +1,59 @@
+{
+ "id": "L50",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El síndrome del impostor",
+ "tema": "Trabajo",
+ "idea": "L50, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Llevas años haciendo bien tu trabajo y sigues pensando que un día se darán cuenta de que no vales.",
+ "lines": [
+  {
+   "show": "Llevas años en tu puesto / *y sigues creyendo que no das la talla.*",
+   "pause": 0.45,
+   "bocadillo": "Se van a dar cuenta."
+  },
+  {
+   "show": "Se llama síndrome del impostor: / *creer que tus logros son suerte* / *y que un día te van a descubrir.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Lo describieron dos psicólogas en 1978. / *Tres reglas para quitarle fuerza.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *apunta lo que te sale bien.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una línea cada viernes. / *Con hechos, no con impresiones.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *cuéntaselo a alguien de confianza.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Casi siempre te responde / *que a él le pasa lo mismo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *acepta los elogios sin rebajarlos.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Da las gracias / *y no añadas que fue cuestión de suerte.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Dudar de ti no demuestra / *que no valgas para el puesto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que nunca se cree lo que vale.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Llevas años en tu puesto y sigues creyendo que no das la talla. Se llama síndrome del impostor y lo describieron dos psicólogas en 1978. Tres reglas para quitarle fuerza.\n\n#trabajo #psicologia #carrera #crecimientopersonal"
+}

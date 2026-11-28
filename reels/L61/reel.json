@@ -1,0 +1,63 @@
+{
+ "id": "L61",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "Los rendimientos decrecientes",
+ "tema": "Trabajo",
+ "idea": "L61, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Echas diez o doce horas al día y al final de la semana no has sacado más que cuando echabas ocho.",
+ "lines": [
+  {
+   "show": "Trabajar 70 horas a la semana / *rinde casi lo mismo que trabajar 55.*",
+   "pause": 0.45,
+   "bocadillo": "Yo no salgo antes de las diez."
+  },
+  {
+   "show": "Lo calculó en 2014 un economista de Stanford / *con datos de fábricas de munición.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se llama ley de los rendimientos decrecientes: / *a partir de cierto punto,* / *cada hora de más rinde menos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para echar menos horas.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *lo difícil, en tus mejores horas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si rindes más por la mañana, / *no la gastes en el correo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *ponle hora de salida al día.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cuando sabes a qué hora acabas, / *pierdes menos tiempo por el camino.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *descansa antes de estar agotado.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Cansado, tardas el doble / *y después te toca corregirlo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Echar más horas / *no es lo mismo que hacer más trabajo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese compañero / *que siempre es el último en irse.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Trabajar 70 horas a la semana rinde casi lo mismo que trabajar 55. Lo calculó en 2014 un economista de Stanford con datos de fábricas de munición. Tres reglas para echar menos horas.\n\n#trabajo #productividad #descanso #carrera"
+}

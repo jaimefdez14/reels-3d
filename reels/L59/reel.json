@@ -1,0 +1,59 @@
+{
+ "id": "L59",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El método Ivy Lee",
+ "tema": "Trabajo",
+ "idea": "L59, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Empiezas el día con veinte cosas, saltas de una a otra y acabas sin terminar ninguna.",
+ "lines": [
+  {
+   "show": "En 1918, una lista de seis tareas / *le valió a un asesor 25.000 dólares.*",
+   "pause": 0.45,
+   "bocadillo": "Págueme lo que crea que vale."
+  },
+  {
+   "show": "Se llamaba Ivy Lee y, según se cuenta, / *se la enseñó a un magnate del acero.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres meses después, / *el empresario le mandó el cheque.* / *El método tiene tres pasos.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El primero: // *por la noche, apunta seis tareas.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Las seis más importantes de mañana. / *Ni una más.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El segundo: // *ordénalas por importancia.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Arriba, la que más cuenta, / *aunque sea la que menos te apetece.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El tercero: // *empieza por la primera* / *y no pases a la segunda hasta acabarla.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Lo que quede sin hacer / *pasa a la lista del día siguiente.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Seis tareas en orden / *rinden más que veinte a la vez.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que empieza el día sin saber por dónde.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "En 1918, una lista de seis tareas le valió a un asesor 25.000 dólares. Se llamaba Ivy Lee y, según se cuenta, su método tiene tres pasos.\n\n#productividad #trabajo #organizacion #habitos"
+}

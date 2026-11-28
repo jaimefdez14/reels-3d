@@ -1,0 +1,63 @@
+{
+ "id": "L68",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El sesgo del superviviente",
+ "tema": "Crecimiento",
+ "idea": "L68, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Lees la historia de alguien que lo dejó todo y triunfó, y piensas que basta con hacer lo mismo.",
+ "lines": [
+  {
+   "show": "En la Segunda Guerra Mundial / querían blindar los aviones / *donde volvían con más balazos.*",
+   "pause": 0.45,
+   "bocadillo": "Reforzad las alas."
+  },
+  {
+   "show": "Un matemático, Abraham Wald, dijo que no: / *había que blindar donde no tenían ninguno.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Los aviones alcanzados ahí / *eran los que no volvían.* / *Se llama sesgo del superviviente.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres preguntas antes de copiar a quien le ha ido bien.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *¿cuántos hicieron lo mismo* / *y no salieron adelante?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "De los que fracasan / *no se escriben libros.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *¿qué tenía él que tú no tienes?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "El dinero, los contactos o diez años de ventaja / *no salen en la entrevista.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *¿fue el método o fue la suerte?*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si solo le funcionó a uno, / *no es un método.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Solo oyes a los que llegaron. / *Los demás no dan charlas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que quiere dejarlo todo como hizo un famoso.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "En la Segunda Guerra Mundial querían blindar los aviones donde volvían con más balazos. Un matemático, Abraham Wald, dijo que no: había que blindar donde no tenían ninguno. Se llama sesgo del superviviente. Tres preguntas antes de copiar a quien le ha ido bien.\n\n#psicologia #emprendimiento #crecimientopersonal #exito"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "L70",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La fatiga de decisión",
+ "tema": "Crecimiento",
+ "idea": "L70, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "A última hora del día dices que sí a cualquier cosa o compras lo primero que ves.",
+ "lines": [
+  {
+   "show": "Un juez concede más permisos / *después de comer que justo antes.*",
+   "pause": 0.45,
+   "bocadillo": "Denegado."
+  },
+  {
+   "show": "Lo midieron en 2011 con más de mil casos: / tras el descanso, dos de cada tres salían adelante; / *justo antes de comer, casi ninguno.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se llama fatiga de decisión: / *cuantas más decisiones llevas tomadas,* / *peor decides la siguiente.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para decidir mejor.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *lo importante, por la mañana.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una decisión de dinero / *no se toma a las once de la noche.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *decide una vez lo que se repite.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Qué desayunas o qué días entrenas. / *Fijo, para no pensarlo cada día.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *no decidas con hambre ni con sueño.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Come, duerme / *y vuelve a mirarlo mañana.*",
+   "pause": 0.3
+  },
+  {
+   "show": "No siempre decides mal por no saber: / *a veces es solo cansancio.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que compra por internet de madrugada.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Un juez concede más permisos después de comer que justo antes. Lo midieron en 2011 con más de mil casos. Se llama fatiga de decisión: cuantas más decisiones llevas tomadas, peor decides la siguiente. Tres reglas para decidir mejor.\n\n#psicologia #decisiones #habitos #crecimientopersonal"
+}

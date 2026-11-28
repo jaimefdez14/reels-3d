@@ -1,0 +1,63 @@
+{
+ "id": "L73",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "La contabilidad mental",
+ "tema": "Dinero",
+ "idea": "L73, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Te llega la devolución de Hacienda o una paga extra y te la gastas como si fuera dinero de regalo.",
+ "lines": [
+  {
+   "show": "Hacienda te devuelve 300 euros / *y te los gastas en un capricho.*",
+   "pause": 0.45,
+   "bocadillo": "Es dinero extra."
+  },
+  {
+   "show": "Con 300 euros de tu sueldo / *no lo habrías hecho,* / *y son los mismos euros.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Se llama contabilidad mental. / *A Richard Thaler le valió* / *el Nobel de Economía en 2017.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para que no te cueste dinero.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *todos los euros valen lo mismo.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una devolución, una paga extra o un regalo / *valen igual que tu sueldo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *decide antes de que llegue.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Una parte para ahorrar, otra para deudas / *y otra para darte un gusto.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *no ahorres al 2 %* / *mientras debes al 20 %.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Tener ahorros y deuda de tarjeta a la vez / *es pagar por tu propio dinero.*",
+   "pause": 0.3
+  },
+  {
+   "show": "De dónde viene el dinero / *no cambia lo que vale.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que ya se ha gastado lo que le devuelve Hacienda.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Hacienda te devuelve 300 euros y te los gastas en un capricho. Con 300 euros de tu sueldo no lo habrías hecho. Se llama contabilidad mental y a Richard Thaler le valió el Nobel de Economía en 2017. Tres reglas para que no te cueste dinero.\n\n#finanzaspersonales #ahorro #dinero #psicologia"
+}

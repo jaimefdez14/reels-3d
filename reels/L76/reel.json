@@ -1,0 +1,63 @@
+{
+ "id": "L76",
+ "estilo": "B (listas en negro, docs/SISTEMA-LISTA.md; regla 15: satisfying)",
+ "titulo": "El coste por uso",
+ "tema": "Dinero",
+ "idea": "L76, 28-11-2026: Jaime «prepara 30 guiones». Molde de L41 (docs/METRICAS-2026-11-28.md): contradicción en el gancho, concepto con nombre, tres reglas y envío. Guion en texto, sin escena ni voz.",
+ "situacion": "Compras lo barato porque es barato, te lo pones dos veces y se queda en el armario.",
+ "lines": [
+  {
+   "show": "Un abrigo de 200 euros / *puede salirte más barato que uno de 50.*",
+   "pause": 0.45,
+   "bocadillo": "El barato, que es lo mismo."
+  },
+  {
+   "show": "Se llama coste por uso: / *lo que pagas, dividido entre* / *las veces que lo usas.*",
+   "pause": 0.3
+  },
+  {
+   "show": "El de 200, en 200 días, sale a un euro. / *El de 50, en diez días, sale a cinco.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Tres reglas para aplicarlo.",
+   "pause": 0.3
+  },
+  {
+   "show": "La primera: // *calcula los usos antes de pagar.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Si no sabes cuándo te lo vas a poner, / *ya tienes la respuesta.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La segunda: // *gasta más en lo de cada día.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "El colchón, los zapatos o la silla de trabajo: / *lo que usas a diario se amortiza solo.*",
+   "pause": 0.3
+  },
+  {
+   "show": "La tercera: // *lo de una vez, alquilado o prestado.*",
+   "pause": 0.3,
+   "pausa_media": 0.45
+  },
+  {
+   "show": "Un traje para una sola boda / *sale carísimo por uso.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Barato no es lo que cuesta poco: / *es lo que se usa mucho.*",
+   "pause": 0.3
+  },
+  {
+   "show": "Mándaselo a ese amigo / *que tiene el armario lleno de ropa sin estrenar.*",
+   "pause": 0.3
+  }
+ ],
+ "texto_publicacion": "Un abrigo de 200 euros puede salirte más barato que uno de 50. Se llama coste por uso: lo que pagas, dividido entre las veces que lo usas. Tres reglas para aplicarlo.\n\n#finanzaspersonales #ahorro #consumo #dinero"
+}
